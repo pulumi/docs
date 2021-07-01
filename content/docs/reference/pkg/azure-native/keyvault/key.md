@@ -332,7 +332,7 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyproperties">Key<wbr>Properties</a></span>
+        <span class="property-type"><a href="#keyproperties">Key<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the key to be created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1289,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyattributes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Key<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyattributes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Key<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyattributes">Key<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyattributes">Key<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyattributes">Key<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyattributes">Key<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

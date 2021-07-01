@@ -570,7 +570,7 @@ The ServiceUnit resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceunitartifacts">Service<wbr>Unit<wbr>Artifacts</a></span>
+        <span class="property-type"><a href="#serviceunitartifacts">Service<wbr>Unit<wbr>Artifacts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

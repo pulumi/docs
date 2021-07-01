@@ -364,7 +364,7 @@ The UserSettingsWithLocation resource accepts the following [input]({{< relref "
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userproperties">User<wbr>Properties</a></span>
+        <span class="property-type"><a href="#userproperties">User<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1043,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1051,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminalsettings_csharp" style="color: inherit; text-decoration: inherit;">Terminal<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Terminal<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminalsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Terminal<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1131,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1139,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminalsettings_nodejs" style="color: inherit; text-decoration: inherit;">terminal<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettings">Terminal<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminalsettings">Terminal<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1175,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1183,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminal_settings_python" style="color: inherit; text-decoration: inherit;">terminal_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettings">Terminal<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminalsettings">Terminal<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1221,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1229,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminalsettings_csharp" style="color: inherit; text-decoration: inherit;">Terminal<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Terminal<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminalsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Terminal<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1309,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1317,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminalsettings_nodejs" style="color: inherit; text-decoration: inherit;">terminal<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1353,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1361,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminal_settings_python" style="color: inherit; text-decoration: inherit;">terminal_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd></dl>
 {{% /choosable %}}

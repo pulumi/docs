@@ -368,7 +368,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#locationdata_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelocationdatacontract">Resource<wbr>Location<wbr>Data<wbr>Contract</a></span>
+        <span class="property-type"><a href="#resourcelocationdatacontract">Resource<wbr>Location<wbr>Data<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gateway location.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -952,7 +952,7 @@ The PolicyAssignmentArtifact resource accepts the following [input]({{< relref "
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Parameter<wbr>Value</span>
+        <span class="property-type">map[string]Parameter<wbr>Value<wbr>Args</span>
     </dt>
     <dd>{{% md %}}Parameter values for the policy definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1403,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_csharp" style="color: inherit; text-decoration: inherit;">Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Secret<wbr>Value<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Secret<wbr>Value<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1443,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_nodejs" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereference">Secret<wbr>Value<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereference">Secret<wbr>Value<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1463,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereference">Secret<wbr>Value<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereference">Secret<wbr>Value<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1485,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_csharp" style="color: inherit; text-decoration: inherit;">Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Secret<wbr>Value<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Secret<wbr>Value<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1525,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_nodejs" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereferenceresponse">Secret<wbr>Value<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereferenceresponse">Secret<wbr>Value<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1545,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereferenceresponse">Secret<wbr>Value<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereferenceresponse">Secret<wbr>Value<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1567,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1623,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1651,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1681,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1737,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1765,7 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">

@@ -429,7 +429,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#admcredential_go" style="color: inherit; text-decoration: inherit;">Adm<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#admcredential">Adm<wbr>Credential</a></span>
+        <span class="property-type"><a href="#admcredential">Adm<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AdmCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -437,7 +437,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#apnscredential_go" style="color: inherit; text-decoration: inherit;">Apns<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apnscredential">Apns<wbr>Credential</a></span>
+        <span class="property-type"><a href="#apnscredential">Apns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ApnsCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -445,7 +445,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#authorizationrules_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">[]Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties</a></span>
+        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">[]Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AuthorizationRules of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -453,7 +453,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#baiducredential_go" style="color: inherit; text-decoration: inherit;">Baidu<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baiducredential">Baidu<wbr>Credential</a></span>
+        <span class="property-type"><a href="#baiducredential">Baidu<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BaiduCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -461,7 +461,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#gcmcredential_go" style="color: inherit; text-decoration: inherit;">Gcm<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcmcredential">Gcm<wbr>Credential</a></span>
+        <span class="property-type"><a href="#gcmcredential">Gcm<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GcmCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -477,7 +477,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#mpnscredential_go" style="color: inherit; text-decoration: inherit;">Mpns<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpnscredential">Mpns<wbr>Credential</a></span>
+        <span class="property-type"><a href="#mpnscredential">Mpns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MpnsCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -509,7 +509,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the created namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -525,7 +525,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#wnscredential_go" style="color: inherit; text-decoration: inherit;">Wns<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wnscredential">Wns<wbr>Credential</a></span>
+        <span class="property-type"><a href="#wnscredential">Wns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The WnsCredential of the created NotificationHub{{% /md %}}</dd></dl>
 {{% /choosable %}}

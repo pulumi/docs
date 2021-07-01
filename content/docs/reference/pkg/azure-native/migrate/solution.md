@@ -364,7 +364,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionproperties">Solution<wbr>Properties</a></span>
+        <span class="property-type"><a href="#solutionproperties">Solution<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the properties of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1131,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Solution<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutiondetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Solution<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetails">Solution<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutiondetails">Solution<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1287,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetails">Solution<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutiondetails">Solution<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Solution<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Solution<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasessolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a> | <a href="#serverssolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#databasessolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Databases<wbr>Solution<wbr>Summary<wbr>Response</a> | <a href="#serverssolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Servers<wbr>Solution<wbr>Summary<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1461,7 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetailsresponse">Solution<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutiondetailsresponse">Solution<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1493,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasessolutionsummaryresponse">Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a> | <a href="#serverssolutionsummaryresponse">Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#databasessolutionsummaryresponse">Databases<wbr>Solution<wbr>Summary<wbr>Response</a> | <a href="#serverssolutionsummaryresponse">Servers<wbr>Solution<wbr>Summary<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1521,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetailsresponse">Solution<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutiondetailsresponse">Solution<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1553,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasessolutionsummaryresponse">Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a> | <a href="#serverssolutionsummaryresponse">Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#databasessolutionsummaryresponse">Databases<wbr>Solution<wbr>Summary<wbr>Response</a> | <a href="#serverssolutionsummaryresponse">Servers<wbr>Solution<wbr>Summary<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

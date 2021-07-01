@@ -402,7 +402,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partnercontent">Partner<wbr>Content</a></span>
+        <span class="property-type"><a href="#partnercontent">Partner<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The partner content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -801,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#businessidentities_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#businessidentity">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -825,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#businessidentities_nodejs" style="color: inherit; text-decoration: inherit;">business<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#businessidentity">Business<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -837,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#business_identities_python" style="color: inherit; text-decoration: inherit;">business_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentity">Sequence[Business<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#businessidentity">Sequence[Business<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -851,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#businessidentities_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#businessidentities_nodejs" style="color: inherit; text-decoration: inherit;">business<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -887,7 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#business_identities_python" style="color: inherit; text-decoration: inherit;">business_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Sequence[Business<wbr>Identity<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Sequence[Business<wbr>Identity<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1065,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b2b_csharp" style="color: inherit; text-decoration: inherit;">B2b</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2bpartnercontent">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>B2BPartner<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#b2bpartnercontent">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>B2BPartner<wbr>Content</a></span>
     </dt>
     <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1089,7 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b2b_nodejs" style="color: inherit; text-decoration: inherit;">b2b</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2bpartnercontent">B2BPartner<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#b2bpartnercontent">B2BPartner<wbr>Content</a></span>
     </dt>
     <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1101,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b2b_python" style="color: inherit; text-decoration: inherit;">b2b</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2bpartnercontent">B2BPartner<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#b2bpartnercontent">B2BPartner<wbr>Content</a></span>
     </dt>
     <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1115,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b2b_csharp" style="color: inherit; text-decoration: inherit;">B2b</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2bpartnercontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>B2BPartner<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#b2bpartnercontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>B2BPartner<wbr>Content<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1139,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b2b_nodejs" style="color: inherit; text-decoration: inherit;">b2b</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2bpartnercontentresponse">B2BPartner<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#b2bpartnercontentresponse">B2BPartner<wbr>Content<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1151,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b2b_python" style="color: inherit; text-decoration: inherit;">b2b</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2bpartnercontentresponse">B2BPartner<wbr>Content<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#b2bpartnercontentresponse">B2BPartner<wbr>Content<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}

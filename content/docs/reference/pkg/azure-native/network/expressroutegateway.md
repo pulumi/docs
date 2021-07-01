@@ -380,7 +380,7 @@ The ExpressRouteGateway resource accepts the following [input]({{< relref "/docs
 <a href="#virtualhub_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubid">Virtual<wbr>Hub<wbr>Id</a></span>
+        <span class="property-type"><a href="#virtualhubid">Virtual<wbr>Hub<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Virtual Hub where the ExpressRoute gateway is or will be deployed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -388,7 +388,7 @@ The ExpressRouteGateway resource accepts the following [input]({{< relref "/docs
 <a href="#autoscaleconfiguration_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutegatewaypropertiesautoscaleconfiguration">Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Auto<wbr>Scale<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#expressroutegatewaypropertiesautoscaleconfiguration">Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Auto<wbr>Scale<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for auto scaling.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -829,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressroutecircuitpeering_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ExpressRoute circuit peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -885,7 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Routing<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Routing<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -981,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressroutecircuitpeering_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringidresponse">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringidresponse">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ExpressRoute circuit peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1037,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfigurationresponse">Routing<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingconfigurationresponse">Routing<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringidresponse">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringidresponse">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ExpressRoute circuit peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1113,7 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_configuration_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfigurationresponse">Routing<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingconfigurationresponse">Routing<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1135,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bounds_csharp" style="color: inherit; text-decoration: inherit;">Bounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutegatewaypropertiesbounds">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Bounds<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutegatewaypropertiesbounds">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Bounds</a></span>
     </dt>
     <dd>{{% md %}}Minimum and maximum number of scale units to deploy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1159,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bounds_nodejs" style="color: inherit; text-decoration: inherit;">bounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutegatewaypropertiesbounds">Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Bounds<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutegatewaypropertiesbounds">Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Bounds</a></span>
     </dt>
     <dd>{{% md %}}Minimum and maximum number of scale units to deploy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1171,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bounds_python" style="color: inherit; text-decoration: inherit;">bounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutegatewaypropertiesbounds">Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Bounds<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutegatewaypropertiesbounds">Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Bounds</a></span>
     </dt>
     <dd>{{% md %}}Minimum and maximum number of scale units to deploy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1267,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bounds_csharp" style="color: inherit; text-decoration: inherit;">Bounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutegatewaypropertiesresponsebounds">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Response<wbr>Bounds<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutegatewaypropertiesresponsebounds">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Response<wbr>Bounds</a></span>
     </dt>
     <dd>{{% md %}}Minimum and maximum number of scale units to deploy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1291,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bounds_nodejs" style="color: inherit; text-decoration: inherit;">bounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutegatewaypropertiesresponsebounds">Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Response<wbr>Bounds<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutegatewaypropertiesresponsebounds">Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Response<wbr>Bounds</a></span>
     </dt>
     <dd>{{% md %}}Minimum and maximum number of scale units to deploy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bounds_python" style="color: inherit; text-decoration: inherit;">bounds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutegatewaypropertiesresponsebounds">Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Response<wbr>Bounds<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutegatewaypropertiesresponsebounds">Express<wbr>Route<wbr>Gateway<wbr>Properties<wbr>Response<wbr>Bounds</a></span>
     </dt>
     <dd>{{% md %}}Minimum and maximum number of scale units to deploy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1399,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1439,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1459,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1481,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associatedroutetable_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1489,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagatedroutetables_csharp" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetableresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Propagated<wbr>Route<wbr>Table<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1497,7 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetroutes_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vnet<wbr>Route<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1537,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1545,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagatedroutetables_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1553,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1565,7 +1565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associated_route_table_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1573,7 +1573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagated_route_tables_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1581,7 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_routes_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1859,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staticroutes_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticrouteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Static<wbr>Route<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#staticrouteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Static<wbr>Route<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1883,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staticroutes_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticrouteresponse">Static<wbr>Route<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#staticrouteresponse">Static<wbr>Route<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1895,7 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#static_routes_python" style="color: inherit; text-decoration: inherit;">static_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticrouteresponse">Sequence[Static<wbr>Route<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#staticrouteresponse">Sequence[Static<wbr>Route<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -412,7 +412,7 @@ The ConnectionGateway resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewaydefinitionproperties">Connection<wbr>Gateway<wbr>Definition<wbr>Properties</a></span>
+        <span class="property-type"><a href="#connectiongatewaydefinitionproperties">Connection<wbr>Gateway<wbr>Definition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -699,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectiongatewayinstallation_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Gateway<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewayreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Gateway<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectiongatewayreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Gateway<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The gateway installation reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -819,7 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectiongatewayinstallation_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Gateway<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewayreference">Connection<wbr>Gateway<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectiongatewayreference">Connection<wbr>Gateway<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The gateway installation reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -879,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_gateway_installation_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>gateway_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewayreference">Connection<wbr>Gateway<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectiongatewayreference">Connection<wbr>Gateway<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The gateway installation reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -941,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectiongatewayinstallation_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Gateway<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewayreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Gateway<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectiongatewayreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Gateway<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gateway installation reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectiongatewayinstallation_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Gateway<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewayreferenceresponse">Connection<wbr>Gateway<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectiongatewayreferenceresponse">Connection<wbr>Gateway<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gateway installation reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_gateway_installation_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>gateway_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiongatewayreferenceresponse">Connection<wbr>Gateway<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectiongatewayreferenceresponse">Connection<wbr>Gateway<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gateway installation reference{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

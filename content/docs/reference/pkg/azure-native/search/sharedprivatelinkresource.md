@@ -347,7 +347,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourceproperties">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourceproperties">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourceprovisioningstate">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourceprovisioningstate">string</a></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourcestatus">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourcestatus">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd></dl>
 {{% /choosable %}}

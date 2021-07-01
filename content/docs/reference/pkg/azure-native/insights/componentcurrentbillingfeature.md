@@ -364,7 +364,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
 <a href="#datavolumecap_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Volume<wbr>Cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap</a></span>
+        <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd></dl>
 {{% /choosable %}}

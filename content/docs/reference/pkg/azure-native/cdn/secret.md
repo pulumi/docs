@@ -381,7 +381,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customercertificateparameters">Customer<wbr>Certificate<wbr>Parameters</a> | <a href="#managedcertificateparameters">Managed<wbr>Certificate<wbr>Parameters</a> | <a href="#urlsigningkeyparameters">Url<wbr>Signing<wbr>Key<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#customercertificateparameters">Customer<wbr>Certificate<wbr>Parameters<wbr>Args</a> | <a href="#managedcertificateparameters">Managed<wbr>Certificate<wbr>Parameters<wbr>Args</a> | <a href="#urlsigningkeyparameters">Url<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}object which contains secret parameters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -700,7 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretsource_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the KV secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -788,7 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretsource_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the KV secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -832,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_source_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the KV secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretsource_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the KV secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretsource_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the KV secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1010,7 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_source_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the KV secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1410,7 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretsource_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the KV secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1466,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretsource_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the KV secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1494,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_source_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the KV secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1524,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretsource_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the KV secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1580,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretsource_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the KV secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1608,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_source_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the KV secret{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

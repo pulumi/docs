@@ -249,7 +249,7 @@ The AppServiceEnvironmentPrivateEndpointConnection resource accepts the followin
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkconnectionstate">Private<wbr>Link<wbr>Connection<wbr>State</a></span>
+        <span class="property-type"><a href="#privatelinkconnectionstate">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The state of a private link connection{{% /md %}}</dd></dl>
 {{% /choosable %}}

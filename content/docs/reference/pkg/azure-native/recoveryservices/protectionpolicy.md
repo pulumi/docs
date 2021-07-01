@@ -1141,7 +1141,7 @@ The ProtectionPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotectionpolicy">Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy</a> | <a href="#azureiaasvmprotectionpolicy">Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy</a> | <a href="#azuresqlprotectionpolicy">Azure<wbr>Sql<wbr>Protection<wbr>Policy</a> | <a href="#azurevmworkloadprotectionpolicy">Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy</a> | <a href="#genericprotectionpolicy">Generic<wbr>Protection<wbr>Policy</a> | <a href="#mabprotectionpolicy">Mab<wbr>Protection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#azurefileshareprotectionpolicy">Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy<wbr>Args</a> | <a href="#azureiaasvmprotectionpolicy">Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Args</a> | <a href="#azuresqlprotectionpolicy">Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Args</a> | <a href="#azurevmworkloadprotectionpolicy">Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Args</a> | <a href="#genericprotectionpolicy">Generic<wbr>Protection<wbr>Policy<wbr>Args</a> | <a href="#mabprotectionpolicy">Mab<wbr>Protection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectionPolicyResource properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1420,7 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1428,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1508,7 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1516,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1552,7 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1560,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1598,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1606,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1686,7 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1694,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1730,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1738,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1768,7 +1768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instantrpdetails_csharp" style="color: inherit; text-decoration: inherit;">Instant<wbr>RPDetails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instantrpadditionaldetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Instant<wbr>RPAdditional<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#instantrpadditionaldetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Instant<wbr>RPAdditional<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1792,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1800,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1872,7 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instantrpdetails_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>RPDetails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instantrpadditionaldetails">Instant<wbr>RPAdditional<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#instantrpadditionaldetails">Instant<wbr>RPAdditional<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1896,7 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1904,7 +1904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1924,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instant_rp_details_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>rp_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instantrpadditionaldetails">Instant<wbr>RPAdditional<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#instantrpadditionaldetails">Instant<wbr>RPAdditional<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1948,7 +1948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1956,7 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1978,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instantrpdetails_csharp" style="color: inherit; text-decoration: inherit;">Instant<wbr>RPDetails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Instant<wbr>RPAdditional<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Instant<wbr>RPAdditional<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2002,7 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2010,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2082,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instantrpdetails_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>RPDetails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Instant<wbr>RPAdditional<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Instant<wbr>RPAdditional<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2106,7 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2114,7 +2114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2134,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instant_rp_details_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>rp_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Instant<wbr>RPAdditional<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Instant<wbr>RPAdditional<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2158,7 +2158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2166,7 +2166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2196,7 +2196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2236,7 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2256,7 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2278,7 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2318,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2338,7 +2338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2368,7 +2368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#settings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2376,7 +2376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subprotectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Protection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Sub<wbr>Protection<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subprotectionpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Sub<wbr>Protection<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2456,7 +2456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settings">Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#settings">Settings</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2464,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subprotectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Protection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicy">Sub<wbr>Protection<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#subprotectionpolicy">Sub<wbr>Protection<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2500,7 +2500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settings">Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#settings">Settings</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2508,7 +2508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sub_protection_policy_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>protection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicy">Sequence[Sub<wbr>Protection<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subprotectionpolicy">Sequence[Sub<wbr>Protection<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2546,7 +2546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#settingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2554,7 +2554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subprotectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Protection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subprotectionpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Sub<wbr>Protection<wbr>Policy<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2634,7 +2634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsresponse">Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#settingsresponse">Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2642,7 +2642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subprotectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Protection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicyresponse">Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#subprotectionpolicyresponse">Sub<wbr>Protection<wbr>Policy<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2678,7 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsresponse">Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#settingsresponse">Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2686,7 +2686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sub_protection_policy_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>protection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicyresponse">Sequence[Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subprotectionpolicyresponse">Sequence[Sub<wbr>Protection<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2708,7 +2708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daysofthemonth_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#day">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Day<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#day">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Day&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2732,7 +2732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daysofthemonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#day">Day<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#day">Day[]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2744,7 +2744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_of_the_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#day">Sequence[Day<wbr>Args]</a></span>
+        <span class="property-type"><a href="#day">Sequence[Day]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2758,7 +2758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daysofthemonth_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Day<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dayresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Day<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2782,7 +2782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daysofthemonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayresponse">Day<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dayresponse">Day<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2794,7 +2794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_of_the_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayresponse">Sequence[Day<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dayresponse">Sequence[Day<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2808,7 +2808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2848,7 +2848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2868,7 +2868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2890,7 +2890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2930,7 +2930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2950,7 +2950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3198,7 +3198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subprotectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Protection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Sub<wbr>Protection<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subprotectionpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Sub<wbr>Protection<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3270,7 +3270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subprotectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Protection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicy">Sub<wbr>Protection<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#subprotectionpolicy">Sub<wbr>Protection<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3306,7 +3306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sub_protection_policy_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>protection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicy">Sequence[Sub<wbr>Protection<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subprotectionpolicy">Sequence[Sub<wbr>Protection<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3344,7 +3344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subprotectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Protection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subprotectionpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Sub<wbr>Protection<wbr>Policy<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3416,7 +3416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subprotectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Protection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicyresponse">Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#subprotectionpolicyresponse">Sub<wbr>Protection<wbr>Policy<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3452,7 +3452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sub_protection_policy_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>protection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subprotectionpolicyresponse">Sequence[Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subprotectionpolicyresponse">Sequence[Sub<wbr>Protection<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3738,7 +3738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyschedule_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3746,7 +3746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyretentionschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Monthly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#monthlyretentionschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Monthly<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3754,7 +3754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyschedule_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3762,7 +3762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yearlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Yearly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yearlyretentionschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Yearly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#yearlyretentionschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Yearly<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3810,7 +3810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyschedule_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionschedule">Daily<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionschedule">Daily<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3818,7 +3818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyretentionschedule">Monthly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#monthlyretentionschedule">Monthly<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3826,7 +3826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyschedule_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionschedule">Weekly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionschedule">Weekly<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3834,7 +3834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yearlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">yearly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yearlyretentionschedule">Yearly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#yearlyretentionschedule">Yearly<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3846,7 +3846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionschedule">Daily<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionschedule">Daily<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3854,7 +3854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_schedule_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyretentionschedule">Monthly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#monthlyretentionschedule">Monthly<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3862,7 +3862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionschedule">Weekly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionschedule">Weekly<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3870,7 +3870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yearly_schedule_python" style="color: inherit; text-decoration: inherit;">yearly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yearlyretentionschedule">Yearly<wbr>Retention<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#yearlyretentionschedule">Yearly<wbr>Retention<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3884,7 +3884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyschedule_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3892,7 +3892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Monthly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Monthly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3900,7 +3900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyschedule_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3908,7 +3908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yearlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Yearly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Yearly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Yearly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3956,7 +3956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyschedule_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3964,7 +3964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3972,7 +3972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyschedule_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3980,7 +3980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yearlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">yearly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3992,7 +3992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4000,7 +4000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_schedule_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4008,7 +4008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4016,7 +4016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#yearly_schedule_python" style="color: inherit; text-decoration: inherit;">yearly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4074,7 +4074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4082,7 +4082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4130,7 +4130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4138,7 +4138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4158,7 +4158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4166,7 +4166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4188,7 +4188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4196,7 +4196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4244,7 +4244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4252,7 +4252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4272,7 +4272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4280,7 +4280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4364,7 +4364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4372,7 +4372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionscheduledaily_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4388,7 +4388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionscheduleweekly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4452,7 +4452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4460,7 +4460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionscheduledaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformat">Daily<wbr>Retention<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionformat">Daily<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4476,7 +4476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionscheduleweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformat">Weekly<wbr>Retention<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionformat">Weekly<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4496,7 +4496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4504,7 +4504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_schedule_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformat">Daily<wbr>Retention<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionformat">Daily<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4520,7 +4520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_schedule_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformat">Weekly<wbr>Retention<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionformat">Weekly<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4542,7 +4542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4550,7 +4550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionscheduledaily_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4566,7 +4566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionscheduleweekly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4630,7 +4630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4638,7 +4638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionscheduledaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4654,7 +4654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionscheduleweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4674,7 +4674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4682,7 +4682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_schedule_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4698,7 +4698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_schedule_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5268,7 +5268,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5292,7 +5292,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5304,7 +5304,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5318,7 +5318,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5342,7 +5342,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5354,7 +5354,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5668,7 +5668,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5676,7 +5676,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5724,7 +5724,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5732,7 +5732,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5752,7 +5752,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Args</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicy">Long<wbr>Term<wbr>Retention<wbr>Policy</a> | <a href="#simpleretentionpolicy">Simple<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5760,7 +5760,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Args</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicy">Log<wbr>Schedule<wbr>Policy</a> | <a href="#longtermschedulepolicy">Long<wbr>Term<wbr>Schedule<wbr>Policy</a> | <a href="#simpleschedulepolicy">Simple<wbr>Schedule<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5782,7 +5782,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5790,7 +5790,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5838,7 +5838,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5846,7 +5846,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5866,7 +5866,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5874,7 +5874,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6102,7 +6102,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6158,7 +6158,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6186,7 +6186,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6216,7 +6216,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6272,7 +6272,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6300,7 +6300,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6408,7 +6408,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6416,7 +6416,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionscheduledaily_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6432,7 +6432,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionscheduleweekly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6512,7 +6512,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6520,7 +6520,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionscheduledaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformat">Daily<wbr>Retention<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionformat">Daily<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6536,7 +6536,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionscheduleweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformat">Weekly<wbr>Retention<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionformat">Weekly<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6564,7 +6564,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionduration">Retention<wbr>Duration</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6572,7 +6572,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_schedule_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformat">Daily<wbr>Retention<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionformat">Daily<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6588,7 +6588,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_schedule_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformat">Weekly<wbr>Retention<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionformat">Weekly<wbr>Retention<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6618,7 +6618,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6626,7 +6626,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionscheduledaily_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6642,7 +6642,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionscheduleweekly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6722,7 +6722,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6730,7 +6730,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionscheduledaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6746,7 +6746,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retentionscheduleweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6774,7 +6774,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6782,7 +6782,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_schedule_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6798,7 +6798,7 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd><d
 <a href="#retention_schedule_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

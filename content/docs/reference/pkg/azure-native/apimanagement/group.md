@@ -504,7 +504,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#grouptype">Group<wbr>Type</a></span>
+        <span class="property-type"><a href="#grouptype">string</a></span>
     </dt>
     <dd>{{% md %}}Group type.{{% /md %}}</dd></dl>
 {{% /choosable %}}

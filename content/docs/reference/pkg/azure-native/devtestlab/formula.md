@@ -527,7 +527,7 @@ The Formula resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#formulacontent_go" style="color: inherit; text-decoration: inherit;">Formula<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labvirtualmachinecreationparameter">Lab<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#labvirtualmachinecreationparameter">Lab<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content of the formula.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -567,7 +567,7 @@ The Formula resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vm_go" style="color: inherit; text-decoration: inherit;">Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#formulapropertiesfromvm">Formula<wbr>Properties<wbr>From<wbr>Vm</a></span>
+        <span class="property-type"><a href="#formulapropertiesfromvm">Formula<wbr>Properties<wbr>From<wbr>Vm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about a VM from which a formula is to be created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -990,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactparameterproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Parameter<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#artifactparameterproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Parameter<wbr>Properties&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1110,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactparameterproperties">Artifact<wbr>Parameter<wbr>Properties<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#artifactparameterproperties">Artifact<wbr>Parameter<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1170,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactparameterproperties">Sequence[Artifact<wbr>Parameter<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#artifactparameterproperties">Sequence[Artifact<wbr>Parameter<wbr>Properties]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1232,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactparameterpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#artifactparameterpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Parameter<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1352,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactparameterpropertiesresponse">Artifact<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#artifactparameterpropertiesresponse">Artifact<wbr>Parameter<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1412,7 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactparameterpropertiesresponse">Sequence[Artifact<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#artifactparameterpropertiesresponse">Sequence[Artifact<wbr>Parameter<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1934,7 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attachnewdatadiskoptions_csharp" style="color: inherit; text-decoration: inherit;">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachnewdatadiskoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#attachnewdatadiskoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1990,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attachnewdatadiskoptions_nodejs" style="color: inherit; text-decoration: inherit;">attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachnewdatadiskoptions">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#attachnewdatadiskoptions">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2018,7 +2018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attach_new_data_disk_options_python" style="color: inherit; text-decoration: inherit;">attach_<wbr>new_<wbr>data_<wbr>disk_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachnewdatadiskoptions">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#attachnewdatadiskoptions">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2048,7 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attachnewdatadiskoptions_csharp" style="color: inherit; text-decoration: inherit;">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2104,7 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attachnewdatadiskoptions_nodejs" style="color: inherit; text-decoration: inherit;">attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2132,7 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attach_new_data_disk_options_python" style="color: inherit; text-decoration: inherit;">attach_<wbr>new_<wbr>data_<wbr>disk_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3110,7 +3110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactinstallproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Install<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#artifactinstallproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Install<wbr>Properties&gt;</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3118,7 +3118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bulkcreationparameters_csharp" style="color: inherit; text-decoration: inherit;">Bulk<wbr>Creation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bulkcreationparameters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Bulk<wbr>Creation<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#bulkcreationparameters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Bulk<wbr>Creation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3142,7 +3142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskparameters_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Properties&gt;</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3174,7 +3174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryimagereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3222,7 +3222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterface_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfaceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3270,7 +3270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduleparameters_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulecreationparameter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Schedule<wbr>Creation<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#schedulecreationparameter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Schedule<wbr>Creation<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3550,7 +3550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactinstallproperties">Artifact<wbr>Install<wbr>Properties<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#artifactinstallproperties">Artifact<wbr>Install<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3558,7 +3558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bulkcreationparameters_nodejs" style="color: inherit; text-decoration: inherit;">bulk<wbr>Creation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bulkcreationparameters">Bulk<wbr>Creation<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#bulkcreationparameters">Bulk<wbr>Creation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3582,7 +3582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskparameters_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskproperties">Data<wbr>Disk<wbr>Properties<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datadiskproperties">Data<wbr>Disk<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3614,7 +3614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagereference">Gallery<wbr>Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryimagereference">Gallery<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3662,7 +3662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterface_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceproperties">Network<wbr>Interface<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfaceproperties">Network<wbr>Interface<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3710,7 +3710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduleparameters_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulecreationparameter">Schedule<wbr>Creation<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#schedulecreationparameter">Schedule<wbr>Creation<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3770,7 +3770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactinstallproperties">Sequence[Artifact<wbr>Install<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#artifactinstallproperties">Sequence[Artifact<wbr>Install<wbr>Properties]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3778,7 +3778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bulk_creation_parameters_python" style="color: inherit; text-decoration: inherit;">bulk_<wbr>creation_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bulkcreationparameters">Bulk<wbr>Creation<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#bulkcreationparameters">Bulk<wbr>Creation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3802,7 +3802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_parameters_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskproperties">Sequence[Data<wbr>Disk<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datadiskproperties">Sequence[Data<wbr>Disk<wbr>Properties]</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3834,7 +3834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagereference">Gallery<wbr>Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryimagereference">Gallery<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3882,7 +3882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interface_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceproperties">Network<wbr>Interface<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfaceproperties">Network<wbr>Interface<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3930,7 +3930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_parameters_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulecreationparameter">Sequence[Schedule<wbr>Creation<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schedulecreationparameter">Sequence[Schedule<wbr>Creation<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3992,7 +3992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactinstallpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Install<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#artifactinstallpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Install<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4000,7 +4000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bulkcreationparameters_csharp" style="color: inherit; text-decoration: inherit;">Bulk<wbr>Creation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bulkcreationparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Bulk<wbr>Creation<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bulkcreationparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Bulk<wbr>Creation<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4024,7 +4024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskparameters_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4056,7 +4056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryimagereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4104,7 +4104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterface_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfacepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4152,7 +4152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduleparameters_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulecreationparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Schedule<wbr>Creation<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#schedulecreationparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Schedule<wbr>Creation<wbr>Parameter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4432,7 +4432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactinstallpropertiesresponse">Artifact<wbr>Install<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#artifactinstallpropertiesresponse">Artifact<wbr>Install<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4440,7 +4440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bulkcreationparameters_nodejs" style="color: inherit; text-decoration: inherit;">bulk<wbr>Creation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bulkcreationparametersresponse">Bulk<wbr>Creation<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bulkcreationparametersresponse">Bulk<wbr>Creation<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4464,7 +4464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskparameters_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskpropertiesresponse">Data<wbr>Disk<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datadiskpropertiesresponse">Data<wbr>Disk<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4496,7 +4496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagereferenceresponse">Gallery<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryimagereferenceresponse">Gallery<wbr>Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4544,7 +4544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterface_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacepropertiesresponse">Network<wbr>Interface<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfacepropertiesresponse">Network<wbr>Interface<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4592,7 +4592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduleparameters_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulecreationparameterresponse">Schedule<wbr>Creation<wbr>Parameter<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#schedulecreationparameterresponse">Schedule<wbr>Creation<wbr>Parameter<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4652,7 +4652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#artifactinstallpropertiesresponse">Sequence[Artifact<wbr>Install<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#artifactinstallpropertiesresponse">Sequence[Artifact<wbr>Install<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4660,7 +4660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bulk_creation_parameters_python" style="color: inherit; text-decoration: inherit;">bulk_<wbr>creation_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bulkcreationparametersresponse">Bulk<wbr>Creation<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bulkcreationparametersresponse">Bulk<wbr>Creation<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4684,7 +4684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_parameters_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskpropertiesresponse">Sequence[Data<wbr>Disk<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datadiskpropertiesresponse">Sequence[Data<wbr>Disk<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4716,7 +4716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagereferenceresponse">Gallery<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryimagereferenceresponse">Gallery<wbr>Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4764,7 +4764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interface_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfacepropertiesresponse">Network<wbr>Interface<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkinterfacepropertiesresponse">Network<wbr>Interface<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4812,7 +4812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_parameters_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulecreationparameterresponse">Sequence[Schedule<wbr>Creation<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schedulecreationparameterresponse">Sequence[Schedule<wbr>Creation<wbr>Parameter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4906,7 +4906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedpublicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedpublicipaddressconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedpublicipaddressconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5058,7 +5058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedpublicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedpublicipaddressconfiguration">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedpublicipaddressconfiguration">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5134,7 +5134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedpublicipaddressconfiguration">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedpublicipaddressconfiguration">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5212,7 +5212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedpublicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5364,7 +5364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedpublicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5440,7 +5440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5834,7 +5834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Day<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#daydetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Day<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5842,7 +5842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourlyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Hour<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#hourdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Hour<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5858,7 +5858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationsettings_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Notification<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5906,7 +5906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Week<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#weekdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Week<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6002,7 +6002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetails">Day<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#daydetails">Day<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6010,7 +6010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourlyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetails">Hour<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#hourdetails">Hour<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6026,7 +6026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationsettings_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6074,7 +6074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetails">Week<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#weekdetails">Week<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6086,7 +6086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetails">Day<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#daydetails">Day<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6094,7 +6094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourly_recurrence_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetails">Hour<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#hourdetails">Hour<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6110,7 +6110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6158,7 +6158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_recurrence_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetails">Week<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#weekdetails">Week<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6180,7 +6180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Day<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#daydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Day<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6188,7 +6188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourlyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6204,7 +6204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationsettings_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6252,7 +6252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Week<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Week<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6364,7 +6364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6372,7 +6372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourlyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6388,7 +6388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationsettings_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6436,7 +6436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6456,7 +6456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6464,7 +6464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourly_recurrence_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6480,7 +6480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6528,7 +6528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_recurrence_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6542,7 +6542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inboundnatrules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inboundnatrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6566,7 +6566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inboundnatrules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatrule">Inbound<wbr>Nat<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#inboundnatrule">Inbound<wbr>Nat<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6578,7 +6578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inbound_nat_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatrule">Sequence[Inbound<wbr>Nat<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inboundnatrule">Sequence[Inbound<wbr>Nat<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6592,7 +6592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inboundnatrules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inboundnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6616,7 +6616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inboundnatrules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatruleresponse">Inbound<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#inboundnatruleresponse">Inbound<wbr>Nat<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6628,7 +6628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inbound_nat_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundnatruleresponse">Sequence[Inbound<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inboundnatruleresponse">Sequence[Inbound<wbr>Nat<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -377,7 +377,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU of the namespace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -804,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skutier">Sku<wbr>Tier</a></span>
+        <span class="property-type"><a href="#skutier">string</a></span>
     </dt>
     <dd>{{% md %}}The tier of this SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}

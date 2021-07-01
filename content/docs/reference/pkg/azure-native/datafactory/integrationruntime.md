@@ -335,7 +335,7 @@ The IntegrationRuntime resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntime">Managed<wbr>Integration<wbr>Runtime</a> | <a href="#selfhostedintegrationruntime">Self<wbr>Hosted<wbr>Integration<wbr>Runtime</a></span>
+        <span class="property-type"><a href="#managedintegrationruntime">Managed<wbr>Integration<wbr>Runtime<wbr>Args</a> | <a href="#selfhostedintegrationruntime">Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Integration runtime properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -706,7 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_csharp" style="color: inherit; text-decoration: inherit;">Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_nodejs" style="color: inherit; text-decoration: inherit;">store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_python" style="color: inherit; text-decoration: inherit;">store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -820,7 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_csharp" style="color: inherit; text-decoration: inherit;">Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_nodejs" style="color: inherit; text-decoration: inherit;">store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -904,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_python" style="color: inherit; text-decoration: inherit;">store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a> | <a href="#securestring">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference</a> | <a href="#securestring">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -982,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a> | <a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference</a> | <a href="#securestring">Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1010,7 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a> | <a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference</a> | <a href="#securestring">Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1040,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1096,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1124,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1162,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensekey_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a> | <a href="#securestring">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference</a> | <a href="#securestring">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1202,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensekey_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a> | <a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference</a> | <a href="#securestring">Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1222,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#license_key_python" style="color: inherit; text-decoration: inherit;">license_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a> | <a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreference">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference</a> | <a href="#securestring">Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1244,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensekey_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1284,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensekey_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1304,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#license_key_python" style="color: inherit; text-decoration: inherit;">license_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1676,7 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflowproperties_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Flow<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1716,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetproperties_csharp" style="color: inherit; text-decoration: inherit;">VNet<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>VNet<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1780,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflowproperties_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Flow<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowproperties">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowproperties">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1820,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetproperties_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Net<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetproperties">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetproperties">Integration<wbr>Runtime<wbr>VNet<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1832,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_flow_properties_python" style="color: inherit; text-decoration: inherit;">data_<wbr>flow_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowproperties">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowproperties">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1872,7 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v_net_properties_python" style="color: inherit; text-decoration: inherit;">v_<wbr>net_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetproperties">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetproperties">Integration<wbr>Runtime<wbr>VNet<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1886,7 +1886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflowproperties_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Flow<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1926,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetproperties_csharp" style="color: inherit; text-decoration: inherit;">VNet<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1990,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataflowproperties_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Flow<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2030,7 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetproperties_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Net<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2042,7 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_flow_properties_python" style="color: inherit; text-decoration: inherit;">data_<wbr>flow_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2082,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v_net_properties_python" style="color: inherit; text-decoration: inherit;">v_<wbr>net_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2104,7 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sastoken_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2144,7 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2164,7 +2164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2186,7 +2186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sastoken_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2226,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2246,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2488,7 +2488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2504,7 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staginglinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2544,7 +2544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectvia_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2560,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staginglinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2572,7 +2572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2588,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staging_linked_service_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2602,7 +2602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2618,7 +2618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staginglinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2658,7 +2658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectvia_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2674,7 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staginglinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2686,7 +2686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2702,7 +2702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staging_linked_service_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2798,7 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogadminpassword_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2886,7 +2886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2930,7 +2930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_admin_password_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2976,7 +2976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogadminpassword_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3064,7 +3064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalogadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3108,7 +3108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_admin_password_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3188,7 +3188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cataloginfo_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3196,7 +3196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customsetupscriptproperties_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3204,7 +3204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataproxyproperties_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Proxy<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxyproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxyproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3236,7 +3236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedcredential_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3244,7 +3244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestores_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestore">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Package<wbr>Store<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#packagestore">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Package<wbr>Store&gt;</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3324,7 +3324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cataloginfo_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3332,7 +3332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customsetupscriptproperties_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Script<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptproperties">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptproperties">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3340,7 +3340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataproxyproperties_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Proxy<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxyproperties">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxyproperties">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3356,7 +3356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expresscustomsetupproperties_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Custom<wbr>Setup<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Args | Cmdkey<wbr>Setup<wbr>Args | Component<wbr>Setup<wbr>Args | Environment<wbr>Variable<wbr>Setup<wbr>Args[]</span>
+        <span class="property-type">Az<wbr>Power<wbr>Shell<wbr>Setup | Cmdkey<wbr>Setup | Component<wbr>Setup | Environment<wbr>Variable<wbr>Setup[]</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3372,7 +3372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedcredential_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3380,7 +3380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestores_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestore">Package<wbr>Store<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#packagestore">Package<wbr>Store[]</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3392,7 +3392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3400,7 +3400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_setup_script_properties_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptproperties">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptproperties">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3408,7 +3408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_proxy_properties_python" style="color: inherit; text-decoration: inherit;">data_<wbr>proxy_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxyproperties">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxyproperties">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3424,7 +3424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#express_custom_setup_properties_python" style="color: inherit; text-decoration: inherit;">express_<wbr>custom_<wbr>setup_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Args, Cmdkey<wbr>Setup<wbr>Args, Component<wbr>Setup<wbr>Args, Environment<wbr>Variable<wbr>Setup<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Az<wbr>Power<wbr>Shell<wbr>Setup, Cmdkey<wbr>Setup, Component<wbr>Setup, Environment<wbr>Variable<wbr>Setup]]</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3440,7 +3440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_credential_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3448,7 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_stores_python" style="color: inherit; text-decoration: inherit;">package_<wbr>stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestore">Sequence[Package<wbr>Store<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packagestore">Sequence[Package<wbr>Store]</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3462,7 +3462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cataloginfo_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3470,7 +3470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customsetupscriptproperties_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3478,7 +3478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataproxyproperties_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Proxy<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3510,7 +3510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedcredential_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3518,7 +3518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestores_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestoreresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Package<wbr>Store<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#packagestoreresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Package<wbr>Store<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3598,7 +3598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cataloginfo_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3606,7 +3606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customsetupscriptproperties_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Script<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3614,7 +3614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataproxyproperties_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Proxy<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3630,7 +3630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expresscustomsetupproperties_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Custom<wbr>Setup<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response<wbr>Args | Cmdkey<wbr>Setup<wbr>Response<wbr>Args | Component<wbr>Setup<wbr>Response<wbr>Args | Environment<wbr>Variable<wbr>Setup<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response | Cmdkey<wbr>Setup<wbr>Response | Component<wbr>Setup<wbr>Response | Environment<wbr>Variable<wbr>Setup<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3646,7 +3646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedcredential_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3654,7 +3654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestores_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestoreresponse">Package<wbr>Store<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#packagestoreresponse">Package<wbr>Store<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3666,7 +3666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3674,7 +3674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_setup_script_properties_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3682,7 +3682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_proxy_properties_python" style="color: inherit; text-decoration: inherit;">data_<wbr>proxy_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3698,7 +3698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#express_custom_setup_properties_python" style="color: inherit; text-decoration: inherit;">express_<wbr>custom_<wbr>setup_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response<wbr>Args, Cmdkey<wbr>Setup<wbr>Response<wbr>Args, Component<wbr>Setup<wbr>Response<wbr>Args, Environment<wbr>Variable<wbr>Setup<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response, Cmdkey<wbr>Setup<wbr>Response, Component<wbr>Setup<wbr>Response, Environment<wbr>Variable<wbr>Setup<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3714,7 +3714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_credential_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The user-assigned managed identity reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3722,7 +3722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_stores_python" style="color: inherit; text-decoration: inherit;">package_<wbr>stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestoreresponse">Sequence[Package<wbr>Store<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packagestoreresponse">Sequence[Package<wbr>Store<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3964,7 +3964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3988,7 +3988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4000,7 +4000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestring">Secure<wbr>String<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestring">Secure<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4014,7 +4014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4038,7 +4038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4050,7 +4050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4392,7 +4392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computeproperties_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputeproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputeproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Compute<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4408,7 +4408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedvirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Managed<wbr>Virtual<wbr>Network<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4416,7 +4416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssisproperties_csharp" style="color: inherit; text-decoration: inherit;">Ssis<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessisproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessisproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4464,7 +4464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computeproperties_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputeproperties">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputeproperties">Integration<wbr>Runtime<wbr>Compute<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4480,7 +4480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedvirtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreference">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreference">Managed<wbr>Virtual<wbr>Network<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4488,7 +4488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssisproperties_nodejs" style="color: inherit; text-decoration: inherit;">ssis<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessisproperties">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessisproperties">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4500,7 +4500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_properties_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputeproperties">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputeproperties">Integration<wbr>Runtime<wbr>Compute<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4516,7 +4516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_virtual_network_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>virtual_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreference">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreference">Managed<wbr>Virtual<wbr>Network<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4524,7 +4524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssis_properties_python" style="color: inherit; text-decoration: inherit;">ssis_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessisproperties">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessisproperties">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4546,7 +4546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computeproperties_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4562,7 +4562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedvirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4570,7 +4570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssisproperties_csharp" style="color: inherit; text-decoration: inherit;">Ssis<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4634,7 +4634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computeproperties_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4650,7 +4650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedvirtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4658,7 +4658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssisproperties_nodejs" style="color: inherit; text-decoration: inherit;">ssis<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4678,7 +4678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_properties_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4694,7 +4694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_virtual_network_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>virtual_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4702,7 +4702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssis_properties_python" style="color: inherit; text-decoration: inherit;">ssis_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4888,7 +4888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestorelinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Store<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4928,7 +4928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestorelinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Store<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4948,7 +4948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_store_linked_service_python" style="color: inherit; text-decoration: inherit;">package_<wbr>store_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreference">Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4970,7 +4970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestorelinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Store<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5010,7 +5010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagestorelinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Store<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5030,7 +5030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_store_linked_service_python" style="color: inherit; text-decoration: inherit;">package_<wbr>store_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5152,7 +5152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization</a> | <a href="#linkedintegrationruntimerbacauthorization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5192,7 +5192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization</a> | <a href="#linkedintegrationruntimerbacauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5212,7 +5212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_info_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization</a> | <a href="#linkedintegrationruntimerbacauthorization">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5234,7 +5234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5274,7 +5274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5294,7 +5294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_info_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}

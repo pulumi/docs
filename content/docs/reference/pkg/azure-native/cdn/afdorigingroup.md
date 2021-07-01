@@ -412,7 +412,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#healthprobesettings_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobeparameters">Health<wbr>Probe<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#healthprobeparameters">Health<wbr>Probe<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -420,7 +420,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loadbalancingsettings_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancingsettingsparameters">Load<wbr>Balancing<wbr>Settings<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#loadbalancingsettingsparameters">Load<wbr>Balancing<wbr>Settings<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Load balancing settings for a backend pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -436,7 +436,7 @@ The AFDOriginGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#responsebasedafdoriginerrordetectionsettings_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Afd<wbr>Origin<wbr>Error<wbr>Detection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -905,7 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probeprotocol_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probeprotocol">Probe<wbr>Protocol</a></span>
+        <span class="property-type"><a href="#probeprotocol">string</a></span>
     </dt>
     <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -913,7 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proberequesttype_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Request<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthproberequesttype">Health<wbr>Probe<wbr>Request<wbr>Type</a></span>
+        <span class="property-type"><a href="#healthproberequesttype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1627,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrorranges_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Error<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparameters">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httperrorrangeparameters">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Http<wbr>Error<wbr>Range<wbr>Parameters&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1663,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsebaseddetectederrortypes_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebaseddetectederrortypes">Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a></span>
+        <span class="property-type"><a href="#responsebaseddetectederrortypes">string</a></span>
     </dt>
     <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1683,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrorranges_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Error<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparameters">Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#httperrorrangeparameters">Http<wbr>Error<wbr>Range<wbr>Parameters[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1711,7 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_error_ranges_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparameters">Sequence[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httperrorrangeparameters">Sequence[Http<wbr>Error<wbr>Range<wbr>Parameters]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1741,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrorranges_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Error<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparametersresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1797,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrorranges_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Error<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparametersresponse">Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1825,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_error_ranges_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparametersresponse">Sequence[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">Sequence[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

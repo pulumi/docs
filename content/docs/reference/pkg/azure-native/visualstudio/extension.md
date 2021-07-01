@@ -410,7 +410,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensionresourceplan">Extension<wbr>Resource<wbr>Plan</a></span>
+        <span class="property-type"><a href="#extensionresourceplan">Extension<wbr>Resource<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended information about the plan being purchased for this extension resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

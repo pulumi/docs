@@ -445,7 +445,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#hls_go" style="color: inherit; text-decoration: inherit;">Hls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hls">Hls</a></span>
+        <span class="property-type"><a href="#hls">Hls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

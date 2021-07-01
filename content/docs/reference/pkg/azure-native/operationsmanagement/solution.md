@@ -416,7 +416,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionplan">Solution<wbr>Plan</a></span>
+        <span class="property-type"><a href="#solutionplan">Solution<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plan for solution object supported by the OperationsManagement resource provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -424,7 +424,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionproperties">Solution<wbr>Properties</a></span>
+        <span class="property-type"><a href="#solutionproperties">Solution<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for solution object supported by the OperationsManagement resource provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

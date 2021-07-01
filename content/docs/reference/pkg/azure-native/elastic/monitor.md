@@ -341,7 +341,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity properties of the monitor resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -365,7 +365,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorproperties">Monitor<wbr>Properties</a></span>
+        <span class="property-type"><a href="#monitorproperties">Monitor<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the monitor resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -373,7 +373,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
+        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU of the monitor resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1210,7 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elasticclouddeployment_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Cloud<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticclouddeploymentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>Elastic<wbr>Cloud<wbr>Deployment<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticclouddeploymentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>Elastic<wbr>Cloud<wbr>Deployment<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of the elastic cloud deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1218,7 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elasticclouduser_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Cloud<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticclouduserresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>Elastic<wbr>Cloud<wbr>User<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticclouduserresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>Elastic<wbr>Cloud<wbr>User<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of the user's elastic account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1250,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elasticclouddeployment_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Cloud<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticclouddeploymentresponse">Elastic<wbr>Cloud<wbr>Deployment<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticclouddeploymentresponse">Elastic<wbr>Cloud<wbr>Deployment<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of the elastic cloud deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1258,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elasticclouduser_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Cloud<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticclouduserresponse">Elastic<wbr>Cloud<wbr>User<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticclouduserresponse">Elastic<wbr>Cloud<wbr>User<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of the user's elastic account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1270,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elastic_cloud_deployment_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>cloud_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticclouddeploymentresponse">Elastic<wbr>Cloud<wbr>Deployment<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticclouddeploymentresponse">Elastic<wbr>Cloud<wbr>Deployment<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of the elastic cloud deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1278,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elastic_cloud_user_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>cloud_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticclouduserresponse">Elastic<wbr>Cloud<wbr>User<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticclouduserresponse">Elastic<wbr>Cloud<wbr>User<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of the user's elastic account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1494,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinfo_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}User information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1550,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinfo_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}User information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1578,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_info_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}User information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1608,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elasticproperties_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>Elastic<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>Elastic<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Elastic cloud properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1696,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elasticproperties_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticpropertiesresponse">Elastic<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticpropertiesresponse">Elastic<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Elastic cloud properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1740,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elastic_properties_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticpropertiesresponse">Elastic<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#elasticpropertiesresponse">Elastic<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Elastic cloud properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2160,7 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#companyinfo_csharp" style="color: inherit; text-decoration: inherit;">Company<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#companyinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>Company<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#companyinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Elastic.<wbr>Inputs.<wbr>Company<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Company information of the user to be passed to partners.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2248,7 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#companyinfo_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#companyinfo">Company<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#companyinfo">Company<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Company information of the user to be passed to partners.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2292,7 +2292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#company_info_python" style="color: inherit; text-decoration: inherit;">company_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#companyinfo">Company<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#companyinfo">Company<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Company information of the user to be passed to partners.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

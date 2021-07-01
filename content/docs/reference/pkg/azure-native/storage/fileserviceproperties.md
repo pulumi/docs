@@ -844,7 +844,7 @@ The FileServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrules">Cors<wbr>Rules</a></span>
+        <span class="property-type"><a href="#corsrules">Cors<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -860,7 +860,7 @@ The FileServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#protocolsettings_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protocolsettings">Protocol<wbr>Settings</a></span>
+        <span class="property-type"><a href="#protocolsettings">Protocol<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Protocol settings for file service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -868,7 +868,7 @@ The FileServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#sharedeleteretentionpolicy_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Delete<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deleteretentionpolicy">Delete<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#deleteretentionpolicy">Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The file service properties for share soft delete.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1503,7 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#corsrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1527,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrule">Cors<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#corsrule">Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1539,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrule">Sequence[Cors<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#corsrule">Sequence[Cors<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1553,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#corsruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1577,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsruleresponse">Cors<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#corsruleresponse">Cors<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1589,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsruleresponse">Sequence[Cors<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#corsruleresponse">Sequence[Cors<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1867,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#smb_csharp" style="color: inherit; text-decoration: inherit;">Smb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smbsetting">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Smb<wbr>Setting<wbr>Args</a></span>
+        <span class="property-type"><a href="#smbsetting">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Smb<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1891,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#smb_nodejs" style="color: inherit; text-decoration: inherit;">smb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smbsetting">Smb<wbr>Setting<wbr>Args</a></span>
+        <span class="property-type"><a href="#smbsetting">Smb<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1903,7 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#smb_python" style="color: inherit; text-decoration: inherit;">smb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smbsetting">Smb<wbr>Setting<wbr>Args</a></span>
+        <span class="property-type"><a href="#smbsetting">Smb<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1917,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#smb_csharp" style="color: inherit; text-decoration: inherit;">Smb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smbsettingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Smb<wbr>Setting<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#smbsettingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Smb<wbr>Setting<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1941,7 +1941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#smb_nodejs" style="color: inherit; text-decoration: inherit;">smb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smbsettingresponse">Smb<wbr>Setting<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#smbsettingresponse">Smb<wbr>Setting<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1953,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#smb_python" style="color: inherit; text-decoration: inherit;">smb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smbsettingresponse">Smb<wbr>Setting<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#smbsettingresponse">Smb<wbr>Setting<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Setting for SMB protocol{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2073,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multichannel_csharp" style="color: inherit; text-decoration: inherit;">Multichannel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multichannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Multichannel<wbr>Args</a></span>
+        <span class="property-type"><a href="#multichannel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Multichannel</a></span>
     </dt>
     <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2161,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multichannel_nodejs" style="color: inherit; text-decoration: inherit;">multichannel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multichannel">Multichannel<wbr>Args</a></span>
+        <span class="property-type"><a href="#multichannel">Multichannel</a></span>
     </dt>
     <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2205,7 +2205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multichannel_python" style="color: inherit; text-decoration: inherit;">multichannel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multichannel">Multichannel<wbr>Args</a></span>
+        <span class="property-type"><a href="#multichannel">Multichannel</a></span>
     </dt>
     <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2251,7 +2251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multichannel_csharp" style="color: inherit; text-decoration: inherit;">Multichannel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multichannelresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Multichannel<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#multichannelresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Multichannel<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2339,7 +2339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multichannel_nodejs" style="color: inherit; text-decoration: inherit;">multichannel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multichannelresponse">Multichannel<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#multichannelresponse">Multichannel<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2383,7 +2383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#multichannel_python" style="color: inherit; text-decoration: inherit;">multichannel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multichannelresponse">Multichannel<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#multichannelresponse">Multichannel<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Multichannel setting. Applies to Premium FileStorage only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

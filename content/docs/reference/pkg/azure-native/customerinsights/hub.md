@@ -357,7 +357,7 @@ The Hub resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#hubbillinginfo_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Billing<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubbillinginfoformat">Hub<wbr>Billing<wbr>Info<wbr>Format</a></span>
+        <span class="property-type"><a href="#hubbillinginfoformat">Hub<wbr>Billing<wbr>Info<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Billing settings of the hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

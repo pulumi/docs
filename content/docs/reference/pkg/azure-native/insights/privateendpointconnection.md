@@ -352,7 +352,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointproperty">Private<wbr>Endpoint<wbr>Property</a></span>
+        <span class="property-type"><a href="#privateendpointproperty">Private<wbr>Endpoint<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -368,7 +368,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateproperty">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateproperty">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}

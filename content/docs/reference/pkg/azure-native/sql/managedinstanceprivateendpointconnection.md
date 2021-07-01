@@ -352,7 +352,7 @@ The ManagedInstancePrivateEndpointConnection resource accepts the following [inp
 <a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivateendpointproperty">Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Property</a></span>
+        <span class="property-type"><a href="#managedinstanceprivateendpointproperty">Managed<wbr>Instance<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -368,7 +368,7 @@ The ManagedInstancePrivateEndpointConnection resource accepts the following [inp
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstanceprivatelinkserviceconnectionstateproperty">Managed<wbr>Instance<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property</a></span>
+        <span class="property-type"><a href="#managedinstanceprivatelinkserviceconnectionstateproperty">Managed<wbr>Instance<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}

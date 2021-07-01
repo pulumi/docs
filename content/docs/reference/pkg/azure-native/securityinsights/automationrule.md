@@ -494,7 +494,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#triggeringlogic_go" style="color: inherit; text-decoration: inherit;">Triggering<wbr>Logic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationruletriggeringlogic">Automation<wbr>Rule<wbr>Triggering<wbr>Logic</a></span>
+        <span class="property-type"><a href="#automationruletriggeringlogic">Automation<wbr>Rule<wbr>Triggering<wbr>Logic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The triggering logic of the automation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -941,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulemodifypropertiesactionactionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Action<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulemodifypropertiesactionactionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the modify properties automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -981,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulemodifypropertiesactionactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Action<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulemodifypropertiesactionactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the modify properties automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1001,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_configuration_python" style="color: inherit; text-decoration: inherit;">action_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulemodifypropertiesactionactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Action<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulemodifypropertiesactionactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the modify properties automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1047,7 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabel">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Label<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#incidentlabel">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Label&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of labels to add to the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1055,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Owner<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#incidentownerinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Owner<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1167,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabel">Incident<wbr>Label<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#incidentlabel">Incident<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}List of labels to add to the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1175,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1227,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabel">Sequence[Incident<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#incidentlabel">Sequence[Incident<wbr>Label]</a></span>
     </dt>
     <dd>{{% md %}}List of labels to add to the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1265,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the modify properties automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1305,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the modify properties automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1325,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_configuration_python" style="color: inherit; text-decoration: inherit;">action_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the modify properties automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1371,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Label<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#incidentlabelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Label<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of labels to add to the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1379,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Owner<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#incidentownerinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Incident<wbr>Owner<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1491,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabelresponse">Incident<wbr>Label<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#incidentlabelresponse">Incident<wbr>Label<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of labels to add to the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1499,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1551,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabelresponse">Sequence[Incident<wbr>Label<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#incidentlabelresponse">Sequence[Incident<wbr>Label<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of labels to add to the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1559,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1865,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionproperties_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionconditionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Condition<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionconditionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Condition<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the automation rule condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1889,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionproperties_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Condition<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Condition<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the automation rule condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1901,7 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_properties_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Condition<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Condition<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the automation rule condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2029,7 +2029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionproperties_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the automation rule condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2053,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionproperties_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the automation rule condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2065,7 +2065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_properties_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the automation rule condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2193,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulerunplaybookactionactionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Action<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulerunplaybookactionactionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the run playbook automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2233,7 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulerunplaybookactionactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Action<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulerunplaybookactionactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the run playbook automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2253,7 +2253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_configuration_python" style="color: inherit; text-decoration: inherit;">action_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulerunplaybookactionactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Action<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulerunplaybookactionactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the run playbook automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2357,7 +2357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the run playbook automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2397,7 +2397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the run playbook automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2417,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_configuration_python" style="color: inherit; text-decoration: inherit;">action_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the run playbook automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2545,7 +2545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluescondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluescondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}The conditions to evaluate to determine if the automation rule should be triggered on a given object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2633,7 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluescondition">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluescondition">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}The conditions to evaluate to determine if the automation rule should be triggered on a given object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2677,7 +2677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluescondition">Sequence[Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluescondition">Sequence[Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}The conditions to evaluate to determine if the automation rule should be triggered on a given object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2723,7 +2723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The conditions to evaluate to determine if the automation rule should be triggered on a given object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2811,7 +2811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The conditions to evaluate to determine if the automation rule should be triggered on a given object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2855,7 +2855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">Sequence[Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">Sequence[Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The conditions to evaluate to determine if the automation rule should be triggered on a given object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -487,7 +487,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#appinsights_go" style="color: inherit; text-decoration: inherit;">App<wbr>Insights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appinsightsproperties">App<wbr>Insights<wbr>Properties</a></span>
+        <span class="property-type"><a href="#appinsightsproperties">App<wbr>Insights<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AppInsights configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -503,7 +503,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#containerregistry_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerregistryproperties">Container<wbr>Registry<wbr>Properties</a></span>
+        <span class="property-type"><a href="#containerregistryproperties">Container<wbr>Registry<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container Registry properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -511,7 +511,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#containerservice_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acsclusterproperties">Acs<wbr>Cluster<wbr>Properties</a></span>
+        <span class="property-type"><a href="#acsclusterproperties">Acs<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the Azure Container Service cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -527,7 +527,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#globalserviceconfiguration_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Service<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalserviceconfiguration">Global<wbr>Service<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#globalserviceconfiguration">Global<wbr>Service<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains global configuration for the web services in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -543,7 +543,7 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
 <a href="#storageaccount_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountproperties">Storage<wbr>Account<wbr>Properties</a></span>
+        <span class="property-type"><a href="#storageaccountproperties">Storage<wbr>Account<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage Account properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1038,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratorproperties_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1046,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservices_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemservice">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>System<wbr>Service<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemservice">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>System<wbr>Service&gt;</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1142,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratorproperties_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterproperties">Kubernetes<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterproperties">Kubernetes<wbr>Cluster<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservices_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemservice">System<wbr>Service<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemservice">System<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1194,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestrator_properties_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterproperties">Kubernetes<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterproperties">Kubernetes<wbr>Cluster<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1202,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_services_python" style="color: inherit; text-decoration: inherit;">system_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemservice">Sequence[System<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemservice">Sequence[System<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1256,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratorproperties_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1264,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservices_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>System<wbr>Service<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>System<wbr>Service<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1376,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestratorproperties_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1384,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservices_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">System<wbr>Service<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">System<wbr>Service<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1436,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orchestrator_properties_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterpropertiesresponse">Kubernetes<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Orchestrator specific properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1444,7 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_services_python" style="color: inherit; text-decoration: inherit;">system_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">Sequence[System<wbr>Service<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">Sequence[System<wbr>Service<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The system services deployed to the cluster{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2344,7 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2400,7 +2400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2428,7 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2442,7 +2442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2466,7 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2478,7 +2478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2492,7 +2492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaleconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2508,7 +2508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceauth_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Auth<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Auth<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2516,7 +2516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Ssl<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2564,7 +2564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfiguration">Auto<wbr>Scale<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaleconfiguration">Auto<wbr>Scale<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2580,7 +2580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceauth_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfiguration">Service<wbr>Auth<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthconfiguration">Service<wbr>Auth<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2588,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfiguration">Ssl<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfiguration">Ssl<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2600,7 +2600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfiguration">Auto<wbr>Scale<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaleconfiguration">Auto<wbr>Scale<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2616,7 +2616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_auth_python" style="color: inherit; text-decoration: inherit;">service_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfiguration">Service<wbr>Auth<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthconfiguration">Service<wbr>Auth<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2624,7 +2624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfiguration">Ssl<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfiguration">Ssl<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2638,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaleconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2654,7 +2654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceauth_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Auth<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2662,7 +2662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2710,7 +2710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfigurationresponse">Auto<wbr>Scale<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaleconfigurationresponse">Auto<wbr>Scale<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2726,7 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceauth_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfigurationresponse">Service<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthconfigurationresponse">Service<wbr>Auth<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2734,7 +2734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2746,7 +2746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleconfigurationresponse">Auto<wbr>Scale<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscaleconfigurationresponse">Auto<wbr>Scale<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The auto-scale configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2762,7 +2762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_auth_python" style="color: inherit; text-decoration: inherit;">service_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthconfigurationresponse">Service<wbr>Auth<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthconfigurationresponse">Service<wbr>Auth<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2770,7 +2770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2784,7 +2784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2808,7 +2808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalproperties">Service<wbr>Principal<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalproperties">Service<wbr>Principal<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2820,7 +2820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalproperties">Service<wbr>Principal<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalproperties">Service<wbr>Principal<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2834,7 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2858,7 +2858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2870,7 +2870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceprincipalpropertiesresponse">Service<wbr>Principal<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Service Principal used by Kubernetes{{% /md %}}</dd></dl>
 {{% /choosable %}}

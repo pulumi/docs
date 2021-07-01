@@ -453,7 +453,7 @@ The GuestConfigurationAssignment resource accepts the following [input]({{< relr
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationassignmentproperties">Guest<wbr>Configuration<wbr>Assignment<wbr>Properties</a></span>
+        <span class="property-type"><a href="#guestconfigurationassignmentproperties">Guest<wbr>Configuration<wbr>Assignment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Guest configuration assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -702,7 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -742,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationinforesponse">Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationinforesponse">Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -762,7 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationinforesponse">Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationinforesponse">Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -882,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reasons_csharp" style="color: inherit; text-decoration: inherit;">Reasons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -954,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reasons_nodejs" style="color: inherit; text-decoration: inherit;">reasons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -990,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reasons_python" style="color: inherit; text-decoration: inherit;">reasons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">Sequence[Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">Sequence[Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1052,7 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assignment_csharp" style="color: inherit; text-decoration: inherit;">Assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#assignmentinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1060,7 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#assignmentreportresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1068,7 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_csharp" style="color: inherit; text-decoration: inherit;">Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vminforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>VMInfo<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vminforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>VMInfo<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1204,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assignment_nodejs" style="color: inherit; text-decoration: inherit;">assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentinforesponse">Assignment<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#assignmentinforesponse">Assignment<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1212,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresourceresponse">Assignment<wbr>Report<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#assignmentreportresourceresponse">Assignment<wbr>Report<wbr>Resource<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1220,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_nodejs" style="color: inherit; text-decoration: inherit;">vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vminforesponse">VMInfo<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vminforesponse">VMInfo<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1280,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assignment_python" style="color: inherit; text-decoration: inherit;">assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentinforesponse">Assignment<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#assignmentinforesponse">Assignment<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1288,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresourceresponse">Sequence[Assignment<wbr>Report<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#assignmentreportresourceresponse">Sequence[Assignment<wbr>Report<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1296,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_python" style="color: inherit; text-decoration: inherit;">vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vminforesponse">VMInfo<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vminforesponse">VMInfo<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2014,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guestconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationnavigation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Guest<wbr>Configuration<wbr>Navigation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestconfigurationnavigation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Guest<wbr>Configuration<wbr>Navigation</a></span>
     </dt>
     <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2054,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guestconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationnavigation">Guest<wbr>Configuration<wbr>Navigation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestconfigurationnavigation">Guest<wbr>Configuration<wbr>Navigation</a></span>
     </dt>
     <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2074,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guest_configuration_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationnavigation">Guest<wbr>Configuration<wbr>Navigation<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestconfigurationnavigation">Guest<wbr>Configuration<wbr>Navigation</a></span>
     </dt>
     <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2144,7 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guestconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationnavigationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Guest<wbr>Configuration<wbr>Navigation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestconfigurationnavigationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Guest<wbr>Configuration<wbr>Navigation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2152,7 +2152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latestassignmentreport_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Assignment<wbr>Report</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#assignmentreportresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2296,7 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guestconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationnavigationresponse">Guest<wbr>Configuration<wbr>Navigation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestconfigurationnavigationresponse">Guest<wbr>Configuration<wbr>Navigation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2304,7 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latestassignmentreport_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Assignment<wbr>Report</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2372,7 +2372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#guest_configuration_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationnavigationresponse">Guest<wbr>Configuration<wbr>Navigation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestconfigurationnavigationresponse">Guest<wbr>Configuration<wbr>Navigation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2380,7 +2380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_assignment_report_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>assignment_<wbr>report</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2394,7 +2394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationparameter_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationparameter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#configurationparameter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2402,7 +2402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationsetting_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationsetting">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Setting<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationsetting">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2482,7 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationparameter_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationparameter">Configuration<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#configurationparameter">Configuration<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2490,7 +2490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationsetting_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationsetting">Configuration<wbr>Setting<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationsetting">Configuration<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2526,7 +2526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_parameter_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationparameter">Sequence[Configuration<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#configurationparameter">Sequence[Configuration<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2534,7 +2534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_setting_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationsetting">Configuration<wbr>Setting<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationsetting">Configuration<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2588,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationparameter_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#configurationparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Parameter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2596,7 +2596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationsetting_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationsettingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Setting<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationsettingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Setting<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2708,7 +2708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationparameter_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationparameterresponse">Configuration<wbr>Parameter<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#configurationparameterresponse">Configuration<wbr>Parameter<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2716,7 +2716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationsetting_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationsettingresponse">Configuration<wbr>Setting<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationsettingresponse">Configuration<wbr>Setting<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2768,7 +2768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_parameter_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationparameterresponse">Sequence[Configuration<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#configurationparameterresponse">Sequence[Configuration<wbr>Parameter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2776,7 +2776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_setting_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationsettingresponse">Configuration<wbr>Setting<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationsettingresponse">Configuration<wbr>Setting<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

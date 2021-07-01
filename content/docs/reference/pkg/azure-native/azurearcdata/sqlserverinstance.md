@@ -409,7 +409,7 @@ The SqlServerInstance resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlserverinstanceproperties">Sql<wbr>Server<wbr>Instance<wbr>Properties</a></span>
+        <span class="property-type"><a href="#sqlserverinstanceproperties">Sql<wbr>Server<wbr>Instance<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}null{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

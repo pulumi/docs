@@ -420,7 +420,7 @@ The ReplicationMigrationItem resource accepts the following [input]({{< relref "
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enablemigrationinputproperties">Enable<wbr>Migration<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#enablemigrationinputproperties">Enable<wbr>Migration<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable migration input properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -883,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtenablemigrationinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Enable<wbr>Migration<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmwarecbtenablemigrationinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Enable<wbr>Migration<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The provider specific details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -923,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtenablemigrationinput">VMware<wbr>Cbt<wbr>Enable<wbr>Migration<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmwarecbtenablemigrationinput">VMware<wbr>Cbt<wbr>Enable<wbr>Migration<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The provider specific details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -943,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtenablemigrationinput">VMware<wbr>Cbt<wbr>Enable<wbr>Migration<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmwarecbtenablemigrationinput">VMware<wbr>Cbt<wbr>Enable<wbr>Migration<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The provider specific details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1037,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_nodejs" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1409,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1895,7 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentjob_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentjobdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Current<wbr>Job<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentjobdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Current<wbr>Job<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current job details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1911,7 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1983,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtmigrationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Migration<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmwarecbtmigrationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Migration<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The migration provider custom settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2111,7 +2111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentjob_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentjobdetailsresponse">Current<wbr>Job<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentjobdetailsresponse">Current<wbr>Job<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current job details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2127,7 +2127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2199,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtmigrationdetailsresponse">VMware<wbr>Cbt<wbr>Migration<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmwarecbtmigrationdetailsresponse">VMware<wbr>Cbt<wbr>Migration<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The migration provider custom settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2219,7 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_job_python" style="color: inherit; text-decoration: inherit;">current_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentjobdetailsresponse">Current<wbr>Job<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentjobdetailsresponse">Current<wbr>Job<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current job details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2235,7 +2235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2307,7 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtmigrationdetailsresponse">VMware<wbr>Cbt<wbr>Migration<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmwarecbtmigrationdetailsresponse">VMware<wbr>Cbt<wbr>Migration<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The migration provider custom settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2507,7 +2507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskstoinclude_csharp" style="color: inherit; text-decoration: inherit;">Disks<wbr>To<wbr>Include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtdiskinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Disk<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmwarecbtdiskinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Disk<wbr>Input&gt;</a></span>
     </dt>
     <dd>{{% md %}}The disks to include list.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2707,7 +2707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskstoinclude_nodejs" style="color: inherit; text-decoration: inherit;">disks<wbr>To<wbr>Include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtdiskinput">VMware<wbr>Cbt<wbr>Disk<wbr>Input<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vmwarecbtdiskinput">VMware<wbr>Cbt<wbr>Disk<wbr>Input[]</a></span>
     </dt>
     <dd>{{% md %}}The disks to include list.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2807,7 +2807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disks_to_include_python" style="color: inherit; text-decoration: inherit;">disks_<wbr>to_<wbr>include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtdiskinput">Sequence[VMware<wbr>Cbt<wbr>Disk<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmwarecbtdiskinput">Sequence[VMware<wbr>Cbt<wbr>Disk<wbr>Input]</a></span>
     </dt>
     <dd>{{% md %}}The disks to include list.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2965,7 +2965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmwarecbtprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3021,7 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Nic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmwarecbtnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Nic<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3229,7 +3229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteddisks_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtprotecteddiskdetailsresponse">VMware<wbr>Cbt<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vmwarecbtprotecteddiskdetailsresponse">VMware<wbr>Cbt<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3285,7 +3285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtnicdetailsresponse">VMware<wbr>Cbt<wbr>Nic<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vmwarecbtnicdetailsresponse">VMware<wbr>Cbt<wbr>Nic<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The network details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3361,7 +3361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtprotecteddiskdetailsresponse">Sequence[VMware<wbr>Cbt<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmwarecbtprotecteddiskdetailsresponse">Sequence[VMware<wbr>Cbt<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3417,7 +3417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtnicdetailsresponse">Sequence[VMware<wbr>Cbt<wbr>Nic<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmwarecbtnicdetailsresponse">Sequence[VMware<wbr>Cbt<wbr>Nic<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The network details.{{% /md %}}</dd></dl>
 {{% /choosable %}}

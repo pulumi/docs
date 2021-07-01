@@ -363,7 +363,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfiguration">Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#encryptionconfiguration">Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties to enable Customer Managed Key for the factory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -379,7 +379,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#globalparameters_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Global<wbr>Parameter<wbr>Specification</span>
+        <span class="property-type">map[string]Global<wbr>Parameter<wbr>Specification<wbr>Args</span>
     </dt>
     <dd>{{% md %}}List of parameters for factory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -387,7 +387,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryidentity">Factory<wbr>Identity</a></span>
+        <span class="property-type"><a href="#factoryidentity">Factory<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity of the factory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -411,7 +411,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#repoconfiguration_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Git<wbr>Hub<wbr>Configuration</a> | <a href="#factoryvstsconfiguration">Factory<wbr>VSTSConfiguration</a></span>
+        <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Git<wbr>Hub<wbr>Configuration<wbr>Args</a> | <a href="#factoryvstsconfiguration">Factory<wbr>VSTSConfiguration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Git repo information of the factory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -958,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkidentitydefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>CMKIdentity<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#cmkidentitydefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>CMKIdentity<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1030,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkidentitydefinition">CMKIdentity<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#cmkidentitydefinition">CMKIdentity<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1066,7 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkidentitydefinition">CMKIdentity<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#cmkidentitydefinition">CMKIdentity<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1104,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkidentitydefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>CMKIdentity<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cmkidentitydefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>CMKIdentity<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1176,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkidentitydefinitionresponse">CMKIdentity<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cmkidentitydefinitionresponse">CMKIdentity<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1212,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkidentitydefinitionresponse">CMKIdentity<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cmkidentitydefinitionresponse">CMKIdentity<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

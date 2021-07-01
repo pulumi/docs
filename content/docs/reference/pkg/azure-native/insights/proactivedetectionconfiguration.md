@@ -481,7 +481,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#ruledefinitions_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationinsightscomponentproactivedetectionconfigurationruledefinitions">Application<wbr>Insights<wbr>Component<wbr>Proactive<wbr>Detection<wbr>Configuration<wbr>Rule<wbr>Definitions</a></span>
+        <span class="property-type"><a href="#applicationinsightscomponentproactivedetectionconfigurationruledefinitions">Application<wbr>Insights<wbr>Component<wbr>Proactive<wbr>Detection<wbr>Configuration<wbr>Rule<wbr>Definitions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Static definitions of the ProactiveDetection configuration rule (same values for all components).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

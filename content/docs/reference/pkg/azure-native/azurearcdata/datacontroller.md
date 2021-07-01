@@ -464,7 +464,7 @@ The DataController resource accepts the following [input]({{< relref "/docs/intr
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacontrollerproperties">Data<wbr>Controller<wbr>Properties</a></span>
+        <span class="property-type"><a href="#datacontrollerproperties">Data<wbr>Controller<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data controller's properties{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -488,7 +488,7 @@ The DataController resource accepts the following [input]({{< relref "/docs/intr
 <a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extendedLocation of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -915,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basiclogininformation_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Login<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basiclogininformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Basic<wbr>Login<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#basiclogininformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Basic<wbr>Login<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Username and password for basic login authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -939,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsworkspaceconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsworkspaceconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalyticsworkspaceconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Log analytics workspace id and primary key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -947,7 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpremiseproperty_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onpremiseproperty">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#onpremiseproperty">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Properties from the Kubernetes data controller{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -955,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadserviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uploadserviceprincipal">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Upload<wbr>Service<wbr>Principal<wbr>Args</a></span>
+        <span class="property-type"><a href="#uploadserviceprincipal">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Upload<wbr>Service<wbr>Principal</a></span>
     </dt>
     <dd>{{% md %}}Service principal for uploading billing, metrics and logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -963,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadwatermark_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Watermark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uploadwatermark">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Upload<wbr>Watermark<wbr>Args</a></span>
+        <span class="property-type"><a href="#uploadwatermark">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Upload<wbr>Watermark</a></span>
     </dt>
     <dd>{{% md %}}Properties on upload watermark.  Mostly timestamp for each upload data type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1035,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basiclogininformation_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Login<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basiclogininformation">Basic<wbr>Login<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#basiclogininformation">Basic<wbr>Login<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Username and password for basic login authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsworkspaceconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsworkspaceconfig">Log<wbr>Analytics<wbr>Workspace<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalyticsworkspaceconfig">Log<wbr>Analytics<wbr>Workspace<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Log analytics workspace id and primary key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1067,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpremiseproperty_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onpremiseproperty">On<wbr>Premise<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#onpremiseproperty">On<wbr>Premise<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Properties from the Kubernetes data controller{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadserviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uploadserviceprincipal">Upload<wbr>Service<wbr>Principal<wbr>Args</a></span>
+        <span class="property-type"><a href="#uploadserviceprincipal">Upload<wbr>Service<wbr>Principal</a></span>
     </dt>
     <dd>{{% md %}}Service principal for uploading billing, metrics and logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadwatermark_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Watermark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uploadwatermark">Upload<wbr>Watermark<wbr>Args</a></span>
+        <span class="property-type"><a href="#uploadwatermark">Upload<wbr>Watermark</a></span>
     </dt>
     <dd>{{% md %}}Properties on upload watermark.  Mostly timestamp for each upload data type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1095,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basic_login_information_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>login_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basiclogininformation">Basic<wbr>Login<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#basiclogininformation">Basic<wbr>Login<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Username and password for basic login authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1119,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_analytics_workspace_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsworkspaceconfig">Log<wbr>Analytics<wbr>Workspace<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalyticsworkspaceconfig">Log<wbr>Analytics<wbr>Workspace<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Log analytics workspace id and primary key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1127,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_premise_property_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onpremiseproperty">On<wbr>Premise<wbr>Property<wbr>Args</a></span>
+        <span class="property-type"><a href="#onpremiseproperty">On<wbr>Premise<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Properties from the Kubernetes data controller{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1135,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_service_principal_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>service_<wbr>principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uploadserviceprincipal">Upload<wbr>Service<wbr>Principal<wbr>Args</a></span>
+        <span class="property-type"><a href="#uploadserviceprincipal">Upload<wbr>Service<wbr>Principal</a></span>
     </dt>
     <dd>{{% md %}}Service principal for uploading billing, metrics and logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1143,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_watermark_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>watermark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uploadwatermark">Upload<wbr>Watermark<wbr>Args</a></span>
+        <span class="property-type"><a href="#uploadwatermark">Upload<wbr>Watermark</a></span>
     </dt>
     <dd>{{% md %}}Properties on upload watermark.  Mostly timestamp for each upload data type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1165,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basiclogininformation_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Login<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basiclogininformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Basic<wbr>Login<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#basiclogininformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Basic<wbr>Login<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Username and password for basic login authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1189,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsworkspaceconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsworkspaceconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalyticsworkspaceconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Log analytics workspace id and primary key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpremiseproperty_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onpremisepropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#onpremisepropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties from the Kubernetes data controller{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1205,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadserviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uploadserviceprincipalresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Upload<wbr>Service<wbr>Principal<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uploadserviceprincipalresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Upload<wbr>Service<wbr>Principal<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Service principal for uploading billing, metrics and logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadwatermark_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Watermark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uploadwatermarkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Upload<wbr>Watermark<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uploadwatermarkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Upload<wbr>Watermark<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties on upload watermark.  Mostly timestamp for each upload data type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1301,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basiclogininformation_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Login<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basiclogininformationresponse">Basic<wbr>Login<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#basiclogininformationresponse">Basic<wbr>Login<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Username and password for basic login authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1325,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsworkspaceconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsworkspaceconfigresponse">Log<wbr>Analytics<wbr>Workspace<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalyticsworkspaceconfigresponse">Log<wbr>Analytics<wbr>Workspace<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Log analytics workspace id and primary key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1333,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onpremiseproperty_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onpremisepropertyresponse">On<wbr>Premise<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#onpremisepropertyresponse">On<wbr>Premise<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties from the Kubernetes data controller{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadserviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uploadserviceprincipalresponse">Upload<wbr>Service<wbr>Principal<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uploadserviceprincipalresponse">Upload<wbr>Service<wbr>Principal<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Service principal for uploading billing, metrics and logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadwatermark_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Watermark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uploadwatermarkresponse">Upload<wbr>Watermark<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uploadwatermarkresponse">Upload<wbr>Watermark<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties on upload watermark.  Mostly timestamp for each upload data type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1369,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basic_login_information_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>login_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basiclogininformationresponse">Basic<wbr>Login<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#basiclogininformationresponse">Basic<wbr>Login<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Username and password for basic login authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1393,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_analytics_workspace_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsworkspaceconfigresponse">Log<wbr>Analytics<wbr>Workspace<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalyticsworkspaceconfigresponse">Log<wbr>Analytics<wbr>Workspace<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Log analytics workspace id and primary key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1401,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_premise_property_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onpremisepropertyresponse">On<wbr>Premise<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#onpremisepropertyresponse">On<wbr>Premise<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties from the Kubernetes data controller{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1409,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_service_principal_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>service_<wbr>principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uploadserviceprincipalresponse">Upload<wbr>Service<wbr>Principal<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uploadserviceprincipalresponse">Upload<wbr>Service<wbr>Principal<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Service principal for uploading billing, metrics and logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1417,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_watermark_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>watermark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uploadwatermarkresponse">Upload<wbr>Watermark<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uploadwatermarkresponse">Upload<wbr>Watermark<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties on upload watermark.  Mostly timestamp for each upload data type{{% /md %}}</dd></dl>
 {{% /choosable %}}

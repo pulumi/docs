@@ -467,7 +467,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#customimageplan_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Image<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiesfromplan">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan</a></span>
+        <span class="property-type"><a href="#customimagepropertiesfromplan">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage information about the plan related to this custom image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -475,7 +475,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#datadiskstorageinfo_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Storage<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskstoragetypeinfo">[]Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info</a></span>
+        <span class="property-type"><a href="#datadiskstoragetypeinfo">[]Data<wbr>Disk<wbr>Storage<wbr>Type<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage information about the data disks present in the custom image{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -539,7 +539,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#vhd_go" style="color: inherit; text-decoration: inherit;">Vhd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiescustom">Custom<wbr>Image<wbr>Properties<wbr>Custom</a></span>
+        <span class="property-type"><a href="#customimagepropertiescustom">Custom<wbr>Image<wbr>Properties<wbr>Custom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VHD from which the image is to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -547,7 +547,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#vm_go" style="color: inherit; text-decoration: inherit;">Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customimagepropertiesfromvm">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm</a></span>
+        <span class="property-type"><a href="#customimagepropertiesfromvm">Custom<wbr>Image<wbr>Properties<wbr>From<wbr>Vm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine from which the image is to be created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1472,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosinfo_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1488,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsosinfo_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsosinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1528,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosinfo_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinfo">Linux<wbr>Os<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosinfo">Linux<wbr>Os<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1544,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsosinfo_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinfo">Windows<wbr>Os<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsosinfo">Windows<wbr>Os<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1556,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_os_info_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinfo">Linux<wbr>Os<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosinfo">Linux<wbr>Os<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1572,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_os_info_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinfo">Windows<wbr>Os<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsosinfo">Windows<wbr>Os<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1586,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosinfo_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1602,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsosinfo_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsosinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1642,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosinfo_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1658,7 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsosinfo_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1670,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_os_info_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1686,7 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_os_info_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}

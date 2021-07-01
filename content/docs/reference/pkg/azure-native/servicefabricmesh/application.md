@@ -522,7 +522,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#diagnostics_go" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsdescription">Diagnostics<wbr>Description</a></span>
+        <span class="property-type"><a href="#diagnosticsdescription">Diagnostics<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the diagnostics definition and usage for an application resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +538,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresourcedescription">[]Service<wbr>Resource<wbr>Description</a></span>
+        <span class="property-type"><a href="#serviceresourcedescription">[]Service<wbr>Resource<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the services in the application. This property is used to create or modify services of the application. On get only the name of the service is returned. The service description can be obtained by querying for the service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationparameters_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumedisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumedisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for creating application-scoped volumes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1317,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationparameters_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumedisk">Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumedisk">Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for creating application-scoped volumes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1353,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_parameters_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumedisk">Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumedisk">Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for creating application-scoped volumes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1555,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationparameters_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumediskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumediskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for creating application-scoped volumes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1627,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationparameters_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumediskresponse">Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumediskresponse">Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for creating application-scoped volumes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1663,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_parameters_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumediskresponse">Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumediskresponse">Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for creating application-scoped volumes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1701,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mechanism_csharp" style="color: inherit; text-decoration: inherit;">Mechanism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addremovereplicascalingmechanism">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Args</a></span>
+        <span class="property-type"><a href="#addremovereplicascalingmechanism">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism</a></span>
     </dt>
     <dd>{{% md %}}The mechanism that is used to scale when auto scaling operation is invoked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1717,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#averageloadscalingtrigger">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#averageloadscalingtrigger">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Average<wbr>Load<wbr>Scaling<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}Determines when auto scaling operation will be invoked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1757,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mechanism_nodejs" style="color: inherit; text-decoration: inherit;">mechanism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addremovereplicascalingmechanism">Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Args</a></span>
+        <span class="property-type"><a href="#addremovereplicascalingmechanism">Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism</a></span>
     </dt>
     <dd>{{% md %}}The mechanism that is used to scale when auto scaling operation is invoked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1773,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#averageloadscalingtrigger">Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#averageloadscalingtrigger">Average<wbr>Load<wbr>Scaling<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}Determines when auto scaling operation will be invoked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1785,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mechanism_python" style="color: inherit; text-decoration: inherit;">mechanism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addremovereplicascalingmechanism">Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Args</a></span>
+        <span class="property-type"><a href="#addremovereplicascalingmechanism">Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism</a></span>
     </dt>
     <dd>{{% md %}}The mechanism that is used to scale when auto scaling operation is invoked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1801,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#averageloadscalingtrigger">Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#averageloadscalingtrigger">Average<wbr>Load<wbr>Scaling<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}Determines when auto scaling operation will be invoked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1815,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mechanism_csharp" style="color: inherit; text-decoration: inherit;">Mechanism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addremovereplicascalingmechanismresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addremovereplicascalingmechanismresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mechanism that is used to scale when auto scaling operation is invoked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1831,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#averageloadscalingtriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#averageloadscalingtriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Determines when auto scaling operation will be invoked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1871,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mechanism_nodejs" style="color: inherit; text-decoration: inherit;">mechanism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addremovereplicascalingmechanismresponse">Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addremovereplicascalingmechanismresponse">Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mechanism that is used to scale when auto scaling operation is invoked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1887,7 +1887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#averageloadscalingtriggerresponse">Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#averageloadscalingtriggerresponse">Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Determines when auto scaling operation will be invoked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1899,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mechanism_python" style="color: inherit; text-decoration: inherit;">mechanism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addremovereplicascalingmechanismresponse">Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addremovereplicascalingmechanismresponse">Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mechanism that is used to scale when auto scaling operation is invoked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1915,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#averageloadscalingtriggerresponse">Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#averageloadscalingtriggerresponse">Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Determines when auto scaling operation will be invoked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2063,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingresourcemetric">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalingresourcemetric">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Resource<wbr>Metric</a></span>
     </dt>
     <dd>{{% md %}}Description of the metric that is used for scaling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2135,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingresourcemetric">Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalingresourcemetric">Auto<wbr>Scaling<wbr>Resource<wbr>Metric</a></span>
     </dt>
     <dd>{{% md %}}Description of the metric that is used for scaling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2171,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingresourcemetric">Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalingresourcemetric">Auto<wbr>Scaling<wbr>Resource<wbr>Metric</a></span>
     </dt>
     <dd>{{% md %}}Description of the metric that is used for scaling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2209,7 +2209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingresourcemetricresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalingresourcemetricresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Description of the metric that is used for scaling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2281,7 +2281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingresourcemetricresponse">Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalingresourcemetricresponse">Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Description of the metric that is used for scaling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2317,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingresourcemetricresponse">Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalingresourcemetricresponse">Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Description of the metric that is used for scaling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2847,7 +2847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}The resources required by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2863,7 +2863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsref">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsref">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2871,7 +2871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Properties&gt;</a></span>
     </dt>
     <dd>{{% md %}}The endpoints exposed by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2887,7 +2887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariable">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Environment<wbr>Variable&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2895,7 +2895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageregistrycredential_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Registry<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistrycredential">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageregistrycredential">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Image<wbr>Registry<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}Image registry credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2903,7 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Label<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerlabel">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Label&gt;</a></span>
     </dt>
     <dd>{{% md %}}The labels to set in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2911,7 +2911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reliablecollectionsrefs_csharp" style="color: inherit; text-decoration: inherit;">Reliable<wbr>Collections<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reliablecollectionsref">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Reliable<wbr>Collections<wbr>Ref<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reliablecollectionsref">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Reliable<wbr>Collections<wbr>Ref&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2919,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setting">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Setting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#setting">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Setting&gt;</a></span>
     </dt>
     <dd>{{% md %}}The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2927,7 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumerefs_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Volume<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Volume<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2935,7 +2935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolume">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationscopedvolume">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume&gt;</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3079,7 +3079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}The resources required by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3095,7 +3095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsref">Diagnostics<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsref">Diagnostics<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3103,7 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointproperties">Endpoint<wbr>Properties<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointproperties">Endpoint<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints exposed by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3119,7 +3119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">Environment<wbr>Variable<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#environmentvariable">Environment<wbr>Variable[]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3127,7 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageregistrycredential_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Registry<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistrycredential">Image<wbr>Registry<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageregistrycredential">Image<wbr>Registry<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}Image registry credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3135,7 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">Container<wbr>Label<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#containerlabel">Container<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}The labels to set in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3143,7 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reliablecollectionsrefs_nodejs" style="color: inherit; text-decoration: inherit;">reliable<wbr>Collections<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reliablecollectionsref">Reliable<wbr>Collections<wbr>Ref<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reliablecollectionsref">Reliable<wbr>Collections<wbr>Ref[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3151,7 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setting">Setting<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#setting">Setting[]</a></span>
     </dt>
     <dd>{{% md %}}The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3159,7 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumerefs_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumereference">Volume<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#volumereference">Volume<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3167,7 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolume">Application<wbr>Scoped<wbr>Volume<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationscopedvolume">Application<wbr>Scoped<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3195,7 +3195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}The resources required by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3211,7 +3211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsref">Diagnostics<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsref">Diagnostics<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3219,7 +3219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointproperties">Sequence[Endpoint<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointproperties">Sequence[Endpoint<wbr>Properties]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints exposed by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3235,7 +3235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">Sequence[Environment<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environmentvariable">Sequence[Environment<wbr>Variable]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3243,7 +3243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_registry_credential_python" style="color: inherit; text-decoration: inherit;">image_<wbr>registry_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistrycredential">Image<wbr>Registry<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageregistrycredential">Image<wbr>Registry<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}Image registry credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3251,7 +3251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabel">Sequence[Container<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerlabel">Sequence[Container<wbr>Label]</a></span>
     </dt>
     <dd>{{% md %}}The labels to set in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3259,7 +3259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reliable_collections_refs_python" style="color: inherit; text-decoration: inherit;">reliable_<wbr>collections_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reliablecollectionsref">Sequence[Reliable<wbr>Collections<wbr>Ref<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reliablecollectionsref">Sequence[Reliable<wbr>Collections<wbr>Ref]</a></span>
     </dt>
     <dd>{{% md %}}A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3267,7 +3267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setting">Sequence[Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#setting">Sequence[Setting]</a></span>
     </dt>
     <dd>{{% md %}}The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3275,7 +3275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_refs_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumereference">Sequence[Volume<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumereference">Sequence[Volume<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3283,7 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolume">Sequence[Application<wbr>Scoped<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationscopedvolume">Sequence[Application<wbr>Scoped<wbr>Volume]</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3305,7 +3305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Runtime information of a container instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3321,7 +3321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resources required by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3337,7 +3337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsrefresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsrefresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3345,7 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The endpoints exposed by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3361,7 +3361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3369,7 +3369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageregistrycredential_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Registry<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistrycredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Image<wbr>Registry<wbr>Credential<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageregistrycredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Image<wbr>Registry<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Image registry credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3377,7 +3377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Label<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerlabelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Label<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The labels to set in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3385,7 +3385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reliablecollectionsrefs_csharp" style="color: inherit; text-decoration: inherit;">Reliable<wbr>Collections<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reliablecollectionsrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Reliable<wbr>Collections<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reliablecollectionsrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Reliable<wbr>Collections<wbr>Ref<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3393,7 +3393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#settingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Setting<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3401,7 +3401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumerefs_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Volume<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#volumereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Volume<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3409,7 +3409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3553,7 +3553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instanceview_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerinstanceviewresponse">Container<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerinstanceviewresponse">Container<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Runtime information of a container instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3569,7 +3569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resources required by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3585,7 +3585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsrefresponse">Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsrefresponse">Diagnostics<wbr>Ref<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3593,7 +3593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponse">Endpoint<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponse">Endpoint<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints exposed by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3609,7 +3609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">Environment<wbr>Variable<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">Environment<wbr>Variable<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3617,7 +3617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageregistrycredential_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Registry<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistrycredentialresponse">Image<wbr>Registry<wbr>Credential<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageregistrycredentialresponse">Image<wbr>Registry<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Image registry credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3625,7 +3625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabelresponse">Container<wbr>Label<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#containerlabelresponse">Container<wbr>Label<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The labels to set in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3633,7 +3633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reliablecollectionsrefs_nodejs" style="color: inherit; text-decoration: inherit;">reliable<wbr>Collections<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reliablecollectionsrefresponse">Reliable<wbr>Collections<wbr>Ref<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reliablecollectionsrefresponse">Reliable<wbr>Collections<wbr>Ref<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3641,7 +3641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingresponse">Setting<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#settingresponse">Setting<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3649,7 +3649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumerefs_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumereferenceresponse">Volume<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#volumereferenceresponse">Volume<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3657,7 +3657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumeresponse">Application<wbr>Scoped<wbr>Volume<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumeresponse">Application<wbr>Scoped<wbr>Volume<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3677,7 +3677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerinstanceviewresponse">Container<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerinstanceviewresponse">Container<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Runtime information of a container instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3693,7 +3693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resources required by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3709,7 +3709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsrefresponse">Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsrefresponse">Diagnostics<wbr>Ref<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3717,7 +3717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponse">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponse">Sequence[Endpoint<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints exposed by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3733,7 +3733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">Sequence[Environment<wbr>Variable<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">Sequence[Environment<wbr>Variable<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3741,7 +3741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_registry_credential_python" style="color: inherit; text-decoration: inherit;">image_<wbr>registry_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistrycredentialresponse">Image<wbr>Registry<wbr>Credential<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageregistrycredentialresponse">Image<wbr>Registry<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Image registry credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3749,7 +3749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabelresponse">Sequence[Container<wbr>Label<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerlabelresponse">Sequence[Container<wbr>Label<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The labels to set in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3757,7 +3757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reliable_collections_refs_python" style="color: inherit; text-decoration: inherit;">reliable_<wbr>collections_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reliablecollectionsrefresponse">Sequence[Reliable<wbr>Collections<wbr>Ref<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reliablecollectionsrefresponse">Sequence[Reliable<wbr>Collections<wbr>Ref<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3765,7 +3765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingresponse">Sequence[Setting<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#settingresponse">Sequence[Setting<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3773,7 +3773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_refs_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumereferenceresponse">Sequence[Volume<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumereferenceresponse">Sequence[Volume<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3781,7 +3781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumeresponse">Sequence[Application<wbr>Scoped<wbr>Volume<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumeresponse">Sequence[Application<wbr>Scoped<wbr>Volume<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4005,7 +4005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentstate_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Current container instance state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4013,7 +4013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containereventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containereventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Event<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The events of this container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4021,7 +4021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#previousstate_csharp" style="color: inherit; text-decoration: inherit;">Previous<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Previous container instance state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4077,7 +4077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentstate_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Current container instance state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4085,7 +4085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containereventresponse">Container<wbr>Event<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#containereventresponse">Container<wbr>Event<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The events of this container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4093,7 +4093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#previousstate_nodejs" style="color: inherit; text-decoration: inherit;">previous<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Previous container instance state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4113,7 +4113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_state_python" style="color: inherit; text-decoration: inherit;">current_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Current container instance state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4121,7 +4121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containereventresponse">Sequence[Container<wbr>Event<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containereventresponse">Sequence[Container<wbr>Event<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The events of this container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4129,7 +4129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#previous_state_python" style="color: inherit; text-decoration: inherit;">previous_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Previous container instance state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4509,7 +4509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescription">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescription">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of supported sinks that can be referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4565,7 +4565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescription">Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescription">Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description[]</a></span>
     </dt>
     <dd>{{% md %}}List of supported sinks that can be referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4593,7 +4593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescription">Sequence[Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescription">Sequence[Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description]</a></span>
     </dt>
     <dd>{{% md %}}List of supported sinks that can be referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4623,7 +4623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of supported sinks that can be referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4679,7 +4679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescriptionresponse">Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescriptionresponse">Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of supported sinks that can be referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4707,7 +4707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescriptionresponse">Sequence[Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescriptionresponse">Sequence[Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of supported sinks that can be referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5541,7 +5541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointrefs_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointref">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointref">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5581,7 +5581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointrefs_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointref">Endpoint<wbr>Ref<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointref">Endpoint<wbr>Ref[]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5601,7 +5601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_refs_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointref">Sequence[Endpoint<wbr>Ref<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointref">Sequence[Endpoint<wbr>Ref]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5623,7 +5623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointrefs_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5663,7 +5663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointrefs_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">Endpoint<wbr>Ref<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">Endpoint<wbr>Ref<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5683,7 +5683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_refs_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">Sequence[Endpoint<wbr>Ref<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">Sequence[Endpoint<wbr>Ref<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6223,7 +6223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequests">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequests">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requests</a></span>
     </dt>
     <dd>{{% md %}}Describes the requested resources for a given container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6231,7 +6231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimits">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcelimits">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Describes the maximum limits on the resources for a given container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6263,7 +6263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequests">Resource<wbr>Requests<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequests">Resource<wbr>Requests</a></span>
     </dt>
     <dd>{{% md %}}Describes the requested resources for a given container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6271,7 +6271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimits">Resource<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcelimits">Resource<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Describes the maximum limits on the resources for a given container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6283,7 +6283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequests">Resource<wbr>Requests<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequests">Resource<wbr>Requests</a></span>
     </dt>
     <dd>{{% md %}}Describes the requested resources for a given container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6291,7 +6291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimits">Resource<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcelimits">Resource<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Describes the maximum limits on the resources for a given container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6305,7 +6305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequestsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequestsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the requested resources for a given container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6313,7 +6313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimitsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcelimitsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the maximum limits on the resources for a given container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6345,7 +6345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequestsresponse">Resource<wbr>Requests<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequestsresponse">Resource<wbr>Requests<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the requested resources for a given container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6353,7 +6353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimitsresponse">Resource<wbr>Limits<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcelimitsresponse">Resource<wbr>Limits<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the maximum limits on the resources for a given container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6365,7 +6365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequestsresponse">Resource<wbr>Requests<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerequestsresponse">Resource<wbr>Requests<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the requested resources for a given container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6373,7 +6373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimitsresponse">Resource<wbr>Limits<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcelimitsresponse">Resource<wbr>Limits<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the maximum limits on the resources for a given container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6387,7 +6387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codepackages_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercodepackageproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containercodepackageproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Code<wbr>Package<wbr>Properties&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6403,7 +6403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscalingpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6419,7 +6419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsref">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsref">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6435,7 +6435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkrefs_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Network<wbr>Ref<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkref">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Network<wbr>Ref&gt;</a></span>
     </dt>
     <dd>{{% md %}}The names of the private networks that this service needs to be part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6523,7 +6523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codepackages_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercodepackageproperties">Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#containercodepackageproperties">Container<wbr>Code<wbr>Package<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6539,7 +6539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicy">Auto<wbr>Scaling<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicy">Auto<wbr>Scaling<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6555,7 +6555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsref">Diagnostics<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsref">Diagnostics<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6571,7 +6571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkrefs_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">Network<wbr>Ref<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkref">Network<wbr>Ref[]</a></span>
     </dt>
     <dd>{{% md %}}The names of the private networks that this service needs to be part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6591,7 +6591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_packages_python" style="color: inherit; text-decoration: inherit;">code_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercodepackageproperties">Sequence[Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containercodepackageproperties">Sequence[Container<wbr>Code<wbr>Package<wbr>Properties]</a></span>
     </dt>
     <dd>{{% md %}}Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6607,7 +6607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_scaling_policies_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicy">Sequence[Auto<wbr>Scaling<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicy">Sequence[Auto<wbr>Scaling<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6623,7 +6623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsref">Diagnostics<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsref">Diagnostics<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6639,7 +6639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_refs_python" style="color: inherit; text-decoration: inherit;">network_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">Sequence[Network<wbr>Ref<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkref">Sequence[Network<wbr>Ref]</a></span>
     </dt>
     <dd>{{% md %}}The names of the private networks that this service needs to be part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6661,7 +6661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codepackages_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercodepackagepropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containercodepackagepropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6733,7 +6733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Policy<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6749,7 +6749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsrefresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsrefresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6765,7 +6765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkrefs_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Network<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Network<wbr>Ref<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The names of the private networks that this service needs to be part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6909,7 +6909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codepackages_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercodepackagepropertiesresponse">Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#containercodepackagepropertiesresponse">Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6981,7 +6981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyresponse">Auto<wbr>Scaling<wbr>Policy<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyresponse">Auto<wbr>Scaling<wbr>Policy<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6997,7 +6997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsrefresponse">Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsrefresponse">Diagnostics<wbr>Ref<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7013,7 +7013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkrefs_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrefresponse">Network<wbr>Ref<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkrefresponse">Network<wbr>Ref<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The names of the private networks that this service needs to be part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7033,7 +7033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_packages_python" style="color: inherit; text-decoration: inherit;">code_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercodepackagepropertiesresponse">Sequence[Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containercodepackagepropertiesresponse">Sequence[Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7105,7 +7105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_scaling_policies_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyresponse">Sequence[Auto<wbr>Scaling<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyresponse">Sequence[Auto<wbr>Scaling<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7121,7 +7121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsrefresponse">Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsrefresponse">Diagnostics<wbr>Ref<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7137,7 +7137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_refs_python" style="color: inherit; text-decoration: inherit;">network_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrefresponse">Sequence[Network<wbr>Ref<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkrefresponse">Sequence[Network<wbr>Ref<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The names of the private networks that this service needs to be part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -940,7 +940,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionlist">Action<wbr>List</a></span>
+        <span class="property-type"><a href="#actionlist">Action<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The actions that will activate when the condition is met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -948,7 +948,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleallofcondition">Alert<wbr>Rule<wbr>All<wbr>Of<wbr>Condition</a></span>
+        <span class="property-type"><a href="#alertruleallofcondition">Alert<wbr>Rule<wbr>All<wbr>Of<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The condition that will cause this alert to activate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1463,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiongroups_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroup">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Action<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#actiongroup">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Action<wbr>Group&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1487,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiongroups_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroup">Action<wbr>Group<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#actiongroup">Action<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1499,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_groups_python" style="color: inherit; text-decoration: inherit;">action_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroup">Sequence[Action<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroup">Sequence[Action<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1513,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiongroups_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Action<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#actiongroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Action<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1537,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actiongroups_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupresponse">Action<wbr>Group<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#actiongroupresponse">Action<wbr>Group<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1549,7 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_groups_python" style="color: inherit; text-decoration: inherit;">action_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupresponse">Sequence[Action<wbr>Group<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#actiongroupresponse">Sequence[Action<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of the Action Groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1563,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleanyoforleafcondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#alertruleanyoforleafcondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1587,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleanyoforleafcondition">Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#alertruleanyoforleafcondition">Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1599,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleanyoforleafcondition">Sequence[Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertruleanyoforleafcondition">Sequence[Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1613,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleanyoforleafconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#alertruleanyoforleafconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1637,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleanyoforleafconditionresponse">Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#alertruleanyoforleafconditionresponse">Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1649,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleanyoforleafconditionresponse">Sequence[Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertruleanyoforleafconditionresponse">Sequence[Alert<wbr>Rule<wbr>Any<wbr>Of<wbr>Or<wbr>Leaf<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Activity Log Alert rule conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1663,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anyof_csharp" style="color: inherit; text-decoration: inherit;">Any<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleleafcondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#alertruleleafcondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Alert<wbr>Rule<wbr>Leaf<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1737,7 +1737,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#anyof_nodejs" style="color: inherit; text-decoration: inherit;">any<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleleafcondition">Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#alertruleleafcondition">Alert<wbr>Rule<wbr>Leaf<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1774,7 +1774,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#any_of_python" style="color: inherit; text-decoration: inherit;">any_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleleafcondition">Sequence[Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertruleleafcondition">Sequence[Alert<wbr>Rule<wbr>Leaf<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1813,7 +1813,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#anyof_csharp" style="color: inherit; text-decoration: inherit;">Any<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleleafconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#alertruleleafconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1887,7 +1887,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#anyof_nodejs" style="color: inherit; text-decoration: inherit;">any<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleleafconditionresponse">Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#alertruleleafconditionresponse">Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1924,7 +1924,7 @@ The possible values for this field are (case-insensitive): 'resourceId', 'catego
 <a href="#any_of_python" style="color: inherit; text-decoration: inherit;">any_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertruleleafconditionresponse">Sequence[Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertruleleafconditionresponse">Sequence[Alert<wbr>Rule<wbr>Leaf<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An Activity Log Alert rule condition that is met when at least one of its member leaf conditions are met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

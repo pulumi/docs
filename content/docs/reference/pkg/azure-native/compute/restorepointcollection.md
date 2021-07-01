@@ -369,7 +369,7 @@ The RestorePointCollection resource accepts the following [input]({{< relref "/d
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointcollectionsourceproperties">Restore<wbr>Point<wbr>Collection<wbr>Source<wbr>Properties</a></span>
+        <span class="property-type"><a href="#restorepointcollectionsourceproperties">Restore<wbr>Point<wbr>Collection<wbr>Source<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the source resource that this restore point collection is created from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -982,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnosticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Boot<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bootdiagnosticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Boot<wbr>Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1006,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnosticsresponse">Boot<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bootdiagnosticsresponse">Boot<wbr>Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1018,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnosticsresponse">Boot<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bootdiagnosticsresponse">Boot<wbr>Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1082,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the disk encryption key, which is a Key Vault Secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1098,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1138,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the disk encryption key, which is a Key Vault Secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1154,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1166,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the disk encryption key, which is a Key Vault Secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1182,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1254,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing the key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1294,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing the key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1314,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing the key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1336,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing the secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1376,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing the secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1396,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing the secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1418,7 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchsettings_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxpatchsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1434,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1490,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchsettings_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1506,7 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1526,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1542,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1638,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionset_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1694,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionset_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1722,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1792,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1808,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vaultsecretgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1816,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Windows operating system settings on the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1944,7 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1960,7 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroupresponse">Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vaultsecretgroupresponse">Vault<wbr>Secret<wbr>Group<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1968,7 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Windows operating system settings on the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2020,7 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2036,7 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroupresponse">Sequence[Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultsecretgroupresponse">Sequence[Vault<wbr>Secret<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2044,7 +2044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Windows operating system settings on the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2474,7 +2474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningdetails_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointprovisioningdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Restore<wbr>Point<wbr>Provisioning<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restorepointprovisioningdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Restore<wbr>Point<wbr>Provisioning<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the provisioning details set by the server during Create restore point operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2490,7 +2490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcemetadata_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointsourcemetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Restore<wbr>Point<wbr>Source<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restorepointsourcemetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Restore<wbr>Point<wbr>Source<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the details of the VM captured at the time of the restore point creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2506,7 +2506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedisks_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2610,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningdetails_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointprovisioningdetailsresponse">Restore<wbr>Point<wbr>Provisioning<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restorepointprovisioningdetailsresponse">Restore<wbr>Point<wbr>Provisioning<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the provisioning details set by the server during Create restore point operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2626,7 +2626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcemetadata_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointsourcemetadataresponse">Restore<wbr>Point<wbr>Source<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restorepointsourcemetadataresponse">Restore<wbr>Point<wbr>Source<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the details of the VM captured at the time of the restore point creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2642,7 +2642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedisks_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2678,7 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_details_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointprovisioningdetailsresponse">Restore<wbr>Point<wbr>Provisioning<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restorepointprovisioningdetailsresponse">Restore<wbr>Point<wbr>Provisioning<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the provisioning details set by the server during Create restore point operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2694,7 +2694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_metadata_python" style="color: inherit; text-decoration: inherit;">source_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointsourcemetadataresponse">Restore<wbr>Point<wbr>Source<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restorepointsourcemetadataresponse">Restore<wbr>Point<wbr>Source<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the details of the VM captured at the time of the restore point creation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2710,7 +2710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_disks_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Sequence[Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Sequence[Api<wbr>Entity<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2724,7 +2724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnosticsprofile_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Diagnostics<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the diagnostics profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2732,7 +2732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hardwareprofile_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Hardware<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hardwareprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Hardware<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the hardware profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2748,7 +2748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>OSProfile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>OSProfile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the OS profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2756,7 +2756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securityprofile_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Security<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Security<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the security profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2764,7 +2764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointsourcevmstorageprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Restore<wbr>Point<wbr>Source<wbr>VMStorage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restorepointsourcevmstorageprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Restore<wbr>Point<wbr>Source<wbr>VMStorage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the storage profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2844,7 +2844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnosticsprofile_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsprofileresponse">Diagnostics<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsprofileresponse">Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the diagnostics profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2852,7 +2852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hardwareprofile_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the hardware profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2868,7 +2868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">OSProfile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofileresponse">OSProfile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the OS profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2876,7 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securityprofile_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityprofileresponse">Security<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityprofileresponse">Security<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the security profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2884,7 +2884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointsourcevmstorageprofileresponse">Restore<wbr>Point<wbr>Source<wbr>VMStorage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restorepointsourcevmstorageprofileresponse">Restore<wbr>Point<wbr>Source<wbr>VMStorage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the storage profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2904,7 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_profile_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsprofileresponse">Diagnostics<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsprofileresponse">Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the diagnostics profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2912,7 +2912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hardware_profile_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the hardware profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2928,7 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">OSProfile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofileresponse">OSProfile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the OS profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2936,7 +2936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_profile_python" style="color: inherit; text-decoration: inherit;">security_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityprofileresponse">Security<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityprofileresponse">Security<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the security profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2944,7 +2944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointsourcevmstorageprofileresponse">Restore<wbr>Point<wbr>Source<wbr>VMStorage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restorepointsourcevmstorageprofileresponse">Restore<wbr>Point<wbr>Source<wbr>VMStorage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the storage profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2974,7 +2974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskrestorepoint_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Restore<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the disk restore point Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2998,7 +2998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#manageddiskparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the managed disk details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3078,7 +3078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskrestorepoint_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Restore<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the disk restore point Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3102,7 +3102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskparametersresponse">Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#manageddiskparametersresponse">Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the managed disk details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3130,7 +3130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_restore_point_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>restore_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the disk restore point Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3154,7 +3154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskparametersresponse">Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#manageddiskparametersresponse">Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the managed disk details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3184,7 +3184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskrestorepoint_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Restore<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the disk restore point Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3200,7 +3200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettings_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the disk encryption settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3208,7 +3208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#manageddiskparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the managed disk details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3304,7 +3304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskrestorepoint_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Restore<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the disk restore point Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3320,7 +3320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettings_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsettingsresponse">Disk<wbr>Encryption<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsettingsresponse">Disk<wbr>Encryption<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the disk encryption settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3328,7 +3328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskparametersresponse">Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#manageddiskparametersresponse">Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the managed disk details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3364,7 +3364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_restore_point_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>restore_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the disk restore point Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3380,7 +3380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsettingsresponse">Disk<wbr>Encryption<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsettingsresponse">Disk<wbr>Encryption<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the disk encryption settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3388,7 +3388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskparametersresponse">Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#manageddiskparametersresponse">Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the managed disk details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3418,7 +3418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointsourcevmdatadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Restore<wbr>Point<wbr>Source<wbr>VMData<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#restorepointsourcevmdatadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Restore<wbr>Point<wbr>Source<wbr>VMData<wbr>Disk<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets the data disks of the VM captured at the time of the restore point creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3426,7 +3426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointsourcevmosdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Restore<wbr>Point<wbr>Source<wbr>VMOSDisk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restorepointsourcevmosdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Restore<wbr>Point<wbr>Source<wbr>VMOSDisk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the OS disk of the VM captured at the time of the restore point creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3458,7 +3458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointsourcevmdatadiskresponse">Restore<wbr>Point<wbr>Source<wbr>VMData<wbr>Disk<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#restorepointsourcevmdatadiskresponse">Restore<wbr>Point<wbr>Source<wbr>VMData<wbr>Disk<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets the data disks of the VM captured at the time of the restore point creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3466,7 +3466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointsourcevmosdiskresponse">Restore<wbr>Point<wbr>Source<wbr>VMOSDisk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restorepointsourcevmosdiskresponse">Restore<wbr>Point<wbr>Source<wbr>VMOSDisk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the OS disk of the VM captured at the time of the restore point creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3478,7 +3478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointsourcevmdatadiskresponse">Sequence[Restore<wbr>Point<wbr>Source<wbr>VMData<wbr>Disk<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#restorepointsourcevmdatadiskresponse">Sequence[Restore<wbr>Point<wbr>Source<wbr>VMData<wbr>Disk<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets the data disks of the VM captured at the time of the restore point creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3486,7 +3486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepointsourcevmosdiskresponse">Restore<wbr>Point<wbr>Source<wbr>VMOSDisk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restorepointsourcevmosdiskresponse">Restore<wbr>Point<wbr>Source<wbr>VMOSDisk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the OS disk of the VM captured at the time of the restore point creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3516,7 +3516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uefisettings_csharp" style="color: inherit; text-decoration: inherit;">Uefi<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uefisettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Uefi<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Uefi<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3572,7 +3572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uefisettings_nodejs" style="color: inherit; text-decoration: inherit;">uefi<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3600,7 +3600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uefi_settings_python" style="color: inherit; text-decoration: inherit;">uefi_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3614,7 +3614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3638,7 +3638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">Ssh<wbr>Public<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3650,7 +3650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3960,7 +3960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3968,7 +3968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaultcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4000,7 +4000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4008,7 +4008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">Vault<wbr>Certificate<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">Vault<wbr>Certificate<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4020,7 +4020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4028,7 +4028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">Sequence[Vault<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">Sequence[Vault<wbr>Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4042,7 +4042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listeners_csharp" style="color: inherit; text-decoration: inherit;">Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmlistenerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMListener<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#winrmlistenerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMListener<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Remote Management listeners{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4066,7 +4066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listeners_nodejs" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmlistenerresponse">Win<wbr>RMListener<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#winrmlistenerresponse">Win<wbr>RMListener<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Remote Management listeners{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4078,7 +4078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listeners_python" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmlistenerresponse">Sequence[Win<wbr>RMListener<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#winrmlistenerresponse">Sequence[Win<wbr>RMListener<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Remote Management listeners{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4174,7 +4174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalunattendcontent_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalunattendcontentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Additional<wbr>Unattend<wbr>Content<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalunattendcontentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Additional<wbr>Unattend<wbr>Content<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4190,7 +4190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchsettings_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4214,7 +4214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#winrm_csharp" style="color: inherit; text-decoration: inherit;">Win<wbr>RM</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#winrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4278,7 +4278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalunattendcontent_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalunattendcontentresponse">Additional<wbr>Unattend<wbr>Content<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#additionalunattendcontentresponse">Additional<wbr>Unattend<wbr>Content<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4294,7 +4294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchsettings_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4318,7 +4318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#winrm_nodejs" style="color: inherit; text-decoration: inherit;">win<wbr>RM</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4330,7 +4330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_unattend_content_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalunattendcontentresponse">Sequence[Additional<wbr>Unattend<wbr>Content<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#additionalunattendcontentresponse">Sequence[Additional<wbr>Unattend<wbr>Content<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4346,7 +4346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4370,7 +4370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#win_rm_python" style="color: inherit; text-decoration: inherit;">win_<wbr>rm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd></dl>
 {{% /choosable %}}

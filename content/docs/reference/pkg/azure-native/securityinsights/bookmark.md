@@ -546,7 +546,7 @@ The Bookmark resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
+        <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the bookmark{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +570,7 @@ The Bookmark resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#incidentinfo_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentinfo">Incident<wbr>Info</a></span>
+        <span class="property-type"><a href="#incidentinfo">Incident<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an incident that relates to bookmark{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +626,7 @@ The Bookmark resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
+        <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the bookmark{{% /md %}}</dd></dl>
 {{% /choosable %}}

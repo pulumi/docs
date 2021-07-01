@@ -484,7 +484,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#keyvault_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcontractcreateproperties">Key<wbr>Vault<wbr>Contract<wbr>Create<wbr>Properties</a></span>
+        <span class="property-type"><a href="#keyvaultcontractcreateproperties">Key<wbr>Vault<wbr>Contract<wbr>Create<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault location details of the certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -929,7 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#laststatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultlastaccessstatuscontractpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Last<wbr>Access<wbr>Status<wbr>Contract<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultlastaccessstatuscontractpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Last<wbr>Access<wbr>Status<wbr>Contract<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Last time sync and refresh status of secret from key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -985,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#laststatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultlastaccessstatuscontractpropertiesresponse">Key<wbr>Vault<wbr>Last<wbr>Access<wbr>Status<wbr>Contract<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultlastaccessstatuscontractpropertiesresponse">Key<wbr>Vault<wbr>Last<wbr>Access<wbr>Status<wbr>Contract<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Last time sync and refresh status of secret from key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultlastaccessstatuscontractpropertiesresponse">Key<wbr>Vault<wbr>Last<wbr>Access<wbr>Status<wbr>Contract<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultlastaccessstatuscontractpropertiesresponse">Key<wbr>Vault<wbr>Last<wbr>Access<wbr>Status<wbr>Contract<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Last time sync and refresh status of secret from key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

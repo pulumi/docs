@@ -775,7 +775,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -783,7 +783,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#customrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrulelist">Custom<wbr>Rule<wbr>List</a></span>
+        <span class="property-type"><a href="#customrulelist">Custom<wbr>Rule<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes custom rules inside the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +807,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#managedrules_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetlist">Managed<wbr>Rule<wbr>Set<wbr>List</a></span>
+        <span class="property-type"><a href="#managedrulesetlist">Managed<wbr>Rule<wbr>Set<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes managed rules inside the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,7 +823,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#policysettings_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysettings">Policy<wbr>Settings</a></span>
+        <span class="property-type"><a href="#policysettings">Policy<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes  policySettings for policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -831,7 +831,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ratelimitrules_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitrulelist">Rate<wbr>Limit<wbr>Rule<wbr>List</a></span>
+        <span class="property-type"><a href="#ratelimitrulelist">Rate<wbr>Limit<wbr>Rule<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes rate limit rules inside the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1370,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#matchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1458,7 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchcondition">Match<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#matchcondition">Match<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1502,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchcondition">Sequence[Match<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#matchcondition">Sequence[Match<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1566,7 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Custom<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1590,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrule">Custom<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#customrule">Custom<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1602,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrule">Sequence[Custom<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customrule">Sequence[Custom<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1616,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1640,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customruleresponse">Custom<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#customruleresponse">Custom<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1652,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customruleresponse">Sequence[Custom<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customruleresponse">Sequence[Custom<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1674,7 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1762,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">Match<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">Match<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1806,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1878,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverride">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedruleoverride">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1918,7 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverride">Managed<wbr>Rule<wbr>Override<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedruleoverride">Managed<wbr>Rule<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1938,7 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverride">Sequence[Managed<wbr>Rule<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedruleoverride">Sequence[Managed<wbr>Rule<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1960,7 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedruleoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2000,7 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverrideresponse">Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedruleoverrideresponse">Managed<wbr>Rule<wbr>Override<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2020,7 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedruleoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Override<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2286,7 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulegroupoverrides_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverride">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverride">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule overrides to apply to the rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2358,7 +2358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulegroupoverrides_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverride">Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverride">Managed<wbr>Rule<wbr>Group<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule overrides to apply to the rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2394,7 +2394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverride">Sequence[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverride">Sequence[Managed<wbr>Rule<wbr>Group<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule overrides to apply to the rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2408,7 +2408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedruleset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2432,7 +2432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleset">Managed<wbr>Rule<wbr>Set<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedruleset">Managed<wbr>Rule<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2444,7 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_rule_sets_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleset">Sequence[Managed<wbr>Rule<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedruleset">Sequence[Managed<wbr>Rule<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2458,7 +2458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2482,7 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetresponse">Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedrulesetresponse">Managed<wbr>Rule<wbr>Set<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2494,7 +2494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_rule_sets_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetresponse">Sequence[Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedrulesetresponse">Sequence[Managed<wbr>Rule<wbr>Set<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2532,7 +2532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulegroupoverrides_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule overrides to apply to the rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2604,7 +2604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulegroupoverrides_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverrideresponse">Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverrideresponse">Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule overrides to apply to the rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2640,7 +2640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule overrides to apply to the rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3630,7 +3630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#matchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3750,7 +3750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchcondition">Match<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#matchcondition">Match<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3810,7 +3810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchcondition">Sequence[Match<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#matchcondition">Sequence[Match<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3864,7 +3864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Rate<wbr>Limit<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ratelimitrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Rate<wbr>Limit<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3888,7 +3888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitrule">Rate<wbr>Limit<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ratelimitrule">Rate<wbr>Limit<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3900,7 +3900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitrule">Sequence[Rate<wbr>Limit<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ratelimitrule">Sequence[Rate<wbr>Limit<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3914,7 +3914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Rate<wbr>Limit<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ratelimitruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Rate<wbr>Limit<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3938,7 +3938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitruleresponse">Rate<wbr>Limit<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ratelimitruleresponse">Rate<wbr>Limit<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3950,7 +3950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitruleresponse">Sequence[Rate<wbr>Limit<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ratelimitruleresponse">Sequence[Rate<wbr>Limit<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3972,7 +3972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4092,7 +4092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">Match<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">Match<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4152,7 +4152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">

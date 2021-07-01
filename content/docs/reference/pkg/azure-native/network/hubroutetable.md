@@ -453,7 +453,7 @@ The HubRouteTable resource accepts the following [input]({{< relref "/docs/intro
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubroute">[]Hub<wbr>Route</a></span>
+        <span class="property-type"><a href="#hubroute">[]Hub<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}

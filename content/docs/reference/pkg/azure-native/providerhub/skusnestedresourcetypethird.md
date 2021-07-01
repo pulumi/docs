@@ -457,7 +457,7 @@ The SkusNestedResourceTypeThird resource accepts the following [input]({{< relre
 <a href="#skusettings_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusetting">[]Sku<wbr>Setting</a></span>
+        <span class="property-type"><a href="#skusetting">[]Sku<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1176,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zonedetails_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuzonedetail">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Zone<wbr>Detail<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skuzonedetail">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Zone<wbr>Detail&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1264,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zonedetails_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuzonedetail">Sku<wbr>Zone<wbr>Detail<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#skuzonedetail">Sku<wbr>Zone<wbr>Detail[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1308,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_details_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuzonedetail">Sequence[Sku<wbr>Zone<wbr>Detail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skuzonedetail">Sequence[Sku<wbr>Zone<wbr>Detail]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1354,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zonedetails_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuzonedetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Zone<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skuzonedetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Zone<wbr>Detail<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1442,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zonedetails_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuzonedetailresponse">Sku<wbr>Zone<wbr>Detail<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#skuzonedetailresponse">Sku<wbr>Zone<wbr>Detail<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1486,7 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_details_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuzonedetailresponse">Sequence[Sku<wbr>Zone<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skuzonedetailresponse">Sequence[Sku<wbr>Zone<wbr>Detail<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1508,7 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skusettings_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skusettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1532,7 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skusettings_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingresponse">Sku<wbr>Setting<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#skusettingresponse">Sku<wbr>Setting<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1544,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_settings_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingresponse">Sequence[Sku<wbr>Setting<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skusettingresponse">Sequence[Sku<wbr>Setting<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1596,7 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapability">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skucapability">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Capability&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1604,7 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingcapacity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skusettingcapacity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1612,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#costs_csharp" style="color: inherit; text-decoration: inherit;">Costs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucost">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Cost<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skucost">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Cost&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1636,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationinfo_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skulocationinfo">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Location<wbr>Info<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skulocationinfo">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Location<wbr>Info&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1796,7 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapability">Sku<wbr>Capability<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#skucapability">Sku<wbr>Capability[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingcapacity">Sku<wbr>Setting<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skusettingcapacity">Sku<wbr>Setting<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1812,7 +1812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#costs_nodejs" style="color: inherit; text-decoration: inherit;">costs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucost">Sku<wbr>Cost<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#skucost">Sku<wbr>Cost[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1836,7 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationinfo_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skulocationinfo">Sku<wbr>Location<wbr>Info<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#skulocationinfo">Sku<wbr>Location<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1896,7 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapability">Sequence[Sku<wbr>Capability<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skucapability">Sequence[Sku<wbr>Capability]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1904,7 +1904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingcapacity">Sku<wbr>Setting<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skusettingcapacity">Sku<wbr>Setting<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1912,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#costs_python" style="color: inherit; text-decoration: inherit;">costs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucost">Sequence[Sku<wbr>Cost<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skucost">Sequence[Sku<wbr>Cost]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1936,7 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_info_python" style="color: inherit; text-decoration: inherit;">location_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skulocationinfo">Sequence[Sku<wbr>Location<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skulocationinfo">Sequence[Sku<wbr>Location<wbr>Info]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2144,7 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2152,7 +2152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingresponsecapacity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Response<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skusettingresponsecapacity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Response<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2160,7 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#costs_csharp" style="color: inherit; text-decoration: inherit;">Costs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucostresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Cost<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skucostresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Cost<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2184,7 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationinfo_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skulocationinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Location<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skulocationinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Location<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2344,7 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">Sku<wbr>Capability<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">Sku<wbr>Capability<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2352,7 +2352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingresponsecapacity">Sku<wbr>Setting<wbr>Response<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skusettingresponsecapacity">Sku<wbr>Setting<wbr>Response<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2360,7 +2360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#costs_nodejs" style="color: inherit; text-decoration: inherit;">costs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucostresponse">Sku<wbr>Cost<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#skucostresponse">Sku<wbr>Cost<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2384,7 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationinfo_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skulocationinforesponse">Sku<wbr>Location<wbr>Info<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#skulocationinforesponse">Sku<wbr>Location<wbr>Info<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2444,7 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">Sequence[Sku<wbr>Capability<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">Sequence[Sku<wbr>Capability<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2452,7 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusettingresponsecapacity">Sku<wbr>Setting<wbr>Response<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skusettingresponsecapacity">Sku<wbr>Setting<wbr>Response<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2460,7 +2460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#costs_python" style="color: inherit; text-decoration: inherit;">costs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucostresponse">Sequence[Sku<wbr>Cost<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skucostresponse">Sequence[Sku<wbr>Cost<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2484,7 +2484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_info_python" style="color: inherit; text-decoration: inherit;">location_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skulocationinforesponse">Sequence[Sku<wbr>Location<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skulocationinforesponse">Sequence[Sku<wbr>Location<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2684,7 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapability">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skucapability">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Capability&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2724,7 +2724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapability">Sku<wbr>Capability<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#skucapability">Sku<wbr>Capability[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2744,7 +2744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapability">Sequence[Sku<wbr>Capability<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skucapability">Sequence[Sku<wbr>Capability]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2766,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2806,7 +2806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">Sku<wbr>Capability<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">Sku<wbr>Capability<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2826,7 +2826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">Sequence[Sku<wbr>Capability<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">Sequence[Sku<wbr>Capability<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

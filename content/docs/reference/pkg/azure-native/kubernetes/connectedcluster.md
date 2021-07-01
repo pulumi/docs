@@ -384,7 +384,7 @@ The ConnectedCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectedclusteridentity">Connected<wbr>Cluster<wbr>Identity</a></span>
+        <span class="property-type"><a href="#connectedclusteridentity">Connected<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the connected cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">

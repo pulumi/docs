@@ -355,7 +355,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateproperties">Certificate<wbr>Properties</a></span>
+        <span class="property-type"><a href="#certificateproperties">Certificate<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the certificate resource payload.{{% /md %}}</dd></dl>
 {{% /choosable %}}

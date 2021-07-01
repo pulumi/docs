@@ -410,7 +410,7 @@ The CapacityDetails resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacitysku">Capacity<wbr>Sku</a></span>
+        <span class="property-type"><a href="#capacitysku">Capacity<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the PowerBI Dedicated capacity resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +418,7 @@ The CapacityDetails resource accepts the following [input]({{< relref "/docs/int
 <a href="#administration_go" style="color: inherit; text-decoration: inherit;">Administration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedcapacityadministrators">Dedicated<wbr>Capacity<wbr>Administrators</a></span>
+        <span class="property-type"><a href="#dedicatedcapacityadministrators">Dedicated<wbr>Capacity<wbr>Administrators<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of Dedicated capacity administrators{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +450,7 @@ The CapacityDetails resource accepts the following [input]({{< relref "/docs/int
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdata">System<wbr>Data</a></span>
+        <span class="property-type"><a href="#systemdata">System<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

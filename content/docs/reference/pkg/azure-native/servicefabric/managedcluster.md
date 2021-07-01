@@ -779,7 +779,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#azureactivedirectory_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectory">Azure<wbr>Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#azureactivedirectory">Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure active directory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -795,7 +795,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#clients_go" style="color: inherit; text-decoration: inherit;">Clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertificate">[]Client<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#clientcertificate">[]Client<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}client certificates for the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -819,7 +819,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#fabricsettings_go" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingssectiondescription">[]Settings<wbr>Section<wbr>Description</a></span>
+        <span class="property-type"><a href="#settingssectiondescription">[]Settings<wbr>Section<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of custom fabric settings to configure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -835,7 +835,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loadbalancingrules_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancingrule">[]Load<wbr>Balancing<wbr>Rule</a></span>
+        <span class="property-type"><a href="#loadbalancingrule">[]Load<wbr>Balancing<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes load balancing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -851,7 +851,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the managed cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2562,7 +2562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescription">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#settingsparameterdescription">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2602,7 +2602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescription">Settings<wbr>Parameter<wbr>Description<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#settingsparameterdescription">Settings<wbr>Parameter<wbr>Description[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2622,7 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescription">Sequence[Settings<wbr>Parameter<wbr>Description<wbr>Args]</a></span>
+        <span class="property-type"><a href="#settingsparameterdescription">Sequence[Settings<wbr>Parameter<wbr>Description]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2644,7 +2644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#settingsparameterdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Settings<wbr>Parameter<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2684,7 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescriptionresponse">Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#settingsparameterdescriptionresponse">Settings<wbr>Parameter<wbr>Description<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2704,7 +2704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescriptionresponse">Sequence[Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#settingsparameterdescriptionresponse">Sequence[Settings<wbr>Parameter<wbr>Description<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -370,7 +370,7 @@ The PrivateEndpoint resource accepts the following [input]({{< relref "/docs/int
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointproperties">Private<wbr>Endpoint<wbr>Properties</a></span>
+        <span class="property-type"><a href="#privateendpointproperties">Private<wbr>Endpoint<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties associated with a private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -617,7 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manualprivatelinkserviceconnections_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Private<wbr>Link<wbr>Service<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -641,7 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manualprivatelinkserviceconnections_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Private<wbr>Link<wbr>Service<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnection">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnection">Private<wbr>Link<wbr>Service<wbr>Connection[]</a></span>
     </dt>
     <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -653,7 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manual_private_link_service_connections_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>private_<wbr>link_<wbr>service_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnection">Sequence[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnection">Sequence[Private<wbr>Link<wbr>Service<wbr>Connection]</a></span>
     </dt>
     <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -675,7 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manualprivatelinkserviceconnections_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Private<wbr>Link<wbr>Service<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -715,7 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manualprivatelinkserviceconnections_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Private<wbr>Link<wbr>Service<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -735,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manual_private_link_service_connections_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>private_<wbr>link_<wbr>service_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">Sequence[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionresponse">Sequence[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of connections to the remote resource. Immutable after it is set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -985,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of read-only information about the state of the connection to the private remote resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of read-only information about the state of the connection to the private remote resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1093,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of read-only information about the state of the connection to the private remote resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

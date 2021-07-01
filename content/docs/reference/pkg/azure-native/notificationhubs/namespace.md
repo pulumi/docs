@@ -534,7 +534,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#namespacetype_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacetype">Namespace<wbr>Type</a></span>
+        <span class="property-type"><a href="#namespacetype">string</a></span>
     </dt>
     <dd>{{% md %}}The namespace type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +574,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the created namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

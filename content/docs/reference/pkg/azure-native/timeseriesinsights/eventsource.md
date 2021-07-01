@@ -485,7 +485,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#localtimestamp_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localtimestamp">Local<wbr>Timestamp</a></span>
+        <span class="property-type"><a href="#localtimestamp">Local<wbr>Timestamp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -798,7 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezoneoffset_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localtimestamptimezoneoffset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset<wbr>Args</a></span>
+        <span class="property-type"><a href="#localtimestamptimezoneoffset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset</a></span>
     </dt>
     <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -838,7 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezoneoffset_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localtimestamptimezoneoffset">Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset<wbr>Args</a></span>
+        <span class="property-type"><a href="#localtimestamptimezoneoffset">Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset</a></span>
     </dt>
     <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -858,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_offset_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localtimestamptimezoneoffset">Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset<wbr>Args</a></span>
+        <span class="property-type"><a href="#localtimestamptimezoneoffset">Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset</a></span>
     </dt>
     <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd></dl>
 {{% /choosable %}}

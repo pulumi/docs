@@ -393,6 +393,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="evaluationendtime_csharp">
+<a href="#evaluationendtime_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}End time of the evaluation period, if such exist{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -420,6 +428,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="evaluationendtime_go">
+<a href="#evaluationendtime_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}End time of the evaluation period, if such exist{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -449,6 +465,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="evaluationendtime_nodejs">
+<a href="#evaluationendtime_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}End time of the evaluation period, if such exist{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -476,6 +500,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="evaluation_end_time_python">
+<a href="#evaluation_end_time_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>end_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}End time of the evaluation period, if such exist{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -517,25 +549,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Default</dt>
     <dd>Default</dd><dt>Migrated<wbr>To<wbr>Azure</dt>
-    <dd>MigratedToAzure</dd></dl>
+    <dd>MigratedToAzure</dd><dt>Evaluation</dt>
+    <dd>Evaluation</dd><dt>Purchased</dt>
+    <dd>Purchased</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Onboarding<wbr>Kind<wbr>Default</dt>
     <dd>Default</dd><dt>Onboarding<wbr>Kind<wbr>Migrated<wbr>To<wbr>Azure</dt>
-    <dd>MigratedToAzure</dd></dl>
+    <dd>MigratedToAzure</dd><dt>Onboarding<wbr>Kind<wbr>Evaluation</dt>
+    <dd>Evaluation</dd><dt>Onboarding<wbr>Kind<wbr>Purchased</dt>
+    <dd>Purchased</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Default</dt>
     <dd>Default</dd><dt>Migrated<wbr>To<wbr>Azure</dt>
-    <dd>MigratedToAzure</dd></dl>
+    <dd>MigratedToAzure</dd><dt>Evaluation</dt>
+    <dd>Evaluation</dd><dt>Purchased</dt>
+    <dd>Purchased</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>DEFAULT</dt>
     <dd>Default</dd><dt>MIGRATED_TO_AZURE</dt>
-    <dd>MigratedToAzure</dd></dl>
+    <dd>MigratedToAzure</dd><dt>EVALUATION</dt>
+    <dd>Evaluation</dd><dt>PURCHASED</dt>
+    <dd>Purchased</dd></dl>
 {{% /choosable %}}
 ## Import
 

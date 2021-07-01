@@ -498,7 +498,7 @@ The JitNetworkAccessPolicy resource accepts the following [input]({{< relref "/d
 <a href="#virtualmachines_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccesspolicyvirtualmachine">[]Jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Virtual<wbr>Machine</a></span>
+        <span class="property-type"><a href="#jitnetworkaccesspolicyvirtualmachine">[]Jit<wbr>Network<wbr>Access<wbr>Policy<wbr>Virtual<wbr>Machine<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configurations for Microsoft.Compute/virtualMachines resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +522,7 @@ The JitNetworkAccessPolicy resource accepts the following [input]({{< relref "/d
 <a href="#requests_go" style="color: inherit; text-decoration: inherit;">Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequest">[]Jit<wbr>Network<wbr>Access<wbr>Request</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequest">[]Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -841,7 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessportrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessportrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessportrule">Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessportrule">Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -925,7 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessportrule">Sequence[Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessportrule">Sequence[Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -955,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessportruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessportruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1011,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessportruleresponse">Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessportruleresponse">Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1039,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessportruleresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessportruleresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Port<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Port configurations for the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1433,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachines_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachine">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachine">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1505,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachines_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachine">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachine">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1541,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machines_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachine">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachine">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2063,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachines_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2135,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachines_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2171,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machines_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestvirtualmachineresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Virtual<wbr>Machine<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2201,7 +2201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestport">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestport">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2241,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestport">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestport">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2261,7 +2261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestport">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestport">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port]</a></span>
     </dt>
     <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2283,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2323,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2343,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitnetworkaccessrequestportresponse">Sequence[Jit<wbr>Network<wbr>Access<wbr>Request<wbr>Port<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The ports that were opened for the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}

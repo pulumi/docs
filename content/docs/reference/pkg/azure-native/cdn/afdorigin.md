@@ -447,7 +447,7 @@ The AFDOrigin resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#azureorigin_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Origin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the Azure origin resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -503,7 +503,7 @@ The AFDOrigin resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sharedprivatelinkresource_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Private<wbr>Link<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourceproperties">[]Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourceproperties">[]Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the private link resource for private origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelink_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1168,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourcestatus">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourcestatus">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1188,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelink_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1232,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1278,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelink_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1366,7 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelink_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1410,7 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

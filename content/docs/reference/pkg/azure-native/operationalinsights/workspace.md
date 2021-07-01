@@ -437,7 +437,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacefeatures">Workspace<wbr>Features</a></span>
+        <span class="property-type"><a href="#workspacefeatures">Workspace<wbr>Features<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Workspace features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -493,7 +493,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacesku">Workspace<wbr>Sku</a></span>
+        <span class="property-type"><a href="#workspacesku">Workspace<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -509,7 +509,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspacecapping_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Capping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecapping">Workspace<wbr>Capping</a></span>
+        <span class="property-type"><a href="#workspacecapping">Workspace<wbr>Capping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The daily volume cap for ingestion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

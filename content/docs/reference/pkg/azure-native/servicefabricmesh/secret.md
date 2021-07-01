@@ -327,7 +327,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretresourceproperties">Secret<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#secretresourceproperties">Secret<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of a secret resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">

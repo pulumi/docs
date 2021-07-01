@@ -258,7 +258,7 @@ The CommitmentPlan resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
+        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -569,7 +569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedquantities_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Quantities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Plan<wbr>Quantity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Plan<wbr>Quantity<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -737,7 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedquantities_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Quantities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Plan<wbr>Quantity<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Plan<wbr>Quantity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -821,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#included_quantities_python" style="color: inherit; text-decoration: inherit;">included_<wbr>quantities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Plan<wbr>Quantity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Plan<wbr>Quantity<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd><dt class="property-required"
             title="Required">

@@ -305,7 +305,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#putaliasrequestproperties">Put<wbr>Alias<wbr>Request<wbr>Properties</a></span>
+        <span class="property-type"><a href="#putaliasrequestproperties">Put<wbr>Alias<wbr>Request<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Put alias request properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

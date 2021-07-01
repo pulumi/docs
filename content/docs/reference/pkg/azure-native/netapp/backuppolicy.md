@@ -466,7 +466,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#volumebackups_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackups">[]Volume<wbr>Backups</a></span>
+        <span class="property-type"><a href="#volumebackups">[]Volume<wbr>Backups<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of volumes assigned to this policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

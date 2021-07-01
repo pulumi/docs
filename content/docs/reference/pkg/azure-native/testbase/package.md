@@ -691,7 +691,7 @@ The Package resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#targetoslist_go" style="color: inherit; text-decoration: inherit;">Target<wbr>OSList</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetosinfo">[]Target<wbr>OSInfo</a></span>
+        <span class="property-type"><a href="#targetosinfo">[]Target<wbr>OSInfo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the target OSs of specific OS Update types.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -707,7 +707,7 @@ The Package resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tests_go" style="color: inherit; text-decoration: inherit;">Tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#test">[]Test</a></span>
+        <span class="property-type"><a href="#test">[]Test<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The detailed test information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2554,7 +2554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#command">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Command<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#command">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Command&gt;</a></span>
     </dt>
     <dd>{{% md %}}The commands used in the test.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2610,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#command">Command<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#command">Command[]</a></span>
     </dt>
     <dd>{{% md %}}The commands used in the test.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2638,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#command">Sequence[Command<wbr>Args]</a></span>
+        <span class="property-type"><a href="#command">Sequence[Command]</a></span>
     </dt>
     <dd>{{% md %}}The commands used in the test.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2668,7 +2668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commandresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Command<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#commandresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Command<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The commands used in the test.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2740,7 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commandresponse">Command<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#commandresponse">Command<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The commands used in the test.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2776,7 +2776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commandresponse">Sequence[Command<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#commandresponse">Sequence[Command<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The commands used in the test.{{% /md %}}</dd><dt class="property-required"
             title="Required">

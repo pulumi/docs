@@ -388,7 +388,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
 <a href="#allowedsubnets_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnet">[]Subnet</a></span>
+        <span class="property-type"><a href="#subnet">[]Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The allowed subnets of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -428,7 +428,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
 <a href="#subnetoverrides_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetoverride">[]Subnet<wbr>Override</a></span>
+        <span class="property-type"><a href="#subnetoverride">[]Subnet<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The subnet overrides of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1203,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedpublicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetsharedpublicipaddressconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetsharedpublicipaddressconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1307,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedpublicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetsharedpublicipaddressconfiguration">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetsharedpublicipaddressconfiguration">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1359,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetsharedpublicipaddressconfiguration">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetsharedpublicipaddressconfiguration">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedpublicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedpublicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetsharedpublicipaddressconfigurationresponse">Subnet<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties that virtual machines on this subnet will share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1721,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedports_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#port">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#port">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Port&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1745,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedports_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#port">Port<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#port">Port[]</a></span>
     </dt>
     <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1757,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_ports_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#port">Sequence[Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#port">Sequence[Port]</a></span>
     </dt>
     <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1771,7 +1771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedports_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Port<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#portresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Port<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1795,7 +1795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedports_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portresponse">Port<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#portresponse">Port<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1807,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_ports_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portresponse">Sequence[Port<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#portresponse">Sequence[Port<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Backend ports that virtual machines on this subnet are allowed to expose{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -922,7 +922,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#directoryservicessettings_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Services<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectorysettings">Cache<wbr>Directory<wbr>Settings</a></span>
+        <span class="property-type"><a href="#cachedirectorysettings">Cache<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Directory Services settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +930,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#encryptionsettings_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheencryptionsettings">Cache<wbr>Encryption<wbr>Settings</a></span>
+        <span class="property-type"><a href="#cacheencryptionsettings">Cache<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies encryption settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +938,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheidentity">Cache<wbr>Identity</a></span>
+        <span class="property-type"><a href="#cacheidentity">Cache<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the cache, if configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +954,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#networksettings_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachenetworksettings">Cache<wbr>Network<wbr>Settings</a></span>
+        <span class="property-type"><a href="#cachenetworksettings">Cache<wbr>Network<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies network settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +970,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#securitysettings_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachesecuritysettings">Cache<wbr>Security<wbr>Settings</a></span>
+        <span class="property-type"><a href="#cachesecuritysettings">Cache<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies security settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +978,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachesku">Cache<wbr>Sku</a></span>
+        <span class="property-type"><a href="#cachesku">Cache<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU for the Cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1513,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingscredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingscredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1617,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingscredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingscredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1669,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingscredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingscredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1813,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1933,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1993,7 +1993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectory_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2105,7 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernamedownload_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2137,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectory_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettings">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettings">Cache<wbr>Active<wbr>Directory<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2145,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernamedownload_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettings">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettings">Cache<wbr>Username<wbr>Download<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2157,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_directory_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettings">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettings">Cache<wbr>Active<wbr>Directory<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2165,7 +2165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_download_python" style="color: inherit; text-decoration: inherit;">username_<wbr>download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettings">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettings">Cache<wbr>Username<wbr>Download<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2179,7 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectory_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2187,7 +2187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernamedownload_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2219,7 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectory_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2227,7 +2227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernamedownload_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2239,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_directory_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2247,7 +2247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_download_python" style="color: inherit; text-decoration: inherit;">username_<wbr>download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2261,7 +2261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2285,7 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreference">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreference">Key<wbr>Vault<wbr>Key<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2297,7 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreference">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreference">Key<wbr>Vault<wbr>Key<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2311,7 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2335,7 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2347,7 +2347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2361,7 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#conditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Outstanding conditions that need to be investigated and resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2417,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Outstanding conditions that need to be investigated and resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2445,7 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Sequence[Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Sequence[Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Outstanding conditions that need to be investigated and resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2487,7 +2487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheidentitytype">Cache<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#cacheidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the cache{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3039,7 +3039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicy">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicy">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3063,7 +3063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicy">Nfs<wbr>Access<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicy">Nfs<wbr>Access<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3075,7 +3075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicy">Sequence[Nfs<wbr>Access<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicy">Sequence[Nfs<wbr>Access<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3089,7 +3089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Policy<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3113,7 +3113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicyresponse">Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicyresponse">Nfs<wbr>Access<wbr>Policy<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3125,7 +3125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicyresponse">Sequence[Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicyresponse">Sequence[Nfs<wbr>Access<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3383,7 +3383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingscredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingscredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3567,7 +3567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingscredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingscredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3659,7 +3659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingscredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingscredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3843,7 +3843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4043,7 +4043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4143,7 +4143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4393,7 +4393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4433,7 +4433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4453,7 +4453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4475,7 +4475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4515,7 +4515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4535,7 +4535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4649,7 +4649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessrules_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nfsaccessrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4689,7 +4689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessrules_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessrule">Nfs<wbr>Access<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#nfsaccessrule">Nfs<wbr>Access<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4709,7 +4709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_rules_python" style="color: inherit; text-decoration: inherit;">access_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessrule">Sequence[Nfs<wbr>Access<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nfsaccessrule">Sequence[Nfs<wbr>Access<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4731,7 +4731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessrules_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nfsaccessruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4771,7 +4771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessrules_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessruleresponse">Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#nfsaccessruleresponse">Nfs<wbr>Access<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4791,7 +4791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_rules_python" style="color: inherit; text-decoration: inherit;">access_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessruleresponse">Sequence[Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nfsaccessruleresponse">Sequence[Nfs<wbr>Access<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">

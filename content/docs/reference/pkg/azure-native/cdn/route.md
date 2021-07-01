@@ -498,7 +498,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#origingroup_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the origin group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -522,7 +522,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#compressionsettings_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compressionsettings">[]Compression<wbr>Settings</a></span>
+        <span class="property-type"><a href="#compressionsettings">[]Compression<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}compression settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +530,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#customdomains_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">[]Resource<wbr>Reference</a></span>
+        <span class="property-type"><a href="#resourcereference">[]Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Domains referenced by this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +586,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#querystringcachingbehavior_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Caching<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#afdquerystringcachingbehavior">Afd<wbr>Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
+        <span class="property-type"><a href="#afdquerystringcachingbehavior">string</a></span>
     </dt>
     <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +602,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#rulesets_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">[]Resource<wbr>Reference</a></span>
+        <span class="property-type"><a href="#resourcereference">[]Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}rule sets referenced by this endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

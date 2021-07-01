@@ -385,7 +385,7 @@ The File resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectfileproperties">Project<wbr>File<wbr>Properties</a></span>
+        <span class="property-type"><a href="#projectfileproperties">Project<wbr>File<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom file properties{{% /md %}}</dd></dl>
 {{% /choosable %}}

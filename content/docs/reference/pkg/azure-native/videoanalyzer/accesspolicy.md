@@ -435,7 +435,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtauthentication">Jwt<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#jwtauthentication">Jwt<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication method to be used when validating client API access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1088,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_csharp" style="color: inherit; text-decoration: inherit;">Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenclaim">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Token<wbr>Claim<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tokenclaim">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Token<wbr>Claim&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1104,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Ecc<wbr>Token<wbr>Key<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Ecc<wbr>Token<wbr>Key, Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Rsa<wbr>Token<wbr>Key&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1160,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_nodejs" style="color: inherit; text-decoration: inherit;">claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenclaim">Token<wbr>Claim<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#tokenclaim">Token<wbr>Claim[]</a></span>
     </dt>
     <dd>{{% md %}}List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1176,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Ecc<wbr>Token<wbr>Key<wbr>Args | Rsa<wbr>Token<wbr>Key<wbr>Args[]</span>
+        <span class="property-type">Ecc<wbr>Token<wbr>Key | Rsa<wbr>Token<wbr>Key[]</span>
     </dt>
     <dd>{{% md %}}List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1196,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_python" style="color: inherit; text-decoration: inherit;">claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenclaim">Sequence[Token<wbr>Claim<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tokenclaim">Sequence[Token<wbr>Claim]</a></span>
     </dt>
     <dd>{{% md %}}List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1212,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Ecc<wbr>Token<wbr>Key<wbr>Args, Rsa<wbr>Token<wbr>Key<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Ecc<wbr>Token<wbr>Key, Rsa<wbr>Token<wbr>Key]]</span>
     </dt>
     <dd>{{% md %}}List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1234,7 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_csharp" style="color: inherit; text-decoration: inherit;">Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenclaimresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Token<wbr>Claim<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tokenclaimresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Token<wbr>Claim<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1250,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Ecc<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Ecc<wbr>Token<wbr>Key<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1306,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_nodejs" style="color: inherit; text-decoration: inherit;">claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenclaimresponse">Token<wbr>Claim<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#tokenclaimresponse">Token<wbr>Claim<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1322,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Ecc<wbr>Token<wbr>Key<wbr>Response<wbr>Args | Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Ecc<wbr>Token<wbr>Key<wbr>Response | Rsa<wbr>Token<wbr>Key<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1342,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_python" style="color: inherit; text-decoration: inherit;">claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenclaimresponse">Sequence[Token<wbr>Claim<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tokenclaimresponse">Sequence[Token<wbr>Claim<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1358,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Ecc<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Ecc<wbr>Token<wbr>Key<wbr>Response, Rsa<wbr>Token<wbr>Key<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.{{% /md %}}</dd></dl>
 {{% /choosable %}}

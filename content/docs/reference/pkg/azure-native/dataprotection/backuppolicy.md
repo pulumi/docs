@@ -577,7 +577,7 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backuppolicy">Backup<wbr>Policy<wbr>Type</a></span>
+        <span class="property-type"><a href="#backuppolicy">Backup<wbr>Policy<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BaseBackupPolicyResource properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -962,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taginfo_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiontag">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Retention<wbr>Tag<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiontag">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Retention<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}Retention tag information{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -986,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taginfo_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiontag">Retention<wbr>Tag<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiontag">Retention<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}Retention tag information{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -998,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_info_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiontag">Retention<wbr>Tag<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiontag">Retention<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}Retention tag information{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1012,7 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taginfo_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiontagresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Retention<wbr>Tag<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiontagresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Retention<wbr>Tag<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention tag information{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1036,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taginfo_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiontagresponse">Retention<wbr>Tag<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiontagresponse">Retention<wbr>Tag<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention tag information{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1048,7 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_info_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiontagresponse">Retention<wbr>Tag<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiontagresponse">Retention<wbr>Tag<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention tag information{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1062,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taggingcriteria_csharp" style="color: inherit; text-decoration: inherit;">Tagging<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adhocbasedtaggingcriteria">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Adhoc<wbr>Based<wbr>Tagging<wbr>Criteria<wbr>Args</a></span>
+        <span class="property-type"><a href="#adhocbasedtaggingcriteria">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Adhoc<wbr>Based<wbr>Tagging<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}Tagging Criteria containing retention tag for adhoc backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1086,7 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taggingcriteria_nodejs" style="color: inherit; text-decoration: inherit;">tagging<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adhocbasedtaggingcriteria">Adhoc<wbr>Based<wbr>Tagging<wbr>Criteria<wbr>Args</a></span>
+        <span class="property-type"><a href="#adhocbasedtaggingcriteria">Adhoc<wbr>Based<wbr>Tagging<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}Tagging Criteria containing retention tag for adhoc backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1098,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tagging_criteria_python" style="color: inherit; text-decoration: inherit;">tagging_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adhocbasedtaggingcriteria">Adhoc<wbr>Based<wbr>Tagging<wbr>Criteria<wbr>Args</a></span>
+        <span class="property-type"><a href="#adhocbasedtaggingcriteria">Adhoc<wbr>Based<wbr>Tagging<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}Tagging Criteria containing retention tag for adhoc backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1112,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taggingcriteria_csharp" style="color: inherit; text-decoration: inherit;">Tagging<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adhocbasedtaggingcriteriaresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Adhoc<wbr>Based<wbr>Tagging<wbr>Criteria<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#adhocbasedtaggingcriteriaresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Adhoc<wbr>Based<wbr>Tagging<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Tagging Criteria containing retention tag for adhoc backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1136,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#taggingcriteria_nodejs" style="color: inherit; text-decoration: inherit;">tagging<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adhocbasedtaggingcriteriaresponse">Adhoc<wbr>Based<wbr>Tagging<wbr>Criteria<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#adhocbasedtaggingcriteriaresponse">Adhoc<wbr>Based<wbr>Tagging<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Tagging Criteria containing retention tag for adhoc backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1148,7 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tagging_criteria_python" style="color: inherit; text-decoration: inherit;">tagging_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adhocbasedtaggingcriteriaresponse">Adhoc<wbr>Based<wbr>Tagging<wbr>Criteria<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#adhocbasedtaggingcriteriaresponse">Adhoc<wbr>Based<wbr>Tagging<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Tagging Criteria containing retention tag for adhoc backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1262,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastore_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobase">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Data<wbr>Store<wbr>Info<wbr>Base<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobase">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Data<wbr>Store<wbr>Info<wbr>Base</a></span>
     </dt>
     <dd>{{% md %}}DataStoreInfo base{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1278,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adhocbasedtriggercontext">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Adhoc<wbr>Based<wbr>Trigger<wbr>Context<wbr>Args</a> | <a href="#schedulebasedtriggercontext">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Schedule<wbr>Based<wbr>Trigger<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#adhocbasedtriggercontext">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Adhoc<wbr>Based<wbr>Trigger<wbr>Context</a> | <a href="#schedulebasedtriggercontext">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Schedule<wbr>Based<wbr>Trigger<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}Trigger context{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1286,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupparameters_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurebackupparams">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Backup<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurebackupparams">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Backup<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}BackupParameters base{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1334,7 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastore_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobase">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobase">Data<wbr>Store<wbr>Info<wbr>Base</a></span>
     </dt>
     <dd>{{% md %}}DataStoreInfo base{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1350,7 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adhocbasedtriggercontext">Adhoc<wbr>Based<wbr>Trigger<wbr>Context<wbr>Args</a> | <a href="#schedulebasedtriggercontext">Schedule<wbr>Based<wbr>Trigger<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#adhocbasedtriggercontext">Adhoc<wbr>Based<wbr>Trigger<wbr>Context</a> | <a href="#schedulebasedtriggercontext">Schedule<wbr>Based<wbr>Trigger<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}Trigger context{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1358,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupparameters_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurebackupparams">Azure<wbr>Backup<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurebackupparams">Azure<wbr>Backup<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}BackupParameters base{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1370,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_store_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobase">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobase">Data<wbr>Store<wbr>Info<wbr>Base</a></span>
     </dt>
     <dd>{{% md %}}DataStoreInfo base{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1386,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adhocbasedtriggercontext">Adhoc<wbr>Based<wbr>Trigger<wbr>Context<wbr>Args</a> | <a href="#schedulebasedtriggercontext">Schedule<wbr>Based<wbr>Trigger<wbr>Context<wbr>Args</a></span>
+        <span class="property-type"><a href="#adhocbasedtriggercontext">Adhoc<wbr>Based<wbr>Trigger<wbr>Context</a> | <a href="#schedulebasedtriggercontext">Schedule<wbr>Based<wbr>Trigger<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}Trigger context{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1394,7 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_parameters_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurebackupparams">Azure<wbr>Backup<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurebackupparams">Azure<wbr>Backup<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}BackupParameters base{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1408,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastore_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobaseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobaseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}DataStoreInfo base{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1424,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adhocbasedtriggercontextresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Adhoc<wbr>Based<wbr>Trigger<wbr>Context<wbr>Response<wbr>Args</a> | <a href="#schedulebasedtriggercontextresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Schedule<wbr>Based<wbr>Trigger<wbr>Context<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#adhocbasedtriggercontextresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Adhoc<wbr>Based<wbr>Trigger<wbr>Context<wbr>Response</a> | <a href="#schedulebasedtriggercontextresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Schedule<wbr>Based<wbr>Trigger<wbr>Context<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Trigger context{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1432,7 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupparameters_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurebackupparamsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Backup<wbr>Params<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurebackupparamsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Backup<wbr>Params<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}BackupParameters base{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1480,7 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastore_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobaseresponse">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobaseresponse">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}DataStoreInfo base{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1496,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adhocbasedtriggercontextresponse">Adhoc<wbr>Based<wbr>Trigger<wbr>Context<wbr>Response<wbr>Args</a> | <a href="#schedulebasedtriggercontextresponse">Schedule<wbr>Based<wbr>Trigger<wbr>Context<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#adhocbasedtriggercontextresponse">Adhoc<wbr>Based<wbr>Trigger<wbr>Context<wbr>Response</a> | <a href="#schedulebasedtriggercontextresponse">Schedule<wbr>Based<wbr>Trigger<wbr>Context<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Trigger context{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1504,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupparameters_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurebackupparamsresponse">Azure<wbr>Backup<wbr>Params<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurebackupparamsresponse">Azure<wbr>Backup<wbr>Params<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}BackupParameters base{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1516,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_store_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobaseresponse">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobaseresponse">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}DataStoreInfo base{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1532,7 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adhocbasedtriggercontextresponse">Adhoc<wbr>Based<wbr>Trigger<wbr>Context<wbr>Response<wbr>Args</a> | <a href="#schedulebasedtriggercontextresponse">Schedule<wbr>Based<wbr>Trigger<wbr>Context<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#adhocbasedtriggercontextresponse">Adhoc<wbr>Based<wbr>Trigger<wbr>Context<wbr>Response</a> | <a href="#schedulebasedtriggercontextresponse">Schedule<wbr>Based<wbr>Trigger<wbr>Context<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Trigger context{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1540,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_parameters_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurebackupparamsresponse">Azure<wbr>Backup<wbr>Params<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurebackupparamsresponse">Azure<wbr>Backup<wbr>Params<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}BackupParameters base{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1554,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycles_csharp" style="color: inherit; text-decoration: inherit;">Lifecycles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcelifecycle">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Source<wbr>Life<wbr>Cycle<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sourcelifecycle">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Source<wbr>Life<wbr>Cycle&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1610,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycles_nodejs" style="color: inherit; text-decoration: inherit;">lifecycles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcelifecycle">Source<wbr>Life<wbr>Cycle<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sourcelifecycle">Source<wbr>Life<wbr>Cycle[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1638,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycles_python" style="color: inherit; text-decoration: inherit;">lifecycles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcelifecycle">Sequence[Source<wbr>Life<wbr>Cycle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sourcelifecycle">Sequence[Source<wbr>Life<wbr>Cycle]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1668,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycles_csharp" style="color: inherit; text-decoration: inherit;">Lifecycles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcelifecycleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Source<wbr>Life<wbr>Cycle<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sourcelifecycleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Source<wbr>Life<wbr>Cycle<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1724,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycles_nodejs" style="color: inherit; text-decoration: inherit;">lifecycles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcelifecycleresponse">Source<wbr>Life<wbr>Cycle<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sourcelifecycleresponse">Source<wbr>Life<wbr>Cycle<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1752,7 +1752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycles_python" style="color: inherit; text-decoration: inherit;">lifecycles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcelifecycleresponse">Sequence[Source<wbr>Life<wbr>Cycle<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sourcelifecycleresponse">Sequence[Source<wbr>Life<wbr>Cycle<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1790,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyrules_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Backup<wbr>Rule<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Retention<wbr>Rule<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Backup<wbr>Rule, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Retention<wbr>Rule&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1830,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyrules_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Backup<wbr>Rule<wbr>Args | Azure<wbr>Retention<wbr>Rule<wbr>Args[]</span>
+        <span class="property-type">Azure<wbr>Backup<wbr>Rule | Azure<wbr>Retention<wbr>Rule[]</span>
     </dt>
     <dd>{{% md %}}Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1850,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_rules_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Azure<wbr>Backup<wbr>Rule<wbr>Args, Azure<wbr>Retention<wbr>Rule<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Azure<wbr>Backup<wbr>Rule, Azure<wbr>Retention<wbr>Rule]]</span>
     </dt>
     <dd>{{% md %}}Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1872,7 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyrules_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Backup<wbr>Rule<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Retention<wbr>Rule<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Backup<wbr>Rule<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Retention<wbr>Rule<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1912,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyrules_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Azure<wbr>Backup<wbr>Rule<wbr>Response<wbr>Args | Azure<wbr>Retention<wbr>Rule<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Azure<wbr>Backup<wbr>Rule<wbr>Response | Azure<wbr>Retention<wbr>Rule<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1932,7 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_rules_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Azure<wbr>Backup<wbr>Rule<wbr>Response<wbr>Args, Azure<wbr>Retention<wbr>Rule<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Azure<wbr>Backup<wbr>Rule<wbr>Response, Azure<wbr>Retention<wbr>Rule<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2861,7 +2861,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#daysofmonth_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#day">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Day<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#day">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Day&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is day of the month from 1 to 28 other wise last of month{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2967,7 +2967,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#daysofmonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#day">Day<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#day">Day[]</a></span>
     </dt>
     <dd>{{% md %}}This is day of the month from 1 to 28 other wise last of month{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3020,7 +3020,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#days_of_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#day">Sequence[Day<wbr>Args]</a></span>
+        <span class="property-type"><a href="#day">Sequence[Day]</a></span>
     </dt>
     <dd>{{% md %}}This is day of the month from 1 to 28 other wise last of month{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3075,7 +3075,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#daysofmonth_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Day<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dayresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Day<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is day of the month from 1 to 28 other wise last of month{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3181,7 +3181,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#daysofmonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayresponse">Day<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dayresponse">Day<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}This is day of the month from 1 to 28 other wise last of month{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3234,7 +3234,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#days_of_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayresponse">Sequence[Day<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dayresponse">Sequence[Day<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}This is day of the month from 1 to 28 other wise last of month{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3280,7 +3280,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Backup<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Backup<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule for this backup{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3288,7 +3288,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#taggingcriteria_csharp" style="color: inherit; text-decoration: inherit;">Tagging<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taggingcriteria">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Tagging<wbr>Criteria<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#taggingcriteria">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Tagging<wbr>Criteria&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be applicable for given schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3320,7 +3320,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupschedule">Backup<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupschedule">Backup<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule for this backup{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3328,7 +3328,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#taggingcriteria_nodejs" style="color: inherit; text-decoration: inherit;">tagging<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taggingcriteria">Tagging<wbr>Criteria<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#taggingcriteria">Tagging<wbr>Criteria[]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be applicable for given schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3340,7 +3340,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupschedule">Backup<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupschedule">Backup<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule for this backup{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3348,7 +3348,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#tagging_criteria_python" style="color: inherit; text-decoration: inherit;">tagging_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taggingcriteria">Sequence[Tagging<wbr>Criteria<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taggingcriteria">Sequence[Tagging<wbr>Criteria]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be applicable for given schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3362,7 +3362,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Backup<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Backup<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for this backup{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3370,7 +3370,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#taggingcriteria_csharp" style="color: inherit; text-decoration: inherit;">Tagging<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taggingcriteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Tagging<wbr>Criteria<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#taggingcriteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Tagging<wbr>Criteria<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be applicable for given schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3402,7 +3402,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupscheduleresponse">Backup<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupscheduleresponse">Backup<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for this backup{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3410,7 +3410,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#taggingcriteria_nodejs" style="color: inherit; text-decoration: inherit;">tagging<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taggingcriteriaresponse">Tagging<wbr>Criteria<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#taggingcriteriaresponse">Tagging<wbr>Criteria<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be applicable for given schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3422,7 +3422,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupscheduleresponse">Backup<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupscheduleresponse">Backup<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule for this backup{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3430,7 +3430,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#tagging_criteria_python" style="color: inherit; text-decoration: inherit;">tagging_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taggingcriteriaresponse">Sequence[Tagging<wbr>Criteria<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#taggingcriteriaresponse">Sequence[Tagging<wbr>Criteria<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of tags that can be applicable for given schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3444,7 +3444,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#deleteafter_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutedeleteoption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Absolute<wbr>Delete<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutedeleteoption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Absolute<wbr>Delete<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Delete Option{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3452,7 +3452,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#sourcedatastore_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Data<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobase">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Data<wbr>Store<wbr>Info<wbr>Base<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobase">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Data<wbr>Store<wbr>Info<wbr>Base</a></span>
     </dt>
     <dd>{{% md %}}DataStoreInfo base{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3460,7 +3460,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#targetdatastorecopysettings_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Data<wbr>Store<wbr>Copy<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcopysetting">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Target<wbr>Copy<wbr>Setting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetcopysetting">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Target<wbr>Copy<wbr>Setting&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3500,7 +3500,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#deleteafter_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutedeleteoption">Absolute<wbr>Delete<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutedeleteoption">Absolute<wbr>Delete<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Delete Option{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3508,7 +3508,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#sourcedatastore_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Data<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobase">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobase">Data<wbr>Store<wbr>Info<wbr>Base</a></span>
     </dt>
     <dd>{{% md %}}DataStoreInfo base{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3516,7 +3516,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#targetdatastorecopysettings_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Data<wbr>Store<wbr>Copy<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcopysetting">Target<wbr>Copy<wbr>Setting<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#targetcopysetting">Target<wbr>Copy<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3528,7 +3528,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutedeleteoption">Absolute<wbr>Delete<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutedeleteoption">Absolute<wbr>Delete<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Delete Option{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3536,7 +3536,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#source_data_store_python" style="color: inherit; text-decoration: inherit;">source_<wbr>data_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobase">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobase">Data<wbr>Store<wbr>Info<wbr>Base</a></span>
     </dt>
     <dd>{{% md %}}DataStoreInfo base{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3544,7 +3544,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#target_data_store_copy_settings_python" style="color: inherit; text-decoration: inherit;">target_<wbr>data_<wbr>store_<wbr>copy_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcopysetting">Sequence[Target<wbr>Copy<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#targetcopysetting">Sequence[Target<wbr>Copy<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3558,7 +3558,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#deleteafter_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutedeleteoptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Absolute<wbr>Delete<wbr>Option<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutedeleteoptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Absolute<wbr>Delete<wbr>Option<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Delete Option{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3566,7 +3566,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#sourcedatastore_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Data<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobaseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobaseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}DataStoreInfo base{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3574,7 +3574,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#targetdatastorecopysettings_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Data<wbr>Store<wbr>Copy<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcopysettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Target<wbr>Copy<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetcopysettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Target<wbr>Copy<wbr>Setting<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3614,7 +3614,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#deleteafter_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutedeleteoptionresponse">Absolute<wbr>Delete<wbr>Option<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutedeleteoptionresponse">Absolute<wbr>Delete<wbr>Option<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Delete Option{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3622,7 +3622,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#sourcedatastore_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Data<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobaseresponse">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobaseresponse">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}DataStoreInfo base{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3630,7 +3630,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#targetdatastorecopysettings_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Data<wbr>Store<wbr>Copy<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcopysettingresponse">Target<wbr>Copy<wbr>Setting<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#targetcopysettingresponse">Target<wbr>Copy<wbr>Setting<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3642,7 +3642,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#absolutedeleteoptionresponse">Absolute<wbr>Delete<wbr>Option<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#absolutedeleteoptionresponse">Absolute<wbr>Delete<wbr>Option<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Delete Option{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3650,7 +3650,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#source_data_store_python" style="color: inherit; text-decoration: inherit;">source_<wbr>data_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobaseresponse">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobaseresponse">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}DataStoreInfo base{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3658,7 +3658,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#target_data_store_copy_settings_python" style="color: inherit; text-decoration: inherit;">target_<wbr>data_<wbr>store_<wbr>copy_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcopysettingresponse">Sequence[Target<wbr>Copy<wbr>Setting<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#targetcopysettingresponse">Sequence[Target<wbr>Copy<wbr>Setting<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3890,7 +3890,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#taginfo_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiontag">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Retention<wbr>Tag<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiontag">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Retention<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}Retention tag information{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3906,7 +3906,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulebasedbackupcriteria">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Schedule<wbr>Based<wbr>Backup<wbr>Criteria<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#schedulebasedbackupcriteria">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Schedule<wbr>Based<wbr>Backup<wbr>Criteria&gt;</a></span>
     </dt>
     <dd>{{% md %}}Criteria which decides whether the tag can be applied to a triggered backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3962,7 +3962,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#taginfo_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiontag">Retention<wbr>Tag<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiontag">Retention<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}Retention tag information{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3978,7 +3978,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulebasedbackupcriteria">Schedule<wbr>Based<wbr>Backup<wbr>Criteria<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#schedulebasedbackupcriteria">Schedule<wbr>Based<wbr>Backup<wbr>Criteria[]</a></span>
     </dt>
     <dd>{{% md %}}Criteria which decides whether the tag can be applied to a triggered backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3998,7 +3998,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#tag_info_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiontag">Retention<wbr>Tag<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiontag">Retention<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}Retention tag information{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4014,7 +4014,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulebasedbackupcriteria">Sequence[Schedule<wbr>Based<wbr>Backup<wbr>Criteria<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schedulebasedbackupcriteria">Sequence[Schedule<wbr>Based<wbr>Backup<wbr>Criteria]</a></span>
     </dt>
     <dd>{{% md %}}Criteria which decides whether the tag can be applied to a triggered backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4036,7 +4036,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#taginfo_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiontagresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Retention<wbr>Tag<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiontagresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Retention<wbr>Tag<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention tag information{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4052,7 +4052,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulebasedbackupcriteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Schedule<wbr>Based<wbr>Backup<wbr>Criteria<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#schedulebasedbackupcriteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Schedule<wbr>Based<wbr>Backup<wbr>Criteria<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Criteria which decides whether the tag can be applied to a triggered backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4108,7 +4108,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#taginfo_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiontagresponse">Retention<wbr>Tag<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiontagresponse">Retention<wbr>Tag<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention tag information{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4124,7 +4124,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulebasedbackupcriteriaresponse">Schedule<wbr>Based<wbr>Backup<wbr>Criteria<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#schedulebasedbackupcriteriaresponse">Schedule<wbr>Based<wbr>Backup<wbr>Criteria<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Criteria which decides whether the tag can be applied to a triggered backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4144,7 +4144,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#tag_info_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentiontagresponse">Retention<wbr>Tag<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentiontagresponse">Retention<wbr>Tag<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention tag information{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4160,7 +4160,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulebasedbackupcriteriaresponse">Sequence[Schedule<wbr>Based<wbr>Backup<wbr>Criteria<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schedulebasedbackupcriteriaresponse">Sequence[Schedule<wbr>Based<wbr>Backup<wbr>Criteria<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Criteria which decides whether the tag can be applied to a triggered backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4174,7 +4174,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#copyafter_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyonexpiryoption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Copy<wbr>On<wbr>Expiry<wbr>Option<wbr>Args</a> | <a href="#customcopyoption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Custom<wbr>Copy<wbr>Option<wbr>Args</a> | <a href="#immediatecopyoption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Immediate<wbr>Copy<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#copyonexpiryoption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Copy<wbr>On<wbr>Expiry<wbr>Option</a> | <a href="#customcopyoption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Custom<wbr>Copy<wbr>Option</a> | <a href="#immediatecopyoption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Immediate<wbr>Copy<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}It can be CustomCopyOption or ImmediateCopyOption.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4182,7 +4182,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#datastore_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobase">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Data<wbr>Store<wbr>Info<wbr>Base<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobase">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Data<wbr>Store<wbr>Info<wbr>Base</a></span>
     </dt>
     <dd>{{% md %}}Info of target datastore{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4214,7 +4214,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#copyafter_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyonexpiryoption">Copy<wbr>On<wbr>Expiry<wbr>Option<wbr>Args</a> | <a href="#customcopyoption">Custom<wbr>Copy<wbr>Option<wbr>Args</a> | <a href="#immediatecopyoption">Immediate<wbr>Copy<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#copyonexpiryoption">Copy<wbr>On<wbr>Expiry<wbr>Option</a> | <a href="#customcopyoption">Custom<wbr>Copy<wbr>Option</a> | <a href="#immediatecopyoption">Immediate<wbr>Copy<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}It can be CustomCopyOption or ImmediateCopyOption.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4222,7 +4222,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#datastore_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobase">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobase">Data<wbr>Store<wbr>Info<wbr>Base</a></span>
     </dt>
     <dd>{{% md %}}Info of target datastore{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4234,7 +4234,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#copy_after_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyonexpiryoption">Copy<wbr>On<wbr>Expiry<wbr>Option<wbr>Args</a> | <a href="#customcopyoption">Custom<wbr>Copy<wbr>Option<wbr>Args</a> | <a href="#immediatecopyoption">Immediate<wbr>Copy<wbr>Option<wbr>Args</a></span>
+        <span class="property-type"><a href="#copyonexpiryoption">Copy<wbr>On<wbr>Expiry<wbr>Option</a> | <a href="#customcopyoption">Custom<wbr>Copy<wbr>Option</a> | <a href="#immediatecopyoption">Immediate<wbr>Copy<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}It can be CustomCopyOption or ImmediateCopyOption.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4242,7 +4242,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#data_store_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobase">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobase">Data<wbr>Store<wbr>Info<wbr>Base</a></span>
     </dt>
     <dd>{{% md %}}Info of target datastore{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4256,7 +4256,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#copyafter_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyonexpiryoptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Copy<wbr>On<wbr>Expiry<wbr>Option<wbr>Response<wbr>Args</a> | <a href="#customcopyoptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Custom<wbr>Copy<wbr>Option<wbr>Response<wbr>Args</a> | <a href="#immediatecopyoptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Immediate<wbr>Copy<wbr>Option<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#copyonexpiryoptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Copy<wbr>On<wbr>Expiry<wbr>Option<wbr>Response</a> | <a href="#customcopyoptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Custom<wbr>Copy<wbr>Option<wbr>Response</a> | <a href="#immediatecopyoptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Immediate<wbr>Copy<wbr>Option<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}It can be CustomCopyOption or ImmediateCopyOption.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4264,7 +4264,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#datastore_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobaseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobaseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Info of target datastore{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4296,7 +4296,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#copyafter_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyonexpiryoptionresponse">Copy<wbr>On<wbr>Expiry<wbr>Option<wbr>Response<wbr>Args</a> | <a href="#customcopyoptionresponse">Custom<wbr>Copy<wbr>Option<wbr>Response<wbr>Args</a> | <a href="#immediatecopyoptionresponse">Immediate<wbr>Copy<wbr>Option<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#copyonexpiryoptionresponse">Copy<wbr>On<wbr>Expiry<wbr>Option<wbr>Response</a> | <a href="#customcopyoptionresponse">Custom<wbr>Copy<wbr>Option<wbr>Response</a> | <a href="#immediatecopyoptionresponse">Immediate<wbr>Copy<wbr>Option<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}It can be CustomCopyOption or ImmediateCopyOption.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4304,7 +4304,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#datastore_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobaseresponse">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobaseresponse">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Info of target datastore{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4316,7 +4316,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#copy_after_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyonexpiryoptionresponse">Copy<wbr>On<wbr>Expiry<wbr>Option<wbr>Response<wbr>Args</a> | <a href="#customcopyoptionresponse">Custom<wbr>Copy<wbr>Option<wbr>Response<wbr>Args</a> | <a href="#immediatecopyoptionresponse">Immediate<wbr>Copy<wbr>Option<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#copyonexpiryoptionresponse">Copy<wbr>On<wbr>Expiry<wbr>Option<wbr>Response</a> | <a href="#customcopyoptionresponse">Custom<wbr>Copy<wbr>Option<wbr>Response</a> | <a href="#immediatecopyoptionresponse">Immediate<wbr>Copy<wbr>Option<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}It can be CustomCopyOption or ImmediateCopyOption.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4324,7 +4324,7 @@ and should be part of AbsoluteMarker enum{{% /md %}}</dd><dt class="property-opt
 <a href="#data_store_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreinfobaseresponse">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datastoreinfobaseresponse">Data<wbr>Store<wbr>Info<wbr>Base<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Info of target datastore{{% /md %}}</dd></dl>
 {{% /choosable %}}

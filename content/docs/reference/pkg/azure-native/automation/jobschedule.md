@@ -396,7 +396,7 @@ The JobSchedule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#runbook_go" style="color: inherit; text-decoration: inherit;">Runbook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookassociationproperty">Runbook<wbr>Association<wbr>Property</a></span>
+        <span class="property-type"><a href="#runbookassociationproperty">Runbook<wbr>Association<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -404,7 +404,7 @@ The JobSchedule resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleassociationproperty">Schedule<wbr>Association<wbr>Property</a></span>
+        <span class="property-type"><a href="#scheduleassociationproperty">Schedule<wbr>Association<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

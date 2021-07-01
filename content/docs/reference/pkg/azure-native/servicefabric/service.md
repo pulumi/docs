@@ -663,7 +663,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#correlationscheme_go" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorrelationdescription">[]Service<wbr>Correlation<wbr>Description</a></span>
+        <span class="property-type"><a href="#servicecorrelationdescription">[]Service<wbr>Correlation<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -687,7 +687,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#partitiondescription_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namedpartitionschemedescription">Named<wbr>Partition<wbr>Scheme<wbr>Description</a> | <a href="#singletonpartitionschemedescription">Singleton<wbr>Partition<wbr>Scheme<wbr>Description</a> | <a href="#uniformint64rangepartitionschemedescription">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description</a></span>
+        <span class="property-type"><a href="#namedpartitionschemedescription">Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a> | <a href="#singletonpartitionschemedescription">Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a> | <a href="#uniformint64rangepartitionschemedescription">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -711,7 +711,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceloadmetrics_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Load<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadmetricdescription">[]Service<wbr>Load<wbr>Metric<wbr>Description</a></span>
+        <span class="property-type"><a href="#serviceloadmetricdescription">[]Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -735,7 +735,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceplacementpolicies_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Placement<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementpolicydescription">[]Service<wbr>Placement<wbr>Policy<wbr>Description</a></span>
+        <span class="property-type"><a href="#serviceplacementpolicydescription">[]Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

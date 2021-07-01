@@ -642,7 +642,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#draft_go" style="color: inherit; text-decoration: inherit;">Draft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookdraft">Runbook<wbr>Draft</a></span>
+        <span class="property-type"><a href="#runbookdraft">Runbook<wbr>Draft<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +690,7 @@ The Runbook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publishcontentlink_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">Content<wbr>Link</a></span>
+        <span class="property-type"><a href="#contentlink">Content<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the published runbook content link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1485,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1541,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Content<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthash">Content<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Content<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthash">Content<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1599,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1655,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1683,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1721,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draftcontentlink_csharp" style="color: inherit; text-decoration: inherit;">Draft<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Link<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentlink">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Link</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1753,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Runbook<wbr>Parameter<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Runbook<wbr>Parameter&gt;</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1825,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draftcontentlink_nodejs" style="color: inherit; text-decoration: inherit;">draft<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">Content<wbr>Link<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentlink">Content<wbr>Link</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1857,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Runbook<wbr>Parameter<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Runbook<wbr>Parameter}</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1877,7 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draft_content_link_python" style="color: inherit; text-decoration: inherit;">draft_<wbr>content_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlink">Content<wbr>Link<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentlink">Content<wbr>Link</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1909,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Runbook<wbr>Parameter<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Runbook<wbr>Parameter]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1931,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draftcontentlink_csharp" style="color: inherit; text-decoration: inherit;">Draft<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Link<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentlinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Link<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1963,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Runbook<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Runbook<wbr>Parameter<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2035,7 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draftcontentlink_nodejs" style="color: inherit; text-decoration: inherit;">draft<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlinkresponse">Content<wbr>Link<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentlinkresponse">Content<wbr>Link<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2067,7 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Runbook<wbr>Parameter<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Runbook<wbr>Parameter<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2087,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#draft_content_link_python" style="color: inherit; text-decoration: inherit;">draft_<wbr>content_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlinkresponse">Content<wbr>Link<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentlinkresponse">Content<wbr>Link<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the draft runbook content link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2119,7 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Runbook<wbr>Parameter<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Runbook<wbr>Parameter<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook draft parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}

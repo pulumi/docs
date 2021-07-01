@@ -386,7 +386,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#azurefileparameters_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeproviderparametersazurefile">Volume<wbr>Provider<wbr>Parameters<wbr>Azure<wbr>File</a></span>
+        <span class="property-type"><a href="#volumeproviderparametersazurefile">Volume<wbr>Provider<wbr>Parameters<wbr>Azure<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This type describes a volume provided by an Azure Files file share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

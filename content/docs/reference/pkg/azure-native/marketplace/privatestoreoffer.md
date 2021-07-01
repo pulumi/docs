@@ -386,7 +386,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#plans_go" style="color: inherit; text-decoration: inherit;">Plans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plan">[]Plan</a></span>
+        <span class="property-type"><a href="#plan">[]Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Offer plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

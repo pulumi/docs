@@ -397,7 +397,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpactionroutedefinition">[]Custom<wbr>RPAction<wbr>Route<wbr>Definition</a></span>
+        <span class="property-type"><a href="#customrpactionroutedefinition">[]Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -421,7 +421,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#resourcetypes_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpresourcetyperoutedefinition">[]Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition</a></span>
+        <span class="property-type"><a href="#customrpresourcetyperoutedefinition">[]Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -437,7 +437,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#validations_go" style="color: inherit; text-decoration: inherit;">Validations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpvalidations">[]Custom<wbr>RPValidations</a></span>
+        <span class="property-type"><a href="#customrpvalidations">[]Custom<wbr>RPValidations<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -733,7 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceguardoperationdetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guard<wbr>Operation<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceguardoperationdetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Guard<wbr>Operation<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceguardoperationdetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Guard<wbr>Operation<wbr>Detail<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -789,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceguardoperationdetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guard<wbr>Operation<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceguardoperationdetailresponse">Resource<wbr>Guard<wbr>Operation<wbr>Detail<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourceguardoperationdetailresponse">Resource<wbr>Guard<wbr>Operation<wbr>Detail<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_guard_operation_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guard_<wbr>operation_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceguardoperationdetailresponse">Sequence[Resource<wbr>Guard<wbr>Operation<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceguardoperationdetailresponse">Sequence[Resource<wbr>Guard<wbr>Operation<wbr>Detail<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

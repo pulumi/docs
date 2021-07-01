@@ -699,7 +699,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the managed identities for an Azure resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -715,7 +715,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#managedidentities_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationuserassignedidentity">[]Application<wbr>User<wbr>Assigned<wbr>Identity</a></span>
+        <span class="property-type"><a href="#applicationuserassignedidentity">[]Application<wbr>User<wbr>Assigned<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of user assigned identities for the application, each mapped to a friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -731,7 +731,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#metrics_go" style="color: inherit; text-decoration: inherit;">Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationmetricdescription">[]Application<wbr>Metric<wbr>Description</a></span>
+        <span class="property-type"><a href="#applicationmetricdescription">[]Application<wbr>Metric<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of application capacity metric description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -787,7 +787,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#upgradepolicy_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationupgradepolicy">Application<wbr>Upgrade<wbr>Policy</a></span>
+        <span class="property-type"><a href="#applicationupgradepolicy">Application<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the policy for a monitored application upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1638,7 +1638,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#applicationhealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Application<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1655,7 +1655,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rollingupgrademonitoringpolicy_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1728,7 +1728,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#applicationhealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicy">Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicy">Arm<wbr>Application<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1745,7 +1745,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rollingupgrademonitoringpolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicy">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicy">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1773,7 +1773,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#application_health_policy_python" style="color: inherit; text-decoration: inherit;">application_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicy">Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicy">Arm<wbr>Application<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1790,7 +1790,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rolling_upgrade_monitoring_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>monitoring_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicy">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicy">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1820,7 +1820,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#applicationhealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1837,7 +1837,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rollingupgrademonitoringpolicy_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1910,7 +1910,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#applicationhealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1927,7 +1927,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rollingupgrademonitoringpolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1955,7 +1955,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#application_health_policy_python" style="color: inherit; text-decoration: inherit;">application_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1972,7 +1972,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rolling_upgrade_monitoring_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>monitoring_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2174,7 +2174,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#defaultservicetypehealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2194,7 +2194,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#servicetypehealthpolicymap_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy&gt;</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2254,7 +2254,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#defaultservicetypehealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicy">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicy">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2274,7 +2274,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#servicetypehealthpolicymap_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Health<wbr>Policy<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy}</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2294,7 +2294,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#default_service_type_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicy">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicy">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2314,7 +2314,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#service_type_health_policy_map_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>health_<wbr>policy_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy]</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2336,7 +2336,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#defaultservicetypehealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2356,7 +2356,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#servicetypehealthpolicymap_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2416,7 +2416,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#defaultservicetypehealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2436,7 +2436,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#servicetypehealthpolicymap_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Health<wbr>Policy<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2456,7 +2456,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#default_service_type_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2476,7 +2476,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#service_type_health_policy_map_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>health_<wbr>policy_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3210,7 +3210,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentitytype">Managed<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#managedidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of managed identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3302,7 +3302,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
@@ -3378,7 +3378,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
@@ -3416,7 +3416,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.

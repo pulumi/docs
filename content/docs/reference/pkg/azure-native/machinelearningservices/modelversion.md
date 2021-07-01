@@ -372,7 +372,7 @@ The ModelVersion resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelversion">Model<wbr>Version<wbr>Type</a></span>
+        <span class="property-type"><a href="#modelversion">Model<wbr>Version<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes of the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -751,7 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flavors_csharp" style="color: inherit; text-decoration: inherit;">Flavors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Flavor<wbr>Data<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Flavor<wbr>Data&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping of model flavors to their properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -871,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flavors_nodejs" style="color: inherit; text-decoration: inherit;">flavors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Flavor<wbr>Data<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Flavor<wbr>Data}</span>
     </dt>
     <dd>{{% md %}}Mapping of model flavors to their properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -931,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flavors_python" style="color: inherit; text-decoration: inherit;">flavors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Flavor<wbr>Data<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Flavor<wbr>Data]</span>
     </dt>
     <dd>{{% md %}}Mapping of model flavors to their properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flavors_csharp" style="color: inherit; text-decoration: inherit;">Flavors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Flavor<wbr>Data<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Flavor<wbr>Data<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping of model flavors to their properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1113,7 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flavors_nodejs" style="color: inherit; text-decoration: inherit;">flavors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Flavor<wbr>Data<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Flavor<wbr>Data<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Mapping of model flavors to their properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1173,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#flavors_python" style="color: inherit; text-decoration: inherit;">flavors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Flavor<wbr>Data<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Flavor<wbr>Data<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Mapping of model flavors to their properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

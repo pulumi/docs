@@ -427,7 +427,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ledgerproperties">Ledger<wbr>Properties</a></span>
+        <span class="property-type"><a href="#ledgerproperties">Ledger<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Confidential Ledger Resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1090,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aadbasedsecurityprincipals_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aadbasedsecurityprincipal">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>AADBased<wbr>Security<wbr>Principal<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipal">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>AADBased<wbr>Security<wbr>Principal&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1098,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certbasedsecurityprincipals_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certbasedsecurityprincipal">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipal">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>Cert<wbr>Based<wbr>Security<wbr>Principal&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1162,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aadbasedsecurityprincipals_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aadbasedsecurityprincipal">AADBased<wbr>Security<wbr>Principal<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipal">AADBased<wbr>Security<wbr>Principal[]</a></span>
     </dt>
     <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1170,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certbasedsecurityprincipals_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certbasedsecurityprincipal">Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipal">Cert<wbr>Based<wbr>Security<wbr>Principal[]</a></span>
     </dt>
     <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1198,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aad_based_security_principals_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>based_<wbr>security_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aadbasedsecurityprincipal">Sequence[AADBased<wbr>Security<wbr>Principal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipal">Sequence[AADBased<wbr>Security<wbr>Principal]</a></span>
     </dt>
     <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1206,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_based_security_principals_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>based_<wbr>security_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certbasedsecurityprincipal">Sequence[Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipal">Sequence[Cert<wbr>Based<wbr>Security<wbr>Principal]</a></span>
     </dt>
     <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1276,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aadbasedsecurityprincipals_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aadbasedsecurityprincipalresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>AADBased<wbr>Security<wbr>Principal<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipalresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>AADBased<wbr>Security<wbr>Principal<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1284,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certbasedsecurityprincipals_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certbasedsecurityprincipalresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipalresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Confidential<wbr>Ledger.<wbr>Inputs.<wbr>Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1428,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aadbasedsecurityprincipals_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aadbasedsecurityprincipalresponse">AADBased<wbr>Security<wbr>Principal<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipalresponse">AADBased<wbr>Security<wbr>Principal<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1436,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certbasedsecurityprincipals_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certbasedsecurityprincipalresponse">Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipalresponse">Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1504,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aad_based_security_principals_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>based_<wbr>security_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aadbasedsecurityprincipalresponse">Sequence[AADBased<wbr>Security<wbr>Principal<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipalresponse">Sequence[AADBased<wbr>Security<wbr>Principal<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1512,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_based_security_principals_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>based_<wbr>security_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certbasedsecurityprincipalresponse">Sequence[Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipalresponse">Sequence[Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

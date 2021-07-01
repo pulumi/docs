@@ -89,6 +89,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="eventgrid/" title="eventgrid"><span class="symbol module"></span>eventgrid</a></li>
     <li><a href="eventhub/" title="eventhub"><span class="symbol module"></span>eventhub</a></li>
     <li><a href="extendedlocation/" title="extendedlocation"><span class="symbol module"></span>extendedlocation</a></li>
+    <li><a href="features/" title="features"><span class="symbol module"></span>features</a></li>
     <li><a href="guestconfiguration/" title="guestconfiguration"><span class="symbol module"></span>guestconfiguration</a></li>
     <li><a href="hanaonazure/" title="hanaonazure"><span class="symbol module"></span>hanaonazure</a></li>
     <li><a href="hardwaresecuritymodules/" title="hardwaresecuritymodules"><span class="symbol module"></span>hardwaresecuritymodules</a></li>
@@ -103,7 +104,6 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="intune/" title="intune"><span class="symbol module"></span>intune</a></li>
     <li><a href="iotcentral/" title="iotcentral"><span class="symbol module"></span>iotcentral</a></li>
     <li><a href="iotsecurity/" title="iotsecurity"><span class="symbol module"></span>iotsecurity</a></li>
-    <li><a href="iotspaces/" title="iotspaces"><span class="symbol module"></span>iotspaces</a></li>
     <li><a href="keyvault/" title="keyvault"><span class="symbol module"></span>keyvault</a></li>
     <li><a href="kubernetes/" title="kubernetes"><span class="symbol module"></span>kubernetes</a></li>
     <li><a href="kubernetesconfiguration/" title="kubernetesconfiguration"><span class="symbol module"></span>kubernetesconfiguration</a></li>
@@ -195,6 +195,6 @@ A native Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.14.0</dd>
+	<dd>1.15.0</dd>
 </dl>
 

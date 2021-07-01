@@ -285,7 +285,7 @@ The Blob resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobaccesstier">Blob<wbr>Access<wbr>Tier</a></span>
+        <span class="property-type"><a href="#blobaccesstier">string</a></span>
     </dt>
     <dd>{{% md %}}The access tier of the storage blob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -333,7 +333,7 @@ The Blob resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobtype">Blob<wbr>Type</a></span>
+        <span class="property-type"><a href="#blobtype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the storage blob to be created. Defaults to 'Block'.{{% /md %}}</dd></dl>
 {{% /choosable %}}

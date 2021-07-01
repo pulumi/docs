@@ -419,7 +419,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#inboundiprules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundiprule">[]Inbound<wbr>Ip<wbr>Rule</a></span>
+        <span class="property-type"><a href="#inboundiprule">[]Inbound<wbr>Ip<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -435,7 +435,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#inputschemamapping_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Schema<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsoninputschemamapping">Json<wbr>Input<wbr>Schema<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#jsoninputschemamapping">Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1503,7 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataversion_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1511,7 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtime_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfield">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1519,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1527,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfield">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1535,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1543,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfield">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1607,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataversion_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1615,7 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtime_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Json<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1623,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Json<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1639,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1647,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Json<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1659,7 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_version_python" style="color: inherit; text-decoration: inherit;">data_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1667,7 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_time_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Json<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1675,7 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1683,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Json<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1691,7 +1691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1699,7 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Json<wbr>Field<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1713,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataversion_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1721,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtime_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1729,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1737,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1745,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1753,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1817,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataversion_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1825,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtime_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1849,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1857,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1869,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_version_python" style="color: inherit; text-decoration: inherit;">data_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1877,7 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_time_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1885,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1893,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1901,7 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1909,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1955,7 +1955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1963,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2075,7 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2083,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstateresponse">Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionstateresponse">Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2135,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2143,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstateresponse">Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionstateresponse">Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

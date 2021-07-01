@@ -1092,7 +1092,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#autobackupsettings_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autobackupsettings">Auto<wbr>Backup<wbr>Settings</a></span>
+        <span class="property-type"><a href="#autobackupsettings">Auto<wbr>Backup<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1100,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#autopatchingsettings_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autopatchingsettings">Auto<wbr>Patching<wbr>Settings</a></span>
+        <span class="property-type"><a href="#autopatchingsettings">Auto<wbr>Patching<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1108,7 +1108,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1116,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#keyvaultcredentialsettings_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialsettings">Key<wbr>Vault<wbr>Credential<wbr>Settings</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialsettings">Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1132,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#serverconfigurationsmanagementsettings_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Configurations<wbr>Management<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverconfigurationsmanagementsettings">Server<wbr>Configurations<wbr>Management<wbr>Settings</a></span>
+        <span class="property-type"><a href="#serverconfigurationsmanagementsettings">Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1188,7 +1188,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#storageconfigurationsettings_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageconfigurationsettings">Storage<wbr>Configuration<wbr>Settings</a></span>
+        <span class="property-type"><a href="#storageconfigurationsettings">Storage<wbr>Configuration<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1212,7 +1212,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#wsfcdomaincredentials_go" style="color: inherit; text-decoration: inherit;">Wsfc<wbr>Domain<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomaincredentials">Wsfc<wbr>Domain<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#wsfcdomaincredentials">Wsfc<wbr>Domain<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2543,7 +2543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
+        <span class="property-type"><a href="#dayofweek">string</a></span>
     </dt>
     <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3631,7 +3631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalfeaturesserverconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Features<wbr>Server<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Args</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Additional<wbr>Features<wbr>Server<wbr>Configurations</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3639,7 +3639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlconnectivityupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Connectivity<wbr>Update<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3647,7 +3647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlstorageupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Storage<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Storage<wbr>Update<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3655,7 +3655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtypeupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3703,7 +3703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalfeaturesserverconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Features<wbr>Server<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Args</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Additional<wbr>Features<wbr>Server<wbr>Configurations</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3711,7 +3711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlconnectivityupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Sql<wbr>Connectivity<wbr>Update<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3719,7 +3719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlstorageupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Storage<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettings">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettings">Sql<wbr>Storage<wbr>Update<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3727,7 +3727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtypeupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3739,7 +3739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_features_server_configurations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>features_<wbr>server_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Args</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Additional<wbr>Features<wbr>Server<wbr>Configurations</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3747,7 +3747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_connectivity_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Sql<wbr>Connectivity<wbr>Update<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3755,7 +3755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_storage_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>storage_<wbr>update_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettings">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettings">Sql<wbr>Storage<wbr>Update<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3763,7 +3763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_workload_type_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>workload_<wbr>type_<wbr>update_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3777,7 +3777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalfeaturesserverconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Features<wbr>Server<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3785,7 +3785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlconnectivityupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3793,7 +3793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlstorageupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Storage<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3801,7 +3801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtypeupdatesettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3849,7 +3849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalfeaturesserverconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Features<wbr>Server<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3857,7 +3857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlconnectivityupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3865,7 +3865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlstorageupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Storage<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3873,7 +3873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtypeupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3885,7 +3885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_features_server_configurations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>features_<wbr>server_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3893,7 +3893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_connectivity_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3901,7 +3901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_storage_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>storage_<wbr>update_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3909,7 +3909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_workload_type_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>workload_<wbr>type_<wbr>update_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4615,7 +4615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqldatasettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Data<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4623,7 +4623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqllogsettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4631,7 +4631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqltempdbsettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Temp<wbr>Db<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4703,7 +4703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqldatasettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Data<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4711,7 +4711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqllogsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4719,7 +4719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqltempdbsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Temp<wbr>Db<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4747,7 +4747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_data_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>data_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4755,7 +4755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_log_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>log_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4763,7 +4763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_temp_db_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>temp_<wbr>db_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4793,7 +4793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqldatasettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Data<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4801,7 +4801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqllogsettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4809,7 +4809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqltempdbsettings_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Temp<wbr>Db<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4881,7 +4881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqldatasettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Data<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4889,7 +4889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqllogsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4897,7 +4897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqltempdbsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Temp<wbr>Db<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4925,7 +4925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_data_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>data_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4933,7 +4933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_log_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>log_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4941,7 +4941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_temp_db_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>temp_<wbr>db_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

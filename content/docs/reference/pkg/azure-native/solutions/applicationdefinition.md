@@ -516,7 +516,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationdefinitionartifact">[]Application<wbr>Definition<wbr>Artifact</a></span>
+        <span class="property-type"><a href="#applicationdefinitionartifact">[]Application<wbr>Definition<wbr>Artifact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -524,7 +524,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#authorizations_go" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationauthorization">[]Application<wbr>Authorization</a></span>
+        <span class="property-type"><a href="#applicationauthorization">[]Application<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application provider authorizations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -540,7 +540,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#deploymentpolicy_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationdeploymentpolicy">Application<wbr>Deployment<wbr>Policy</a></span>
+        <span class="property-type"><a href="#applicationdeploymentpolicy">Application<wbr>Deployment<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application deployment policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -580,7 +580,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#lockingpolicy_go" style="color: inherit; text-decoration: inherit;">Locking<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpackagelockingpolicydefinition">Application<wbr>Package<wbr>Locking<wbr>Policy<wbr>Definition</a></span>
+        <span class="property-type"><a href="#applicationpackagelockingpolicydefinition">Application<wbr>Package<wbr>Locking<wbr>Policy<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application locking policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -604,7 +604,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#managementpolicy_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationmanagementpolicy">Application<wbr>Management<wbr>Policy</a></span>
+        <span class="property-type"><a href="#applicationmanagementpolicy">Application<wbr>Management<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application management policy that determines publisher's access to the managed resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -612,7 +612,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#notificationpolicy_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationpolicy">Application<wbr>Notification<wbr>Policy</a></span>
+        <span class="property-type"><a href="#applicationnotificationpolicy">Application<wbr>Notification<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -628,7 +628,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationpolicy">[]Application<wbr>Policy</a></span>
+        <span class="property-type"><a href="#applicationpolicy">[]Application<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application provider policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -636,7 +636,7 @@ The ApplicationDefinition resource accepts the following [input]({{< relref "/do
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1931,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationendpoints_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Notification<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Notification<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1955,7 +1955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationendpoints_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpoint">Application<wbr>Notification<wbr>Endpoint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpoint">Application<wbr>Notification<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1967,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_endpoints_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpoint">Sequence[Application<wbr>Notification<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpoint">Sequence[Application<wbr>Notification<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1981,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationendpoints_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Solutions.<wbr>Inputs.<wbr>Application<wbr>Notification<wbr>Endpoint<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2005,7 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationendpoints_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpointresponse">Application<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpointresponse">Application<wbr>Notification<wbr>Endpoint<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2017,7 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_endpoints_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationnotificationendpointresponse">Sequence[Application<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationnotificationendpointresponse">Sequence[Application<wbr>Notification<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The managed application notification endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}

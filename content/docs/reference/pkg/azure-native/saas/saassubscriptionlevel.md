@@ -402,7 +402,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saascreationproperties">Saas<wbr>Creation<wbr>Properties</a></span>
+        <span class="property-type"><a href="#saascreationproperties">Saas<wbr>Creation<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the SaaS resource that are relevant for creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1295,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#term_csharp" style="color: inherit; text-decoration: inherit;">Term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saaspropertiesresponseterm">Pulumi.<wbr>Azure<wbr>Native.<wbr>Saa<wbr>S.<wbr>Inputs.<wbr>Saas<wbr>Properties<wbr>Response<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#saaspropertiesresponseterm">Pulumi.<wbr>Azure<wbr>Native.<wbr>Saa<wbr>S.<wbr>Inputs.<wbr>Saas<wbr>Properties<wbr>Response<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}The current Term object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1575,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#term_nodejs" style="color: inherit; text-decoration: inherit;">term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saaspropertiesresponseterm">Saas<wbr>Properties<wbr>Response<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#saaspropertiesresponseterm">Saas<wbr>Properties<wbr>Response<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}The current Term object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1715,7 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#term_python" style="color: inherit; text-decoration: inherit;">term</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saaspropertiesresponseterm">Saas<wbr>Properties<wbr>Response<wbr>Term<wbr>Args</a></span>
+        <span class="property-type"><a href="#saaspropertiesresponseterm">Saas<wbr>Properties<wbr>Response<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}The current Term object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

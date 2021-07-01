@@ -586,7 +586,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#activitysettings_go" style="color: inherit; text-decoration: inherit;">Activity<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitysettings">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitysettings">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -594,7 +594,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#initiatorrolesettings_go" style="color: inherit; text-decoration: inherit;">Initiator<wbr>Role<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiprolesettings">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings</a></span>
+        <span class="property-type"><a href="#rosettanetpiprolesettings">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -642,7 +642,7 @@ The RosettaNetProcessConfiguration resource accepts the following [input]({{< re
 <a href="#responderrolesettings_go" style="color: inherit; text-decoration: inherit;">Responder<wbr>Role<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpiprolesettings">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings</a></span>
+        <span class="property-type"><a href="#rosettanetpiprolesettings">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1847,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgmentofreceiptsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1855,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activitybehavior_csharp" style="color: inherit; text-decoration: inherit;">Activity<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehavior">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehavior">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1903,7 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgmentofreceiptsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettings">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettings">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1911,7 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activitybehavior_nodejs" style="color: inherit; text-decoration: inherit;">activity<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehavior">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehavior">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1931,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgment_of_receipt_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgment_<wbr>of_<wbr>receipt_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettings">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettings">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1939,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activity_behavior_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehavior">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehavior">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1961,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgmentofreceiptsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1969,7 +1969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activitybehavior_csharp" style="color: inherit; text-decoration: inherit;">Activity<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2017,7 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgmentofreceiptsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2025,7 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activitybehavior_nodejs" style="color: inherit; text-decoration: inherit;">activity<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2045,7 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acknowledgment_of_receipt_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgment_<wbr>of_<wbr>receipt_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2053,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activity_behavior_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2391,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#businessdocument_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocument">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocument">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2511,7 +2511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#businessdocument_nodejs" style="color: inherit; text-decoration: inherit;">business<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocument">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocument">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2571,7 +2571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#business_document_python" style="color: inherit; text-decoration: inherit;">business_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocument">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocument">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2633,7 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#businessdocument_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2753,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#businessdocument_nodejs" style="color: inherit; text-decoration: inherit;">business<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2813,7 +2813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#business_document_python" style="color: inherit; text-decoration: inherit;">business_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd><dt class="property-required"
             title="Required">

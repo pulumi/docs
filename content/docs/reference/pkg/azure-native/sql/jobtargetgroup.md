@@ -555,7 +555,7 @@ The JobTargetGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobtarget">[]Job<wbr>Target</a></span>
+        <span class="property-type"><a href="#jobtarget">[]Job<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Members of the target group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -894,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#membershiptype_go" style="color: inherit; text-decoration: inherit;">Membership<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobtargetgroupmembershiptype">Job<wbr>Target<wbr>Group<wbr>Membership<wbr>Type</a></span>
+        <span class="property-type"><a href="#jobtargetgroupmembershiptype">string</a></span>
     </dt>
     <dd>{{% md %}}Whether the target is included or excluded from the group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -581,7 +581,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinediagnosticsettings">Pipeline<wbr>Diagnostic<wbr>Settings</a></span>
+        <span class="property-type"><a href="#pipelinediagnosticsettings">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Backend{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -597,7 +597,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#frontend_go" style="color: inherit; text-decoration: inherit;">Frontend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinediagnosticsettings">Pipeline<wbr>Diagnostic<wbr>Settings</a></span>
+        <span class="property-type"><a href="#pipelinediagnosticsettings">Pipeline<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -629,7 +629,7 @@ The Diagnostic resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sampling_go" style="color: inherit; text-decoration: inherit;">Sampling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#samplingsettings">Sampling<wbr>Settings</a></span>
+        <span class="property-type"><a href="#samplingsettings">Sampling<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sampling settings for Diagnostic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1102,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentity">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Entity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datamaskingentity">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Entity&gt;</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for headers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1110,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparams_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentity">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Entity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datamaskingentity">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Entity&gt;</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for Url query parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1142,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentity">Data<wbr>Masking<wbr>Entity<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datamaskingentity">Data<wbr>Masking<wbr>Entity[]</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for headers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparams_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentity">Data<wbr>Masking<wbr>Entity<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datamaskingentity">Data<wbr>Masking<wbr>Entity[]</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for Url query parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1162,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentity">Sequence[Data<wbr>Masking<wbr>Entity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datamaskingentity">Sequence[Data<wbr>Masking<wbr>Entity]</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for headers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1170,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_params_python" style="color: inherit; text-decoration: inherit;">query_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentity">Sequence[Data<wbr>Masking<wbr>Entity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datamaskingentity">Sequence[Data<wbr>Masking<wbr>Entity]</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for Url query parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1374,7 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Entity<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Entity<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for headers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1382,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparams_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Entity<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Entity<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for Url query parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1414,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentityresponse">Data<wbr>Masking<wbr>Entity<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">Data<wbr>Masking<wbr>Entity<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for headers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1422,7 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparams_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentityresponse">Data<wbr>Masking<wbr>Entity<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">Data<wbr>Masking<wbr>Entity<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for Url query parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1434,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentityresponse">Sequence[Data<wbr>Masking<wbr>Entity<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">Sequence[Data<wbr>Masking<wbr>Entity<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for headers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1442,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_params_python" style="color: inherit; text-decoration: inherit;">query_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingentityresponse">Sequence[Data<wbr>Masking<wbr>Entity<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datamaskingentityresponse">Sequence[Data<wbr>Masking<wbr>Entity<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Masking settings for Url query parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1486,7 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bodydiagnosticsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#bodydiagnosticsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1494,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datamasking_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamasking">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Args</a></span>
+        <span class="property-type"><a href="#datamasking">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking</a></span>
     </dt>
     <dd>{{% md %}}Data masking settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1542,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bodydiagnosticsettings">Body<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#bodydiagnosticsettings">Body<wbr>Diagnostic<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1550,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datamasking_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Masking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamasking">Data<wbr>Masking<wbr>Args</a></span>
+        <span class="property-type"><a href="#datamasking">Data<wbr>Masking</a></span>
     </dt>
     <dd>{{% md %}}Data masking settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1570,7 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bodydiagnosticsettings">Body<wbr>Diagnostic<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#bodydiagnosticsettings">Body<wbr>Diagnostic<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1578,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_masking_python" style="color: inherit; text-decoration: inherit;">data_<wbr>masking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamasking">Data<wbr>Masking<wbr>Args</a></span>
+        <span class="property-type"><a href="#datamasking">Data<wbr>Masking</a></span>
     </dt>
     <dd>{{% md %}}Data masking settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1600,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Body<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1608,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datamasking_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datamaskingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Data<wbr>Masking<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data masking settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1656,7 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1664,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datamasking_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Masking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingresponse">Data<wbr>Masking<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datamaskingresponse">Data<wbr>Masking<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data masking settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1684,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bodydiagnosticsettingsresponse">Body<wbr>Diagnostic<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Body logging settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1692,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_masking_python" style="color: inherit; text-decoration: inherit;">data_<wbr>masking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datamaskingresponse">Data<wbr>Masking<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datamaskingresponse">Data<wbr>Masking<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data masking settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1740,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnostic">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnostic">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1748,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnostic">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnostic">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1780,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1800,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1808,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnostic">Http<wbr>Message<wbr>Diagnostic</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1822,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1830,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1862,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1870,7 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1882,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1890,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpmessagediagnosticresponse">Http<wbr>Message<wbr>Diagnostic<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Diagnostic settings for response.{{% /md %}}</dd></dl>
 {{% /choosable %}}

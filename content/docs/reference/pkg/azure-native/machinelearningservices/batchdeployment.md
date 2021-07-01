@@ -543,7 +543,7 @@ The BatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchdeployment">Batch<wbr>Deployment<wbr>Type</a></span>
+        <span class="property-type"><a href="#batchdeployment">Batch<wbr>Deployment<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes of the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -575,7 +575,7 @@ The BatchDeployment resource accepts the following [input]({{< relref "/docs/int
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service identity associated with a resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -934,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_csharp" style="color: inherit; text-decoration: inherit;">Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for compute binding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -996,7 +996,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#model_csharp" style="color: inherit; text-decoration: inherit;">Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#idassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Id<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#outputpathassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Path<wbr>Asset<wbr>Reference</a> | <a href="#idassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Id<wbr>Asset<wbr>Reference</a> | <a href="#outputpathassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Path<wbr>Asset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1004,7 +1004,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#outputconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchoutputconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Batch<wbr>Output<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchoutputconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Batch<wbr>Output<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Output configuration for the batch inference operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1028,7 +1028,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#retrysettings_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchretrysettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Batch<wbr>Retry<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchretrysettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Batch<wbr>Retry<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Retry Settings for the batch inference operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1154,7 +1154,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#codeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfiguration">Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfiguration">Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1162,7 +1162,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfiguration">Compute<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfiguration">Compute<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for compute binding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1224,7 +1224,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreference">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#idassetreference">Id<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#outputpathassetreference">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreference">Data<wbr>Path<wbr>Asset<wbr>Reference</a> | <a href="#idassetreference">Id<wbr>Asset<wbr>Reference</a> | <a href="#outputpathassetreference">Output<wbr>Path<wbr>Asset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1232,7 +1232,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#outputconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchoutputconfiguration">Batch<wbr>Output<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchoutputconfiguration">Batch<wbr>Output<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Output configuration for the batch inference operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1256,7 +1256,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#retrysettings_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchretrysettings">Batch<wbr>Retry<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchretrysettings">Batch<wbr>Retry<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Retry Settings for the batch inference operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1268,7 +1268,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#code_configuration_python" style="color: inherit; text-decoration: inherit;">code_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfiguration">Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfiguration">Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1276,7 +1276,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfiguration">Compute<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfiguration">Compute<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration for compute binding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1338,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreference">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#idassetreference">Id<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#outputpathassetreference">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreference">Data<wbr>Path<wbr>Asset<wbr>Reference</a> | <a href="#idassetreference">Id<wbr>Asset<wbr>Reference</a> | <a href="#outputpathassetreference">Output<wbr>Path<wbr>Asset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1346,7 +1346,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#output_configuration_python" style="color: inherit; text-decoration: inherit;">output_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchoutputconfiguration">Batch<wbr>Output<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchoutputconfiguration">Batch<wbr>Output<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Output configuration for the batch inference operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1370,7 +1370,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#retry_settings_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchretrysettings">Batch<wbr>Retry<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchretrysettings">Batch<wbr>Retry<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Retry Settings for the batch inference operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1384,7 +1384,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#codeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Code<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1392,7 +1392,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#compute_csharp" style="color: inherit; text-decoration: inherit;">Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration for compute binding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1454,7 +1454,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#model_csharp" style="color: inherit; text-decoration: inherit;">Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#idassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Id<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#outputpathassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#idassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Id<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#outputpathassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1462,7 +1462,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#outputconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchoutputconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Batch<wbr>Output<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchoutputconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Batch<wbr>Output<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Output configuration for the batch inference operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1486,7 +1486,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#retrysettings_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchretrysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Batch<wbr>Retry<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchretrysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Batch<wbr>Retry<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retry Settings for the batch inference operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1612,7 +1612,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#codeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfigurationresponse">Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfigurationresponse">Code<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1620,7 +1620,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfigurationresponse">Compute<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfigurationresponse">Compute<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration for compute binding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1682,7 +1682,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreferenceresponse">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#idassetreferenceresponse">Id<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#outputpathassetreferenceresponse">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreferenceresponse">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#idassetreferenceresponse">Id<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#outputpathassetreferenceresponse">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1690,7 +1690,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#outputconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchoutputconfigurationresponse">Batch<wbr>Output<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchoutputconfigurationresponse">Batch<wbr>Output<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Output configuration for the batch inference operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1714,7 +1714,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#retrysettings_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchretrysettingsresponse">Batch<wbr>Retry<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchretrysettingsresponse">Batch<wbr>Retry<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retry Settings for the batch inference operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1726,7 +1726,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#code_configuration_python" style="color: inherit; text-decoration: inherit;">code_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfigurationresponse">Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfigurationresponse">Code<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1734,7 +1734,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfigurationresponse">Compute<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfigurationresponse">Compute<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration for compute binding.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1796,7 +1796,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreferenceresponse">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#idassetreferenceresponse">Id<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#outputpathassetreferenceresponse">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreferenceresponse">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#idassetreferenceresponse">Id<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#outputpathassetreferenceresponse">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1804,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#output_configuration_python" style="color: inherit; text-decoration: inherit;">output_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchoutputconfigurationresponse">Batch<wbr>Output<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchoutputconfigurationresponse">Batch<wbr>Output<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Output configuration for the batch inference operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1828,7 +1828,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#retry_settings_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchretrysettingsresponse">Batch<wbr>Retry<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchretrysettingsresponse">Batch<wbr>Retry<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retry Settings for the batch inference operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3246,7 +3246,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Meta&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3286,7 +3286,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Meta}</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3306,7 +3306,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Meta]</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3378,7 +3378,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3450,7 +3450,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3486,7 +3486,7 @@ For TabularDataset, this is the size of the records in bytes, per mini-batch.{{%
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}

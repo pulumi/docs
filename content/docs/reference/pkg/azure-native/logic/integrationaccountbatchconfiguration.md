@@ -395,7 +395,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchconfigurationproperties">Batch<wbr>Configuration<wbr>Properties</a></span>
+        <span class="property-type"><a href="#batchconfigurationproperties">Batch<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The batch configuration properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -682,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releasecriteria_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteria">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Batch<wbr>Release<wbr>Criteria<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchreleasecriteria">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Batch<wbr>Release<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releasecriteria_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteria">Batch<wbr>Release<wbr>Criteria<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchreleasecriteria">Batch<wbr>Release<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#release_criteria_python" style="color: inherit; text-decoration: inherit;">release_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteria">Batch<wbr>Release<wbr>Criteria<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchreleasecriteria">Batch<wbr>Release<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -860,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releasecriteria_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteriaresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Batch<wbr>Release<wbr>Criteria<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchreleasecriteriaresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Batch<wbr>Release<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -948,7 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releasecriteria_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteriaresponse">Batch<wbr>Release<wbr>Criteria<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchreleasecriteriaresponse">Batch<wbr>Release<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -992,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#release_criteria_python" style="color: inherit; text-decoration: inherit;">release_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteriaresponse">Batch<wbr>Release<wbr>Criteria<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#batchreleasecriteriaresponse">Batch<wbr>Release<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1046,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrence">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Workflow<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrence">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Workflow<wbr>Trigger<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1102,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrence">Workflow<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrence">Workflow<wbr>Trigger<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1130,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrence">Workflow<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrence">Workflow<wbr>Trigger<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1160,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1216,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1244,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1424,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence&gt;</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1512,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrence">Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">Recurrence<wbr>Schedule<wbr>Occurrence[]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1556,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrence">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1598,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
+        <span class="property-type"><a href="#dayofweek">string</a></span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1766,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1854,7 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1898,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1944,7 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrenceschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2048,7 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2100,7 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2154,7 +2154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2258,7 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2310,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -396,7 +396,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineidentity">Machine<wbr>Identity</a></span>
+        <span class="property-type"><a href="#machineidentity">Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -412,7 +412,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#locationdata_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationdata">Location<wbr>Data</a></span>
+        <span class="property-type"><a href="#locationdata">Location<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to the geographic location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1211,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1283,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Additional error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1319,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Additional error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1657,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1729,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1765,7 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}

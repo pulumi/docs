@@ -1339,7 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_csharp" style="color: inherit; text-decoration: inherit;">OAuth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1347,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_csharp" style="color: inherit; text-decoration: inherit;">Openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1379,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1387,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_nodejs" style="color: inherit; text-decoration: inherit;">openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1399,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#o_auth2_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1407,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_python" style="color: inherit; text-decoration: inherit;">openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}

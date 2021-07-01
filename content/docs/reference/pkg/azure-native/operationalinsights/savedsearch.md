@@ -491,7 +491,7 @@ The SavedSearch resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tag">[]Tag</a></span>
+        <span class="property-type"><a href="#tag">[]Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The tags attached to the saved search.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

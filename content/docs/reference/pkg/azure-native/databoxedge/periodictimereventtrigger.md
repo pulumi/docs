@@ -344,7 +344,7 @@ The PeriodicTimerEventTrigger resource accepts the following [input]({{< relref 
 <a href="#sinkinfo_go" style="color: inherit; text-decoration: inherit;">Sink<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rolesinkinfo">Role<wbr>Sink<wbr>Info</a></span>
+        <span class="property-type"><a href="#rolesinkinfo">Role<wbr>Sink<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Role Sink information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -352,7 +352,7 @@ The PeriodicTimerEventTrigger resource accepts the following [input]({{< relref 
 <a href="#sourceinfo_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodictimersourceinfo">Periodic<wbr>Timer<wbr>Source<wbr>Info</a></span>
+        <span class="property-type"><a href="#periodictimersourceinfo">Periodic<wbr>Timer<wbr>Source<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Periodic timer details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

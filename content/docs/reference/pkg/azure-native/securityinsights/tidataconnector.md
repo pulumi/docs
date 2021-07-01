@@ -494,7 +494,7 @@ The TIDataConnector resource accepts the following [input]({{< relref "/docs/int
 <a href="#datatypes_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tidataconnectordatatypes">TIData<wbr>Connector<wbr>Data<wbr>Types</a></span>
+        <span class="property-type"><a href="#tidataconnectordatatypes">TIData<wbr>Connector<wbr>Data<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The available data types for the connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indicators_csharp" style="color: inherit; text-decoration: inherit;">Indicators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tidataconnectordatatypesindicators">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>TIData<wbr>Connector<wbr>Data<wbr>Types<wbr>Indicators<wbr>Args</a></span>
+        <span class="property-type"><a href="#tidataconnectordatatypesindicators">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>TIData<wbr>Connector<wbr>Data<wbr>Types<wbr>Indicators</a></span>
     </dt>
     <dd>{{% md %}}Data type for indicators connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -831,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indicators_nodejs" style="color: inherit; text-decoration: inherit;">indicators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tidataconnectordatatypesindicators">TIData<wbr>Connector<wbr>Data<wbr>Types<wbr>Indicators<wbr>Args</a></span>
+        <span class="property-type"><a href="#tidataconnectordatatypesindicators">TIData<wbr>Connector<wbr>Data<wbr>Types<wbr>Indicators</a></span>
     </dt>
     <dd>{{% md %}}Data type for indicators connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -843,7 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indicators_python" style="color: inherit; text-decoration: inherit;">indicators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tidataconnectordatatypesindicators">TIData<wbr>Connector<wbr>Data<wbr>Types<wbr>Indicators<wbr>Args</a></span>
+        <span class="property-type"><a href="#tidataconnectordatatypesindicators">TIData<wbr>Connector<wbr>Data<wbr>Types<wbr>Indicators</a></span>
     </dt>
     <dd>{{% md %}}Data type for indicators connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -907,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indicators_csharp" style="color: inherit; text-decoration: inherit;">Indicators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tidataconnectordatatypesresponseindicators">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>TIData<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Indicators<wbr>Args</a></span>
+        <span class="property-type"><a href="#tidataconnectordatatypesresponseindicators">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>TIData<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Indicators</a></span>
     </dt>
     <dd>{{% md %}}Data type for indicators connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -931,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indicators_nodejs" style="color: inherit; text-decoration: inherit;">indicators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tidataconnectordatatypesresponseindicators">TIData<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Indicators<wbr>Args</a></span>
+        <span class="property-type"><a href="#tidataconnectordatatypesresponseindicators">TIData<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Indicators</a></span>
     </dt>
     <dd>{{% md %}}Data type for indicators connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -943,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indicators_python" style="color: inherit; text-decoration: inherit;">indicators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tidataconnectordatatypesresponseindicators">TIData<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Indicators<wbr>Args</a></span>
+        <span class="property-type"><a href="#tidataconnectordatatypesresponseindicators">TIData<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Indicators</a></span>
     </dt>
     <dd>{{% md %}}Data type for indicators connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}

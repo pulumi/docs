@@ -416,7 +416,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentity">User<wbr>Identity</a></span>
+        <span class="property-type"><a href="#useridentity">User<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -440,7 +440,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#secretstore_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersecretstore">User<wbr>Secret<wbr>Store</a></span>
+        <span class="property-type"><a href="#usersecretstore">User<wbr>Secret<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The secret store of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

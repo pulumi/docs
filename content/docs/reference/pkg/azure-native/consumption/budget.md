@@ -559,7 +559,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#timeperiod_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgettimeperiod">Budget<wbr>Time<wbr>Period</a></span>
+        <span class="property-type"><a href="#budgettimeperiod">Budget<wbr>Time<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -583,7 +583,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilter">Budget<wbr>Filter</a></span>
+        <span class="property-type"><a href="#budgetfilter">Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}May be used to filter budgets by user-specified dimensions and/or tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -591,7 +591,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Notification</span>
+        <span class="property-type">map[string]Notification<wbr>Args</span>
     </dt>
     <dd>{{% md %}}Dictionary of notifications associated with the budget. Budget can have up to five notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1178,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and_csharp" style="color: inherit; text-decoration: inherit;">And</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#budgetfilterproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties&gt;</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1186,7 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1194,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_csharp" style="color: inherit; text-decoration: inherit;">Not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetfilterproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1202,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1250,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and_nodejs" style="color: inherit; text-decoration: inherit;">and</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterproperties">Budget<wbr>Filter<wbr>Properties<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#budgetfilterproperties">Budget<wbr>Filter<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1258,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1266,7 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterproperties">Budget<wbr>Filter<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetfilterproperties">Budget<wbr>Filter<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1274,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1286,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and__python" style="color: inherit; text-decoration: inherit;">and_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterproperties">Sequence[Budget<wbr>Filter<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetfilterproperties">Sequence[Budget<wbr>Filter<wbr>Properties]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1294,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1302,7 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterproperties">Budget<wbr>Filter<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetfilterproperties">Budget<wbr>Filter<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1310,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1324,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1332,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1364,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1372,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1384,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1392,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpression">Budget<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1406,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1414,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1446,7 +1446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1454,7 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1466,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1474,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1488,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and_csharp" style="color: inherit; text-decoration: inherit;">And</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#budgetfilterpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1496,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1504,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_csharp" style="color: inherit; text-decoration: inherit;">Not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1512,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1560,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and_nodejs" style="color: inherit; text-decoration: inherit;">and</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Budget<wbr>Filter<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1568,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1576,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Budget<wbr>Filter<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1584,7 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1596,7 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#and__python" style="color: inherit; text-decoration: inherit;">and_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Sequence[Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Sequence[Budget<wbr>Filter<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1604,7 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1612,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Budget<wbr>Filter<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetfilterpropertiesresponse">Budget<wbr>Filter<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1620,7 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetcomparisonexpressionresponse">Budget<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}

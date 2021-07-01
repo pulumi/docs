@@ -402,7 +402,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationthresholdrulecondition">Location<wbr>Threshold<wbr>Rule<wbr>Condition</a> | <a href="#managementeventrulecondition">Management<wbr>Event<wbr>Rule<wbr>Condition</a> | <a href="#thresholdrulecondition">Threshold<wbr>Rule<wbr>Condition</a></span>
+        <span class="property-type"><a href="#locationthresholdrulecondition">Location<wbr>Threshold<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#managementeventrulecondition">Management<wbr>Event<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#thresholdrulecondition">Threshold<wbr>Rule<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the condition that results in the alert rule being activated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -434,7 +434,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleemailaction">Rule<wbr>Email<wbr>Action</a> | <a href="#rulewebhookaction">Rule<wbr>Webhook<wbr>Action</a></span>
+        <span class="property-type"><a href="#ruleemailaction">Rule<wbr>Email<wbr>Action<wbr>Args</a> | <a href="#rulewebhookaction">Rule<wbr>Webhook<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}action that is performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -851,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -907,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -935,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1099,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionoperator">Condition<wbr>Operator</a></span>
+        <span class="property-type"><a href="#conditionoperator">string</a></span>
     </dt>
     <dd>{{% md %}}the condition operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1299,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementeventaggregationcondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementeventaggregationcondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Management<wbr>Event<wbr>Aggregation<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1307,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementeventaggregationcondition">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementeventaggregationcondition">Management<wbr>Event<wbr>Aggregation<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1347,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1359,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementeventaggregationcondition">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementeventaggregationcondition">Management<wbr>Event<wbr>Aggregation<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1367,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1381,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1389,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1421,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1441,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementeventaggregationconditionresponse">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1449,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1727,7 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_csharp" style="color: inherit; text-decoration: inherit;">Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1943,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_nodejs" style="color: inherit; text-decoration: inherit;">claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2051,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_python" style="color: inherit; text-decoration: inherit;">claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2161,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_csharp" style="color: inherit; text-decoration: inherit;">Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2377,7 +2377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_nodejs" style="color: inherit; text-decoration: inherit;">claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2485,7 +2485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claims_python" style="color: inherit; text-decoration: inherit;">claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3131,7 +3131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3183,7 +3183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeaggregationoperator">Time<wbr>Aggregation<wbr>Operator</a></span>
+        <span class="property-type"><a href="#timeaggregationoperator">string</a></span>
     </dt>
     <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3219,7 +3219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3263,7 +3263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3309,7 +3309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3397,7 +3397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3441,7 +3441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

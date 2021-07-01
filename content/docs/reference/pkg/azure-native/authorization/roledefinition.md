@@ -357,7 +357,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permission">[]Permission</a></span>
+        <span class="property-type"><a href="#permission">[]Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Role definition permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

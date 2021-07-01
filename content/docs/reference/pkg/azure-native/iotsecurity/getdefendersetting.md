@@ -86,6 +86,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="evaluationendtime_csharp">
+<a href="#evaluationendtime_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}End time of the evaluation period, if such exist{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -137,6 +145,14 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="evaluationendtime_go">
+<a href="#evaluationendtime_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}End time of the evaluation period, if such exist{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -190,6 +206,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="evaluationendtime_nodejs">
+<a href="#evaluationendtime_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}End time of the evaluation period, if such exist{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -241,6 +265,14 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="evaluation_end_time_python">
+<a href="#evaluation_end_time_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>end_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}End time of the evaluation period, if such exist{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>

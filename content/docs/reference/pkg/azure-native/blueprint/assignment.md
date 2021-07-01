@@ -1031,7 +1031,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed identity for this blueprint assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1039,7 +1039,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Parameter<wbr>Value</span>
+        <span class="property-type">map[string]Parameter<wbr>Value<wbr>Args</span>
     </dt>
     <dd>{{% md %}}Blueprint assignment parameter values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1047,7 +1047,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcegroups_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Resource<wbr>Group<wbr>Value</span>
+        <span class="property-type">map[string]Resource<wbr>Group<wbr>Value<wbr>Args</span>
     </dt>
     <dd>{{% md %}}Names and locations of resource group placeholders.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1103,7 +1103,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#locks_go" style="color: inherit; text-decoration: inherit;">Locks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentlocksettings">Assignment<wbr>Lock<wbr>Settings</a></span>
+        <span class="property-type"><a href="#assignmentlocksettings">Assignment<wbr>Lock<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines how resources deployed by a blueprint assignment are locked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1998,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2070,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity}</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2106,7 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity]</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2144,7 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2216,7 +2216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2252,7 +2252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2296,7 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_csharp" style="color: inherit; text-decoration: inherit;">Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Secret<wbr>Value<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Secret<wbr>Value<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2336,7 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_nodejs" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereference">Secret<wbr>Value<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereference">Secret<wbr>Value<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2356,7 +2356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereference">Secret<wbr>Value<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereference">Secret<wbr>Value<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2378,7 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_csharp" style="color: inherit; text-decoration: inherit;">Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Secret<wbr>Value<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Secret<wbr>Value<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2418,7 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_nodejs" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereferenceresponse">Secret<wbr>Value<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereferenceresponse">Secret<wbr>Value<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2438,7 +2438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereferenceresponse">Secret<wbr>Value<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereferenceresponse">Secret<wbr>Value<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2624,7 +2624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2680,7 +2680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2708,7 +2708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2738,7 +2738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Blueprint.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2794,7 +2794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2822,7 +2822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">

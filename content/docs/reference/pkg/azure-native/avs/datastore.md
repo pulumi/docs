@@ -381,7 +381,7 @@ The Datastore resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#diskpoolvolume_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Pool<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskpoolvolume">Disk<wbr>Pool<wbr>Volume</a></span>
+        <span class="property-type"><a href="#diskpoolvolume">Disk<wbr>Pool<wbr>Volume<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An iSCSI volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -389,7 +389,7 @@ The Datastore resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#netappvolume_go" style="color: inherit; text-decoration: inherit;">Net<wbr>App<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#netappvolume">Net<wbr>App<wbr>Volume</a></span>
+        <span class="property-type"><a href="#netappvolume">Net<wbr>App<wbr>Volume<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Azure NetApp Files volume{{% /md %}}</dd></dl>
 {{% /choosable %}}

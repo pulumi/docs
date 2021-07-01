@@ -1774,7 +1774,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apiversionset_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiversionsetcontractdetails">Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details</a></span>
+        <span class="property-type"><a href="#apiversionsetcontractdetails">Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Version set details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1790,7 +1790,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#authenticationsettings_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationsettingscontract">Authentication<wbr>Settings<wbr>Contract</a></span>
+        <span class="property-type"><a href="#authenticationsettingscontract">Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1864,7 +1864,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#subscriptionkeyparameternames_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionkeyparameternamescontract">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract</a></span>
+        <span class="property-type"><a href="#subscriptionkeyparameternamescontract">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1888,7 +1888,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#wsdlselector_go" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apicreateorupdatepropertieswsdlselector">Api<wbr>Create<wbr>Or<wbr>Update<wbr>Properties<wbr>Wsdl<wbr>Selector</a></span>
+        <span class="property-type"><a href="#apicreateorupdatepropertieswsdlselector">Api<wbr>Create<wbr>Or<wbr>Update<wbr>Properties<wbr>Wsdl<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Criteria to limit import of WSDL to a subset of the document.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2987,7 +2987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_csharp" style="color: inherit; text-decoration: inherit;">OAuth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontract">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontract">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>OAuth2Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2995,7 +2995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_csharp" style="color: inherit; text-decoration: inherit;">Openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontract">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontract">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3027,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontract">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontract">OAuth2Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3035,7 +3035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_nodejs" style="color: inherit; text-decoration: inherit;">openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontract">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontract">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3047,7 +3047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#o_auth2_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontract">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontract">OAuth2Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3055,7 +3055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_python" style="color: inherit; text-decoration: inherit;">openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontract">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontract">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3069,7 +3069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_csharp" style="color: inherit; text-decoration: inherit;">OAuth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3077,7 +3077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_csharp" style="color: inherit; text-decoration: inherit;">Openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3109,7 +3109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3117,7 +3117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_nodejs" style="color: inherit; text-decoration: inherit;">openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3129,7 +3129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#o_auth2_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3137,7 +3137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_python" style="color: inherit; text-decoration: inherit;">openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}

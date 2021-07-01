@@ -456,7 +456,7 @@ The DscConfiguration resource accepts the following [input]({{< relref "/docs/in
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentsource">Content<wbr>Source</a></span>
+        <span class="property-type"><a href="#contentsource">Content<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -512,7 +512,7 @@ The DscConfiguration resource accepts the following [input]({{< relref "/docs/in
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Dsc<wbr>Configuration<wbr>Parameter</span>
+        <span class="property-type">map[string]Dsc<wbr>Configuration<wbr>Parameter<wbr>Args</span>
     </dt>
     <dd>{{% md %}}Gets or sets the configuration parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1203,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hash_csharp" style="color: inherit; text-decoration: inherit;">Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthash">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1275,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hash_nodejs" style="color: inherit; text-decoration: inherit;">hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Content<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthash">Content<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hash_python" style="color: inherit; text-decoration: inherit;">hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthash">Content<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthash">Content<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hash_csharp" style="color: inherit; text-decoration: inherit;">Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hash_nodejs" style="color: inherit; text-decoration: inherit;">hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,7 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hash_python" style="color: inherit; text-decoration: inherit;">hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

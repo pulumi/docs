@@ -455,7 +455,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#actiongroups_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsinformation">Action<wbr>Groups<wbr>Information</a></span>
+        <span class="property-type"><a href="#actiongroupsinformation">Action<wbr>Groups<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The alert rule actions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -463,7 +463,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#detector_go" style="color: inherit; text-decoration: inherit;">Detector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detector">Detector</a></span>
+        <span class="property-type"><a href="#detector">Detector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The alert rule's detector.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -543,7 +543,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#throttling_go" style="color: inherit; text-decoration: inherit;">Throttling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#throttlinginformation">Throttling<wbr>Information</a></span>
+        <span class="property-type"><a href="#throttlinginformation">Throttling<wbr>Information<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The alert rule throttling information.{{% /md %}}</dd></dl>
 {{% /choosable %}}

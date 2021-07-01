@@ -402,7 +402,7 @@ The ReplicationRecoveryServicesProvider resource accepts the following [input]({
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addrecoveryservicesproviderinputproperties">Add<wbr>Recovery<wbr>Services<wbr>Provider<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#addrecoveryservicesproviderinputproperties">Add<wbr>Recovery<wbr>Services<wbr>Provider<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of an add provider request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -689,7 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationidentityinput_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Identity<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for DRA authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -705,7 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceaccessidentityinput_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Access<wbr>Identity<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for resource access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -713,7 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataplaneauthenticationidentityinput_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Plane<wbr>Authentication<wbr>Identity<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for data plane authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationidentityinput_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Identity<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for DRA authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -793,7 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceaccessidentityinput_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Access<wbr>Identity<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for resource access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataplaneauthenticationidentityinput_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Plane<wbr>Authentication<wbr>Identity<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for data plane authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_identity_input_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>identity_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for DRA authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -837,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_access_identity_input_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>access_<wbr>identity_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for resource access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -845,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_plane_authentication_identity_input_python" style="color: inherit; text-decoration: inherit;">data_<wbr>plane_<wbr>authentication_<wbr>identity_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for data plane authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -947,7 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1195,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_nodejs" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1319,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2131,7 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationidentitydetails_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Identity<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication identity details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2179,7 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrordetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The recovery services provider health error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2211,7 +2211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerversiondetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The provider version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2235,7 +2235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceaccessidentitydetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Access<wbr>Identity<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource access identity details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2395,7 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationidentitydetails_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Identity<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderdetailsresponse">Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderdetailsresponse">Identity<wbr>Provider<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication identity details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2443,7 +2443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrordetails_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The recovery services provider health error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2475,7 +2475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerversiondetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The provider version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2499,7 +2499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceaccessidentitydetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Access<wbr>Identity<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderdetailsresponse">Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderdetailsresponse">Identity<wbr>Provider<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource access identity details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2527,7 +2527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_identity_details_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>identity_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderdetailsresponse">Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderdetailsresponse">Identity<wbr>Provider<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication identity details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2575,7 +2575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_error_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>error_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The recovery services provider health error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2607,7 +2607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_version_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>version_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The provider version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2631,7 +2631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_access_identity_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>access_<wbr>identity_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderdetailsresponse">Identity<wbr>Provider<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderdetailsresponse">Identity<wbr>Provider<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource access identity details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -1466,7 +1466,7 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyschema">Management<wbr>Policy<wbr>Schema</a></span>
+        <span class="property-type"><a href="#managementpolicyschema">Management<wbr>Policy<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1993,7 +1993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseblob_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicybaseblob">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicybaseblob">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Base<wbr>Blob</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2001,7 +2001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicysnapshot">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicysnapshot">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2009,7 +2009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyversion">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyversion">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for version{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2049,7 +2049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseblob_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicybaseblob">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicybaseblob">Management<wbr>Policy<wbr>Base<wbr>Blob</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,7 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicysnapshot">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicysnapshot">Management<wbr>Policy<wbr>Snap<wbr>Shot</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2065,7 +2065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyversion">Management<wbr>Policy<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyversion">Management<wbr>Policy<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for version{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2077,7 +2077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_blob_python" style="color: inherit; text-decoration: inherit;">base_<wbr>blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicybaseblob">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicybaseblob">Management<wbr>Policy<wbr>Base<wbr>Blob</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2085,7 +2085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicysnapshot">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicysnapshot">Management<wbr>Policy<wbr>Snap<wbr>Shot</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyversion">Management<wbr>Policy<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyversion">Management<wbr>Policy<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for version{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2107,7 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseblob_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicybaseblobresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicybaseblobresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2115,7 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicysnapshotresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicysnapshotresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2123,7 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyversionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Version<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyversionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Version<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for version{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2163,7 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baseblob_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicybaseblobresponse">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicybaseblobresponse">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2171,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2179,7 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyversionresponse">Management<wbr>Policy<wbr>Version<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyversionresponse">Management<wbr>Policy<wbr>Version<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for version{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2191,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base_blob_python" style="color: inherit; text-decoration: inherit;">base_<wbr>blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicybaseblobresponse">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicybaseblobresponse">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2199,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2207,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyversionresponse">Management<wbr>Policy<wbr>Version<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyversionresponse">Management<wbr>Policy<wbr>Version<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for version{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2221,7 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2237,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2245,7 +2245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2293,7 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2309,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertoarchive_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2317,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertocool_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2329,7 +2329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2345,7 +2345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2353,7 +2353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2367,7 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2383,7 +2383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2391,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2439,7 +2439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2455,7 +2455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertoarchive_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2463,7 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertocool_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2475,7 +2475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2491,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2499,7 +2499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2513,7 +2513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2521,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyfilter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyfilter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2553,7 +2553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyaction">Management<wbr>Policy<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyaction">Management<wbr>Policy<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2561,7 +2561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyfilter">Management<wbr>Policy<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyfilter">Management<wbr>Policy<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2573,7 +2573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyaction">Management<wbr>Policy<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyaction">Management<wbr>Policy<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2581,7 +2581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyfilter">Management<wbr>Policy<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyfilter">Management<wbr>Policy<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2595,7 +2595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2603,7 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2635,7 +2635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyactionresponse">Management<wbr>Policy<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyactionresponse">Management<wbr>Policy<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2643,7 +2643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyfilterresponse">Management<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyfilterresponse">Management<wbr>Policy<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2655,7 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyactionresponse">Management<wbr>Policy<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyactionresponse">Management<wbr>Policy<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2663,7 +2663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyfilterresponse">Management<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyfilterresponse">Management<wbr>Policy<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2685,7 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobindexmatch_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Index<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfilter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tagfilter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2741,7 +2741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobindexmatch_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Index<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfilter">Tag<wbr>Filter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#tagfilter">Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2769,7 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_index_match_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>index_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfilter">Sequence[Tag<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tagfilter">Sequence[Tag<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2799,7 +2799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobindexmatch_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Index<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tagfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Filter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2855,7 +2855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobindexmatch_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Index<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfilterresponse">Tag<wbr>Filter<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#tagfilterresponse">Tag<wbr>Filter<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2883,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_index_match_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>index_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfilterresponse">Sequence[Tag<wbr>Filter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tagfilterresponse">Sequence[Tag<wbr>Filter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2905,7 +2905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicydefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicydefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2977,7 +2977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicydefinition">Management<wbr>Policy<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicydefinition">Management<wbr>Policy<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3013,7 +3013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicydefinition">Management<wbr>Policy<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicydefinition">Management<wbr>Policy<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3051,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3123,7 +3123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicydefinitionresponse">Management<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicydefinitionresponse">Management<wbr>Policy<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3159,7 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicydefinitionresponse">Management<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicydefinitionresponse">Management<wbr>Policy<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3197,7 +3197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managementpolicyrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3221,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">Management<wbr>Policy<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managementpolicyrule">Management<wbr>Policy<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3233,7 +3233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managementpolicyrule">Sequence[Management<wbr>Policy<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3247,7 +3247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managementpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3271,7 +3271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleresponse">Management<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managementpolicyruleresponse">Management<wbr>Policy<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3283,7 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleresponse">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managementpolicyruleresponse">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3297,7 +3297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3305,7 +3305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3313,7 +3313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3353,7 +3353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3361,7 +3361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertoarchive_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3369,7 +3369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertocool_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3381,7 +3381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3389,7 +3389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3397,7 +3397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3411,7 +3411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3419,7 +3419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3427,7 +3427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3467,7 +3467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3475,7 +3475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertoarchive_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3483,7 +3483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertocool_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3495,7 +3495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3503,7 +3503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3511,7 +3511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3525,7 +3525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3533,7 +3533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3541,7 +3541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3581,7 +3581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3589,7 +3589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertoarchive_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3597,7 +3597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertocool_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3609,7 +3609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3617,7 +3617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3625,7 +3625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3639,7 +3639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3647,7 +3647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3655,7 +3655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3695,7 +3695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3703,7 +3703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertoarchive_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3711,7 +3711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiertocool_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3723,7 +3723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3731,7 +3731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3739,7 +3739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blob version to cool storage. Support blob version currently at Hot tier{{% /md %}}</dd></dl>
 {{% /choosable %}}

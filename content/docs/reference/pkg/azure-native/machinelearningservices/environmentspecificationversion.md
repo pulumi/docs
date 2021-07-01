@@ -419,7 +419,7 @@ The EnvironmentSpecificationVersion resource accepts the following [input]({{< r
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentspecificationversion">Environment<wbr>Specification<wbr>Version<wbr>Type</a></span>
+        <span class="property-type"><a href="#environmentspecificationversion">Environment<wbr>Specification<wbr>Version<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes of the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -693,7 +693,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerimageplatform">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Image<wbr>Platform<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerimageplatform">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Image<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The platform information of the docker image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -755,7 +755,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerimageplatform">Docker<wbr>Image<wbr>Platform<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerimageplatform">Docker<wbr>Image<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The platform information of the docker image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -786,7 +786,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerimageplatform">Docker<wbr>Image<wbr>Platform<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerimageplatform">Docker<wbr>Image<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The platform information of the docker image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -819,7 +819,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerimageplatformresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Image<wbr>Platform<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerimageplatformresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Image<wbr>Platform<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform information of the docker image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -881,7 +881,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerimageplatformresponse">Docker<wbr>Image<wbr>Platform<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerimageplatformresponse">Docker<wbr>Image<wbr>Platform<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform information of the docker image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -912,7 +912,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerimageplatformresponse">Docker<wbr>Image<wbr>Platform<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerimageplatformresponse">Docker<wbr>Image<wbr>Platform<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform information of the docker image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -935,7 +935,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerimageplatform">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Image<wbr>Platform<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerimageplatform">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Image<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The platform information of the docker image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -977,7 +977,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerimageplatform">Docker<wbr>Image<wbr>Platform<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerimageplatform">Docker<wbr>Image<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The platform information of the docker image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -998,7 +998,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerimageplatform">Docker<wbr>Image<wbr>Platform<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerimageplatform">Docker<wbr>Image<wbr>Platform</a></span>
     </dt>
     <dd>{{% md %}}The platform information of the docker image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1121,7 +1121,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerimageplatformresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Image<wbr>Platform<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerimageplatformresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Image<wbr>Platform<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform information of the docker image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1163,7 +1163,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerimageplatformresponse">Docker<wbr>Image<wbr>Platform<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerimageplatformresponse">Docker<wbr>Image<wbr>Platform<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform information of the docker image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1184,7 +1184,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerimageplatformresponse">Docker<wbr>Image<wbr>Platform<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerimageplatformresponse">Docker<wbr>Image<wbr>Platform<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform information of the docker image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1215,7 +1215,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#docker_csharp" style="color: inherit; text-decoration: inherit;">Docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuild">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Build<wbr>Args</a> | <a href="#dockerimage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Image<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerbuild">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Build</a> | <a href="#dockerimage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Image</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for Docker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1223,7 +1223,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#inferencecontainerproperties_csharp" style="color: inherit; text-decoration: inherit;">Inference<wbr>Container<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inferencecontainerproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Inference<wbr>Container<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#inferencecontainerproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Inference<wbr>Container<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Defines configuration specific to inference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1337,7 +1337,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#docker_nodejs" style="color: inherit; text-decoration: inherit;">docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuild">Docker<wbr>Build<wbr>Args</a> | <a href="#dockerimage">Docker<wbr>Image<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerbuild">Docker<wbr>Build</a> | <a href="#dockerimage">Docker<wbr>Image</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for Docker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1345,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#inferencecontainerproperties_nodejs" style="color: inherit; text-decoration: inherit;">inference<wbr>Container<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inferencecontainerproperties">Inference<wbr>Container<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#inferencecontainerproperties">Inference<wbr>Container<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Defines configuration specific to inference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1398,7 +1398,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#docker_python" style="color: inherit; text-decoration: inherit;">docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuild">Docker<wbr>Build<wbr>Args</a> | <a href="#dockerimage">Docker<wbr>Image<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerbuild">Docker<wbr>Build</a> | <a href="#dockerimage">Docker<wbr>Image</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for Docker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1406,7 +1406,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#inference_container_properties_python" style="color: inherit; text-decoration: inherit;">inference_<wbr>container_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inferencecontainerproperties">Inference<wbr>Container<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#inferencecontainerproperties">Inference<wbr>Container<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Defines configuration specific to inference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1470,7 +1470,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#docker_csharp" style="color: inherit; text-decoration: inherit;">Docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuildresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Build<wbr>Response<wbr>Args</a> | <a href="#dockerimageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Image<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerbuildresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Build<wbr>Response</a> | <a href="#dockerimageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Docker<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for Docker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1478,7 +1478,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#inferencecontainerproperties_csharp" style="color: inherit; text-decoration: inherit;">Inference<wbr>Container<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inferencecontainerpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Inference<wbr>Container<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inferencecontainerpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Inference<wbr>Container<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines configuration specific to inference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,7 +1610,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#docker_nodejs" style="color: inherit; text-decoration: inherit;">docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuildresponse">Docker<wbr>Build<wbr>Response<wbr>Args</a> | <a href="#dockerimageresponse">Docker<wbr>Image<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerbuildresponse">Docker<wbr>Build<wbr>Response</a> | <a href="#dockerimageresponse">Docker<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for Docker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1618,7 +1618,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#inferencecontainerproperties_nodejs" style="color: inherit; text-decoration: inherit;">inference<wbr>Container<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inferencecontainerpropertiesresponse">Inference<wbr>Container<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inferencecontainerpropertiesresponse">Inference<wbr>Container<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines configuration specific to inference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1680,7 +1680,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#docker_python" style="color: inherit; text-decoration: inherit;">docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuildresponse">Docker<wbr>Build<wbr>Response<wbr>Args</a> | <a href="#dockerimageresponse">Docker<wbr>Image<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerbuildresponse">Docker<wbr>Build<wbr>Response</a> | <a href="#dockerimageresponse">Docker<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration settings for Docker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1688,7 +1688,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#inference_container_properties_python" style="color: inherit; text-decoration: inherit;">inference_<wbr>container_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inferencecontainerpropertiesresponse">Inference<wbr>Container<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inferencecontainerpropertiesresponse">Inference<wbr>Container<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines configuration specific to inference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1726,7 +1726,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#livenessroute_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#route">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#route">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The route to check the liveness of the inference server container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1734,7 +1734,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#readinessroute_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#route">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#route">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The route to check the readiness of the inference server container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1742,7 +1742,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#scoringroute_csharp" style="color: inherit; text-decoration: inherit;">Scoring<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#route">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#route">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The port to send the scoring requests to, within the inference server container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1782,7 +1782,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#livenessroute_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#route">Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#route">Route</a></span>
     </dt>
     <dd>{{% md %}}The route to check the liveness of the inference server container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1790,7 +1790,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#readinessroute_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#route">Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#route">Route</a></span>
     </dt>
     <dd>{{% md %}}The route to check the readiness of the inference server container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1798,7 +1798,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#scoringroute_nodejs" style="color: inherit; text-decoration: inherit;">scoring<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#route">Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#route">Route</a></span>
     </dt>
     <dd>{{% md %}}The port to send the scoring requests to, within the inference server container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1810,7 +1810,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#liveness_route_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#route">Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#route">Route</a></span>
     </dt>
     <dd>{{% md %}}The route to check the liveness of the inference server container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1818,7 +1818,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#readiness_route_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#route">Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#route">Route</a></span>
     </dt>
     <dd>{{% md %}}The route to check the readiness of the inference server container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1826,7 +1826,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#scoring_route_python" style="color: inherit; text-decoration: inherit;">scoring_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#route">Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#route">Route</a></span>
     </dt>
     <dd>{{% md %}}The port to send the scoring requests to, within the inference server container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1840,7 +1840,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#livenessroute_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Route<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The route to check the liveness of the inference server container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1848,7 +1848,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#readinessroute_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Route<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The route to check the readiness of the inference server container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1856,7 +1856,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#scoringroute_csharp" style="color: inherit; text-decoration: inherit;">Scoring<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Route<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The port to send the scoring requests to, within the inference server container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1896,7 +1896,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#livenessroute_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeresponse">Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routeresponse">Route<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The route to check the liveness of the inference server container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1904,7 +1904,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#readinessroute_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeresponse">Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routeresponse">Route<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The route to check the readiness of the inference server container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1912,7 +1912,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#scoringroute_nodejs" style="color: inherit; text-decoration: inherit;">scoring<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeresponse">Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routeresponse">Route<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The port to send the scoring requests to, within the inference server container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1924,7 +1924,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#liveness_route_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeresponse">Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routeresponse">Route<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The route to check the liveness of the inference server container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1932,7 +1932,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#readiness_route_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeresponse">Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routeresponse">Route<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The route to check the readiness of the inference server container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1940,7 +1940,7 @@ The path is relative to the asset path which must contain a single Blob URI valu
 <a href="#scoring_route_python" style="color: inherit; text-decoration: inherit;">scoring_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeresponse">Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routeresponse">Route<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The port to send the scoring requests to, within the inference server container.{{% /md %}}</dd></dl>
 {{% /choosable %}}

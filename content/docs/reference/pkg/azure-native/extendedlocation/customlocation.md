@@ -419,7 +419,7 @@ The CustomLocation resource accepts the following [input]({{< relref "/docs/intr
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customlocationpropertiesauthentication">Custom<wbr>Location<wbr>Properties<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#customlocationpropertiesauthentication">Custom<wbr>Location<wbr>Properties<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is optional input that contains the authentication that should be used to generate the namespace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

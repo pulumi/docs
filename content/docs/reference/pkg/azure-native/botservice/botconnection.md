@@ -479,7 +479,7 @@ The BotConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingproperties">Connection<wbr>Setting<wbr>Properties</a></span>
+        <span class="property-type"><a href="#connectionsettingproperties">Connection<wbr>Setting<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -487,7 +487,7 @@ The BotConnection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingparameter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Connection<wbr>Setting<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionsettingparameter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Connection<wbr>Setting<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service Provider Parameters associated with the Connection Setting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1074,7 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingparameter">Connection<wbr>Setting<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connectionsettingparameter">Connection<wbr>Setting<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Service Provider Parameters associated with the Connection Setting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingparameter">Sequence[Connection<wbr>Setting<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionsettingparameter">Sequence[Connection<wbr>Setting<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}Service Provider Parameters associated with the Connection Setting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1188,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Connection<wbr>Setting<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionsettingparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Connection<wbr>Setting<wbr>Parameter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service Provider Parameters associated with the Connection Setting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1308,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingparameterresponse">Connection<wbr>Setting<wbr>Parameter<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connectionsettingparameterresponse">Connection<wbr>Setting<wbr>Parameter<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Service Provider Parameters associated with the Connection Setting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1368,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionsettingparameterresponse">Sequence[Connection<wbr>Setting<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionsettingparameterresponse">Sequence[Connection<wbr>Setting<wbr>Parameter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Service Provider Parameters associated with the Connection Setting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -468,7 +468,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#firewallrules_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallrule">[]Firewall<wbr>Rule</a></span>
+        <span class="property-type"><a href="#firewallrule">[]Firewall<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets firewall rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -500,7 +500,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain member Sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -516,7 +516,7 @@ The BlockchainMember resource accepts the following [input]({{< relref "/docs/in
 <a href="#validatornodessku_go" style="color: inherit; text-decoration: inherit;">Validator<wbr>Nodes<wbr>Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blockchainmembernodessku">Blockchain<wbr>Member<wbr>Nodes<wbr>Sku</a></span>
+        <span class="property-type"><a href="#blockchainmembernodessku">Blockchain<wbr>Member<wbr>Nodes<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the blockchain validator nodes Sku.{{% /md %}}</dd></dl>
 {{% /choosable %}}

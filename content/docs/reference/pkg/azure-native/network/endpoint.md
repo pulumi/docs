@@ -970,7 +970,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiescustomheaders">[]Endpoint<wbr>Properties<wbr>Custom<wbr>Headers</a></span>
+        <span class="property-type"><a href="#endpointpropertiescustomheaders">[]Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1066,7 +1066,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiessubnets">[]Endpoint<wbr>Properties<wbr>Subnets</a></span>
+        <span class="property-type"><a href="#endpointpropertiessubnets">[]Endpoint<wbr>Properties<wbr>Subnets<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

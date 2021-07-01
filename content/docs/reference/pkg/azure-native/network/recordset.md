@@ -1925,7 +1925,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#arecords_go" style="color: inherit; text-decoration: inherit;">ARecords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#arecord">[]ARecord</a></span>
+        <span class="property-type"><a href="#arecord">[]ARecord<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of A records in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1933,7 +1933,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#aaaarecords_go" style="color: inherit; text-decoration: inherit;">Aaaa<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aaaarecord">[]Aaaa<wbr>Record</a></span>
+        <span class="property-type"><a href="#aaaarecord">[]Aaaa<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of AAAA records in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1941,7 +1941,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#caarecords_go" style="color: inherit; text-decoration: inherit;">Caa<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caarecord">[]Caa<wbr>Record</a></span>
+        <span class="property-type"><a href="#caarecord">[]Caa<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of CAA records in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1949,7 +1949,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#cnamerecord_go" style="color: inherit; text-decoration: inherit;">Cname<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cnamerecord">Cname<wbr>Record</a></span>
+        <span class="property-type"><a href="#cnamerecord">Cname<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CNAME record in the  record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1973,7 +1973,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#mxrecords_go" style="color: inherit; text-decoration: inherit;">Mx<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mxrecord">[]Mx<wbr>Record</a></span>
+        <span class="property-type"><a href="#mxrecord">[]Mx<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of MX records in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1981,7 +1981,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#nsrecords_go" style="color: inherit; text-decoration: inherit;">Ns<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsrecord">[]Ns<wbr>Record</a></span>
+        <span class="property-type"><a href="#nsrecord">[]Ns<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of NS records in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1989,7 +1989,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#ptrrecords_go" style="color: inherit; text-decoration: inherit;">Ptr<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ptrrecord">[]Ptr<wbr>Record</a></span>
+        <span class="property-type"><a href="#ptrrecord">[]Ptr<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of PTR records in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2005,7 +2005,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#soarecord_go" style="color: inherit; text-decoration: inherit;">Soa<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#soarecord">Soa<wbr>Record</a></span>
+        <span class="property-type"><a href="#soarecord">Soa<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SOA record in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +2013,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#srvrecords_go" style="color: inherit; text-decoration: inherit;">Srv<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#srvrecord">[]Srv<wbr>Record</a></span>
+        <span class="property-type"><a href="#srvrecord">[]Srv<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of SRV records in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2021,7 +2021,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#targetresource_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to an azure resource from where the dns resource value is taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,7 +2037,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#txtrecords_go" style="color: inherit; text-decoration: inherit;">Txt<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#txtrecord">[]Txt<wbr>Record</a></span>
+        <span class="property-type"><a href="#txtrecord">[]Txt<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of TXT records in the record set.{{% /md %}}</dd></dl>
 {{% /choosable %}}

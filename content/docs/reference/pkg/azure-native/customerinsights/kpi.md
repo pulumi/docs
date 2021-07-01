@@ -585,7 +585,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpialias">[]Kpi<wbr>Alias</a></span>
+        <span class="property-type"><a href="#kpialias">[]Kpi<wbr>Alias<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The aliases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -617,7 +617,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#extracts_go" style="color: inherit; text-decoration: inherit;">Extracts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpiextract">[]Kpi<wbr>Extract</a></span>
+        <span class="property-type"><a href="#kpiextract">[]Kpi<wbr>Extract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The KPI extracts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -649,7 +649,7 @@ The Kpi resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#thresholds_go" style="color: inherit; text-decoration: inherit;">Thres<wbr>Holds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kpithresholds">Kpi<wbr>Thresholds</a></span>
+        <span class="property-type"><a href="#kpithresholds">Kpi<wbr>Thresholds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The KPI thresholds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -559,7 +559,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -575,7 +575,7 @@ The Rollout resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#stepgroups_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stepgroup">[]Step<wbr>Group</a></span>
+        <span class="property-type"><a href="#stepgroup">[]Step<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of step groups that define the orchestration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1198,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postdeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststep">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#prepoststep">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1206,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststep">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#prepoststep">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1286,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postdeploymentsteps_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststep">Pre<wbr>Post<wbr>Step<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#prepoststep">Pre<wbr>Post<wbr>Step[]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1294,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predeploymentsteps_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststep">Pre<wbr>Post<wbr>Step<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#prepoststep">Pre<wbr>Post<wbr>Step[]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1330,7 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#post_deployment_steps_python" style="color: inherit; text-decoration: inherit;">post_<wbr>deployment_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststep">Sequence[Pre<wbr>Post<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#prepoststep">Sequence[Pre<wbr>Post<wbr>Step]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pre_deployment_steps_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>deployment_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststep">Sequence[Pre<wbr>Post<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#prepoststep">Sequence[Pre<wbr>Post<wbr>Step]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1376,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postdeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1384,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1464,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#postdeploymentsteps_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">Pre<wbr>Post<wbr>Step<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1472,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#predeploymentsteps_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">Pre<wbr>Post<wbr>Step<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1508,7 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#post_deployment_steps_python" style="color: inherit; text-decoration: inherit;">post_<wbr>deployment_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1516,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pre_deployment_steps_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>deployment_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}

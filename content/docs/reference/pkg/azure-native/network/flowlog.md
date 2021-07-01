@@ -455,7 +455,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#flowanalyticsconfiguration_go" style="color: inherit; text-decoration: inherit;">Flow<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsproperties">Traffic<wbr>Analytics<wbr>Properties</a></span>
+        <span class="property-type"><a href="#trafficanalyticsproperties">Traffic<wbr>Analytics<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -471,7 +471,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowlogformatparameters">Flow<wbr>Log<wbr>Format<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#flowlogformatparameters">Flow<wbr>Log<wbr>Format<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the flow log format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -495,7 +495,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyparameters">Retention<wbr>Policy<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#retentionpolicyparameters">Retention<wbr>Policy<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the retention policy for flow log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1648,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkwatcherflowanalyticsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Flow<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsconfigurationproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticsconfigurationproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1672,7 +1672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkwatcherflowanalyticsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Watcher<wbr>Flow<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsconfigurationproperties">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticsconfigurationproperties">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1684,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_watcher_flow_analytics_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>flow_<wbr>analytics_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsconfigurationproperties">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticsconfigurationproperties">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1698,7 +1698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkwatcherflowanalyticsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Flow<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1722,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkwatcherflowanalyticsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Watcher<wbr>Flow<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1734,7 +1734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_watcher_flow_analytics_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>flow_<wbr>analytics_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd></dl>
 {{% /choosable %}}

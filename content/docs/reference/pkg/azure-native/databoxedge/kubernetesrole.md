@@ -353,7 +353,7 @@ The KubernetesRole resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kubernetesclusterinfo_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Cluster<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterinfo">Kubernetes<wbr>Cluster<wbr>Info</a></span>
+        <span class="property-type"><a href="#kubernetesclusterinfo">Kubernetes<wbr>Cluster<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes cluster configuration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -361,7 +361,7 @@ The KubernetesRole resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kubernetesroleresources_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Role<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesroleresources">Kubernetes<wbr>Role<wbr>Resources</a></span>
+        <span class="property-type"><a href="#kubernetesroleresources">Kubernetes<wbr>Role<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role resources{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -990,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etcdinfo_csharp" style="color: inherit; text-decoration: inherit;">Etcd<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etcdinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Etcd<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#etcdinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Etcd<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Etcd configuration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -998,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Node<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nodeinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Node<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes cluster nodes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1046,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etcdinfo_nodejs" style="color: inherit; text-decoration: inherit;">etcd<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etcdinforesponse">Etcd<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#etcdinforesponse">Etcd<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Etcd configuration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1054,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeinforesponse">Node<wbr>Info<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#nodeinforesponse">Node<wbr>Info<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes cluster nodes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1074,7 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etcd_info_python" style="color: inherit; text-decoration: inherit;">etcd_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etcdinforesponse">Etcd<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#etcdinforesponse">Etcd<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Etcd configuration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1082,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeinforesponse">Sequence[Node<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodeinforesponse">Sequence[Node<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes cluster nodes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1350,7 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cniconfig_csharp" style="color: inherit; text-decoration: inherit;">Cni<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cniconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Cni<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cniconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Cni<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cni configuration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1358,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerconfig_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Load balancer configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1390,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cniconfig_nodejs" style="color: inherit; text-decoration: inherit;">cni<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cniconfigresponse">Cni<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cniconfigresponse">Cni<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cni configuration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1398,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerconfig_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigresponse">Load<wbr>Balancer<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigresponse">Load<wbr>Balancer<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Load balancer configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1410,7 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cni_config_python" style="color: inherit; text-decoration: inherit;">cni_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cniconfigresponse">Cni<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cniconfigresponse">Cni<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cni configuration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1418,7 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_config_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfigresponse">Load<wbr>Balancer<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loadbalancerconfigresponse">Load<wbr>Balancer<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Load balancer configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1432,7 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_csharp" style="color: inherit; text-decoration: inherit;">Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolecompute">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Kubernetes<wbr>Role<wbr>Compute<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolecompute">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Kubernetes<wbr>Role<wbr>Compute</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role compute resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1440,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_csharp" style="color: inherit; text-decoration: inherit;">Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolestorage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Kubernetes<wbr>Role<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolestorage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Kubernetes<wbr>Role<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role storage resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1472,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolecompute">Kubernetes<wbr>Role<wbr>Compute<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolecompute">Kubernetes<wbr>Role<wbr>Compute</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role compute resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1480,7 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolestorage">Kubernetes<wbr>Role<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolestorage">Kubernetes<wbr>Role<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role storage resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1492,7 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolecompute">Kubernetes<wbr>Role<wbr>Compute<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolecompute">Kubernetes<wbr>Role<wbr>Compute</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role compute resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1500,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolestorage">Kubernetes<wbr>Role<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolestorage">Kubernetes<wbr>Role<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role storage resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1514,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_csharp" style="color: inherit; text-decoration: inherit;">Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolecomputeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Kubernetes<wbr>Role<wbr>Compute<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolecomputeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Kubernetes<wbr>Role<wbr>Compute<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role compute resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1522,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolenetworkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Kubernetes<wbr>Role<wbr>Network<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolenetworkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Kubernetes<wbr>Role<wbr>Network<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role network resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1530,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_csharp" style="color: inherit; text-decoration: inherit;">Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolestorageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Kubernetes<wbr>Role<wbr>Storage<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolestorageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Kubernetes<wbr>Role<wbr>Storage<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role storage resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1570,7 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolecomputeresponse">Kubernetes<wbr>Role<wbr>Compute<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolecomputeresponse">Kubernetes<wbr>Role<wbr>Compute<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role compute resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1578,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolenetworkresponse">Kubernetes<wbr>Role<wbr>Network<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolenetworkresponse">Kubernetes<wbr>Role<wbr>Network<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role network resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1586,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolestorageresponse">Kubernetes<wbr>Role<wbr>Storage<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolestorageresponse">Kubernetes<wbr>Role<wbr>Storage<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role storage resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1598,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolecomputeresponse">Kubernetes<wbr>Role<wbr>Compute<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolecomputeresponse">Kubernetes<wbr>Role<wbr>Compute<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role compute resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1606,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolenetworkresponse">Kubernetes<wbr>Role<wbr>Network<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolenetworkresponse">Kubernetes<wbr>Role<wbr>Network<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role network resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1614,7 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolestorageresponse">Kubernetes<wbr>Role<wbr>Storage<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesrolestorageresponse">Kubernetes<wbr>Role<wbr>Storage<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes role storage resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1628,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountpointmap">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Mount<wbr>Point<wbr>Map<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mountpointmap">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Mount<wbr>Point<wbr>Map&gt;</a></span>
     </dt>
     <dd>{{% md %}}Mount points of shares in role(s).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1652,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountpointmap">Mount<wbr>Point<wbr>Map<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#mountpointmap">Mount<wbr>Point<wbr>Map[]</a></span>
     </dt>
     <dd>{{% md %}}Mount points of shares in role(s).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1664,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountpointmap">Sequence[Mount<wbr>Point<wbr>Map<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mountpointmap">Sequence[Mount<wbr>Point<wbr>Map]</a></span>
     </dt>
     <dd>{{% md %}}Mount points of shares in role(s).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1792,7 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageclasses_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolestorageclassinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Kubernetes<wbr>Role<wbr>Storage<wbr>Class<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#kubernetesrolestorageclassinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Kubernetes<wbr>Role<wbr>Storage<wbr>Class<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes storage class info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1800,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountpointmapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Mount<wbr>Point<wbr>Map<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mountpointmapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Mount<wbr>Point<wbr>Map<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Mount points of shares in role(s).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1832,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageclasses_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolestorageclassinforesponse">Kubernetes<wbr>Role<wbr>Storage<wbr>Class<wbr>Info<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#kubernetesrolestorageclassinforesponse">Kubernetes<wbr>Role<wbr>Storage<wbr>Class<wbr>Info<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes storage class info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1840,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountpointmapresponse">Mount<wbr>Point<wbr>Map<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#mountpointmapresponse">Mount<wbr>Point<wbr>Map<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Mount points of shares in role(s).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1852,7 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_classes_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesrolestorageclassinforesponse">Sequence[Kubernetes<wbr>Role<wbr>Storage<wbr>Class<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kubernetesrolestorageclassinforesponse">Sequence[Kubernetes<wbr>Role<wbr>Storage<wbr>Class<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Kubernetes storage class info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1860,7 +1860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountpointmapresponse">Sequence[Mount<wbr>Point<wbr>Map<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mountpointmapresponse">Sequence[Mount<wbr>Point<wbr>Map<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Mount points of shares in role(s).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2200,7 +2200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Kubernetes<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#kubernetesipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Kubernetes<wbr>IPConfiguration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP Configuration of the Kubernetes node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2256,7 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesipconfigurationresponse">Kubernetes<wbr>IPConfiguration<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#kubernetesipconfigurationresponse">Kubernetes<wbr>IPConfiguration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}IP Configuration of the Kubernetes node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2284,7 +2284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configuration_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesipconfigurationresponse">Sequence[Kubernetes<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kubernetesipconfigurationresponse">Sequence[Kubernetes<wbr>IPConfiguration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}IP Configuration of the Kubernetes node.{{% /md %}}</dd></dl>
 {{% /choosable %}}

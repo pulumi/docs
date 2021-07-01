@@ -409,7 +409,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferserviceresourceproperties">Data<wbr>Transfer<wbr>Service<wbr>Resource<wbr>Properties</a> | <a href="#sqldedicatedgatewayserviceresourceproperties">Sql<wbr>Dedicated<wbr>Gateway<wbr>Service<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#datatransferserviceresourceproperties">Data<wbr>Transfer<wbr>Service<wbr>Resource<wbr>Properties<wbr>Args</a> | <a href="#sqldedicatedgatewayserviceresourceproperties">Sql<wbr>Dedicated<wbr>Gateway<wbr>Service<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Services response resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -836,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferregionalserviceresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Data<wbr>Transfer<wbr>Regional<wbr>Service<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datatransferregionalserviceresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Data<wbr>Transfer<wbr>Regional<wbr>Service<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array that contains all of the locations for the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -924,7 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferregionalserviceresourceresponse">Data<wbr>Transfer<wbr>Regional<wbr>Service<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datatransferregionalserviceresourceresponse">Data<wbr>Transfer<wbr>Regional<wbr>Service<wbr>Resource<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains all of the locations for the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -968,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datatransferregionalserviceresourceresponse">Sequence[Data<wbr>Transfer<wbr>Regional<wbr>Service<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datatransferregionalserviceresourceresponse">Sequence[Data<wbr>Transfer<wbr>Regional<wbr>Service<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains all of the locations for the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1304,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqldedicatedgatewayregionalserviceresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Sql<wbr>Dedicated<wbr>Gateway<wbr>Regional<wbr>Service<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sqldedicatedgatewayregionalserviceresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Sql<wbr>Dedicated<wbr>Gateway<wbr>Regional<wbr>Service<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array that contains all of the locations for the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1408,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqldedicatedgatewayregionalserviceresourceresponse">Sql<wbr>Dedicated<wbr>Gateway<wbr>Regional<wbr>Service<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sqldedicatedgatewayregionalserviceresourceresponse">Sql<wbr>Dedicated<wbr>Gateway<wbr>Regional<wbr>Service<wbr>Resource<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains all of the locations for the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1460,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqldedicatedgatewayregionalserviceresourceresponse">Sequence[Sql<wbr>Dedicated<wbr>Gateway<wbr>Regional<wbr>Service<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sqldedicatedgatewayregionalserviceresourceresponse">Sequence[Sql<wbr>Dedicated<wbr>Gateway<wbr>Regional<wbr>Service<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains all of the locations for the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">

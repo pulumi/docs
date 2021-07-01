@@ -697,7 +697,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sinks_go" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphassetsink">[]Media<wbr>Graph<wbr>Asset<wbr>Sink</a></span>
+        <span class="property-type"><a href="#mediagraphassetsink">[]Media<wbr>Graph<wbr>Asset<wbr>Sink<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Media Graph sinks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -705,7 +705,7 @@ The MediaGraph resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphrtspsource">[]Media<wbr>Graph<wbr>Rtsp<wbr>Source</a></span>
+        <span class="property-type"><a href="#mediagraphrtspsource">[]Media<wbr>Graph<wbr>Rtsp<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Media Graph sources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1300,7 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1340,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1360,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1382,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1422,7 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1442,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1556,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphclearendpoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Args</a> | <a href="#mediagraphtlsendpoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphclearendpoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint</a> | <a href="#mediagraphtlsendpoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1612,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphclearendpoint">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Args</a> | <a href="#mediagraphtlsendpoint">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphclearendpoint">Media<wbr>Graph<wbr>Clear<wbr>Endpoint</a> | <a href="#mediagraphtlsendpoint">Media<wbr>Graph<wbr>Tls<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1640,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphclearendpoint">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Args</a> | <a href="#mediagraphtlsendpoint">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphclearendpoint">Media<wbr>Graph<wbr>Clear<wbr>Endpoint</a> | <a href="#mediagraphtlsendpoint">Media<wbr>Graph<wbr>Tls<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1670,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphclearendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args</a> | <a href="#mediagraphtlsendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response</a> | <a href="#mediagraphtlsendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1726,7 +1726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args</a> | <a href="#mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response</a> | <a href="#mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1754,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response<wbr>Args</a> | <a href="#mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphclearendpointresponse">Media<wbr>Graph<wbr>Clear<wbr>Endpoint<wbr>Response</a> | <a href="#mediagraphtlsendpointresponse">Media<wbr>Graph<wbr>Tls<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}RTSP endpoint of the stream being connected to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1818,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1826,7 +1826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelist">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelist">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1834,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1890,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1898,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelist">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelist">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1906,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1926,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentials">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1934,7 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trusted_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelist">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelist">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1942,7 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptions">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1964,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1972,7 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1980,7 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2036,7 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2044,7 +2044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2052,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2072,7 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphusernamepasswordcredentialsresponse">Media<wbr>Graph<wbr>Username<wbr>Password<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Polymorphic credentials to present to the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2080,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trusted_certificates_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphpemcertificatelistresponse">Media<wbr>Graph<wbr>Pem<wbr>Certificate<wbr>List<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2088,7 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mediagraphtlsvalidationoptionsresponse">Media<wbr>Graph<wbr>Tls<wbr>Validation<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Validation options to use when authenticating a TLS connection. By default, strict validation is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}

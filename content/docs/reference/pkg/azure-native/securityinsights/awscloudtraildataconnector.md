@@ -459,7 +459,7 @@ The AwsCloudTrailDataConnector resource accepts the following [input]({{< relref
 <a href="#datatypes_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awscloudtraildataconnectordatatypes">Aws<wbr>Cloud<wbr>Trail<wbr>Data<wbr>Connector<wbr>Data<wbr>Types</a></span>
+        <span class="property-type"><a href="#awscloudtraildataconnectordatatypes">Aws<wbr>Cloud<wbr>Trail<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The available data types for the connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logs_csharp" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awscloudtraildataconnectordatatypeslogs">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Aws<wbr>Cloud<wbr>Trail<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#awscloudtraildataconnectordatatypeslogs">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Aws<wbr>Cloud<wbr>Trail<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Logs data type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -738,7 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awscloudtraildataconnectordatatypeslogs">Aws<wbr>Cloud<wbr>Trail<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#awscloudtraildataconnectordatatypeslogs">Aws<wbr>Cloud<wbr>Trail<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Logs data type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -750,7 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awscloudtraildataconnectordatatypeslogs">Aws<wbr>Cloud<wbr>Trail<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#awscloudtraildataconnectordatatypeslogs">Aws<wbr>Cloud<wbr>Trail<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Logs data type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -814,7 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logs_csharp" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awscloudtraildataconnectordatatypesresponselogs">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Aws<wbr>Cloud<wbr>Trail<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#awscloudtraildataconnectordatatypesresponselogs">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Aws<wbr>Cloud<wbr>Trail<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Logs data type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -838,7 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awscloudtraildataconnectordatatypesresponselogs">Aws<wbr>Cloud<wbr>Trail<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#awscloudtraildataconnectordatatypesresponselogs">Aws<wbr>Cloud<wbr>Trail<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Logs data type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -850,7 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awscloudtraildataconnectordatatypesresponselogs">Aws<wbr>Cloud<wbr>Trail<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#awscloudtraildataconnectordatatypesresponselogs">Aws<wbr>Cloud<wbr>Trail<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Logs data type.{{% /md %}}</dd></dl>
 {{% /choosable %}}

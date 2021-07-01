@@ -453,7 +453,7 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">[]Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">[]Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of public ip addresses associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -461,7 +461,7 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#publicipprefixes_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">[]Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">[]Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of public ip prefixes associated with the nat gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -469,7 +469,7 @@ The NatGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaysku">Nat<wbr>Gateway<wbr>Sku</a></span>
+        <span class="property-type"><a href="#natgatewaysku">Nat<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The nat gateway SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

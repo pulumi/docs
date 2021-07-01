@@ -822,7 +822,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#changefeed_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Feed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#changefeed">Change<wbr>Feed</a></span>
+        <span class="property-type"><a href="#changefeed">Change<wbr>Feed<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for change feed events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +830,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#containerdeleteretentionpolicy_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Delete<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deleteretentionpolicy">Delete<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#deleteretentionpolicy">Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for container soft delete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +838,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrules">Cors<wbr>Rules</a></span>
+        <span class="property-type"><a href="#corsrules">Cors<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +854,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#deleteretentionpolicy_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deleteretentionpolicy">Delete<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#deleteretentionpolicy">Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for blob soft delete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -870,7 +870,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#lastaccesstimetrackingpolicy_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lastaccesstimetrackingpolicy">Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy</a></span>
+        <span class="property-type"><a href="#lastaccesstimetrackingpolicy">Last<wbr>Access<wbr>Time<wbr>Tracking<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The blob service property to configure last access time based tracking policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +878,7 @@ The BlobServiceProperties resource accepts the following [input]({{< relref "/do
 <a href="#restorepolicy_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restorepolicyproperties">Restore<wbr>Policy<wbr>Properties</a></span>
+        <span class="property-type"><a href="#restorepolicyproperties">Restore<wbr>Policy<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The blob service properties for blob restore policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1773,7 +1773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#corsrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1797,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrule">Cors<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#corsrule">Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1809,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsrule">Sequence[Cors<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#corsrule">Sequence[Cors<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1823,7 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#corsruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Cors<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1847,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsruleresponse">Cors<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#corsruleresponse">Cors<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1859,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corsruleresponse">Sequence[Cors<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#corsruleresponse">Sequence[Cors<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd></dl>
 {{% /choosable %}}

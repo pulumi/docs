@@ -417,7 +417,7 @@ The LogProfile resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicy">Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#retentionpolicy">Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the retention policy for the events in the log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

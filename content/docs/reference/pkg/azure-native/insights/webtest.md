@@ -630,7 +630,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webtestgeolocation">[]Web<wbr>Test<wbr>Geolocation</a></span>
+        <span class="property-type"><a href="#webtestgeolocation">[]Web<wbr>Test<wbr>Geolocation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -662,7 +662,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webtestpropertiesconfiguration">Web<wbr>Test<wbr>Properties<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#webtestpropertiesconfiguration">Web<wbr>Test<wbr>Properties<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An XML configuration specification for a WebTest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -694,7 +694,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webtestkind">Web<wbr>Test<wbr>Kind</a></span>
+        <span class="property-type"><a href="#webtestkind">string</a></span>
     </dt>
     <dd>{{% md %}}The kind of web test that this web test watches. Choices are ping and multistep.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

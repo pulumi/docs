@@ -895,7 +895,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitordestination">Connection<wbr>Monitor<wbr>Destination</a></span>
+        <span class="property-type"><a href="#connectionmonitordestination">Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the destination of connection monitor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -903,7 +903,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpoint">[]Connection<wbr>Monitor<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpoint">[]Connection<wbr>Monitor<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +943,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoroutput">[]Connection<wbr>Monitor<wbr>Output<wbr>Type</a></span>
+        <span class="property-type"><a href="#connectionmonitoroutput">[]Connection<wbr>Monitor<wbr>Output<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor outputs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -951,7 +951,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsource">Connection<wbr>Monitor<wbr>Source</a></span>
+        <span class="property-type"><a href="#connectionmonitorsource">Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the source of connection monitor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -967,7 +967,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#testconfigurations_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortestconfiguration">[]Connection<wbr>Monitor<wbr>Test<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#connectionmonitortestconfiguration">[]Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor test configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -975,7 +975,7 @@ The ConnectionMonitor resource accepts the following [input]({{< relref "/docs/i
 <a href="#testgroups_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortestgroup">[]Connection<wbr>Monitor<wbr>Test<wbr>Group</a></span>
+        <span class="property-type"><a href="#connectionmonitortestgroup">[]Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of connection monitor test groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1778,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1794,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1898,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilter">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilter">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1914,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscope">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscope">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1958,7 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilter">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilter">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1974,7 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscope">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscope">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1996,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilteritem">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilteritem">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2036,7 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilteritem">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilteritem">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2056,7 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilteritem">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilteritem">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2264,7 +2264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2304,7 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2324,7 +2324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilteritemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of items in the filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2392,7 +2392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2408,7 +2408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2512,7 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2528,7 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2572,7 +2572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointfilterresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Filter for sub-items within the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2588,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscoperesponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2610,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_csharp" style="color: inherit; text-decoration: inherit;">Exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2618,7 +2618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_csharp" style="color: inherit; text-decoration: inherit;">Include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2650,7 +2650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_nodejs" style="color: inherit; text-decoration: inherit;">exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2658,7 +2658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2670,7 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_python" style="color: inherit; text-decoration: inherit;">exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2678,7 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitem">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2792,7 +2792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_csharp" style="color: inherit; text-decoration: inherit;">Exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2800,7 +2800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_csharp" style="color: inherit; text-decoration: inherit;">Include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2832,7 +2832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_nodejs" style="color: inherit; text-decoration: inherit;">exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2840,7 +2840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_nodejs" style="color: inherit; text-decoration: inherit;">include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2852,7 +2852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_python" style="color: inherit; text-decoration: inherit;">exclude</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be excluded from the endpoint scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2860,7 +2860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#include_python" style="color: inherit; text-decoration: inherit;">include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionmonitorendpointscopeitemresponse">Sequence[Connection<wbr>Monitor<wbr>Endpoint<wbr>Scope<wbr>Item<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of items which needs to be included to the endpoint scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2906,7 +2906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaders_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>HTTPHeader<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httpheader">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>HTTPHeader&gt;</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3010,7 +3010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaders_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">HTTPHeader<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#httpheader">HTTPHeader[]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3062,7 +3062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_headers_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">Sequence[HTTPHeader<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpheader">Sequence[HTTPHeader]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3116,7 +3116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaders_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>HTTPHeader<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httpheaderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>HTTPHeader<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3220,7 +3220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaders_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderresponse">HTTPHeader<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#httpheaderresponse">HTTPHeader<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3272,7 +3272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_headers_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheaderresponse">Sequence[HTTPHeader<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpheaderresponse">Sequence[HTTPHeader<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP headers to transmit with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3402,7 +3402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspacesettings_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorworkspacesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorworkspacesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Workspace<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3442,7 +3442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspacesettings_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorworkspacesettings">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorworkspacesettings">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3462,7 +3462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_settings_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorworkspacesettings">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorworkspacesettings">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3484,7 +3484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspacesettings_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3524,7 +3524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspacesettings_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3544,7 +3544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_settings_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorworkspacesettingsresponse">Connection<wbr>Monitor<wbr>Workspace<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the settings for producing output into a log analytics workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4130,7 +4130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorhttpconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorhttpconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Http<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4138,7 +4138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#icmpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoricmpconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitoricmpconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4154,7 +4154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successthreshold_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsuccessthreshold">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorsuccessthreshold">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Success<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4162,7 +4162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortcpconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitortcpconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4266,7 +4266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorhttpconfiguration">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorhttpconfiguration">Connection<wbr>Monitor<wbr>Http<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4274,7 +4274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#icmpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoricmpconfiguration">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitoricmpconfiguration">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4290,7 +4290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsuccessthreshold">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorsuccessthreshold">Connection<wbr>Monitor<wbr>Success<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4298,7 +4298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortcpconfiguration">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitortcpconfiguration">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4334,7 +4334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_configuration_python" style="color: inherit; text-decoration: inherit;">http_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorhttpconfiguration">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorhttpconfiguration">Connection<wbr>Monitor<wbr>Http<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4342,7 +4342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#icmp_configuration_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoricmpconfiguration">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitoricmpconfiguration">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4358,7 +4358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsuccessthreshold">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorsuccessthreshold">Connection<wbr>Monitor<wbr>Success<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4366,7 +4366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcp_configuration_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortcpconfiguration">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitortcpconfiguration">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4434,7 +4434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4442,7 +4442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#icmpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4458,7 +4458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successthreshold_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4466,7 +4466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4570,7 +4570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4578,7 +4578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#icmpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4594,7 +4594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4602,7 +4602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4638,7 +4638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_configuration_python" style="color: inherit; text-decoration: inherit;">http_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorhttpconfigurationresponse">Connection<wbr>Monitor<wbr>Http<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over HTTP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4646,7 +4646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#icmp_configuration_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitoricmpconfigurationresponse">Connection<wbr>Monitor<wbr>Icmp<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over ICMP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4662,7 +4662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitorsuccessthresholdresponse">Connection<wbr>Monitor<wbr>Success<wbr>Threshold<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The threshold for declaring a test successful.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4670,7 +4670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcp_configuration_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionmonitortcpconfigurationresponse">Connection<wbr>Monitor<wbr>Tcp<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters used to perform test evaluation over TCP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

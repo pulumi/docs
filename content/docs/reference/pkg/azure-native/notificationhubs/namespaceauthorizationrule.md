@@ -314,7 +314,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties</a></span>
+        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Namespace AuthorizationRules.{{% /md %}}</dd><dt class="property-required"
             title="Required">

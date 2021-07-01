@@ -728,7 +728,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
 <a href="#contentkeys_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streaminglocatorcontentkey">[]Streaming<wbr>Locator<wbr>Content<wbr>Key</a></span>
+        <span class="property-type"><a href="#streaminglocatorcontentkey">[]Streaming<wbr>Locator<wbr>Content<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ContentKeys used by this Streaming Locator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_csharp" style="color: inherit; text-decoration: inherit;">Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this Content Key{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1417,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_nodejs" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this Content Key{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1469,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_python" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this Content Key{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1831,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1855,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertyconditionresponse">Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#trackpropertyconditionresponse">Track<wbr>Property<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1867,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertyconditionresponse">Sequence[Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trackpropertyconditionresponse">Sequence[Track<wbr>Property<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd></dl>
 {{% /choosable %}}

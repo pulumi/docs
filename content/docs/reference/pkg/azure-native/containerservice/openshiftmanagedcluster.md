@@ -601,7 +601,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#agentpoolprofiles_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofile">[]Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteragentpoolprofile">[]Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of OpenShift cluster VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -609,7 +609,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#authprofile_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusterauthprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusterauthprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Auth<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures OpenShift authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -625,7 +625,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#masterpoolprofile_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Pool<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclustermasterpoolprofile">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift master VMs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -633,7 +633,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift networking.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -641,7 +641,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan</a></span>
+        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Define the resource plan as required by ARM for billing purposes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -657,7 +657,7 @@ The OpenShiftManagedCluster resource accepts the following [input]({{< relref "/
 <a href="#routerprofiles_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftrouterprofile">[]Open<wbr>Shift<wbr>Router<wbr>Profile</a></span>
+        <span class="property-type"><a href="#openshiftrouterprofile">[]Open<wbr>Shift<wbr>Router<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for OpenShift router(s).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2262,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identityproviders_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider&gt;</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2286,7 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identityproviders_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider[]</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2298,7 +2298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_providers_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">Sequence[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Args]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityprovider">Sequence[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider]</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2312,7 +2312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identityproviders_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2336,7 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identityproviders_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2348,7 +2348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_providers_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">Sequence[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteridentityproviderresponse">Sequence[Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Type of authentication profile to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2370,7 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2410,7 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2430,7 +2430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Args</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityprovider">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2452,7 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2492,7 +2492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2512,7 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}

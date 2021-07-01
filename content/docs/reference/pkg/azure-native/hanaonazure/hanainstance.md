@@ -547,7 +547,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hardwareprofile_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofile">Hardware<wbr>Profile</a></span>
+        <span class="property-type"><a href="#hardwareprofile">Hardware<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the hardware settings for the HANA instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -571,7 +571,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network settings for the HANA instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -579,7 +579,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofile">OSProfile</a></span>
+        <span class="property-type"><a href="#osprofile">OSProfile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the HANA instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -619,7 +619,7 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the HANA instance disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1774,7 +1774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipaddress">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Ip<wbr>Address&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1814,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">Ip<wbr>Address<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipaddress">Ip<wbr>Address[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1834,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddress">Sequence[Ip<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipaddress">Sequence[Ip<wbr>Address]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1856,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1896,7 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">Ip<wbr>Address<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Ip<wbr>Address<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1916,7 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2230,7 +2230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisks_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disk">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#disk">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2270,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisks_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disk">Disk<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#disk">Disk[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2290,7 +2290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disks_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disk">Sequence[Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#disk">Sequence[Disk]</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2312,7 +2312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisks_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#diskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Disk<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2352,7 +2352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisks_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskresponse">Disk<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#diskresponse">Disk<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2372,7 +2372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disks_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskresponse">Sequence[Disk<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diskresponse">Sequence[Disk<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -472,7 +472,7 @@ The AnalyticsItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationinsightscomponentanalyticsitemproperties">Application<wbr>Insights<wbr>Component<wbr>Analytics<wbr>Item<wbr>Properties</a></span>
+        <span class="property-type"><a href="#applicationinsightscomponentanalyticsitemproperties">Application<wbr>Insights<wbr>Component<wbr>Analytics<wbr>Item<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

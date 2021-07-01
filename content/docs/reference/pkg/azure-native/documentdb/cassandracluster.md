@@ -477,7 +477,7 @@ The CassandraCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -493,7 +493,7 @@ The CassandraCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceproperties">Cluster<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#clusterresourceproperties">Cluster<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of a managed Cassandra cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#certificate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalgossipcertificates_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Gossip<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#certificate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalseednodes_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Seed<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednode">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Seed<wbr>Node<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#seednode">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Seed<wbr>Node&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -946,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prometheusendpoint_csharp" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Seed<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#seednode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Seed<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1106,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificate">Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#certificate">Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1130,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalgossipcertificates_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Gossip<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificate">Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#certificate">Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1138,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalseednodes_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Seed<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednode">Seed<wbr>Node<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#seednode">Seed<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1162,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prometheusendpoint_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednode">Seed<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#seednode">Seed<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1214,7 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificate">Sequence[Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificate">Sequence[Certificate]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_gossip_certificates_python" style="color: inherit; text-decoration: inherit;">external_<wbr>gossip_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificate">Sequence[Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificate">Sequence[Certificate]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_seed_nodes_python" style="color: inherit; text-decoration: inherit;">external_<wbr>seed_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednode">Sequence[Seed<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#seednode">Sequence[Seed<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1270,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prometheus_endpoint_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednode">Seed<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#seednode">Seed<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1308,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gossipcertificates_csharp" style="color: inherit; text-decoration: inherit;">Gossip<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#certificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates that unmanaged nodes must trust for gossip with managed nodes. All managed nodes will present TLS client certificates that are verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1316,7 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seednodes_csharp" style="color: inherit; text-decoration: inherit;">Seed<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Seed<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#seednoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Seed<wbr>Node<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in the managed data centers. These should be added to the seed node lists of all unmanaged nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1340,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#certificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1364,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalgossipcertificates_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Gossip<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#certificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1372,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalseednodes_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Seed<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Seed<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#seednoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Seed<wbr>Node<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1388,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prometheusendpoint_csharp" style="color: inherit; text-decoration: inherit;">Prometheus<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Seed<wbr>Node<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#seednoderesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Seed<wbr>Node<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1524,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gossipcertificates_nodejs" style="color: inherit; text-decoration: inherit;">gossip<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">Certificate<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#certificateresponse">Certificate<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates that unmanaged nodes must trust for gossip with managed nodes. All managed nodes will present TLS client certificates that are verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1532,7 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seednodes_nodejs" style="color: inherit; text-decoration: inherit;">seed<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in the managed data centers. These should be added to the seed node lists of all unmanaged nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1556,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">Certificate<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#certificateresponse">Certificate<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1580,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalgossipcertificates_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Gossip<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">Certificate<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#certificateresponse">Certificate<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1588,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalseednodes_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Seed<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1604,7 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prometheusendpoint_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1632,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gossip_certificates_python" style="color: inherit; text-decoration: inherit;">gossip_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">Sequence[Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificateresponse">Sequence[Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates that unmanaged nodes must trust for gossip with managed nodes. All managed nodes will present TLS client certificates that are verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1640,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seed_nodes_python" style="color: inherit; text-decoration: inherit;">seed_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">Sequence[Seed<wbr>Node<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#seednoderesponse">Sequence[Seed<wbr>Node<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in the managed data centers. These should be added to the seed node lists of all unmanaged nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1664,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">Sequence[Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificateresponse">Sequence[Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1688,7 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_gossip_certificates_python" style="color: inherit; text-decoration: inherit;">external_<wbr>gossip_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">Sequence[Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificateresponse">Sequence[Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1696,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_seed_nodes_python" style="color: inherit; text-decoration: inherit;">external_<wbr>seed_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">Sequence[Seed<wbr>Node<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#seednoderesponse">Sequence[Seed<wbr>Node<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1712,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prometheus_endpoint_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1890,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1962,7 +1962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1998,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}

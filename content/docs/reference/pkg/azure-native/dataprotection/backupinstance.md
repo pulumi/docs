@@ -473,7 +473,7 @@ The BackupInstance resource accepts the following [input]({{< relref "/docs/intr
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupinstance">Backup<wbr>Instance<wbr>Type</a></span>
+        <span class="property-type"><a href="#backupinstance">Backup<wbr>Instance<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BackupInstanceResource properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -884,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourceinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -900,7 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyinfo_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Policy<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Policy<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -908,7 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourcesetinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Set<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -972,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourceinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasource">Datasource<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasource">Datasource</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -988,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyinfo_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinfo">Policy<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyinfo">Policy<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -996,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourcesetinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Set<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceset">Datasource<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceset">Datasource<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1016,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasource">Datasource<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasource">Datasource</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1032,7 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_info_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinfo">Policy<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyinfo">Policy<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1040,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_set_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>set_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceset">Datasource<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceset">Datasource<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1070,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourceinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1086,7 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyinfo_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Policy<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Policy<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1094,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionerrordetails_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>User<wbr>Facing<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1102,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionstatusdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Protection<wbr>Status<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#protectionstatusdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1118,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourcesetinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Set<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourcesetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1222,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourceinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceresponse">Datasource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceresponse">Datasource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1238,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyinfo_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinforesponse">Policy<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyinforesponse">Policy<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1246,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionerrordetails_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1254,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionstatusdetailsresponse">Protection<wbr>Status<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#protectionstatusdetailsresponse">Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1270,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourcesetinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Set<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesetresponse">Datasource<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourcesetresponse">Datasource<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1298,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceresponse">Datasource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceresponse">Datasource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1314,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_info_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinforesponse">Policy<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyinforesponse">Policy<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1322,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_error_details_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>error_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1330,7 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionstatusdetailsresponse">Protection<wbr>Status<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#protectionstatusdetailsresponse">Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1346,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_set_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>set_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesetresponse">Datasource<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourcesetresponse">Datasource<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2382,7 +2382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#embeddedinnererror_csharp" style="color: inherit; text-decoration: inherit;">Embedded<wbr>Inner<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Inner<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#innererrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Inner<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Child Inner Error, to allow Nesting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2438,7 +2438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#embeddedinnererror_nodejs" style="color: inherit; text-decoration: inherit;">embedded<wbr>Inner<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Child Inner Error, to allow Nesting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2466,7 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#embedded_inner_error_python" style="color: inherit; text-decoration: inherit;">embedded_<wbr>inner_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Child Inner Error, to allow Nesting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2488,7 +2488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyparameters_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyparameters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Policy<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyparameters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Policy<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Policy parameters for the backup instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2528,7 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyparameters_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyparameters">Policy<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyparameters">Policy<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Policy parameters for the backup instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2548,7 +2548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_parameters_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyparameters">Policy<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyparameters">Policy<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Policy parameters for the backup instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2578,7 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyparameters_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Policy<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Policy<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Policy parameters for the backup instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2634,7 +2634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyparameters_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyparametersresponse">Policy<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyparametersresponse">Policy<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Policy parameters for the backup instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2662,7 +2662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_parameters_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyparametersresponse">Policy<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyparametersresponse">Policy<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Policy parameters for the backup instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2676,7 +2676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastoreparameterslist_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Parameters<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureoperationalstoreparameters">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureoperationalstoreparameters">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Operational<wbr>Store<wbr>Parameters&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the DataStore Parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2700,7 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastoreparameterslist_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Parameters<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureoperationalstoreparameters">Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azureoperationalstoreparameters">Azure<wbr>Operational<wbr>Store<wbr>Parameters[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the DataStore Parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2712,7 +2712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_store_parameters_list_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>parameters_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureoperationalstoreparameters">Sequence[Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureoperationalstoreparameters">Sequence[Azure<wbr>Operational<wbr>Store<wbr>Parameters]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the DataStore Parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2726,7 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastoreparameterslist_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Parameters<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureoperationalstoreparametersresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureoperationalstoreparametersresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the DataStore Parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2750,7 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastoreparameterslist_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Parameters<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureoperationalstoreparametersresponse">Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azureoperationalstoreparametersresponse">Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the DataStore Parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2762,7 +2762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_store_parameters_list_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>parameters_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureoperationalstoreparametersresponse">Sequence[Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureoperationalstoreparametersresponse">Sequence[Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the DataStore Parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2776,7 +2776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errordetails_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>User<wbr>Facing<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protection status error of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2816,7 +2816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errordetails_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protection status error of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2836,7 +2836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_details_python" style="color: inherit; text-decoration: inherit;">error_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protection status error of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3076,7 +3076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>User<wbr>Facing<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional related Errors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3084,7 +3084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innererror_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Inner<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#innererrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Inner<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Inner Error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3228,7 +3228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Additional related Errors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3236,7 +3236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innererror_nodejs" style="color: inherit; text-decoration: inherit;">inner<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Inner Error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3304,7 +3304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">Sequence[User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">Sequence[User<wbr>Facing<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Additional related Errors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3312,7 +3312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inner_error_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Inner Error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

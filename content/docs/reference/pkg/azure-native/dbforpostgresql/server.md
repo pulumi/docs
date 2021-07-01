@@ -878,7 +878,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create</a> | <a href="#serverpropertiesforgeorestore">Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore</a> | <a href="#serverpropertiesforreplica">Server<wbr>Properties<wbr>For<wbr>Replica</a> | <a href="#serverpropertiesforrestore">Server<wbr>Properties<wbr>For<wbr>Restore</a></span>
+        <span class="property-type"><a href="#serverpropertiesfordefaultcreate">Server<wbr>Properties<wbr>For<wbr>Default<wbr>Create<wbr>Args</a> | <a href="#serverpropertiesforgeorestore">Server<wbr>Properties<wbr>For<wbr>Geo<wbr>Restore<wbr>Args</a> | <a href="#serverpropertiesforreplica">Server<wbr>Properties<wbr>For<wbr>Replica<wbr>Args</a> | <a href="#serverpropertiesforrestore">Server<wbr>Properties<wbr>For<wbr>Restore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -894,7 +894,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -918,7 +918,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU (pricing tier) of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2025,7 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2033,7 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Inputs.<wbr>Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Inputs.<wbr>Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2081,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2089,7 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2109,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2117,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverprivatelinkserviceconnectionstatepropertyresponse">Server<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2139,7 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Inputs.<wbr>Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Inputs.<wbr>Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2179,7 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2199,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverprivateendpointconnectionpropertiesresponse">Server<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2375,7 +2375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Inputs.<wbr>Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2435,7 +2435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">string</a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2511,7 +2511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2579,7 +2579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2641,7 +2641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Inputs.<wbr>Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2693,7 +2693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">string</a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2761,7 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2821,7 +2821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2883,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Inputs.<wbr>Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2935,7 +2935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">string</a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3003,7 +3003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3063,7 +3063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3133,7 +3133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>DBfor<wbr>Postgre<wbr>SQL.<wbr>Inputs.<wbr>Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3193,7 +3193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslenforcement_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Enforcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslenforcementenum">Ssl<wbr>Enforcement<wbr>Enum</a></span>
+        <span class="property-type"><a href="#sslenforcementenum">string</a></span>
     </dt>
     <dd>{{% md %}}Enable ssl enforcement or not when connect to server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3269,7 +3269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3337,7 +3337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Storage profile of a server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

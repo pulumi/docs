@@ -586,7 +586,7 @@ When it's Disabled, public network access is always disabled no matter what you 
 <a href="#eventhandler_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Handler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhandlersettings">Event<wbr>Handler<wbr>Settings</a></span>
+        <span class="property-type"><a href="#eventhandlersettings">Event<wbr>Handler<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for event handler in webpubsub service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +594,7 @@ When it's Disabled, public network access is always disabled no matter what you 
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webpubsubfeature">[]Web<wbr>Pub<wbr>Sub<wbr>Feature</a></span>
+        <span class="property-type"><a href="#webpubsubfeature">[]Web<wbr>Pub<wbr>Sub<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of the featureFlags.
 
@@ -607,7 +607,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed identity response{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -623,7 +623,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#networkacls_go" style="color: inherit; text-decoration: inherit;">Network<wbr>ACLs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webpubsubnetworkacls">Web<wbr>Pub<wbr>Sub<wbr>Network<wbr>ACLs</a></span>
+        <span class="property-type"><a href="#webpubsubnetworkacls">Web<wbr>Pub<wbr>Sub<wbr>Network<wbr>ACLs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network ACLs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -649,7 +649,7 @@ When it's Disabled, public network access is always disabled no matter what you 
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
+        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The billing information of the resource.(e.g. Free, Standard){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -665,7 +665,7 @@ When it's Disabled, public network access is always disabled no matter what you 
 <a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webpubsubtlssettings">Web<wbr>Pub<wbr>Sub<wbr>Tls<wbr>Settings</a></span>
+        <span class="property-type"><a href="#webpubsubtlssettings">Web<wbr>Pub<wbr>Sub<wbr>Tls<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}TLS settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1320,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Event<wbr>Handler<wbr>Template<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Event<wbr>Handler<wbr>Template&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1344,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Event<wbr>Handler<wbr>Template<wbr>Args[]}</span>
+        <span class="property-type">{[key: string]: Event<wbr>Handler<wbr>Template[]}</span>
     </dt>
     <dd>{{% md %}}Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1356,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Sequence[Event<wbr>Handler<wbr>Template<wbr>Args]]</span>
+        <span class="property-type">Mapping[str, Sequence[Event<wbr>Handler<wbr>Template]]</span>
     </dt>
     <dd>{{% md %}}Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1370,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Event<wbr>Handler<wbr>Template<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Event<wbr>Handler<wbr>Template<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1394,7 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Event<wbr>Handler<wbr>Template<wbr>Response<wbr>Args[]}</span>
+        <span class="property-type">{[key: string]: Event<wbr>Handler<wbr>Template<wbr>Response[]}</span>
     </dt>
     <dd>{{% md %}}Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1406,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Sequence[Event<wbr>Handler<wbr>Template<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Mapping[str, Sequence[Event<wbr>Handler<wbr>Template<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1429,7 +1429,7 @@ For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host
 <a href="#auth_csharp" style="color: inherit; text-decoration: inherit;">Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamauthsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Upstream<wbr>Auth<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#upstreamauthsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Upstream<wbr>Auth<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the auth settings for an event handler. If not set, no auth is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1517,7 @@ For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host
 <a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamauthsettings">Upstream<wbr>Auth<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#upstreamauthsettings">Upstream<wbr>Auth<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the auth settings for an event handler. If not set, no auth is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1561,7 +1561,7 @@ For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamauthsettings">Upstream<wbr>Auth<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#upstreamauthsettings">Upstream<wbr>Auth<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the auth settings for an event handler. If not set, no auth is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1607,7 +1607,7 @@ For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host
 <a href="#auth_csharp" style="color: inherit; text-decoration: inherit;">Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamauthsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Upstream<wbr>Auth<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#upstreamauthsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Upstream<wbr>Auth<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the auth settings for an event handler. If not set, no auth is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1695,7 +1695,7 @@ For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host
 <a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamauthsettingsresponse">Upstream<wbr>Auth<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#upstreamauthsettingsresponse">Upstream<wbr>Auth<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the auth settings for an event handler. If not set, no auth is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1739,7 +1739,7 @@ For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamauthsettingsresponse">Upstream<wbr>Auth<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#upstreamauthsettingsresponse">Upstream<wbr>Auth<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the auth settings for an event handler. If not set, no auth is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1914,7 +1914,7 @@ Only be used in response{{% /md %}}</dd><dt class="property-optional"
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Property<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Property<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Get or set the user assigned identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1990,7 +1990,7 @@ Only be used in response{{% /md %}}</dd><dt class="property-optional"
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Property<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Property<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Get or set the user assigned identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2028,7 +2028,7 @@ Only be used in response{{% /md %}}</dd><dt class="property-optional"
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Property<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Property<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Get or set the user assigned identities{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2596,7 +2596,7 @@ It also appears in the aud (audience) claim of the issued token.{{% /md %}}</dd>
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2612,7 +2612,7 @@ It also appears in the aud (audience) claim of the issued token.{{% /md %}}</dd>
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2620,7 +2620,7 @@ It also appears in the aud (audience) claim of the issued token.{{% /md %}}</dd>
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2716,7 +2716,7 @@ It also appears in the aud (audience) claim of the issued token.{{% /md %}}</dd>
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2732,7 +2732,7 @@ It also appears in the aud (audience) claim of the issued token.{{% /md %}}</dd>
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2740,7 +2740,7 @@ It also appears in the aud (audience) claim of the issued token.{{% /md %}}</dd>
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2776,7 +2776,7 @@ It also appears in the aud (audience) claim of the issued token.{{% /md %}}</dd>
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2792,7 +2792,7 @@ It also appears in the aud (audience) claim of the issued token.{{% /md %}}</dd>
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2800,7 +2800,7 @@ It also appears in the aud (audience) claim of the issued token.{{% /md %}}</dd>
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3382,7 +3382,7 @@ If present, following values are allowed:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3534,7 +3534,7 @@ If present, following values are allowed:
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3610,7 +3610,7 @@ If present, following values are allowed:
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3850,7 +3850,7 @@ If present, following values are allowed:
 <a href="#managedidentity_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentitysettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedidentitysettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the managed identity settings. It's required if the auth type is set to ManagedIdentity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3890,7 +3890,7 @@ If present, following values are allowed:
 <a href="#managedidentity_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentitysettings">Managed<wbr>Identity<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedidentitysettings">Managed<wbr>Identity<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the managed identity settings. It's required if the auth type is set to ManagedIdentity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3910,7 +3910,7 @@ If present, following values are allowed:
 <a href="#managed_identity_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentitysettings">Managed<wbr>Identity<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedidentitysettings">Managed<wbr>Identity<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the managed identity settings. It's required if the auth type is set to ManagedIdentity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3932,7 +3932,7 @@ If present, following values are allowed:
 <a href="#managedidentity_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentitysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedidentitysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the managed identity settings. It's required if the auth type is set to ManagedIdentity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3972,7 +3972,7 @@ If present, following values are allowed:
 <a href="#managedidentity_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentitysettingsresponse">Managed<wbr>Identity<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedidentitysettingsresponse">Managed<wbr>Identity<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the managed identity settings. It's required if the auth type is set to ManagedIdentity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3992,7 +3992,7 @@ If present, following values are allowed:
 <a href="#managed_identity_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentitysettingsresponse">Managed<wbr>Identity<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedidentitysettingsresponse">Managed<wbr>Identity<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the managed identity settings. It's required if the auth type is set to ManagedIdentity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4390,7 +4390,7 @@ If present, following values are allowed:
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointacl">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLArgs&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointacl">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACL&gt;</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4398,7 +4398,7 @@ If present, following values are allowed:
 <a href="#publicnetwork_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkacl">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Network<wbr>ACLArgs</a></span>
+        <span class="property-type"><a href="#networkacl">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Network<wbr>ACL</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4446,7 +4446,7 @@ If present, following values are allowed:
 <a href="#privateendpoints_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointacl">Private<wbr>Endpoint<wbr>ACLArgs[]</a></span>
+        <span class="property-type"><a href="#privateendpointacl">Private<wbr>Endpoint<wbr>ACL[]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4454,7 +4454,7 @@ If present, following values are allowed:
 <a href="#publicnetwork_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkacl">Network<wbr>ACLArgs</a></span>
+        <span class="property-type"><a href="#networkacl">Network<wbr>ACL</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4474,7 +4474,7 @@ If present, following values are allowed:
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointacl">Sequence[Private<wbr>Endpoint<wbr>ACLArgs]</a></span>
+        <span class="property-type"><a href="#privateendpointacl">Sequence[Private<wbr>Endpoint<wbr>ACL]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4482,7 +4482,7 @@ If present, following values are allowed:
 <a href="#public_network_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkacl">Network<wbr>ACLArgs</a></span>
+        <span class="property-type"><a href="#networkacl">Network<wbr>ACL</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4504,7 +4504,7 @@ If present, following values are allowed:
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointaclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointaclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLResponse&gt;</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4512,7 +4512,7 @@ If present, following values are allowed:
 <a href="#publicnetwork_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Network<wbr>ACLResponse<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkaclresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web<wbr>Pub<wbr>Sub.<wbr>Inputs.<wbr>Network<wbr>ACLResponse</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4560,7 +4560,7 @@ If present, following values are allowed:
 <a href="#privateendpoints_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointaclresponse">Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#privateendpointaclresponse">Private<wbr>Endpoint<wbr>ACLResponse[]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4568,7 +4568,7 @@ If present, following values are allowed:
 <a href="#publicnetwork_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4588,7 +4588,7 @@ If present, following values are allowed:
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointaclresponse">Sequence[Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointaclresponse">Sequence[Private<wbr>Endpoint<wbr>ACLResponse]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4596,7 +4596,7 @@ If present, following values are allowed:
 <a href="#public_network_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -376,7 +376,7 @@ The MonitoringConfig resource accepts the following [input]({{< relref "/docs/in
 <a href="#metricconfigurations_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricconfiguration">[]Metric<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#metricconfiguration">[]Metric<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metrics configuration details{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -607,7 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countersets_csharp" style="color: inherit; text-decoration: inherit;">Counter<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounterset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccounterset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Set&gt;</a></span>
     </dt>
     <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -679,7 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countersets_nodejs" style="color: inherit; text-decoration: inherit;">counter<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounterset">Metric<wbr>Counter<wbr>Set<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metriccounterset">Metric<wbr>Counter<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -715,7 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counter_sets_python" style="color: inherit; text-decoration: inherit;">counter_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounterset">Sequence[Metric<wbr>Counter<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metriccounterset">Sequence[Metric<wbr>Counter<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -753,7 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countersets_csharp" style="color: inherit; text-decoration: inherit;">Counter<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccountersetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccountersetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -825,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countersets_nodejs" style="color: inherit; text-decoration: inherit;">counter<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccountersetresponse">Metric<wbr>Counter<wbr>Set<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metriccountersetresponse">Metric<wbr>Counter<wbr>Set<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -861,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counter_sets_python" style="color: inherit; text-decoration: inherit;">counter_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccountersetresponse">Sequence[Metric<wbr>Counter<wbr>Set<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metriccountersetresponse">Sequence[Metric<wbr>Counter<wbr>Set<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Host name for the IoT hub associated to the device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -907,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionaldimensions_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -915,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensionfilter_csharp" style="color: inherit; text-decoration: inherit;">Dimension<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -979,7 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionaldimensions_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">Metric<wbr>Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricdimension">Metric<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -987,7 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensionfilter_nodejs" style="color: inherit; text-decoration: inherit;">dimension<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">Metric<wbr>Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricdimension">Metric<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1015,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_dimensions_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">Sequence[Metric<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricdimension">Sequence[Metric<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1023,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimension_filter_python" style="color: inherit; text-decoration: inherit;">dimension_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">Sequence[Metric<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricdimension">Sequence[Metric<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1053,7 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionaldimensions_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensionfilter_csharp" style="color: inherit; text-decoration: inherit;">Dimension<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionaldimensions_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">Metric<wbr>Dimension<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">Metric<wbr>Dimension<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensionfilter_nodejs" style="color: inherit; text-decoration: inherit;">dimension<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">Metric<wbr>Dimension<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">Metric<wbr>Dimension<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_dimensions_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The additional dimensions to be added to metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1169,7 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimension_filter_python" style="color: inherit; text-decoration: inherit;">dimension_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The dimension filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1191,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counters_csharp" style="color: inherit; text-decoration: inherit;">Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccounter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter&gt;</a></span>
     </dt>
     <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1215,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counters_nodejs" style="color: inherit; text-decoration: inherit;">counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounter">Metric<wbr>Counter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metriccounter">Metric<wbr>Counter[]</a></span>
     </dt>
     <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1227,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counters_python" style="color: inherit; text-decoration: inherit;">counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounter">Sequence[Metric<wbr>Counter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metriccounter">Sequence[Metric<wbr>Counter]</a></span>
     </dt>
     <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1241,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counters_csharp" style="color: inherit; text-decoration: inherit;">Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccounterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Metric<wbr>Counter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1265,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counters_nodejs" style="color: inherit; text-decoration: inherit;">counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounterresponse">Metric<wbr>Counter<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metriccounterresponse">Metric<wbr>Counter<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1277,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#counters_python" style="color: inherit; text-decoration: inherit;">counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccounterresponse">Sequence[Metric<wbr>Counter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metriccounterresponse">Sequence[Metric<wbr>Counter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The counters that should be collected in this set.{{% /md %}}</dd></dl>
 {{% /choosable %}}

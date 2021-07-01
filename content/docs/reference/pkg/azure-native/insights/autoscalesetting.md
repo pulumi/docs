@@ -762,7 +762,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#profiles_go" style="color: inherit; text-decoration: inherit;">Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleprofile">[]Autoscale<wbr>Profile</a></span>
+        <span class="property-type"><a href="#autoscaleprofile">[]Autoscale<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -810,7 +810,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalenotification">[]Autoscale<wbr>Notification</a></span>
+        <span class="property-type"><a href="#autoscalenotification">[]Autoscale<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the collection of notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotification">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Email<wbr>Notification<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailnotification">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Email<wbr>Notification</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1105,7 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_csharp" style="color: inherit; text-decoration: inherit;">Webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotification">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Webhook<wbr>Notification<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#webhooknotification">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Webhook<wbr>Notification&gt;</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1153,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotification">Email<wbr>Notification<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailnotification">Email<wbr>Notification</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_nodejs" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotification">Webhook<wbr>Notification<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#webhooknotification">Webhook<wbr>Notification[]</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1181,7 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotification">Email<wbr>Notification<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailnotification">Email<wbr>Notification</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1189,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_python" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotification">Sequence[Webhook<wbr>Notification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webhooknotification">Sequence[Webhook<wbr>Notification]</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1211,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Email<wbr>Notification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailnotificationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Email<wbr>Notification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1219,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_csharp" style="color: inherit; text-decoration: inherit;">Webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Webhook<wbr>Notification<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#webhooknotificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Webhook<wbr>Notification<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1267,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotificationresponse">Email<wbr>Notification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailnotificationresponse">Email<wbr>Notification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1275,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_nodejs" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotificationresponse">Webhook<wbr>Notification<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#webhooknotificationresponse">Webhook<wbr>Notification<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1295,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotificationresponse">Email<wbr>Notification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailnotificationresponse">Email<wbr>Notification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_python" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotificationresponse">Sequence[Webhook<wbr>Notification<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webhooknotificationresponse">Sequence[Webhook<wbr>Notification<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalecapacity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1333,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalerule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixeddate_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindow">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Time<wbr>Window<wbr>Args</a></span>
+        <span class="property-type"><a href="#timewindow">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Time<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrence">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrence">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1405,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacity">Scale<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalecapacity">Scale<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1421,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerule">Scale<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#scalerule">Scale<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixeddate_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindow">Time<wbr>Window<wbr>Args</a></span>
+        <span class="property-type"><a href="#timewindow">Time<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrence">Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrence">Recurrence</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1449,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacity">Scale<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalecapacity">Scale<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1465,7 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerule">Sequence[Scale<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalerule">Sequence[Scale<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1473,7 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_date_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindow">Time<wbr>Window<wbr>Args</a></span>
+        <span class="property-type"><a href="#timewindow">Time<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1481,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrence">Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrence">Recurrence</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1495,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalecapacityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Capacity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1511,7 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scaleruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1519,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixeddate_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Time<wbr>Window<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timewindowresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Time<wbr>Window<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1527,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1583,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacityresponse">Scale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalecapacityresponse">Scale<wbr>Capacity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1599,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleruleresponse">Scale<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#scaleruleresponse">Scale<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1607,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixeddate_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowresponse">Time<wbr>Window<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timewindowresponse">Time<wbr>Window<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1615,7 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceresponse">Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrenceresponse">Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1627,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacityresponse">Scale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalecapacityresponse">Scale<wbr>Capacity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1643,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleruleresponse">Sequence[Scale<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scaleruleresponse">Sequence[Scale<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1651,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_date_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowresponse">Time<wbr>Window<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timewindowresponse">Time<wbr>Window<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1659,7 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceresponse">Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrenceresponse">Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2041,7 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Metric<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2225,7 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimension">Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimension">Scale<wbr>Rule<wbr>Metric<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2317,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimension">Sequence[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimension">Sequence[Scale<wbr>Rule<wbr>Metric<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2411,7 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2595,7 +2595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimensionresponse">Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimensionresponse">Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2687,7 +2687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimensionresponse">Sequence[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimensionresponse">Sequence[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2747,7 +2747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Recurrent<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrentschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Recurrent<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2787,7 +2787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentschedule">Recurrent<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrentschedule">Recurrent<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2807,7 +2807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentschedule">Recurrent<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrentschedule">Recurrent<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2879,7 +2879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Recurrent<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrentscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Recurrent<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2919,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentscheduleresponse">Recurrent<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrentscheduleresponse">Recurrent<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2939,7 +2939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentscheduleresponse">Recurrent<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrentscheduleresponse">Recurrent<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3795,7 +3795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictrigger">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictrigger">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3803,7 +3803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleaction_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#scaleaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3835,7 +3835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictrigger">Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictrigger">Metric<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3843,7 +3843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleaction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleaction">Scale<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#scaleaction">Scale<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3855,7 +3855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictrigger">Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictrigger">Metric<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3863,7 +3863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_action_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleaction">Scale<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#scaleaction">Scale<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4131,7 +4131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4139,7 +4139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleaction_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scaleactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Scale<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4171,7 +4171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictriggerresponse">Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictriggerresponse">Metric<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4179,7 +4179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleaction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleactionresponse">Scale<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scaleactionresponse">Scale<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4191,7 +4191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictriggerresponse">Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictriggerresponse">Metric<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4199,7 +4199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_action_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleactionresponse">Scale<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scaleactionresponse">Scale<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd></dl>
 {{% /choosable %}}

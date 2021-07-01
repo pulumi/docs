@@ -1481,7 +1481,7 @@ The PrivateRecordSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#arecords_go" style="color: inherit; text-decoration: inherit;">ARecords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#arecord">[]ARecord</a></span>
+        <span class="property-type"><a href="#arecord">[]ARecord<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of A records in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1489,7 +1489,7 @@ The PrivateRecordSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#aaaarecords_go" style="color: inherit; text-decoration: inherit;">Aaaa<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aaaarecord">[]Aaaa<wbr>Record</a></span>
+        <span class="property-type"><a href="#aaaarecord">[]Aaaa<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of AAAA records in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1497,7 +1497,7 @@ The PrivateRecordSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#cnamerecord_go" style="color: inherit; text-decoration: inherit;">Cname<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cnamerecord">Cname<wbr>Record</a></span>
+        <span class="property-type"><a href="#cnamerecord">Cname<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CNAME record in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1521,7 +1521,7 @@ The PrivateRecordSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#mxrecords_go" style="color: inherit; text-decoration: inherit;">Mx<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mxrecord">[]Mx<wbr>Record</a></span>
+        <span class="property-type"><a href="#mxrecord">[]Mx<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of MX records in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1529,7 +1529,7 @@ The PrivateRecordSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#ptrrecords_go" style="color: inherit; text-decoration: inherit;">Ptr<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ptrrecord">[]Ptr<wbr>Record</a></span>
+        <span class="property-type"><a href="#ptrrecord">[]Ptr<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of PTR records in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1545,7 +1545,7 @@ The PrivateRecordSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#soarecord_go" style="color: inherit; text-decoration: inherit;">Soa<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#soarecord">Soa<wbr>Record</a></span>
+        <span class="property-type"><a href="#soarecord">Soa<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SOA record in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1553,7 +1553,7 @@ The PrivateRecordSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#srvrecords_go" style="color: inherit; text-decoration: inherit;">Srv<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#srvrecord">[]Srv<wbr>Record</a></span>
+        <span class="property-type"><a href="#srvrecord">[]Srv<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of SRV records in the record set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1569,7 @@ The PrivateRecordSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#txtrecords_go" style="color: inherit; text-decoration: inherit;">Txt<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#txtrecord">[]Txt<wbr>Record</a></span>
+        <span class="property-type"><a href="#txtrecord">[]Txt<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of TXT records in the record set.{{% /md %}}</dd></dl>
 {{% /choosable %}}

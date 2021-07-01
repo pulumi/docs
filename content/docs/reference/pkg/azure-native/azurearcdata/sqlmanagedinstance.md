@@ -426,7 +426,7 @@ The SqlManagedInstance resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlmanagedinstanceproperties">Sql<wbr>Managed<wbr>Instance<wbr>Properties</a></span>
+        <span class="property-type"><a href="#sqlmanagedinstanceproperties">Sql<wbr>Managed<wbr>Instance<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}null{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -442,7 +442,7 @@ The SqlManagedInstance resource accepts the following [input]({{< relref "/docs/
 <a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extendedLocation of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +458,7 @@ The SqlManagedInstance resource accepts the following [input]({{< relref "/docs/
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlmanagedinstancesku">Sql<wbr>Managed<wbr>Instance<wbr>Sku</a></span>
+        <span class="property-type"><a href="#sqlmanagedinstancesku">Sql<wbr>Managed<wbr>Instance<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1095,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basiclogininformation_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Login<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basiclogininformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Basic<wbr>Login<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#basiclogininformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Basic<wbr>Login<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Username and password for basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1215,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basiclogininformation_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Login<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basiclogininformation">Basic<wbr>Login<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#basiclogininformation">Basic<wbr>Login<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Username and password for basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1275,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basic_login_information_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>login_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basiclogininformation">Basic<wbr>Login<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#basiclogininformation">Basic<wbr>Login<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Username and password for basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basiclogininformation_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Login<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basiclogininformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Basic<wbr>Login<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#basiclogininformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Arc<wbr>Data.<wbr>Inputs.<wbr>Basic<wbr>Login<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Username and password for basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1481,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basiclogininformation_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Login<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basiclogininformationresponse">Basic<wbr>Login<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#basiclogininformationresponse">Basic<wbr>Login<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Username and password for basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1549,7 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#basic_login_information_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>login_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basiclogininformationresponse">Basic<wbr>Login<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#basiclogininformationresponse">Basic<wbr>Login<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Username and password for basic authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1695,7 +1695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlmanagedinstanceskutier">Sql<wbr>Managed<wbr>Instance<wbr>Sku<wbr>Tier</a></span>
+        <span class="property-type"><a href="#sqlmanagedinstanceskutier">string</a></span>
     </dt>
     <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -538,7 +538,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#device_go" style="color: inherit; text-decoration: inherit;">Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the device resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +578,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#networkfunctionuserconfigurations_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>User<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfiguration">[]Network<wbr>Function<wbr>User<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfiguration">[]Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network function configurations from the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterface">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network interface configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfigurationosprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfigurationosprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">Network<wbr>Interface<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkinterface">Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}The network interface configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfigurationosprofile">Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfigurationosprofile">Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">Sequence[Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterface">Sequence[Network<wbr>Interface]</a></span>
     </dt>
     <dd>{{% md %}}The network interface configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfigurationosprofile">Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfigurationosprofile">Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1325,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network interface configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1333,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfigurationresponseosprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Response<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfigurationresponseosprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Response<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1397,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">Network<wbr>Interface<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">Network<wbr>Interface<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The network interface configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfigurationresponseosprofile">Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Response<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfigurationresponseosprofile">Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Response<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1433,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">Sequence[Network<wbr>Interface<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">Sequence[Network<wbr>Interface<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The network interface configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1441,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfigurationresponseosprofile">Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Response<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfigurationresponseosprofile">Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Response<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1521,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1593,7 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfiguration">Network<wbr>Interface<wbr>IPConfiguration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfiguration">Network<wbr>Interface<wbr>IPConfiguration[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1629,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfiguration">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfiguration">Sequence[Network<wbr>Interface<wbr>IPConfiguration]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2087,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2159,7 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2195,7 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -372,7 +372,7 @@ The LinkedWorkspace resource accepts the following [input]({{< relref "/docs/int
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedworkspaceprops">Linked<wbr>Workspace<wbr>Props</a></span>
+        <span class="property-type"><a href="#linkedworkspaceprops">Linked<wbr>Workspace<wbr>Props<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}LinkedWorkspace specific properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}

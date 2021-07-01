@@ -847,7 +847,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#armrolereceivers_go" style="color: inherit; text-decoration: inherit;">Arm<wbr>Role<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrolereceiver">[]Arm<wbr>Role<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#armrolereceiver">[]Arm<wbr>Role<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -855,7 +855,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#automationrunbookreceivers_go" style="color: inherit; text-decoration: inherit;">Automation<wbr>Runbook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrunbookreceiver">[]Automation<wbr>Runbook<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#automationrunbookreceiver">[]Automation<wbr>Runbook<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of AutomationRunbook receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -863,7 +863,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azureapppushreceivers_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>App<wbr>Push<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureapppushreceiver">[]Azure<wbr>App<wbr>Push<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#azureapppushreceiver">[]Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of AzureAppPush receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -871,7 +871,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azurefunctionreceivers_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctionreceiver">[]Azure<wbr>Function<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#azurefunctionreceiver">[]Azure<wbr>Function<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of azure function receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -879,7 +879,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#emailreceivers_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailreceiver">[]Email<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#emailreceiver">[]Email<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of email receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -887,7 +887,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#itsmreceivers_go" style="color: inherit; text-decoration: inherit;">Itsm<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#itsmreceiver">[]Itsm<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#itsmreceiver">[]Itsm<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of ITSM receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -903,7 +903,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#logicappreceivers_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logicappreceiver">[]Logic<wbr>App<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#logicappreceiver">[]Logic<wbr>App<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of logic app receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -911,7 +911,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#smsreceivers_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smsreceiver">[]Sms<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#smsreceiver">[]Sms<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of SMS receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -927,7 +927,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#voicereceivers_go" style="color: inherit; text-decoration: inherit;">Voice<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#voicereceiver">[]Voice<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#voicereceiver">[]Voice<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of voice receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -935,7 +935,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#webhookreceivers_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookreceiver">[]Webhook<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#webhookreceiver">[]Webhook<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of webhook receivers that are part of this action group.{{% /md %}}</dd></dl>
 {{% /choosable %}}

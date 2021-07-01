@@ -603,7 +603,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobeventstrigger">Blob<wbr>Events<wbr>Trigger</a> | <a href="#blobtrigger">Blob<wbr>Trigger</a> | <a href="#chainingtrigger">Chaining<wbr>Trigger</a> | <a href="#customeventstrigger">Custom<wbr>Events<wbr>Trigger</a> | <a href="#multiplepipelinetrigger">Multiple<wbr>Pipeline<wbr>Trigger</a> | <a href="#reruntumblingwindowtrigger">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger</a> | <a href="#scheduletrigger">Schedule<wbr>Trigger</a> | <a href="#tumblingwindowtrigger">Tumbling<wbr>Window<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#blobeventstrigger">Blob<wbr>Events<wbr>Trigger<wbr>Args</a> | <a href="#blobtrigger">Blob<wbr>Trigger<wbr>Args</a> | <a href="#chainingtrigger">Chaining<wbr>Trigger<wbr>Args</a> | <a href="#customeventstrigger">Custom<wbr>Events<wbr>Trigger<wbr>Args</a> | <a href="#multiplepipelinetrigger">Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args</a> | <a href="#reruntumblingwindowtrigger">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a> | <a href="#scheduletrigger">Schedule<wbr>Trigger<wbr>Args</a> | <a href="#tumblingwindowtrigger">Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -948,7 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1084,7 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1152,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1230,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1382,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1458,7 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1480,7 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1512,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1584,7 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1616,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1636,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1668,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1690,7 +1690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1730,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1810,7 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1850,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1870,7 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1910,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1924,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#pipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1932,7 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2012,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereference">Pipeline<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#pipelinereference">Pipeline<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2020,7 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_nodejs" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2056,7 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereference">Sequence[Pipeline<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinereference">Sequence[Pipeline<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2064,7 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2102,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2110,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2206,7 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2214,7 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_nodejs" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2258,7 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Sequence[Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Sequence[Pipeline<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Upstream Pipelines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2266,7 +2266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when all upstream pipelines complete successfully.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2344,7 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2464,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2524,7 +2524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2594,7 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2730,7 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2798,7 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3164,7 +3164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3220,7 +3220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3248,7 +3248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3286,7 +3286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3358,7 +3358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3394,7 +3394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3706,7 +3706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence&gt;</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3794,7 +3794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrence">Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">Recurrence<wbr>Schedule<wbr>Occurrence[]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3838,7 +3838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrence">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3880,7 +3880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
+        <span class="property-type"><a href="#dayofweek">string</a></span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4048,7 +4048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4136,7 +4136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4180,7 +4180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4818,7 +4818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduletriggerrecurrence">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrence">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4842,7 +4842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4890,7 +4890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduletriggerrecurrence">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrence">Schedule<wbr>Trigger<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4914,7 +4914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4926,7 +4926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduletriggerrecurrence">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrence">Schedule<wbr>Trigger<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4950,7 +4950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4988,7 +4988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrenceschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5092,7 +5092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5144,7 +5144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5198,7 +5198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5302,7 +5302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5354,7 +5354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5384,7 +5384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5416,7 +5416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5472,7 +5472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5504,7 +5504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5516,7 +5516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5548,7 +5548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5726,7 +5726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5750,7 +5750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5762,7 +5762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5776,7 +5776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5800,7 +5800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5812,7 +5812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5834,7 +5834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelinereference_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5874,7 +5874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelinereference_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereference">Pipeline<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinereference">Pipeline<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5894,7 +5894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_reference_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereference">Pipeline<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinereference">Pipeline<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5916,7 +5916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelinereference_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5956,7 +5956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipelinereference_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5976,7 +5976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_reference_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6208,7 +6208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6264,7 +6264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6392,7 +6392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_nodejs" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6424,7 +6424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Args | Trigger<wbr>Dependency<wbr>Reference<wbr>Args | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Args[]</span>
+        <span class="property-type">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference | Trigger<wbr>Dependency<wbr>Reference | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference[]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6448,7 +6448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6484,7 +6484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6516,7 +6516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Args, Trigger<wbr>Dependency<wbr>Reference<wbr>Args, Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference, Trigger<wbr>Dependency<wbr>Reference, Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference]]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6540,7 +6540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6554,7 +6554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6610,7 +6610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6638,7 +6638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6668,7 +6668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6724,7 +6724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencetrigger_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6752,7 +6752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6806,7 +6806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6870,7 +6870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7006,7 +7006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_nodejs" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7046,7 +7046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args | Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response | Trigger<wbr>Dependency<wbr>Reference<wbr>Response | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7070,7 +7070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7106,7 +7106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pipeline for which runs are created when an event is fired for trigger window that is ready.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7146,7 +7146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args, Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args, Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response, Trigger<wbr>Dependency<wbr>Reference<wbr>Response, Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7170,7 +7170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd></dl>
 {{% /choosable %}}

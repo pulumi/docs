@@ -789,7 +789,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#functions_go" style="color: inherit; text-decoration: inherit;">Functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#function">[]Function<wbr>Type</a></span>
+        <span class="property-type"><a href="#function">[]Function<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more functions for the streaming job. The name property for each function is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -797,7 +797,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#input">[]Input<wbr>Type</a></span>
+        <span class="property-type"><a href="#input">[]Input<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more inputs to the streaming job. The name property for each input is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -845,7 +845,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#output">[]Output<wbr>Type</a></span>
+        <span class="property-type"><a href="#output">[]Output<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more outputs for the streaming job. The name property for each output is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -853,7 +853,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the SKU of the streaming job. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -869,7 +869,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#transformation_go" style="color: inherit; text-decoration: inherit;">Transformation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformation">Transformation</a></span>
+        <span class="property-type"><a href="#transformation">Transformation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Indicates the query and the number of streaming units to use for the streaming job. The name property of the transformation is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2092,7 +2092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2100,7 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2180,7 +2180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2188,7 +2188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2224,7 +2224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2232,7 +2232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column]</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2270,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2278,7 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2358,7 +2358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2366,7 +2366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2402,7 +2402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2410,7 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2652,7 +2652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columnnames_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2692,7 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columnnames_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2712,7 +2712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#column_names_python" style="color: inherit; text-decoration: inherit;">column_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column]</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2734,7 +2734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columnnames_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2774,7 +2774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columnnames_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2794,7 +2794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#column_names_python" style="color: inherit; text-decoration: inherit;">column_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3844,7 +3844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3932,7 +3932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3976,7 +3976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4022,7 +4022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4110,7 +4110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4154,7 +4154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4200,7 +4200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4288,7 +4288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4332,7 +4332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4378,7 +4378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4466,7 +4466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4510,7 +4510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4564,7 +4564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4668,7 +4668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4720,7 +4720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4774,7 +4774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4878,7 +4878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4930,7 +4930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5252,7 +5252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostic<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#diagnosticconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostic<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5276,7 +5276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticconditionresponse">Diagnostic<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#diagnosticconditionresponse">Diagnostic<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5288,7 +5288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticconditionresponse">Sequence[Diagnostic<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diagnosticconditionresponse">Sequence[Diagnostic<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6490,7 +6490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Scalar<wbr>Function<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalarfunctionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Scalar<wbr>Function<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6530,7 +6530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionproperties">Scalar<wbr>Function<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalarfunctionproperties">Scalar<wbr>Function<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6550,7 +6550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionproperties">Scalar<wbr>Function<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalarfunctionproperties">Scalar<wbr>Function<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6852,7 +6852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Scalar<wbr>Function<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalarfunctionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Scalar<wbr>Function<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6924,7 +6924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionpropertiesresponse">Scalar<wbr>Function<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalarfunctionpropertiesresponse">Scalar<wbr>Function<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6960,7 +6960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionpropertiesresponse">Scalar<wbr>Function<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalarfunctionpropertiesresponse">Scalar<wbr>Function<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6982,7 +6982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Reference<wbr>Input<wbr>Properties<wbr>Args</a> | <a href="#streaminputproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Stream<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#referenceinputproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Reference<wbr>Input<wbr>Properties</a> | <a href="#streaminputproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Stream<wbr>Input<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7022,7 +7022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputproperties">Reference<wbr>Input<wbr>Properties<wbr>Args</a> | <a href="#streaminputproperties">Stream<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#referenceinputproperties">Reference<wbr>Input<wbr>Properties</a> | <a href="#streaminputproperties">Stream<wbr>Input<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7042,7 +7042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputproperties">Reference<wbr>Input<wbr>Properties<wbr>Args</a> | <a href="#streaminputproperties">Stream<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#referenceinputproperties">Reference<wbr>Input<wbr>Properties</a> | <a href="#streaminputproperties">Stream<wbr>Input<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7080,7 +7080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Reference<wbr>Input<wbr>Properties<wbr>Response<wbr>Args</a> | <a href="#streaminputpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Stream<wbr>Input<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#referenceinputpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Reference<wbr>Input<wbr>Properties<wbr>Response</a> | <a href="#streaminputpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Stream<wbr>Input<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7152,7 +7152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputpropertiesresponse">Reference<wbr>Input<wbr>Properties<wbr>Response<wbr>Args</a> | <a href="#streaminputpropertiesresponse">Stream<wbr>Input<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#referenceinputpropertiesresponse">Reference<wbr>Input<wbr>Properties<wbr>Response</a> | <a href="#streaminputpropertiesresponse">Stream<wbr>Input<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7188,7 +7188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputpropertiesresponse">Reference<wbr>Input<wbr>Properties<wbr>Response<wbr>Args</a> | <a href="#streaminputpropertiesresponse">Stream<wbr>Input<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#referenceinputpropertiesresponse">Reference<wbr>Input<wbr>Properties<wbr>Response</a> | <a href="#streaminputpropertiesresponse">Stream<wbr>Input<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7848,7 +7848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakestoreoutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#azuresqldatabaseoutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#azuretableoutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#bloboutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#documentdboutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhuboutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#powerbioutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#servicebusqueueoutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#servicebustopicoutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#azuresqldatabaseoutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#azuretableoutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#bloboutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#documentdboutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#eventhuboutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#powerbioutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Power<wbr>BIOutput<wbr>Data<wbr>Source</a> | <a href="#servicebusqueueoutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#servicebustopicoutputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7864,7 +7864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization</a> | <a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization</a> | <a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7904,7 +7904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakestoreoutputdatasource">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#azuresqldatabaseoutputdatasource">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#azuretableoutputdatasource">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#bloboutputdatasource">Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#documentdboutputdatasource">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhuboutputdatasource">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#powerbioutputdatasource">Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#servicebusqueueoutputdatasource">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#servicebustopicoutputdatasource">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasource">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#azuresqldatabaseoutputdatasource">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#azuretableoutputdatasource">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#bloboutputdatasource">Blob<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#documentdboutputdatasource">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#eventhuboutputdatasource">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#powerbioutputdatasource">Power<wbr>BIOutput<wbr>Data<wbr>Source</a> | <a href="#servicebusqueueoutputdatasource">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#servicebustopicoutputdatasource">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7920,7 +7920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7932,7 +7932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakestoreoutputdatasource">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#azuresqldatabaseoutputdatasource">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#azuretableoutputdatasource">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#bloboutputdatasource">Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#documentdboutputdatasource">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhuboutputdatasource">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#powerbioutputdatasource">Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#servicebusqueueoutputdatasource">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#servicebustopicoutputdatasource">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasource">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#azuresqldatabaseoutputdatasource">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#azuretableoutputdatasource">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#bloboutputdatasource">Blob<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#documentdboutputdatasource">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#eventhuboutputdatasource">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#powerbioutputdatasource">Power<wbr>BIOutput<wbr>Data<wbr>Source</a> | <a href="#servicebusqueueoutputdatasource">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#servicebustopicoutputdatasource">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7948,7 +7948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7988,7 +7988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8020,7 +8020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakestoreoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuresqldatabaseoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuretableoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#bloboutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#documentdboutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eventhuboutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#powerbioutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicebusqueueoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicebustopicoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#azuresqldatabaseoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#azuretableoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#bloboutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#documentdboutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#eventhuboutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#powerbioutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#servicebusqueueoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#servicebustopicoutputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8036,7 +8036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8108,7 +8108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8140,7 +8140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakestoreoutputdatasourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuresqldatabaseoutputdatasourceresponse">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuretableoutputdatasourceresponse">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#bloboutputdatasourceresponse">Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#documentdboutputdatasourceresponse">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eventhuboutputdatasourceresponse">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#powerbioutputdatasourceresponse">Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicebusqueueoutputdatasourceresponse">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicebustopicoutputdatasourceresponse">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#azuresqldatabaseoutputdatasourceresponse">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#azuretableoutputdatasourceresponse">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#bloboutputdatasourceresponse">Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#documentdboutputdatasourceresponse">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#eventhuboutputdatasourceresponse">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#powerbioutputdatasourceresponse">Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#servicebusqueueoutputdatasourceresponse">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#servicebustopicoutputdatasourceresponse">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8156,7 +8156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8168,7 +8168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8200,7 +8200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakestoreoutputdatasourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuresqldatabaseoutputdatasourceresponse">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuretableoutputdatasourceresponse">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#bloboutputdatasourceresponse">Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#documentdboutputdatasourceresponse">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eventhuboutputdatasourceresponse">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#powerbioutputdatasourceresponse">Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicebusqueueoutputdatasourceresponse">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicebustopicoutputdatasourceresponse">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#azuresqldatabaseoutputdatasourceresponse">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#azuretableoutputdatasourceresponse">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#bloboutputdatasourceresponse">Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#documentdboutputdatasourceresponse">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#eventhuboutputdatasourceresponse">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#powerbioutputdatasourceresponse">Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#servicebusqueueoutputdatasourceresponse">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#servicebustopicoutputdatasourceresponse">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8216,7 +8216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8744,7 +8744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8752,7 +8752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization</a> | <a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization</a> | <a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8784,7 +8784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasource">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasource">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8792,7 +8792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8804,7 +8804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasource">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasource">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8812,7 +8812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8826,7 +8826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8842,7 +8842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8850,7 +8850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8898,7 +8898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8914,7 +8914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8922,7 +8922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8934,7 +8934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8950,7 +8950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8958,7 +8958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8972,7 +8972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args</a> | <a href="#javascriptfunctionbinding">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding</a> | <a href="#javascriptfunctionbinding">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8980,7 +8980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#functioninput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Input&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8988,7 +8988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionoutput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9028,7 +9028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args</a> | <a href="#javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding</a> | <a href="#javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9036,7 +9036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninput">Function<wbr>Input<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#functioninput">Function<wbr>Input[]</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9044,7 +9044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutput">Function<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionoutput">Function<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9056,7 +9056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args</a> | <a href="#javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding</a> | <a href="#javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9064,7 +9064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninput">Sequence[Function<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#functioninput">Sequence[Function<wbr>Input]</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9072,7 +9072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutput">Function<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionoutput">Function<wbr>Output</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9094,7 +9094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a> | <a href="#javascriptfunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response</a> | <a href="#javascriptfunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9102,7 +9102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#functioninputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Input<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9110,7 +9110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionoutputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9166,7 +9166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a> | <a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response</a> | <a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9174,7 +9174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninputresponse">Function<wbr>Input<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#functioninputresponse">Function<wbr>Input<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9182,7 +9182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9202,7 +9202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a> | <a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response</a> | <a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9210,7 +9210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninputresponse">Sequence[Function<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#functioninputresponse">Sequence[Function<wbr>Input<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9218,7 +9218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10230,7 +10230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhubstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#iothubstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a> | <a href="#eventhubstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a> | <a href="#iothubstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10238,7 +10238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization</a> | <a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization</a> | <a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10270,7 +10270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a> | <a href="#eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a> | <a href="#iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10278,7 +10278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10290,7 +10290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a> | <a href="#eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a> | <a href="#iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10298,7 +10298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10312,7 +10312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10328,7 +10328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eventhubstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#iothubstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#eventhubstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#iothubstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10336,7 +10336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10384,7 +10384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10400,7 +10400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10408,7 +10408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10420,7 +10420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10436,7 +10436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10444,7 +10444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}

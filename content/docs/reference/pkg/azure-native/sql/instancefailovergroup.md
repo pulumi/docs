@@ -415,7 +415,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#managedinstancepairs_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Instance<wbr>Pairs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancepairinfo">[]Managed<wbr>Instance<wbr>Pair<wbr>Info</a></span>
+        <span class="property-type"><a href="#managedinstancepairinfo">[]Managed<wbr>Instance<wbr>Pair<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of managed instance pairs in the failover group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -423,7 +423,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#partnerregions_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partnerregioninfo">[]Partner<wbr>Region<wbr>Info</a></span>
+        <span class="property-type"><a href="#partnerregioninfo">[]Partner<wbr>Region<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Partner region information for the failover group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -431,7 +431,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#readwriteendpoint_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefailovergroupreadwriteendpoint">Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#instancefailovergroupreadwriteendpoint">Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Read-write endpoint of the failover group instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -455,7 +455,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#readonlyendpoint_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefailovergroupreadonlyendpoint">Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#instancefailovergroupreadonlyendpoint">Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Read-only endpoint of the failover group instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}

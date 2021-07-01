@@ -463,7 +463,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#identities_go" style="color: inherit; text-decoration: inherit;">Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useridentitycontract">[]User<wbr>Identity<wbr>Contract</a></span>
+        <span class="property-type"><a href="#useridentitycontract">[]User<wbr>Identity<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Collection of user identities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

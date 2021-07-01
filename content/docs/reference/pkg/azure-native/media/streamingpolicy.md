@@ -1362,7 +1362,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#commonencryptioncbcs_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cbcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonencryptioncbcs">Common<wbr>Encryption<wbr>Cbcs</a></span>
+        <span class="property-type"><a href="#commonencryptioncbcs">Common<wbr>Encryption<wbr>Cbcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCbcs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1370,7 +1370,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#commonencryptioncenc_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cenc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonencryptioncenc">Common<wbr>Encryption<wbr>Cenc</a></span>
+        <span class="property-type"><a href="#commonencryptioncenc">Common<wbr>Encryption<wbr>Cenc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCenc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1386,7 +1386,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#envelopeencryption_go" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envelopeencryption">Envelope<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#envelopeencryption">Envelope<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of EnvelopeEncryption{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1394,7 +1394,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#noencryption_go" style="color: inherit; text-decoration: inherit;">No<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noencryption">No<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#noencryption">No<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configurations of NoEncryption{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1745,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fairplay_csharp" style="color: inherit; text-decoration: inherit;">Fair<wbr>Play</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1753,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1761,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_csharp" style="color: inherit; text-decoration: inherit;">Widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1801,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fairplay_nodejs" style="color: inherit; text-decoration: inherit;">fair<wbr>Play</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1817,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_nodejs" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1829,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fair_play_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1845,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1859,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fairplay_csharp" style="color: inherit; text-decoration: inherit;">Fair<wbr>Play</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1867,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1875,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_csharp" style="color: inherit; text-decoration: inherit;">Widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1915,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fairplay_nodejs" style="color: inherit; text-decoration: inherit;">fair<wbr>Play</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1923,7 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1931,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_nodejs" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1943,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fair_play_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1951,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1959,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1973,7 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1981,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_csharp" style="color: inherit; text-decoration: inherit;">Widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2013,7 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2021,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_nodejs" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2033,7 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2041,7 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2055,7 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2063,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_csharp" style="color: inherit; text-decoration: inherit;">Widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2095,7 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playready_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2103,7 +2103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_nodejs" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2115,7 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2123,7 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2137,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2145,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2153,7 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_csharp" style="color: inherit; text-decoration: inherit;">Drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Cbcs<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Cbcs<wbr>Drm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2161,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2209,7 +2209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">Track<wbr>Selection<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#trackselection">Track<wbr>Selection[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2217,7 +2217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2225,7 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_nodejs" style="color: inherit; text-decoration: inherit;">drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfiguration">Cbcs<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfiguration">Cbcs<wbr>Drm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2233,7 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2245,7 +2245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2253,7 +2253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2261,7 +2261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfiguration">Cbcs<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfiguration">Cbcs<wbr>Drm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2269,7 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2283,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2291,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2299,7 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_csharp" style="color: inherit; text-decoration: inherit;">Drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Cbcs<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Cbcs<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2307,7 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2355,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2363,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2371,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_nodejs" style="color: inherit; text-decoration: inherit;">drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Cbcs<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Cbcs<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2379,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2391,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2399,7 +2399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2407,7 +2407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Cbcs<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Cbcs<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2415,7 +2415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2429,7 +2429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2445,7 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_csharp" style="color: inherit; text-decoration: inherit;">Drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Cenc<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cencdrmconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Cenc<wbr>Drm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2453,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2501,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">Track<wbr>Selection<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#trackselection">Track<wbr>Selection[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2509,7 +2509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2517,7 +2517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_nodejs" style="color: inherit; text-decoration: inherit;">drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfiguration">Cenc<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cencdrmconfiguration">Cenc<wbr>Drm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2525,7 +2525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2537,7 +2537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2545,7 +2545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2553,7 +2553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfiguration">Cenc<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cencdrmconfiguration">Cenc<wbr>Drm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2561,7 +2561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2575,7 +2575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2583,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2591,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_csharp" style="color: inherit; text-decoration: inherit;">Drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Cenc<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cencdrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Cenc<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2599,7 +2599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2647,7 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2655,7 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2663,7 +2663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_nodejs" style="color: inherit; text-decoration: inherit;">drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfigurationresponse">Cenc<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cencdrmconfigurationresponse">Cenc<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2671,7 +2671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2683,7 +2683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2691,7 +2691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2699,7 +2699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cencdrmconfigurationresponse">Cenc<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cencdrmconfigurationresponse">Cenc<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2707,7 +2707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3177,7 +3177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3185,7 +3185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3201,7 +3201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3249,7 +3249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">Track<wbr>Selection<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#trackselection">Track<wbr>Selection[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3257,7 +3257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3273,7 +3273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3285,7 +3285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3293,7 +3293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3309,7 +3309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3323,7 +3323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3331,7 +3331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3347,7 +3347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3395,7 +3395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3403,7 +3403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3419,7 +3419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3431,7 +3431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3439,7 +3439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3455,7 +3455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3469,7 +3469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3493,7 +3493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3505,7 +3505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3519,7 +3519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3543,7 +3543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3555,7 +3555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3585,7 +3585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_csharp" style="color: inherit; text-decoration: inherit;">Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3641,7 +3641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_nodejs" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">Track<wbr>Selection<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#trackselection">Track<wbr>Selection[]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3669,7 +3669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_python" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3699,7 +3699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_csharp" style="color: inherit; text-decoration: inherit;">Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3755,7 +3755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_nodejs" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3783,7 +3783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tracks_python" style="color: inherit; text-decoration: inherit;">tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3797,7 +3797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultkey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkey">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Default<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#defaultkey">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Default<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3805,7 +3805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytotrackmappings_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>To<wbr>Track<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3837,7 +3837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultkey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkey">Default<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#defaultkey">Default<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3845,7 +3845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytotrackmappings_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>To<wbr>Track<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkey">Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkey">Streaming<wbr>Policy<wbr>Content<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3857,7 +3857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkey">Default<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#defaultkey">Default<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3865,7 +3865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_to_track_mappings_python" style="color: inherit; text-decoration: inherit;">key_<wbr>to_<wbr>track_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkey">Sequence[Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkey">Sequence[Streaming<wbr>Policy<wbr>Content<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3879,7 +3879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultkey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Default<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#defaultkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Default<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3887,7 +3887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytotrackmappings_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>To<wbr>Track<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3919,7 +3919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultkey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkeyresponse">Default<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#defaultkeyresponse">Default<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3927,7 +3927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keytotrackmappings_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>To<wbr>Track<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3939,7 +3939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultkeyresponse">Default<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#defaultkeyresponse">Default<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3947,7 +3947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_to_track_mappings_python" style="color: inherit; text-decoration: inherit;">key_<wbr>to_<wbr>track_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">Sequence[Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#streamingpolicycontentkeyresponse">Sequence[Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4879,7 +4879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertycondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackpropertycondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4903,7 +4903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertycondition">Track<wbr>Property<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#trackpropertycondition">Track<wbr>Property<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4915,7 +4915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertycondition">Sequence[Track<wbr>Property<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trackpropertycondition">Sequence[Track<wbr>Property<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4929,7 +4929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#trackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4953,7 +4953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertyconditionresponse">Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#trackpropertyconditionresponse">Track<wbr>Property<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4965,7 +4965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackpropertyconditionresponse">Sequence[Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trackpropertyconditionresponse">Sequence[Track<wbr>Property<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd></dl>
 {{% /choosable %}}

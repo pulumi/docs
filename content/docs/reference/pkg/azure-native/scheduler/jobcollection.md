@@ -257,7 +257,7 @@ The JobCollection resource accepts the following [input]({{< relref "/docs/intro
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionproperties">Job<wbr>Collection<wbr>Properties</a></span>
+        <span class="property-type"><a href="#jobcollectionproperties">Job<wbr>Collection<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job collection properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -480,7 +480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_csharp" style="color: inherit; text-decoration: inherit;">Quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionquota">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Collection<wbr>Quota<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobcollectionquota">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Collection<wbr>Quota</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -488,7 +488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -524,7 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionstate">Job<wbr>Collection<wbr>State<wbr>Enum</a></span>
+        <span class="property-type"><a href="#jobcollectionstate">string</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -536,7 +536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_nodejs" style="color: inherit; text-decoration: inherit;">quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionquota">Job<wbr>Collection<wbr>Quota<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobcollectionquota">Job<wbr>Collection<wbr>Quota</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -544,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -564,7 +564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_python" style="color: inherit; text-decoration: inherit;">quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionquota">Job<wbr>Collection<wbr>Quota<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobcollectionquota">Job<wbr>Collection<wbr>Quota</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -572,7 +572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_csharp" style="color: inherit; text-decoration: inherit;">Quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionquotaresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Collection<wbr>Quota<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobcollectionquotaresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Collection<wbr>Quota<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_nodejs" style="color: inherit; text-decoration: inherit;">quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionquotaresponse">Job<wbr>Collection<wbr>Quota<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobcollectionquotaresponse">Job<wbr>Collection<wbr>Quota<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_python" style="color: inherit; text-decoration: inherit;">quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcollectionquotaresponse">Job<wbr>Collection<wbr>Quota<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobcollectionquotaresponse">Job<wbr>Collection<wbr>Quota<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job collection quota.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -724,7 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobmaxrecurrence">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Max<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobmaxrecurrence">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Max<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -780,7 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobmaxrecurrence">Job<wbr>Max<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobmaxrecurrence">Job<wbr>Max<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -808,7 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_recurrence_python" style="color: inherit; text-decoration: inherit;">max_<wbr>recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobmaxrecurrence">Job<wbr>Max<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobmaxrecurrence">Job<wbr>Max<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -838,7 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobmaxrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Max<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobmaxrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Max<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -894,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobmaxrecurrenceresponse">Job<wbr>Max<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobmaxrecurrenceresponse">Job<wbr>Max<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -922,7 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_recurrence_python" style="color: inherit; text-decoration: inherit;">max_<wbr>recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobmaxrecurrenceresponse">Job<wbr>Max<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobmaxrecurrenceresponse">Job<wbr>Max<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or set the maximum recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -990,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencefrequency">Recurrence<wbr>Frequency</a></span>
+        <span class="property-type"><a href="#recurrencefrequency">string</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1184,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudefinition">Sku<wbr>Definition</a></span>
+        <span class="property-type"><a href="#skudefinition">string</a></span>
     </dt>
     <dd>{{% md %}}Gets or set the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}

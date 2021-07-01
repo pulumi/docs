@@ -378,7 +378,7 @@ The DdosCustomPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#protocolcustomsettings_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Custom<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protocolcustomsettingsformat">[]Protocol<wbr>Custom<wbr>Settings<wbr>Format</a></span>
+        <span class="property-type"><a href="#protocolcustomsettingsformat">[]Protocol<wbr>Custom<wbr>Settings<wbr>Format<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The protocol-specific DDoS policy customization parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

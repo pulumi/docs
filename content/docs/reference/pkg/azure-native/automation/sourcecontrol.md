@@ -482,7 +482,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#securitytoken_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecontrolsecuritytokenproperties">Source<wbr>Control<wbr>Security<wbr>Token<wbr>Properties</a></span>
+        <span class="property-type"><a href="#sourcecontrolsecuritytokenproperties">Source<wbr>Control<wbr>Security<wbr>Token<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization token for the repo of the source control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

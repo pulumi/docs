@@ -485,7 +485,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#azurecontainerinfo_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Container<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurecontainerinfo">Azure<wbr>Container<wbr>Info</a></span>
+        <span class="property-type"><a href="#azurecontainerinfo">Azure<wbr>Container<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -493,7 +493,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#clientaccessrights_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Access<wbr>Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientaccessright">[]Client<wbr>Access<wbr>Right</a></span>
+        <span class="property-type"><a href="#clientaccessright">[]Client<wbr>Access<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -525,7 +525,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#refreshdetails_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#refreshdetails">Refresh<wbr>Details</a></span>
+        <span class="property-type"><a href="#refreshdetails">Refresh<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -533,7 +533,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#useraccessrights_go" style="color: inherit; text-decoration: inherit;">User<wbr>Access<wbr>Rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccessright">[]User<wbr>Access<wbr>Right</a></span>
+        <span class="property-type"><a href="#useraccessright">[]User<wbr>Access<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd></dl>
 {{% /choosable %}}

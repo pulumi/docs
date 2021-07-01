@@ -408,7 +408,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#databasesinfo_go" style="color: inherit; text-decoration: inherit;">Databases<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinfo">[]Database<wbr>Info</a></span>
+        <span class="property-type"><a href="#databaseinfo">[]Database<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of DatabaseInfo{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -432,7 +432,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sourceconnectioninfo_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info</a> | <a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info</a> | <a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a> | <a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -448,7 +448,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#targetconnectioninfo_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info</a> | <a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info</a> | <a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a> | <a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a> | <a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd></dl>
 {{% /choosable %}}

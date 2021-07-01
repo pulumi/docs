@@ -584,7 +584,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#datalakestoreaccounts_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Lake<wbr>Store<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#adddatalakestorewithaccountparameters">[]Add<wbr>Data<wbr>Lake<wbr>Store<wbr>With<wbr>Account<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#adddatalakestorewithaccountparameters">[]Add<wbr>Data<wbr>Lake<wbr>Store<wbr>With<wbr>Account<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of Data Lake Store accounts associated with this account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -616,7 +616,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#computepolicies_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createcomputepolicywithaccountparameters">[]Create<wbr>Compute<wbr>Policy<wbr>With<wbr>Account<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#createcomputepolicywithaccountparameters">[]Create<wbr>Compute<wbr>Policy<wbr>With<wbr>Account<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of compute policies associated with this account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +624,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallallowazureips_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Allow<wbr>Azure<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallowazureipsstate">Firewall<wbr>Allow<wbr>Azure<wbr>Ips<wbr>State</a></span>
+        <span class="property-type"><a href="#firewallallowazureipsstate">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -632,7 +632,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallrules_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createfirewallrulewithaccountparameters">[]Create<wbr>Firewall<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#createfirewallrulewithaccountparameters">[]Create<wbr>Firewall<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -640,7 +640,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallstate_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallstate">Firewall<wbr>State</a></span>
+        <span class="property-type"><a href="#firewallstate">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of the IP address firewall for this account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +688,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#newtier_go" style="color: inherit; text-decoration: inherit;">New<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tiertype">Tier<wbr>Type</a></span>
+        <span class="property-type"><a href="#tiertype">string</a></span>
     </dt>
     <dd>{{% md %}}The commitment tier for the next month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -704,7 +704,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addstorageaccountwithaccountparameters">[]Add<wbr>Storage<wbr>Account<wbr>With<wbr>Account<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#addstorageaccountwithaccountparameters">[]Add<wbr>Storage<wbr>Account<wbr>With<wbr>Account<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure Blob Storage accounts associated with this account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

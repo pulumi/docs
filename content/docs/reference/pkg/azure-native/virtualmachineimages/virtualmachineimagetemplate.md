@@ -890,7 +890,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplateidentity">Image<wbr>Template<wbr>Identity</a></span>
+        <span class="property-type"><a href="#imagetemplateidentity">Image<wbr>Template<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the image template, if configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -906,7 +906,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplatemanagedimagesource">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source</a> | <a href="#imagetemplateplatformimagesource">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source</a> | <a href="#imagetemplatesharedimageversionsource">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source</a></span>
+        <span class="property-type"><a href="#imagetemplatemanagedimagesource">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Args</a> | <a href="#imagetemplateplatformimagesource">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Args</a> | <a href="#imagetemplatesharedimageversionsource">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +954,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 <a href="#vmprofile_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagetemplatevmprofile">Image<wbr>Template<wbr>Vm<wbr>Profile</a></span>
+        <span class="property-type"><a href="#imagetemplatevmprofile">Image<wbr>Template<wbr>Vm<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how virtual machine is set up to build images{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1673,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1743,7 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1783,7 +1783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1803,7 +1803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2477,7 +2477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#planinfo_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplan">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplan">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Platform<wbr>Image<wbr>Purchase<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2565,7 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#planinfo_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplan">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplan">Platform<wbr>Image<wbr>Purchase<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2609,7 +2609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plan_info_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplan">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplan">Platform<wbr>Image<wbr>Purchase<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2655,7 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#planinfo_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2743,7 +2743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#planinfo_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2787,7 +2787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plan_info_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4593,7 +4593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetconfig_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4649,7 +4649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetconfig_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfig">Virtual<wbr>Network<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfig">Virtual<wbr>Network<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4677,7 +4677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_config_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfig">Virtual<wbr>Network<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfig">Virtual<wbr>Network<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4707,7 +4707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetconfig_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4763,7 +4763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetconfig_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4791,7 +4791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_config_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}

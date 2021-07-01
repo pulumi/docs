@@ -1619,7 +1619,7 @@ The Output resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakestoreoutputdatasource">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#azuresqldatabaseoutputdatasource">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#azuretableoutputdatasource">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#bloboutputdatasource">Blob<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#documentdboutputdatasource">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#eventhuboutputdatasource">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#powerbioutputdatasource">Power<wbr>BIOutput<wbr>Data<wbr>Source</a> | <a href="#servicebusqueueoutputdatasource">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#servicebustopicoutputdatasource">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasource">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#azuresqldatabaseoutputdatasource">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#azuretableoutputdatasource">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#bloboutputdatasource">Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#documentdboutputdatasource">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhuboutputdatasource">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#powerbioutputdatasource">Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#servicebusqueueoutputdatasource">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#servicebustopicoutputdatasource">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1643,7 +1643,7 @@ The Output resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3370,7 +3370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3458,7 +3458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3502,7 +3502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3548,7 +3548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3636,7 +3636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3680,7 +3680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3980,7 +3980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostic<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#diagnosticconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostic<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4004,7 +4004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticconditionresponse">Diagnostic<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#diagnosticconditionresponse">Diagnostic<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4016,7 +4016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticconditionresponse">Sequence[Diagnostic<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diagnosticconditionresponse">Sequence[Diagnostic<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd></dl>
 {{% /choosable %}}

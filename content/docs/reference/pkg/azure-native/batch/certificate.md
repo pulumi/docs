@@ -612,7 +612,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateformat">Certificate<wbr>Format</a></span>
+        <span class="property-type"><a href="#certificateformat">string</a></span>
     </dt>
     <dd>{{% md %}}The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1181,7 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deletecertificateerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Delete<wbr>Certificate<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#deletecertificateerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Delete<wbr>Certificate<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deletecertificateerrorresponse">Delete<wbr>Certificate<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#deletecertificateerrorresponse">Delete<wbr>Certificate<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deletecertificateerrorresponse">Sequence[Delete<wbr>Certificate<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deletecertificateerrorresponse">Sequence[Delete<wbr>Certificate<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

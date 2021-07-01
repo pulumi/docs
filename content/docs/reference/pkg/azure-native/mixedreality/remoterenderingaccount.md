@@ -384,7 +384,7 @@ The RemoteRenderingAccount resource accepts the following [input]({{< relref "/d
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity associated with this account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -392,7 +392,7 @@ The RemoteRenderingAccount resource accepts the following [input]({{< relref "/d
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The kind of account, if supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -408,7 +408,7 @@ The RemoteRenderingAccount resource accepts the following [input]({{< relref "/d
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The plan associated with this account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -416,7 +416,7 @@ The RemoteRenderingAccount resource accepts the following [input]({{< relref "/d
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku associated with this account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -835,7 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1085,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skutier">Sku<wbr>Tier</a></span>
+        <span class="property-type"><a href="#skutier">string</a></span>
     </dt>
     <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -944,7 +944,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#authorizations_go" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceproviderauthorization">[]Workspace<wbr>Provider<wbr>Authorization</a></span>
+        <span class="property-type"><a href="#workspaceproviderauthorization">[]Workspace<wbr>Provider<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workspace provider authorizations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -960,7 +960,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomparameters">Workspace<wbr>Custom<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#workspacecustomparameters">Workspace<wbr>Custom<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workspace's custom parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -968,7 +968,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2435,7 +2435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amlworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Aml<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Azure Machine Learning workspace to link with Databricks workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2443,7 +2443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customprivatesubnetname_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Private<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}The name of the Private Subnet within the Virtual Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2451,7 +2451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custompublicsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Public<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}The name of a Public Subnet within the Virtual Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2459,7 +2459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customvirtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Virtual<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Virtual Network where this Databricks Cluster should be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2467,7 +2467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenopublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>No<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Should the Public IP be Disabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2475,7 +2475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceencryptionparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Encryption<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspaceencryptionparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Encryption<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2483,7 +2483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerbackendpoolname_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Name of the outbound Load Balancer Backend Pool for Secure Cluster Connectivity (No Public IP).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2491,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Resource URI of Outbound Load balancer for Secure Cluster Connectivity (No Public IP) workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2499,7 +2499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#natgatewayname_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2507,7 +2507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prepareencryption_csharp" style="color: inherit; text-decoration: inherit;">Prepare<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2515,7 +2515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipname_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Name of the Public IP for No Public IP workspace with managed vNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2523,7 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requireinfrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2531,7 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Default DBFS storage account name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2539,7 +2539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountskuname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Storage account SKU name, ex: Standard_GRS, Standard_LRS. Refer https://aka.ms/storageskus for valid inputs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2547,7 +2547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetaddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Address prefix for Managed virtual network. Default value for this input is 10.139.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2683,7 +2683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amlworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">aml<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Azure Machine Learning workspace to link with Databricks workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2691,7 +2691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customprivatesubnetname_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Private<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}The name of the Private Subnet within the Virtual Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2699,7 +2699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custompublicsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Public<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}The name of a Public Subnet within the Virtual Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2707,7 +2707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customvirtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Virtual<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Virtual Network where this Databricks Cluster should be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2715,7 +2715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenopublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>No<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Should the Public IP be Disabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2723,7 +2723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceencryptionparameter">Workspace<wbr>Encryption<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspaceencryptionparameter">Workspace<wbr>Encryption<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2731,7 +2731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerbackendpoolname_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Name of the outbound Load Balancer Backend Pool for Secure Cluster Connectivity (No Public IP).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2739,7 +2739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Resource URI of Outbound Load balancer for Secure Cluster Connectivity (No Public IP) workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2747,7 +2747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#natgatewayname_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Gateway<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2755,7 +2755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prepareencryption_nodejs" style="color: inherit; text-decoration: inherit;">prepare<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2763,7 +2763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipname_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Name of the Public IP for No Public IP workspace with managed vNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2771,7 +2771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requireinfrastructureencryption_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2779,7 +2779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Default DBFS storage account name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2787,7 +2787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountskuname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Storage account SKU name, ex: Standard_GRS, Standard_LRS. Refer https://aka.ms/storageskus for valid inputs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2795,7 +2795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Address prefix for Managed virtual network. Default value for this input is 10.139.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2807,7 +2807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aml_workspace_id_python" style="color: inherit; text-decoration: inherit;">aml_<wbr>workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Azure Machine Learning workspace to link with Databricks workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2815,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_private_subnet_name_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>private_<wbr>subnet_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}The name of the Private Subnet within the Virtual Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2823,7 +2823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_public_subnet_name_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>public_<wbr>subnet_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}The name of a Public Subnet within the Virtual Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2831,7 +2831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>virtual_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Virtual Network where this Databricks Cluster should be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2839,7 +2839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_no_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>no_<wbr>public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Should the Public IP be Disabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2847,7 +2847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceencryptionparameter">Workspace<wbr>Encryption<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspaceencryptionparameter">Workspace<wbr>Encryption<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2855,7 +2855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_backend_pool_name_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Name of the outbound Load Balancer Backend Pool for Secure Cluster Connectivity (No Public IP).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2863,7 +2863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Resource URI of Outbound Load balancer for Secure Cluster Connectivity (No Public IP) workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2871,7 +2871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nat_gateway_name_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>gateway_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2879,7 +2879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prepare_encryption_python" style="color: inherit; text-decoration: inherit;">prepare_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2887,7 +2887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Name of the Public IP for No Public IP workspace with managed vNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2895,7 +2895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">require_<wbr>infrastructure_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameter">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2903,7 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Default DBFS storage account name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2911,7 +2911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_sku_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>sku_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Storage account SKU name, ex: Standard_GRS, Standard_LRS. Refer https://aka.ms/storageskus for valid inputs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2919,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_address_prefix_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameter">Workspace<wbr>Custom<wbr>String<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Address prefix for Managed virtual network. Default value for this input is 10.139.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2933,7 +2933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetags_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomobjectparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Object<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomobjectparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Object<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Tags applied to resources under Managed resource group. These can be updated by updating tags at workspace level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2941,7 +2941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amlworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Aml<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Azure Machine Learning workspace to link with Databricks workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2949,7 +2949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customprivatesubnetname_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Private<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The name of the Private Subnet within the Virtual Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2957,7 +2957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custompublicsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Public<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The name of a Public Subnet within the Virtual Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2965,7 +2965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customvirtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Virtual<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Virtual Network where this Databricks Cluster should be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2973,7 +2973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenopublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>No<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Should the Public IP be Disabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2981,7 +2981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceencryptionparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Encryption<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspaceencryptionparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Encryption<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2989,7 +2989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerbackendpoolname_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Name of the outbound Load Balancer Backend Pool for Secure Cluster Connectivity (No Public IP).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2997,7 +2997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource URI of Outbound Load balancer for Secure Cluster Connectivity (No Public IP) workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3005,7 +3005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#natgatewayname_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Gateway<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3013,7 +3013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prepareencryption_csharp" style="color: inherit; text-decoration: inherit;">Prepare<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3021,7 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipname_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Name of the Public IP for No Public IP workspace with managed vNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3029,7 +3029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requireinfrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3037,7 +3037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default DBFS storage account name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3045,7 +3045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountskuname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Storage account SKU name, ex: Standard_GRS, Standard_LRS. Refer https://aka.ms/storageskus for valid inputs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3053,7 +3053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetaddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Address prefix for Managed virtual network. Default value for this input is 10.139.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3197,7 +3197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetags_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomobjectparameterresponse">Workspace<wbr>Custom<wbr>Object<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomobjectparameterresponse">Workspace<wbr>Custom<wbr>Object<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Tags applied to resources under Managed resource group. These can be updated by updating tags at workspace level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3205,7 +3205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#amlworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">aml<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Azure Machine Learning workspace to link with Databricks workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3213,7 +3213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customprivatesubnetname_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Private<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The name of the Private Subnet within the Virtual Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3221,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custompublicsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Public<wbr>Subnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The name of a Public Subnet within the Virtual Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3229,7 +3229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customvirtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Virtual<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Virtual Network where this Databricks Cluster should be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3237,7 +3237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablenopublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>No<wbr>Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Should the Public IP be Disabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3245,7 +3245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceencryptionparameterresponse">Workspace<wbr>Encryption<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspaceencryptionparameterresponse">Workspace<wbr>Encryption<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3253,7 +3253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerbackendpoolname_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Name of the outbound Load Balancer Backend Pool for Secure Cluster Connectivity (No Public IP).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3261,7 +3261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource URI of Outbound Load balancer for Secure Cluster Connectivity (No Public IP) workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3269,7 +3269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#natgatewayname_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Gateway<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3277,7 +3277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prepareencryption_nodejs" style="color: inherit; text-decoration: inherit;">prepare<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3285,7 +3285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipname_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Name of the Public IP for No Public IP workspace with managed vNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3293,7 +3293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requireinfrastructureencryption_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3301,7 +3301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default DBFS storage account name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3309,7 +3309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountskuname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Storage account SKU name, ex: Standard_GRS, Standard_LRS. Refer https://aka.ms/storageskus for valid inputs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3317,7 +3317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Address prefix for Managed virtual network. Default value for this input is 10.139.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3329,7 +3329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_tags_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomobjectparameterresponse">Workspace<wbr>Custom<wbr>Object<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomobjectparameterresponse">Workspace<wbr>Custom<wbr>Object<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Tags applied to resources under Managed resource group. These can be updated by updating tags at workspace level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3337,7 +3337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aml_workspace_id_python" style="color: inherit; text-decoration: inherit;">aml_<wbr>workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Azure Machine Learning workspace to link with Databricks workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3345,7 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_private_subnet_name_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>private_<wbr>subnet_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The name of the Private Subnet within the Virtual Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3353,7 +3353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_public_subnet_name_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>public_<wbr>subnet_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The name of a Public Subnet within the Virtual Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3361,7 +3361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>virtual_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The ID of a Virtual Network where this Databricks Cluster should be created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3369,7 +3369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_no_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>no_<wbr>public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Should the Public IP be Disabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3377,7 +3377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceencryptionparameterresponse">Workspace<wbr>Encryption<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspaceencryptionparameterresponse">Workspace<wbr>Encryption<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3385,7 +3385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_backend_pool_name_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Name of the outbound Load Balancer Backend Pool for Secure Cluster Connectivity (No Public IP).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3393,7 +3393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource URI of Outbound Load balancer for Secure Cluster Connectivity (No Public IP) workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3401,7 +3401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nat_gateway_name_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>gateway_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3409,7 +3409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prepare_encryption_python" style="color: inherit; text-decoration: inherit;">prepare_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3417,7 +3417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Name of the Public IP for No Public IP workspace with managed vNet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3425,7 +3425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">require_<wbr>infrastructure_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustombooleanparameterresponse">Workspace<wbr>Custom<wbr>Boolean<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3433,7 +3433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default DBFS storage account name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3441,7 +3441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_sku_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>sku_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Storage account SKU name, ex: Standard_GRS, Standard_LRS. Refer https://aka.ms/storageskus for valid inputs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3449,7 +3449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_address_prefix_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecustomstringparameterresponse">Workspace<wbr>Custom<wbr>String<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Address prefix for Managed virtual network. Default value for this input is 10.139.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3595,7 +3595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}The value which should be used for this field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3619,7 +3619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryption">Encryption</a></span>
     </dt>
     <dd>{{% md %}}The value which should be used for this field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3631,7 +3631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryption">Encryption</a></span>
     </dt>
     <dd>{{% md %}}The value which should be used for this field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3653,7 +3653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Databricks.<wbr>Inputs.<wbr>Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The value which should be used for this field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3693,7 +3693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The value which should be used for this field.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3713,7 +3713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The value which should be used for this field.{{% /md %}}</dd></dl>
 {{% /choosable %}}

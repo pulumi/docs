@@ -1624,7 +1624,7 @@ The Export resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#definition_go" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdefinition">Export<wbr>Definition</a></span>
+        <span class="property-type"><a href="#exportdefinition">Export<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1632,7 +1632,7 @@ The Export resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#deliveryinfo_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliveryinfo">Export<wbr>Delivery<wbr>Info</a></span>
+        <span class="property-type"><a href="#exportdeliveryinfo">Export<wbr>Delivery<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1672,7 +1672,7 @@ The Export resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportschedule">Export<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#exportschedule">Export<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has schedule information for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1999,7 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2007,7 +2007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deliveryinfo_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliveryinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Delivery<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdeliveryinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Delivery<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2031,7 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runhistory_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionlistresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportexecutionlistresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2087,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2095,7 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deliveryinfo_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2119,7 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runhistory_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2131,7 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2139,7 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2163,7 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_history_python" style="color: inherit; text-decoration: inherit;">run_<wbr>history</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2259,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Dataset<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdatasetconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Dataset<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2299,7 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetconfiguration">Export<wbr>Dataset<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdatasetconfiguration">Export<wbr>Dataset<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2319,7 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetconfiguration">Export<wbr>Dataset<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdatasetconfiguration">Export<wbr>Dataset<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2441,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdatasetconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2481,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetconfigurationresponse">Export<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdatasetconfigurationresponse">Export<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2501,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetconfigurationresponse">Export<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdatasetconfigurationresponse">Export<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2539,7 +2539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Dataset<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdataset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Dataset</a></span>
     </dt>
     <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2547,7 +2547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeperiod_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exporttimeperiod">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Time<wbr>Period<wbr>Args</a></span>
+        <span class="property-type"><a href="#exporttimeperiod">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Time<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2611,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdataset">Export<wbr>Dataset<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdataset">Export<wbr>Dataset</a></span>
     </dt>
     <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2619,7 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeperiod_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exporttimeperiod">Export<wbr>Time<wbr>Period<wbr>Args</a></span>
+        <span class="property-type"><a href="#exporttimeperiod">Export<wbr>Time<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2647,7 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_set_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdataset">Export<wbr>Dataset<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdataset">Export<wbr>Dataset</a></span>
     </dt>
     <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2655,7 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exporttimeperiod">Export<wbr>Time<wbr>Period<wbr>Args</a></span>
+        <span class="property-type"><a href="#exporttimeperiod">Export<wbr>Time<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2685,7 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Dataset<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdatasetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Dataset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2693,7 +2693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeperiod_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exporttimeperiodresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Time<wbr>Period<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exporttimeperiodresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2757,7 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetresponse">Export<wbr>Dataset<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdatasetresponse">Export<wbr>Dataset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2765,7 +2765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeperiod_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exporttimeperiodresponse">Export<wbr>Time<wbr>Period<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exporttimeperiodresponse">Export<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2793,7 +2793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_set_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetresponse">Export<wbr>Dataset<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdatasetresponse">Export<wbr>Dataset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2801,7 +2801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exporttimeperiodresponse">Export<wbr>Time<wbr>Period<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exporttimeperiodresponse">Export<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3043,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliverydestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Delivery<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdeliverydestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Delivery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3067,7 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliverydestination">Export<wbr>Delivery<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdeliverydestination">Export<wbr>Delivery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3079,7 +3079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliverydestination">Export<wbr>Delivery<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdeliverydestination">Export<wbr>Delivery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3093,7 +3093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliverydestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Delivery<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdeliverydestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Delivery<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3117,7 +3117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliverydestinationresponse">Export<wbr>Delivery<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdeliverydestinationresponse">Export<wbr>Delivery<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3129,7 +3129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliverydestinationresponse">Export<wbr>Delivery<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportdeliverydestinationresponse">Export<wbr>Delivery<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3143,7 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Execution<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#exportexecutionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Execution<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of export executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3167,7 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionresponse">Export<wbr>Execution<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#exportexecutionresponse">Export<wbr>Execution<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of export executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3179,7 +3179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionresponse">Sequence[Export<wbr>Execution<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#exportexecutionresponse">Sequence[Export<wbr>Execution<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of export executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3225,7 +3225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Error<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Error<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of any error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3265,7 +3265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runsettings_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonexportpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Common<wbr>Export<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#commonexportpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Common<wbr>Export<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3441,7 +3441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailsresponse">Error<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailsresponse">Error<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of any error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3481,7 +3481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runsettings_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonexportpropertiesresponse">Common<wbr>Export<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#commonexportpropertiesresponse">Common<wbr>Export<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3549,7 +3549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailsresponse">Error<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailsresponse">Error<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of any error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3589,7 +3589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_settings_python" style="color: inherit; text-decoration: inherit;">run_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonexportpropertiesresponse">Common<wbr>Export<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#commonexportpropertiesresponse">Common<wbr>Export<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3799,7 +3799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrenceperiod_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportrecurrenceperiod">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Recurrence<wbr>Period<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportrecurrenceperiod">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Recurrence<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3855,7 +3855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrenceperiod_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportrecurrenceperiod">Export<wbr>Recurrence<wbr>Period<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportrecurrenceperiod">Export<wbr>Recurrence<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3883,7 +3883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_period_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportrecurrenceperiod">Export<wbr>Recurrence<wbr>Period<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportrecurrenceperiod">Export<wbr>Recurrence<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3913,7 +3913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrenceperiod_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportrecurrenceperiodresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Recurrence<wbr>Period<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportrecurrenceperiodresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Recurrence<wbr>Period<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3969,7 +3969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrenceperiod_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportrecurrenceperiodresponse">Export<wbr>Recurrence<wbr>Period<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportrecurrenceperiodresponse">Export<wbr>Recurrence<wbr>Period<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3997,7 +3997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_period_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportrecurrenceperiodresponse">Export<wbr>Recurrence<wbr>Period<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportrecurrenceperiodresponse">Export<wbr>Recurrence<wbr>Period<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

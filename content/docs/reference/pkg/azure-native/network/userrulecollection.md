@@ -387,7 +387,7 @@ The UserRuleCollection resource accepts the following [input]({{< relref "/docs/
 <a href="#appliestogroups_go" style="color: inherit; text-decoration: inherit;">Applies<wbr>To<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkmanagersecuritygroupitem">[]Network<wbr>Manager<wbr>Security<wbr>Group<wbr>Item</a></span>
+        <span class="property-type"><a href="#networkmanagersecuritygroupitem">[]Network<wbr>Manager<wbr>Security<wbr>Group<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Groups for configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1076,7 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:network:UserRuleCollection myTestSecurityConfig /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManager/testNetworkManager/securityUserConfigurations/myTestSecurityConfig 
+$ pulumi import azure-native:network:UserRuleCollection myTestSecurityConfig /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManager/testNetworkManager/securityUserConfigurations/myTestSecurityConfig/ruleCollections/testRuleCollection 
 ```
 
 

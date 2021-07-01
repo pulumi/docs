@@ -741,7 +741,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#basepolicy_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parent firewall policy from which rules are inherited.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -749,7 +749,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#dnssettings_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnssettings">Dns<wbr>Settings</a></span>
+        <span class="property-type"><a href="#dnssettings">Dns<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DNS Proxy Settings definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -773,7 +773,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the firewall policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -781,7 +781,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#insights_go" style="color: inherit; text-decoration: inherit;">Insights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights</a></span>
+        <span class="property-type"><a href="#firewallpolicyinsights">Firewall<wbr>Policy<wbr>Insights<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Insights on Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -789,7 +789,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#intrusiondetection_go" style="color: inherit; text-decoration: inherit;">Intrusion<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetection">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for Intrusion detection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +805,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicysku">Firewall<wbr>Policy<wbr>Sku</a></span>
+        <span class="property-type"><a href="#firewallpolicysku">Firewall<wbr>Policy<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Firewall Policy SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -813,7 +813,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#snat_go" style="color: inherit; text-decoration: inherit;">Snat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicysnat">Firewall<wbr>Policy<wbr>SNAT</a></span>
+        <span class="property-type"><a href="#firewallpolicysnat">Firewall<wbr>Policy<wbr>SNATArgs</a></span>
     </dt>
     <dd>{{% md %}}The private IP addresses/IP ranges to which traffic will not be SNAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +837,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#threatintelwhitelist_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Intel<wbr>Whitelist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicythreatintelwhitelist">Firewall<wbr>Policy<wbr>Threat<wbr>Intel<wbr>Whitelist</a></span>
+        <span class="property-type"><a href="#firewallpolicythreatintelwhitelist">Firewall<wbr>Policy<wbr>Threat<wbr>Intel<wbr>Whitelist<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ThreatIntel Whitelist for Firewall Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -845,7 +845,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#transportsecurity_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicytransportsecurity">Firewall<wbr>Policy<wbr>Transport<wbr>Security</a></span>
+        <span class="property-type"><a href="#firewallpolicytransportsecurity">Firewall<wbr>Policy<wbr>Transport<wbr>Security<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}TLS Configuration definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1826,7 +1826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsresources_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsresources">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresources">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1882,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsresources_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsresources">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresources">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1910,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_analytics_resources_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsresources">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresources">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1940,7 +1940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsresources_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsresourcesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresourcesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1996,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsresources_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsresourcesresponse">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresourcesresponse">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2024,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_analytics_resources_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsresourcesresponse">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsresourcesresponse">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Resources<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Workspaces needed to configure the Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2046,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2086,7 +2086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfiguration">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfiguration">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2106,7 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfiguration">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfiguration">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2676,7 +2676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypasstrafficsettings_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Traffic<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecifications">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecifications">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2684,7 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signatureoverrides_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecification">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecification">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2716,7 +2716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypasstrafficsettings_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Traffic<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecifications">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecifications">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications[]</a></span>
     </dt>
     <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2724,7 +2724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signatureoverrides_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecification">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecification">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2736,7 +2736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_traffic_settings_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>traffic_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecifications">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecifications">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications]</a></span>
     </dt>
     <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2744,7 +2744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signature_overrides_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecification">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecification">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification]</a></span>
     </dt>
     <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2758,7 +2758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypasstrafficsettings_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Traffic<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2766,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signatureoverrides_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2798,7 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypasstrafficsettings_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Traffic<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2806,7 +2806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signatureoverrides_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2818,7 +2818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_traffic_settings_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>traffic_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionbypasstrafficspecificationsresponse">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Bypass<wbr>Traffic<wbr>Specifications<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rules for traffic to bypass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2826,7 +2826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#signature_overrides_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionsignaturespecificationresponse">Sequence[Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Signature<wbr>Specification<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of specific signatures states.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2874,7 +2874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2914,7 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2934,7 +2934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyintrusiondetectionconfigurationresponse">Firewall<wbr>Policy<wbr>Intrusion<wbr>Detection<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Intrusion detection configuration properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3150,7 +3150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3158,7 +3158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaces_csharp" style="color: inherit; text-decoration: inherit;">Workspaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspace">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspace">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3190,7 +3190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3198,7 +3198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaces_nodejs" style="color: inherit; text-decoration: inherit;">workspaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspace">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspace">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace[]</a></span>
     </dt>
     <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3210,7 +3210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_workspace_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3218,7 +3218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaces_python" style="color: inherit; text-decoration: inherit;">workspaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspace">Sequence[Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspace">Sequence[Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace]</a></span>
     </dt>
     <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3232,7 +3232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3240,7 +3240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaces_csharp" style="color: inherit; text-decoration: inherit;">Workspaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3272,7 +3272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3280,7 +3280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaces_nodejs" style="color: inherit; text-decoration: inherit;">workspaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspaceresponse">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspaceresponse">Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3292,7 +3292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_workspace_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The default workspace Id for Firewall Policy Insights.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3300,7 +3300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaces_python" style="color: inherit; text-decoration: inherit;">workspaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspaceresponse">Sequence[Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyloganalyticsworkspaceresponse">Sequence[Firewall<wbr>Policy<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of workspaces for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3322,7 +3322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3362,7 +3362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3382,7 +3382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3404,7 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3444,7 +3444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3464,7 +3464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The workspace Id for Firewall Policy Insights.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3868,7 +3868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycertificateauthority">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicycertificateauthority">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Certificate<wbr>Authority</a></span>
     </dt>
     <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3892,7 +3892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycertificateauthority">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicycertificateauthority">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority</a></span>
     </dt>
     <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3904,7 +3904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycertificateauthority">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicycertificateauthority">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority</a></span>
     </dt>
     <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3918,7 +3918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3942,7 +3942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3954,7 +3954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicycertificateauthorityresponse">Firewall<wbr>Policy<wbr>Certificate<wbr>Authority<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The CA used for intermediate CA generation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3988,7 +3988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4074,7 +4074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4146,7 +4146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4182,7 +4182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}

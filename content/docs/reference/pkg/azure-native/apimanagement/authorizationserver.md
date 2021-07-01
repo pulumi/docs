@@ -615,7 +615,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#tokenbodyparameters_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Body<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenbodyparametercontract">[]Token<wbr>Body<wbr>Parameter<wbr>Contract</a></span>
+        <span class="property-type"><a href="#tokenbodyparametercontract">[]Token<wbr>Body<wbr>Parameter<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

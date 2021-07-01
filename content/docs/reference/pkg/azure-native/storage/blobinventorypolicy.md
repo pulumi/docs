@@ -425,7 +425,7 @@ The BlobInventoryPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyschema">Blob<wbr>Inventory<wbr>Policy<wbr>Schema</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyschema">Blob<wbr>Inventory<wbr>Policy<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy object. It is composed of policy rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -720,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyfilter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyfilter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -744,7 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyfilter">Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyfilter">Blob<wbr>Inventory<wbr>Policy<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -756,7 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyfilter">Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyfilter">Blob<wbr>Inventory<wbr>Policy<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -770,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -794,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyfilterresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyfilterresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -806,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyfilterresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyfilterresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1112,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicydefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicydefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the blob inventory policy rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1168,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicydefinition">Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicydefinition">Blob<wbr>Inventory<wbr>Policy<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the blob inventory policy rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1196,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicydefinition">Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicydefinition">Blob<wbr>Inventory<wbr>Policy<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the blob inventory policy rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1226,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the blob inventory policy rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1282,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicydefinitionresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicydefinitionresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the blob inventory policy rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1310,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicydefinitionresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicydefinitionresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the blob inventory policy rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1356,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy rules. The rule is applied when it is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1428,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyrule">Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyrule">Blob<wbr>Inventory<wbr>Policy<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy rules. The rule is applied when it is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1464,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyrule">Sequence[Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyrule">Sequence[Blob<wbr>Inventory<wbr>Policy<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy rules. The rule is applied when it is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1502,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy rules. The rule is applied when it is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1574,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyruleresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyruleresponse">Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy rules. The rule is applied when it is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1610,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyruleresponse">Sequence[Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyruleresponse">Sequence[Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The storage account blob inventory policy rules. The rule is applied when it is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">

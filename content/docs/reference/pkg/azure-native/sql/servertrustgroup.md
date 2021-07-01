@@ -371,7 +371,7 @@ The ServerTrustGroup resource accepts the following [input]({{< relref "/docs/in
 <a href="#groupmembers_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverinfo">[]Server<wbr>Info</a></span>
+        <span class="property-type"><a href="#serverinfo">[]Server<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Group members information for the server trust group.{{% /md %}}</dd><dt class="property-required"
             title="Required">

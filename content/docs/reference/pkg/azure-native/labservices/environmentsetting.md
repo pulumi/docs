@@ -304,7 +304,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
 <a href="#resourcesettings_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesettings">Resource<wbr>Settings</a></span>
+        <span class="property-type"><a href="#resourcesettings">Resource<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource specific settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1207,7 +1207,7 @@ or they haven't started the configuration process.{{% /md %}}</dd><dt>COMPLETED<
 <a href="#vmstatedetails_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>State<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmstatedetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Vm<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmstatedetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Vm<wbr>State<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1279,7 +1279,7 @@ or they haven't started the configuration process.{{% /md %}}</dd><dt>COMPLETED<
 <a href="#vmstatedetails_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>State<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmstatedetailsresponse">Vm<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmstatedetailsresponse">Vm<wbr>State<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1315,7 +1315,7 @@ or they haven't started the configuration process.{{% /md %}}</dd><dt>COMPLETED<
 <a href="#vm_state_details_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>state_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmstatedetailsresponse">Vm<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmstatedetailsresponse">Vm<wbr>State<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1337,7 +1337,7 @@ or they haven't started the configuration process.{{% /md %}}</dd><dt>COMPLETED<
 <a href="#referencevm_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencevm">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Reference<wbr>Vm<wbr>Args</a></span>
+        <span class="property-type"><a href="#referencevm">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Reference<wbr>Vm</a></span>
     </dt>
     <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1393,7 +1393,7 @@ or they haven't started the configuration process.{{% /md %}}</dd><dt>COMPLETED<
 <a href="#referencevm_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencevm">Reference<wbr>Vm<wbr>Args</a></span>
+        <span class="property-type"><a href="#referencevm">Reference<wbr>Vm</a></span>
     </dt>
     <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1421,7 @@ or they haven't started the configuration process.{{% /md %}}</dd><dt>COMPLETED<
 <a href="#reference_vm_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencevm">Reference<wbr>Vm<wbr>Args</a></span>
+        <span class="property-type"><a href="#referencevm">Reference<wbr>Vm</a></span>
     </dt>
     <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1475,7 +1475,7 @@ or they haven't started the configuration process.{{% /md %}}</dd><dt>COMPLETED<
 <a href="#referencevm_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencevmresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Reference<wbr>Vm<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#referencevmresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Reference<wbr>Vm<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1579,7 +1579,7 @@ or they haven't started the configuration process.{{% /md %}}</dd><dt>COMPLETED<
 <a href="#referencevm_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencevmresponse">Reference<wbr>Vm<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#referencevmresponse">Reference<wbr>Vm<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1631,7 @@ or they haven't started the configuration process.{{% /md %}}</dd><dt>COMPLETED<
 <a href="#reference_vm_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencevmresponse">Reference<wbr>Vm<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#referencevmresponse">Reference<wbr>Vm<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

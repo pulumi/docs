@@ -383,7 +383,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokencredentialsproperties">Token<wbr>Credentials<wbr>Properties</a></span>
+        <span class="property-type"><a href="#tokencredentialsproperties">Token<wbr>Credentials<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The credentials that can be used for authenticating the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1278,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokencertificate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Token<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tokencertificate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Token<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1286,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passwords_csharp" style="color: inherit; text-decoration: inherit;">Passwords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenpassword">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Token<wbr>Password<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tokenpassword">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Token<wbr>Password&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1318,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokencertificate">Token<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#tokencertificate">Token<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1326,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passwords_nodejs" style="color: inherit; text-decoration: inherit;">passwords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenpassword">Token<wbr>Password<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#tokenpassword">Token<wbr>Password[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1338,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokencertificate">Sequence[Token<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tokencertificate">Sequence[Token<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1346,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passwords_python" style="color: inherit; text-decoration: inherit;">passwords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenpassword">Sequence[Token<wbr>Password<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tokenpassword">Sequence[Token<wbr>Password]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1360,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokencertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Token<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tokencertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Token<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1368,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passwords_csharp" style="color: inherit; text-decoration: inherit;">Passwords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenpasswordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Token<wbr>Password<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tokenpasswordresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Token<wbr>Password<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1400,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokencertificateresponse">Token<wbr>Certificate<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#tokencertificateresponse">Token<wbr>Certificate<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1408,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passwords_nodejs" style="color: inherit; text-decoration: inherit;">passwords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenpasswordresponse">Token<wbr>Password<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#tokenpasswordresponse">Token<wbr>Password<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1420,7 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokencertificateresponse">Sequence[Token<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tokencertificateresponse">Sequence[Token<wbr>Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1428,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passwords_python" style="color: inherit; text-decoration: inherit;">passwords</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenpasswordresponse">Sequence[Token<wbr>Password<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tokenpasswordresponse">Sequence[Token<wbr>Password<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

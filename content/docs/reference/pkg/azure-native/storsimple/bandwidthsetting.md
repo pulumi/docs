@@ -369,7 +369,7 @@ The BandwidthSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bandwidthschedule">[]Bandwidth<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#bandwidthschedule">[]Bandwidth<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The schedules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -385,7 +385,7 @@ The BandwidthSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kind">Kind</a></span>
+        <span class="property-type"><a href="#kind">string</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -664,7 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#time">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#time">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -672,7 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stop_csharp" style="color: inherit; text-decoration: inherit;">Stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#time">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#time">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -736,7 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#time">Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#time">Time</a></span>
     </dt>
     <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -744,7 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stop_nodejs" style="color: inherit; text-decoration: inherit;">stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#time">Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#time">Time</a></span>
     </dt>
     <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -772,7 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#time">Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#time">Time</a></span>
     </dt>
     <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -780,7 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stop_python" style="color: inherit; text-decoration: inherit;">stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#time">Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#time">Time</a></span>
     </dt>
     <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -810,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -818,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stop_csharp" style="color: inherit; text-decoration: inherit;">Stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -882,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timeresponse">Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -890,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stop_nodejs" style="color: inherit; text-decoration: inherit;">stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timeresponse">Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -918,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timeresponse">Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The start time of the schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -926,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stop_python" style="color: inherit; text-decoration: inherit;">stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeresponse">Time<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timeresponse">Time<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The stop time of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}

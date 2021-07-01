@@ -389,7 +389,7 @@ The VirtualRouter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#hostedgateway_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Gateway on which VirtualRouter is hosted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -397,7 +397,7 @@ The VirtualRouter resource accepts the following [input]({{< relref "/docs/intro
 <a href="#hostedsubnet_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Subnet on which VirtualRouter is hosted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

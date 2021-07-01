@@ -318,7 +318,7 @@ The RegistrationAssignment resource accepts the following [input]({{< relref "/d
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentproperties">Registration<wbr>Assignment<wbr>Properties</a></span>
+        <span class="property-type"><a href="#registrationassignmentproperties">Registration<wbr>Assignment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of a registration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -875,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationdefinition_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponseregistrationdefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Registration<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponseregistrationdefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Registration<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}Registration definition inside registration assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -931,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationdefinition_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponseregistrationdefinition">Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Registration<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponseregistrationdefinition">Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Registration<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}Registration definition inside registration assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -959,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_definition_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponseregistrationdefinition">Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Registration<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponseregistrationdefinition">Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Registration<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}Registration definition inside registration assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -981,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_csharp" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#authorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Authorization<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_nodejs" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Sequence[Authorization<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Sequence[Authorization<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1279,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#planresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Plan details for the managed services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1287,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of registration definition inside registration assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1367,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planresponse">Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#planresponse">Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Plan details for the managed services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1375,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponseproperties">Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponseproperties">Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of registration definition inside registration assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1411,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#planresponse">Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#planresponse">Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Plan details for the managed services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1419,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationassignmentpropertiesresponseproperties">Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#registrationassignmentpropertiesresponseproperties">Registration<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of registration definition inside registration assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}

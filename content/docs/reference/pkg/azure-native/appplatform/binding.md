@@ -389,7 +389,7 @@ The Binding resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bindingresourceproperties">Binding<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#bindingresourceproperties">Binding<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Binding resource{{% /md %}}</dd></dl>
 {{% /choosable %}}

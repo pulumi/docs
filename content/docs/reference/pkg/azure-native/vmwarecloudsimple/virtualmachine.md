@@ -548,7 +548,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#customization_go" style="color: inherit; text-decoration: inherit;">Customization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestoscustomization">Guest<wbr>OSCustomization</a></span>
+        <span class="property-type"><a href="#guestoscustomization">Guest<wbr>OSCustomization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual machine properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -556,7 +556,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdisk">[]Virtual<wbr>Disk</a></span>
+        <span class="property-type"><a href="#virtualdisk">[]Virtual<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual Disks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -580,7 +580,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#nics_go" style="color: inherit; text-decoration: inherit;">Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnic">[]Virtual<wbr>Nic</a></span>
+        <span class="property-type"><a href="#virtualnic">[]Virtual<wbr>Nic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of Virtual NICs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -596,7 +596,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcepool_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepool">Resource<wbr>Pool</a></span>
+        <span class="property-type"><a href="#resourcepool">Resource<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machines Resource Pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3265,7 +3265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetwork">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetwork">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Virtual<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3281,7 +3281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customization_csharp" style="color: inherit; text-decoration: inherit;">Customization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosniccustomization">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Guest<wbr>OSNICCustomization<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestosniccustomization">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Guest<wbr>OSNICCustomization</a></span>
     </dt>
     <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3385,7 +3385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetwork">Virtual<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetwork">Virtual<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3401,7 +3401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customization_nodejs" style="color: inherit; text-decoration: inherit;">customization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosniccustomization">Guest<wbr>OSNICCustomization<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestosniccustomization">Guest<wbr>OSNICCustomization</a></span>
     </dt>
     <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3445,7 +3445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetwork">Virtual<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetwork">Virtual<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3461,7 +3461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customization_python" style="color: inherit; text-decoration: inherit;">customization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosniccustomization">Guest<wbr>OSNICCustomization<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestosniccustomization">Guest<wbr>OSNICCustomization</a></span>
     </dt>
     <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3507,7 +3507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3531,7 +3531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customization_csharp" style="color: inherit; text-decoration: inherit;">Customization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosniccustomizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Guest<wbr>OSNICCustomization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestosniccustomizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>VMware<wbr>Cloud<wbr>Simple.<wbr>Inputs.<wbr>Guest<wbr>OSNICCustomization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3643,7 +3643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkresponse">Virtual<wbr>Network<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkresponse">Virtual<wbr>Network<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3667,7 +3667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customization_nodejs" style="color: inherit; text-decoration: inherit;">customization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosniccustomizationresponse">Guest<wbr>OSNICCustomization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestosniccustomizationresponse">Guest<wbr>OSNICCustomization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3711,7 +3711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkresponse">Virtual<wbr>Network<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkresponse">Virtual<wbr>Network<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3735,7 +3735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customization_python" style="color: inherit; text-decoration: inherit;">customization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestosniccustomizationresponse">Guest<wbr>OSNICCustomization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestosniccustomizationresponse">Guest<wbr>OSNICCustomization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}guest OS customization for nic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

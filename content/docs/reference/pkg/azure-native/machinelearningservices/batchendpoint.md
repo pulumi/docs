@@ -428,7 +428,7 @@ The BatchEndpoint resource accepts the following [input]({{< relref "/docs/intro
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchendpoint">Batch<wbr>Endpoint<wbr>Type</a></span>
+        <span class="property-type"><a href="#batchendpoint">Batch<wbr>Endpoint<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes of the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -460,7 +460,7 @@ The BatchEndpoint resource accepts the following [input]({{< relref "/docs/intro
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service identity associated with a resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -811,7 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointauthkeys">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Endpoint<wbr>Auth<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointauthkeys">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Endpoint<wbr>Auth<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}EndpointAuthKeys to set initially on an Endpoint.
 This property will always be returned as null. AuthKey values must be retrieved using the ListKeys API.{{% /md %}}</dd><dt class="property-optional"
@@ -901,7 +901,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointauthkeys">Endpoint<wbr>Auth<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointauthkeys">Endpoint<wbr>Auth<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}EndpointAuthKeys to set initially on an Endpoint.
 This property will always be returned as null. AuthKey values must be retrieved using the ListKeys API.{{% /md %}}</dd><dt class="property-optional"
@@ -946,7 +946,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointauthkeys">Endpoint<wbr>Auth<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointauthkeys">Endpoint<wbr>Auth<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}EndpointAuthKeys to set initially on an Endpoint.
 This property will always be returned as null. AuthKey values must be retrieved using the ListKeys API.{{% /md %}}</dd><dt class="property-optional"
@@ -1307,7 +1307,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Meta&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1347,7 +1347,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Meta}</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1367,7 +1367,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Meta]</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1439,7 +1439,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1511,7 +1511,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1547,7 +1547,7 @@ This property will always be returned as null. AuthKey values must be retrieved 
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}

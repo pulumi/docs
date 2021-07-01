@@ -353,7 +353,7 @@ The TestBaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testbaseaccountsku">Test<wbr>Base<wbr>Account<wbr>SKU</a></span>
+        <span class="property-type"><a href="#testbaseaccountsku">Test<wbr>Base<wbr>Account<wbr>SKUArgs</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Test Base Account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1198,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testbaseaccountskucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Test<wbr>Base<wbr>Account<wbr>SKUCapability<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#testbaseaccountskucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Test<wbr>Base<wbr>Account<wbr>SKUCapability<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The capabilities of a SKU.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1286,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testbaseaccountskucapabilityresponse">Test<wbr>Base<wbr>Account<wbr>SKUCapability<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#testbaseaccountskucapabilityresponse">Test<wbr>Base<wbr>Account<wbr>SKUCapability<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The capabilities of a SKU.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1330,7 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#testbaseaccountskucapabilityresponse">Sequence[Test<wbr>Base<wbr>Account<wbr>SKUCapability<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#testbaseaccountskucapabilityresponse">Sequence[Test<wbr>Base<wbr>Account<wbr>SKUCapability<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The capabilities of a SKU.{{% /md %}}</dd><dt class="property-required"
             title="Required">

@@ -524,7 +524,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nwrulesetiprules">[]NWRule<wbr>Set<wbr>Ip<wbr>Rules</a></span>
+        <span class="property-type"><a href="#nwrulesetiprules">[]NWRule<wbr>Set<wbr>Ip<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of IpRules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -532,7 +532,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nwrulesetvirtualnetworkrules">[]NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules</a></span>
+        <span class="property-type"><a href="#nwrulesetvirtualnetworkrules">[]NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List VirtualNetwork Rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -961,7 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnet">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>Subnet<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnet">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>Subnet</a></span>
     </dt>
     <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1001,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnet">Subnet<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnet">Subnet</a></span>
     </dt>
     <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1021,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnet">Subnet<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnet">Subnet</a></span>
     </dt>
     <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1043,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Bus.<wbr>Inputs.<wbr>Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1083,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1103,7 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}

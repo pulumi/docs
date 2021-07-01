@@ -360,7 +360,7 @@ The ManagedPrivateEndpoint resource accepts the following [input]({{< relref "/d
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedprivateendpoint">Managed<wbr>Private<wbr>Endpoint<wbr>Type</a></span>
+        <span class="property-type"><a href="#managedprivateendpoint">Managed<wbr>Private<wbr>Endpoint<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed private endpoint properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -883,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionstate_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionstatepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed private endpoint connection state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -987,7 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionstate_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatepropertiesresponse">Connection<wbr>State<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionstatepropertiesresponse">Connection<wbr>State<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed private endpoint connection state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1039,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_state_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatepropertiesresponse">Connection<wbr>State<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionstatepropertiesresponse">Connection<wbr>State<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed private endpoint connection state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

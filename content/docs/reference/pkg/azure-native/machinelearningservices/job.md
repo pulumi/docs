@@ -698,7 +698,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commandjob">Command<wbr>Job</a> | <a href="#sweepjob">Sweep<wbr>Job</a></span>
+        <span class="property-type"><a href="#commandjob">Command<wbr>Job<wbr>Args</a> | <a href="#sweepjob">Sweep<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes of the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1305,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compute_csharp" style="color: inherit; text-decoration: inherit;">Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Compute binding for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1329,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distribution_csharp" style="color: inherit; text-decoration: inherit;">Distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpi">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Mpi<wbr>Args</a> | <a href="#pytorch">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Py<wbr>Torch<wbr>Args</a> | <a href="#tensorflow">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Tensor<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#mpi">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Mpi</a> | <a href="#pytorch">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Py<wbr>Torch</a> | <a href="#tensorflow">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Tensor<wbr>Flow</a></span>
     </dt>
     <dd>{{% md %}}Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1361,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amltoken">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Token<wbr>Args</a> | <a href="#managedidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#amltoken">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Token</a> | <a href="#managedidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Managed<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
 Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
@@ -1370,7 +1370,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
 <a href="#inputdatabindings_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Input<wbr>Data<wbr>Binding<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Input<wbr>Data<wbr>Binding&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping of input data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1378,7 +1378,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
 <a href="#outputdatabindings_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Data<wbr>Binding<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Data<wbr>Binding&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping of output data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1557,7 +1557,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfiguration">Compute<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfiguration">Compute<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Compute binding for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1581,7 +1581,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#distribution_nodejs" style="color: inherit; text-decoration: inherit;">distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpi">Mpi<wbr>Args</a> | <a href="#pytorch">Py<wbr>Torch<wbr>Args</a> | <a href="#tensorflow">Tensor<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#mpi">Mpi</a> | <a href="#pytorch">Py<wbr>Torch</a> | <a href="#tensorflow">Tensor<wbr>Flow</a></span>
     </dt>
     <dd>{{% md %}}Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1613,7 +1613,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amltoken">Aml<wbr>Token<wbr>Args</a> | <a href="#managedidentity">Managed<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#amltoken">Aml<wbr>Token</a> | <a href="#managedidentity">Managed<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
 Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
@@ -1622,7 +1622,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
 <a href="#inputdatabindings_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Input<wbr>Data<wbr>Binding<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Input<wbr>Data<wbr>Binding}</span>
     </dt>
     <dd>{{% md %}}Mapping of input data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1630,7 +1630,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
 <a href="#outputdatabindings_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Output<wbr>Data<wbr>Binding<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Output<wbr>Data<wbr>Binding}</span>
     </dt>
     <dd>{{% md %}}Mapping of output data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1683,7 +1683,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfiguration">Compute<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfiguration">Compute<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Compute binding for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1707,7 +1707,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#distribution_python" style="color: inherit; text-decoration: inherit;">distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpi">Mpi<wbr>Args</a> | <a href="#pytorch">Py<wbr>Torch<wbr>Args</a> | <a href="#tensorflow">Tensor<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#mpi">Mpi</a> | <a href="#pytorch">Py<wbr>Torch</a> | <a href="#tensorflow">Tensor<wbr>Flow</a></span>
     </dt>
     <dd>{{% md %}}Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1739,7 +1739,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amltoken">Aml<wbr>Token<wbr>Args</a> | <a href="#managedidentity">Managed<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#amltoken">Aml<wbr>Token</a> | <a href="#managedidentity">Managed<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
 Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
@@ -1748,7 +1748,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
 <a href="#input_data_bindings_python" style="color: inherit; text-decoration: inherit;">input_<wbr>data_<wbr>bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Input<wbr>Data<wbr>Binding<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Input<wbr>Data<wbr>Binding]</span>
     </dt>
     <dd>{{% md %}}Mapping of input data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1756,7 +1756,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
 <a href="#output_data_bindings_python" style="color: inherit; text-decoration: inherit;">output_<wbr>data_<wbr>bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Output<wbr>Data<wbr>Binding<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Output<wbr>Data<wbr>Binding]</span>
     </dt>
     <dd>{{% md %}}Mapping of output data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1811,7 +1811,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#compute_csharp" style="color: inherit; text-decoration: inherit;">Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Compute binding for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1819,7 +1819,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#interactionendpoints_csharp" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Job<wbr>Endpoint<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Job<wbr>Endpoint<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}List of JobEndpoints.
 For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{{% /md %}}</dd><dt class="property-required"
@@ -1828,7 +1828,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joboutputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Job<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joboutputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Job<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Location of the job output logs and artifacts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1876,7 +1876,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#distribution_csharp" style="color: inherit; text-decoration: inherit;">Distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpiresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Mpi<wbr>Response<wbr>Args</a> | <a href="#pytorchresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Py<wbr>Torch<wbr>Response<wbr>Args</a> | <a href="#tensorflowresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Tensor<wbr>Flow<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mpiresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Mpi<wbr>Response</a> | <a href="#pytorchresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Py<wbr>Torch<wbr>Response</a> | <a href="#tensorflowresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Tensor<wbr>Flow<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1908,7 +1908,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amltokenresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Token<wbr>Response<wbr>Args</a> | <a href="#managedidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amltokenresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Token<wbr>Response</a> | <a href="#managedidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
 Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
@@ -1917,7 +1917,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
 <a href="#inputdatabindings_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Input<wbr>Data<wbr>Binding<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Input<wbr>Data<wbr>Binding<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping of input data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1925,7 +1925,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
 <a href="#outputdatabindings_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Data<wbr>Binding<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Data<wbr>Binding<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping of output data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2145,7 +2145,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfigurationresponse">Compute<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfigurationresponse">Compute<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Compute binding for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2153,7 +2153,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#interactionendpoints_nodejs" style="color: inherit; text-decoration: inherit;">interaction<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Job<wbr>Endpoint<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Job<wbr>Endpoint<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}List of JobEndpoints.
 For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{{% /md %}}</dd><dt class="property-required"
@@ -2162,7 +2162,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joboutputresponse">Job<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joboutputresponse">Job<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Location of the job output logs and artifacts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2210,7 +2210,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#distribution_nodejs" style="color: inherit; text-decoration: inherit;">distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpiresponse">Mpi<wbr>Response<wbr>Args</a> | <a href="#pytorchresponse">Py<wbr>Torch<wbr>Response<wbr>Args</a> | <a href="#tensorflowresponse">Tensor<wbr>Flow<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mpiresponse">Mpi<wbr>Response</a> | <a href="#pytorchresponse">Py<wbr>Torch<wbr>Response</a> | <a href="#tensorflowresponse">Tensor<wbr>Flow<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2242,7 +2242,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amltokenresponse">Aml<wbr>Token<wbr>Response<wbr>Args</a> | <a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amltokenresponse">Aml<wbr>Token<wbr>Response</a> | <a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
 Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
@@ -2251,7 +2251,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
 <a href="#inputdatabindings_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Input<wbr>Data<wbr>Binding<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Input<wbr>Data<wbr>Binding<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Mapping of input data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2259,7 +2259,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
 <a href="#outputdatabindings_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Output<wbr>Data<wbr>Binding<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Output<wbr>Data<wbr>Binding<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Mapping of output data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2312,7 +2312,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfigurationresponse">Compute<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfigurationresponse">Compute<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Compute binding for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2320,7 +2320,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#interaction_endpoints_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Job<wbr>Endpoint<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Job<wbr>Endpoint<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}List of JobEndpoints.
 For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{{% /md %}}</dd><dt class="property-required"
@@ -2329,7 +2329,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joboutputresponse">Job<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joboutputresponse">Job<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Location of the job output logs and artifacts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2377,7 +2377,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#distribution_python" style="color: inherit; text-decoration: inherit;">distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpiresponse">Mpi<wbr>Response<wbr>Args</a> | <a href="#pytorchresponse">Py<wbr>Torch<wbr>Response<wbr>Args</a> | <a href="#tensorflowresponse">Tensor<wbr>Flow<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mpiresponse">Mpi<wbr>Response</a> | <a href="#pytorchresponse">Py<wbr>Torch<wbr>Response</a> | <a href="#tensorflowresponse">Tensor<wbr>Flow<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2409,7 +2409,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amltokenresponse">Aml<wbr>Token<wbr>Response<wbr>Args</a> | <a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amltokenresponse">Aml<wbr>Token<wbr>Response</a> | <a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
 Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
@@ -2418,7 +2418,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
 <a href="#input_data_bindings_python" style="color: inherit; text-decoration: inherit;">input_<wbr>data_<wbr>bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Input<wbr>Data<wbr>Binding<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Input<wbr>Data<wbr>Binding<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Mapping of input data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2426,7 +2426,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
 <a href="#output_data_bindings_python" style="color: inherit; text-decoration: inherit;">output_<wbr>data_<wbr>bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Output<wbr>Data<wbr>Binding<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Output<wbr>Data<wbr>Binding<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Mapping of output data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4491,7 +4491,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#compute_csharp" style="color: inherit; text-decoration: inherit;">Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Compute binding for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4499,7 +4499,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#objective_csharp" style="color: inherit; text-decoration: inherit;">Objective</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objective">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Objective<wbr>Args</a></span>
+        <span class="property-type"><a href="#objective">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Objective</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4523,7 +4523,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#earlytermination_csharp" style="color: inherit; text-decoration: inherit;">Early<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#banditpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Bandit<wbr>Policy<wbr>Args</a> | <a href="#medianstoppingpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Median<wbr>Stopping<wbr>Policy<wbr>Args</a> | <a href="#truncationselectionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Truncation<wbr>Selection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#banditpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Bandit<wbr>Policy</a> | <a href="#medianstoppingpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Median<wbr>Stopping<wbr>Policy</a> | <a href="#truncationselectionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Truncation<wbr>Selection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Early termination policies enable canceling poor-performing runs before they complete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4539,7 +4539,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amltoken">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Token<wbr>Args</a> | <a href="#managedidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#amltoken">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Token</a> | <a href="#managedidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Managed<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
 Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
@@ -4597,7 +4597,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#trial_csharp" style="color: inherit; text-decoration: inherit;">Trial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trialcomponent">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Trial<wbr>Component<wbr>Args</a></span>
+        <span class="property-type"><a href="#trialcomponent">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Trial<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}Trial component definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4743,7 +4743,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfiguration">Compute<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfiguration">Compute<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Compute binding for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4751,7 +4751,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#objective_nodejs" style="color: inherit; text-decoration: inherit;">objective</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objective">Objective<wbr>Args</a></span>
+        <span class="property-type"><a href="#objective">Objective</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4775,7 +4775,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#earlytermination_nodejs" style="color: inherit; text-decoration: inherit;">early<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#banditpolicy">Bandit<wbr>Policy<wbr>Args</a> | <a href="#medianstoppingpolicy">Median<wbr>Stopping<wbr>Policy<wbr>Args</a> | <a href="#truncationselectionpolicy">Truncation<wbr>Selection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#banditpolicy">Bandit<wbr>Policy</a> | <a href="#medianstoppingpolicy">Median<wbr>Stopping<wbr>Policy</a> | <a href="#truncationselectionpolicy">Truncation<wbr>Selection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Early termination policies enable canceling poor-performing runs before they complete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4791,7 +4791,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amltoken">Aml<wbr>Token<wbr>Args</a> | <a href="#managedidentity">Managed<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#amltoken">Aml<wbr>Token</a> | <a href="#managedidentity">Managed<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
 Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
@@ -4849,7 +4849,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#trial_nodejs" style="color: inherit; text-decoration: inherit;">trial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trialcomponent">Trial<wbr>Component<wbr>Args</a></span>
+        <span class="property-type"><a href="#trialcomponent">Trial<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}Trial component definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4869,7 +4869,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfiguration">Compute<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfiguration">Compute<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Compute binding for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4877,7 +4877,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#objective_python" style="color: inherit; text-decoration: inherit;">objective</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objective">Objective<wbr>Args</a></span>
+        <span class="property-type"><a href="#objective">Objective</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4901,7 +4901,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#early_termination_python" style="color: inherit; text-decoration: inherit;">early_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#banditpolicy">Bandit<wbr>Policy<wbr>Args</a> | <a href="#medianstoppingpolicy">Median<wbr>Stopping<wbr>Policy<wbr>Args</a> | <a href="#truncationselectionpolicy">Truncation<wbr>Selection<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#banditpolicy">Bandit<wbr>Policy</a> | <a href="#medianstoppingpolicy">Median<wbr>Stopping<wbr>Policy</a> | <a href="#truncationselectionpolicy">Truncation<wbr>Selection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Early termination policies enable canceling poor-performing runs before they complete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4917,7 +4917,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amltoken">Aml<wbr>Token<wbr>Args</a> | <a href="#managedidentity">Managed<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#amltoken">Aml<wbr>Token</a> | <a href="#managedidentity">Managed<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
 Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
@@ -4975,7 +4975,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#trial_python" style="color: inherit; text-decoration: inherit;">trial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trialcomponent">Trial<wbr>Component<wbr>Args</a></span>
+        <span class="property-type"><a href="#trialcomponent">Trial<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}Trial component definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4997,7 +4997,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#compute_csharp" style="color: inherit; text-decoration: inherit;">Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Compute binding for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5005,7 +5005,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#interactionendpoints_csharp" style="color: inherit; text-decoration: inherit;">Interaction<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Job<wbr>Endpoint<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Job<wbr>Endpoint<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}List of JobEndpoints.
 For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{{% /md %}}</dd><dt class="property-required"
@@ -5014,7 +5014,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#objective_csharp" style="color: inherit; text-decoration: inherit;">Objective</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectiveresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Objective<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectiveresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Objective<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5022,7 +5022,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joboutputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Job<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joboutputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Job<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Location of the job output logs and artifacts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5062,7 +5062,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#earlytermination_csharp" style="color: inherit; text-decoration: inherit;">Early<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#banditpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Bandit<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#medianstoppingpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Median<wbr>Stopping<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#truncationselectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Truncation<wbr>Selection<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#banditpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Bandit<wbr>Policy<wbr>Response</a> | <a href="#medianstoppingpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Median<wbr>Stopping<wbr>Policy<wbr>Response</a> | <a href="#truncationselectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Truncation<wbr>Selection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Early termination policies enable canceling poor-performing runs before they complete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5078,7 +5078,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amltokenresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Token<wbr>Response<wbr>Args</a> | <a href="#managedidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amltokenresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Token<wbr>Response</a> | <a href="#managedidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
 Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
@@ -5136,7 +5136,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#trial_csharp" style="color: inherit; text-decoration: inherit;">Trial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trialcomponentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Trial<wbr>Component<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trialcomponentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Trial<wbr>Component<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Trial component definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5315,7 +5315,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfigurationresponse">Compute<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfigurationresponse">Compute<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Compute binding for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5323,7 +5323,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#interactionendpoints_nodejs" style="color: inherit; text-decoration: inherit;">interaction<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Job<wbr>Endpoint<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Job<wbr>Endpoint<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}List of JobEndpoints.
 For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{{% /md %}}</dd><dt class="property-required"
@@ -5332,7 +5332,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#objective_nodejs" style="color: inherit; text-decoration: inherit;">objective</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectiveresponse">Objective<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectiveresponse">Objective<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5340,7 +5340,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joboutputresponse">Job<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joboutputresponse">Job<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Location of the job output logs and artifacts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5380,7 +5380,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#earlytermination_nodejs" style="color: inherit; text-decoration: inherit;">early<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#banditpolicyresponse">Bandit<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#medianstoppingpolicyresponse">Median<wbr>Stopping<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#truncationselectionpolicyresponse">Truncation<wbr>Selection<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#banditpolicyresponse">Bandit<wbr>Policy<wbr>Response</a> | <a href="#medianstoppingpolicyresponse">Median<wbr>Stopping<wbr>Policy<wbr>Response</a> | <a href="#truncationselectionpolicyresponse">Truncation<wbr>Selection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Early termination policies enable canceling poor-performing runs before they complete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5396,7 +5396,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amltokenresponse">Aml<wbr>Token<wbr>Response<wbr>Args</a> | <a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amltokenresponse">Aml<wbr>Token<wbr>Response</a> | <a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
 Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
@@ -5454,7 +5454,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#trial_nodejs" style="color: inherit; text-decoration: inherit;">trial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trialcomponentresponse">Trial<wbr>Component<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trialcomponentresponse">Trial<wbr>Component<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Trial component definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5474,7 +5474,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeconfigurationresponse">Compute<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeconfigurationresponse">Compute<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Compute binding for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5482,7 +5482,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#interaction_endpoints_python" style="color: inherit; text-decoration: inherit;">interaction_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Job<wbr>Endpoint<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Job<wbr>Endpoint<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}List of JobEndpoints.
 For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{{% /md %}}</dd><dt class="property-required"
@@ -5491,7 +5491,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#objective_python" style="color: inherit; text-decoration: inherit;">objective</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectiveresponse">Objective<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectiveresponse">Objective<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5499,7 +5499,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joboutputresponse">Job<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joboutputresponse">Job<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Location of the job output logs and artifacts.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5539,7 +5539,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#early_termination_python" style="color: inherit; text-decoration: inherit;">early_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#banditpolicyresponse">Bandit<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#medianstoppingpolicyresponse">Median<wbr>Stopping<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#truncationselectionpolicyresponse">Truncation<wbr>Selection<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#banditpolicyresponse">Bandit<wbr>Policy<wbr>Response</a> | <a href="#medianstoppingpolicyresponse">Median<wbr>Stopping<wbr>Policy<wbr>Response</a> | <a href="#truncationselectionpolicyresponse">Truncation<wbr>Selection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Early termination policies enable canceling poor-performing runs before they complete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5555,7 +5555,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amltokenresponse">Aml<wbr>Token<wbr>Response<wbr>Args</a> | <a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#amltokenresponse">Aml<wbr>Token<wbr>Response</a> | <a href="#managedidentityresponse">Managed<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
 Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
@@ -5613,7 +5613,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#trial_python" style="color: inherit; text-decoration: inherit;">trial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trialcomponentresponse">Trial<wbr>Component<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trialcomponentresponse">Trial<wbr>Component<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Trial component definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6017,7 +6017,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#distribution_csharp" style="color: inherit; text-decoration: inherit;">Distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpi">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Mpi<wbr>Args</a> | <a href="#pytorch">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Py<wbr>Torch<wbr>Args</a> | <a href="#tensorflow">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Tensor<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#mpi">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Mpi</a> | <a href="#pytorch">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Py<wbr>Torch</a> | <a href="#tensorflow">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Tensor<wbr>Flow</a></span>
     </dt>
     <dd>{{% md %}}Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6041,7 +6041,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#inputdatabindings_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Input<wbr>Data<wbr>Binding<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Input<wbr>Data<wbr>Binding&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping of input data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6049,7 +6049,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
 <a href="#outputdatabindings_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Data<wbr>Binding<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Data<wbr>Binding&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping of output data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6155,7 +6155,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#distribution_nodejs" style="color: inherit; text-decoration: inherit;">distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpi">Mpi<wbr>Args</a> | <a href="#pytorch">Py<wbr>Torch<wbr>Args</a> | <a href="#tensorflow">Tensor<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#mpi">Mpi</a> | <a href="#pytorch">Py<wbr>Torch</a> | <a href="#tensorflow">Tensor<wbr>Flow</a></span>
     </dt>
     <dd>{{% md %}}Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6179,7 +6179,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#inputdatabindings_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Input<wbr>Data<wbr>Binding<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Input<wbr>Data<wbr>Binding}</span>
     </dt>
     <dd>{{% md %}}Mapping of input data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6187,7 +6187,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#outputdatabindings_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Output<wbr>Data<wbr>Binding<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Output<wbr>Data<wbr>Binding}</span>
     </dt>
     <dd>{{% md %}}Mapping of output data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6224,7 +6224,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#distribution_python" style="color: inherit; text-decoration: inherit;">distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpi">Mpi<wbr>Args</a> | <a href="#pytorch">Py<wbr>Torch<wbr>Args</a> | <a href="#tensorflow">Tensor<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#mpi">Mpi</a> | <a href="#pytorch">Py<wbr>Torch</a> | <a href="#tensorflow">Tensor<wbr>Flow</a></span>
     </dt>
     <dd>{{% md %}}Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6248,7 +6248,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#input_data_bindings_python" style="color: inherit; text-decoration: inherit;">input_<wbr>data_<wbr>bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Input<wbr>Data<wbr>Binding<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Input<wbr>Data<wbr>Binding]</span>
     </dt>
     <dd>{{% md %}}Mapping of input data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6256,7 +6256,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#output_data_bindings_python" style="color: inherit; text-decoration: inherit;">output_<wbr>data_<wbr>bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Output<wbr>Data<wbr>Binding<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Output<wbr>Data<wbr>Binding]</span>
     </dt>
     <dd>{{% md %}}Mapping of output data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6295,7 +6295,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#distribution_csharp" style="color: inherit; text-decoration: inherit;">Distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpiresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Mpi<wbr>Response<wbr>Args</a> | <a href="#pytorchresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Py<wbr>Torch<wbr>Response<wbr>Args</a> | <a href="#tensorflowresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Tensor<wbr>Flow<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mpiresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Mpi<wbr>Response</a> | <a href="#pytorchresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Py<wbr>Torch<wbr>Response</a> | <a href="#tensorflowresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Tensor<wbr>Flow<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6319,7 +6319,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#inputdatabindings_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Input<wbr>Data<wbr>Binding<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Input<wbr>Data<wbr>Binding<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping of input data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6327,7 +6327,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#outputdatabindings_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Data<wbr>Binding<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Data<wbr>Binding<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping of output data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6433,7 +6433,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#distribution_nodejs" style="color: inherit; text-decoration: inherit;">distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpiresponse">Mpi<wbr>Response<wbr>Args</a> | <a href="#pytorchresponse">Py<wbr>Torch<wbr>Response<wbr>Args</a> | <a href="#tensorflowresponse">Tensor<wbr>Flow<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mpiresponse">Mpi<wbr>Response</a> | <a href="#pytorchresponse">Py<wbr>Torch<wbr>Response</a> | <a href="#tensorflowresponse">Tensor<wbr>Flow<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6457,7 +6457,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#inputdatabindings_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Input<wbr>Data<wbr>Binding<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Input<wbr>Data<wbr>Binding<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Mapping of input data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6465,7 +6465,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#outputdatabindings_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Data<wbr>Bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Output<wbr>Data<wbr>Binding<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Output<wbr>Data<wbr>Binding<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Mapping of output data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6502,7 +6502,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#distribution_python" style="color: inherit; text-decoration: inherit;">distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpiresponse">Mpi<wbr>Response<wbr>Args</a> | <a href="#pytorchresponse">Py<wbr>Torch<wbr>Response<wbr>Args</a> | <a href="#tensorflowresponse">Tensor<wbr>Flow<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mpiresponse">Mpi<wbr>Response</a> | <a href="#pytorchresponse">Py<wbr>Torch<wbr>Response</a> | <a href="#tensorflowresponse">Tensor<wbr>Flow<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6526,7 +6526,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#input_data_bindings_python" style="color: inherit; text-decoration: inherit;">input_<wbr>data_<wbr>bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Input<wbr>Data<wbr>Binding<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Input<wbr>Data<wbr>Binding<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Mapping of input data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6534,7 +6534,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
 <a href="#output_data_bindings_python" style="color: inherit; text-decoration: inherit;">output_<wbr>data_<wbr>bindings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Output<wbr>Data<wbr>Binding<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Output<wbr>Data<wbr>Binding<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Mapping of output data bindings used in the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

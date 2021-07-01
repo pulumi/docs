@@ -474,7 +474,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#buildproperties_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticsitebuildproperties">Static<wbr>Site<wbr>Build<wbr>Properties</a></span>
+        <span class="property-type"><a href="#staticsitebuildproperties">Static<wbr>Site<wbr>Build<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Build properties to configure on the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +482,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +530,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescription">Sku<wbr>Description</a></span>
+        <span class="property-type"><a href="#skudescription">Sku<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description of a SKU for a scalable resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +538,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#stagingenvironmentpolicy_go" style="color: inherit; text-decoration: inherit;">Staging<wbr>Environment<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagingenvironmentpolicy">Staging<wbr>Environment<wbr>Policy</a></span>
+        <span class="property-type"><a href="#stagingenvironmentpolicy">string</a></span>
     </dt>
     <dd>{{% md %}}State indicating whether staging environments are allowed or not allowed for a static web app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +554,7 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#templateproperties_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticsitetemplateoptions">Static<wbr>Site<wbr>Template<wbr>Options</a></span>
+        <span class="property-type"><a href="#staticsitetemplateoptions">Static<wbr>Site<wbr>Template<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template options for generating a new repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1593,7 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innererrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Error<wbr>Entity<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errorentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Error<wbr>Entity<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Inner errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1697,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innererrors_nodejs" style="color: inherit; text-decoration: inherit;">inner<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorentityresponse">Error<wbr>Entity<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#errorentityresponse">Error<wbr>Entity<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Inner errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1749,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inner_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorentityresponse">Sequence[Error<wbr>Entity<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#errorentityresponse">Sequence[Error<wbr>Entity<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Inner errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1807,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentitytype">Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#managedserviceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1893,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1965,7 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2001,7 +2001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2293,7 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armidwrapperresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Arm<wbr>Id<wbr>Wrapper<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armidwrapperresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Arm<wbr>Id<wbr>Wrapper<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PrivateEndpoint of a remote private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2301,7 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The state of a private link connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2429,7 +2429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armidwrapperresponse">Arm<wbr>Id<wbr>Wrapper<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armidwrapperresponse">Arm<wbr>Id<wbr>Wrapper<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PrivateEndpoint of a remote private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The state of a private link connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2497,7 +2497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armidwrapperresponse">Arm<wbr>Id<wbr>Wrapper<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armidwrapperresponse">Arm<wbr>Id<wbr>Wrapper<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PrivateEndpoint of a remote private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2505,7 +2505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkconnectionstateresponse">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The state of a private link connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2519,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Error<wbr>Entity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Error<wbr>Entity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure-AsyncOperation Error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2537,7 +2537,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}MSI resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2561,7 +2561,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armplanresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Arm<wbr>Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armplanresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Arm<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure resource manager plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2569,7 +2569,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remoteprivateendpointconnectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#remoteprivateendpointconnectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource specific properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2577,7 +2577,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Description<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skudescriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SKU description of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2723,7 +2723,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorentityresponse">Error<wbr>Entity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorentityresponse">Error<wbr>Entity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure-AsyncOperation Error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2741,7 +2741,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}MSI resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2765,7 +2765,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armplanresponse">Arm<wbr>Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armplanresponse">Arm<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure resource manager plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2773,7 +2773,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remoteprivateendpointconnectionresponse">Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#remoteprivateendpointconnectionresponse">Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource specific properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2781,7 +2781,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescriptionresponse">Sku<wbr>Description<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skudescriptionresponse">Sku<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SKU description of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2825,7 +2825,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorentityresponse">Error<wbr>Entity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorentityresponse">Error<wbr>Entity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure-AsyncOperation Error info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2843,7 +2843,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}MSI resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2867,7 +2867,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armplanresponse">Arm<wbr>Plan<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#armplanresponse">Arm<wbr>Plan<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure resource manager plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2875,7 +2875,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remoteprivateendpointconnectionresponse">Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#remoteprivateendpointconnectionresponse">Remote<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource specific properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2883,7 +2883,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescriptionresponse">Sku<wbr>Description<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skudescriptionresponse">Sku<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SKU description of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3285,7 +3285,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Capability<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#capability">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Capability&gt;</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3333,7 +3333,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#skucapacity_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3421,7 +3421,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">Capability<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#capability">Capability[]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3469,7 +3469,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#skucapacity_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3489,7 +3489,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">Sequence[Capability<wbr>Args]</a></span>
+        <span class="property-type"><a href="#capability">Sequence[Capability]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3537,7 +3537,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#sku_capacity_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3559,7 +3559,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#capabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Capability<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3607,7 +3607,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#skucapacity_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3695,7 +3695,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">Capability<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#capabilityresponse">Capability<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3743,7 +3743,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#skucapacity_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3763,7 +3763,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">Sequence[Capability<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#capabilityresponse">Sequence[Capability<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3811,7 +3811,7 @@ For example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupId}/pr
 <a href="#sku_capacity_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

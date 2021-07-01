@@ -392,7 +392,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentproperties">Parent<wbr>Properties</a></span>
+        <span class="property-type"><a href="#parentproperties">Parent<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parent of the connected registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -432,7 +432,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingproperties">Logging<wbr>Properties</a></span>
+        <span class="property-type"><a href="#loggingproperties">Logging<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging properties of the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1263,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Tls<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tlspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Tls<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlspropertiesresponse">Tls<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tlspropertiesresponse">Tls<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1323,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlspropertiesresponse">Tls<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tlspropertiesresponse">Tls<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1337,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncproperties_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Sync<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#syncproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Sync<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncproperties_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncproperties">Sync<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#syncproperties">Sync<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1397,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_properties_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncproperties">Sync<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#syncproperties">Sync<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1419,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncproperties_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Sync<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#syncpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Sync<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1459,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncproperties_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncpropertiesresponse">Sync<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#syncpropertiesresponse">Sync<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1479,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_properties_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncpropertiesresponse">Sync<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#syncpropertiesresponse">Sync<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2327,7 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Tls<wbr>Certificate<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tlscertificatepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Tls<wbr>Certificate<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2367,7 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepropertiesresponse">Tls<wbr>Certificate<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tlscertificatepropertiesresponse">Tls<wbr>Certificate<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2387,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepropertiesresponse">Tls<wbr>Certificate<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tlscertificatepropertiesresponse">Tls<wbr>Certificate<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd><dt class="property-required"
             title="Required">

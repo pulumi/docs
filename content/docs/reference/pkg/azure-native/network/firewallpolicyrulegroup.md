@@ -901,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocol">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocol">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocol">Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocol">Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol[]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1105,7 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocol">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocol">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1175,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1379,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1417,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterruleaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterruleaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1489,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterruleaction">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterruleaction">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1513,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleconditions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Condition<wbr>Args | Nat<wbr>Rule<wbr>Condition<wbr>Args | Network<wbr>Rule<wbr>Condition<wbr>Args[]</span>
+        <span class="property-type">Application<wbr>Rule<wbr>Condition | Nat<wbr>Rule<wbr>Condition | Network<wbr>Rule<wbr>Condition[]</span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1525,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterruleaction">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterruleaction">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1549,7 +1549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_conditions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Condition<wbr>Args, Nat<wbr>Rule<wbr>Condition<wbr>Args, Network<wbr>Rule<wbr>Condition<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Condition, Nat<wbr>Rule<wbr>Condition, Network<wbr>Rule<wbr>Condition]]</span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1689,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1761,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1785,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleconditions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args | Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args | Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Application<wbr>Rule<wbr>Condition<wbr>Response | Nat<wbr>Rule<wbr>Condition<wbr>Response | Network<wbr>Rule<wbr>Condition<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1797,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1821,7 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_conditions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Condition<wbr>Response, Nat<wbr>Rule<wbr>Condition<wbr>Response, Network<wbr>Rule<wbr>Condition<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1835,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatruleaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicynatruleaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1859,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecondition_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrulecondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#natrulecondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#networkrulecondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationrulecondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Condition</a> | <a href="#natrulecondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Condition</a> | <a href="#networkrulecondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1939,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatruleaction">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicynatruleaction">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1963,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecondition_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrulecondition">Application<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#natrulecondition">Nat<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#networkrulecondition">Network<wbr>Rule<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationrulecondition">Application<wbr>Rule<wbr>Condition</a> | <a href="#natrulecondition">Nat<wbr>Rule<wbr>Condition</a> | <a href="#networkrulecondition">Network<wbr>Rule<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatruleaction">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicynatruleaction">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2015,7 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_condition_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrulecondition">Application<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#natrulecondition">Nat<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#networkrulecondition">Network<wbr>Rule<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationrulecondition">Application<wbr>Rule<wbr>Condition</a> | <a href="#natrulecondition">Nat<wbr>Rule<wbr>Condition</a> | <a href="#networkrulecondition">Network<wbr>Rule<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2167,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2191,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecondition_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationruleconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a> | <a href="#natruleconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a> | <a href="#networkruleconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Condition<wbr>Response</a> | <a href="#natruleconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Condition<wbr>Response</a> | <a href="#networkruleconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2271,7 +2271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2295,7 +2295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecondition_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a> | <a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a> | <a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response</a> | <a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response</a> | <a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2323,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2347,7 +2347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_condition_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a> | <a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a> | <a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response</a> | <a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response</a> | <a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -183,7 +183,134 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPolicy(ctx, "policy", &network.PolicyArgs{
+			CustomRules: &network.CustomRuleListArgs{
+				Rules: network.CustomRuleArray{
+					&network.CustomRuleArgs{
+						Action: pulumi.String("Block"),
+						MatchConditions: network.FrontDoorMatchConditionArray{
+							&network.FrontDoorMatchConditionArgs{
+								MatchValue: pulumi.StringArray{
+									pulumi.String("192.168.1.0/24"),
+									pulumi.String("10.0.0.0/24"),
+								},
+								MatchVariable: pulumi.String("RemoteAddr"),
+								Operator:      pulumi.String("IPMatch"),
+							},
+						},
+						Name:               pulumi.String("Rule1"),
+						Priority:           pulumi.Int(1),
+						RateLimitThreshold: pulumi.Int(1000),
+						RuleType:           pulumi.String("RateLimitRule"),
+					},
+					&network.CustomRuleArgs{
+						Action: pulumi.String("Block"),
+						MatchConditions: network.FrontDoorMatchConditionArray{
+							&network.FrontDoorMatchConditionArgs{
+								MatchValue: pulumi.StringArray{
+									pulumi.String("CH"),
+								},
+								MatchVariable: pulumi.String("RemoteAddr"),
+								Operator:      pulumi.String("GeoMatch"),
+							},
+							&network.FrontDoorMatchConditionArgs{
+								MatchValue: pulumi.StringArray{
+									pulumi.String("windows"),
+								},
+								MatchVariable: pulumi.String("RequestHeader"),
+								Operator:      pulumi.String("Contains"),
+								Selector:      pulumi.String("UserAgent"),
+								Transforms: pulumi.StringArray{
+									pulumi.String("Lowercase"),
+								},
+							},
+						},
+						Name:     pulumi.String("Rule2"),
+						Priority: pulumi.Int(2),
+						RuleType: pulumi.String("MatchRule"),
+					},
+				},
+			},
+			ManagedRules: &network.ManagedRuleSetListArgs{
+				ManagedRuleSets: network.FrontDoorManagedRuleSetArray{
+					&network.FrontDoorManagedRuleSetArgs{
+						Exclusions: network.ManagedRuleExclusionArray{
+							&network.ManagedRuleExclusionArgs{
+								MatchVariable:         pulumi.String("RequestHeaderNames"),
+								Selector:              pulumi.String("User-Agent"),
+								SelectorMatchOperator: pulumi.String("Equals"),
+							},
+						},
+						RuleGroupOverrides: network.FrontDoorManagedRuleGroupOverrideArray{
+							&network.FrontDoorManagedRuleGroupOverrideArgs{
+								Exclusions: network.ManagedRuleExclusionArray{
+									&network.ManagedRuleExclusionArgs{
+										MatchVariable:         pulumi.String("RequestCookieNames"),
+										Selector:              pulumi.String("token"),
+										SelectorMatchOperator: pulumi.String("StartsWith"),
+									},
+								},
+								RuleGroupName: pulumi.String("SQLI"),
+								Rules: network.FrontDoorManagedRuleOverrideArray{
+									&network.FrontDoorManagedRuleOverrideArgs{
+										Action:       pulumi.String("Redirect"),
+										EnabledState: pulumi.String("Enabled"),
+										Exclusions: network.ManagedRuleExclusionArray{
+											&network.ManagedRuleExclusionArgs{
+												MatchVariable:         pulumi.String("QueryStringArgNames"),
+												Selector:              pulumi.String("query"),
+												SelectorMatchOperator: pulumi.String("Equals"),
+											},
+										},
+										RuleId: pulumi.String("942100"),
+									},
+									&network.FrontDoorManagedRuleOverrideArgs{
+										EnabledState: pulumi.String("Disabled"),
+										RuleId:       pulumi.String("942110"),
+									},
+								},
+							},
+						},
+						RuleSetAction:  pulumi.String("Block"),
+						RuleSetType:    pulumi.String("DefaultRuleSet"),
+						RuleSetVersion: pulumi.String("1.0"),
+					},
+				},
+			},
+			PolicyName: pulumi.String("Policy1"),
+			PolicySettings: &network.FrontDoorPolicySettingsArgs{
+				CustomBlockResponseBody:       pulumi.String("PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg=="),
+				CustomBlockResponseStatusCode: pulumi.Int(499),
+				EnabledState:                  pulumi.String("Enabled"),
+				Mode:                          pulumi.String("Prevention"),
+				RedirectUrl:                   pulumi.String("http://www.bing.com"),
+				RequestBodyCheck:              pulumi.String("Disabled"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Sku: &network.SkuArgs{
+				Name: pulumi.String("Classic_AzureFrontDoor"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -641,7 +768,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#customrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrulelist">Custom<wbr>Rule<wbr>List</a></span>
+        <span class="property-type"><a href="#customrulelist">Custom<wbr>Rule<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes custom rules inside the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -665,7 +792,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#managedrules_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetlist">Managed<wbr>Rule<wbr>Set<wbr>List</a></span>
+        <span class="property-type"><a href="#managedrulesetlist">Managed<wbr>Rule<wbr>Set<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes managed rules inside the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -681,7 +808,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#policysettings_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorpolicysettings">Front<wbr>Door<wbr>Policy<wbr>Settings</a></span>
+        <span class="property-type"><a href="#frontdoorpolicysettings">Front<wbr>Door<wbr>Policy<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -689,7 +816,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1194,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormatchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoormatchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Match<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1330,7 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormatchcondition">Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#frontdoormatchcondition">Front<wbr>Door<wbr>Match<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1398,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormatchcondition">Sequence[Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoormatchcondition">Sequence[Front<wbr>Door<wbr>Match<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1486,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1510,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrule">Custom<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#customrule">Custom<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1522,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrule">Sequence[Custom<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customrule">Sequence[Custom<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1536,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1560,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customruleresponse">Custom<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#customruleresponse">Custom<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1572,7 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customruleresponse">Sequence[Custom<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customruleresponse">Sequence[Custom<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1594,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormatchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoormatchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1730,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormatchconditionresponse">Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#frontdoormatchconditionresponse">Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1798,7 +1925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormatchconditionresponse">Sequence[Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoormatchconditionresponse">Sequence[Front<wbr>Door<wbr>Match<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1868,7 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedruleexclusion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to all rules in the group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1876,7 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedruleoverride">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoormanagedruleoverride">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1924,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusion">Managed<wbr>Rule<wbr>Exclusion<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedruleexclusion">Managed<wbr>Rule<wbr>Exclusion[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to all rules in the group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1932,7 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedruleoverride">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedruleoverride">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1952,7 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusion">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedruleexclusion">Sequence[Managed<wbr>Rule<wbr>Exclusion]</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to all rules in the group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1960,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedruleoverride">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedruleoverride">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1982,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to all rules in the group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1990,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedruleoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoormanagedruleoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2038,7 +2165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusionresponse">Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">Managed<wbr>Rule<wbr>Exclusion<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to all rules in the group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2046,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedruleoverrideresponse">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedruleoverrideresponse">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2066,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusionresponse">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to all rules in the group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2074,7 +2201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedruleoverrideresponse">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedruleoverrideresponse">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2112,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedruleexclusion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to this specific rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2184,7 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusion">Managed<wbr>Rule<wbr>Exclusion<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedruleexclusion">Managed<wbr>Rule<wbr>Exclusion[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to this specific rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2220,7 +2347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusion">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedruleexclusion">Sequence[Managed<wbr>Rule<wbr>Exclusion]</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to this specific rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2258,7 +2385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to this specific rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2330,7 +2457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusionresponse">Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">Managed<wbr>Rule<wbr>Exclusion<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to this specific rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2366,7 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusionresponse">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to this specific rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2396,7 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedruleexclusion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to all rules in the set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2404,7 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulegroupoverrides_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedrulegroupoverride">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoormanagedrulegroupoverride">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2484,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusion">Managed<wbr>Rule<wbr>Exclusion<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedruleexclusion">Managed<wbr>Rule<wbr>Exclusion[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to all rules in the set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2492,7 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulegroupoverrides_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedrulegroupoverride">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedrulegroupoverride">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2528,7 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusion">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedruleexclusion">Sequence[Managed<wbr>Rule<wbr>Exclusion]</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to all rules in the set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2536,7 +2663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedrulegroupoverride">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedrulegroupoverride">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2574,7 +2701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to all rules in the set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2582,7 +2709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulegroupoverrides_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedrulegroupoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoormanagedrulegroupoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2662,7 +2789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusionresponse">Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">Managed<wbr>Rule<wbr>Exclusion<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to all rules in the set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2670,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulegroupoverrides_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedrulegroupoverrideresponse">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedrulegroupoverrideresponse">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2706,7 +2833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleexclusionresponse">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedruleexclusionresponse">Sequence[Managed<wbr>Rule<wbr>Exclusion<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Describes the exclusions that are applied to all rules in the set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2714,7 +2841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedrulegroupoverrideresponse">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedrulegroupoverrideresponse">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule group overrides to apply to the rule set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4036,7 +4163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedruleset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoormanagedruleset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4060,7 +4187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedruleset">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedruleset">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4072,7 +4199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_rule_sets_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedruleset">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedruleset">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4086,7 +4213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoormanagedrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4110,7 +4237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedrulesets_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedrulesetresponse">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedrulesetresponse">Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4122,7 +4249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_rule_sets_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoormanagedrulesetresponse">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoormanagedrulesetresponse">Sequence[Front<wbr>Door<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}

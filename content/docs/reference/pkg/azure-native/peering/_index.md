@@ -11,6 +11,7 @@ Explore the resources and functions of the azure-native.peering module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="connectionmonitortest" title="ConnectionMonitorTest"><span class="symbol resource"></span>ConnectionMonitorTest</a></li>
     <li><a href="peerasn" title="PeerAsn"><span class="symbol resource"></span>PeerAsn</a></li>
     <li><a href="peering" title="Peering"><span class="symbol resource"></span>Peering</a></li>
     <li><a href="peeringservice" title="PeeringService"><span class="symbol resource"></span>PeeringService</a></li>
@@ -21,6 +22,7 @@ Explore the resources and functions of the azure-native.peering module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getconnectionmonitortest" title="GetConnectionMonitorTest"><span class="symbol function"></span>GetConnectionMonitorTest</a></li>
     <li><a href="getpeerasn" title="GetPeerAsn"><span class="symbol function"></span>GetPeerAsn</a></li>
     <li><a href="getpeering" title="GetPeering"><span class="symbol function"></span>GetPeering</a></li>
     <li><a href="getpeeringservice" title="GetPeeringService"><span class="symbol function"></span>GetPeeringService</a></li>
@@ -36,6 +38,6 @@ Explore the resources and functions of the azure-native.peering module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.14.0</dd>
+	<dd>1.15.0</dd>
 </dl>
 

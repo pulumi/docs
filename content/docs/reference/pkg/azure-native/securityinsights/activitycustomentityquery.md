@@ -697,7 +697,7 @@ The ActivityCustomEntityQuery resource accepts the following [input]({{< relref 
 <a href="#querydefinitions_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activityentityqueriespropertiesquerydefinitions">Activity<wbr>Entity<wbr>Queries<wbr>Properties<wbr>Query<wbr>Definitions</a></span>
+        <span class="property-type"><a href="#activityentityqueriespropertiesquerydefinitions">Activity<wbr>Entity<wbr>Queries<wbr>Properties<wbr>Query<wbr>Definitions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Activity query definitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

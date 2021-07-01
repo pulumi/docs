@@ -378,7 +378,7 @@ The FileEventTrigger resource accepts the following [input]({{< relref "/docs/in
 <a href="#sinkinfo_go" style="color: inherit; text-decoration: inherit;">Sink<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rolesinkinfo">Role<wbr>Sink<wbr>Info</a></span>
+        <span class="property-type"><a href="#rolesinkinfo">Role<wbr>Sink<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Role sink info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -386,7 +386,7 @@ The FileEventTrigger resource accepts the following [input]({{< relref "/docs/in
 <a href="#sourceinfo_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesourceinfo">File<wbr>Source<wbr>Info</a></span>
+        <span class="property-type"><a href="#filesourceinfo">File<wbr>Source<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}File event source details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

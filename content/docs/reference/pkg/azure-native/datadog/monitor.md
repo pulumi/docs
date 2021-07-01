@@ -340,7 +340,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -364,7 +364,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorproperties">Monitor<wbr>Properties</a></span>
+        <span class="property-type"><a href="#monitorproperties">Monitor<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -372,7 +372,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
+        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1157,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadogorganizationproperties_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Organization<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadogorganizationproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Organization<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#datadogorganizationproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Organization<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1173,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinfo_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1213,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadogorganizationproperties_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Organization<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinfo_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1241,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadog_organization_properties_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>organization_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_info_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadogorganizationproperties_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Organization<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1319,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinfo_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1423,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadogorganizationproperties_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Organization<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1439,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinfo_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1483,7 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadog_organization_properties_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>organization_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1499,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_info_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd></dl>
 {{% /choosable %}}

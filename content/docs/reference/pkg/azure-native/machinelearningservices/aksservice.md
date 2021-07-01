@@ -539,7 +539,7 @@ The AKSService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#autoscaler_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksservicecreaterequestautoscaler">AKSService<wbr>Create<wbr>Request<wbr>Auto<wbr>Scaler</a></span>
+        <span class="property-type"><a href="#aksservicecreaterequestautoscaler">AKSService<wbr>Create<wbr>Request<wbr>Auto<wbr>Scaler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auto scaler properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -555,7 +555,7 @@ The AKSService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#containerresourcerequirements_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirements">Container<wbr>Resource<wbr>Requirements</a></span>
+        <span class="property-type"><a href="#containerresourcerequirements">Container<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -563,7 +563,7 @@ The AKSService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#datacollection_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksservicecreaterequestdatacollection">AKSService<wbr>Create<wbr>Request<wbr>Data<wbr>Collection</a></span>
+        <span class="property-type"><a href="#aksservicecreaterequestdatacollection">AKSService<wbr>Create<wbr>Request<wbr>Data<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -579,7 +579,7 @@ The AKSService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#environmentimagerequest_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Image<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createservicerequestenvironmentimagerequest">Create<wbr>Service<wbr>Request<wbr>Environment<wbr>Image<wbr>Request</a></span>
+        <span class="property-type"><a href="#createservicerequestenvironmentimagerequest">Create<wbr>Service<wbr>Request<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Environment, models and assets needed for inferencing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -595,7 +595,7 @@ The AKSService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createservicerequestkeys">Create<wbr>Service<wbr>Request<wbr>Keys</a></span>
+        <span class="property-type"><a href="#createservicerequestkeys">Create<wbr>Service<wbr>Request<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -611,7 +611,7 @@ The AKSService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#livenessproberequirements_go" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksservicecreaterequestlivenessproberequirements">AKSService<wbr>Create<wbr>Request<wbr>Liveness<wbr>Probe<wbr>Requirements</a></span>
+        <span class="property-type"><a href="#aksservicecreaterequestlivenessproberequirements">AKSService<wbr>Create<wbr>Request<wbr>Liveness<wbr>Probe<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The liveness probe requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1402,7 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerresourcerequirements_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1410,7 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datacollection_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponsedatacollection">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsedatacollection">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection</a></span>
     </dt>
     <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1434,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionproperties_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponseencryptionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseencryptionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The encryption properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1442,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentimagerequest_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Image<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponseenvironmentimagerequest">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseenvironmentimagerequest">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1466,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_csharp" style="color: inherit; text-decoration: inherit;">Models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1522,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponsevnetconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Vnet<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsevnetconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>ACIService<wbr>Response<wbr>Response<wbr>Vnet<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The virtual network configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1730,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1794,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerresourcerequirements_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1802,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datacollection_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponsedatacollection">ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsedatacollection">ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection</a></span>
     </dt>
     <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1826,7 +1826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionproperties_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponseencryptionproperties">ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseencryptionproperties">ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The encryption properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1834,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentimagerequest_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Image<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponseenvironmentimagerequest">ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseenvironmentimagerequest">ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1858,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_nodejs" style="color: inherit; text-decoration: inherit;">models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">Model<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#modelresponse">Model<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1914,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponsevnetconfiguration">ACIService<wbr>Response<wbr>Response<wbr>Vnet<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsevnetconfiguration">ACIService<wbr>Response<wbr>Response<wbr>Vnet<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The virtual network configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1926,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1990,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_resource_requirements_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1998,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_collection_python" style="color: inherit; text-decoration: inherit;">data_<wbr>collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponsedatacollection">ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsedatacollection">ACIService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection</a></span>
     </dt>
     <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2022,7 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_properties_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponseencryptionproperties">ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseencryptionproperties">ACIService<wbr>Response<wbr>Response<wbr>Encryption<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The encryption properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2030,7 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_image_request_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>image_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponseenvironmentimagerequest">ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponseenvironmentimagerequest">ACIService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2054,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_python" style="color: inherit; text-decoration: inherit;">models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">Sequence[Model<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#modelresponse">Sequence[Model<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2110,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_configuration_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aciserviceresponseresponsevnetconfiguration">ACIService<wbr>Response<wbr>Response<wbr>Vnet<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#aciserviceresponseresponsevnetconfiguration">ACIService<wbr>Response<wbr>Response<wbr>Vnet<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The virtual network configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2320,7 +2320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assets_csharp" style="color: inherit; text-decoration: inherit;">Assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageassetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Image<wbr>Asset<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#imageassetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Image<wbr>Asset<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of assets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2336,7 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2344,7 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentreference_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2360,7 +2360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_csharp" style="color: inherit; text-decoration: inherit;">Models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2424,7 +2424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assets_nodejs" style="color: inherit; text-decoration: inherit;">assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageassetresponse">Image<wbr>Asset<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#imageassetresponse">Image<wbr>Asset<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of assets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2440,7 +2440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2448,7 +2448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentreference_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2464,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_nodejs" style="color: inherit; text-decoration: inherit;">models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">Model<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#modelresponse">Model<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2476,7 +2476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assets_python" style="color: inherit; text-decoration: inherit;">assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageassetresponse">Sequence[Image<wbr>Asset<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imageassetresponse">Sequence[Image<wbr>Asset<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of assets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2492,7 +2492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2500,7 +2500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_reference_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2516,7 +2516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_python" style="color: inherit; text-decoration: inherit;">models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">Sequence[Model<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#modelresponse">Sequence[Model<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2612,7 +2612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2636,7 +2636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2648,7 +2648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3100,7 +3100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponsedeploymentstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Deployment<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedeploymentstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Deployment<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The deployment status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3108,7 +3108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3172,7 +3172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscaler_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponseautoscaler">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Auto<wbr>Scaler<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseautoscaler">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Auto<wbr>Scaler</a></span>
     </dt>
     <dd>{{% md %}}The auto scaler properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3188,7 +3188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerresourcerequirements_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3196,7 +3196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datacollection_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponsedatacollection">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedatacollection">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection</a></span>
     </dt>
     <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3220,7 +3220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentimagerequest_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Image<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponseenvironmentimagerequest">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseenvironmentimagerequest">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3244,7 +3244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livenessproberequirements_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponselivenessproberequirements">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Liveness<wbr>Probe<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponselivenessproberequirements">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Liveness<wbr>Probe<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}The liveness probe requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3268,7 +3268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_csharp" style="color: inherit; text-decoration: inherit;">Models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3556,7 +3556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentstatus_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponsedeploymentstatus">AKSService<wbr>Response<wbr>Response<wbr>Deployment<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedeploymentstatus">AKSService<wbr>Response<wbr>Response<wbr>Deployment<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The deployment status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3564,7 +3564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3628,7 +3628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscaler_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponseautoscaler">AKSService<wbr>Response<wbr>Response<wbr>Auto<wbr>Scaler<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseautoscaler">AKSService<wbr>Response<wbr>Response<wbr>Auto<wbr>Scaler</a></span>
     </dt>
     <dd>{{% md %}}The auto scaler properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3644,7 +3644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerresourcerequirements_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3652,7 +3652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datacollection_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponsedatacollection">AKSService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedatacollection">AKSService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection</a></span>
     </dt>
     <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3676,7 +3676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentimagerequest_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Image<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponseenvironmentimagerequest">AKSService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseenvironmentimagerequest">AKSService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3700,7 +3700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livenessproberequirements_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponselivenessproberequirements">AKSService<wbr>Response<wbr>Response<wbr>Liveness<wbr>Probe<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponselivenessproberequirements">AKSService<wbr>Response<wbr>Response<wbr>Liveness<wbr>Probe<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}The liveness probe requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3724,7 +3724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_nodejs" style="color: inherit; text-decoration: inherit;">models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">Model<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#modelresponse">Model<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3784,7 +3784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_status_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponsedeploymentstatus">AKSService<wbr>Response<wbr>Response<wbr>Deployment<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedeploymentstatus">AKSService<wbr>Response<wbr>Response<wbr>Deployment<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The deployment status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3792,7 +3792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3856,7 +3856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_scaler_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponseautoscaler">AKSService<wbr>Response<wbr>Response<wbr>Auto<wbr>Scaler<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseautoscaler">AKSService<wbr>Response<wbr>Response<wbr>Auto<wbr>Scaler</a></span>
     </dt>
     <dd>{{% md %}}The auto scaler properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3872,7 +3872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_resource_requirements_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3880,7 +3880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_collection_python" style="color: inherit; text-decoration: inherit;">data_<wbr>collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponsedatacollection">AKSService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedatacollection">AKSService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection</a></span>
     </dt>
     <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3904,7 +3904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_image_request_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>image_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponseenvironmentimagerequest">AKSService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseenvironmentimagerequest">AKSService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3928,7 +3928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#liveness_probe_requirements_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe_<wbr>requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksserviceresponseresponselivenessproberequirements">AKSService<wbr>Response<wbr>Response<wbr>Liveness<wbr>Probe<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksserviceresponseresponselivenessproberequirements">AKSService<wbr>Response<wbr>Response<wbr>Liveness<wbr>Probe<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}The liveness probe requirements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3952,7 +3952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_python" style="color: inherit; text-decoration: inherit;">models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">Sequence[Model<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#modelresponse">Sequence[Model<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4290,7 +4290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksreplicastatusresponseerror">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSReplica<wbr>Status<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksreplicastatusresponseerror">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSReplica<wbr>Status<wbr>Response<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4362,7 +4362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksreplicastatusresponseerror">AKSReplica<wbr>Status<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksreplicastatusresponseerror">AKSReplica<wbr>Status<wbr>Response<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4398,7 +4398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksreplicastatusresponseerror">AKSReplica<wbr>Status<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksreplicastatusresponseerror">AKSReplica<wbr>Status<wbr>Response<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4420,7 +4420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assets_csharp" style="color: inherit; text-decoration: inherit;">Assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageassetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Image<wbr>Asset<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#imageassetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Image<wbr>Asset<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of assets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4436,7 +4436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4444,7 +4444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentreference_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4460,7 +4460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_csharp" style="color: inherit; text-decoration: inherit;">Models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4524,7 +4524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assets_nodejs" style="color: inherit; text-decoration: inherit;">assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageassetresponse">Image<wbr>Asset<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#imageassetresponse">Image<wbr>Asset<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of assets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4540,7 +4540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4548,7 +4548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentreference_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4564,7 +4564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_nodejs" style="color: inherit; text-decoration: inherit;">models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">Model<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#modelresponse">Model<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4576,7 +4576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assets_python" style="color: inherit; text-decoration: inherit;">assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageassetresponse">Sequence[Image<wbr>Asset<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imageassetresponse">Sequence[Image<wbr>Asset<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of assets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4592,7 +4592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4600,7 +4600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_reference_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4616,7 +4616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#models_python" style="color: inherit; text-decoration: inherit;">models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelresponse">Sequence[Model<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#modelresponse">Sequence[Model<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4808,7 +4808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4960,7 +4960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5036,7 +5036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5566,7 +5566,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#assets_csharp" style="color: inherit; text-decoration: inherit;">Assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageasset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Image<wbr>Asset<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#imageasset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Image<wbr>Asset&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of assets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5582,7 +5582,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimagerequestenvironment">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Request<wbr>Environment<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimagerequestenvironment">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Request<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5590,7 +5590,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#environmentreference_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimagerequestenvironmentreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Request<wbr>Environment<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimagerequestenvironmentreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Request<wbr>Environment<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5606,7 +5606,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#models_csharp" style="color: inherit; text-decoration: inherit;">Models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#model">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#model">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5670,7 +5670,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#assets_nodejs" style="color: inherit; text-decoration: inherit;">assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageasset">Image<wbr>Asset<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#imageasset">Image<wbr>Asset[]</a></span>
     </dt>
     <dd>{{% md %}}The list of assets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5686,7 +5686,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimagerequestenvironment">Environment<wbr>Image<wbr>Request<wbr>Environment<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimagerequestenvironment">Environment<wbr>Image<wbr>Request<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5694,7 +5694,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#environmentreference_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimagerequestenvironmentreference">Environment<wbr>Image<wbr>Request<wbr>Environment<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimagerequestenvironmentreference">Environment<wbr>Image<wbr>Request<wbr>Environment<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5710,7 +5710,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#models_nodejs" style="color: inherit; text-decoration: inherit;">models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#model">Model<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#model">Model[]</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5722,7 +5722,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#assets_python" style="color: inherit; text-decoration: inherit;">assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageasset">Sequence[Image<wbr>Asset<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imageasset">Sequence[Image<wbr>Asset]</a></span>
     </dt>
     <dd>{{% md %}}The list of assets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5738,7 +5738,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimagerequestenvironment">Environment<wbr>Image<wbr>Request<wbr>Environment<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimagerequestenvironment">Environment<wbr>Image<wbr>Request<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5746,7 +5746,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#environment_reference_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentimagerequestenvironmentreference">Environment<wbr>Image<wbr>Request<wbr>Environment<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentimagerequestenvironmentreference">Environment<wbr>Image<wbr>Request<wbr>Environment<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5762,7 +5762,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#models_python" style="color: inherit; text-decoration: inherit;">models</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#model">Sequence[Model<wbr>Args]</a></span>
+        <span class="property-type"><a href="#model">Sequence[Model]</a></span>
     </dt>
     <dd>{{% md %}}The list of models.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6022,7 +6022,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#docker_csharp" style="color: inherit; text-decoration: inherit;">Docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitiondocker">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Docker<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitiondocker">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Docker</a></span>
     </dt>
     <dd>{{% md %}}The definition of a Docker container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6054,7 +6054,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#python_csharp" style="color: inherit; text-decoration: inherit;">Python</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionpython">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Python<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionpython">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Python</a></span>
     </dt>
     <dd>{{% md %}}Settings for a Python environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6062,7 +6062,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#r_csharp" style="color: inherit; text-decoration: inherit;">R</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionr">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>RArgs</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionr">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>R</a></span>
     </dt>
     <dd>{{% md %}}Settings for a R environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6070,7 +6070,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#spark_csharp" style="color: inherit; text-decoration: inherit;">Spark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionspark">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Spark<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionspark">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Spark</a></span>
     </dt>
     <dd>{{% md %}}The configuration for a Spark environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6158,7 +6158,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#docker_nodejs" style="color: inherit; text-decoration: inherit;">docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitiondocker">Model<wbr>Environment<wbr>Definition<wbr>Docker<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitiondocker">Model<wbr>Environment<wbr>Definition<wbr>Docker</a></span>
     </dt>
     <dd>{{% md %}}The definition of a Docker container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6190,7 +6190,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#python_nodejs" style="color: inherit; text-decoration: inherit;">python</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionpython">Model<wbr>Environment<wbr>Definition<wbr>Python<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionpython">Model<wbr>Environment<wbr>Definition<wbr>Python</a></span>
     </dt>
     <dd>{{% md %}}Settings for a Python environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6198,7 +6198,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#r_nodejs" style="color: inherit; text-decoration: inherit;">r</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionr">Model<wbr>Environment<wbr>Definition<wbr>RArgs</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionr">Model<wbr>Environment<wbr>Definition<wbr>R</a></span>
     </dt>
     <dd>{{% md %}}Settings for a R environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6206,7 +6206,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#spark_nodejs" style="color: inherit; text-decoration: inherit;">spark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionspark">Model<wbr>Environment<wbr>Definition<wbr>Spark<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionspark">Model<wbr>Environment<wbr>Definition<wbr>Spark</a></span>
     </dt>
     <dd>{{% md %}}The configuration for a Spark environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6226,7 +6226,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#docker_python" style="color: inherit; text-decoration: inherit;">docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitiondocker">Model<wbr>Environment<wbr>Definition<wbr>Docker<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitiondocker">Model<wbr>Environment<wbr>Definition<wbr>Docker</a></span>
     </dt>
     <dd>{{% md %}}The definition of a Docker container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6258,7 +6258,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#python_python" style="color: inherit; text-decoration: inherit;">python</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionpython">Model<wbr>Environment<wbr>Definition<wbr>Python<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionpython">Model<wbr>Environment<wbr>Definition<wbr>Python</a></span>
     </dt>
     <dd>{{% md %}}Settings for a Python environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6266,7 +6266,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#r_python" style="color: inherit; text-decoration: inherit;">r</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionr">Model<wbr>Environment<wbr>Definition<wbr>RArgs</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionr">Model<wbr>Environment<wbr>Definition<wbr>R</a></span>
     </dt>
     <dd>{{% md %}}Settings for a R environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6274,7 +6274,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#spark_python" style="color: inherit; text-decoration: inherit;">spark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionspark">Model<wbr>Environment<wbr>Definition<wbr>Spark<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionspark">Model<wbr>Environment<wbr>Definition<wbr>Spark</a></span>
     </dt>
     <dd>{{% md %}}The configuration for a Spark environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6378,7 +6378,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#docker_csharp" style="color: inherit; text-decoration: inherit;">Docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsedocker">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Docker<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsedocker">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Docker</a></span>
     </dt>
     <dd>{{% md %}}The definition of a Docker container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6410,7 +6410,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#python_csharp" style="color: inherit; text-decoration: inherit;">Python</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsepython">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Python<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsepython">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Python</a></span>
     </dt>
     <dd>{{% md %}}Settings for a Python environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6418,7 +6418,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#r_csharp" style="color: inherit; text-decoration: inherit;">R</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponser">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>RArgs</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponser">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>R</a></span>
     </dt>
     <dd>{{% md %}}Settings for a R environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6426,7 +6426,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#spark_csharp" style="color: inherit; text-decoration: inherit;">Spark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsespark">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Spark<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsespark">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Spark</a></span>
     </dt>
     <dd>{{% md %}}The configuration for a Spark environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6514,7 +6514,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#docker_nodejs" style="color: inherit; text-decoration: inherit;">docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsedocker">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Docker<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsedocker">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Docker</a></span>
     </dt>
     <dd>{{% md %}}The definition of a Docker container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6546,7 +6546,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#python_nodejs" style="color: inherit; text-decoration: inherit;">python</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsepython">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Python<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsepython">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Python</a></span>
     </dt>
     <dd>{{% md %}}Settings for a Python environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6554,7 +6554,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#r_nodejs" style="color: inherit; text-decoration: inherit;">r</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponser">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>RArgs</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponser">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>R</a></span>
     </dt>
     <dd>{{% md %}}Settings for a R environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6562,7 +6562,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#spark_nodejs" style="color: inherit; text-decoration: inherit;">spark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsespark">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Spark<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsespark">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Spark</a></span>
     </dt>
     <dd>{{% md %}}The configuration for a Spark environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6582,7 +6582,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#docker_python" style="color: inherit; text-decoration: inherit;">docker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsedocker">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Docker<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsedocker">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Docker</a></span>
     </dt>
     <dd>{{% md %}}The definition of a Docker container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6614,7 +6614,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#python_python" style="color: inherit; text-decoration: inherit;">python</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsepython">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Python<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsepython">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Python</a></span>
     </dt>
     <dd>{{% md %}}Settings for a Python environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6622,7 +6622,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#r_python" style="color: inherit; text-decoration: inherit;">r</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponser">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>RArgs</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponser">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>R</a></span>
     </dt>
     <dd>{{% md %}}Settings for a R environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6630,7 +6630,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#spark_python" style="color: inherit; text-decoration: inherit;">spark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsespark">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Spark<wbr>Args</a></span>
+        <span class="property-type"><a href="#modelenvironmentdefinitionresponseresponsespark">Model<wbr>Environment<wbr>Definition<wbr>Response<wbr>Response<wbr>Spark</a></span>
     </dt>
     <dd>{{% md %}}The configuration for a Spark environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6824,7 +6824,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6880,7 +6880,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6908,7 +6908,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6954,7 +6954,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7026,7 +7026,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7062,7 +7062,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7400,7 +7400,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#datasets_csharp" style="color: inherit; text-decoration: inherit;">Datasets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasetreference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of datasets associated with the model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7488,7 +7488,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#resourcerequirements_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirements">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirements">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Resource requirements for the model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7744,7 +7744,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#datasets_nodejs" style="color: inherit; text-decoration: inherit;">datasets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}The list of datasets associated with the model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7832,7 +7832,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#resourcerequirements_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirements">Container<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirements">Container<wbr>Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Resource requirements for the model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7916,7 +7916,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#datasets_python" style="color: inherit; text-decoration: inherit;">datasets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">Sequence[Dataset<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasetreference">Sequence[Dataset<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}The list of datasets associated with the model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8004,7 +8004,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#resource_requirements_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirements">Container<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirements">Container<wbr>Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Resource requirements for the model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8238,7 +8238,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#baseimageregistry_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modeldockersectionbaseimageregistry">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Docker<wbr>Section<wbr>Base<wbr>Image<wbr>Registry<wbr>Args</a></span>
+        <span class="property-type"><a href="#modeldockersectionbaseimageregistry">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Docker<wbr>Section<wbr>Base<wbr>Image<wbr>Registry</a></span>
     </dt>
     <dd>{{% md %}}Image registry that contains the base image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8294,7 +8294,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#baseimageregistry_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modeldockersectionbaseimageregistry">Model<wbr>Docker<wbr>Section<wbr>Base<wbr>Image<wbr>Registry<wbr>Args</a></span>
+        <span class="property-type"><a href="#modeldockersectionbaseimageregistry">Model<wbr>Docker<wbr>Section<wbr>Base<wbr>Image<wbr>Registry</a></span>
     </dt>
     <dd>{{% md %}}Image registry that contains the base image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8322,7 +8322,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#base_image_registry_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modeldockersectionbaseimageregistry">Model<wbr>Docker<wbr>Section<wbr>Base<wbr>Image<wbr>Registry<wbr>Args</a></span>
+        <span class="property-type"><a href="#modeldockersectionbaseimageregistry">Model<wbr>Docker<wbr>Section<wbr>Base<wbr>Image<wbr>Registry</a></span>
     </dt>
     <dd>{{% md %}}Image registry that contains the base image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8490,7 +8490,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#cranpackages_csharp" style="color: inherit; text-decoration: inherit;">Cran<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rcranpackage">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>RCran<wbr>Package<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rcranpackage">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>RCran<wbr>Package&gt;</a></span>
     </dt>
     <dd>{{% md %}}The CRAN packages to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8506,7 +8506,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#githubpackages_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rgithubpackage">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>RGit<wbr>Hub<wbr>Package<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rgithubpackage">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>RGit<wbr>Hub<wbr>Package&gt;</a></span>
     </dt>
     <dd>{{% md %}}The packages directly from GitHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8628,7 +8628,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#cranpackages_nodejs" style="color: inherit; text-decoration: inherit;">cran<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rcranpackage">RCran<wbr>Package<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rcranpackage">RCran<wbr>Package[]</a></span>
     </dt>
     <dd>{{% md %}}The CRAN packages to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8644,7 +8644,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#githubpackages_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rgithubpackage">RGit<wbr>Hub<wbr>Package<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rgithubpackage">RGit<wbr>Hub<wbr>Package[]</a></span>
     </dt>
     <dd>{{% md %}}The packages directly from GitHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8697,7 +8697,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#cran_packages_python" style="color: inherit; text-decoration: inherit;">cran_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rcranpackage">Sequence[RCran<wbr>Package<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rcranpackage">Sequence[RCran<wbr>Package]</a></span>
     </dt>
     <dd>{{% md %}}The CRAN packages to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8713,7 +8713,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#git_hub_packages_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rgithubpackage">Sequence[RGit<wbr>Hub<wbr>Package<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rgithubpackage">Sequence[RGit<wbr>Hub<wbr>Package]</a></span>
     </dt>
     <dd>{{% md %}}The packages directly from GitHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8776,7 +8776,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#baseimageregistry_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modeldockersectionresponseresponsebaseimageregistry">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Docker<wbr>Section<wbr>Response<wbr>Response<wbr>Base<wbr>Image<wbr>Registry<wbr>Args</a></span>
+        <span class="property-type"><a href="#modeldockersectionresponseresponsebaseimageregistry">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Docker<wbr>Section<wbr>Response<wbr>Response<wbr>Base<wbr>Image<wbr>Registry</a></span>
     </dt>
     <dd>{{% md %}}Image registry that contains the base image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8832,7 +8832,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#baseimageregistry_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modeldockersectionresponseresponsebaseimageregistry">Model<wbr>Docker<wbr>Section<wbr>Response<wbr>Response<wbr>Base<wbr>Image<wbr>Registry<wbr>Args</a></span>
+        <span class="property-type"><a href="#modeldockersectionresponseresponsebaseimageregistry">Model<wbr>Docker<wbr>Section<wbr>Response<wbr>Response<wbr>Base<wbr>Image<wbr>Registry</a></span>
     </dt>
     <dd>{{% md %}}Image registry that contains the base image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8860,7 +8860,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#base_image_registry_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modeldockersectionresponseresponsebaseimageregistry">Model<wbr>Docker<wbr>Section<wbr>Response<wbr>Response<wbr>Base<wbr>Image<wbr>Registry<wbr>Args</a></span>
+        <span class="property-type"><a href="#modeldockersectionresponseresponsebaseimageregistry">Model<wbr>Docker<wbr>Section<wbr>Response<wbr>Response<wbr>Base<wbr>Image<wbr>Registry</a></span>
     </dt>
     <dd>{{% md %}}Image registry that contains the base image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9028,7 +9028,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#cranpackages_csharp" style="color: inherit; text-decoration: inherit;">Cran<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rcranpackageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>RCran<wbr>Package<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rcranpackageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>RCran<wbr>Package<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The CRAN packages to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9044,7 +9044,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#githubpackages_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rgithubpackageresponseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>RGit<wbr>Hub<wbr>Package<wbr>Response<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rgithubpackageresponseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>RGit<wbr>Hub<wbr>Package<wbr>Response<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The packages directly from GitHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9166,7 +9166,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#cranpackages_nodejs" style="color: inherit; text-decoration: inherit;">cran<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rcranpackageresponse">RCran<wbr>Package<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rcranpackageresponse">RCran<wbr>Package<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The CRAN packages to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9182,7 +9182,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#githubpackages_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rgithubpackageresponseresponse">RGit<wbr>Hub<wbr>Package<wbr>Response<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rgithubpackageresponseresponse">RGit<wbr>Hub<wbr>Package<wbr>Response<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The packages directly from GitHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9235,7 +9235,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#cran_packages_python" style="color: inherit; text-decoration: inherit;">cran_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rcranpackageresponse">Sequence[RCran<wbr>Package<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rcranpackageresponse">Sequence[RCran<wbr>Package<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The CRAN packages to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9251,7 +9251,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#git_hub_packages_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rgithubpackageresponseresponse">Sequence[RGit<wbr>Hub<wbr>Package<wbr>Response<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rgithubpackageresponseresponse">Sequence[RGit<wbr>Hub<wbr>Package<wbr>Response<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The packages directly from GitHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9298,7 +9298,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#packages_csharp" style="color: inherit; text-decoration: inherit;">Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkmavenpackageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Spark<wbr>Maven<wbr>Package<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sparkmavenpackageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Spark<wbr>Maven<wbr>Package<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Spark packages to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9354,7 +9354,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#packages_nodejs" style="color: inherit; text-decoration: inherit;">packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkmavenpackageresponse">Spark<wbr>Maven<wbr>Package<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sparkmavenpackageresponse">Spark<wbr>Maven<wbr>Package<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The Spark packages to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9382,7 +9382,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#packages_python" style="color: inherit; text-decoration: inherit;">packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkmavenpackageresponse">Sequence[Spark<wbr>Maven<wbr>Package<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sparkmavenpackageresponse">Sequence[Spark<wbr>Maven<wbr>Package<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The Spark packages to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9412,7 +9412,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#packages_csharp" style="color: inherit; text-decoration: inherit;">Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkmavenpackage">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Spark<wbr>Maven<wbr>Package<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sparkmavenpackage">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Spark<wbr>Maven<wbr>Package&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Spark packages to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9468,7 +9468,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#packages_nodejs" style="color: inherit; text-decoration: inherit;">packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkmavenpackage">Spark<wbr>Maven<wbr>Package<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sparkmavenpackage">Spark<wbr>Maven<wbr>Package[]</a></span>
     </dt>
     <dd>{{% md %}}The Spark packages to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9496,7 +9496,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#packages_python" style="color: inherit; text-decoration: inherit;">packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkmavenpackage">Sequence[Spark<wbr>Maven<wbr>Package<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sparkmavenpackage">Sequence[Spark<wbr>Maven<wbr>Package]</a></span>
     </dt>
     <dd>{{% md %}}The Spark packages to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9558,7 +9558,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#datasets_csharp" style="color: inherit; text-decoration: inherit;">Datasets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of datasets associated with the model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9646,7 +9646,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#resourcerequirements_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource requirements for the model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9902,7 +9902,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#datasets_nodejs" style="color: inherit; text-decoration: inherit;">datasets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of datasets associated with the model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9990,7 +9990,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#resourcerequirements_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource requirements for the model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10074,7 +10074,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#datasets_python" style="color: inherit; text-decoration: inherit;">datasets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Sequence[Dataset<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Sequence[Dataset<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of datasets associated with the model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10162,7 +10162,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#resource_requirements_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource requirements for the model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10512,7 +10512,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10536,7 +10536,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10548,7 +10548,7 @@ The path specified gets used to call the user script.{{% /md %}}</dd><dt class="
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}

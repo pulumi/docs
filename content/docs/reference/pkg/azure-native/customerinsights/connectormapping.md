@@ -556,7 +556,7 @@ The ConnectorMapping resource accepts the following [input]({{< relref "/docs/in
 <a href="#mappingproperties_go" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingproperties">Connector<wbr>Mapping<wbr>Properties</a></span>
+        <span class="property-type"><a href="#connectormappingproperties">Connector<wbr>Mapping<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1221,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frequencytypes">Frequency<wbr>Types</a></span>
+        <span class="property-type"><a href="#frequencytypes">string</a></span>
     </dt>
     <dd>{{% md %}}The frequency to update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1377,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completionoperationtype_go" style="color: inherit; text-decoration: inherit;">Completion<wbr>Operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#completionoperationtypes">Completion<wbr>Operation<wbr>Types</a></span>
+        <span class="property-type"><a href="#completionoperationtypes">string</a></span>
     </dt>
     <dd>{{% md %}}The type of completion operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2105,7 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingavailability">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Availability<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingavailability">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2113,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completeoperation_csharp" style="color: inherit; text-decoration: inherit;">Complete<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingcompleteoperation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingcompleteoperation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Complete<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2121,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormanagement_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingerrormanagement">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingerrormanagement">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Error<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2129,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2137,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structure_csharp" style="color: inherit; text-decoration: inherit;">Structure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingstructure">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Structure<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectormappingstructure">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Structure&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2241,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingavailability">Connector<wbr>Mapping<wbr>Availability<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingavailability">Connector<wbr>Mapping<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2249,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completeoperation_nodejs" style="color: inherit; text-decoration: inherit;">complete<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingcompleteoperation">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingcompleteoperation">Connector<wbr>Mapping<wbr>Complete<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2257,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormanagement_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingerrormanagement">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingerrormanagement">Connector<wbr>Mapping<wbr>Error<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2265,7 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingformat">Connector<wbr>Mapping<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingformat">Connector<wbr>Mapping<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2273,7 +2273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structure_nodejs" style="color: inherit; text-decoration: inherit;">structure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingstructure">Connector<wbr>Mapping<wbr>Structure<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connectormappingstructure">Connector<wbr>Mapping<wbr>Structure[]</a></span>
     </dt>
     <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2309,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingavailability">Connector<wbr>Mapping<wbr>Availability<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingavailability">Connector<wbr>Mapping<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2317,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#complete_operation_python" style="color: inherit; text-decoration: inherit;">complete_<wbr>operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingcompleteoperation">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingcompleteoperation">Connector<wbr>Mapping<wbr>Complete<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2325,7 +2325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_management_python" style="color: inherit; text-decoration: inherit;">error_<wbr>management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingerrormanagement">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingerrormanagement">Connector<wbr>Mapping<wbr>Error<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2333,7 +2333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingformat">Connector<wbr>Mapping<wbr>Format<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingformat">Connector<wbr>Mapping<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2341,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingstructure">Sequence[Connector<wbr>Mapping<wbr>Structure<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectormappingstructure">Sequence[Connector<wbr>Mapping<wbr>Structure]</a></span>
     </dt>
     <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2379,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingavailabilityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Availability<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingavailabilityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Availability<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2387,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completeoperation_csharp" style="color: inherit; text-decoration: inherit;">Complete<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2395,7 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormanagement_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2403,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2411,7 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structure_csharp" style="color: inherit; text-decoration: inherit;">Structure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingstructureresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Structure<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectormappingstructureresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Structure<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2515,7 +2515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingavailabilityresponse">Connector<wbr>Mapping<wbr>Availability<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingavailabilityresponse">Connector<wbr>Mapping<wbr>Availability<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2523,7 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#completeoperation_nodejs" style="color: inherit; text-decoration: inherit;">complete<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2531,7 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormanagement_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2539,7 +2539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingformatresponse">Connector<wbr>Mapping<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingformatresponse">Connector<wbr>Mapping<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2547,7 +2547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structure_nodejs" style="color: inherit; text-decoration: inherit;">structure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingstructureresponse">Connector<wbr>Mapping<wbr>Structure<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connectormappingstructureresponse">Connector<wbr>Mapping<wbr>Structure<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2583,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingavailabilityresponse">Connector<wbr>Mapping<wbr>Availability<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingavailabilityresponse">Connector<wbr>Mapping<wbr>Availability<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2591,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#complete_operation_python" style="color: inherit; text-decoration: inherit;">complete_<wbr>operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2599,7 +2599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_management_python" style="color: inherit; text-decoration: inherit;">error_<wbr>management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2607,7 +2607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingformatresponse">Connector<wbr>Mapping<wbr>Format<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectormappingformatresponse">Connector<wbr>Mapping<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2615,7 +2615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingstructureresponse">Sequence[Connector<wbr>Mapping<wbr>Structure<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectormappingstructureresponse">Sequence[Connector<wbr>Mapping<wbr>Structure<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -441,7 +441,7 @@ The AvailabilityGroupListener resource accepts the following [input]({{< relref 
 <a href="#loadbalancerconfigurations_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerconfiguration">[]Load<wbr>Balancer<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#loadbalancerconfiguration">[]Load<wbr>Balancer<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of load balancer configurations for an availability group listener.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -752,7 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddress">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Private<wbr>IPAddress<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateipaddress">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Private<wbr>IPAddress</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -840,7 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddress">Private<wbr>IPAddress<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateipaddress">Private<wbr>IPAddress</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -884,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddress">Private<wbr>IPAddress<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateipaddress">Private<wbr>IPAddress</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Private<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateipaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Private<wbr>IPAddress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1018,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddressresponse">Private<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateipaddressresponse">Private<wbr>IPAddress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1062,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddressresponse">Private<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateipaddressresponse">Private<wbr>IPAddress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

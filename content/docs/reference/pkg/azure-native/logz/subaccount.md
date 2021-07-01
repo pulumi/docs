@@ -352,7 +352,7 @@ The SubAccount resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -368,7 +368,7 @@ The SubAccount resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorproperties">Monitor<wbr>Properties</a></span>
+        <span class="property-type"><a href="#monitorproperties">Monitor<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1155,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logzorganizationproperties_csharp" style="color: inherit; text-decoration: inherit;">Logz<wbr>Organization<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logzorganizationproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Logz<wbr>Organization<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#logzorganizationproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Logz<wbr>Organization<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1179,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plandata_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plandata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Plan<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#plandata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Plan<wbr>Data</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1187,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinfo_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1243,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logzorganizationproperties_nodejs" style="color: inherit; text-decoration: inherit;">logz<wbr>Organization<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logzorganizationproperties">Logz<wbr>Organization<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#logzorganizationproperties">Logz<wbr>Organization<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1267,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plandata_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plandata">Plan<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#plandata">Plan<wbr>Data</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1275,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinfo_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1287,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logz_organization_properties_python" style="color: inherit; text-decoration: inherit;">logz_<wbr>organization_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logzorganizationproperties">Logz<wbr>Organization<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#logzorganizationproperties">Logz<wbr>Organization<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plan_data_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plandata">Plan<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#plandata">Plan<wbr>Data</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1319,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_info_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1357,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logzorganizationproperties_csharp" style="color: inherit; text-decoration: inherit;">Logz<wbr>Organization<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logzorganizationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Logz<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logzorganizationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Logz<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1381,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plandata_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plandataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Plan<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#plandataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Plan<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1389,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinfo_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1493,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logzorganizationproperties_nodejs" style="color: inherit; text-decoration: inherit;">logz<wbr>Organization<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logzorganizationpropertiesresponse">Logz<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logzorganizationpropertiesresponse">Logz<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plandata_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plandataresponse">Plan<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#plandataresponse">Plan<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1525,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userinfo_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1561,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logz_organization_properties_python" style="color: inherit; text-decoration: inherit;">logz_<wbr>organization_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logzorganizationpropertiesresponse">Logz<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logzorganizationpropertiesresponse">Logz<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plan_data_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plandataresponse">Plan<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#plandataresponse">Plan<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1593,7 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_info_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

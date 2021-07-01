@@ -352,7 +352,7 @@ The TransactionNode resource accepts the following [input]({{< relref "/docs/int
 <a href="#firewallrules_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallrule">[]Firewall<wbr>Rule</a></span>
+        <span class="property-type"><a href="#firewallrule">[]Firewall<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the firewall rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

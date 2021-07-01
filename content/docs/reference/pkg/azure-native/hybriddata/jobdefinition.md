@@ -514,7 +514,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customersecrets_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customersecret">[]Customer<wbr>Secret</a></span>
+        <span class="property-type"><a href="#customersecret">[]Customer<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +546,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#runlocation_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runlocation">Run<wbr>Location</a></span>
+        <span class="property-type"><a href="#runlocation">string</a></span>
     </dt>
     <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +554,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedule">[]Schedule</a></span>
+        <span class="property-type"><a href="#schedule">[]Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +562,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#userconfirmation_go" style="color: inherit; text-decoration: inherit;">User<wbr>Confirmation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userconfirmation">User<wbr>Confirmation</a></span>
+        <span class="property-type"><a href="#userconfirmation">string</a></span>
     </dt>
     <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd></dl>
 {{% /choosable %}}

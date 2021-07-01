@@ -403,7 +403,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
 <a href="#proximityplacementgroup_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the proximity placement group that the availability set should be assigned to. <br><br>Minimum api-version: 2018-04-01.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -411,7 +411,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks. Default value is 'Classic'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -427,7 +427,7 @@ The AvailabilitySet resource accepts the following [input]({{< relref "/docs/int
 <a href="#virtualmachines_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">[]Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">[]Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of references to all virtual machines in the availability set.{{% /md %}}</dd></dl>
 {{% /choosable %}}

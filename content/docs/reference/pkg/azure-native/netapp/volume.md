@@ -587,7 +587,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#dataprotection_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumepropertiesdataprotection">Volume<wbr>Properties<wbr>Data<wbr>Protection</a></span>
+        <span class="property-type"><a href="#volumepropertiesdataprotection">Volume<wbr>Properties<wbr>Data<wbr>Protection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -603,7 +603,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#exportpolicy_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumepropertiesexportpolicy">Volume<wbr>Properties<wbr>Export<wbr>Policy</a></span>
+        <span class="property-type"><a href="#volumepropertiesexportpolicy">Volume<wbr>Properties<wbr>Export<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of export policy rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3240,7 +3240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackupproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Backup<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumebackupproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Backup<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3248,7 +3248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobject">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Replication<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationobject">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Replication<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3256,7 +3256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumesnapshotproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3296,7 +3296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackupproperties">Volume<wbr>Backup<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumebackupproperties">Volume<wbr>Backup<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3304,7 +3304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobject">Replication<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationobject">Replication<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3312,7 +3312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotproperties">Volume<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumesnapshotproperties">Volume<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3324,7 +3324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackupproperties">Volume<wbr>Backup<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumebackupproperties">Volume<wbr>Backup<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3332,7 +3332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobject">Replication<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationobject">Replication<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3340,7 +3340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotproperties">Volume<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumesnapshotproperties">Volume<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3354,7 +3354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Export<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#exportpolicyrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Export<wbr>Policy<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3378,7 +3378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyrule">Export<wbr>Policy<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#exportpolicyrule">Export<wbr>Policy<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3390,7 +3390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyrule">Sequence[Export<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#exportpolicyrule">Sequence[Export<wbr>Policy<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3404,7 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackuppropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumebackuppropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Backup<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3412,7 +3412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Replication<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Replication<wbr>Object<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3420,7 +3420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3460,7 +3460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3468,7 +3468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobjectresponse">Replication<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationobjectresponse">Replication<wbr>Object<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3476,7 +3476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3488,7 +3488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3496,7 +3496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobjectresponse">Replication<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#replicationobjectresponse">Replication<wbr>Object<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3504,7 +3504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3518,7 +3518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#exportpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Export<wbr>Policy<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3542,7 +3542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyruleresponse">Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#exportpolicyruleresponse">Export<wbr>Policy<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3554,7 +3554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyruleresponse">Sequence[Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#exportpolicyruleresponse">Sequence[Export<wbr>Policy<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd></dl>
 {{% /choosable %}}

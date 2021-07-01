@@ -428,7 +428,7 @@ The VirtualNetworkGatewayNatRule resource accepts the following [input]({{< relr
 <a href="#externalmappings_go" style="color: inherit; text-decoration: inherit;">External<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnnatrulemapping">[]Vpn<wbr>Nat<wbr>Rule<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">[]Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private IP address external mapping for NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -444,7 +444,7 @@ The VirtualNetworkGatewayNatRule resource accepts the following [input]({{< relr
 <a href="#internalmappings_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnnatrulemapping">[]Vpn<wbr>Nat<wbr>Rule<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">[]Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private IP address internal mapping for NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

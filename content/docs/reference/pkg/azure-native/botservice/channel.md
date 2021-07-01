@@ -858,7 +858,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannel">Alexa<wbr>Channel</a> | <a href="#directlinechannel">Direct<wbr>Line<wbr>Channel</a> | <a href="#directlinespeechchannel">Direct<wbr>Line<wbr>Speech<wbr>Channel</a> | <a href="#emailchannel">Email<wbr>Channel</a> | <a href="#facebookchannel">Facebook<wbr>Channel</a> | <a href="#kikchannel">Kik<wbr>Channel</a> | <a href="#linechannel">Line<wbr>Channel</a> | <a href="#msteamschannel">Ms<wbr>Teams<wbr>Channel</a> | <a href="#skypechannel">Skype<wbr>Channel</a> | <a href="#slackchannel">Slack<wbr>Channel</a> | <a href="#smschannel">Sms<wbr>Channel</a> | <a href="#telegramchannel">Telegram<wbr>Channel</a> | <a href="#webchatchannel">Web<wbr>Chat<wbr>Channel</a></span>
+        <span class="property-type"><a href="#alexachannel">Alexa<wbr>Channel<wbr>Args</a> | <a href="#directlinechannel">Direct<wbr>Line<wbr>Channel<wbr>Args</a> | <a href="#directlinespeechchannel">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Args</a> | <a href="#emailchannel">Email<wbr>Channel<wbr>Args</a> | <a href="#facebookchannel">Facebook<wbr>Channel<wbr>Args</a> | <a href="#kikchannel">Kik<wbr>Channel<wbr>Args</a> | <a href="#linechannel">Line<wbr>Channel<wbr>Args</a> | <a href="#msteamschannel">Ms<wbr>Teams<wbr>Channel<wbr>Args</a> | <a href="#skypechannel">Skype<wbr>Channel<wbr>Args</a> | <a href="#slackchannel">Slack<wbr>Channel<wbr>Args</a> | <a href="#smschannel">Sms<wbr>Channel<wbr>Args</a> | <a href="#telegramchannel">Telegram<wbr>Channel<wbr>Args</a> | <a href="#webchatchannel">Web<wbr>Chat<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot channel resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +866,7 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1169,7 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#alexachannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1193,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannelproperties">Alexa<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#alexachannelproperties">Alexa<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1205,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannelproperties">Alexa<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#alexachannelproperties">Alexa<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1447,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#alexachannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Alexa<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1471,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannelpropertiesresponse">Alexa<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#alexachannelpropertiesresponse">Alexa<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1483,7 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alexachannelpropertiesresponse">Alexa<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#alexachannelpropertiesresponse">Alexa<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Alexa channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1497,7 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinechannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinechannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1521,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinechannelproperties">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinechannelproperties">Direct<wbr>Line<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1533,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinechannelproperties">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinechannelproperties">Direct<wbr>Line<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1547,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_csharp" style="color: inherit; text-decoration: inherit;">Sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinesite">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Site<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#directlinesite">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Site&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1571,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_nodejs" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinesite">Direct<wbr>Line<wbr>Site<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#directlinesite">Direct<wbr>Line<wbr>Site[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1583,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinesite">Sequence[Direct<wbr>Line<wbr>Site<wbr>Args]</a></span>
+        <span class="property-type"><a href="#directlinesite">Sequence[Direct<wbr>Line<wbr>Site]</a></span>
     </dt>
     <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1597,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_csharp" style="color: inherit; text-decoration: inherit;">Sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinesiteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Site<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#directlinesiteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Site<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1621,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_nodejs" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinesiteresponse">Direct<wbr>Line<wbr>Site<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#directlinesiteresponse">Direct<wbr>Line<wbr>Site<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1633,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinesiteresponse">Sequence[Direct<wbr>Line<wbr>Site<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#directlinesiteresponse">Sequence[Direct<wbr>Line<wbr>Site<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Direct Line sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1647,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1671,7 +1671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinechannelpropertiesresponse">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinechannelpropertiesresponse">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1683,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinechannelpropertiesresponse">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinechannelpropertiesresponse">Direct<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Direct Line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2213,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinespeechchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinespeechchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2237,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinespeechchannelproperties">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinespeechchannelproperties">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2249,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinespeechchannelproperties">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinespeechchannelproperties">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2683,7 +2683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2707,7 +2707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2719,7 +2719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#directlinespeechchannelpropertiesresponse">Direct<wbr>Line<wbr>Speech<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to DirectLine Speech channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2733,7 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2757,7 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailchannelproperties">Email<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailchannelproperties">Email<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2769,7 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailchannelproperties">Email<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailchannelproperties">Email<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3011,7 +3011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Email<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3035,7 +3035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailchannelpropertiesresponse">Email<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailchannelpropertiesresponse">Email<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3047,7 +3047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailchannelpropertiesresponse">Email<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailchannelpropertiesresponse">Email<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to email channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3061,7 +3061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#facebookchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3085,7 +3085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookchannelproperties">Facebook<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#facebookchannelproperties">Facebook<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3097,7 +3097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookchannelproperties">Facebook<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#facebookchannelproperties">Facebook<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3135,7 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pages_csharp" style="color: inherit; text-decoration: inherit;">Pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookpage">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Page<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#facebookpage">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Page&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3207,7 +3207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pages_nodejs" style="color: inherit; text-decoration: inherit;">pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookpage">Facebook<wbr>Page<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#facebookpage">Facebook<wbr>Page[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3243,7 +3243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pages_python" style="color: inherit; text-decoration: inherit;">pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookpage">Sequence[Facebook<wbr>Page<wbr>Args]</a></span>
+        <span class="property-type"><a href="#facebookpage">Sequence[Facebook<wbr>Page]</a></span>
     </dt>
     <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3297,7 +3297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pages_csharp" style="color: inherit; text-decoration: inherit;">Pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookpageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Page<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#facebookpageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Page<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3401,7 +3401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pages_nodejs" style="color: inherit; text-decoration: inherit;">pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookpageresponse">Facebook<wbr>Page<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#facebookpageresponse">Facebook<wbr>Page<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3453,7 +3453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pages_python" style="color: inherit; text-decoration: inherit;">pages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookpageresponse">Sequence[Facebook<wbr>Page<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#facebookpageresponse">Sequence[Facebook<wbr>Page<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Facebook pages{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3467,7 +3467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#facebookchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Facebook<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3491,7 +3491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookchannelpropertiesresponse">Facebook<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#facebookchannelpropertiesresponse">Facebook<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3503,7 +3503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookchannelpropertiesresponse">Facebook<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#facebookchannelpropertiesresponse">Facebook<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot facebook channel{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3681,7 +3681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kikchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#kikchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3705,7 +3705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kikchannelproperties">Kik<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#kikchannelproperties">Kik<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3717,7 +3717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kikchannelproperties">Kik<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#kikchannelproperties">Kik<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4023,7 +4023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kikchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kikchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Kik<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4047,7 +4047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kikchannelpropertiesresponse">Kik<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kikchannelpropertiesresponse">Kik<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4059,7 +4059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kikchannelpropertiesresponse">Kik<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kikchannelpropertiesresponse">Kik<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Kik channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4107,7 +4107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linechannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#linechannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4131,7 +4131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linechannelproperties">Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#linechannelproperties">Line<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4143,7 +4143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linechannelproperties">Line<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#linechannelproperties">Line<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4157,7 +4157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lineregistrations_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lineregistration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Registration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#lineregistration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Registration&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4181,7 +4181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lineregistrations_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lineregistration">Line<wbr>Registration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#lineregistration">Line<wbr>Registration[]</a></span>
     </dt>
     <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4193,7 +4193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#line_registrations_python" style="color: inherit; text-decoration: inherit;">line_<wbr>registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lineregistration">Sequence[Line<wbr>Registration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#lineregistration">Sequence[Line<wbr>Registration]</a></span>
     </dt>
     <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4223,7 +4223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lineregistrations_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lineregistrationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Registration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#lineregistrationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Registration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4279,7 +4279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lineregistrations_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lineregistrationresponse">Line<wbr>Registration<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#lineregistrationresponse">Line<wbr>Registration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4307,7 +4307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#line_registrations_python" style="color: inherit; text-decoration: inherit;">line_<wbr>registrations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lineregistrationresponse">Sequence[Line<wbr>Registration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#lineregistrationresponse">Sequence[Line<wbr>Registration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of line channel registrations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4321,7 +4321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Line<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4345,7 +4345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linechannelpropertiesresponse">Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linechannelpropertiesresponse">Line<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4357,7 +4357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linechannelpropertiesresponse">Line<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linechannelpropertiesresponse">Line<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to line channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4567,7 +4567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msteamschannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#msteamschannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4591,7 +4591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msteamschannelproperties">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#msteamschannelproperties">Ms<wbr>Teams<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4603,7 +4603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msteamschannelproperties">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#msteamschannelproperties">Ms<wbr>Teams<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4845,7 +4845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msteamschannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#msteamschannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4869,7 +4869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msteamschannelpropertiesresponse">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#msteamschannelpropertiesresponse">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4881,7 +4881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msteamschannelpropertiesresponse">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#msteamschannelpropertiesresponse">Ms<wbr>Teams<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Microsoft Teams channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5053,7 +5053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skypechannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#skypechannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5077,7 +5077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skypechannelproperties">Skype<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#skypechannelproperties">Skype<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5089,7 +5089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skypechannelproperties">Skype<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#skypechannelproperties">Skype<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5715,7 +5715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skypechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skypechannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Skype<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5739,7 +5739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skypechannelpropertiesresponse">Skype<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skypechannelpropertiesresponse">Skype<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5751,7 +5751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skypechannelpropertiesresponse">Skype<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skypechannelpropertiesresponse">Skype<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Skype channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5765,7 +5765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slackchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#slackchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5789,7 +5789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slackchannelproperties">Slack<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#slackchannelproperties">Slack<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5801,7 +5801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slackchannelproperties">Slack<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#slackchannelproperties">Slack<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6363,7 +6363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slackchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#slackchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Slack<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6387,7 +6387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slackchannelpropertiesresponse">Slack<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#slackchannelpropertiesresponse">Slack<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6399,7 +6399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slackchannelpropertiesresponse">Slack<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#slackchannelpropertiesresponse">Slack<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Slack channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6413,7 +6413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smschannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#smschannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6437,7 +6437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smschannelproperties">Sms<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#smschannelproperties">Sms<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6449,7 +6449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smschannelproperties">Sms<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#smschannelproperties">Sms<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6819,7 +6819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smschannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#smschannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sms<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6843,7 +6843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smschannelpropertiesresponse">Sms<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#smschannelpropertiesresponse">Sms<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6855,7 +6855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smschannelpropertiesresponse">Sms<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#smschannelpropertiesresponse">Sms<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Sms channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6869,7 +6869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telegramchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#telegramchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6893,7 +6893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telegramchannelproperties">Telegram<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#telegramchannelproperties">Telegram<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6905,7 +6905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telegramchannelproperties">Telegram<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#telegramchannelproperties">Telegram<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7147,7 +7147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telegramchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#telegramchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Telegram<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7171,7 +7171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telegramchannelpropertiesresponse">Telegram<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#telegramchannelpropertiesresponse">Telegram<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7183,7 +7183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#telegramchannelpropertiesresponse">Telegram<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#telegramchannelpropertiesresponse">Telegram<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Telegram channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7197,7 +7197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#webchatchannelproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7221,7 +7221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatchannelproperties">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#webchatchannelproperties">Web<wbr>Chat<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7233,7 +7233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatchannelproperties">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#webchatchannelproperties">Web<wbr>Chat<wbr>Channel<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7247,7 +7247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_csharp" style="color: inherit; text-decoration: inherit;">Sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatsite">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Site<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#webchatsite">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Site&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7271,7 +7271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_nodejs" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatsite">Web<wbr>Chat<wbr>Site<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#webchatsite">Web<wbr>Chat<wbr>Site[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7283,7 +7283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatsite">Sequence[Web<wbr>Chat<wbr>Site<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webchatsite">Sequence[Web<wbr>Chat<wbr>Site]</a></span>
     </dt>
     <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7305,7 +7305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_csharp" style="color: inherit; text-decoration: inherit;">Sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatsiteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Site<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#webchatsiteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Site<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7345,7 +7345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_nodejs" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatsiteresponse">Web<wbr>Chat<wbr>Site<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#webchatsiteresponse">Web<wbr>Chat<wbr>Site<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7365,7 +7365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sites_python" style="color: inherit; text-decoration: inherit;">sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatsiteresponse">Sequence[Web<wbr>Chat<wbr>Site<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webchatsiteresponse">Sequence[Web<wbr>Chat<wbr>Site<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Web Chat sites{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7379,7 +7379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#webchatchannelpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7403,7 +7403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatchannelpropertiesresponse">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#webchatchannelpropertiesresponse">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7415,7 +7415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webchatchannelpropertiesresponse">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#webchatchannelpropertiesresponse">Web<wbr>Chat<wbr>Channel<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to Web Chat channel resource{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -503,7 +503,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#azurefirewall_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Firewall</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The azureFirewall associated with this VirtualHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -511,7 +511,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#expressroutegateway_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The expressRouteGateway associated with this VirtualHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -535,7 +535,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#p2svpngateway_go" style="color: inherit; text-decoration: inherit;">P2SVpn<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The P2SVpnGateway associated with this VirtualHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -543,7 +543,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#routetable_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutetable">Virtual<wbr>Hub<wbr>Route<wbr>Table</a></span>
+        <span class="property-type"><a href="#virtualhubroutetable">Virtual<wbr>Hub<wbr>Route<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The routeTable associated with this virtual hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -551,7 +551,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#securitypartnerprovider_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Partner<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The securityPartnerProvider associated with this VirtualHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -591,7 +591,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#virtualhubroutetablev2s_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub<wbr>Route<wbr>Table<wbr>V2s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutetablev2">[]Virtual<wbr>Hub<wbr>Route<wbr>Table<wbr>V2Type</a></span>
+        <span class="property-type"><a href="#virtualhubroutetablev2">[]Virtual<wbr>Hub<wbr>Route<wbr>Table<wbr>V2Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of all virtual hub route table v2s associated with this VirtualHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -615,7 +615,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#virtualwan_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Wan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VirtualWAN to which the VirtualHub belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -623,7 +623,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#vpngateway_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VpnGateway associated with this VirtualHub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1502,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroute">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hub<wbr>Route<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualhubroute">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hub<wbr>Route&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1526,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroute">Virtual<wbr>Hub<wbr>Route<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualhubroute">Virtual<wbr>Hub<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1538,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroute">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualhubroute">Sequence[Virtual<wbr>Hub<wbr>Route]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1552,7 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubrouteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hub<wbr>Route<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualhubrouteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hub<wbr>Route<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1576,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubrouteresponse">Virtual<wbr>Hub<wbr>Route<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualhubrouteresponse">Virtual<wbr>Hub<wbr>Route<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1588,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubrouteresponse">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualhubrouteresponse">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1626,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutev2">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hub<wbr>Route<wbr>V2Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualhubroutev2">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hub<wbr>Route<wbr>V2&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1698,7 +1698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutev2">Virtual<wbr>Hub<wbr>Route<wbr>V2Args[]</a></span>
+        <span class="property-type"><a href="#virtualhubroutev2">Virtual<wbr>Hub<wbr>Route<wbr>V2[]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1734,7 +1734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutev2">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>V2Args]</a></span>
+        <span class="property-type"><a href="#virtualhubroutev2">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>V2]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1788,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutev2response">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hub<wbr>Route<wbr>V2Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualhubroutev2response">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hub<wbr>Route<wbr>V2Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1892,7 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutev2response">Virtual<wbr>Hub<wbr>Route<wbr>V2Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualhubroutev2response">Virtual<wbr>Hub<wbr>Route<wbr>V2Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1944,7 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutev2response">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>V2Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualhubroutev2response">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>V2Response]</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}

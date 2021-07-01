@@ -52,18 +52,18 @@ class MyStack : Stack
                             new AzureNative.SecurityInsights.Inputs.MetadataDependenciesArgs
                             {
                                 ContentId = "045d06d0-ee72-4794-aba4-cf5646e4c756",
-                                Kind = "dataConnector",
+                                Kind = "DataConnector",
                                 Name = "Microsoft Defender for Endpoint",
                             },
                             new AzureNative.SecurityInsights.Inputs.MetadataDependenciesArgs
                             {
                                 ContentId = "dbfcb2cc-d782-40ef-8d94-fe7af58a6f2d",
-                                Kind = "dataConnector",
+                                Kind = "DataConnector",
                             },
                             new AzureNative.SecurityInsights.Inputs.MetadataDependenciesArgs
                             {
                                 ContentId = "de4dca9b-eb37-47d6-a56f-b8b06b261593",
-                                Kind = "dataConnector",
+                                Kind = "DataConnector",
                                 Version = "2.0",
                             },
                         },
@@ -72,25 +72,25 @@ class MyStack : Stack
                     new AzureNative.SecurityInsights.Inputs.MetadataDependenciesArgs
                     {
                         ContentId = "31ee11cc-9989-4de8-b176-5e0ef5c4dbab",
-                        Kind = "playbook",
+                        Kind = "Playbook",
                         Version = "1.0",
                     },
                     new AzureNative.SecurityInsights.Inputs.MetadataDependenciesArgs
                     {
                         ContentId = "21ba424a-9438-4444-953a-7059539a7a1b",
-                        Kind = "parser",
+                        Kind = "Parser",
                     },
                 },
                 Operator = "AND",
             },
-            Kind = "analyticRule",
+            Kind = "AnalyticsRule",
             MetadataName = "metadataName",
             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
             ParentId = "/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName",
             ResourceGroupName = "myRg",
             Source = new AzureNative.SecurityInsights.Inputs.MetadataSourceArgs
             {
-                Kind = "solution",
+                Kind = "Solution",
                 Name = "Contoso Solution 1.0",
                 SourceId = "b688a130-76f4-4a07-bf57-762222a3cadf",
             },
@@ -99,7 +99,7 @@ class MyStack : Stack
                 Email = "support@microsoft.com",
                 Link = "https://support.microsoft.com/",
                 Name = "Microsoft",
-                Tier = "developer",
+                Tier = "Partner",
             },
             Version = "1.0.0.0",
             WorkspaceName = "myWorkspace",
@@ -136,44 +136,44 @@ metadata = azure_native.securityinsights.Metadata("metadata",
     content_id="c00ee137-7475-47c8-9cce-ec6f0f1bedd0",
     dependencies={
         "criteria": [
-            {
-                "criteria": [
+            azure_native.securityinsights.MetadataDependenciesArgs(
+                criteria=[
                     azure_native.securityinsights.MetadataDependenciesArgs(
                         content_id="045d06d0-ee72-4794-aba4-cf5646e4c756",
-                        kind="dataConnector",
+                        kind="DataConnector",
                         name="Microsoft Defender for Endpoint",
                     ),
                     azure_native.securityinsights.MetadataDependenciesArgs(
                         content_id="dbfcb2cc-d782-40ef-8d94-fe7af58a6f2d",
-                        kind="dataConnector",
+                        kind="DataConnector",
                     ),
                     azure_native.securityinsights.MetadataDependenciesArgs(
                         content_id="de4dca9b-eb37-47d6-a56f-b8b06b261593",
-                        kind="dataConnector",
+                        kind="DataConnector",
                         version="2.0",
                     ),
                 ],
-                "operator": "OR",
-            },
+                operator="OR",
+            ),
             azure_native.securityinsights.MetadataDependenciesArgs(
                 content_id="31ee11cc-9989-4de8-b176-5e0ef5c4dbab",
-                kind="playbook",
+                kind="Playbook",
                 version="1.0",
             ),
             azure_native.securityinsights.MetadataDependenciesArgs(
                 content_id="21ba424a-9438-4444-953a-7059539a7a1b",
-                kind="parser",
+                kind="Parser",
             ),
         ],
         "operator": "AND",
     },
-    kind="analyticRule",
+    kind="AnalyticsRule",
     metadata_name="metadataName",
     operational_insights_resource_provider="Microsoft.OperationalInsights",
     parent_id="/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName",
     resource_group_name="myRg",
     source=azure_native.securityinsights.MetadataSourceArgs(
-        kind="solution",
+        kind="Solution",
         name="Contoso Solution 1.0",
         source_id="b688a130-76f4-4a07-bf57-762222a3cadf",
     ),
@@ -181,7 +181,7 @@ metadata = azure_native.securityinsights.Metadata("metadata",
         email="support@microsoft.com",
         link="https://support.microsoft.com/",
         name="Microsoft",
-        tier="developer",
+        tier="Partner",
     ),
     version="1.0.0.0",
     workspace_name="myWorkspace")
@@ -211,16 +211,16 @@ const metadata = new azure_native.securityinsights.Metadata("metadata", {
                 criteria: [
                     {
                         contentId: "045d06d0-ee72-4794-aba4-cf5646e4c756",
-                        kind: "dataConnector",
+                        kind: "DataConnector",
                         name: "Microsoft Defender for Endpoint",
                     },
                     {
                         contentId: "dbfcb2cc-d782-40ef-8d94-fe7af58a6f2d",
-                        kind: "dataConnector",
+                        kind: "DataConnector",
                     },
                     {
                         contentId: "de4dca9b-eb37-47d6-a56f-b8b06b261593",
-                        kind: "dataConnector",
+                        kind: "DataConnector",
                         version: "2.0",
                     },
                 ],
@@ -228,23 +228,23 @@ const metadata = new azure_native.securityinsights.Metadata("metadata", {
             },
             {
                 contentId: "31ee11cc-9989-4de8-b176-5e0ef5c4dbab",
-                kind: "playbook",
+                kind: "Playbook",
                 version: "1.0",
             },
             {
                 contentId: "21ba424a-9438-4444-953a-7059539a7a1b",
-                kind: "parser",
+                kind: "Parser",
             },
         ],
         operator: "AND",
     },
-    kind: "analyticRule",
+    kind: "AnalyticsRule",
     metadataName: "metadataName",
     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     parentId: "/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName",
     resourceGroupName: "myRg",
     source: {
-        kind: "solution",
+        kind: "Solution",
         name: "Contoso Solution 1.0",
         sourceId: "b688a130-76f4-4a07-bf57-762222a3cadf",
     },
@@ -252,7 +252,7 @@ const metadata = new azure_native.securityinsights.Metadata("metadata", {
         email: "support@microsoft.com",
         link: "https://support.microsoft.com/",
         name: "Microsoft",
-        tier: "developer",
+        tier: "Partner",
     },
     version: "1.0.0.0",
     workspaceName: "myWorkspace",
@@ -282,7 +282,7 @@ class MyStack : Stack
         var metadata = new AzureNative.SecurityInsights.Metadata("metadata", new AzureNative.SecurityInsights.MetadataArgs
         {
             ContentId = "c00ee137-7475-47c8-9cce-ec6f0f1bedd0",
-            Kind = "analyticRule",
+            Kind = "AnalyticsRule",
             MetadataName = "metadataName",
             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
             ParentId = "/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName",
@@ -314,7 +314,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := securityinsights.NewMetadata(ctx, "metadata", &securityinsights.MetadataArgs{
 			ContentId:                           pulumi.String("c00ee137-7475-47c8-9cce-ec6f0f1bedd0"),
-			Kind:                                pulumi.String("analyticRule"),
+			Kind:                                pulumi.String("AnalyticsRule"),
 			MetadataName:                        pulumi.String("metadataName"),
 			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
 			ParentId:                            pulumi.String("/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName"),
@@ -343,7 +343,7 @@ import pulumi_azure_native as azure_native
 
 metadata = azure_native.securityinsights.Metadata("metadata",
     content_id="c00ee137-7475-47c8-9cce-ec6f0f1bedd0",
-    kind="analyticRule",
+    kind="AnalyticsRule",
     metadata_name="metadataName",
     operational_insights_resource_provider="Microsoft.OperationalInsights",
     parent_id="/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName",
@@ -365,7 +365,7 @@ import * as azure_native from "@pulumi/azure-native";
 
 const metadata = new azure_native.securityinsights.Metadata("metadata", {
     contentId: "c00ee137-7475-47c8-9cce-ec6f0f1bedd0",
-    kind: "analyticRule",
+    kind: "AnalyticsRule",
     metadataName: "metadataName",
     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     parentId: "/subscriptions/2e1dc338-d04d-4443-b721-037eff4fdcac/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/ruleName",
@@ -541,14 +541,6 @@ The Metadata resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="contentid_csharp">
-<a href="#contentid_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
@@ -596,6 +588,14 @@ The Metadata resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#metadataauthor">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Metadata<wbr>Author<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The creator of the content item.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contentid_csharp">
+<a href="#contentid_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependencies_csharp">
 <a href="#dependencies_csharp" style="color: inherit; text-decoration: inherit;">Dependencies</a>
@@ -649,14 +649,6 @@ The Metadata resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="contentid_go">
-<a href="#contentid_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
@@ -701,15 +693,23 @@ The Metadata resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#author_go" style="color: inherit; text-decoration: inherit;">Author</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadataauthor">Metadata<wbr>Author</a></span>
+        <span class="property-type"><a href="#metadataauthor">Metadata<wbr>Author<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The creator of the content item.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contentid_go">
+<a href="#contentid_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependencies_go">
 <a href="#dependencies_go" style="color: inherit; text-decoration: inherit;">Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatadependencies">Metadata<wbr>Dependencies</a></span>
+        <span class="property-type"><a href="#metadatadependencies">Metadata<wbr>Dependencies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +733,7 @@ The Metadata resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatasource">Metadata<wbr>Source</a></span>
+        <span class="property-type"><a href="#metadatasource">Metadata<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source of the content.  This is where/how it was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -741,7 +741,7 @@ The Metadata resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#support_go" style="color: inherit; text-decoration: inherit;">Support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatasupport">Metadata<wbr>Support</a></span>
+        <span class="property-type"><a href="#metadatasupport">Metadata<wbr>Support<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Support information for the metadata - type, name, contact information{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -756,14 +756,6 @@ The Metadata resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="contentid_nodejs">
-<a href="#contentid_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -812,6 +804,14 @@ The Metadata resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#metadataauthor">Metadata<wbr>Author<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The creator of the content item.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="contentid_nodejs">
+<a href="#contentid_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependencies_nodejs">
 <a href="#dependencies_nodejs" style="color: inherit; text-decoration: inherit;">dependencies</a>
@@ -865,14 +865,6 @@ The Metadata resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="content_id_python">
-<a href="#content_id_python" style="color: inherit; text-decoration: inherit;">content_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
@@ -920,6 +912,14 @@ The Metadata resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#metadataauthor">Metadata<wbr>Author<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The creator of the content item.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="content_id_python">
+<a href="#content_id_python" style="color: inherit; text-decoration: inherit;">content_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dependencies_python">
 <a href="#dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
@@ -1135,74 +1135,74 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Data<wbr>Connector</dt>
-    <dd>dataConnector</dd><dt>Data<wbr>Type</dt>
-    <dd>dataType</dd><dt>Workbook</dt>
-    <dd>workbook</dd><dt>Workbook<wbr>Template</dt>
-    <dd>workbookTemplate</dd><dt>Playbook</dt>
-    <dd>playbook</dd><dt>Playbook<wbr>Template</dt>
-    <dd>playbookTemplate</dd><dt>Analytic<wbr>Rule<wbr>Template</dt>
-    <dd>analyticRuleTemplate</dd><dt>Analytic<wbr>Rule</dt>
-    <dd>analyticRule</dd><dt>Hunting<wbr>Query</dt>
-    <dd>huntingQuery</dd><dt>Investigation<wbr>Query</dt>
-    <dd>investigationQuery</dd><dt>Parser</dt>
-    <dd>parser</dd><dt>Watchlist</dt>
-    <dd>watchlist</dd><dt>Watchlist<wbr>Template</dt>
-    <dd>watchlistTemplate</dd><dt>Solution</dt>
-    <dd>solution</dd></dl>
+    <dd>DataConnector</dd><dt>Data<wbr>Type</dt>
+    <dd>DataType</dd><dt>Workbook</dt>
+    <dd>Workbook</dd><dt>Workbook<wbr>Template</dt>
+    <dd>WorkbookTemplate</dd><dt>Playbook</dt>
+    <dd>Playbook</dd><dt>Playbook<wbr>Template</dt>
+    <dd>PlaybookTemplate</dd><dt>Analytics<wbr>Rule<wbr>Template</dt>
+    <dd>AnalyticsRuleTemplate</dd><dt>Analytics<wbr>Rule</dt>
+    <dd>AnalyticsRule</dd><dt>Hunting<wbr>Query</dt>
+    <dd>HuntingQuery</dd><dt>Investigation<wbr>Query</dt>
+    <dd>InvestigationQuery</dd><dt>Parser</dt>
+    <dd>Parser</dd><dt>Watchlist</dt>
+    <dd>Watchlist</dd><dt>Watchlist<wbr>Template</dt>
+    <dd>WatchlistTemplate</dd><dt>Solution</dt>
+    <dd>Solution</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Kind<wbr>Data<wbr>Connector</dt>
-    <dd>dataConnector</dd><dt>Kind<wbr>Data<wbr>Type</dt>
-    <dd>dataType</dd><dt>Kind<wbr>Workbook</dt>
-    <dd>workbook</dd><dt>Kind<wbr>Workbook<wbr>Template</dt>
-    <dd>workbookTemplate</dd><dt>Kind<wbr>Playbook</dt>
-    <dd>playbook</dd><dt>Kind<wbr>Playbook<wbr>Template</dt>
-    <dd>playbookTemplate</dd><dt>Kind<wbr>Analytic<wbr>Rule<wbr>Template</dt>
-    <dd>analyticRuleTemplate</dd><dt>Kind<wbr>Analytic<wbr>Rule</dt>
-    <dd>analyticRule</dd><dt>Kind<wbr>Hunting<wbr>Query</dt>
-    <dd>huntingQuery</dd><dt>Kind<wbr>Investigation<wbr>Query</dt>
-    <dd>investigationQuery</dd><dt>Kind<wbr>Parser</dt>
-    <dd>parser</dd><dt>Kind<wbr>Watchlist</dt>
-    <dd>watchlist</dd><dt>Kind<wbr>Watchlist<wbr>Template</dt>
-    <dd>watchlistTemplate</dd><dt>Kind<wbr>Solution</dt>
-    <dd>solution</dd></dl>
+    <dd>DataConnector</dd><dt>Kind<wbr>Data<wbr>Type</dt>
+    <dd>DataType</dd><dt>Kind<wbr>Workbook</dt>
+    <dd>Workbook</dd><dt>Kind<wbr>Workbook<wbr>Template</dt>
+    <dd>WorkbookTemplate</dd><dt>Kind<wbr>Playbook</dt>
+    <dd>Playbook</dd><dt>Kind<wbr>Playbook<wbr>Template</dt>
+    <dd>PlaybookTemplate</dd><dt>Kind<wbr>Analytics<wbr>Rule<wbr>Template</dt>
+    <dd>AnalyticsRuleTemplate</dd><dt>Kind<wbr>Analytics<wbr>Rule</dt>
+    <dd>AnalyticsRule</dd><dt>Kind<wbr>Hunting<wbr>Query</dt>
+    <dd>HuntingQuery</dd><dt>Kind<wbr>Investigation<wbr>Query</dt>
+    <dd>InvestigationQuery</dd><dt>Kind<wbr>Parser</dt>
+    <dd>Parser</dd><dt>Kind<wbr>Watchlist</dt>
+    <dd>Watchlist</dd><dt>Kind<wbr>Watchlist<wbr>Template</dt>
+    <dd>WatchlistTemplate</dd><dt>Kind<wbr>Solution</dt>
+    <dd>Solution</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Data<wbr>Connector</dt>
-    <dd>dataConnector</dd><dt>Data<wbr>Type</dt>
-    <dd>dataType</dd><dt>Workbook</dt>
-    <dd>workbook</dd><dt>Workbook<wbr>Template</dt>
-    <dd>workbookTemplate</dd><dt>Playbook</dt>
-    <dd>playbook</dd><dt>Playbook<wbr>Template</dt>
-    <dd>playbookTemplate</dd><dt>Analytic<wbr>Rule<wbr>Template</dt>
-    <dd>analyticRuleTemplate</dd><dt>Analytic<wbr>Rule</dt>
-    <dd>analyticRule</dd><dt>Hunting<wbr>Query</dt>
-    <dd>huntingQuery</dd><dt>Investigation<wbr>Query</dt>
-    <dd>investigationQuery</dd><dt>Parser</dt>
-    <dd>parser</dd><dt>Watchlist</dt>
-    <dd>watchlist</dd><dt>Watchlist<wbr>Template</dt>
-    <dd>watchlistTemplate</dd><dt>Solution</dt>
-    <dd>solution</dd></dl>
+    <dd>DataConnector</dd><dt>Data<wbr>Type</dt>
+    <dd>DataType</dd><dt>Workbook</dt>
+    <dd>Workbook</dd><dt>Workbook<wbr>Template</dt>
+    <dd>WorkbookTemplate</dd><dt>Playbook</dt>
+    <dd>Playbook</dd><dt>Playbook<wbr>Template</dt>
+    <dd>PlaybookTemplate</dd><dt>Analytics<wbr>Rule<wbr>Template</dt>
+    <dd>AnalyticsRuleTemplate</dd><dt>Analytics<wbr>Rule</dt>
+    <dd>AnalyticsRule</dd><dt>Hunting<wbr>Query</dt>
+    <dd>HuntingQuery</dd><dt>Investigation<wbr>Query</dt>
+    <dd>InvestigationQuery</dd><dt>Parser</dt>
+    <dd>Parser</dd><dt>Watchlist</dt>
+    <dd>Watchlist</dd><dt>Watchlist<wbr>Template</dt>
+    <dd>WatchlistTemplate</dd><dt>Solution</dt>
+    <dd>Solution</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>DATA_CONNECTOR</dt>
-    <dd>dataConnector</dd><dt>DATA_TYPE</dt>
-    <dd>dataType</dd><dt>WORKBOOK</dt>
-    <dd>workbook</dd><dt>WORKBOOK_TEMPLATE</dt>
-    <dd>workbookTemplate</dd><dt>PLAYBOOK</dt>
-    <dd>playbook</dd><dt>PLAYBOOK_TEMPLATE</dt>
-    <dd>playbookTemplate</dd><dt>ANALYTIC_RULE_TEMPLATE</dt>
-    <dd>analyticRuleTemplate</dd><dt>ANALYTIC_RULE</dt>
-    <dd>analyticRule</dd><dt>HUNTING_QUERY</dt>
-    <dd>huntingQuery</dd><dt>INVESTIGATION_QUERY</dt>
-    <dd>investigationQuery</dd><dt>PARSER</dt>
-    <dd>parser</dd><dt>WATCHLIST</dt>
-    <dd>watchlist</dd><dt>WATCHLIST_TEMPLATE</dt>
-    <dd>watchlistTemplate</dd><dt>SOLUTION</dt>
-    <dd>solution</dd></dl>
+    <dd>DataConnector</dd><dt>DATA_TYPE</dt>
+    <dd>DataType</dd><dt>WORKBOOK</dt>
+    <dd>Workbook</dd><dt>WORKBOOK_TEMPLATE</dt>
+    <dd>WorkbookTemplate</dd><dt>PLAYBOOK</dt>
+    <dd>Playbook</dd><dt>PLAYBOOK_TEMPLATE</dt>
+    <dd>PlaybookTemplate</dd><dt>ANALYTICS_RULE_TEMPLATE</dt>
+    <dd>AnalyticsRuleTemplate</dd><dt>ANALYTICS_RULE</dt>
+    <dd>AnalyticsRule</dd><dt>HUNTING_QUERY</dt>
+    <dd>HuntingQuery</dd><dt>INVESTIGATION_QUERY</dt>
+    <dd>InvestigationQuery</dd><dt>PARSER</dt>
+    <dd>Parser</dd><dt>WATCHLIST</dt>
+    <dd>Watchlist</dd><dt>WATCHLIST_TEMPLATE</dt>
+    <dd>WatchlistTemplate</dd><dt>SOLUTION</dt>
+    <dd>Solution</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metadataauthor">Metadata<wbr>Author</h4>
@@ -1450,7 +1450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatadependencies">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Metadata<wbr>Dependencies<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metadatadependencies">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Metadata<wbr>Dependencies&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is the list of dependencies we must fulfill, according to the AND/OR operator{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1554,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatadependencies">Metadata<wbr>Dependencies<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metadatadependencies">Metadata<wbr>Dependencies[]</a></span>
     </dt>
     <dd>{{% md %}}This is the list of dependencies we must fulfill, according to the AND/OR operator{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1606,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatadependencies">Sequence[Metadata<wbr>Dependencies<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metadatadependencies">Sequence[Metadata<wbr>Dependencies]</a></span>
     </dt>
     <dd>{{% md %}}This is the list of dependencies we must fulfill, according to the AND/OR operator{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1660,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatadependenciesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Metadata<wbr>Dependencies<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metadatadependenciesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Metadata<wbr>Dependencies<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is the list of dependencies we must fulfill, according to the AND/OR operator{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1764,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatadependenciesresponse">Metadata<wbr>Dependencies<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metadatadependenciesresponse">Metadata<wbr>Dependencies<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}This is the list of dependencies we must fulfill, according to the AND/OR operator{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1816,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metadatadependenciesresponse">Sequence[Metadata<wbr>Dependencies<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metadatadependenciesresponse">Sequence[Metadata<wbr>Dependencies<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}This is the list of dependencies we must fulfill, according to the AND/OR operator{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2403,64 +2403,64 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Local<wbr>Workspace</dt>
-    <dd>localWorkspace</dd><dt>Community</dt>
-    <dd>community</dd><dt>Solution</dt>
-    <dd>solution</dd><dt>Source<wbr>Repository</dt>
-    <dd>sourceRepository</dd></dl>
+    <dd>LocalWorkspace</dd><dt>Community</dt>
+    <dd>Community</dd><dt>Solution</dt>
+    <dd>Solution</dd><dt>Source<wbr>Repository</dt>
+    <dd>SourceRepository</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Source<wbr>Kind<wbr>Local<wbr>Workspace</dt>
-    <dd>localWorkspace</dd><dt>Source<wbr>Kind<wbr>Community</dt>
-    <dd>community</dd><dt>Source<wbr>Kind<wbr>Solution</dt>
-    <dd>solution</dd><dt>Source<wbr>Kind<wbr>Source<wbr>Repository</dt>
-    <dd>sourceRepository</dd></dl>
+    <dd>LocalWorkspace</dd><dt>Source<wbr>Kind<wbr>Community</dt>
+    <dd>Community</dd><dt>Source<wbr>Kind<wbr>Solution</dt>
+    <dd>Solution</dd><dt>Source<wbr>Kind<wbr>Source<wbr>Repository</dt>
+    <dd>SourceRepository</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Local<wbr>Workspace</dt>
-    <dd>localWorkspace</dd><dt>Community</dt>
-    <dd>community</dd><dt>Solution</dt>
-    <dd>solution</dd><dt>Source<wbr>Repository</dt>
-    <dd>sourceRepository</dd></dl>
+    <dd>LocalWorkspace</dd><dt>Community</dt>
+    <dd>Community</dd><dt>Solution</dt>
+    <dd>Solution</dd><dt>Source<wbr>Repository</dt>
+    <dd>SourceRepository</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>LOCAL_WORKSPACE</dt>
-    <dd>localWorkspace</dd><dt>COMMUNITY</dt>
-    <dd>community</dd><dt>SOLUTION</dt>
-    <dd>solution</dd><dt>SOURCE_REPOSITORY</dt>
-    <dd>sourceRepository</dd></dl>
+    <dd>LocalWorkspace</dd><dt>COMMUNITY</dt>
+    <dd>Community</dd><dt>SOLUTION</dt>
+    <dd>Solution</dd><dt>SOURCE_REPOSITORY</dt>
+    <dd>SourceRepository</dd></dl>
 {{% /choosable %}}
 
 <h4 id="supporttier">Support<wbr>Tier</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>Microsoft</dt>
-    <dd>microsoft</dd><dt>Developer</dt>
-    <dd>developer</dd><dt>Community</dt>
-    <dd>community</dd></dl>
+    <dd>Microsoft</dd><dt>Partner</dt>
+    <dd>Partner</dd><dt>Community</dt>
+    <dd>Community</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Support<wbr>Tier<wbr>Microsoft</dt>
-    <dd>microsoft</dd><dt>Support<wbr>Tier<wbr>Developer</dt>
-    <dd>developer</dd><dt>Support<wbr>Tier<wbr>Community</dt>
-    <dd>community</dd></dl>
+    <dd>Microsoft</dd><dt>Support<wbr>Tier<wbr>Partner</dt>
+    <dd>Partner</dd><dt>Support<wbr>Tier<wbr>Community</dt>
+    <dd>Community</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Microsoft</dt>
-    <dd>microsoft</dd><dt>Developer</dt>
-    <dd>developer</dd><dt>Community</dt>
-    <dd>community</dd></dl>
+    <dd>Microsoft</dd><dt>Partner</dt>
+    <dd>Partner</dd><dt>Community</dt>
+    <dd>Community</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>MICROSOFT</dt>
-    <dd>microsoft</dd><dt>DEVELOPER</dt>
-    <dd>developer</dd><dt>COMMUNITY</dt>
-    <dd>community</dd></dl>
+    <dd>Microsoft</dd><dt>PARTNER</dt>
+    <dd>Partner</dd><dt>COMMUNITY</dt>
+    <dd>Community</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>

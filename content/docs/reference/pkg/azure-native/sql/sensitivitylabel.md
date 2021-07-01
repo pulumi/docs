@@ -498,7 +498,7 @@ The SensitivityLabel resource accepts the following [input]({{< relref "/docs/in
 <a href="#rank_go" style="color: inherit; text-decoration: inherit;">Rank</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sensitivitylabelrank">Sensitivity<wbr>Label<wbr>Rank</a></span>
+        <span class="property-type"><a href="#sensitivitylabelrank">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

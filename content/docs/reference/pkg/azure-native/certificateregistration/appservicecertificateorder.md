@@ -312,7 +312,7 @@ The AppServiceCertificateOrder resource accepts the following [input]({{< relref
 <a href="#certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]App<wbr>Service<wbr>Certificate</span>
+        <span class="property-type">map[string]App<wbr>Service<wbr>Certificate<wbr>Args</span>
     </dt>
     <dd>{{% md %}}State of the Key Vault secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

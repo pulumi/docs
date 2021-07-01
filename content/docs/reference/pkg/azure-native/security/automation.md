@@ -807,7 +807,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationscope">[]Automation<wbr>Scope</a></span>
+        <span class="property-type"><a href="#automationscope">[]Automation<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -815,7 +815,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationsource">[]Automation<wbr>Source</a></span>
+        <span class="property-type"><a href="#automationsource">[]Automation<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of the source event types which evaluate the security automation set of rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationtriggeringrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Triggering<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationtriggeringrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Triggering<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1634,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationtriggeringrule">Automation<wbr>Triggering<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#automationtriggeringrule">Automation<wbr>Triggering<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1646,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationtriggeringrule">Sequence[Automation<wbr>Triggering<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationtriggeringrule">Sequence[Automation<wbr>Triggering<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1660,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationtriggeringruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Triggering<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationtriggeringruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Triggering<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1684,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationtriggeringruleresponse">Automation<wbr>Triggering<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#automationtriggeringruleresponse">Automation<wbr>Triggering<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1696,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationtriggeringruleresponse">Sequence[Automation<wbr>Triggering<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationtriggeringruleresponse">Sequence[Automation<wbr>Triggering<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1882,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesets_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationruleset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationruleset">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Set&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1922,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesets_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationruleset">Automation<wbr>Rule<wbr>Set<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#automationruleset">Automation<wbr>Rule<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1942,7 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_sets_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationruleset">Sequence[Automation<wbr>Rule<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationruleset">Sequence[Automation<wbr>Rule<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1964,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesets_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Automation<wbr>Rule<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2004,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulesets_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulesetresponse">Automation<wbr>Rule<wbr>Set<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#automationrulesetresponse">Automation<wbr>Rule<wbr>Set<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2024,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_sets_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulesetresponse">Sequence[Automation<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationrulesetresponse">Sequence[Automation<wbr>Rule<wbr>Set<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').{{% /md %}}</dd></dl>
 {{% /choosable %}}

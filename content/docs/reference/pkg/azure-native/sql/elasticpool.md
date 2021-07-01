@@ -688,7 +688,7 @@ az sql elastic-pool list-editions -l <location> -o table
 <a href="#perdatabasesettings_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Database<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticpoolperdatabasesettings">Elastic<wbr>Pool<wbr>Per<wbr>Database<wbr>Settings</a></span>
+        <span class="property-type"><a href="#elasticpoolperdatabasesettings">Elastic<wbr>Pool<wbr>Per<wbr>Database<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The per database settings for the elastic pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -696,7 +696,7 @@ az sql elastic-pool list-editions -l <location> -o table
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The elastic pool SKU.
 

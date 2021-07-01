@@ -393,7 +393,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -417,7 +417,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#networkruleset_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkruleset">Network<wbr>Rule<wbr>Set</a></span>
+        <span class="property-type"><a href="#networkruleset">Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network rule set for a container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -425,7 +425,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policies">Policies</a></span>
+        <span class="property-type"><a href="#policies">Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policies for a container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -441,7 +441,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storageaccount_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountproperties">Storage<wbr>Account<wbr>Properties</a></span>
+        <span class="property-type"><a href="#storageaccountproperties">Storage<wbr>Account<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the storage account for the container registry. Only applicable to Classic SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1092,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>IPRule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>IPRule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP ACL rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1148,7 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">IPRule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#iprule">IPRule[]</a></span>
     </dt>
     <dd>{{% md %}}The IP ACL rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">Virtual<wbr>Network<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">Virtual<wbr>Network<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1176,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">Sequence[IPRule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iprule">Sequence[IPRule]</a></span>
     </dt>
     <dd>{{% md %}}The IP ACL rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1184,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">Sequence[Virtual<wbr>Network<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1206,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>IPRule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>IPRule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP ACL rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1214,7 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1262,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">IPRule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipruleresponse">IPRule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The IP ACL rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1270,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1290,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">Sequence[IPRule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipruleresponse">Sequence[IPRule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The IP ACL rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1298,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1312,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quarantinepolicy_csharp" style="color: inherit; text-decoration: inherit;">Quarantine<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quarantinepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Quarantine<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#quarantinepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Quarantine<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The quarantine policy for a container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1320,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for a container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1328,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trustpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Trust<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#trustpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Trust<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The content trust policy for a container registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1368,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quarantinepolicy_nodejs" style="color: inherit; text-decoration: inherit;">quarantine<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quarantinepolicy">Quarantine<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#quarantinepolicy">Quarantine<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The quarantine policy for a container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1376,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicy">Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicy">Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for a container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1384,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trustpolicy">Trust<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#trustpolicy">Trust<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The content trust policy for a container registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1396,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quarantine_policy_python" style="color: inherit; text-decoration: inherit;">quarantine_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quarantinepolicy">Quarantine<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#quarantinepolicy">Quarantine<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The quarantine policy for a container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1404,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicy">Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicy">Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for a container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1412,7 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trust_policy_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trustpolicy">Trust<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#trustpolicy">Trust<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The content trust policy for a container registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1426,7 +1426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quarantinepolicy_csharp" style="color: inherit; text-decoration: inherit;">Quarantine<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quarantinepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Quarantine<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#quarantinepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Quarantine<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The quarantine policy for a container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1434,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for a container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1442,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trustpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Trust<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trustpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Trust<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The content trust policy for a container registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1482,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quarantinepolicy_nodejs" style="color: inherit; text-decoration: inherit;">quarantine<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quarantinepolicyresponse">Quarantine<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#quarantinepolicyresponse">Quarantine<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The quarantine policy for a container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1490,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for a container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1498,7 +1498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trustpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trustpolicyresponse">Trust<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trustpolicyresponse">Trust<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The content trust policy for a container registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1510,7 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quarantine_policy_python" style="color: inherit; text-decoration: inherit;">quarantine_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quarantinepolicyresponse">Quarantine<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#quarantinepolicyresponse">Quarantine<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The quarantine policy for a container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1518,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for a container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1526,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trust_policy_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trustpolicyresponse">Trust<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trustpolicyresponse">Trust<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The content trust policy for a container registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}

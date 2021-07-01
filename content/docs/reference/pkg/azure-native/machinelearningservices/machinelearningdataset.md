@@ -414,7 +414,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestparameters">Dataset<wbr>Create<wbr>Request<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestparameters">Dataset<wbr>Create<wbr>Request<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -422,7 +422,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#registration_go" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestregistration">Dataset<wbr>Create<wbr>Request<wbr>Registration</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestregistration">Dataset<wbr>Create<wbr>Request<wbr>Registration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -462,7 +462,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 <a href="#timeseries_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequesttimeseries">Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series</a></span>
+        <span class="property-type"><a href="#datasetcreaterequesttimeseries">Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1007,7 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestpath">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Create<wbr>Request<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestpath">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Create<wbr>Request<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1015,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestquery">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Create<wbr>Request<wbr>Query<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestquery">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Create<wbr>Request<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1127,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestpath">Dataset<wbr>Create<wbr>Request<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestpath">Dataset<wbr>Create<wbr>Request<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1135,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestquery">Dataset<wbr>Create<wbr>Request<wbr>Query<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestquery">Dataset<wbr>Create<wbr>Request<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1187,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestpath">Dataset<wbr>Create<wbr>Request<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestpath">Dataset<wbr>Create<wbr>Request<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1195,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestquery">Dataset<wbr>Create<wbr>Request<wbr>Query<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestquery">Dataset<wbr>Create<wbr>Request<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1225,7 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datapath_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestdatapath">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestdatapath">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1265,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datapath_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestdatapath">Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestdatapath">Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_path_python" style="color: inherit; text-decoration: inherit;">data_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcreaterequestdatapath">Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetcreaterequestdatapath">Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1665,7 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetstate_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1673,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_csharp" style="color: inherit; text-decoration: inherit;">Latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponselatest">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Latest<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetresponselatest">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Latest</a></span>
     </dt>
     <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1865,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetstate_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1873,7 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_nodejs" style="color: inherit; text-decoration: inherit;">latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponselatest">Dataset<wbr>Response<wbr>Latest<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetresponselatest">Dataset<wbr>Response<wbr>Latest</a></span>
     </dt>
     <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1965,7 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_state_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1973,7 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#latest_python" style="color: inherit; text-decoration: inherit;">latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponselatest">Dataset<wbr>Response<wbr>Latest<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetresponselatest">Dataset<wbr>Response<wbr>Latest</a></span>
     </dt>
     <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2051,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqldatapath_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Data<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsesqldatapath">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetresponsesqldatapath">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2203,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqldatapath_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Data<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsesqldatapath">Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetresponsesqldatapath">Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2279,7 +2279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_data_path_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>data_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsesqldatapath">Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetresponsesqldatapath">Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2405,7 +2405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}User who created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2413,7 +2413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datapath_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsedatapath">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Data<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetresponsedatapath">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Data<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2421,7 +2421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetdefinitionstate_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Definition<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2701,7 +2701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}User who created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2709,7 +2709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datapath_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsedatapath">Dataset<wbr>Response<wbr>Data<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetresponsedatapath">Dataset<wbr>Response<wbr>Data<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2717,7 +2717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetdefinitionstate_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Definition<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2849,7 +2849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}User who created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2857,7 +2857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_path_python" style="color: inherit; text-decoration: inherit;">data_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsedatapath">Dataset<wbr>Response<wbr>Data<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetresponsedatapath">Dataset<wbr>Response<wbr>Data<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2865,7 +2865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_definition_state_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>definition_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3041,7 +3041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deprecatedby_csharp" style="color: inherit; text-decoration: inherit;">Deprecated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By</a></span>
     </dt>
     <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3097,7 +3097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deprecatedby_nodejs" style="color: inherit; text-decoration: inherit;">deprecated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By</a></span>
     </dt>
     <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3125,7 +3125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deprecated_by_python" style="color: inherit; text-decoration: inherit;">deprecated_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By</a></span>
     </dt>
     <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3313,7 +3313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3385,7 +3385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3421,7 +3421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

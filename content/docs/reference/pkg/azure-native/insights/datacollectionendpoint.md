@@ -407,7 +407,7 @@ The DataCollectionEndpoint resource accepts the following [input]({{< relref "/d
 <a href="#networkacls_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionendpointnetworkacls">Data<wbr>Collection<wbr>Endpoint<wbr>Network<wbr>Acls</a></span>
+        <span class="property-type"><a href="#datacollectionendpointnetworkacls">Data<wbr>Collection<wbr>Endpoint<wbr>Network<wbr>Acls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network access control rules for the endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

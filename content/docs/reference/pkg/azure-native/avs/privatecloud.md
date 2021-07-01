@@ -407,7 +407,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#managementcluster_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementcluster">Management<wbr>Cluster</a></span>
+        <span class="property-type"><a href="#managementcluster">Management<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -431,7 +431,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -439,7 +439,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identitysources_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitysource">[]Identity<wbr>Source</a></span>
+        <span class="property-type"><a href="#identitysource">[]Identity<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

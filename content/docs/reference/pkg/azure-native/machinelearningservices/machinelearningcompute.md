@@ -1282,7 +1282,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1298,7 +1298,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aks">AKS</a> | <a href="#amlcompute">Aml<wbr>Compute</a> | <a href="#computeinstance">Compute<wbr>Instance</a> | <a href="#datafactory">Data<wbr>Factory</a> | <a href="#datalakeanalytics">Data<wbr>Lake<wbr>Analytics</a> | <a href="#databricks">Databricks</a> | <a href="#hdinsight">HDInsight</a> | <a href="#virtualmachine">Virtual<wbr>Machine</a></span>
+        <span class="property-type"><a href="#aks">AKSArgs</a> | <a href="#amlcompute">Aml<wbr>Compute<wbr>Args</a> | <a href="#computeinstance">Compute<wbr>Instance<wbr>Args</a> | <a href="#datafactory">Data<wbr>Factory<wbr>Args</a> | <a href="#datalakeanalytics">Data<wbr>Lake<wbr>Analytics<wbr>Args</a> | <a href="#databricks">Databricks<wbr>Args</a> | <a href="#hdinsight">HDInsight<wbr>Args</a> | <a href="#virtualmachine">Virtual<wbr>Machine<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1306,7 +1306,7 @@ The MachineLearningCompute resource accepts the following [input]({{< relref "/d
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1641,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSProperties<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSProperties</a></span>
     </dt>
     <dd>{{% md %}}AKS properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1713,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksproperties">AKSProperties<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksproperties">AKSProperties</a></span>
     </dt>
     <dd>{{% md %}}AKS properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1749,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksproperties">AKSProperties<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksproperties">AKSProperties</a></span>
     </dt>
     <dd>{{% md %}}AKS properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1787,7 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aksnetworkingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Aks<wbr>Networking<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksnetworkingconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aks<wbr>Networking<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksnetworkingconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aks<wbr>Networking<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1811,7 +1811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Ssl<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1891,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aksnetworkingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">aks<wbr>Networking<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksnetworkingconfiguration">Aks<wbr>Networking<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksnetworkingconfiguration">Aks<wbr>Networking<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1915,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfiguration">Ssl<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfiguration">Ssl<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1943,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aks_networking_configuration_python" style="color: inherit; text-decoration: inherit;">aks_<wbr>networking_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksnetworkingconfiguration">Aks<wbr>Networking<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksnetworkingconfiguration">Aks<wbr>Networking<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1967,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_configuration_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfiguration">Ssl<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfiguration">Ssl<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1989,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2021,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSResponse<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSResponse<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}AKS properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2109,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2141,7 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksresponseproperties">AKSResponse<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksresponseproperties">AKSResponse<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}AKS properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2169,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2201,7 +2201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksresponseproperties">AKSResponse<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksresponseproperties">AKSResponse<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}AKS properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2223,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservices_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>System<wbr>Service<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>System<wbr>Service<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}System services{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2247,7 +2247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aksnetworkingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Aks<wbr>Networking<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aks<wbr>Networking<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aks<wbr>Networking<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2271,7 +2271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2343,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemservices_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">System<wbr>Service<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">System<wbr>Service<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}System services{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2367,7 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aksnetworkingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">aks<wbr>Networking<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Aks<wbr>Networking<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Aks<wbr>Networking<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2391,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2403,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_services_python" style="color: inherit; text-decoration: inherit;">system_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemserviceresponse">Sequence[System<wbr>Service<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemserviceresponse">Sequence[System<wbr>Service<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}System services{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2427,7 +2427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aks_networking_configuration_python" style="color: inherit; text-decoration: inherit;">aks_<wbr>networking_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Aks<wbr>Networking<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Aks<wbr>Networking<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2451,7 +2451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_configuration_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2773,7 +2773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amlcomputeproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Compute<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#amlcomputeproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Compute<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}AML Compute properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2845,7 +2845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amlcomputeproperties">Aml<wbr>Compute<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#amlcomputeproperties">Aml<wbr>Compute<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}AML Compute properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2881,7 +2881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amlcomputeproperties">Aml<wbr>Compute<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#amlcomputeproperties">Aml<wbr>Compute<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}AML Compute properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2935,7 +2935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Scale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2943,7 +2943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2951,7 +2951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useraccountcredentials_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Account<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountcredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Account<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#useraccountcredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Account<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2959,7 +2959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineimage_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineimage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Image<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineimage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Image</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3103,7 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesettings_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettings">Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesettings">Scale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3111,7 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3119,7 +3119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useraccountcredentials_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Account<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountcredentials">User<wbr>Account<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#useraccountcredentials">User<wbr>Account<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3127,7 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineimage_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineimage">Virtual<wbr>Machine<wbr>Image<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineimage">Virtual<wbr>Machine<wbr>Image</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3187,7 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettings">Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesettings">Scale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3195,7 +3195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3203,7 +3203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_account_credentials_python" style="color: inherit; text-decoration: inherit;">user_<wbr>account_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountcredentials">User<wbr>Account<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#useraccountcredentials">User<wbr>Account<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3211,7 +3211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_image_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineimage">Virtual<wbr>Machine<wbr>Image<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineimage">Virtual<wbr>Machine<wbr>Image</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3249,7 +3249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3281,7 +3281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amlcomputeresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Compute<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#amlcomputeresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Compute<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}AML Compute properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3369,7 +3369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3401,7 +3401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amlcomputeresponseproperties">Aml<wbr>Compute<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#amlcomputeresponseproperties">Aml<wbr>Compute<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}AML Compute properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3429,7 +3429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3461,7 +3461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amlcomputeresponseproperties">Aml<wbr>Compute<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#amlcomputeresponseproperties">Aml<wbr>Compute<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}AML Compute properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3507,7 +3507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3515,7 +3515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodestatecounts_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>State<wbr>Counts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodestatecountsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Node<wbr>State<wbr>Counts<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodestatecountsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Node<wbr>State<wbr>Counts<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Counts of various node states on the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3563,7 +3563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3571,7 +3571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3579,7 +3579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useraccountcredentials_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Account<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Account<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#useraccountcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Account<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3587,7 +3587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineimage_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineimageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Image<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineimageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3771,7 +3771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3779,7 +3779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodestatecounts_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>State<wbr>Counts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Counts of various node states on the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3827,7 +3827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalesettings_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettingsresponse">Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesettingsresponse">Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3835,7 +3835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3843,7 +3843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useraccountcredentials_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Account<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountcredentialsresponse">User<wbr>Account<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#useraccountcredentialsresponse">User<wbr>Account<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3851,7 +3851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineimage_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineimageresponse">Virtual<wbr>Machine<wbr>Image<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineimageresponse">Virtual<wbr>Machine<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3903,7 +3903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3911,7 +3911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_state_counts_python" style="color: inherit; text-decoration: inherit;">node_<wbr>state_<wbr>counts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Counts of various node states on the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3959,7 +3959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesettingsresponse">Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesettingsresponse">Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3967,7 +3967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3975,7 +3975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_account_credentials_python" style="color: inherit; text-decoration: inherit;">user_<wbr>account_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#useraccountcredentialsresponse">User<wbr>Account<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#useraccountcredentialsresponse">User<wbr>Account<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3983,7 +3983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_image_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineimageresponse">Virtual<wbr>Machine<wbr>Image<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineimageresponse">Virtual<wbr>Machine<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4249,7 +4249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstanceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4321,7 +4321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceproperties">Compute<wbr>Instance<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstanceproperties">Compute<wbr>Instance<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4357,7 +4357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceproperties">Compute<wbr>Instance<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstanceproperties">Compute<wbr>Instance<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4809,7 +4809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#personalcomputeinstancesettings_csharp" style="color: inherit; text-decoration: inherit;">Personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#personalcomputeinstancesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Personal<wbr>Compute<wbr>Instance<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4817,7 +4817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setupscripts_csharp" style="color: inherit; text-decoration: inherit;">Setup<wbr>Scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setupscripts">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Setup<wbr>Scripts<wbr>Args</a></span>
+        <span class="property-type"><a href="#setupscripts">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Setup<wbr>Scripts</a></span>
     </dt>
     <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4825,7 +4825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshsettings_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancesshsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancesshsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Ssh<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4833,7 +4833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4929,7 +4929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#personalcomputeinstancesettings_nodejs" style="color: inherit; text-decoration: inherit;">personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#personalcomputeinstancesettings">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettings">Personal<wbr>Compute<wbr>Instance<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4937,7 +4937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setupscripts_nodejs" style="color: inherit; text-decoration: inherit;">setup<wbr>Scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setupscripts">Setup<wbr>Scripts<wbr>Args</a></span>
+        <span class="property-type"><a href="#setupscripts">Setup<wbr>Scripts</a></span>
     </dt>
     <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4945,7 +4945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshsettings_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancesshsettings">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancesshsettings">Compute<wbr>Instance<wbr>Ssh<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4953,7 +4953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4989,7 +4989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#personal_compute_instance_settings_python" style="color: inherit; text-decoration: inherit;">personal_<wbr>compute_<wbr>instance_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#personalcomputeinstancesettings">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettings">Personal<wbr>Compute<wbr>Instance<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4997,7 +4997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setup_scripts_python" style="color: inherit; text-decoration: inherit;">setup_<wbr>scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setupscripts">Setup<wbr>Scripts<wbr>Args</a></span>
+        <span class="property-type"><a href="#setupscripts">Setup<wbr>Scripts</a></span>
     </dt>
     <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5005,7 +5005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_settings_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancesshsettings">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancesshsettings">Compute<wbr>Instance<wbr>Ssh<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5013,7 +5013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5043,7 +5043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5075,7 +5075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstanceresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5163,7 +5163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5195,7 +5195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceresponseproperties">Compute<wbr>Instance<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstanceresponseproperties">Compute<wbr>Instance<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5223,7 +5223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5255,7 +5255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceresponseproperties">Compute<wbr>Instance<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstanceresponseproperties">Compute<wbr>Instance<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5277,7 +5277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applications_csharp" style="color: inherit; text-decoration: inherit;">Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceapplicationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Application<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#computeinstanceapplicationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Application<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes available applications and their endpoints on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5285,7 +5285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivityendpoints_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes all connectivity endpoints available for this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5293,7 +5293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancecreatedbyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancecreatedbyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes information on user who created this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5301,7 +5301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5309,7 +5309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastoperation_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancelastoperationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancelastoperationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5341,7 +5341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#personalcomputeinstancesettings_csharp" style="color: inherit; text-decoration: inherit;">Personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5349,7 +5349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setupscripts_csharp" style="color: inherit; text-decoration: inherit;">Setup<wbr>Scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setupscriptsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Setup<wbr>Scripts<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#setupscriptsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Setup<wbr>Scripts<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5357,7 +5357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshsettings_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancesshsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancesshsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5365,7 +5365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5493,7 +5493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applications_nodejs" style="color: inherit; text-decoration: inherit;">applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceapplicationresponse">Compute<wbr>Instance<wbr>Application<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#computeinstanceapplicationresponse">Compute<wbr>Instance<wbr>Application<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Describes available applications and their endpoints on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5501,7 +5501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivityendpoints_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes all connectivity endpoints available for this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5509,7 +5509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancecreatedbyresponse">Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancecreatedbyresponse">Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes information on user who created this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5517,7 +5517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5525,7 +5525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastoperation_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5557,7 +5557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#personalcomputeinstancesettings_nodejs" style="color: inherit; text-decoration: inherit;">personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5565,7 +5565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setupscripts_nodejs" style="color: inherit; text-decoration: inherit;">setup<wbr>Scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setupscriptsresponse">Setup<wbr>Scripts<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#setupscriptsresponse">Setup<wbr>Scripts<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5573,7 +5573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sshsettings_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancesshsettingsresponse">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancesshsettingsresponse">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5581,7 +5581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5601,7 +5601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applications_python" style="color: inherit; text-decoration: inherit;">applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceapplicationresponse">Sequence[Compute<wbr>Instance<wbr>Application<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#computeinstanceapplicationresponse">Sequence[Compute<wbr>Instance<wbr>Application<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Describes available applications and their endpoints on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5609,7 +5609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivity_endpoints_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes all connectivity endpoints available for this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5617,7 +5617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancecreatedbyresponse">Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancecreatedbyresponse">Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes information on user who created this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5625,7 +5625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5633,7 +5633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_operation_python" style="color: inherit; text-decoration: inherit;">last_<wbr>operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5665,7 +5665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#personal_compute_instance_settings_python" style="color: inherit; text-decoration: inherit;">personal_<wbr>compute_<wbr>instance_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5673,7 +5673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#setup_scripts_python" style="color: inherit; text-decoration: inherit;">setup_<wbr>scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setupscriptsresponse">Setup<wbr>Scripts<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#setupscriptsresponse">Setup<wbr>Scripts<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5681,7 +5681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_settings_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeinstancesshsettingsresponse">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#computeinstancesshsettingsresponse">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5689,7 +5689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6061,7 +6061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6165,7 +6165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6217,7 +6217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6279,7 +6279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#datalakeanalyticsproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6351,7 +6351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsproperties">Data<wbr>Lake<wbr>Analytics<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#datalakeanalyticsproperties">Data<wbr>Lake<wbr>Analytics<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6387,7 +6387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsproperties">Data<wbr>Lake<wbr>Analytics<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#datalakeanalyticsproperties">Data<wbr>Lake<wbr>Analytics<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6467,7 +6467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6499,7 +6499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6587,7 +6587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6619,7 +6619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6647,7 +6647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6679,7 +6679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6767,7 +6767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databricksproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Databricks<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#databricksproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Databricks<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6839,7 +6839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databricksproperties">Databricks<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#databricksproperties">Databricks<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6875,7 +6875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databricksproperties">Databricks<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#databricksproperties">Databricks<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6987,7 +6987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7019,7 +7019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databricksresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Databricks<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#databricksresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Databricks<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7107,7 +7107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7139,7 +7139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databricksresponseproperties">Databricks<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#databricksresponseproperties">Databricks<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7167,7 +7167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7199,7 +7199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databricksresponseproperties">Databricks<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#databricksresponseproperties">Databricks<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7393,7 +7393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7449,7 +7449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7477,7 +7477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7515,7 +7515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hdinsightproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>HDInsight<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#hdinsightproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>HDInsight<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7587,7 +7587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hdinsightproperties">HDInsight<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#hdinsightproperties">HDInsight<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7623,7 +7623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hdinsightproperties">HDInsight<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#hdinsightproperties">HDInsight<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7653,7 +7653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7709,7 +7709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentials">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentials">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7737,7 +7737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrator_account_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentials">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentials">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7767,7 +7767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7799,7 +7799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hdinsightresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>HDInsight<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#hdinsightresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>HDInsight<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7887,7 +7887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7919,7 +7919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hdinsightresponseproperties">HDInsight<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#hdinsightresponseproperties">HDInsight<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7947,7 +7947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7979,7 +7979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hdinsightresponseproperties">HDInsight<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#hdinsightresponseproperties">HDInsight<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8009,7 +8009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8065,7 +8065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8093,7 +8093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrator_account_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8135,7 +8135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8221,7 +8221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8293,7 +8293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8329,7 +8329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8343,7 +8343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8367,7 +8367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8379,7 +8379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8629,7 +8629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assigneduser_csharp" style="color: inherit; text-decoration: inherit;">Assigned<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assigneduser">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Assigned<wbr>User<wbr>Args</a></span>
+        <span class="property-type"><a href="#assigneduser">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Assigned<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8653,7 +8653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assigneduser_nodejs" style="color: inherit; text-decoration: inherit;">assigned<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assigneduser">Assigned<wbr>User<wbr>Args</a></span>
+        <span class="property-type"><a href="#assigneduser">Assigned<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8665,7 +8665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assigned_user_python" style="color: inherit; text-decoration: inherit;">assigned_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assigneduser">Assigned<wbr>User<wbr>Args</a></span>
+        <span class="property-type"><a href="#assigneduser">Assigned<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8679,7 +8679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assigneduser_csharp" style="color: inherit; text-decoration: inherit;">Assigned<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assigneduserresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Assigned<wbr>User<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#assigneduserresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Assigned<wbr>User<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8703,7 +8703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assigneduser_nodejs" style="color: inherit; text-decoration: inherit;">assigned<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assigneduserresponse">Assigned<wbr>User<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#assigneduserresponse">Assigned<wbr>User<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8715,7 +8715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assigned_user_python" style="color: inherit; text-decoration: inherit;">assigned_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assigneduserresponse">Assigned<wbr>User<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#assigneduserresponse">Assigned<wbr>User<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9413,7 +9413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationscript_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Script<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Script<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9421,7 +9421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startupscript_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Script<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Script<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9453,7 +9453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationscript_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9461,7 +9461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startupscript_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9473,7 +9473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_script_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9481,7 +9481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startup_script_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptreference">Script<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9495,7 +9495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationscript_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Script<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9503,7 +9503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startupscript_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Script<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9535,7 +9535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationscript_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9543,7 +9543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startupscript_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9555,7 +9555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_script_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9563,7 +9563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startup_script_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9577,7 +9577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scripts_csharp" style="color: inherit; text-decoration: inherit;">Scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptstoexecute">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Scripts<wbr>To<wbr>Execute<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptstoexecute">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Scripts<wbr>To<wbr>Execute</a></span>
     </dt>
     <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9601,7 +9601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scripts_nodejs" style="color: inherit; text-decoration: inherit;">scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptstoexecute">Scripts<wbr>To<wbr>Execute<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptstoexecute">Scripts<wbr>To<wbr>Execute</a></span>
     </dt>
     <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9613,7 +9613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scripts_python" style="color: inherit; text-decoration: inherit;">scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptstoexecute">Scripts<wbr>To<wbr>Execute<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptstoexecute">Scripts<wbr>To<wbr>Execute</a></span>
     </dt>
     <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9627,7 +9627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scripts_csharp" style="color: inherit; text-decoration: inherit;">Scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptstoexecuteresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Scripts<wbr>To<wbr>Execute<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptstoexecuteresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Scripts<wbr>To<wbr>Execute<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9651,7 +9651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scripts_nodejs" style="color: inherit; text-decoration: inherit;">scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptstoexecuteresponse">Scripts<wbr>To<wbr>Execute<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptstoexecuteresponse">Scripts<wbr>To<wbr>Execute<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9663,7 +9663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scripts_python" style="color: inherit; text-decoration: inherit;">scripts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scriptstoexecuteresponse">Scripts<wbr>To<wbr>Execute<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scriptstoexecuteresponse">Scripts<wbr>To<wbr>Execute<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10841,7 +10841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10913,7 +10913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineproperties">Virtual<wbr>Machine<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineproperties">Virtual<wbr>Machine<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10949,7 +10949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineproperties">Virtual<wbr>Machine<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineproperties">Virtual<wbr>Machine<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11079,7 +11079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11151,7 +11151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentials">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentials">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11187,7 +11187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrator_account_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentials">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentials">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11225,7 +11225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11257,7 +11257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11345,7 +11345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11377,7 +11377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineresponseproperties">Virtual<wbr>Machine<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineresponseproperties">Virtual<wbr>Machine<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11405,7 +11405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11437,7 +11437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineresponseproperties">Virtual<wbr>Machine<wbr>Response<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineresponseproperties">Virtual<wbr>Machine<wbr>Response<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11467,7 +11467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11539,7 +11539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratoraccount_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11575,7 +11575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrator_account_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

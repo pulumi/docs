@@ -3736,7 +3736,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#applicationrulecollections_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationrulecollection">[]Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Collection</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationrulecollection">[]Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Collection of application rule collections used by Azure Firewall.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3752,7 +3752,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#firewallpolicy_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The firewallPolicy associated with this azure firewall.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3760,7 +3760,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#hubipaddresses_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>IPAddresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubipaddresses">Hub<wbr>IPAddresses</a></span>
+        <span class="property-type"><a href="#hubipaddresses">Hub<wbr>IPAddresses<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IP addresses associated with AzureFirewall.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3776,7 +3776,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallipconfiguration">[]Azure<wbr>Firewall<wbr>IPConfiguration</a></span>
+        <span class="property-type"><a href="#azurefirewallipconfiguration">[]Azure<wbr>Firewall<wbr>IPConfiguration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IP configuration of the Azure Firewall resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3792,7 +3792,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#managementipconfiguration_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallipconfiguration">Azure<wbr>Firewall<wbr>IPConfiguration</a></span>
+        <span class="property-type"><a href="#azurefirewallipconfiguration">Azure<wbr>Firewall<wbr>IPConfiguration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IP configuration of the Azure Firewall used for management traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3800,7 +3800,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#natrulecollections_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrulecollection">[]Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Collection</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrulecollection">[]Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Collection of NAT rule collections used by Azure Firewall.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3808,7 +3808,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#networkrulecollections_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkrulecollection">[]Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Collection</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkrulecollection">[]Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Collection of network rule collections used by Azure Firewall.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3816,7 +3816,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallsku">Azure<wbr>Firewall<wbr>Sku</a></span>
+        <span class="property-type"><a href="#azurefirewallsku">Azure<wbr>Firewall<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Firewall Resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3840,7 +3840,7 @@ The AzureFirewall resource accepts the following [input]({{< relref "/docs/intro
 <a href="#virtualhub_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtualHub to which the firewall belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4391,7 +4391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleprotocol">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleprotocol">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of ApplicationRuleProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4511,7 +4511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleprotocol">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleprotocol">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol[]</a></span>
     </dt>
     <dd>{{% md %}}Array of ApplicationRuleProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4571,7 +4571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleprotocol">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleprotocol">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol]</a></span>
     </dt>
     <dd>{{% md %}}Array of ApplicationRuleProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4609,7 +4609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4641,7 +4641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a application rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4697,7 +4697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcaction">Azure<wbr>Firewall<wbr>RCAction<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcaction">Azure<wbr>Firewall<wbr>RCAction</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4729,7 +4729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationrule">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationrule">Azure<wbr>Firewall<wbr>Application<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a application rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4741,7 +4741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcaction">Azure<wbr>Firewall<wbr>RCAction<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcaction">Azure<wbr>Firewall<wbr>RCAction</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4773,7 +4773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationrule">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationrule">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a application rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4803,7 +4803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4835,7 +4835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a application rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4923,7 +4923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4955,7 +4955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a application rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4983,7 +4983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5015,7 +5015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a application rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5247,7 +5247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of ApplicationRuleProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5367,7 +5367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of ApplicationRuleProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5427,7 +5427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of ApplicationRuleProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5481,7 +5481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5489,7 +5489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5553,7 +5553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5561,7 +5561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5589,7 +5589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5597,7 +5597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5659,7 +5659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5667,7 +5667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5795,7 +5795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5803,7 +5803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5863,7 +5863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5871,7 +5871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6431,7 +6431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrcaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrcaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>RCAction</a></span>
     </dt>
     <dd>{{% md %}}The action type of a NAT rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6463,7 +6463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a NAT rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6519,7 +6519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrcaction">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrcaction">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction</a></span>
     </dt>
     <dd>{{% md %}}The action type of a NAT rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6551,7 +6551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrule">Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrule">Azure<wbr>Firewall<wbr>Nat<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a NAT rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6563,7 +6563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrcaction">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrcaction">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction</a></span>
     </dt>
     <dd>{{% md %}}The action type of a NAT rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6595,7 +6595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrule">Sequence[Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrule">Sequence[Azure<wbr>Firewall<wbr>Nat<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a NAT rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6625,7 +6625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a NAT rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6657,7 +6657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a NAT rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6745,7 +6745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a NAT rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6777,7 +6777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatruleresponse">Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azurefirewallnatruleresponse">Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a NAT rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6805,7 +6805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a NAT rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6837,7 +6837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatruleresponse">Sequence[Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefirewallnatruleresponse">Sequence[Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a NAT rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7495,7 +7495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7527,7 +7527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a network rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7583,7 +7583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcaction">Azure<wbr>Firewall<wbr>RCAction<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcaction">Azure<wbr>Firewall<wbr>RCAction</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7615,7 +7615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkrule">Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkrule">Azure<wbr>Firewall<wbr>Network<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a network rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7627,7 +7627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcaction">Azure<wbr>Firewall<wbr>RCAction<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcaction">Azure<wbr>Firewall<wbr>RCAction</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7659,7 +7659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkrule">Sequence[Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkrule">Sequence[Azure<wbr>Firewall<wbr>Network<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a network rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7689,7 +7689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7721,7 +7721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a network rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7809,7 +7809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7841,7 +7841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a network rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7869,7 +7869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7901,7 +7901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">Sequence[Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">Sequence[Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a network rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8735,7 +8735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubpublicipaddresses">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Hub<wbr>Public<wbr>IPAddresses<wbr>Args</a></span>
+        <span class="property-type"><a href="#hubpublicipaddresses">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Hub<wbr>Public<wbr>IPAddresses</a></span>
     </dt>
     <dd>{{% md %}}Public IP addresses associated with azure firewall.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8775,7 +8775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubpublicipaddresses">Hub<wbr>Public<wbr>IPAddresses<wbr>Args</a></span>
+        <span class="property-type"><a href="#hubpublicipaddresses">Hub<wbr>Public<wbr>IPAddresses</a></span>
     </dt>
     <dd>{{% md %}}Public IP addresses associated with azure firewall.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8795,7 +8795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubpublicipaddresses">Hub<wbr>Public<wbr>IPAddresses<wbr>Args</a></span>
+        <span class="property-type"><a href="#hubpublicipaddresses">Hub<wbr>Public<wbr>IPAddresses</a></span>
     </dt>
     <dd>{{% md %}}Public IP addresses associated with azure firewall.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8817,7 +8817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubpublicipaddressesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Hub<wbr>Public<wbr>IPAddresses<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hubpublicipaddressesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Hub<wbr>Public<wbr>IPAddresses<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Public IP addresses associated with azure firewall.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8857,7 +8857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubpublicipaddressesresponse">Hub<wbr>Public<wbr>IPAddresses<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hubpublicipaddressesresponse">Hub<wbr>Public<wbr>IPAddresses<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Public IP addresses associated with azure firewall.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8877,7 +8877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubpublicipaddressesresponse">Hub<wbr>Public<wbr>IPAddresses<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hubpublicipaddressesresponse">Hub<wbr>Public<wbr>IPAddresses<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Public IP addresses associated with azure firewall.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8891,7 +8891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresses_csharp" style="color: inherit; text-decoration: inherit;">Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallpublicipaddress">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallpublicipaddress">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Public<wbr>IPAddress&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Public IP addresses associated with azure firewall or IP addresses to be retained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8931,7 +8931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallpublicipaddress">Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azurefirewallpublicipaddress">Azure<wbr>Firewall<wbr>Public<wbr>IPAddress[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Public IP addresses associated with azure firewall or IP addresses to be retained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8951,7 +8951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallpublicipaddress">Sequence[Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefirewallpublicipaddress">Sequence[Azure<wbr>Firewall<wbr>Public<wbr>IPAddress]</a></span>
     </dt>
     <dd>{{% md %}}The list of Public IP addresses associated with azure firewall or IP addresses to be retained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8973,7 +8973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresses_csharp" style="color: inherit; text-decoration: inherit;">Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Public IP addresses associated with azure firewall or IP addresses to be retained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9013,7 +9013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Public IP addresses associated with azure firewall or IP addresses to be retained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9033,7 +9033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">Sequence[Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">Sequence[Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Public IP addresses associated with azure firewall or IP addresses to be retained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -454,7 +454,7 @@ The ADCCatalog resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#admins_go" style="color: inherit; text-decoration: inherit;">Admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principals">[]Principals</a></span>
+        <span class="property-type"><a href="#principals">[]Principals<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure data catalog admin list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +526,7 @@ The ADCCatalog resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principals">[]Principals</a></span>
+        <span class="property-type"><a href="#principals">[]Principals<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure data catalog user list.{{% /md %}}</dd></dl>
 {{% /choosable %}}

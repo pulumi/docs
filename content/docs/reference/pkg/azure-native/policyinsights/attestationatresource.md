@@ -437,7 +437,7 @@ The AttestationAtResource resource accepts the following [input]({{< relref "/do
 <a href="#evidence_go" style="color: inherit; text-decoration: inherit;">Evidence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestationevidence">[]Attestation<wbr>Evidence</a></span>
+        <span class="property-type"><a href="#attestationevidence">[]Attestation<wbr>Evidence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The evidence supporting the compliance state set in this attestation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -399,7 +399,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiondefinitionproperties">Api<wbr>Connection<wbr>Definition<wbr>Properties</a></span>
+        <span class="property-type"><a href="#apiconnectiondefinitionproperties">Api<wbr>Connection<wbr>Definition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_csharp" style="color: inherit; text-decoration: inherit;">Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apireference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#apireference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatusdefinition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Status<wbr>Definition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionstatusdefinition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Status<wbr>Definition&gt;</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testlinks_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiontestlink">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apiconnectiontestlink">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Connection<wbr>Test<wbr>Link&gt;</a></span>
     </dt>
     <dd>{{% md %}}Links to test the API connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -830,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_nodejs" style="color: inherit; text-decoration: inherit;">api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apireference">Api<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#apireference">Api<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -886,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatusdefinition">Connection<wbr>Status<wbr>Definition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connectionstatusdefinition">Connection<wbr>Status<wbr>Definition[]</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -894,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testlinks_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiontestlink">Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#apiconnectiontestlink">Api<wbr>Connection<wbr>Test<wbr>Link[]</a></span>
     </dt>
     <dd>{{% md %}}Links to test the API connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -906,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_python" style="color: inherit; text-decoration: inherit;">api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apireference">Api<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#apireference">Api<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -962,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatusdefinition">Sequence[Connection<wbr>Status<wbr>Definition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionstatusdefinition">Sequence[Connection<wbr>Status<wbr>Definition]</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_links_python" style="color: inherit; text-decoration: inherit;">test_<wbr>links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiontestlink">Sequence[Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apiconnectiontestlink">Sequence[Api<wbr>Connection<wbr>Test<wbr>Link]</a></span>
     </dt>
     <dd>{{% md %}}Links to test the API connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -984,7 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_csharp" style="color: inherit; text-decoration: inherit;">Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apireferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apireferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1040,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatusdefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Status<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connectionstatusdefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Status<wbr>Definition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1048,7 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testlinks_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiontestlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apiconnectiontestlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Links to test the API connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1136,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_nodejs" style="color: inherit; text-decoration: inherit;">api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apireferenceresponse">Api<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apireferenceresponse">Api<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1192,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatusdefinitionresponse">Connection<wbr>Status<wbr>Definition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connectionstatusdefinitionresponse">Connection<wbr>Status<wbr>Definition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1200,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testlinks_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiontestlinkresponse">Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#apiconnectiontestlinkresponse">Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Links to test the API connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1212,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_python" style="color: inherit; text-decoration: inherit;">api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apireferenceresponse">Api<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apireferenceresponse">Api<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1268,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatusdefinitionresponse">Sequence[Connection<wbr>Status<wbr>Definition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionstatusdefinitionresponse">Sequence[Connection<wbr>Status<wbr>Definition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1276,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_links_python" style="color: inherit; text-decoration: inherit;">test_<wbr>links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiontestlinkresponse">Sequence[Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apiconnectiontestlinkresponse">Sequence[Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Links to test the API connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2454,7 +2454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionerror">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionerror">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}Connection error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2510,7 +2510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionerror">Connection<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionerror">Connection<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}Connection error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2538,7 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionerror">Connection<wbr>Error<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionerror">Connection<wbr>Error</a></span>
     </dt>
     <dd>{{% md %}}Connection error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2568,7 +2568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2624,7 +2624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionerrorresponse">Connection<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionerrorresponse">Connection<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2652,7 +2652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionerrorresponse">Connection<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectionerrorresponse">Connection<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

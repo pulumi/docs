@@ -383,7 +383,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#connectiontype_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectiontypeassociationproperty">Connection<wbr>Type<wbr>Association<wbr>Property</a></span>
+        <span class="property-type"><a href="#connectiontypeassociationproperty">Connection<wbr>Type<wbr>Association<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the connectionType of the connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">

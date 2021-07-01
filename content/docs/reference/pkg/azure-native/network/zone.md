@@ -383,7 +383,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#registrationvirtualnetworks_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">[]Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">[]Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -391,7 +391,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#resolutionvirtualnetworks_go" style="color: inherit; text-decoration: inherit;">Resolution<wbr>Virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">[]Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">[]Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -415,7 +415,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#zonetype_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonetype">Zone<wbr>Type</a></span>
+        <span class="property-type"><a href="#zonetype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of this DNS zone (Public or Private).{{% /md %}}</dd></dl>
 {{% /choosable %}}

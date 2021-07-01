@@ -436,7 +436,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentresourceproperties">Deployment<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#deploymentresourceproperties">Deployment<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Deployment resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -444,7 +444,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sku of the Deployment resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -869,7 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentsettings_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Deployment<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Deployment<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -877,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>User<wbr>Source<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#usersourceinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>User<wbr>Source<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -909,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentsettings_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettings">Deployment<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentsettings">Deployment<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -917,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinfo">User<wbr>Source<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#usersourceinfo">User<wbr>Source<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -929,7 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_settings_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettings">Deployment<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentsettings">Deployment<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -937,7 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinfo">User<wbr>Source<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#usersourceinfo">User<wbr>Source<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -975,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentinstanceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Deployment<wbr>Instance<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#deploymentinstanceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Deployment<wbr>Instance<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of instances belong to the Deployment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -999,7 +999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentsettings_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Deployment<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Deployment<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1007,7 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>User<wbr>Source<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#usersourceinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>User<wbr>Source<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1111,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentinstanceresponse">Deployment<wbr>Instance<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#deploymentinstanceresponse">Deployment<wbr>Instance<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of instances belong to the Deployment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1135,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentsettings_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettingsresponse">Deployment<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentsettingsresponse">Deployment<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1143,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinforesponse">User<wbr>Source<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#usersourceinforesponse">User<wbr>Source<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1179,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentinstanceresponse">Sequence[Deployment<wbr>Instance<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentinstanceresponse">Sequence[Deployment<wbr>Instance<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of instances belong to the Deployment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1203,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_settings_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettingsresponse">Deployment<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentsettingsresponse">Deployment<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1211,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinforesponse">User<wbr>Source<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#usersourceinforesponse">User<wbr>Source<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}

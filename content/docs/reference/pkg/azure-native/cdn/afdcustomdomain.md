@@ -386,7 +386,7 @@ The AFDCustomDomain resource accepts the following [input]({{< relref "/docs/int
 <a href="#azurednszone_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Dns<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the Azure DNS zone{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +402,7 @@ The AFDCustomDomain resource accepts the following [input]({{< relref "/docs/int
 <a href="#tlssettings_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#afddomainhttpsparameters">AFDDomain<wbr>Https<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#afddomainhttpsparameters">AFDDomain<wbr>Https<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -825,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the secret. ie. subs/rg/profile/secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -845,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimumtlsversion_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#afdminimumtlsversion">Afd<wbr>Minimum<wbr>Tls<wbr>Version</a></span>
+        <span class="property-type"><a href="#afdminimumtlsversion">string</a></span>
     </dt>
     <dd>{{% md %}}TLS protocol version that will be used for Https{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -881,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the secret. ie. subs/rg/profile/secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -909,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the secret. ie. subs/rg/profile/secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -939,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the secret. ie. subs/rg/profile/secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -995,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the secret. ie. subs/rg/profile/secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1023,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource reference to the secret. ie. subs/rg/profile/secret{{% /md %}}</dd></dl>
 {{% /choosable %}}

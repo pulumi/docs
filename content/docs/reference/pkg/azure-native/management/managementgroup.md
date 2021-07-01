@@ -328,7 +328,7 @@ The ManagementGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createmanagementgroupdetails">Create<wbr>Management<wbr>Group<wbr>Details</a></span>
+        <span class="property-type"><a href="#createmanagementgroupdetails">Create<wbr>Management<wbr>Group<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of a management group used during creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -599,7 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createparentgroupinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Create<wbr>Parent<wbr>Group<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#createparentgroupinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Create<wbr>Parent<wbr>Group<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group used during creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -623,7 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createparentgroupinfo">Create<wbr>Parent<wbr>Group<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#createparentgroupinfo">Create<wbr>Parent<wbr>Group<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group used during creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -635,7 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createparentgroupinfo">Create<wbr>Parent<wbr>Group<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#createparentgroupinfo">Create<wbr>Parent<wbr>Group<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group used during creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -699,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#children_csharp" style="color: inherit; text-decoration: inherit;">Children</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -787,7 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#children_nodejs" style="color: inherit; text-decoration: inherit;">children</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -831,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#children_python" style="color: inherit; text-decoration: inherit;">children</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">Sequence[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">Sequence[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -877,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentgroupinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#parentgroupinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Parent<wbr>Group<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -885,7 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Management.<wbr>Inputs.<wbr>Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -973,7 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1009,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1017,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgrouppathelementresponse">Sequence[Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managementgrouppathelementresponse">Sequence[Management<wbr>Group<wbr>Path<wbr>Element<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The path from the root to the current group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

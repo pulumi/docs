@@ -355,7 +355,7 @@ The ConfigurationProfileAssignment resource accepts the following [input]({{< re
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofileassignmentproperties">Configuration<wbr>Profile<wbr>Assignment<wbr>Properties</a></span>
+        <span class="property-type"><a href="#configurationprofileassignmentproperties">Configuration<wbr>Profile<wbr>Assignment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the configuration profile assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -808,7 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compliance_csharp" style="color: inherit; text-decoration: inherit;">Compliance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofileassignmentcomplianceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Assignment<wbr>Compliance<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofileassignmentcomplianceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Assignment<wbr>Compliance<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -912,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compliance_nodejs" style="color: inherit; text-decoration: inherit;">compliance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofileassignmentcomplianceresponse">Configuration<wbr>Profile<wbr>Assignment<wbr>Compliance<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofileassignmentcomplianceresponse">Configuration<wbr>Profile<wbr>Assignment<wbr>Compliance<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -964,7 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compliance_python" style="color: inherit; text-decoration: inherit;">compliance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofileassignmentcomplianceresponse">Configuration<wbr>Profile<wbr>Assignment<wbr>Compliance<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofileassignmentcomplianceresponse">Configuration<wbr>Profile<wbr>Assignment<wbr>Compliance<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

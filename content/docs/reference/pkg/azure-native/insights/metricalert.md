@@ -1868,7 +1868,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#criteria_go" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertmultipleresourcemultiplemetriccriteria">Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria</a> | <a href="#metricalertsingleresourcemultiplemetriccriteria">Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria</a> | <a href="#webtestlocationavailabilitycriteria">Webtest<wbr>Location<wbr>Availability<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#metricalertmultipleresourcemultiplemetriccriteria">Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Args</a> | <a href="#metricalertsingleresourcemultiplemetriccriteria">Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Args</a> | <a href="#webtestlocationavailabilitycriteria">Webtest<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1924,7 +1924,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertaction">[]Metric<wbr>Alert<wbr>Action</a></span>
+        <span class="property-type"><a href="#metricalertaction">[]Metric<wbr>Alert<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2481,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failingperiods_csharp" style="color: inherit; text-decoration: inherit;">Failing<wbr>Periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicthresholdfailingperiods">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Args</a></span>
+        <span class="property-type"><a href="#dynamicthresholdfailingperiods">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2521,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2649,7 +2649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failingperiods_nodejs" style="color: inherit; text-decoration: inherit;">failing<wbr>Periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicthresholdfailingperiods">Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Args</a></span>
+        <span class="property-type"><a href="#dynamicthresholdfailingperiods">Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2689,7 +2689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">Metric<wbr>Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricdimension">Metric<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2733,7 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failing_periods_python" style="color: inherit; text-decoration: inherit;">failing_<wbr>periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicthresholdfailingperiods">Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Args</a></span>
+        <span class="property-type"><a href="#dynamicthresholdfailingperiods">Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2773,7 +2773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">Sequence[Metric<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricdimension">Sequence[Metric<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2819,7 +2819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failingperiods_csharp" style="color: inherit; text-decoration: inherit;">Failing<wbr>Periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicthresholdfailingperiodsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dynamicthresholdfailingperiodsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2859,7 +2859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2987,7 +2987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failingperiods_nodejs" style="color: inherit; text-decoration: inherit;">failing<wbr>Periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicthresholdfailingperiodsresponse">Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dynamicthresholdfailingperiodsresponse">Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3027,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">Metric<wbr>Dimension<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">Metric<wbr>Dimension<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3071,7 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failing_periods_python" style="color: inherit; text-decoration: inherit;">failing_<wbr>periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicthresholdfailingperiodsresponse">Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dynamicthresholdfailingperiodsresponse">Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3111,7 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3537,7 +3537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Metric<wbr>Criteria<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Metric<wbr>Criteria, Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3561,7 +3561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Metric<wbr>Criteria<wbr>Args | Metric<wbr>Criteria<wbr>Args[]</span>
+        <span class="property-type">Dynamic<wbr>Metric<wbr>Criteria | Metric<wbr>Criteria[]</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3573,7 +3573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Metric<wbr>Criteria<wbr>Args, Metric<wbr>Criteria<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Dynamic<wbr>Metric<wbr>Criteria, Metric<wbr>Criteria]]</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3587,7 +3587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Metric<wbr>Criteria<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3611,7 +3611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dynamic<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args | Metric<wbr>Criteria<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Dynamic<wbr>Metric<wbr>Criteria<wbr>Response | Metric<wbr>Criteria<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3623,7 +3623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args, Metric<wbr>Criteria<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Dynamic<wbr>Metric<wbr>Criteria<wbr>Response, Metric<wbr>Criteria<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3637,7 +3637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccriteria">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccriteria">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3661,7 +3661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccriteria">Metric<wbr>Criteria<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metriccriteria">Metric<wbr>Criteria[]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3673,7 +3673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccriteria">Sequence[Metric<wbr>Criteria<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metriccriteria">Sequence[Metric<wbr>Criteria]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3687,7 +3687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccriteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metriccriteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3711,7 +3711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccriteriaresponse">Metric<wbr>Criteria<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metriccriteriaresponse">Metric<wbr>Criteria<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3723,7 +3723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccriteriaresponse">Sequence[Metric<wbr>Criteria<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metriccriteriaresponse">Sequence[Metric<wbr>Criteria<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3777,7 +3777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3913,7 +3913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">Metric<wbr>Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricdimension">Metric<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3981,7 +3981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimension">Sequence[Metric<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricdimension">Sequence[Metric<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4051,7 +4051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4187,7 +4187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">Metric<wbr>Dimension<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">Metric<wbr>Dimension<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4255,7 +4255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

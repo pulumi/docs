@@ -407,7 +407,7 @@ The Site resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteproperties">Site<wbr>Properties</a></span>
+        <span class="property-type"><a href="#siteproperties">Site<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested properties of VMWare site.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentdetails_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteagentproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Off<wbr>Azure.<wbr>Inputs.<wbr>Site<wbr>Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#siteagentproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Off<wbr>Azure.<wbr>Inputs.<wbr>Site<wbr>Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipalidentitydetails_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Identity<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitespnproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Off<wbr>Azure.<wbr>Inputs.<wbr>Site<wbr>Spn<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#sitespnproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Off<wbr>Azure.<wbr>Inputs.<wbr>Site<wbr>Spn<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -986,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentdetails_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteagentproperties">Site<wbr>Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#siteagentproperties">Site<wbr>Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1010,7 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipalidentitydetails_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Identity<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitespnproperties">Site<wbr>Spn<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#sitespnproperties">Site<wbr>Spn<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1022,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteagentproperties">Site<wbr>Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#siteagentproperties">Site<wbr>Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1046,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_identity_details_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>identity_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitespnproperties">Site<wbr>Spn<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#sitespnproperties">Site<wbr>Spn<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1068,7 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentdetails_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteagentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Off<wbr>Azure.<wbr>Inputs.<wbr>Site<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#siteagentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Off<wbr>Azure.<wbr>Inputs.<wbr>Site<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1092,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipalidentitydetails_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Identity<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitespnpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Off<wbr>Azure.<wbr>Inputs.<wbr>Site<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sitespnpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Off<wbr>Azure.<wbr>Inputs.<wbr>Site<wbr>Spn<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1156,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentdetails_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteagentpropertiesresponse">Site<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#siteagentpropertiesresponse">Site<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1180,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipalidentitydetails_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Identity<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitespnpropertiesresponse">Site<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sitespnpropertiesresponse">Site<wbr>Spn<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1200,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteagentpropertiesresponse">Site<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#siteagentpropertiesresponse">Site<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}On-premises agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1224,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_identity_details_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>identity_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitespnpropertiesresponse">Site<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sitespnpropertiesresponse">Site<wbr>Spn<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Service principal identity details used by agent for communication to the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}

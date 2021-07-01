@@ -397,7 +397,7 @@ FrontEnd Service ArtifactsStorageType etc.{{% /md %}}</dd><dt class="property-op
 <a href="#applogsconfiguration_go" style="color: inherit; text-decoration: inherit;">App<wbr>Logs<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applogsconfiguration">App<wbr>Logs<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applogsconfiguration">App<wbr>Logs<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration which enables the log daemon to export
 app logs to a destination. Currently only "log-analytics" is
@@ -407,7 +407,7 @@ supported{{% /md %}}</dd><dt class="property-optional"
 <a href="#arcconfiguration_go" style="color: inherit; text-decoration: inherit;">Arc<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#arcconfiguration">Arc<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#arcconfiguration">Arc<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration which determines the ARC cluster
 components types. Eg: Choosing between BuildService kind,
@@ -417,7 +417,7 @@ FrontEnd Service ArtifactsStorageType etc.{{% /md %}}</dd><dt class="property-op
 <a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -872,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalyticsconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -912,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsconfiguration">Log<wbr>Analytics<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalyticsconfiguration">Log<wbr>Analytics<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -932,7 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_analytics_configuration_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsconfiguration">Log<wbr>Analytics<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalyticsconfiguration">Log<wbr>Analytics<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -954,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalyticsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -994,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsconfigurationresponse">Log<wbr>Analytics<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalyticsconfigurationresponse">Log<wbr>Analytics<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1014,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_analytics_configuration_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsconfigurationresponse">Log<wbr>Analytics<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loganalyticsconfigurationresponse">Log<wbr>Analytics<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1068,7 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontendserviceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Front<wbr>End<wbr>Service<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Front<wbr>End<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontendconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Front<wbr>End<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1120,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#artifactsstoragetype_go" style="color: inherit; text-decoration: inherit;">Artifacts<wbr>Storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagetype">Storage<wbr>Type</a></span>
+        <span class="property-type"><a href="#storagetype">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1188,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontendserviceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">front<wbr>End<wbr>Service<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendconfiguration">Front<wbr>End<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontendconfiguration">Front<wbr>End<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1248,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#front_end_service_configuration_python" style="color: inherit; text-decoration: inherit;">front_<wbr>end_<wbr>service_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendconfiguration">Front<wbr>End<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontendconfiguration">Front<wbr>End<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1310,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontendserviceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Front<wbr>End<wbr>Service<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Front<wbr>End<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontendconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Front<wbr>End<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1414,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frontendserviceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">front<wbr>End<wbr>Service<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendconfigurationresponse">Front<wbr>End<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontendconfigurationresponse">Front<wbr>End<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1466,7 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#front_end_service_configuration_python" style="color: inherit; text-decoration: inherit;">front_<wbr>end_<wbr>service_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendconfigurationresponse">Front<wbr>End<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontendconfigurationresponse">Front<wbr>End<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1624,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontendservicetype">Front<wbr>End<wbr>Service<wbr>Type</a></span>
+        <span class="property-type"><a href="#frontendservicetype">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

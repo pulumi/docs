@@ -359,7 +359,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcedetails_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details</a> | <a href="#onpremisesqlresourcedetails">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details</a></span>
+        <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremisesqlresourcedetails">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -375,7 +375,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status</a></span>
+        <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The result of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -399,7 +399,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadataproperties">Security<wbr>Assessment<wbr>Metadata<wbr>Properties</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadataproperties">Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -407,7 +407,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#partnersdata_go" style="color: inherit; text-decoration: inherit;">Partners<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentpartnerdata">Security<wbr>Assessment<wbr>Partner<wbr>Data</a></span>
+        <span class="property-type"><a href="#securityassessmentpartnerdata">Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2200,7 +2200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnerdata_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2384,7 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnerdata_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2476,7 +2476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partner_data_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2578,7 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnerdata_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2778,7 +2778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnerdata_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2878,7 +2878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partner_data_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

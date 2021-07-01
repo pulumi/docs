@@ -362,7 +362,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
 <a href="#controllerdetails_go" style="color: inherit; text-decoration: inherit;">Controller<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#controllerdetails">Controller<wbr>Details<wbr>Type</a></span>
+        <span class="property-type"><a href="#controllerdetails">Controller<wbr>Details<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +386,7 @@ The DelegatedSubnetServiceDetails resource accepts the following [input]({{< rel
 <a href="#subnetdetails_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetdetails">Subnet<wbr>Details</a></span>
+        <span class="property-type"><a href="#subnetdetails">Subnet<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}subnet details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

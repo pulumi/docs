@@ -544,7 +544,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationidentity">Configuration<wbr>Identity</a></span>
+        <span class="property-type"><a href="#configurationidentity">Configuration<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -560,7 +560,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Scope</a></span>
+        <span class="property-type"><a href="#scope">Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scope at which the extension instance is installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -568,7 +568,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensionstatus">[]Extension<wbr>Status</a></span>
+        <span class="property-type"><a href="#extensionstatus">[]Extension<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status from this instance of the extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1155,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the configuration. Type 'SystemAssigned' will use an implicitly created identity. Type 'None' will not use Managed Identity for the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1801,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopecluster">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kubernetes<wbr>Configuration.<wbr>Inputs.<wbr>Scope<wbr>Cluster<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopecluster">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kubernetes<wbr>Configuration.<wbr>Inputs.<wbr>Scope<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopenamespace">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kubernetes<wbr>Configuration.<wbr>Inputs.<wbr>Scope<wbr>Namespace<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopenamespace">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kubernetes<wbr>Configuration.<wbr>Inputs.<wbr>Scope<wbr>Namespace</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1841,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopecluster">Scope<wbr>Cluster<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopecluster">Scope<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1849,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopenamespace">Scope<wbr>Namespace<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopenamespace">Scope<wbr>Namespace</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1861,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopecluster">Scope<wbr>Cluster<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopecluster">Scope<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1869,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopenamespace">Scope<wbr>Namespace<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopenamespace">Scope<wbr>Namespace</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2083,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeclusterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kubernetes<wbr>Configuration.<wbr>Inputs.<wbr>Scope<wbr>Cluster<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopeclusterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kubernetes<wbr>Configuration.<wbr>Inputs.<wbr>Scope<wbr>Cluster<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2091,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopenamespaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kubernetes<wbr>Configuration.<wbr>Inputs.<wbr>Scope<wbr>Namespace<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopenamespaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Kubernetes<wbr>Configuration.<wbr>Inputs.<wbr>Scope<wbr>Namespace<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2123,7 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeclusterresponse">Scope<wbr>Cluster<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopeclusterresponse">Scope<wbr>Cluster<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2131,7 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopenamespaceresponse">Scope<wbr>Namespace<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopenamespaceresponse">Scope<wbr>Namespace<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2143,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeclusterresponse">Scope<wbr>Cluster<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopeclusterresponse">Scope<wbr>Cluster<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2151,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopenamespaceresponse">Scope<wbr>Namespace<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scopenamespaceresponse">Scope<wbr>Namespace<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies that the scope of the extensionInstance is Namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}

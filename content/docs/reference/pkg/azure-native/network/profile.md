@@ -1574,7 +1574,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dnsconfig_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnsconfig">Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#dnsconfig">Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1582,7 +1582,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">[]Endpoint<wbr>Type</a></span>
+        <span class="property-type"><a href="#endpoint">[]Endpoint<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoints in the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1614,7 +1614,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#monitorconfig_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfig">Monitor<wbr>Config</a></span>
+        <span class="property-type"><a href="#monitorconfig">Monitor<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoint monitoring settings of the Traffic Manager profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2227,7 +2227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiescustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiescustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Custom<wbr>Headers&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2315,7 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiessubnets">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Subnets<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiessubnets">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Subnets&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2491,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiescustomheaders">Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointpropertiescustomheaders">Endpoint<wbr>Properties<wbr>Custom<wbr>Headers[]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2579,7 +2579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiessubnets">Endpoint<wbr>Properties<wbr>Subnets<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointpropertiessubnets">Endpoint<wbr>Properties<wbr>Subnets[]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2623,7 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiescustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointpropertiescustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Custom<wbr>Headers]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2711,7 +2711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiessubnets">Sequence[Endpoint<wbr>Properties<wbr>Subnets<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointpropertiessubnets">Sequence[Endpoint<wbr>Properties<wbr>Subnets]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3191,7 +3191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3279,7 +3279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Subnets&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3455,7 +3455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers[]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3543,7 +3543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Endpoint<wbr>Properties<wbr>Response<wbr>Subnets[]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3587,7 +3587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsecustomheaders">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Custom<wbr>Headers]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3675,7 +3675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Subnets<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponsesubnets">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Subnets]</a></span>
     </dt>
     <dd>{{% md %}}The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3747,7 +3747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigcustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#monitorconfigcustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Headers&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3755,7 +3755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expectedstatuscoderanges_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Status<wbr>Code<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3899,7 +3899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigcustomheaders">Monitor<wbr>Config<wbr>Custom<wbr>Headers<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#monitorconfigcustomheaders">Monitor<wbr>Config<wbr>Custom<wbr>Headers[]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3907,7 +3907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expectedstatuscoderanges_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Status<wbr>Code<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges[]</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3975,7 +3975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigcustomheaders">Sequence[Monitor<wbr>Config<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
+        <span class="property-type"><a href="#monitorconfigcustomheaders">Sequence[Monitor<wbr>Config<wbr>Custom<wbr>Headers]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3983,7 +3983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expected_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>status_<wbr>code_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">Sequence[Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args]</a></span>
+        <span class="property-type"><a href="#monitorconfigexpectedstatuscoderanges">Sequence[Monitor<wbr>Config<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges]</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4217,7 +4217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4225,7 +4225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expectedstatuscoderanges_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Status<wbr>Code<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4369,7 +4369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers[]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4377,7 +4377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expectedstatuscoderanges_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Status<wbr>Code<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges[]</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4445,7 +4445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">Sequence[Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers<wbr>Args]</a></span>
+        <span class="property-type"><a href="#monitorconfigresponsecustomheaders">Sequence[Monitor<wbr>Config<wbr>Response<wbr>Custom<wbr>Headers]</a></span>
     </dt>
     <dd>{{% md %}}List of custom headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4453,7 +4453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expected_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>status_<wbr>code_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">Sequence[Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges<wbr>Args]</a></span>
+        <span class="property-type"><a href="#monitorconfigresponseexpectedstatuscoderanges">Sequence[Monitor<wbr>Config<wbr>Response<wbr>Expected<wbr>Status<wbr>Code<wbr>Ranges]</a></span>
     </dt>
     <dd>{{% md %}}List of expected status code ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

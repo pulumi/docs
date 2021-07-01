@@ -489,7 +489,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#participantpropertyreferences_go" style="color: inherit; text-decoration: inherit;">Participant<wbr>Property<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantpropertyreference">[]Participant<wbr>Property<wbr>Reference</a></span>
+        <span class="property-type"><a href="#participantpropertyreference">[]Participant<wbr>Property<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that represent the participating profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -561,7 +561,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#mappings_go" style="color: inherit; text-decoration: inherit;">Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#typepropertiesmapping">[]Type<wbr>Properties<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#typepropertiesmapping">[]Type<wbr>Properties<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties mappings between the source and target Types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -569,7 +569,7 @@ The Link resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#operationtype_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceoperationtype">Instance<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type"><a href="#instanceoperationtype">string</a></span>
     </dt>
     <dd>{{% md %}}Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1294,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linktypes">Link<wbr>Types</a></span>
+        <span class="property-type"><a href="#linktypes">string</a></span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
