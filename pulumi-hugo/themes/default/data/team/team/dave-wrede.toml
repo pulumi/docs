@@ -1,9 +1,7 @@
 id = "dave-wrede"
 name = "Dave Wrede"
-title = "Technical Content Lead"
-weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 github = "davidwrede"
