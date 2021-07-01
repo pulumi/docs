@@ -765,7 +765,7 @@ network and zone as the instance group.
 <a href="#namedports_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupnamedport">[]Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Type</a></span>
+        <span class="property-type"><a href="#instancegroupnamedport">[]Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
@@ -1344,7 +1344,7 @@ network and zone as the instance group.
 <a href="#state_namedports_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancegroupnamedport">[]Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Type</a></span>
+        <span class="property-type"><a href="#instancegroupnamedport">[]Instance<wbr>Group<wbr>Named<wbr>Port<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.

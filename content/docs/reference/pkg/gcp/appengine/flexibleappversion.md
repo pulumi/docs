@@ -872,7 +872,7 @@ Structure is documented below.
 <a href="#livenesscheck_go" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check</a></span>
+        <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
 Structure is documented below.
@@ -882,7 +882,7 @@ Structure is documented below.
 <a href="#readinesscheck_go" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check</a></span>
+        <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
 Structure is documented below.
@@ -910,7 +910,7 @@ Structure is documented below.
 <a href="#apiconfig_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config</a></span>
+        <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
 Structure is documented below.
@@ -920,7 +920,7 @@ Structure is documented below.
 <a href="#automaticscaling_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
 Structure is documented below.
@@ -958,7 +958,7 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 <a href="#deployment_go" style="color: inherit; text-decoration: inherit;">Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Code and application artifacts that make up this version.
 Structure is documented below.
@@ -968,7 +968,7 @@ Structure is documented below.
 <a href="#endpointsapiservice_go" style="color: inherit; text-decoration: inherit;">Endpoints<wbr>Api<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service</a></span>
+        <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Code and application artifacts that make up this version.
 Structure is documented below.
@@ -978,7 +978,7 @@ Structure is documented below.
 <a href="#entrypoint_go" style="color: inherit; text-decoration: inherit;">Entrypoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
+        <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The entrypoint for the application.
 Structure is documented below.
@@ -997,7 +997,7 @@ Structure is documented below.
 <a href="#handlers_go" style="color: inherit; text-decoration: inherit;">Handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandler">[]Flexible<wbr>App<wbr>Version<wbr>Handler</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">[]Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.
@@ -1030,7 +1030,7 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 <a href="#manualscaling_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
+        <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
 Structure is documented below.
@@ -1040,7 +1040,7 @@ Structure is documented below.
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network</a></span>
+        <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extra network settings
 Structure is documented below.
@@ -1078,7 +1078,7 @@ If it is not provided, the provider project is used.
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources</a></span>
+        <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Machine resources for a version.
 Structure is documented below.
@@ -1137,7 +1137,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 <a href="#vpcaccessconnector_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Access<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</a></span>
+        <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables VPC connectivity for standard apps.
 Structure is documented below.
@@ -2242,7 +2242,7 @@ Structure is documented below.
 <a href="#state_apiconfig_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config</a></span>
+        <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
 Structure is documented below.
@@ -2252,7 +2252,7 @@ Structure is documented below.
 <a href="#state_automaticscaling_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
 Structure is documented below.
@@ -2290,7 +2290,7 @@ Only applicable if the corresponding StaticFilesHandler does not specify its own
 <a href="#state_deployment_go" style="color: inherit; text-decoration: inherit;">Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Code and application artifacts that make up this version.
 Structure is documented below.
@@ -2300,7 +2300,7 @@ Structure is documented below.
 <a href="#state_endpointsapiservice_go" style="color: inherit; text-decoration: inherit;">Endpoints<wbr>Api<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service</a></span>
+        <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Code and application artifacts that make up this version.
 Structure is documented below.
@@ -2310,7 +2310,7 @@ Structure is documented below.
 <a href="#state_entrypoint_go" style="color: inherit; text-decoration: inherit;">Entrypoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
+        <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The entrypoint for the application.
 Structure is documented below.
@@ -2329,7 +2329,7 @@ Structure is documented below.
 <a href="#state_handlers_go" style="color: inherit; text-decoration: inherit;">Handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandler">[]Flexible<wbr>App<wbr>Version<wbr>Handler</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">[]Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.
@@ -2362,7 +2362,7 @@ Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 <a href="#state_livenesscheck_go" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check</a></span>
+        <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
 Structure is documented below.
@@ -2372,7 +2372,7 @@ Structure is documented below.
 <a href="#state_manualscaling_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
+        <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
 Structure is documented below.
@@ -2391,7 +2391,7 @@ Structure is documented below.
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network</a></span>
+        <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extra network settings
 Structure is documented below.
@@ -2429,7 +2429,7 @@ If it is not provided, the provider project is used.
 <a href="#state_readinesscheck_go" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check</a></span>
+        <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
 Structure is documented below.
@@ -2439,7 +2439,7 @@ Structure is documented below.
 <a href="#state_resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources</a></span>
+        <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Machine resources for a version.
 Structure is documented below.
@@ -2516,7 +2516,7 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 <a href="#state_vpcaccessconnector_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Access<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</a></span>
+        <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables VPC connectivity for standard apps.
 Structure is documented below.
@@ -3335,7 +3335,7 @@ Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SE
 <a href="#cpuutilization_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Target scaling by CPU usage.
 Structure is documented below.
@@ -3356,7 +3356,7 @@ during which the collected usage would not be reliable. Default: 120s
 <a href="#diskutilization_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Target scaling by disk usage.
 Structure is documented below.
@@ -3430,7 +3430,7 @@ Defaults to a runtime-specific value.
 <a href="#networkutilization_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Target scaling by network usage.
 Structure is documented below.
@@ -3440,7 +3440,7 @@ Structure is documented below.
 <a href="#requestutilization_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Target scaling by request utilization.
 Structure is documented below.
@@ -3573,7 +3573,7 @@ Structure is documented below.
 <a href="#cpuutilization_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Target scaling by CPU usage.
 Structure is documented below.
@@ -3594,7 +3594,7 @@ during which the collected usage would not be reliable. Default: 120s
 <a href="#diskutilization_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Target scaling by disk usage.
 Structure is documented below.
@@ -3668,7 +3668,7 @@ Defaults to a runtime-specific value.
 <a href="#networkutilization_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Target scaling by network usage.
 Structure is documented below.
@@ -3678,7 +3678,7 @@ Structure is documented below.
 <a href="#requestutilization_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Target scaling by request utilization.
 Structure is documented below.
@@ -3692,7 +3692,7 @@ Structure is documented below.
 <a href="#cpu_utilization_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Target scaling by CPU usage.
 Structure is documented below.
@@ -3713,7 +3713,7 @@ during which the collected usage would not be reliable. Default: 120s
 <a href="#disk_utilization_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Target scaling by disk usage.
 Structure is documented below.
@@ -3787,7 +3787,7 @@ Defaults to a runtime-specific value.
 <a href="#network_utilization_python" style="color: inherit; text-decoration: inherit;">network_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Target scaling by network usage.
 Structure is documented below.
@@ -3797,7 +3797,7 @@ Structure is documented below.
 <a href="#request_utilization_python" style="color: inherit; text-decoration: inherit;">request_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Target scaling by request utilization.
 Structure is documented below.
@@ -4317,7 +4317,7 @@ Structure is documented below.
 <a href="#cloudbuildoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Build<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
 Structure is documented below.
@@ -4327,7 +4327,7 @@ Structure is documented below.
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container</a></span>
     </dt>
     <dd>{{% md %}}The Docker image for the container that runs the version.
 Structure is documented below.
@@ -4337,7 +4337,7 @@ Structure is documented below.
 <a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentfile">List&lt;Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentfile">List&lt;Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File&gt;</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
 All files must be readable using the credentials supplied with this call.
@@ -4348,7 +4348,7 @@ Structure is documented below.
 <a href="#zip_csharp" style="color: inherit; text-decoration: inherit;">Zip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</a></span>
     </dt>
     <dd>{{% md %}}Zip File
 Structure is documented below.
@@ -4407,7 +4407,7 @@ Structure is documented below.
 <a href="#cloudbuildoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Build<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
 Structure is documented below.
@@ -4417,7 +4417,7 @@ Structure is documented below.
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container</a></span>
     </dt>
     <dd>{{% md %}}The Docker image for the container that runs the version.
 Structure is documented below.
@@ -4427,7 +4427,7 @@ Structure is documented below.
 <a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentfile">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentfile">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
 All files must be readable using the credentials supplied with this call.
@@ -4438,7 +4438,7 @@ Structure is documented below.
 <a href="#zip_nodejs" style="color: inherit; text-decoration: inherit;">zip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</a></span>
     </dt>
     <dd>{{% md %}}Zip File
 Structure is documented below.
@@ -4452,7 +4452,7 @@ Structure is documented below.
 <a href="#cloud_build_options_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>build_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
 Structure is documented below.
@@ -4462,7 +4462,7 @@ Structure is documented below.
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container</a></span>
     </dt>
     <dd>{{% md %}}The Docker image for the container that runs the version.
 Structure is documented below.
@@ -4472,7 +4472,7 @@ Structure is documented below.
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentfile">Sequence[Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentfile">Sequence[Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File]</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
 All files must be readable using the credentials supplied with this call.
@@ -4483,7 +4483,7 @@ Structure is documented below.
 <a href="#zip_python" style="color: inherit; text-decoration: inherit;">zip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</a></span>
     </dt>
     <dd>{{% md %}}Zip File
 Structure is documented below.
@@ -5143,7 +5143,7 @@ Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_C
 <a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script</a></span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5162,7 +5162,7 @@ Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SE
 <a href="#staticfiles_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
 Static file handlers describe which files in the application directory are static files, and which URLs serve them.
@@ -5295,7 +5295,7 @@ Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_C
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script</a></span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5314,7 +5314,7 @@ Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SE
 <a href="#staticfiles_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
 Static file handlers describe which files in the application directory are static files, and which URLs serve them.
@@ -5371,7 +5371,7 @@ Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_C
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script</a></span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5390,7 +5390,7 @@ Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SE
 <a href="#static_files_python" style="color: inherit; text-decoration: inherit;">static_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
 Static file handlers describe which files in the application directory are static files, and which URLs serve them.
@@ -6624,7 +6624,7 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionresourcesvolume">List&lt;Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#flexibleappversionresourcesvolume">List&lt;Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
 Structure is documented below.
@@ -6706,7 +6706,7 @@ Structure is documented below.
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionresourcesvolume">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#flexibleappversionresourcesvolume">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
 Structure is documented below.
@@ -6747,7 +6747,7 @@ Structure is documented below.
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionresourcesvolume">Sequence[Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flexibleappversionresourcesvolume">Sequence[Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume]</a></span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
 Structure is documented below.

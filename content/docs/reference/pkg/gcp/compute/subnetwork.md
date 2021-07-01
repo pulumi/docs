@@ -763,7 +763,7 @@ creation time.
 <a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
@@ -856,7 +856,7 @@ Possible values are `ACTIVE` and `BACKUP`.
 <a href="#secondaryipranges_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetworksecondaryiprange">[]Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range</a></span>
+        <span class="property-type"><a href="#subnetworksecondaryiprange">[]Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
@@ -1724,7 +1724,7 @@ secondary IP ranges within a network. Only IPv4 is supported.
 <a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
@@ -1827,7 +1827,7 @@ Possible values are `ACTIVE` and `BACKUP`.
 <a href="#state_secondaryipranges_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetworksecondaryiprange">[]Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range</a></span>
+        <span class="property-type"><a href="#subnetworksecondaryiprange">[]Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong

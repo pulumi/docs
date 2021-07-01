@@ -12,6 +12,7 @@ Explore the resources and functions of the gcp.cloudbuild module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="trigger" title="Trigger"><span class="symbol resource"></span>Trigger</a></li>
+    <li><a href="workerpool" title="WorkerPool"><span class="symbol resource"></span>WorkerPool</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -23,6 +24,6 @@ Explore the resources and functions of the gcp.cloudbuild module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.10.1</dd>
+	<dd>5.11.0</dd>
 </dl>
 

@@ -388,7 +388,7 @@ If it is not provided, the provider project is used.
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreindexproperty">[]Data<wbr>Store<wbr>Index<wbr>Property</a></span>
+        <span class="property-type"><a href="#datastoreindexproperty">[]Data<wbr>Store<wbr>Index<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of properties to index on.
 Structure is documented below.
@@ -803,7 +803,7 @@ If it is not provided, the provider project is used.
 <a href="#state_properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreindexproperty">[]Data<wbr>Store<wbr>Index<wbr>Property</a></span>
+        <span class="property-type"><a href="#datastoreindexproperty">[]Data<wbr>Store<wbr>Index<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of properties to index on.
 Structure is documented below.

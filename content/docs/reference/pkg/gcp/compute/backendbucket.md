@@ -380,7 +380,7 @@ If it is not provided, the provider project is used.
 <a href="#cdnpolicy_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy</a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
 Structure is documented below.
@@ -963,7 +963,7 @@ If it is not provided, the provider project is used.
 <a href="#state_cdnpolicy_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy</a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this Backend Bucket.
 Structure is documented below.
@@ -1295,7 +1295,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#negativecachingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicy">List&lt;Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicy">List&lt;Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
 Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
@@ -1471,7 +1471,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#negativecachingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicy">Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
 Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
@@ -1559,7 +1559,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#negative_caching_policies_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicy">Sequence[Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendbucketcdnpolicynegativecachingpolicy">Sequence[Backend<wbr>Bucket<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
 Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.

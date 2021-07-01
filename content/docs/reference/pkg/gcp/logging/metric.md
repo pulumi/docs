@@ -746,7 +746,7 @@ is used to match log entries.
 <a href="#metricdescriptor_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Descriptor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 Structure is documented below.
@@ -756,7 +756,7 @@ Structure is documented below.
 <a href="#bucketoptions_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
+        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values.
@@ -1304,7 +1304,7 @@ error to specify a regex that does not include exactly one capture group.
 <a href="#state_bucketoptions_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
+        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values.
@@ -1347,7 +1347,7 @@ the same as for the valueExtractor field.
 <a href="#state_metricdescriptor_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Descriptor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 Structure is documented below.
@@ -1600,7 +1600,7 @@ error to specify a regex that does not include exactly one capture group.
 <a href="#explicitbuckets_csharp" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.
 Structure is documented below.
@@ -1610,7 +1610,7 @@ Structure is documented below.
 <a href="#exponentialbuckets_csharp" style="color: inherit; text-decoration: inherit;">Exponential<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}Specifies an exponential sequence of buckets that have a width that is proportional to the value of
 the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
@@ -1621,7 +1621,7 @@ Structure is documented below.
 <a href="#linearbuckets_csharp" style="color: inherit; text-decoration: inherit;">Linear<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
 Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
@@ -1672,7 +1672,7 @@ Structure is documented below.
 <a href="#explicitbuckets_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.
 Structure is documented below.
@@ -1682,7 +1682,7 @@ Structure is documented below.
 <a href="#exponentialbuckets_nodejs" style="color: inherit; text-decoration: inherit;">exponential<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}Specifies an exponential sequence of buckets that have a width that is proportional to the value of
 the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
@@ -1693,7 +1693,7 @@ Structure is documented below.
 <a href="#linearbuckets_nodejs" style="color: inherit; text-decoration: inherit;">linear<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
 Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
@@ -1708,7 +1708,7 @@ Structure is documented below.
 <a href="#explicit_buckets_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.
 Structure is documented below.
@@ -1718,7 +1718,7 @@ Structure is documented below.
 <a href="#exponential_buckets_python" style="color: inherit; text-decoration: inherit;">exponential_<wbr>buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}Specifies an exponential sequence of buckets that have a width that is proportional to the value of
 the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
@@ -1729,7 +1729,7 @@ Structure is documented below.
 <a href="#linear_buckets_python" style="color: inherit; text-decoration: inherit;">linear_<wbr>buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets<wbr>Args</a></span>
+        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
 Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
@@ -2086,7 +2086,7 @@ recommended to be set for any metrics associated with user-visible concepts, suc
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptorlabel">List&lt;Metric<wbr>Metric<wbr>Descriptor<wbr>Label<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptorlabel">List&lt;Metric<wbr>Metric<wbr>Descriptor<wbr>Label&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of labels that can be used to describe a specific instance of this metric type. For
 example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
@@ -2210,7 +2210,7 @@ recommended to be set for any metrics associated with user-visible concepts, suc
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptorlabel">Metric<wbr>Metric<wbr>Descriptor<wbr>Label<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptorlabel">Metric<wbr>Metric<wbr>Descriptor<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}The set of labels that can be used to describe a specific instance of this metric type. For
 example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
@@ -2272,7 +2272,7 @@ recommended to be set for any metrics associated with user-visible concepts, suc
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptorlabel">Sequence[Metric<wbr>Metric<wbr>Descriptor<wbr>Label<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptorlabel">Sequence[Metric<wbr>Metric<wbr>Descriptor<wbr>Label]</a></span>
     </dt>
     <dd>{{% md %}}The set of labels that can be used to describe a specific instance of this metric type. For
 example, the appengine.googleapis.com/http/server/response_latencies metric type has a label

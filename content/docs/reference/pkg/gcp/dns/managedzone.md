@@ -1174,7 +1174,7 @@ Possible values are `private` and `public`.
 <a href="#dnssecconfig_go" style="color: inherit; text-decoration: inherit;">Dnssec<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DNSSEC configuration
 Structure is documented below.
@@ -1193,7 +1193,7 @@ Structure is documented below.
 <a href="#forwardingconfig_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
@@ -1224,7 +1224,7 @@ Must be unique within the project.
 <a href="#peeringconfig_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
 zone. The value of this field contains the network to peer with.
@@ -1235,7 +1235,7 @@ Structure is documented below.
 <a href="#privatevisibilityconfig_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Visibility<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud
 resources that the zone is visible from.
@@ -1267,7 +1267,7 @@ to networks listed under `private_visibility_config`.
 <a href="#servicedirectoryconfig_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Directory<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1957,7 +1957,7 @@ Possible values are `private` and `public`.
 <a href="#state_dnssecconfig_go" style="color: inherit; text-decoration: inherit;">Dnssec<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DNSSEC configuration
 Structure is documented below.
@@ -1976,7 +1976,7 @@ Structure is documented below.
 <a href="#state_forwardingconfig_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
@@ -2016,7 +2016,7 @@ Must be unique within the project.
 <a href="#state_peeringconfig_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this
 zone. The value of this field contains the network to peer with.
@@ -2027,7 +2027,7 @@ Structure is documented below.
 <a href="#state_privatevisibilityconfig_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Visibility<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud
 resources that the zone is visible from.
@@ -2059,7 +2059,7 @@ to networks listed under `private_visibility_config`.
 <a href="#state_servicedirectoryconfig_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Directory<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfig">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presence of this field indicates that this zone is backed by Service Directory. The value of this field contains information related to the namespace associated with the zone.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2385,7 +2385,7 @@ Possible values are `private` and `public`.
 <a href="#defaultkeyspecs_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Key<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">List&lt;Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">List&lt;Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies parameters that will be used for generating initial DnsKeys
 for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
@@ -2479,7 +2479,7 @@ Possible values are `off`, `on`, and `transfer`.
 <a href="#defaultkeyspecs_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Key<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies parameters that will be used for generating initial DnsKeys
 for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
@@ -2526,7 +2526,7 @@ Possible values are `off`, `on`, and `transfer`.
 <a href="#default_key_specs_python" style="color: inherit; text-decoration: inherit;">default_<wbr>key_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">Sequence[Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">Sequence[Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}Specifies parameters that will be used for generating initial DnsKeys
 for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
@@ -2765,7 +2765,7 @@ Possible values are `keySigning` and `zoneSigning`.
 <a href="#targetnameservers_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">List&lt;Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">List&lt;Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of target name servers to forward to. Cloud DNS will
 select the best available name server if more than
@@ -2797,7 +2797,7 @@ Structure is documented below.
 <a href="#targetnameservers_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server[]</a></span>
     </dt>
     <dd>{{% md %}}List of target name servers to forward to. Cloud DNS will
 select the best available name server if more than
@@ -2813,7 +2813,7 @@ Structure is documented below.
 <a href="#target_name_servers_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">Sequence[Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">Sequence[Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server]</a></span>
     </dt>
     <dd>{{% md %}}List of target name servers to forward to. Cloud DNS will
 select the best available name server if more than
@@ -2933,7 +2933,7 @@ Possible values are `default` and `private`.
 <a href="#targetnetwork_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}The network with which to peer.
 Structure is documented below.
@@ -2961,7 +2961,7 @@ Structure is documented below.
 <a href="#targetnetwork_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}The network with which to peer.
 Structure is documented below.
@@ -2975,7 +2975,7 @@ Structure is documented below.
 <a href="#target_network_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}The network with which to peer.
 Structure is documented below.
@@ -3053,7 +3053,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 <a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">List&lt;Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">List&lt;Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -3079,7 +3079,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network[]</a></span>
     </dt>
     <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -3092,7 +3092,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Sequence[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Sequence[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network]</a></span>
     </dt>
     <dd>{{% md %}}The list of VPC networks that can see this zone. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -3169,7 +3169,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace</a></span>
     </dt>
     <dd>{{% md %}}The namespace associated with the zone.
 Structure is documented below.
@@ -3197,7 +3197,7 @@ Structure is documented below.
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace</a></span>
     </dt>
     <dd>{{% md %}}The namespace associated with the zone.
 Structure is documented below.
@@ -3211,7 +3211,7 @@ Structure is documented below.
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedzoneservicedirectoryconfignamespace">Managed<wbr>Zone<wbr>Service<wbr>Directory<wbr>Config<wbr>Namespace</a></span>
     </dt>
     <dd>{{% md %}}The namespace associated with the zone.
 Structure is documented below.

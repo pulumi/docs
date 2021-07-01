@@ -1111,7 +1111,7 @@ Structure is documented below.
 <a href="#addonsconfig_go" style="color: inherit; text-decoration: inherit;">Addons<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfig">Cluster<wbr>Addons<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfig">Cluster<wbr>Addons<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for addons supported by GKE.
 Structure is documented below.
@@ -1121,7 +1121,7 @@ Structure is documented below.
 <a href="#authenticatorgroupsconfig_go" style="color: inherit; text-decoration: inherit;">Authenticator<wbr>Groups<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">Cluster<wbr>Authenticator<wbr>Groups<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">Cluster<wbr>Authenticator<wbr>Groups<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
@@ -1132,7 +1132,7 @@ Structure is documented below.
 <a href="#clusterautoscaling_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
@@ -1157,7 +1157,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
 <a href="#clustertelemetry_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Telemetry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</a></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
@@ -1168,7 +1168,7 @@ Structure is documented below.
 <a href="#confidentialnodes_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfidentialnodes">Cluster<wbr>Confidential<wbr>Nodes</a></span>
+        <span class="property-type"><a href="#clusterconfidentialnodes">Cluster<wbr>Confidential<wbr>Nodes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration
 can't be changed (or added/removed) after cluster creation without deleting and recreating the entire cluster.
@@ -1178,7 +1178,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#databaseencryption_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1208,7 +1208,7 @@ for more information.
 <a href="#defaultsnatstatus_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Snat<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status</a></span>
+        <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1323,7 +1323,7 @@ set this to a value of at least `1`, alongside setting
 <a href="#ipallocationpolicy_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteripallocationpolicy">Cluster<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusteripallocationpolicy">Cluster<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of cluster IP allocation for
 VPC-native clusters. Adding this block enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
@@ -1360,7 +1360,7 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
 <a href="#maintenancepolicy_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicy">Cluster<wbr>Maintenance<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicy">Cluster<wbr>Maintenance<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
@@ -1370,7 +1370,7 @@ documented below.
 <a href="#masterauth_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauth">Cluster<wbr>Master<wbr>Auth</a></span>
+        <span class="property-type"><a href="#clustermasterauth">Cluster<wbr>Master<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information for accessing the
 Kubernetes master. Some values in this block are only returned by the API if
@@ -1384,7 +1384,7 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
 <a href="#masterauthorizednetworksconfig_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Authorized<wbr>Networks<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The desired configuration options
 for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
@@ -1448,7 +1448,7 @@ shared network.
 <a href="#networkpolicy_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternetworkpolicy">Cluster<wbr>Network<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusternetworkpolicy">Cluster<wbr>Network<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
@@ -1470,7 +1470,7 @@ and requires the `ip_allocation_policy` block to be defined. By default when thi
 <a href="#nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfig">Cluster<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -1495,7 +1495,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#nodepools_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepool">[]Cluster<wbr>Node<wbr>Pool</a></span>
+        <span class="property-type"><a href="#clusternodepool">[]Cluster<wbr>Node<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of node pools associated with this cluster.
 See gcp.container.NodePool for schema.
@@ -1525,7 +1525,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1534,7 +1534,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#podsecuritypolicyconfig_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Security<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
@@ -1545,7 +1545,7 @@ Structure is documented below.
 <a href="#privateclusterconfig_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprivateclusterconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
 clusters with private nodes. Structure is documented below.
@@ -1574,7 +1574,7 @@ is not provided, the provider project is used.
 <a href="#releasechannel_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreleasechannel">Cluster<wbr>Release<wbr>Channel</a></span>
+        <span class="property-type"><a href="#clusterreleasechannel">Cluster<wbr>Release<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
@@ -1612,7 +1612,7 @@ setting `initial_node_count` to at least `1`.
 <a href="#resourceusageexportconfig_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Usage<wbr>Export<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceusageexportconfig">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterresourceusageexportconfig">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
@@ -1633,7 +1633,7 @@ subnetwork in which the cluster's instances are launched.
 <a href="#verticalpodautoscaling_go" style="color: inherit; text-decoration: inherit;">Vertical<wbr>Pod<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling</a></span>
+        <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
@@ -1643,7 +1643,7 @@ Structure is documented below.
 <a href="#workloadidentityconfig_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
@@ -3930,7 +3930,7 @@ Structure is documented below.
 <a href="#state_addonsconfig_go" style="color: inherit; text-decoration: inherit;">Addons<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfig">Cluster<wbr>Addons<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfig">Cluster<wbr>Addons<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for addons supported by GKE.
 Structure is documented below.
@@ -3940,7 +3940,7 @@ Structure is documented below.
 <a href="#state_authenticatorgroupsconfig_go" style="color: inherit; text-decoration: inherit;">Authenticator<wbr>Groups<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">Cluster<wbr>Authenticator<wbr>Groups<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">Cluster<wbr>Authenticator<wbr>Groups<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
@@ -3951,7 +3951,7 @@ Structure is documented below.
 <a href="#state_clusterautoscaling_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
@@ -3976,7 +3976,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
 <a href="#state_clustertelemetry_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Telemetry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</a></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
@@ -3987,7 +3987,7 @@ Structure is documented below.
 <a href="#state_confidentialnodes_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfidentialnodes">Cluster<wbr>Confidential<wbr>Nodes</a></span>
+        <span class="property-type"><a href="#clusterconfidentialnodes">Cluster<wbr>Confidential<wbr>Nodes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration
 can't be changed (or added/removed) after cluster creation without deleting and recreating the entire cluster.
@@ -3997,7 +3997,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#state_databaseencryption_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4027,7 +4027,7 @@ for more information.
 <a href="#state_defaultsnatstatus_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Snat<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status</a></span>
+        <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4161,7 +4161,7 @@ to the cluster.
 <a href="#state_ipallocationpolicy_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteripallocationpolicy">Cluster<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusteripallocationpolicy">Cluster<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of cluster IP allocation for
 VPC-native clusters. Adding this block enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
@@ -4207,7 +4207,7 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
 <a href="#state_maintenancepolicy_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicy">Cluster<wbr>Maintenance<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicy">Cluster<wbr>Maintenance<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
@@ -4217,7 +4217,7 @@ documented below.
 <a href="#state_masterauth_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauth">Cluster<wbr>Master<wbr>Auth</a></span>
+        <span class="property-type"><a href="#clustermasterauth">Cluster<wbr>Master<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information for accessing the
 Kubernetes master. Some values in this block are only returned by the API if
@@ -4231,7 +4231,7 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
 <a href="#state_masterauthorizednetworksconfig_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Authorized<wbr>Networks<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The desired configuration options
 for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
@@ -4306,7 +4306,7 @@ shared network.
 <a href="#state_networkpolicy_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternetworkpolicy">Cluster<wbr>Network<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusternetworkpolicy">Cluster<wbr>Network<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
@@ -4328,7 +4328,7 @@ and requires the `ip_allocation_policy` block to be defined. By default when thi
 <a href="#state_nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfig">Cluster<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -4353,7 +4353,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#state_nodepools_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepool">[]Cluster<wbr>Node<wbr>Pool</a></span>
+        <span class="property-type"><a href="#clusternodepool">[]Cluster<wbr>Node<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of node pools associated with this cluster.
 See gcp.container.NodePool for schema.
@@ -4383,7 +4383,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#state_notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4400,7 +4400,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#state_podsecuritypolicyconfig_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Security<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
@@ -4411,7 +4411,7 @@ Structure is documented below.
 <a href="#state_privateclusterconfig_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprivateclusterconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
 clusters with private nodes. Structure is documented below.
@@ -4440,7 +4440,7 @@ is not provided, the provider project is used.
 <a href="#state_releasechannel_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreleasechannel">Cluster<wbr>Release<wbr>Channel</a></span>
+        <span class="property-type"><a href="#clusterreleasechannel">Cluster<wbr>Release<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
@@ -4478,7 +4478,7 @@ setting `initial_node_count` to at least `1`.
 <a href="#state_resourceusageexportconfig_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Usage<wbr>Export<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceusageexportconfig">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterresourceusageexportconfig">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
@@ -4531,7 +4531,7 @@ notation (e.g. `1.2.3.4/29`).
 <a href="#state_verticalpodautoscaling_go" style="color: inherit; text-decoration: inherit;">Vertical<wbr>Pod<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling</a></span>
+        <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
@@ -4541,7 +4541,7 @@ Structure is documented below.
 <a href="#state_workloadidentityconfig_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
@@ -5819,7 +5819,7 @@ Structure is documented below.
 <a href="#cloudrunconfig_csharp" style="color: inherit; text-decoration: inherit;">Cloudrun<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5828,7 +5828,7 @@ Structure is documented below.
 <a href="#configconnectorconfig_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Connector<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigconfigconnectorconfig">Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigconfigconnectorconfig">Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
@@ -5838,7 +5838,7 @@ The status of the ConfigConnector addon. It is disabled by default; Set `enabled
 <a href="#dnscacheconfig_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Cache<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigdnscacheconfig">Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigdnscacheconfig">Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 The status of the NodeLocal DNSCache addon. It is disabled by default.
@@ -5849,7 +5849,7 @@ Set `enabled = true` to enable.
 <a href="#gcepersistentdiskcsidriverconfig_csharp" style="color: inherit; text-decoration: inherit;">Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfiggcepersistentdiskcsidriverconfig">Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfiggcepersistentdiskcsidriverconfig">Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
@@ -5859,7 +5859,7 @@ Whether this cluster should enable the Google Compute Engine Persistent Disk Con
 <a href="#horizontalpodautoscaling_csharp" style="color: inherit; text-decoration: inherit;">Horizontal<wbr>Pod<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfighorizontalpodautoscaling">Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfighorizontalpodautoscaling">Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling</a></span>
     </dt>
     <dd>{{% md %}}The status of the Horizontal Pod Autoscaling
 addon, which increases or decreases the number of replica pods a replication controller
@@ -5872,7 +5872,7 @@ set `disabled = true` to disable.
 <a href="#httploadbalancing_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Load<wbr>Balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfighttploadbalancing">Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfighttploadbalancing">Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing</a></span>
     </dt>
     <dd>{{% md %}}The status of the HTTP (L7) load balancing
 controller addon, which makes it easy to set up HTTP load balancers for services in a
@@ -5883,7 +5883,7 @@ cluster. It is enabled by default; set `disabled = true` to disable.
 <a href="#istioconfig_csharp" style="color: inherit; text-decoration: inherit;">Istio<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigistioconfig">Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigistioconfig">Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 Structure is documented below.
@@ -5893,7 +5893,7 @@ Structure is documented below.
 <a href="#kalmconfig_csharp" style="color: inherit; text-decoration: inherit;">Kalm<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigkalmconfig">Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigkalmconfig">Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
@@ -5903,7 +5903,7 @@ Configuration for the KALM addon, which manages the lifecycle of k8s. It is disa
 <a href="#networkpolicyconfig_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfignetworkpolicyconfig">Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfignetworkpolicyconfig">Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Whether we should enable the network policy addon
 for the master.  This must be enabled in order to enable network policy for the nodes.
@@ -6023,7 +6023,7 @@ Defaults to disabled; set `disabled = false` to enable.
 <a href="#cloudrunconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloudrun<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6032,7 +6032,7 @@ Defaults to disabled; set `disabled = false` to enable.
 <a href="#configconnectorconfig_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Connector<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigconfigconnectorconfig">Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigconfigconnectorconfig">Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
@@ -6042,7 +6042,7 @@ The status of the ConfigConnector addon. It is disabled by default; Set `enabled
 <a href="#dnscacheconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Cache<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigdnscacheconfig">Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigdnscacheconfig">Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 The status of the NodeLocal DNSCache addon. It is disabled by default.
@@ -6053,7 +6053,7 @@ Set `enabled = true` to enable.
 <a href="#gcepersistentdiskcsidriverconfig_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfiggcepersistentdiskcsidriverconfig">Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfiggcepersistentdiskcsidriverconfig">Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
@@ -6063,7 +6063,7 @@ Whether this cluster should enable the Google Compute Engine Persistent Disk Con
 <a href="#horizontalpodautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">horizontal<wbr>Pod<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfighorizontalpodautoscaling">Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfighorizontalpodautoscaling">Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling</a></span>
     </dt>
     <dd>{{% md %}}The status of the Horizontal Pod Autoscaling
 addon, which increases or decreases the number of replica pods a replication controller
@@ -6076,7 +6076,7 @@ set `disabled = true` to disable.
 <a href="#httploadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Load<wbr>Balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfighttploadbalancing">Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfighttploadbalancing">Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing</a></span>
     </dt>
     <dd>{{% md %}}The status of the HTTP (L7) load balancing
 controller addon, which makes it easy to set up HTTP load balancers for services in a
@@ -6087,7 +6087,7 @@ cluster. It is enabled by default; set `disabled = true` to disable.
 <a href="#istioconfig_nodejs" style="color: inherit; text-decoration: inherit;">istio<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigistioconfig">Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigistioconfig">Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 Structure is documented below.
@@ -6097,7 +6097,7 @@ Structure is documented below.
 <a href="#kalmconfig_nodejs" style="color: inherit; text-decoration: inherit;">kalm<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigkalmconfig">Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigkalmconfig">Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
@@ -6107,7 +6107,7 @@ Configuration for the KALM addon, which manages the lifecycle of k8s. It is disa
 <a href="#networkpolicyconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfignetworkpolicyconfig">Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfignetworkpolicyconfig">Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Whether we should enable the network policy addon
 for the master.  This must be enabled in order to enable network policy for the nodes.
@@ -6125,7 +6125,7 @@ Defaults to disabled; set `disabled = false` to enable.
 <a href="#cloudrun_config_python" style="color: inherit; text-decoration: inherit;">cloudrun_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6134,7 +6134,7 @@ Defaults to disabled; set `disabled = false` to enable.
 <a href="#config_connector_config_python" style="color: inherit; text-decoration: inherit;">config_<wbr>connector_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigconfigconnectorconfig">Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigconfigconnectorconfig">Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
@@ -6144,7 +6144,7 @@ The status of the ConfigConnector addon. It is disabled by default; Set `enabled
 <a href="#dns_cache_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>cache_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigdnscacheconfig">Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigdnscacheconfig">Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 The status of the NodeLocal DNSCache addon. It is disabled by default.
@@ -6155,7 +6155,7 @@ Set `enabled = true` to enable.
 <a href="#gce_persistent_disk_csi_driver_config_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>persistent_<wbr>disk_<wbr>csi_<wbr>driver_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfiggcepersistentdiskcsidriverconfig">Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfiggcepersistentdiskcsidriverconfig">Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
@@ -6165,7 +6165,7 @@ Whether this cluster should enable the Google Compute Engine Persistent Disk Con
 <a href="#horizontal_pod_autoscaling_python" style="color: inherit; text-decoration: inherit;">horizontal_<wbr>pod_<wbr>autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfighorizontalpodautoscaling">Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfighorizontalpodautoscaling">Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling</a></span>
     </dt>
     <dd>{{% md %}}The status of the Horizontal Pod Autoscaling
 addon, which increases or decreases the number of replica pods a replication controller
@@ -6178,7 +6178,7 @@ set `disabled = true` to disable.
 <a href="#http_load_balancing_python" style="color: inherit; text-decoration: inherit;">http_<wbr>load_<wbr>balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfighttploadbalancing">Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfighttploadbalancing">Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing</a></span>
     </dt>
     <dd>{{% md %}}The status of the HTTP (L7) load balancing
 controller addon, which makes it easy to set up HTTP load balancers for services in a
@@ -6189,7 +6189,7 @@ cluster. It is enabled by default; set `disabled = true` to disable.
 <a href="#istio_config_python" style="color: inherit; text-decoration: inherit;">istio_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigistioconfig">Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigistioconfig">Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 Structure is documented below.
@@ -6199,7 +6199,7 @@ Structure is documented below.
 <a href="#kalm_config_python" style="color: inherit; text-decoration: inherit;">kalm_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigkalmconfig">Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigkalmconfig">Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
@@ -6209,7 +6209,7 @@ Configuration for the KALM addon, which manages the lifecycle of k8s. It is disa
 <a href="#network_policy_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policy_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfignetworkpolicyconfig">Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfignetworkpolicyconfig">Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Whether we should enable the network policy addon
 for the master.  This must be enabled in order to enable network policy for the nodes.
@@ -6891,7 +6891,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#autoprovisioningdefaults_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscalingautoprovisioningdefaults">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Defaults<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscalingautoprovisioningdefaults">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Defaults</a></span>
     </dt>
     <dd>{{% md %}}Contains defaults for a node pool created by NAP.
 Structure is documented below.
@@ -6913,7 +6913,7 @@ when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTI
 <a href="#resourcelimits_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscalingresourcelimit">List&lt;Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscalingresourcelimit">List&lt;Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit&gt;</a></span>
     </dt>
     <dd>{{% md %}}Global constraints for machine resources in the
 cluster. Configuring the `cpu` and `memory` types is required if node
@@ -6987,7 +6987,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#autoprovisioningdefaults_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscalingautoprovisioningdefaults">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Defaults<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscalingautoprovisioningdefaults">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Defaults</a></span>
     </dt>
     <dd>{{% md %}}Contains defaults for a node pool created by NAP.
 Structure is documented below.
@@ -7009,7 +7009,7 @@ when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTI
 <a href="#resourcelimits_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscalingresourcelimit">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscalingresourcelimit">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit[]</a></span>
     </dt>
     <dd>{{% md %}}Global constraints for machine resources in the
 cluster. Configuring the `cpu` and `memory` types is required if node
@@ -7035,7 +7035,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#auto_provisioning_defaults_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscalingautoprovisioningdefaults">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Defaults<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscalingautoprovisioningdefaults">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Defaults</a></span>
     </dt>
     <dd>{{% md %}}Contains defaults for a node pool created by NAP.
 Structure is documented below.
@@ -7057,7 +7057,7 @@ when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTI
 <a href="#resource_limits_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscalingresourcelimit">Sequence[Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscalingresourcelimit">Sequence[Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit]</a></span>
     </dt>
     <dd>{{% md %}}Global constraints for machine resources in the
 cluster. Configuring the `cpu` and `memory` types is required if node
@@ -7837,7 +7837,7 @@ GKE-managed one.
 <a href="#dailymaintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicydailymaintenancewindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicydailymaintenancewindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}Time window specified for daily maintenance operations.
 Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM”,
@@ -7848,7 +7848,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#maintenanceexclusions_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">List&lt;Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">List&lt;Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion&gt;</a></span>
     </dt>
     <dd>{{% md %}}Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7857,7 +7857,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#recurringwindow_csharp" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}Time window for recurring maintenance operations.
 {{% /md %}}</dd></dl>
@@ -7903,7 +7903,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#dailymaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicydailymaintenancewindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicydailymaintenancewindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}Time window specified for daily maintenance operations.
 Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM”,
@@ -7914,7 +7914,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#maintenanceexclusions_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion[]</a></span>
     </dt>
     <dd>{{% md %}}Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7923,7 +7923,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#recurringwindow_nodejs" style="color: inherit; text-decoration: inherit;">recurring<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}Time window for recurring maintenance operations.
 {{% /md %}}</dd></dl>
@@ -7936,7 +7936,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#daily_maintenance_window_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicydailymaintenancewindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicydailymaintenancewindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}Time window specified for daily maintenance operations.
 Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM”,
@@ -7947,7 +7947,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#maintenance_exclusions_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">Sequence[Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">Sequence[Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion]</a></span>
     </dt>
     <dd>{{% md %}}Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7956,7 +7956,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#recurring_window_python" style="color: inherit; text-decoration: inherit;">recurring_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}Time window for recurring maintenance operations.
 {{% /md %}}</dd></dl>
@@ -8289,7 +8289,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#clientcertificateconfig_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthclientcertificateconfig">Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermasterauthclientcertificateconfig">Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Whether client certificate authorization is enabled for this cluster.  For example:
 {{% /md %}}</dd><dt class="property-optional"
@@ -8403,7 +8403,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#clientcertificateconfig_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthclientcertificateconfig">Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermasterauthclientcertificateconfig">Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Whether client certificate authorization is enabled for this cluster.  For example:
 {{% /md %}}</dd><dt class="property-optional"
@@ -8460,7 +8460,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#client_certificate_config_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthclientcertificateconfig">Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clustermasterauthclientcertificateconfig">Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Whether client certificate authorization is enabled for this cluster.  For example:
 {{% /md %}}</dd><dt class="property-optional"
@@ -8561,7 +8561,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#cidrblocks_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfigcidrblock">List&lt;Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfigcidrblock">List&lt;Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block&gt;</a></span>
     </dt>
     <dd>{{% md %}}External networks that can access the
 Kubernetes cluster master through HTTPS.
@@ -8589,7 +8589,7 @@ Kubernetes cluster master through HTTPS.
 <a href="#cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfigcidrblock">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfigcidrblock">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block[]</a></span>
     </dt>
     <dd>{{% md %}}External networks that can access the
 Kubernetes cluster master through HTTPS.
@@ -8603,7 +8603,7 @@ Kubernetes cluster master through HTTPS.
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfigcidrblock">Sequence[Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfigcidrblock">Sequence[Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block]</a></span>
     </dt>
     <dd>{{% md %}}External networks that can access the
 Kubernetes cluster master through HTTPS.
@@ -8836,7 +8836,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#ephemeralstorageconfig_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8845,7 +8845,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#guestaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigguestaccelerator">List&lt;Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusternodeconfigguestaccelerator">List&lt;Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 Structure documented below.
@@ -8865,7 +8865,7 @@ will delete and recreate all nodes in the node pool.
 <a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
@@ -8885,7 +8885,7 @@ reserved by Kubernetes Core components and cannot be specified.
 <a href="#linuxnodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
@@ -8964,7 +8964,7 @@ for more information. Defaults to false.
 <a href="#sandboxconfig_csharp" style="color: inherit; text-decoration: inherit;">Sandbox<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}[GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version = "1.12.7-gke.17"` or later to use it.
 Structure is documented below.
@@ -8984,7 +8984,7 @@ If not specified, the "default" service account is used.
 <a href="#shieldedinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9003,7 +9003,7 @@ valid sources or targets for network firewalls.
 <a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigtaint">List&lt;Cluster<wbr>Node<wbr>Config<wbr>Taint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusternodeconfigtaint">List&lt;Cluster<wbr>Node<wbr>Config<wbr>Taint&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
 to apply to nodes. GKE's API can only set this field on cluster creation.
@@ -9019,7 +9019,7 @@ recommended. Structure is documented below.
 <a href="#workloadmetadataconfig_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Metadata<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Metadata configuration to expose to workloads on the node pool.
 Structure is documented below.
@@ -9288,7 +9288,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#ephemeralstorageconfig_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9297,7 +9297,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigguestaccelerator">Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigguestaccelerator">Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 Structure documented below.
@@ -9317,7 +9317,7 @@ will delete and recreate all nodes in the node pool.
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
@@ -9337,7 +9337,7 @@ reserved by Kubernetes Core components and cannot be specified.
 <a href="#linuxnodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
@@ -9416,7 +9416,7 @@ for more information. Defaults to false.
 <a href="#sandboxconfig_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}[GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version = "1.12.7-gke.17"` or later to use it.
 Structure is documented below.
@@ -9436,7 +9436,7 @@ If not specified, the "default" service account is used.
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9455,7 +9455,7 @@ valid sources or targets for network firewalls.
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigtaint">Cluster<wbr>Node<wbr>Config<wbr>Taint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigtaint">Cluster<wbr>Node<wbr>Config<wbr>Taint[]</a></span>
     </dt>
     <dd>{{% md %}}A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
 to apply to nodes. GKE's API can only set this field on cluster creation.
@@ -9471,7 +9471,7 @@ recommended. Structure is documented below.
 <a href="#workloadmetadataconfig_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Metadata<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Metadata configuration to expose to workloads on the node pool.
 Structure is documented below.
@@ -9514,7 +9514,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#ephemeral_storage_config_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>storage_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9523,7 +9523,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigguestaccelerator">Sequence[Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigguestaccelerator">Sequence[Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 Structure documented below.
@@ -9543,7 +9543,7 @@ will delete and recreate all nodes in the node pool.
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
@@ -9563,7 +9563,7 @@ reserved by Kubernetes Core components and cannot be specified.
 <a href="#linux_node_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
@@ -9642,7 +9642,7 @@ for more information. Defaults to false.
 <a href="#sandbox_config_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}[GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version = "1.12.7-gke.17"` or later to use it.
 Structure is documented below.
@@ -9662,7 +9662,7 @@ If not specified, the "default" service account is used.
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9681,7 +9681,7 @@ valid sources or targets for network firewalls.
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigtaint">Sequence[Cluster<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigtaint">Sequence[Cluster<wbr>Node<wbr>Config<wbr>Taint]</a></span>
     </dt>
     <dd>{{% md %}}A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
 to apply to nodes. GKE's API can only set this field on cluster creation.
@@ -9697,7 +9697,7 @@ recommended. Structure is documented below.
 <a href="#workload_metadata_config_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>metadata_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Metadata configuration to expose to workloads on the node pool.
 Structure is documented below.
@@ -10417,7 +10417,7 @@ Accepted values are:
 <a href="#autoscaling_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolautoscaling">Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolautoscaling">Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10449,7 +10449,7 @@ to the cluster.
 <a href="#management_csharp" style="color: inherit; text-decoration: inherit;">Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolmanagement">Cluster<wbr>Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolmanagement">Cluster<wbr>Node<wbr>Pool<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10483,7 +10483,7 @@ location.
 <a href="#nodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -10516,7 +10516,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolupgradesettings">Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolupgradesettings">Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10655,7 +10655,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#autoscaling_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolautoscaling">Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolautoscaling">Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10687,7 +10687,7 @@ to the cluster.
 <a href="#management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolmanagement">Cluster<wbr>Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolmanagement">Cluster<wbr>Node<wbr>Pool<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10721,7 +10721,7 @@ location.
 <a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -10754,7 +10754,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolupgradesettings">Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolupgradesettings">Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10774,7 +10774,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#autoscaling_python" style="color: inherit; text-decoration: inherit;">autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolautoscaling">Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolautoscaling">Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10806,7 +10806,7 @@ to the cluster.
 <a href="#management_python" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolmanagement">Cluster<wbr>Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolmanagement">Cluster<wbr>Node<wbr>Pool<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10840,7 +10840,7 @@ location.
 <a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -10873,7 +10873,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolupgradesettings">Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolupgradesettings">Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11088,7 +11088,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#ephemeralstorageconfig_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11097,7 +11097,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#guestaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigguestaccelerator">List&lt;Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigguestaccelerator">List&lt;Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 Structure documented below.
@@ -11117,7 +11117,7 @@ will delete and recreate all nodes in the node pool.
 <a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
@@ -11137,7 +11137,7 @@ reserved by Kubernetes Core components and cannot be specified.
 <a href="#linuxnodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
@@ -11216,7 +11216,7 @@ for more information. Defaults to false.
 <a href="#sandboxconfig_csharp" style="color: inherit; text-decoration: inherit;">Sandbox<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}[GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version = "1.12.7-gke.17"` or later to use it.
 Structure is documented below.
@@ -11236,7 +11236,7 @@ If not specified, the "default" service account is used.
 <a href="#shieldedinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11255,7 +11255,7 @@ valid sources or targets for network firewalls.
 <a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigtaint">List&lt;Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigtaint">List&lt;Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
 to apply to nodes. GKE's API can only set this field on cluster creation.
@@ -11271,7 +11271,7 @@ recommended. Structure is documented below.
 <a href="#workloadmetadataconfig_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Metadata<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Metadata configuration to expose to workloads on the node pool.
 Structure is documented below.
@@ -11540,7 +11540,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#ephemeralstorageconfig_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11549,7 +11549,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigguestaccelerator">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigguestaccelerator">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 Structure documented below.
@@ -11569,7 +11569,7 @@ will delete and recreate all nodes in the node pool.
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
@@ -11589,7 +11589,7 @@ reserved by Kubernetes Core components and cannot be specified.
 <a href="#linuxnodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
@@ -11668,7 +11668,7 @@ for more information. Defaults to false.
 <a href="#sandboxconfig_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}[GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version = "1.12.7-gke.17"` or later to use it.
 Structure is documented below.
@@ -11688,7 +11688,7 @@ If not specified, the "default" service account is used.
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11707,7 +11707,7 @@ valid sources or targets for network firewalls.
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigtaint">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigtaint">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint[]</a></span>
     </dt>
     <dd>{{% md %}}A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
 to apply to nodes. GKE's API can only set this field on cluster creation.
@@ -11723,7 +11723,7 @@ recommended. Structure is documented below.
 <a href="#workloadmetadataconfig_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Metadata<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Metadata configuration to expose to workloads on the node pool.
 Structure is documented below.
@@ -11766,7 +11766,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#ephemeral_storage_config_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>storage_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11775,7 +11775,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigguestaccelerator">Sequence[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigguestaccelerator">Sequence[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 Structure documented below.
@@ -11795,7 +11795,7 @@ will delete and recreate all nodes in the node pool.
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
@@ -11815,7 +11815,7 @@ reserved by Kubernetes Core components and cannot be specified.
 <a href="#linux_node_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
@@ -11894,7 +11894,7 @@ for more information. Defaults to false.
 <a href="#sandbox_config_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}[GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version = "1.12.7-gke.17"` or later to use it.
 Structure is documented below.
@@ -11914,7 +11914,7 @@ If not specified, the "default" service account is used.
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11933,7 +11933,7 @@ valid sources or targets for network firewalls.
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigtaint">Sequence[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigtaint">Sequence[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint]</a></span>
     </dt>
     <dd>{{% md %}}A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
 to apply to nodes. GKE's API can only set this field on cluster creation.
@@ -11949,7 +11949,7 @@ recommended. Structure is documented below.
 <a href="#workload_metadata_config_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>metadata_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Metadata configuration to expose to workloads on the node pool.
 Structure is documented below.
@@ -12751,7 +12751,7 @@ Accepted values are:
 <a href="#pubsub_csharp" style="color: inherit; text-decoration: inherit;">Pubsub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub</a></span>
     </dt>
     <dd>{{% md %}}The pubsub config for the cluster's upgrade notifications.
 {{% /md %}}</dd></dl>
@@ -12777,7 +12777,7 @@ Accepted values are:
 <a href="#pubsub_nodejs" style="color: inherit; text-decoration: inherit;">pubsub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub</a></span>
     </dt>
     <dd>{{% md %}}The pubsub config for the cluster's upgrade notifications.
 {{% /md %}}</dd></dl>
@@ -12790,7 +12790,7 @@ Accepted values are:
 <a href="#pubsub_python" style="color: inherit; text-decoration: inherit;">pubsub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub</a></span>
     </dt>
     <dd>{{% md %}}The pubsub config for the cluster's upgrade notifications.
 {{% /md %}}</dd></dl>
@@ -12981,7 +12981,7 @@ endpoint via private networking.
 <a href="#masterglobalaccessconfig_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Global<wbr>Access<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Controls cluster master global
 access settings. If unset, the provider will no longer manage this field and will
@@ -13143,7 +13143,7 @@ endpoint via private networking.
 <a href="#masterglobalaccessconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Global<wbr>Access<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Controls cluster master global
 access settings. If unset, the provider will no longer manage this field and will
@@ -13224,7 +13224,7 @@ endpoint via private networking.
 <a href="#master_global_access_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>global_<wbr>access_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Controls cluster master global
 access settings. If unset, the provider will no longer manage this field and will
@@ -13415,7 +13415,7 @@ Accepted values are:
 <a href="#bigquerydestination_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceusageexportconfigbigquerydestination">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterresourceusageexportconfigbigquerydestination">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Parameters for using BigQuery as the destination of resource usage export.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13487,7 +13487,7 @@ billing export. Defaults to `true`.
 <a href="#bigquerydestination_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceusageexportconfigbigquerydestination">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterresourceusageexportconfigbigquerydestination">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Parameters for using BigQuery as the destination of resource usage export.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13523,7 +13523,7 @@ billing export. Defaults to `true`.
 <a href="#bigquery_destination_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceusageexportconfigbigquerydestination">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterresourceusageexportconfigbigquerydestination">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Parameters for using BigQuery as the destination of resource usage export.
 {{% /md %}}</dd><dt class="property-optional"

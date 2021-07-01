@@ -807,7 +807,7 @@ for example, "Analytics Data - Jan 2011".
 <a href="#gcsfilesetspec_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Fileset<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
 Structure is documented below.
@@ -1607,7 +1607,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#state_bigquerydateshardedspecs_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Date<wbr>Sharded<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerydateshardedspec">[]Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerydateshardedspec">[]Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
@@ -1617,7 +1617,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 <a href="#state_bigquerytablespecs_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Table<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespec">[]Entry<wbr>Bigquery<wbr>Table<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespec">[]Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1663,7 +1663,7 @@ for example, "Analytics Data - Jan 2011".
 <a href="#state_gcsfilesetspec_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Fileset<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
 Structure is documented below.
@@ -2193,7 +2193,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#tablespecs_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespectablespec">List&lt;Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespectablespec">List&lt;Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2201,7 +2201,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#viewspecs_csharp" style="color: inherit; text-decoration: inherit;">View<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespecviewspec">List&lt;Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespecviewspec">List&lt;Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2249,7 +2249,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#tablespecs_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespectablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespectablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2257,7 +2257,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#viewspecs_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2277,7 +2277,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#table_specs_python" style="color: inherit; text-decoration: inherit;">table_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespectablespec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespectablespec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2285,7 +2285,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#view_specs_python" style="color: inherit; text-decoration: inherit;">view_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Sequence[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2418,7 +2418,7 @@ for more information. Note that bucket wildcards are currently not supported. Ex
 <a href="#samplegcsfilespecs_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Gcs<wbr>File<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">List&lt;Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">List&lt;Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec&gt;</a></span>
     </dt>
     <dd>{{% md %}}-
 Sample files contained in this fileset, not all files contained in this fileset are represented here.
@@ -2486,7 +2486,7 @@ for more information. Note that bucket wildcards are currently not supported. Ex
 <a href="#samplegcsfilespecs_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Gcs<wbr>File<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}-
 Sample files contained in this fileset, not all files contained in this fileset are represented here.
@@ -2520,7 +2520,7 @@ for more information. Note that bucket wildcards are currently not supported. Ex
 <a href="#sample_gcs_file_specs_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>gcs_<wbr>file_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">Sequence[Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">Sequence[Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}-
 Sample files contained in this fileset, not all files contained in this fileset are represented here.

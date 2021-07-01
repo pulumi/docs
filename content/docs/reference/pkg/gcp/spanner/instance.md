@@ -399,7 +399,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance's configuration (similar but not
-quite the same as a region) which defines defines the geographic placement and
+quite the same as a region) which defines the geographic placement and
 replication of your databases in this instance. It determines where your data
 is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
 In order to obtain a valid list please consult the
@@ -477,7 +477,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance's configuration (similar but not
-quite the same as a region) which defines defines the geographic placement and
+quite the same as a region) which defines the geographic placement and
 replication of your databases in this instance. It determines where your data
 is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
 In order to obtain a valid list please consult the
@@ -555,7 +555,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance's configuration (similar but not
-quite the same as a region) which defines defines the geographic placement and
+quite the same as a region) which defines the geographic placement and
 replication of your databases in this instance. It determines where your data
 is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
 In order to obtain a valid list please consult the
@@ -633,7 +633,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance's configuration (similar but not
-quite the same as a region) which defines defines the geographic placement and
+quite the same as a region) which defines the geographic placement and
 replication of your databases in this instance. It determines where your data
 is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
 In order to obtain a valid list please consult the
@@ -935,7 +935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance's configuration (similar but not
-quite the same as a region) which defines defines the geographic placement and
+quite the same as a region) which defines the geographic placement and
 replication of your databases in this instance. It determines where your data
 is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
 In order to obtain a valid list please consult the
@@ -1022,7 +1022,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance's configuration (similar but not
-quite the same as a region) which defines defines the geographic placement and
+quite the same as a region) which defines the geographic placement and
 replication of your databases in this instance. It determines where your data
 is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
 In order to obtain a valid list please consult the
@@ -1109,7 +1109,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance's configuration (similar but not
-quite the same as a region) which defines defines the geographic placement and
+quite the same as a region) which defines the geographic placement and
 replication of your databases in this instance. It determines where your data
 is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
 In order to obtain a valid list please consult the
@@ -1196,7 +1196,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance's configuration (similar but not
-quite the same as a region) which defines defines the geographic placement and
+quite the same as a region) which defines the geographic placement and
 replication of your databases in this instance. It determines where your data
 is stored. Values are typically of the form `regional-europe-west1` , `us-central` etc.
 In order to obtain a valid list please consult the

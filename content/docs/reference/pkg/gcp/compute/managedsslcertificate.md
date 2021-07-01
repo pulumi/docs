@@ -626,7 +626,7 @@ Possible values are `MANAGED`.
 <a href="#managed_go" style="color: inherit; text-decoration: inherit;">Managed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed</a></span>
+        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties relevant to a managed certificate.  These will be used if the
 certificate is managed (as indicated by a value of `MANAGED` in `type`).
@@ -1294,7 +1294,7 @@ Possible values are `MANAGED`.
 <a href="#state_managed_go" style="color: inherit; text-decoration: inherit;">Managed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed</a></span>
+        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties relevant to a managed certificate.  These will be used if the
 certificate is managed (as indicated by a value of `MANAGED` in `type`).

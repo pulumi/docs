@@ -233,7 +233,7 @@ If it is not provided, the provider project is used.
 <a href="#attestation_go" style="color: inherit; text-decoration: inherit;">Attestation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#occurenceattestation">Occurence<wbr>Attestation</a></span>
+        <span class="property-type"><a href="#occurenceattestation">Occurence<wbr>Attestation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Occurrence that represents a single "attestation". The authenticity
 of an attestation can be verified using the attached signature.
@@ -855,7 +855,7 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
 <a href="#state_attestation_go" style="color: inherit; text-decoration: inherit;">Attestation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#occurenceattestation">Occurence<wbr>Attestation</a></span>
+        <span class="property-type"><a href="#occurenceattestation">Occurence<wbr>Attestation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Occurrence that represents a single "attestation". The authenticity
 of an attestation can be verified using the attached signature.
@@ -1173,7 +1173,7 @@ more signatures. A base64-encoded string.
 <a href="#signatures_csharp" style="color: inherit; text-decoration: inherit;">Signatures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#occurenceattestationsignature">List&lt;Occurence<wbr>Attestation<wbr>Signature<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#occurenceattestationsignature">List&lt;Occurence<wbr>Attestation<wbr>Signature&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more signatures over serializedPayload.
 Verifier implementations should consider this attestation
@@ -1229,7 +1229,7 @@ more signatures. A base64-encoded string.
 <a href="#signatures_nodejs" style="color: inherit; text-decoration: inherit;">signatures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#occurenceattestationsignature">Occurence<wbr>Attestation<wbr>Signature<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#occurenceattestationsignature">Occurence<wbr>Attestation<wbr>Signature[]</a></span>
     </dt>
     <dd>{{% md %}}One or more signatures over serializedPayload.
 Verifier implementations should consider this attestation
@@ -1257,7 +1257,7 @@ more signatures. A base64-encoded string.
 <a href="#signatures_python" style="color: inherit; text-decoration: inherit;">signatures</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#occurenceattestationsignature">Sequence[Occurence<wbr>Attestation<wbr>Signature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#occurenceattestationsignature">Sequence[Occurence<wbr>Attestation<wbr>Signature]</a></span>
     </dt>
     <dd>{{% md %}}One or more signatures over serializedPayload.
 Verifier implementations should consider this attestation

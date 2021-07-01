@@ -308,7 +308,7 @@ If it is not provided, the provider project is used.
 <a href="#accesses_go" style="color: inherit; text-decoration: inherit;">Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccess">[]Dataset<wbr>Access<wbr>Type</a></span>
+        <span class="property-type"><a href="#datasetaccess">[]Dataset<wbr>Access<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
 Structure is documented below.
@@ -318,7 +318,7 @@ Structure is documented below.
 <a href="#defaultencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
@@ -1130,7 +1130,7 @@ If it is not provided, the provider project is used.
 <a href="#state_accesses_go" style="color: inherit; text-decoration: inherit;">Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccess">[]Dataset<wbr>Access<wbr>Type</a></span>
+        <span class="property-type"><a href="#datasetaccess">[]Dataset<wbr>Access<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
 Structure is documented below.
@@ -1158,7 +1158,7 @@ Structure is documented below.
 <a href="#state_defaultencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#datasetdefaultencryptionconfiguration">Dataset<wbr>Default<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
@@ -1642,7 +1642,7 @@ fred@example.com
 <a href="#view_csharp" style="color: inherit; text-decoration: inherit;">View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}A view from a different dataset to grant access to. Queries
 executed against that view will have read access to tables in
@@ -1780,7 +1780,7 @@ fred@example.com
 <a href="#view_nodejs" style="color: inherit; text-decoration: inherit;">view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}A view from a different dataset to grant access to. Queries
 executed against that view will have read access to tables in
@@ -1849,7 +1849,7 @@ fred@example.com
 <a href="#view_python" style="color: inherit; text-decoration: inherit;">view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}A view from a different dataset to grant access to. Queries
 executed against that view will have read access to tables in

@@ -546,7 +546,7 @@ you create the resource.
 <a href="#diskencryptionkey_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdiskencryptionkey">Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#diskdiskencryptionkey">Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key.
 After you encrypt a disk with a customer-supplied key, you must
@@ -706,7 +706,7 @@ following are valid values:
 <a href="#sourceimageencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksourceimageencryptionkey">Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#disksourceimageencryptionkey">Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
 the source image is protected by a customer-supplied encryption key.
@@ -717,7 +717,7 @@ Structure is documented below.
 <a href="#sourcesnapshotencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksourcesnapshotencryptionkey">Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#disksourcesnapshotencryptionkey">Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
@@ -2004,7 +2004,7 @@ you create the resource.
 <a href="#state_diskencryptionkey_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdiskencryptionkey">Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#diskdiskencryptionkey">Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key.
 After you encrypt a disk with a customer-supplied key, you must
@@ -2200,7 +2200,7 @@ following are valid values:
 <a href="#state_sourceimageencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksourceimageencryptionkey">Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#disksourceimageencryptionkey">Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
 the source image is protected by a customer-supplied encryption key.
@@ -2222,7 +2222,7 @@ under the same name, the source image ID would identify the exact version of the
 <a href="#state_sourcesnapshotencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksourcesnapshotencryptionkey">Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#disksourcesnapshotencryptionkey">Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption

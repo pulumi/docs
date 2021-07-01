@@ -772,7 +772,7 @@ Structure is documented below.
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iambindingcondition">IAMBinding<wbr>Condition</a></span>
+        <span class="property-type"><a href="#iambindingcondition">IAMBinding<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
@@ -1142,7 +1142,7 @@ Structure is documented below.
 <a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iambindingcondition">IAMBinding<wbr>Condition</a></span>
+        <span class="property-type"><a href="#iambindingcondition">IAMBinding<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.

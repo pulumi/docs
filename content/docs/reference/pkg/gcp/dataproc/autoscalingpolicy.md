@@ -421,7 +421,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 <a href="#basicalgorithm_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 Structure is documented below.
@@ -451,7 +451,7 @@ If it is not provided, the provider project is used.
 <a href="#secondaryworkerconfig_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 Structure is documented below.
@@ -461,7 +461,7 @@ Structure is documented below.
 <a href="#workerconfig_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 Structure is documented below.
@@ -902,7 +902,7 @@ Structure is documented below.
 <a href="#state_basicalgorithm_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 Structure is documented below.
@@ -952,7 +952,7 @@ If it is not provided, the provider project is used.
 <a href="#state_secondaryworkerconfig_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 Structure is documented below.
@@ -962,7 +962,7 @@ Structure is documented below.
 <a href="#state_workerconfig_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 Structure is documented below.
@@ -1135,7 +1135,7 @@ Structure is documented below.
 <a href="#yarnconfig_csharp" style="color: inherit; text-decoration: inherit;">Yarn<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}YARN autoscaling configuration.
 Structure is documented below.
@@ -1185,7 +1185,7 @@ Bounds: [2m, 1d]. Default: 2m.
 <a href="#yarnconfig_nodejs" style="color: inherit; text-decoration: inherit;">yarn<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}YARN autoscaling configuration.
 Structure is documented below.
@@ -1210,7 +1210,7 @@ Bounds: [2m, 1d]. Default: 2m.
 <a href="#yarn_config_python" style="color: inherit; text-decoration: inherit;">yarn_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}YARN autoscaling configuration.
 Structure is documented below.

@@ -675,7 +675,7 @@ Possible values are `FOUR_IPS_REDUNDANCY`, `SINGLE_IP_INTERNALLY_REDUNDANT`, and
 <a href="#interfaces_go" style="color: inherit; text-decoration: inherit;">Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalvpngatewayinterface">[]External<wbr>Vpn<wbr>Gateway<wbr>Interface</a></span>
+        <span class="property-type"><a href="#externalvpngatewayinterface">[]External<wbr>Vpn<wbr>Gateway<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this external VPN gateway.
 Structure is documented below.
@@ -1138,7 +1138,7 @@ Possible values are `FOUR_IPS_REDUNDANCY`, `SINGLE_IP_INTERNALLY_REDUNDANT`, and
 <a href="#state_interfaces_go" style="color: inherit; text-decoration: inherit;">Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externalvpngatewayinterface">[]External<wbr>Vpn<wbr>Gateway<wbr>Interface</a></span>
+        <span class="property-type"><a href="#externalvpngatewayinterface">[]External<wbr>Vpn<wbr>Gateway<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of interfaces on this external VPN gateway.
 Structure is documented below.

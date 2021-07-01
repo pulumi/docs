@@ -417,7 +417,7 @@ Structure is documented below.
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershiprole">[]Group<wbr>Membership<wbr>Role</a></span>
+        <span class="property-type"><a href="#groupmembershiprole">[]Group<wbr>Membership<wbr>Role<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MembershipRoles that apply to the Membership.
 Must not contain duplicate MembershipRoles with the same name.
@@ -428,7 +428,7 @@ Structure is documented below.
 <a href="#memberkey_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key</a></span>
+        <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
@@ -438,7 +438,7 @@ Structure is documented below.
 <a href="#preferredmemberkey_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Member<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershippreferredmemberkey">Group<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key</a></span>
+        <span class="property-type"><a href="#groupmembershippreferredmemberkey">Group<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
@@ -975,7 +975,7 @@ Structure is documented below.
 <a href="#state_memberkey_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key</a></span>
+        <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
@@ -995,7 +995,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
 <a href="#state_preferredmemberkey_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Member<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershippreferredmemberkey">Group<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key</a></span>
+        <span class="property-type"><a href="#groupmembershippreferredmemberkey">Group<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
@@ -1005,7 +1005,7 @@ Structure is documented below.
 <a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembershiprole">[]Group<wbr>Membership<wbr>Role</a></span>
+        <span class="property-type"><a href="#groupmembershiprole">[]Group<wbr>Membership<wbr>Role<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MembershipRoles that apply to the Membership.
 Must not contain duplicate MembershipRoles with the same name.

@@ -587,7 +587,7 @@ Structure is documented below.
 <a href="#deidentifyconfig_go" style="color: inherit; text-decoration: inherit;">Deidentify<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the deidentify template
 Structure is documented below.
@@ -997,7 +997,7 @@ Structure is documented below.
 <a href="#state_deidentifyconfig_go" style="color: inherit; text-decoration: inherit;">Deidentify<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the deidentify template
 Structure is documented below.
@@ -1170,7 +1170,7 @@ Structure is documented below.
 <a href="#infotypetransformations_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Type<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformations">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformations">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations</a></span>
     </dt>
     <dd>{{% md %}}Specifies free-text based transformations to be applied to the dataset.
 Structure is documented below.
@@ -1198,7 +1198,7 @@ Structure is documented below.
 <a href="#infotypetransformations_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformations">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformations">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations</a></span>
     </dt>
     <dd>{{% md %}}Specifies free-text based transformations to be applied to the dataset.
 Structure is documented below.
@@ -1212,7 +1212,7 @@ Structure is documented below.
 <a href="#info_type_transformations_python" style="color: inherit; text-decoration: inherit;">info_<wbr>type_<wbr>transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformations">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformations">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations</a></span>
     </dt>
     <dd>{{% md %}}Specifies free-text based transformations to be applied to the dataset.
 Structure is documented below.
@@ -1228,7 +1228,7 @@ Structure is documented below.
 <a href="#transformations_csharp" style="color: inherit; text-decoration: inherit;">Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformation">List&lt;Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformation">List&lt;Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation&gt;</a></span>
     </dt>
     <dd>{{% md %}}Transformation for each infoType. Cannot specify more than one for a given infoType.
 Structure is documented below.
@@ -1256,7 +1256,7 @@ Structure is documented below.
 <a href="#transformations_nodejs" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformation">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformation">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation[]</a></span>
     </dt>
     <dd>{{% md %}}Transformation for each infoType. Cannot specify more than one for a given infoType.
 Structure is documented below.
@@ -1270,7 +1270,7 @@ Structure is documented below.
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformation">Sequence[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformation">Sequence[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation]</a></span>
     </dt>
     <dd>{{% md %}}Transformation for each infoType. Cannot specify more than one for a given infoType.
 Structure is documented below.
@@ -1286,7 +1286,7 @@ Structure is documented below.
 <a href="#primitivetransformation_csharp" style="color: inherit; text-decoration: inherit;">Primitive<wbr>Transformation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformation">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformation">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation</a></span>
     </dt>
     <dd>{{% md %}}Primitive transformation to apply to the infoType.
 Structure is documented below.
@@ -1296,7 +1296,7 @@ Structure is documented below.
 <a href="#infotypes_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationinfotype">List&lt;Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Info<wbr>Type<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationinfotype">List&lt;Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Info<wbr>Type&gt;</a></span>
     </dt>
     <dd>{{% md %}}InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
 all findings that correspond to infoTypes that were requested in InspectConfig.
@@ -1336,7 +1336,7 @@ Structure is documented below.
 <a href="#primitivetransformation_nodejs" style="color: inherit; text-decoration: inherit;">primitive<wbr>Transformation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformation">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformation">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation</a></span>
     </dt>
     <dd>{{% md %}}Primitive transformation to apply to the infoType.
 Structure is documented below.
@@ -1346,7 +1346,7 @@ Structure is documented below.
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationinfotype">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Info<wbr>Type<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationinfotype">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Info<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
 all findings that correspond to infoTypes that were requested in InspectConfig.
@@ -1361,7 +1361,7 @@ Structure is documented below.
 <a href="#primitive_transformation_python" style="color: inherit; text-decoration: inherit;">primitive_<wbr>transformation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformation">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformation">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation</a></span>
     </dt>
     <dd>{{% md %}}Primitive transformation to apply to the infoType.
 Structure is documented below.
@@ -1371,7 +1371,7 @@ Structure is documented below.
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationinfotype">Sequence[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Info<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationinfotype">Sequence[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Info<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
 all findings that correspond to infoTypes that were requested in InspectConfig.
@@ -1442,7 +1442,7 @@ Structure is documented below.
 <a href="#charactermaskconfig_csharp" style="color: inherit; text-decoration: inherit;">Character<wbr>Mask<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Partially mask a string by replacing a given number of characters with a fixed character.
 Masking can start from the beginning or end of the string.
@@ -1453,7 +1453,7 @@ Structure is documented below.
 <a href="#replaceconfig_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
@@ -1492,7 +1492,7 @@ Structure is documented below.
 <a href="#charactermaskconfig_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Mask<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Partially mask a string by replacing a given number of characters with a fixed character.
 Masking can start from the beginning or end of the string.
@@ -1503,7 +1503,7 @@ Structure is documented below.
 <a href="#replaceconfig_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
@@ -1517,7 +1517,7 @@ Structure is documented below.
 <a href="#character_mask_config_python" style="color: inherit; text-decoration: inherit;">character_<wbr>mask_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Partially mask a string by replacing a given number of characters with a fixed character.
 Masking can start from the beginning or end of the string.
@@ -1528,7 +1528,7 @@ Structure is documented below.
 <a href="#replace_config_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
@@ -1544,7 +1544,7 @@ Structure is documented below.
 <a href="#characterstoignores_csharp" style="color: inherit; text-decoration: inherit;">Characters<wbr>To<wbr>Ignores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfigcharacterstoignore">List&lt;Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Characters<wbr>To<wbr>Ignore<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfigcharacterstoignore">List&lt;Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Characters<wbr>To<wbr>Ignore&gt;</a></span>
     </dt>
     <dd>{{% md %}}Characters to skip when doing de-identification of a value. These will be left alone and skipped.
 Structure is documented below.
@@ -1632,7 +1632,7 @@ input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
 <a href="#characterstoignores_nodejs" style="color: inherit; text-decoration: inherit;">characters<wbr>To<wbr>Ignores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfigcharacterstoignore">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Characters<wbr>To<wbr>Ignore<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfigcharacterstoignore">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Characters<wbr>To<wbr>Ignore[]</a></span>
     </dt>
     <dd>{{% md %}}Characters to skip when doing de-identification of a value. These will be left alone and skipped.
 Structure is documented below.
@@ -1676,7 +1676,7 @@ input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
 <a href="#characters_to_ignores_python" style="color: inherit; text-decoration: inherit;">characters_<wbr>to_<wbr>ignores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfigcharacterstoignore">Sequence[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Characters<wbr>To<wbr>Ignore<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfigcharacterstoignore">Sequence[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Characters<wbr>To<wbr>Ignore]</a></span>
     </dt>
     <dd>{{% md %}}Characters to skip when doing de-identification of a value. These will be left alone and skipped.
 Structure is documented below.
@@ -1816,7 +1816,7 @@ Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUAT
 <a href="#newvalue_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
@@ -1844,7 +1844,7 @@ Structure is documented below.
 <a href="#newvalue_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
@@ -1858,7 +1858,7 @@ Structure is documented below.
 <a href="#new_value_python" style="color: inherit; text-decoration: inherit;">new_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
@@ -1883,7 +1883,7 @@ Structure is documented below.
 <a href="#datevalue_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluedatevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Date<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluedatevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Date<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}Represents a whole or partial calendar date.
 Structure is documented below.
@@ -1930,7 +1930,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#timevalue_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluetimevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Time<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluetimevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Time<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}Represents a time of day.
 Structure is documented below.
@@ -2043,7 +2043,7 @@ Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 <a href="#datevalue_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluedatevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Date<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluedatevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Date<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}Represents a whole or partial calendar date.
 Structure is documented below.
@@ -2090,7 +2090,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#timevalue_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluetimevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Time<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluetimevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Time<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}Represents a time of day.
 Structure is documented below.
@@ -2123,7 +2123,7 @@ Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 <a href="#date_value_python" style="color: inherit; text-decoration: inherit;">date_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluedatevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Date<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluedatevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Date<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}Represents a whole or partial calendar date.
 Structure is documented below.
@@ -2170,7 +2170,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#time_value_python" style="color: inherit; text-decoration: inherit;">time_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluetimevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Time<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluetimevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Time<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}Represents a time of day.
 Structure is documented below.

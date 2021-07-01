@@ -544,7 +544,7 @@ you create the resource.
 <a href="#diskencryptionkey_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key.
 After you encrypt a disk with a customer-supplied key, you must
@@ -658,7 +658,7 @@ valid values:
 <a href="#sourcesnapshotencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
@@ -1705,7 +1705,7 @@ you create the resource.
 <a href="#state_diskencryptionkey_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key.
 After you encrypt a disk with a customer-supplied key, you must
@@ -1864,7 +1864,7 @@ valid values:
 <a href="#state_sourcesnapshotencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption

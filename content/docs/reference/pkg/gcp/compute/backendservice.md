@@ -288,9 +288,6 @@ class MyStack : Stack
             RequestPath = "/",
             CheckIntervalSec = 1,
             TimeoutSec = 1,
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var defaultBackendService = new Gcp.Compute.BackendService("defaultBackendService", new Gcp.Compute.BackendServiceArgs
         {
@@ -308,9 +305,6 @@ class MyStack : Stack
                 NegativeCaching = true,
                 SignedUrlCacheMaxAgeSec = 7200,
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
     }
 
@@ -337,7 +331,7 @@ func main() {
 			RequestPath:      pulumi.String("/"),
 			CheckIntervalSec: pulumi.Int(1),
 			TimeoutSec:       pulumi.Int(1),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -354,7 +348,7 @@ func main() {
 				NegativeCaching:         pulumi.Bool(true),
 				SignedUrlCacheMaxAgeSec: pulumi.Int(7200),
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -376,8 +370,7 @@ import pulumi_gcp as gcp
 default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
     request_path="/",
     check_interval_sec=1,
-    timeout_sec=1,
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    timeout_sec=1)
 default_backend_service = gcp.compute.BackendService("defaultBackendService",
     health_checks=[default_http_health_check.id],
     enable_cdn=True,
@@ -388,8 +381,7 @@ default_backend_service = gcp.compute.BackendService("defaultBackendService",
         max_ttl=10800,
         negative_caching=True,
         signed_url_cache_max_age_sec=7200,
-    ),
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    ))
 ```
 
 
@@ -407,8 +399,6 @@ const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealt
     requestPath: "/",
     checkIntervalSec: 1,
     timeoutSec: 1,
-}, {
-    provider: google_beta,
 });
 const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
     healthChecks: [defaultHttpHealthCheck.id],
@@ -421,8 +411,6 @@ const defaultBackendService = new gcp.compute.BackendService("defaultBackendServ
         negativeCaching: true,
         signedUrlCacheMaxAgeSec: 7200,
     },
-}, {
-    provider: google_beta,
 });
 ```
 
@@ -1402,7 +1390,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicebackend">[]Backend<wbr>Service<wbr>Backend</a></span>
+        <span class="property-type"><a href="#backendservicebackend">[]Backend<wbr>Service<wbr>Backend<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this BackendService.
 Structure is documented below.
@@ -1412,7 +1400,7 @@ Structure is documented below.
 <a href="#cdnpolicy_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this BackendService.
 Structure is documented below.
@@ -1422,7 +1410,7 @@ Structure is documented below.
 <a href="#circuitbreakers_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Breakers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
+        <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
@@ -1443,7 +1431,7 @@ connections, but still work to finish started).
 <a href="#consistenthash_go" style="color: inherit; text-decoration: inherit;">Consistent<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
@@ -1513,7 +1501,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
 <a href="#iap_go" style="color: inherit; text-decoration: inherit;">Iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap</a></span>
+        <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
 Structure is documented below.
@@ -1567,7 +1555,7 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 <a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
 If logging is enabled, logs will be exported to Stackdriver.
@@ -1587,7 +1575,7 @@ Structure is documented below.
 <a href="#outlierdetection_go" style="color: inherit; text-decoration: inherit;">Outlier<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
@@ -2851,7 +2839,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#state_backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicebackend">[]Backend<wbr>Service<wbr>Backend</a></span>
+        <span class="property-type"><a href="#backendservicebackend">[]Backend<wbr>Service<wbr>Backend<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this BackendService.
 Structure is documented below.
@@ -2861,7 +2849,7 @@ Structure is documented below.
 <a href="#state_cdnpolicy_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this BackendService.
 Structure is documented below.
@@ -2871,7 +2859,7 @@ Structure is documented below.
 <a href="#state_circuitbreakers_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Breakers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
+        <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
@@ -2892,7 +2880,7 @@ connections, but still work to finish started).
 <a href="#state_consistenthash_go" style="color: inherit; text-decoration: inherit;">Consistent<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
@@ -2980,7 +2968,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
 <a href="#state_iap_go" style="color: inherit; text-decoration: inherit;">Iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap</a></span>
+        <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
 Structure is documented below.
@@ -3034,7 +3022,7 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 <a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
 If logging is enabled, logs will be exported to Stackdriver.
@@ -3054,7 +3042,7 @@ Structure is documented below.
 <a href="#state_outlierdetection_go" style="color: inherit; text-decoration: inherit;">Outlier<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
@@ -4363,7 +4351,7 @@ range is [0.0, 1.0].
 <a href="#cachekeypolicy_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
 Structure is documented below.
@@ -4421,7 +4409,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#negativecachingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicy">List&lt;Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicy">List&lt;Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
 Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
@@ -4561,7 +4549,7 @@ responses will not be altered.
 <a href="#cachekeypolicy_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
 Structure is documented below.
@@ -4619,7 +4607,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#negativecachingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
 Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
@@ -4660,7 +4648,7 @@ responses will not be altered.
 <a href="#cache_key_policy_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
 Structure is documented below.
@@ -4718,7 +4706,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#negative_caching_policies_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicy">Sequence[Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicy">Sequence[Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
 Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
@@ -5109,7 +5097,7 @@ can be specified as values, and you cannot specify a status code more than once.
 <a href="#connecttimeout_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5239,7 +5227,7 @@ Defaults to 3.
 <a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5304,7 +5292,7 @@ Defaults to 3.
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5473,7 +5461,7 @@ less than one second are represented with a 0 `seconds` field and a positive
 <a href="#httpcookie_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookie">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookie">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie</a></span>
     </dt>
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
@@ -5555,7 +5543,7 @@ Defaults to 1024.
 <a href="#httpcookie_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookie">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookie">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie</a></span>
     </dt>
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
@@ -5596,7 +5584,7 @@ Defaults to 1024.
 <a href="#http_cookie_python" style="color: inherit; text-decoration: inherit;">http_<wbr>cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookie">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookie">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie</a></span>
     </dt>
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
@@ -5657,7 +5645,7 @@ Defaults to 1024.
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
 (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
@@ -5721,7 +5709,7 @@ Defaults to 1024.
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
 (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
@@ -5753,7 +5741,7 @@ Defaults to 1024.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
 (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
@@ -6111,7 +6099,7 @@ The default value is 1.0.
 <a href="#baseejectiontime_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Ejection<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetectionbaseejectiontime">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetectionbaseejectiontime">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
@@ -6178,7 +6166,7 @@ disable ejection or to ramp it up slowly. Defaults to 100.
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
 ejections as well as hosts being returned to service. Defaults to 10 seconds.
@@ -6373,7 +6361,7 @@ runtime value should be 1900. Defaults to 1900.
 <a href="#baseejectiontime_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Ejection<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetectionbaseejectiontime">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetectionbaseejectiontime">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
@@ -6440,7 +6428,7 @@ disable ejection or to ramp it up slowly. Defaults to 100.
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
 ejections as well as hosts being returned to service. Defaults to 10 seconds.
@@ -6504,7 +6492,7 @@ runtime value should be 1900. Defaults to 1900.
 <a href="#base_ejection_time_python" style="color: inherit; text-decoration: inherit;">base_<wbr>ejection_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetectionbaseejectiontime">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetectionbaseejectiontime">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
@@ -6571,7 +6559,7 @@ disable ejection or to ramp it up slowly. Defaults to 100.
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
 ejections as well as hosts being returned to service. Defaults to 10 seconds.

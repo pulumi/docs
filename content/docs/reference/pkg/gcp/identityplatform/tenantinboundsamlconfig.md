@@ -381,7 +381,7 @@ If it is not provided, the provider project is used.
 <a href="#idpconfig_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantinboundsamlconfigidpconfig">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config</a></span>
+        <span class="property-type"><a href="#tenantinboundsamlconfigidpconfig">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
@@ -391,7 +391,7 @@ Structure is documented below.
 <a href="#spconfig_go" style="color: inherit; text-decoration: inherit;">Sp<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantinboundsamlconfigspconfig">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config</a></span>
+        <span class="property-type"><a href="#tenantinboundsamlconfigspconfig">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
 and accept an authentication assertion issued by a SAML identity provider.
@@ -869,7 +869,7 @@ Structure is documented below.
 <a href="#state_idpconfig_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantinboundsamlconfigidpconfig">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config</a></span>
+        <span class="property-type"><a href="#tenantinboundsamlconfigidpconfig">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
@@ -900,7 +900,7 @@ If it is not provided, the provider project is used.
 <a href="#state_spconfig_go" style="color: inherit; text-decoration: inherit;">Sp<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantinboundsamlconfigspconfig">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config</a></span>
+        <span class="property-type"><a href="#tenantinboundsamlconfigspconfig">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
 and accept an authentication assertion issued by a SAML identity provider.
@@ -1081,7 +1081,7 @@ Structure is documented below.
 <a href="#idpcertificates_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantinboundsamlconfigidpconfigidpcertificate">List&lt;Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tenantinboundsamlconfigidpconfigidpcertificate">List&lt;Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
 Structure is documented below.
@@ -1163,7 +1163,7 @@ Structure is documented below.
 <a href="#idpcertificates_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantinboundsamlconfigidpconfigidpcertificate">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#tenantinboundsamlconfigidpconfigidpcertificate">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
 Structure is documented below.
@@ -1204,7 +1204,7 @@ Structure is documented below.
 <a href="#idp_certificates_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantinboundsamlconfigidpconfigidpcertificate">Sequence[Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tenantinboundsamlconfigidpconfigidpcertificate">Sequence[Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
 Structure is documented below.
@@ -1323,7 +1323,7 @@ The x509 certificate
 <a href="#spcertificates_csharp" style="color: inherit; text-decoration: inherit;">Sp<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantinboundsamlconfigspconfigspcertificate">List&lt;Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tenantinboundsamlconfigspconfigspcertificate">List&lt;Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}-
 The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
@@ -1389,7 +1389,7 @@ Structure is documented below.
 <a href="#spcertificates_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantinboundsamlconfigspconfigspcertificate">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#tenantinboundsamlconfigspconfigspcertificate">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}-
 The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
@@ -1422,7 +1422,7 @@ Structure is documented below.
 <a href="#sp_certificates_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tenantinboundsamlconfigspconfigspcertificate">Sequence[Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tenantinboundsamlconfigspconfigspcertificate">Sequence[Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}-
 The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.

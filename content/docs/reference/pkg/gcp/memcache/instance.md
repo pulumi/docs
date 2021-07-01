@@ -480,7 +480,7 @@ provided, all zones will be used.
 <a href="#nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenodeconfig">Instance<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancenodeconfig">Instance<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for memcache nodes.
 Structure is documented below.
@@ -527,7 +527,7 @@ Structure is documented below.
 <a href="#memcacheparameters_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancememcacheparameters">Instance<wbr>Memcache<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#instancememcacheparameters">Instance<wbr>Memcache<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User-specified parameters for this memcache instance.
 Structure is documented below.
@@ -1358,7 +1358,7 @@ provided, all zones will be used.
 <a href="#state_memcachenodes_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancememcachenode">[]Instance<wbr>Memcache<wbr>Node</a></span>
+        <span class="property-type"><a href="#instancememcachenode">[]Instance<wbr>Memcache<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the instance state, if available.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1367,7 +1367,7 @@ provided, all zones will be used.
 <a href="#state_memcacheparameters_go" style="color: inherit; text-decoration: inherit;">Memcache<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancememcacheparameters">Instance<wbr>Memcache<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#instancememcacheparameters">Instance<wbr>Memcache<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User-specified parameters for this memcache instance.
 Structure is documented below.
@@ -1399,7 +1399,7 @@ Possible values are `MEMCACHE_1_5`.
 <a href="#state_nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenodeconfig">Instance<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancenodeconfig">Instance<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for memcache nodes.
 Structure is documented below.

@@ -519,7 +519,7 @@ Structure is documented below.
 <a href="#appengineroutingoverride_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Routing<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
+        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
 to App Engine tasks in this queue
@@ -549,7 +549,7 @@ If it is not provided, the provider project is used.
 <a href="#ratelimits_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits</a></span>
+        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches.
 The queue's actual dispatch rate is the result of:
@@ -565,7 +565,7 @@ Structure is documented below.
 <a href="#retryconfig_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
+        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 Structure is documented below.
@@ -575,7 +575,7 @@ Structure is documented below.
 <a href="#stackdriverloggingconfig_go" style="color: inherit; text-decoration: inherit;">Stackdriver<wbr>Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
@@ -1013,7 +1013,7 @@ Structure is documented below.
 <a href="#state_appengineroutingoverride_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Routing<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
+        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
 to App Engine tasks in this queue
@@ -1052,7 +1052,7 @@ If it is not provided, the provider project is used.
 <a href="#state_ratelimits_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits</a></span>
+        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches.
 The queue's actual dispatch rate is the result of:
@@ -1068,7 +1068,7 @@ Structure is documented below.
 <a href="#state_retryconfig_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
+        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 Structure is documented below.
@@ -1078,7 +1078,7 @@ Structure is documented below.
 <a href="#state_stackdriverloggingconfig_go" style="color: inherit; text-decoration: inherit;">Stackdriver<wbr>Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</a></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.

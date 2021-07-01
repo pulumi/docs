@@ -565,7 +565,7 @@ If it is not provided, the provider project is used.
 <a href="#sensitivelabels_go" style="color: inherit; text-decoration: inherit;">Sensitive<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationchannelsensitivelabels">Notification<wbr>Channel<wbr>Sensitive<wbr>Labels</a></span>
+        <span class="property-type"><a href="#notificationchannelsensitivelabels">Notification<wbr>Channel<wbr>Sensitive<wbr>Labels<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Different notification type behaviors are configured primarily using the the `labels` field on this
 resource. This block contains the labels which contain secrets or passwords so that they can be marked
@@ -1233,7 +1233,7 @@ If it is not provided, the provider project is used.
 <a href="#state_sensitivelabels_go" style="color: inherit; text-decoration: inherit;">Sensitive<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationchannelsensitivelabels">Notification<wbr>Channel<wbr>Sensitive<wbr>Labels</a></span>
+        <span class="property-type"><a href="#notificationchannelsensitivelabels">Notification<wbr>Channel<wbr>Sensitive<wbr>Labels<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Different notification type behaviors are configured primarily using the the `labels` field on this
 resource. This block contains the labels which contain secrets or passwords so that they can be marked

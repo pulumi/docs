@@ -798,7 +798,7 @@ base64-encoded.
 <a href="#state_apis_go" style="color: inherit; text-decoration: inherit;">Apis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceapi">[]Service<wbr>Api</a></span>
+        <span class="property-type"><a href="#serviceapi">[]Service<wbr>Api<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of API objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -826,7 +826,7 @@ to compute engine instances as a tag.
 <a href="#state_endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceendpoint">[]Service<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#serviceendpoint">[]Service<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of Endpoint objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1076,7 +1076,7 @@ base64-encoded.
 <a href="#methods_csharp" style="color: inherit; text-decoration: inherit;">Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceapimethod">List&lt;Service<wbr>Api<wbr>Method<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceapimethod">List&lt;Service<wbr>Api<wbr>Method&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1148,7 @@ base64-encoded.
 <a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceapimethod">Service<wbr>Api<wbr>Method<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceapimethod">Service<wbr>Api<wbr>Method[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1184,7 +1184,7 @@ base64-encoded.
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceapimethod">Sequence[Service<wbr>Api<wbr>Method<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceapimethod">Sequence[Service<wbr>Api<wbr>Method]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

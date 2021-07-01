@@ -582,7 +582,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#autoscaling_go" style="color: inherit; text-decoration: inherit;">Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling</a></span>
+        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
@@ -616,7 +616,7 @@ ignore subsqeuent changes to this field.
 <a href="#management_go" style="color: inherit; text-decoration: inherit;">Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management</a></span>
+        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
@@ -659,7 +659,7 @@ with the specified prefix. Conflicts with `name`.
 <a href="#nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The node configuration of the pool. See
 gcp.container.Cluster for schema.
@@ -701,7 +701,7 @@ the provider-configured project will be used.
 <a href="#upgradesettings_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
+        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
@@ -1482,7 +1482,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#state_autoscaling_go" style="color: inherit; text-decoration: inherit;">Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling</a></span>
+        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
@@ -1534,7 +1534,7 @@ ignore subsqeuent changes to this field.
 <a href="#state_management_go" style="color: inherit; text-decoration: inherit;">Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management</a></span>
+        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
@@ -1577,7 +1577,7 @@ with the specified prefix. Conflicts with `name`.
 <a href="#state_nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The node configuration of the pool. See
 gcp.container.Cluster for schema.
@@ -1627,7 +1627,7 @@ the provider-configured project will be used.
 <a href="#state_upgradesettings_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
+        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
@@ -2223,7 +2223,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#ephemeralstorageconfig_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigephemeralstorageconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigephemeralstorageconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2231,7 +2231,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#guestaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigguestaccelerator">List&lt;Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigguestaccelerator">List&lt;Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2247,7 +2247,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigkubeletconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigkubeletconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2263,7 +2263,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#linuxnodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfiglinuxnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfiglinuxnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2319,7 +2319,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#sandboxconfig_csharp" style="color: inherit; text-decoration: inherit;">Sandbox<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigsandboxconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigsandboxconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2335,7 +2335,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#shieldedinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigshieldedinstanceconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigshieldedinstanceconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2351,7 +2351,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigtaint">List&lt;Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigtaint">List&lt;Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2359,7 +2359,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#workloadmetadataconfig_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Metadata<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigworkloadmetadataconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigworkloadmetadataconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2567,7 +2567,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#ephemeralstorageconfig_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigephemeralstorageconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigephemeralstorageconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2575,7 +2575,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigguestaccelerator">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigguestaccelerator">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2591,7 +2591,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigkubeletconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigkubeletconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2607,7 +2607,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#linuxnodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfiglinuxnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfiglinuxnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2663,7 +2663,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#sandboxconfig_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigsandboxconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigsandboxconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2679,7 +2679,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigshieldedinstanceconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigshieldedinstanceconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2695,7 +2695,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigtaint">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigtaint">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2703,7 +2703,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#workloadmetadataconfig_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Metadata<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigworkloadmetadataconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigworkloadmetadataconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2739,7 +2739,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#ephemeral_storage_config_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>storage_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigephemeralstorageconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigephemeralstorageconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2747,7 +2747,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigguestaccelerator">Sequence[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigguestaccelerator">Sequence[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2763,7 +2763,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigkubeletconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigkubeletconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2779,7 +2779,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#linux_node_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfiglinuxnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfiglinuxnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2835,7 +2835,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#sandbox_config_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigsandboxconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigsandboxconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2851,7 +2851,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigshieldedinstanceconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigshieldedinstanceconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2867,7 +2867,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigtaint">Sequence[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigtaint">Sequence[Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2875,7 +2875,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 <a href="#workload_metadata_config_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>metadata_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigworkloadmetadataconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigworkloadmetadataconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

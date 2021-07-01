@@ -372,7 +372,7 @@ affinity for any reservation. Defaults to false.
 <a href="#specificreservation_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</a></span>
+        <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
@@ -1075,7 +1075,7 @@ If it is not provided, the provider project is used.
 <a href="#state_specificreservation_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</a></span>
+        <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
@@ -1346,7 +1346,7 @@ affinity for any reservation. Defaults to false.
 <a href="#instanceproperties_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.
 Structure is documented below.
@@ -1412,7 +1412,7 @@ How many instances are in use.
 <a href="#instanceproperties_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.
 Structure is documented below.
@@ -1445,7 +1445,7 @@ How many instances are in use.
 <a href="#instance_properties_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.
 Structure is documented below.
@@ -1480,7 +1480,7 @@ How many instances are in use.
 <a href="#guestaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">List&lt;Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">List&lt;Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}Guest accelerator type and count.
 Structure is documented below.
@@ -1490,7 +1490,7 @@ Structure is documented below.
 <a href="#localssds_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">List&lt;Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">List&lt;Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd&gt;</a></span>
     </dt>
     <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
 reserves disks of type `local-ssd`.
@@ -1572,7 +1572,7 @@ for information on available CPU platforms.
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}Guest accelerator type and count.
 Structure is documented below.
@@ -1582,7 +1582,7 @@ Structure is documented below.
 <a href="#localssds_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd[]</a></span>
     </dt>
     <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
 reserves disks of type `local-ssd`.
@@ -1618,7 +1618,7 @@ for information on available CPU platforms.
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">Sequence[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">Sequence[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}Guest accelerator type and count.
 Structure is documented below.
@@ -1628,7 +1628,7 @@ Structure is documented below.
 <a href="#local_ssds_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">Sequence[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">Sequence[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd]</a></span>
     </dt>
     <dd>{{% md %}}The amount of local ssd to reserve with each instance. This
 reserves disks of type `local-ssd`.

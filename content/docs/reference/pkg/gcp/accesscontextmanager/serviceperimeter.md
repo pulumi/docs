@@ -1340,7 +1340,7 @@ Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec</a></span>
+        <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
@@ -1353,7 +1353,7 @@ Structure is documented below.
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
@@ -2060,7 +2060,7 @@ Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec</a></span>
+        <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
@@ -2073,7 +2073,7 @@ Structure is documented below.
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
@@ -2408,7 +2408,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 <a href="#egresspolicies_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicy">List&lt;Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicy">List&lt;Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of EgressPolicies to apply to the perimeter. A perimeter may
 have multiple EgressPolicies, each of which is evaluated separately.
@@ -2421,7 +2421,7 @@ Structure is documented below.
 <a href="#ingresspolicies_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicy">List&lt;Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicy">List&lt;Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of `IngressPolicies` to apply to the perimeter. A perimeter may
 have multiple `IngressPolicies`, each of which is evaluated
@@ -2460,7 +2460,7 @@ restrictions.
 <a href="#vpcaccessibleservices_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Accessible<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
 Perimeter.
@@ -2576,7 +2576,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 <a href="#egresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicy">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicy">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}List of EgressPolicies to apply to the perimeter. A perimeter may
 have multiple EgressPolicies, each of which is evaluated separately.
@@ -2589,7 +2589,7 @@ Structure is documented below.
 <a href="#ingresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicy">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicy">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}List of `IngressPolicies` to apply to the perimeter. A perimeter may
 have multiple `IngressPolicies`, each of which is evaluated
@@ -2628,7 +2628,7 @@ restrictions.
 <a href="#vpcaccessibleservices_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Accessible<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
 Perimeter.
@@ -2660,7 +2660,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 <a href="#egress_policies_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicy">Sequence[Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicy">Sequence[Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}List of EgressPolicies to apply to the perimeter. A perimeter may
 have multiple EgressPolicies, each of which is evaluated separately.
@@ -2673,7 +2673,7 @@ Structure is documented below.
 <a href="#ingress_policies_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicy">Sequence[Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicy">Sequence[Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}List of `IngressPolicies` to apply to the perimeter. A perimeter may
 have multiple `IngressPolicies`, each of which is evaluated
@@ -2712,7 +2712,7 @@ restrictions.
 <a href="#vpc_accessible_services_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>accessible_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
 Perimeter.
@@ -2729,7 +2729,7 @@ Structure is documented below.
 <a href="#egressfrom_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegressfrom">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegressfrom">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Defines conditions on the source of a request causing this `EgressPolicy` to apply.
 Structure is documented below.
@@ -2739,7 +2739,7 @@ Structure is documented below.
 <a href="#egressto_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegressto">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegressto">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and destination resources that
 cause this `EgressPolicy` to apply.
@@ -2779,7 +2779,7 @@ Structure is documented below.
 <a href="#egressfrom_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegressfrom">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegressfrom">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Defines conditions on the source of a request causing this `EgressPolicy` to apply.
 Structure is documented below.
@@ -2789,7 +2789,7 @@ Structure is documented below.
 <a href="#egressto_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegressto">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegressto">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and destination resources that
 cause this `EgressPolicy` to apply.
@@ -2804,7 +2804,7 @@ Structure is documented below.
 <a href="#egress_from_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegressfrom">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegressfrom">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Defines conditions on the source of a request causing this `EgressPolicy` to apply.
 Structure is documented below.
@@ -2814,7 +2814,7 @@ Structure is documented below.
 <a href="#egress_to_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegressto">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegressto">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and destination resources that
 cause this `EgressPolicy` to apply.
@@ -2941,7 +2941,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#operations_csharp" style="color: inherit; text-decoration: inherit;">Operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegresstooperation">List&lt;Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegresstooperation">List&lt;Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -2997,7 +2997,7 @@ the perimeter.
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegresstooperation">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegresstooperation">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation[]</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -3025,7 +3025,7 @@ the perimeter.
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegresstooperation">Sequence[Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegresstooperation">Sequence[Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation]</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -3055,7 +3055,7 @@ the perimeter.
 <a href="#methodselectors_csharp" style="color: inherit; text-decoration: inherit;">Method<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegresstooperationmethodselector">List&lt;Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegresstooperationmethodselector">List&lt;Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector&gt;</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -3111,7 +3111,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#methodselectors_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegresstooperationmethodselector">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegresstooperationmethodselector">Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector[]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -3139,7 +3139,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#method_selectors_python" style="color: inherit; text-decoration: inherit;">method_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegresstooperationmethodselector">Sequence[Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecegresspolicyegresstooperationmethodselector">Sequence[Service<wbr>Perimeter<wbr>Spec<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -3271,7 +3271,7 @@ corresponding `serviceName` in `ApiOperation`.
 <a href="#ingressfrom_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressfrom">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressfrom">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the source of a request causing this `IngressPolicy`
 to apply.
@@ -3282,7 +3282,7 @@ Structure is documented below.
 <a href="#ingressto_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressto">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressto">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and request destination that cause
 this `IngressPolicy` to apply.
@@ -3323,7 +3323,7 @@ Structure is documented below.
 <a href="#ingressfrom_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressfrom">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressfrom">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the source of a request causing this `IngressPolicy`
 to apply.
@@ -3334,7 +3334,7 @@ Structure is documented below.
 <a href="#ingressto_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressto">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressto">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and request destination that cause
 this `IngressPolicy` to apply.
@@ -3349,7 +3349,7 @@ Structure is documented below.
 <a href="#ingress_from_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressfrom">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressfrom">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the source of a request causing this `IngressPolicy`
 to apply.
@@ -3360,7 +3360,7 @@ Structure is documented below.
 <a href="#ingress_to_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressto">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressto">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and request destination that cause
 this `IngressPolicy` to apply.
@@ -3400,7 +3400,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressfromsource">List&lt;Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressfromsource">List&lt;Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sources that this `IngressPolicy` authorizes access from.
 Structure is documented below.
@@ -3474,7 +3474,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressfromsource">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressfromsource">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Sources that this `IngressPolicy` authorizes access from.
 Structure is documented below.
@@ -3511,7 +3511,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressfromsource">Sequence[Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingressfromsource">Sequence[Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}Sources that this `IngressPolicy` authorizes access from.
 Structure is documented below.
@@ -3665,7 +3665,7 @@ of allowing all Google Cloud resources only is not supported.
 <a href="#operations_csharp" style="color: inherit; text-decoration: inherit;">Operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingresstooperation">List&lt;Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingresstooperation">List&lt;Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -3721,7 +3721,7 @@ the perimeter.
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingresstooperation">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingresstooperation">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation[]</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -3749,7 +3749,7 @@ the perimeter.
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingresstooperation">Sequence[Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingresstooperation">Sequence[Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation]</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -3779,7 +3779,7 @@ the perimeter.
 <a href="#methodselectors_csharp" style="color: inherit; text-decoration: inherit;">Method<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingresstooperationmethodselector">List&lt;Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingresstooperationmethodselector">List&lt;Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector&gt;</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -3835,7 +3835,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#methodselectors_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingresstooperationmethodselector">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingresstooperationmethodselector">Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector[]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -3863,7 +3863,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#method_selectors_python" style="color: inherit; text-decoration: inherit;">method_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingresstooperationmethodselector">Sequence[Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecingresspolicyingresstooperationmethodselector">Sequence[Service<wbr>Perimeter<wbr>Spec<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -4110,7 +4110,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 <a href="#egresspolicies_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicy">List&lt;Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicy">List&lt;Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of EgressPolicies to apply to the perimeter. A perimeter may
 have multiple EgressPolicies, each of which is evaluated separately.
@@ -4123,7 +4123,7 @@ Structure is documented below.
 <a href="#ingresspolicies_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicy">List&lt;Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicy">List&lt;Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of `IngressPolicies` to apply to the perimeter. A perimeter may
 have multiple `IngressPolicies`, each of which is evaluated
@@ -4162,7 +4162,7 @@ restrictions.
 <a href="#vpcaccessibleservices_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Accessible<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
 Perimeter.
@@ -4278,7 +4278,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 <a href="#egresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicy">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicy">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}List of EgressPolicies to apply to the perimeter. A perimeter may
 have multiple EgressPolicies, each of which is evaluated separately.
@@ -4291,7 +4291,7 @@ Structure is documented below.
 <a href="#ingresspolicies_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicy">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicy">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}List of `IngressPolicies` to apply to the perimeter. A perimeter may
 have multiple `IngressPolicies`, each of which is evaluated
@@ -4330,7 +4330,7 @@ restrictions.
 <a href="#vpcaccessibleservices_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Accessible<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
 Perimeter.
@@ -4362,7 +4362,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 <a href="#egress_policies_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicy">Sequence[Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicy">Sequence[Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}List of EgressPolicies to apply to the perimeter. A perimeter may
 have multiple EgressPolicies, each of which is evaluated separately.
@@ -4375,7 +4375,7 @@ Structure is documented below.
 <a href="#ingress_policies_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicy">Sequence[Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicy">Sequence[Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}List of `IngressPolicies` to apply to the perimeter. A perimeter may
 have multiple `IngressPolicies`, each of which is evaluated
@@ -4414,7 +4414,7 @@ restrictions.
 <a href="#vpc_accessible_services_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>accessible_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
 Perimeter.
@@ -4431,7 +4431,7 @@ Structure is documented below.
 <a href="#egressfrom_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegressfrom">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegressfrom">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Defines conditions on the source of a request causing this `EgressPolicy` to apply.
 Structure is documented below.
@@ -4441,7 +4441,7 @@ Structure is documented below.
 <a href="#egressto_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegressto">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegressto">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and destination resources that
 cause this `EgressPolicy` to apply.
@@ -4481,7 +4481,7 @@ Structure is documented below.
 <a href="#egressfrom_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegressfrom">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegressfrom">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Defines conditions on the source of a request causing this `EgressPolicy` to apply.
 Structure is documented below.
@@ -4491,7 +4491,7 @@ Structure is documented below.
 <a href="#egressto_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegressto">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegressto">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and destination resources that
 cause this `EgressPolicy` to apply.
@@ -4506,7 +4506,7 @@ Structure is documented below.
 <a href="#egress_from_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegressfrom">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegressfrom">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Defines conditions on the source of a request causing this `EgressPolicy` to apply.
 Structure is documented below.
@@ -4516,7 +4516,7 @@ Structure is documented below.
 <a href="#egress_to_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegressto">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegressto">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and destination resources that
 cause this `EgressPolicy` to apply.
@@ -4643,7 +4643,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#operations_csharp" style="color: inherit; text-decoration: inherit;">Operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegresstooperation">List&lt;Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegresstooperation">List&lt;Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -4699,7 +4699,7 @@ the perimeter.
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegresstooperation">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegresstooperation">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation[]</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -4727,7 +4727,7 @@ the perimeter.
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegresstooperation">Sequence[Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegresstooperation">Sequence[Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation]</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -4757,7 +4757,7 @@ the perimeter.
 <a href="#methodselectors_csharp" style="color: inherit; text-decoration: inherit;">Method<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegresstooperationmethodselector">List&lt;Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegresstooperationmethodselector">List&lt;Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector&gt;</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -4813,7 +4813,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#methodselectors_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegresstooperationmethodselector">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegresstooperationmethodselector">Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector[]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -4841,7 +4841,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#method_selectors_python" style="color: inherit; text-decoration: inherit;">method_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegresstooperationmethodselector">Sequence[Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusegresspolicyegresstooperationmethodselector">Sequence[Service<wbr>Perimeter<wbr>Status<wbr>Egress<wbr>Policy<wbr>Egress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -4973,7 +4973,7 @@ corresponding `serviceName` in `ApiOperation`.
 <a href="#ingressfrom_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressfrom">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressfrom">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the source of a request causing this `IngressPolicy`
 to apply.
@@ -4984,7 +4984,7 @@ Structure is documented below.
 <a href="#ingressto_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressto">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressto">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and request destination that cause
 this `IngressPolicy` to apply.
@@ -5025,7 +5025,7 @@ Structure is documented below.
 <a href="#ingressfrom_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressfrom">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressfrom">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the source of a request causing this `IngressPolicy`
 to apply.
@@ -5036,7 +5036,7 @@ Structure is documented below.
 <a href="#ingressto_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressto">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressto">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and request destination that cause
 this `IngressPolicy` to apply.
@@ -5051,7 +5051,7 @@ Structure is documented below.
 <a href="#ingress_from_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressfrom">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressfrom">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the source of a request causing this `IngressPolicy`
 to apply.
@@ -5062,7 +5062,7 @@ Structure is documented below.
 <a href="#ingress_to_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressto">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressto">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To</a></span>
     </dt>
     <dd>{{% md %}}Defines the conditions on the `ApiOperation` and request destination that cause
 this `IngressPolicy` to apply.
@@ -5102,7 +5102,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressfromsource">List&lt;Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressfromsource">List&lt;Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sources that this `IngressPolicy` authorizes access from.
 Structure is documented below.
@@ -5176,7 +5176,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressfromsource">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressfromsource">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Sources that this `IngressPolicy` authorizes access from.
 Structure is documented below.
@@ -5213,7 +5213,7 @@ Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOU
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressfromsource">Sequence[Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingressfromsource">Sequence[Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>From<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}Sources that this `IngressPolicy` authorizes access from.
 Structure is documented below.
@@ -5367,7 +5367,7 @@ of allowing all Google Cloud resources only is not supported.
 <a href="#operations_csharp" style="color: inherit; text-decoration: inherit;">Operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingresstooperation">List&lt;Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingresstooperation">List&lt;Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -5423,7 +5423,7 @@ the perimeter.
 <a href="#operations_nodejs" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingresstooperation">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingresstooperation">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation[]</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -5451,7 +5451,7 @@ the perimeter.
 <a href="#operations_python" style="color: inherit; text-decoration: inherit;">operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingresstooperation">Sequence[Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingresstooperation">Sequence[Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation]</a></span>
     </dt>
     <dd>{{% md %}}A list of `ApiOperations` that this egress rule applies to. A request matches
 if it contains an operation/service in this list.
@@ -5481,7 +5481,7 @@ the perimeter.
 <a href="#methodselectors_csharp" style="color: inherit; text-decoration: inherit;">Method<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingresstooperationmethodselector">List&lt;Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingresstooperationmethodselector">List&lt;Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector&gt;</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -5537,7 +5537,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#methodselectors_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingresstooperationmethodselector">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingresstooperationmethodselector">Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector[]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector
@@ -5565,7 +5565,7 @@ field set to `*` will allow all methods AND permissions for all services.
 <a href="#method_selectors_python" style="color: inherit; text-decoration: inherit;">method_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingresstooperationmethodselector">Sequence[Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusingresspolicyingresstooperationmethodselector">Sequence[Service<wbr>Perimeter<wbr>Status<wbr>Ingress<wbr>Policy<wbr>Ingress<wbr>To<wbr>Operation<wbr>Method<wbr>Selector]</a></span>
     </dt>
     <dd>{{% md %}}API methods or permissions to allow. Method or permission must belong
 to the service specified by `serviceName` field. A single MethodSelector

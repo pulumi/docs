@@ -739,7 +739,7 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 <a href="#messagestoragepolicy_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Storage<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy</a></span>
+        <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
@@ -770,7 +770,7 @@ If it is not provided, the provider project is used.
 <a href="#schemasettings_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicschemasettings">Topic<wbr>Schema<wbr>Settings</a></span>
+        <span class="property-type"><a href="#topicschemasettings">Topic<wbr>Schema<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for validating messages published against a schema.
 Structure is documented below.
@@ -1193,7 +1193,7 @@ The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`
 <a href="#state_messagestoragepolicy_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Storage<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy</a></span>
+        <span class="property-type"><a href="#topicmessagestoragepolicy">Topic<wbr>Message<wbr>Storage<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
@@ -1224,7 +1224,7 @@ If it is not provided, the provider project is used.
 <a href="#state_schemasettings_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicschemasettings">Topic<wbr>Schema<wbr>Settings</a></span>
+        <span class="property-type"><a href="#topicschemasettings">Topic<wbr>Schema<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for validating messages published against a schema.
 Structure is documented below.

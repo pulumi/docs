@@ -571,7 +571,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
+        <span class="property-type"><a href="#jobplacement">Job<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -591,7 +591,7 @@ job is first cancelled before issuing the delete.
 <a href="#hadoopconfig_go" style="color: inherit; text-decoration: inherit;">Hadoop<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
 {{% /md %}}</dd><dt class="property-optional"
@@ -600,7 +600,7 @@ job is first cancelled before issuing the delete.
 <a href="#hiveconfig_go" style="color: inherit; text-decoration: inherit;">Hive<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
 {{% /md %}}</dd><dt class="property-optional"
@@ -618,7 +618,7 @@ job is first cancelled before issuing the delete.
 <a href="#pigconfig_go" style="color: inherit; text-decoration: inherit;">Pig<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -637,7 +637,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#pysparkconfig_go" style="color: inherit; text-decoration: inherit;">Pyspark<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -646,7 +646,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#reference_go" style="color: inherit; text-decoration: inherit;">Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
+        <span class="property-type"><a href="#jobreference">Job<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
 {{% /md %}}</dd><dt class="property-optional"
@@ -665,7 +665,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#scheduling_go" style="color: inherit; text-decoration: inherit;">Scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling</a></span>
+        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -674,7 +674,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#sparkconfig_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -683,7 +683,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#sparksqlconfig_go" style="color: inherit; text-decoration: inherit;">Sparksql<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
 {{% /md %}}</dd></dl>
@@ -1431,7 +1431,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_hadoopconfig_go" style="color: inherit; text-decoration: inherit;">Hadoop<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1440,7 +1440,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_hiveconfig_go" style="color: inherit; text-decoration: inherit;">Hive<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1458,7 +1458,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_pigconfig_go" style="color: inherit; text-decoration: inherit;">Pig<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1467,7 +1467,7 @@ job is first cancelled before issuing the delete.
 <a href="#state_placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
+        <span class="property-type"><a href="#jobplacement">Job<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1486,7 +1486,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#state_pysparkconfig_go" style="color: inherit; text-decoration: inherit;">Pyspark<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1495,7 @@ subsequently run against. If it is not provided, the provider project is used.
 <a href="#state_reference_go" style="color: inherit; text-decoration: inherit;">Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
+        <span class="property-type"><a href="#jobreference">Job<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1514,7 +1514,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_scheduling_go" style="color: inherit; text-decoration: inherit;">Scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling</a></span>
+        <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1523,7 +1523,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_sparkconfig_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1532,7 +1532,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_sparksqlconfig_go" style="color: inherit; text-decoration: inherit;">Sparksql<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
+        <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
 {{% /md %}}</dd><dt class="property-optional"
@@ -1541,7 +1541,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">[]Job<wbr>Status</a></span>
+        <span class="property-type"><a href="#jobstatus">[]Job<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
 {{% /md %}}</dd></dl>
@@ -1905,7 +1905,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2055,7 +2055,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2130,7 +2130,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2481,7 +2481,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2617,7 +2617,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2685,7 +2685,7 @@ Conflicts with `query_file_uri`
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2914,7 +2914,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3064,7 +3064,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3139,7 +3139,7 @@ Conflicts with `query_file_uri`
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3389,7 +3389,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3539,7 +3539,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3614,7 +3614,7 @@ Conflicts with `query_file_uri`
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3714,7 +3714,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3832,7 +3832,7 @@ Conflicts with `query_file_uri`
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3891,7 +3891,7 @@ Conflicts with `query_file_uri`
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

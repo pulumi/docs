@@ -903,7 +903,7 @@ will eventually redeliver the message.
 <a href="#deadletterpolicy_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy</a></span>
+        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
@@ -930,7 +930,7 @@ may be delivered in any order.
 <a href="#expirationpolicy_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy</a></span>
+        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
 A subscription is considered active as long as any connected subscriber
@@ -1002,7 +1002,7 @@ If it is not provided, the provider project is used.
 <a href="#pushconfig_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
@@ -1026,7 +1026,7 @@ messageRetentionDuration window.
 <a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
 If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
@@ -1817,7 +1817,7 @@ will eventually redeliver the message.
 <a href="#state_deadletterpolicy_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy</a></span>
+        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
@@ -1844,7 +1844,7 @@ may be delivered in any order.
 <a href="#state_expirationpolicy_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy</a></span>
+        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
 A subscription is considered active as long as any connected subscriber
@@ -1925,7 +1925,7 @@ If it is not provided, the provider project is used.
 <a href="#state_pushconfig_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
@@ -1949,7 +1949,7 @@ messageRetentionDuration window.
 <a href="#state_retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
 If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
@@ -2602,7 +2602,7 @@ The possible values for this attribute are:
 <a href="#oidctoken_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
 an Authorization header in the HTTP request for every pushed message.
@@ -2706,7 +2706,7 @@ The possible values for this attribute are:
 <a href="#oidctoken_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
 an Authorization header in the HTTP request for every pushed message.
@@ -2758,7 +2758,7 @@ The possible values for this attribute are:
 <a href="#oidc_token_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
 an Authorization header in the HTTP request for every pushed message.

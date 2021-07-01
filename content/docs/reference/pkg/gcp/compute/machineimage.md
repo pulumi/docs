@@ -675,7 +675,7 @@ Currently only supported on Windows instances using the Volume Shadow Copy Servi
 <a href="#machineimageencryptionkey_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Image<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineimagemachineimageencryptionkey">Machine<wbr>Image<wbr>Machine<wbr>Image<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#machineimagemachineimageencryptionkey">Machine<wbr>Image<wbr>Machine<wbr>Image<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the machine image using a customer-supplied encryption key.
 After you encrypt a machine image with a customer-supplied key, you must
@@ -1200,7 +1200,7 @@ Currently only supported on Windows instances using the Volume Shadow Copy Servi
 <a href="#state_machineimageencryptionkey_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Image<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineimagemachineimageencryptionkey">Machine<wbr>Image<wbr>Machine<wbr>Image<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#machineimagemachineimageencryptionkey">Machine<wbr>Image<wbr>Machine<wbr>Image<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the machine image using a customer-supplied encryption key.
 After you encrypt a machine image with a customer-supplied key, you must

@@ -506,7 +506,7 @@ If it is not provided, the provider project is used.
 <a href="#snapshotencryptionkey_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
 source snapshot is protected by a customer-supplied encryption key.
@@ -517,7 +517,7 @@ Structure is documented below.
 <a href="#sourcediskencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
@@ -1499,7 +1499,7 @@ If it is not provided, the provider project is used.
 <a href="#state_snapshotencryptionkey_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#snapshotsnapshotencryptionkey">Snapshot<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the snapshot. Required if the
 source snapshot is protected by a customer-supplied encryption key.
@@ -1528,7 +1528,7 @@ Structure is documented below.
 <a href="#state_sourcediskencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#snapshotsourcediskencryptionkey">Snapshot<wbr>Source<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption

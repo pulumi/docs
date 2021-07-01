@@ -1029,7 +1029,7 @@ Structure is documented below.
 <a href="#amount_go" style="color: inherit; text-decoration: inherit;">Amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount</a></span>
+        <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
@@ -1048,7 +1048,7 @@ Structure is documented below.
 <a href="#thresholdrules_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetthresholdrule">[]Budget<wbr>Threshold<wbr>Rule</a></span>
+        <span class="property-type"><a href="#budgetthresholdrule">[]Budget<wbr>Threshold<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
@@ -1060,7 +1060,7 @@ Structure is documented below.
 <a href="#allupdatesrule_go" style="color: inherit; text-decoration: inherit;">All<wbr>Updates<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule</a></span>
+        <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines notifications that are sent on every update to the
 billing account's spend, regardless of the thresholds defined
@@ -1072,7 +1072,7 @@ Structure is documented below.
 <a href="#budgetfilter_go" style="color: inherit; text-decoration: inherit;">Budget<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter</a></span>
+        <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
 spend against the budget.
@@ -1534,7 +1534,7 @@ Structure is documented below.
 <a href="#state_allupdatesrule_go" style="color: inherit; text-decoration: inherit;">All<wbr>Updates<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule</a></span>
+        <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines notifications that are sent on every update to the
 billing account's spend, regardless of the thresholds defined
@@ -1546,7 +1546,7 @@ Structure is documented below.
 <a href="#state_amount_go" style="color: inherit; text-decoration: inherit;">Amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount</a></span>
+        <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
@@ -1565,7 +1565,7 @@ Structure is documented below.
 <a href="#state_budgetfilter_go" style="color: inherit; text-decoration: inherit;">Budget<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter</a></span>
+        <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
 spend against the budget.
@@ -1595,7 +1595,7 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
 <a href="#state_thresholdrules_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetthresholdrule">[]Budget<wbr>Threshold<wbr>Rule</a></span>
+        <span class="property-type"><a href="#budgetthresholdrule">[]Budget<wbr>Threshold<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
@@ -1994,7 +1994,7 @@ use the `specified_amount` block.
 <a href="#specifiedamount_csharp" style="color: inherit; text-decoration: inherit;">Specified<wbr>Amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount</a></span>
     </dt>
     <dd>{{% md %}}A specified amount to use as the budget. currencyCode is
 optional. If specified, it must match the currency of the
@@ -2050,7 +2050,7 @@ use the `specified_amount` block.
 <a href="#specifiedamount_nodejs" style="color: inherit; text-decoration: inherit;">specified<wbr>Amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount</a></span>
     </dt>
     <dd>{{% md %}}A specified amount to use as the budget. currencyCode is
 optional. If specified, it must match the currency of the
@@ -2078,7 +2078,7 @@ use the `specified_amount` block.
 <a href="#specified_amount_python" style="color: inherit; text-decoration: inherit;">specified_<wbr>amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount</a></span>
     </dt>
     <dd>{{% md %}}A specified amount to use as the budget. currencyCode is
 optional. If specified, it must match the currency of the

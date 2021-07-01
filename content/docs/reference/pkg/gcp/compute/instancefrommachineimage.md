@@ -593,7 +593,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#confidentialinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimageconfidentialinstanceconfig">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancefrommachineimageconfidentialinstanceconfig">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
 to create.
@@ -639,7 +639,7 @@ to create.
 <a href="#guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimageguestaccelerator">[]Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Guest<wbr>Accelerator</a></span>
+        <span class="property-type"><a href="#instancefrommachineimageguestaccelerator">[]Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Guest<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -714,7 +714,7 @@ Changing this forces a new resource to be created.
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagenetworkinterface">[]Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagenetworkinterface">[]Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -723,7 +723,7 @@ Changing this forces a new resource to be created.
 <a href="#networkperformanceconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagenetworkperformanceconfig">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Performance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagenetworkperformanceconfig">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures network performance settings for the instance. If not specified, the instance will be created with its
 default network performance configuration.
@@ -743,7 +743,7 @@ self_link nor project are provided, the provider project is used.
 <a href="#reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagereservationaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -762,7 +762,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#scheduling_go" style="color: inherit; text-decoration: inherit;">Scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagescheduling">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Scheduling</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagescheduling">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -771,7 +771,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimageserviceaccount">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Service<wbr>Account</a></span>
+        <span class="property-type"><a href="#instancefrommachineimageserviceaccount">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -780,7 +780,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimageshieldedinstanceconfig">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancefrommachineimageshieldedinstanceconfig">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2232,7 +2232,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_attacheddisks_go" style="color: inherit; text-decoration: inherit;">Attached<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimageattacheddisk">[]Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Attached<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancefrommachineimageattacheddisk">[]Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Attached<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance
 {{% /md %}}</dd><dt class="property-optional"
@@ -2241,7 +2241,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_bootdisks_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagebootdisk">[]Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Boot<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagebootdisk">[]Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Boot<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2259,7 +2259,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_confidentialinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimageconfidentialinstanceconfig">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancefrommachineimageconfidentialinstanceconfig">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
 to create.
@@ -2323,7 +2323,7 @@ to create.
 <a href="#state_guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimageguestaccelerator">[]Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Guest<wbr>Accelerator</a></span>
+        <span class="property-type"><a href="#instancefrommachineimageguestaccelerator">[]Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Guest<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2425,7 +2425,7 @@ Changing this forces a new resource to be created.
 <a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagenetworkinterface">[]Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagenetworkinterface">[]Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2434,7 +2434,7 @@ Changing this forces a new resource to be created.
 <a href="#state_networkperformanceconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Performance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagenetworkperformanceconfig">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Performance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagenetworkperformanceconfig">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Performance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures network performance settings for the instance. If not specified, the instance will be created with its
 default network performance configuration.
@@ -2454,7 +2454,7 @@ self_link nor project are provided, the provider project is used.
 <a href="#state_reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagereservationaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2473,7 +2473,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_scheduling_go" style="color: inherit; text-decoration: inherit;">Scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagescheduling">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Scheduling</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagescheduling">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2482,7 +2482,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_scratchdisks_go" style="color: inherit; text-decoration: inherit;">Scratch<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagescratchdisk">[]Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Scratch<wbr>Disk</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagescratchdisk">[]Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Scratch<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2500,7 +2500,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimageserviceaccount">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Service<wbr>Account</a></span>
+        <span class="property-type"><a href="#instancefrommachineimageserviceaccount">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2509,7 +2509,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimageshieldedinstanceconfig">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancefrommachineimageshieldedinstanceconfig">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3489,7 +3489,7 @@ set, the provider zone is used.
 <a href="#initializeparams_csharp" style="color: inherit; text-decoration: inherit;">Initialize<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagebootdiskinitializeparams">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagebootdiskinitializeparams">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3625,7 +3625,7 @@ set, the provider zone is used.
 <a href="#initializeparams_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagebootdiskinitializeparams">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagebootdiskinitializeparams">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3693,7 +3693,7 @@ set, the provider zone is used.
 <a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagebootdiskinitializeparams">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagebootdiskinitializeparams">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4009,7 +4009,7 @@ set, the provider zone is used.
 <a href="#accessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagenetworkinterfaceaccessconfig">List&lt;Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagenetworkinterfaceaccessconfig">List&lt;Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface<wbr>Access<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4017,7 +4017,7 @@ set, the provider zone is used.
 <a href="#aliasipranges_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagenetworkinterfacealiasiprange">List&lt;Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagenetworkinterfacealiasiprange">List&lt;Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4149,7 +4149,7 @@ Changing this forces a new resource to be created.
 <a href="#accessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagenetworkinterfaceaccessconfig">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagenetworkinterfaceaccessconfig">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface<wbr>Access<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4157,7 +4157,7 @@ Changing this forces a new resource to be created.
 <a href="#aliasipranges_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagenetworkinterfacealiasiprange">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagenetworkinterfacealiasiprange">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4219,7 +4219,7 @@ Changing this forces a new resource to be created.
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagenetworkinterfaceaccessconfig">Sequence[Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagenetworkinterfaceaccessconfig">Sequence[Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface<wbr>Access<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4227,7 +4227,7 @@ Changing this forces a new resource to be created.
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagenetworkinterfacealiasiprange">Sequence[Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagenetworkinterfacealiasiprange">Sequence[Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4545,7 +4545,7 @@ Changing this forces a new resource to be created.
 <a href="#specificreservation_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagereservationaffinityspecificreservation">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinityspecificreservation">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4585,7 +4585,7 @@ Changing this forces a new resource to be created.
 <a href="#specificreservation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagereservationaffinityspecificreservation">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinityspecificreservation">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4605,7 +4605,7 @@ Changing this forces a new resource to be created.
 <a href="#specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimagereservationaffinityspecificreservation">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefrommachineimagereservationaffinityspecificreservation">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4717,7 +4717,7 @@ Changing this forces a new resource to be created.
 <a href="#nodeaffinities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimageschedulingnodeaffinity">List&lt;Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instancefrommachineimageschedulingnodeaffinity">List&lt;Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Scheduling<wbr>Node<wbr>Affinity&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4805,7 +4805,7 @@ Changing this forces a new resource to be created.
 <a href="#nodeaffinities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimageschedulingnodeaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instancefrommachineimageschedulingnodeaffinity">Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Scheduling<wbr>Node<wbr>Affinity[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4849,7 +4849,7 @@ Changing this forces a new resource to be created.
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefrommachineimageschedulingnodeaffinity">Sequence[Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefrommachineimageschedulingnodeaffinity">Sequence[Instance<wbr>From<wbr>Machine<wbr>Image<wbr>Scheduling<wbr>Node<wbr>Affinity]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

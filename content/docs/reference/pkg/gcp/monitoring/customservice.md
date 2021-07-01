@@ -358,7 +358,7 @@ service ID.
 <a href="#telemetry_go" style="color: inherit; text-decoration: inherit;">Telemetry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customservicetelemetry">Custom<wbr>Service<wbr>Telemetry</a></span>
+        <span class="property-type"><a href="#customservicetelemetry">Custom<wbr>Service<wbr>Telemetry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for how to query telemetry on a Service.
 Structure is documented below.
@@ -769,7 +769,7 @@ service ID.
 <a href="#state_telemetry_go" style="color: inherit; text-decoration: inherit;">Telemetry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customservicetelemetry">Custom<wbr>Service<wbr>Telemetry</a></span>
+        <span class="property-type"><a href="#customservicetelemetry">Custom<wbr>Service<wbr>Telemetry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for how to query telemetry on a Service.
 Structure is documented below.

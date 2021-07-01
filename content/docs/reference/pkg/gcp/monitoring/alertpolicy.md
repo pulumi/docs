@@ -462,7 +462,7 @@ Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">[]Alert<wbr>Policy<wbr>Condition</a></span>
+        <span class="property-type"><a href="#alertpolicycondition">[]Alert<wbr>Policy<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
@@ -488,7 +488,7 @@ policy.
 <a href="#documentation_go" style="color: inherit; text-decoration: inherit;">Documentation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
+        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Documentation that is included with notifications and incidents related
 to this policy. Best practice is for the documentation to include information
@@ -1185,7 +1185,7 @@ Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 <a href="#state_conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">[]Alert<wbr>Policy<wbr>Condition</a></span>
+        <span class="property-type"><a href="#alertpolicycondition">[]Alert<wbr>Policy<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
@@ -1198,7 +1198,7 @@ Structure is documented below.
 <a href="#state_creationrecords_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">[]Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">[]Alert<wbr>Policy<wbr>Creation<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -1221,7 +1221,7 @@ policy.
 <a href="#state_documentation_go" style="color: inherit; text-decoration: inherit;">Documentation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
+        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Documentation that is included with notifications and incidents related
 to this policy. Best practice is for the documentation to include information
@@ -1579,7 +1579,7 @@ policy.
 <a href="#conditionabsent_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Absent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent</a></span>
     </dt>
     <dd>{{% md %}}A condition that checks that a time series
 continues to receive new data points.
@@ -1590,7 +1590,7 @@ Structure is documented below.
 <a href="#conditionmonitoringquerylanguage_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Monitoring<wbr>Query<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language</a></span>
     </dt>
     <dd>{{% md %}}A Monitoring Query Language query that outputs a boolean stream
 Structure is documented below.
@@ -1600,7 +1600,7 @@ Structure is documented below.
 <a href="#conditionthreshold_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}A condition that compares a time series against a
 threshold.
@@ -1707,7 +1707,7 @@ policy.
 <a href="#conditionabsent_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Absent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent</a></span>
     </dt>
     <dd>{{% md %}}A condition that checks that a time series
 continues to receive new data points.
@@ -1718,7 +1718,7 @@ Structure is documented below.
 <a href="#conditionmonitoringquerylanguage_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Monitoring<wbr>Query<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language</a></span>
     </dt>
     <dd>{{% md %}}A Monitoring Query Language query that outputs a boolean stream
 Structure is documented below.
@@ -1728,7 +1728,7 @@ Structure is documented below.
 <a href="#conditionthreshold_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}A condition that compares a time series against a
 threshold.
@@ -1771,7 +1771,7 @@ policy.
 <a href="#condition_absent_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>absent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent</a></span>
     </dt>
     <dd>{{% md %}}A condition that checks that a time series
 continues to receive new data points.
@@ -1782,7 +1782,7 @@ Structure is documented below.
 <a href="#condition_monitoring_query_language_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>monitoring_<wbr>query_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language</a></span>
     </dt>
     <dd>{{% md %}}A Monitoring Query Language query that outputs a boolean stream
 Structure is documented below.
@@ -1792,7 +1792,7 @@ Structure is documented below.
 <a href="#condition_threshold_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}A condition that compares a time series against a
 threshold.
@@ -1847,7 +1847,7 @@ alerted on quickly.
 <a href="#aggregations_csharp" style="color: inherit; text-decoration: inherit;">Aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series as well as how to
@@ -1889,7 +1889,7 @@ in length.
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -2019,7 +2019,7 @@ alerted on quickly.
 <a href="#aggregations_nodejs" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series as well as how to
@@ -2061,7 +2061,7 @@ in length.
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -2105,7 +2105,7 @@ alerted on quickly.
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series as well as how to
@@ -2147,7 +2147,7 @@ in length.
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -2754,7 +2754,7 @@ alerted on quickly.
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -2860,7 +2860,7 @@ alerted on quickly.
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -2913,7 +2913,7 @@ alerted on quickly.
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -3082,7 +3082,7 @@ alerted on quickly.
 <a href="#aggregations_csharp" style="color: inherit; text-decoration: inherit;">Aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series as well as how to
@@ -3104,7 +3104,7 @@ Structure is documented below.
 <a href="#denominatoraggregations_csharp" style="color: inherit; text-decoration: inherit;">Denominator<wbr>Aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series selected by
@@ -3182,7 +3182,7 @@ series.
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -3404,7 +3404,7 @@ alerted on quickly.
 <a href="#aggregations_nodejs" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series as well as how to
@@ -3426,7 +3426,7 @@ Structure is documented below.
 <a href="#denominatoraggregations_nodejs" style="color: inherit; text-decoration: inherit;">denominator<wbr>Aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series selected by
@@ -3504,7 +3504,7 @@ series.
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -3565,7 +3565,7 @@ alerted on quickly.
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series as well as how to
@@ -3587,7 +3587,7 @@ Structure is documented below.
 <a href="#denominator_aggregations_python" style="color: inherit; text-decoration: inherit;">denominator_<wbr>aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series selected by
@@ -3665,7 +3665,7 @@ series.
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the

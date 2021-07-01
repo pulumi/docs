@@ -180,9 +180,6 @@ class MyStack : Stack
             {
                 Port = 80,
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
         var defaultRegionBackendService = new Gcp.Compute.RegionBackendService("defaultRegionBackendService", new Gcp.Compute.RegionBackendServiceArgs
         {
@@ -203,9 +200,6 @@ class MyStack : Stack
             },
             LoadBalancingScheme = "EXTERNAL",
             Protocol = "HTTP",
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
     }
 
@@ -233,7 +227,7 @@ func main() {
 			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
 				Port: pulumi.Int(80),
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -253,7 +247,7 @@ func main() {
 			},
 			LoadBalancingScheme: pulumi.String("EXTERNAL"),
 			Protocol:            pulumi.String("HTTP"),
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -276,8 +270,7 @@ default_region_health_check = gcp.compute.RegionHealthCheck("defaultRegionHealth
     region="us-central1",
     http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
         port=80,
-    ),
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    ))
 default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
     region="us-central1",
     health_checks=[default_region_health_check.id],
@@ -291,8 +284,7 @@ default_region_backend_service = gcp.compute.RegionBackendService("defaultRegion
         signed_url_cache_max_age_sec=7200,
     ),
     load_balancing_scheme="EXTERNAL",
-    protocol="HTTP",
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    protocol="HTTP")
 ```
 
 
@@ -311,8 +303,6 @@ const defaultRegionHealthCheck = new gcp.compute.RegionHealthCheck("defaultRegio
     httpHealthCheck: {
         port: 80,
     },
-}, {
-    provider: google_beta,
 });
 const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
     region: "us-central1",
@@ -328,8 +318,6 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
     },
     loadBalancingScheme: "EXTERNAL",
     protocol: "HTTP",
-}, {
-    provider: google_beta,
 });
 ```
 
@@ -1607,7 +1595,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicebackend">[]Region<wbr>Backend<wbr>Service<wbr>Backend</a></span>
+        <span class="property-type"><a href="#regionbackendservicebackend">[]Region<wbr>Backend<wbr>Service<wbr>Backend<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this RegionBackendService.
 Structure is documented below.
@@ -1617,7 +1605,7 @@ Structure is documented below.
 <a href="#cdnpolicy_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecdnpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy</a></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this BackendService.
 Structure is documented below.
@@ -1627,7 +1615,7 @@ Structure is documented below.
 <a href="#circuitbreakers_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Breakers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
+        <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
@@ -1649,7 +1637,7 @@ connections, but still work to finish started).
 <a href="#consistenthash_go" style="color: inherit; text-decoration: inherit;">Consistent<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
+        <span class="property-type"><a href="#regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
@@ -1683,7 +1671,7 @@ Provide this property when you create the resource.
 <a href="#failoverpolicy_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy</a></span>
+        <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy for failovers.
 Structure is documented below.
@@ -1750,7 +1738,7 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 <a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
 If logging is enabled, logs will be exported to Stackdriver.
@@ -1780,7 +1768,7 @@ This field can only be specified when the load balancing scheme is set to INTERN
 <a href="#outlierdetection_go" style="color: inherit; text-decoration: inherit;">Outlier<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection</a></span>
+        <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the `load_balancing_scheme` is set
@@ -3027,7 +3015,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#state_backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicebackend">[]Region<wbr>Backend<wbr>Service<wbr>Backend</a></span>
+        <span class="property-type"><a href="#regionbackendservicebackend">[]Region<wbr>Backend<wbr>Service<wbr>Backend<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this RegionBackendService.
 Structure is documented below.
@@ -3037,7 +3025,7 @@ Structure is documented below.
 <a href="#state_cdnpolicy_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecdnpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy</a></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this BackendService.
 Structure is documented below.
@@ -3047,7 +3035,7 @@ Structure is documented below.
 <a href="#state_circuitbreakers_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Breakers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
+        <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
@@ -3069,7 +3057,7 @@ connections, but still work to finish started).
 <a href="#state_consistenthash_go" style="color: inherit; text-decoration: inherit;">Consistent<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
+        <span class="property-type"><a href="#regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
@@ -3112,7 +3100,7 @@ Provide this property when you create the resource.
 <a href="#state_failoverpolicy_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy</a></span>
+        <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy for failovers.
 Structure is documented below.
@@ -3188,7 +3176,7 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 <a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
 If logging is enabled, logs will be exported to Stackdriver.
@@ -3218,7 +3206,7 @@ This field can only be specified when the load balancing scheme is set to INTERN
 <a href="#state_outlierdetection_go" style="color: inherit; text-decoration: inherit;">Outlier<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection</a></span>
+        <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the `load_balancing_scheme` is set
@@ -4582,7 +4570,7 @@ Cannot be set for INTERNAL backend services.
 <a href="#cachekeypolicy_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecdnpolicycachekeypolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicycachekeypolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
 Structure is documented below.
@@ -4640,7 +4628,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#negativecachingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecdnpolicynegativecachingpolicy">List&lt;Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicynegativecachingpolicy">List&lt;Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
 Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
@@ -4780,7 +4768,7 @@ responses will not be altered.
 <a href="#cachekeypolicy_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecdnpolicycachekeypolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicycachekeypolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
 Structure is documented below.
@@ -4838,7 +4826,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#negativecachingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecdnpolicynegativecachingpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicynegativecachingpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
 Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
@@ -4879,7 +4867,7 @@ responses will not be altered.
 <a href="#cache_key_policy_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecdnpolicycachekeypolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicycachekeypolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
 Structure is documented below.
@@ -4937,7 +4925,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#negative_caching_policies_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecdnpolicynegativecachingpolicy">Sequence[Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicynegativecachingpolicy">Sequence[Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
 Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
@@ -5328,7 +5316,7 @@ can be specified as values, and you cannot specify a status code more than once.
 <a href="#connecttimeout_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5458,7 +5446,7 @@ Defaults to 3.
 <a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5523,7 +5511,7 @@ Defaults to 3.
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5692,7 +5680,7 @@ less than one second are represented with a 0 `seconds` field and a positive
 <a href="#httpcookie_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookie">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookie">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie</a></span>
     </dt>
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
@@ -5774,7 +5762,7 @@ Defaults to 1024.
 <a href="#httpcookie_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookie">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookie">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie</a></span>
     </dt>
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
@@ -5815,7 +5803,7 @@ Defaults to 1024.
 <a href="#http_cookie_python" style="color: inherit; text-decoration: inherit;">http_<wbr>cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookie">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookie">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie</a></span>
     </dt>
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
@@ -5876,7 +5864,7 @@ Defaults to 1024.
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
 (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
@@ -5940,7 +5928,7 @@ Defaults to 1024.
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
 (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
@@ -5972,7 +5960,7 @@ Defaults to 1024.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
 (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
@@ -6386,7 +6374,7 @@ The default value is 1.0.
 <a href="#baseejectiontime_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Ejection<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceoutlierdetectionbaseejectiontime">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendserviceoutlierdetectionbaseejectiontime">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
@@ -6453,7 +6441,7 @@ disable ejection or to ramp it up slowly. Defaults to 100.
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
 ejections as well as hosts being returned to service. Defaults to 10 seconds.
@@ -6648,7 +6636,7 @@ runtime value should be 1900. Defaults to 1900.
 <a href="#baseejectiontime_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Ejection<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceoutlierdetectionbaseejectiontime">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendserviceoutlierdetectionbaseejectiontime">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
@@ -6715,7 +6703,7 @@ disable ejection or to ramp it up slowly. Defaults to 100.
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
 ejections as well as hosts being returned to service. Defaults to 10 seconds.
@@ -6779,7 +6767,7 @@ runtime value should be 1900. Defaults to 1900.
 <a href="#base_ejection_time_python" style="color: inherit; text-decoration: inherit;">base_<wbr>ejection_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceoutlierdetectionbaseejectiontime">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendserviceoutlierdetectionbaseejectiontime">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
@@ -6846,7 +6834,7 @@ disable ejection or to ramp it up slowly. Defaults to 100.
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
 ejections as well as hosts being returned to service. Defaults to 10 seconds.

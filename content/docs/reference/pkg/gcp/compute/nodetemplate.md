@@ -552,7 +552,7 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
 <a href="#nodetypeflexibility_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type<wbr>Flexibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
 use this node template will create nodes of a type that matches
@@ -585,7 +585,7 @@ If it is not provided, the provider region is used.
 <a href="#serverbinding_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
+        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines
 where the nodes should restart following a maintenance event.
@@ -1230,7 +1230,7 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
 <a href="#state_nodetypeflexibility_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type<wbr>Flexibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
 use this node template will create nodes of a type that matches
@@ -1272,7 +1272,7 @@ If it is not provided, the provider region is used.
 <a href="#state_serverbinding_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
+        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines
 where the nodes should restart following a maintenance event.

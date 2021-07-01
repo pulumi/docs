@@ -345,7 +345,7 @@ last character, which cannot be a dash.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the HTTPS health check request.
-The default value is 80.
+The default value is 443.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
@@ -456,7 +456,7 @@ last character, which cannot be a dash.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the HTTPS health check request.
-The default value is 80.
+The default value is 443.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
@@ -567,7 +567,7 @@ last character, which cannot be a dash.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the HTTPS health check request.
-The default value is 80.
+The default value is 443.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
@@ -678,7 +678,7 @@ last character, which cannot be a dash.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the HTTPS health check request.
-The default value is 80.
+The default value is 443.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
@@ -1062,7 +1062,7 @@ last character, which cannot be a dash.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the HTTPS health check request.
-The default value is 80.
+The default value is 443.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -1191,7 +1191,7 @@ last character, which cannot be a dash.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the HTTPS health check request.
-The default value is 80.
+The default value is 443.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -1320,7 +1320,7 @@ last character, which cannot be a dash.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the HTTPS health check request.
-The default value is 80.
+The default value is 443.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -1449,7 +1449,7 @@ last character, which cannot be a dash.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port number for the HTTPS health check request.
-The default value is 80.
+The default value is 443.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">

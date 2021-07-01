@@ -772,7 +772,7 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfig">Authority<wbr>Config</a></span>
+        <span class="property-type"><a href="#authorityconfig">Authority<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
@@ -782,7 +782,7 @@ Structure is documented below.
 <a href="#keyspec_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authoritykeyspec">Authority<wbr>Key<wbr>Spec</a></span>
+        <span class="property-type"><a href="#authoritykeyspec">Authority<wbr>Key<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
@@ -828,7 +828,7 @@ created.
 <a href="#issuingoptions_go" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options</a></span>
+        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
 Structure is documented below.
@@ -1803,7 +1803,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#state_accessurls_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityaccessurl">[]Authority<wbr>Access<wbr>Url</a></span>
+        <span class="property-type"><a href="#authorityaccessurl">[]Authority<wbr>Access<wbr>Url<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}URLs for accessing content published by this CA, such as the CA certificate and CRLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1821,7 +1821,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfig">Authority<wbr>Config</a></span>
+        <span class="property-type"><a href="#authorityconfig">Authority<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
@@ -1865,7 +1865,7 @@ created.
 <a href="#state_issuingoptions_go" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options</a></span>
+        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
 Structure is documented below.
@@ -1875,7 +1875,7 @@ Structure is documented below.
 <a href="#state_keyspec_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authoritykeyspec">Authority<wbr>Key<wbr>Spec</a></span>
+        <span class="property-type"><a href="#authoritykeyspec">Authority<wbr>Key<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
@@ -2484,7 +2484,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <a href="#reusableconfig_csharp" style="color: inherit; text-decoration: inherit;">Reusable<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigreusableconfig">Authority<wbr>Config<wbr>Reusable<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigreusableconfig">Authority<wbr>Config<wbr>Reusable<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -2496,7 +2496,7 @@ found by running `gcloud beta privateca reusable-configs list`.
 <a href="#subjectconfig_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfig">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfig">Authority<wbr>Config<wbr>Subject<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
@@ -2536,7 +2536,7 @@ Structure is documented below.
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigreusableconfig">Authority<wbr>Config<wbr>Reusable<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigreusableconfig">Authority<wbr>Config<wbr>Reusable<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -2548,7 +2548,7 @@ found by running `gcloud beta privateca reusable-configs list`.
 <a href="#subjectconfig_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfig">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfig">Authority<wbr>Config<wbr>Subject<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
@@ -2562,7 +2562,7 @@ Structure is documented below.
 <a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigreusableconfig">Authority<wbr>Config<wbr>Reusable<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigreusableconfig">Authority<wbr>Config<wbr>Reusable<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -2574,7 +2574,7 @@ found by running `gcloud beta privateca reusable-configs list`.
 <a href="#subject_config_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfig">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfig">Authority<wbr>Config<wbr>Subject<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
@@ -2665,7 +2665,7 @@ found by running `gcloud beta privateca reusable-configs list`.
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfigsubject">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfigsubject">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -2675,7 +2675,7 @@ Structure is documented below.
 <a href="#subjectaltname_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alt<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfigsubjectaltname">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfigsubjectaltname">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
@@ -2731,7 +2731,7 @@ Structure is documented below.
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfigsubject">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfigsubject">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -2741,7 +2741,7 @@ Structure is documented below.
 <a href="#subjectaltname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfigsubjectaltname">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfigsubjectaltname">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
@@ -2764,7 +2764,7 @@ Structure is documented below.
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfigsubject">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfigsubject">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -2774,7 +2774,7 @@ Structure is documented below.
 <a href="#subject_alt_name_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigsubjectconfigsubjectaltname">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorityconfigsubjectconfigsubjectaltname">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.

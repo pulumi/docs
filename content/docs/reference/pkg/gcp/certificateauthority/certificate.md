@@ -454,7 +454,7 @@ running `gcloud beta privateca locations list`.
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config</a></span>
+        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
@@ -1242,7 +1242,7 @@ this field is present.
 <a href="#state_certificatedescriptions_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Descriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescription">[]Certificate<wbr>Certificate<wbr>Description</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescription">[]Certificate<wbr>Certificate<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
@@ -1252,7 +1252,7 @@ this field is present.
 <a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config</a></span>
+        <span class="property-type"><a href="#certificateconfig">Certificate<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
@@ -1347,7 +1347,7 @@ If it is not provided, the provider project is used.
 <a href="#state_revocationdetails_go" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificaterevocationdetail">[]Certificate<wbr>Revocation<wbr>Detail</a></span>
+        <span class="property-type"><a href="#certificaterevocationdetail">[]Certificate<wbr>Revocation<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
@@ -1655,7 +1655,7 @@ this field is present.
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionpublickey">Certificate<wbr>Certificate<wbr>Description<wbr>Public<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionpublickey">Certificate<wbr>Certificate<wbr>Description<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
@@ -1673,7 +1673,7 @@ Structure is documented below.
 <a href="#authoritykeyid_csharp" style="color: inherit; text-decoration: inherit;">Authority<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,7 +1681,7 @@ Structure is documented below.
 <a href="#certfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1689,7 +1689,7 @@ Structure is documented below.
 <a href="#configvalues_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1705,7 +1705,7 @@ Structure is documented below.
 <a href="#subjectdescription_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1713,7 +1713,7 @@ Structure is documented below.
 <a href="#subjectkeyid_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1795,7 +1795,7 @@ Structure is documented below.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionpublickey">Certificate<wbr>Certificate<wbr>Description<wbr>Public<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionpublickey">Certificate<wbr>Certificate<wbr>Description<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
@@ -1813,7 +1813,7 @@ Structure is documented below.
 <a href="#authoritykeyid_nodejs" style="color: inherit; text-decoration: inherit;">authority<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1821,7 +1821,7 @@ Structure is documented below.
 <a href="#certfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1829,7 @@ Structure is documented below.
 <a href="#configvalues_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1845,7 +1845,7 @@ Structure is documented below.
 <a href="#subjectdescription_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1853,7 +1853,7 @@ Structure is documented below.
 <a href="#subjectkeyid_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1865,7 +1865,7 @@ Structure is documented below.
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionpublickey">Certificate<wbr>Certificate<wbr>Description<wbr>Public<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionpublickey">Certificate<wbr>Certificate<wbr>Description<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
@@ -1883,7 +1883,7 @@ Structure is documented below.
 <a href="#authority_key_id_python" style="color: inherit; text-decoration: inherit;">authority_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1891,7 +1891,7 @@ Structure is documented below.
 <a href="#cert_fingerprint_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1899,7 +1899,7 @@ Structure is documented below.
 <a href="#config_values_python" style="color: inherit; text-decoration: inherit;">config_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1915,7 +1915,7 @@ Structure is documented below.
 <a href="#subject_description_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1923,7 +1923,7 @@ Structure is documented below.
 <a href="#subject_key_id_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2037,7 +2037,7 @@ Structure is documented below.
 <a href="#keyusage_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2061,7 +2061,7 @@ Structure is documented below.
 <a href="#keyusage_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2073,7 +2073,7 @@ Structure is documented below.
 <a href="#key_usage_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2087,7 +2087,7 @@ Structure is documented below.
 <a href="#unknownextendedkeyusages_csharp" style="color: inherit; text-decoration: inherit;">Unknown<wbr>Extended<wbr>Key<wbr>Usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">List&lt;Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">List&lt;Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2095,7 +2095,7 @@ Structure is documented below.
 <a href="#basekeyusage_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2103,7 +2103,7 @@ Structure is documented below.
 <a href="#extendedkeyusage_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2143,7 +2143,7 @@ Structure is documented below.
 <a href="#unknownextendedkeyusages_nodejs" style="color: inherit; text-decoration: inherit;">unknown<wbr>Extended<wbr>Key<wbr>Usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2151,7 +2151,7 @@ Structure is documented below.
 <a href="#basekeyusage_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2159,7 +2159,7 @@ Structure is documented below.
 <a href="#extendedkeyusage_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Key<wbr>Usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2171,7 +2171,7 @@ Structure is documented below.
 <a href="#unknown_extended_key_usages_python" style="color: inherit; text-decoration: inherit;">unknown_<wbr>extended_<wbr>key_<wbr>usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">Sequence[Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">Sequence[Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2179,7 +2179,7 @@ Structure is documented below.
 <a href="#base_key_usage_python" style="color: inherit; text-decoration: inherit;">base_<wbr>key_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2187,7 +2187,7 @@ Structure is documented below.
 <a href="#extended_key_usage_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>key_<wbr>usage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2201,7 +2201,7 @@ Structure is documented below.
 <a href="#keyusageoptions_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Usage<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2225,7 +2225,7 @@ Structure is documented below.
 <a href="#keyusageoptions_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usage<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2237,7 +2237,7 @@ Structure is documented below.
 <a href="#key_usage_options_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usage_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2767,7 +2767,7 @@ Structure is documented below.
 <a href="#obectid_csharp" style="color: inherit; text-decoration: inherit;">Obect<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2791,7 +2791,7 @@ Structure is documented below.
 <a href="#obectid_nodejs" style="color: inherit; text-decoration: inherit;">obect<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2803,7 +2803,7 @@ Structure is documented below.
 <a href="#obect_id_python" style="color: inherit; text-decoration: inherit;">obect_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3005,7 +3005,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubject">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubject">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -3015,7 +3015,7 @@ Structure is documented below.
 <a href="#subjectaltname_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alt<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltname">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltname">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
@@ -3141,7 +3141,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubject">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubject">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -3151,7 +3151,7 @@ Structure is documented below.
 <a href="#subjectaltname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltname">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltname">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
@@ -3209,7 +3209,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubject">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubject">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -3219,7 +3219,7 @@ Structure is documented below.
 <a href="#subject_alt_name_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltname">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltname">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
@@ -3505,7 +3505,7 @@ Structure is documented below.
 <a href="#customsans_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">List&lt;Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">List&lt;Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3601,7 +3601,7 @@ Structure is documented below.
 <a href="#customsans_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3649,7 +3649,7 @@ Structure is documented below.
 <a href="#custom_sans_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">Sequence[Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">Sequence[Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3707,7 +3707,7 @@ Structure is documented below.
 <a href="#obectid_csharp" style="color: inherit; text-decoration: inherit;">Obect<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3763,7 +3763,7 @@ Structure is documented below.
 <a href="#obectid_nodejs" style="color: inherit; text-decoration: inherit;">obect<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3791,7 +3791,7 @@ Structure is documented below.
 <a href="#obect_id_python" style="color: inherit; text-decoration: inherit;">obect_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3913,7 +3913,7 @@ Structure is documented below.
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigpublickey">Certificate<wbr>Config<wbr>Public<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigpublickey">Certificate<wbr>Config<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
@@ -3923,7 +3923,7 @@ Structure is documented below.
 <a href="#reusableconfig_csharp" style="color: inherit; text-decoration: inherit;">Reusable<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigreusableconfig">Certificate<wbr>Config<wbr>Reusable<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigreusableconfig">Certificate<wbr>Config<wbr>Reusable<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -3933,7 +3933,7 @@ Structure is documented below.
 <a href="#subjectconfig_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfig">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfig">Certificate<wbr>Config<wbr>Subject<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
@@ -3981,7 +3981,7 @@ Structure is documented below.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigpublickey">Certificate<wbr>Config<wbr>Public<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigpublickey">Certificate<wbr>Config<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
@@ -3991,7 +3991,7 @@ Structure is documented below.
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigreusableconfig">Certificate<wbr>Config<wbr>Reusable<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigreusableconfig">Certificate<wbr>Config<wbr>Reusable<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -4001,7 +4001,7 @@ Structure is documented below.
 <a href="#subjectconfig_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfig">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfig">Certificate<wbr>Config<wbr>Subject<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
@@ -4015,7 +4015,7 @@ Structure is documented below.
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigpublickey">Certificate<wbr>Config<wbr>Public<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigpublickey">Certificate<wbr>Config<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
@@ -4025,7 +4025,7 @@ Structure is documented below.
 <a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigreusableconfig">Certificate<wbr>Config<wbr>Reusable<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigreusableconfig">Certificate<wbr>Config<wbr>Reusable<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
@@ -4035,7 +4035,7 @@ Structure is documented below.
 <a href="#subject_config_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfig">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfig">Certificate<wbr>Config<wbr>Subject<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
@@ -4212,7 +4212,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfigsubject">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfigsubject">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -4222,7 +4222,7 @@ Structure is documented below.
 <a href="#subjectaltname_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alt<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfigsubjectaltname">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfigsubjectaltname">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
@@ -4278,7 +4278,7 @@ Structure is documented below.
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfigsubject">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfigsubject">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -4288,7 +4288,7 @@ Structure is documented below.
 <a href="#subjectaltname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfigsubjectaltname">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfigsubjectaltname">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
@@ -4311,7 +4311,7 @@ Structure is documented below.
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfigsubject">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfigsubject">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject</a></span>
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
@@ -4321,7 +4321,7 @@ Structure is documented below.
 <a href="#subject_alt_name_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfigsubjectconfigsubjectaltname">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateconfigsubjectconfigsubjectaltname">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.

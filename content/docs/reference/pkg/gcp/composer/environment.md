@@ -690,7 +690,7 @@ If it is not provided, the provider project is used.
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config</a></span>
+        <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1107,7 +1107,7 @@ If it is not provided, the provider project is used.
 <a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config</a></span>
+        <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1308,7 +1308,7 @@ If it is not provided, the provider project is used.
 <a href="#databaseconfig_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1317,7 @@ If it is not provided, the provider project is used.
 <a href="#encryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The encryption options for the Cloud Composer environment and its dependencies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1334,7 +1334,7 @@ If it is not provided, the provider project is used.
 <a href="#nodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1353,7 @@ will be used to run this environment.
 <a href="#privateenvironmentconfig_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Environment<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1362,7 +1362,7 @@ will be used to run this environment.
 <a href="#softwareconfig_csharp" style="color: inherit; text-decoration: inherit;">Software<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1371,7 +1371,7 @@ will be used to run this environment.
 <a href="#webserverconfig_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1380,7 +1380,7 @@ will be used to run this environment.
 <a href="#webservernetworkaccesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
 {{% /md %}}</dd></dl>
@@ -1510,7 +1510,7 @@ will be used to run this environment.
 <a href="#databaseconfig_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1519,7 +1519,7 @@ will be used to run this environment.
 <a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The encryption options for the Cloud Composer environment and its dependencies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1536,7 +1536,7 @@ will be used to run this environment.
 <a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1555,7 +1555,7 @@ will be used to run this environment.
 <a href="#privateenvironmentconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Environment<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1564,7 +1564,7 @@ will be used to run this environment.
 <a href="#softwareconfig_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1573,7 +1573,7 @@ will be used to run this environment.
 <a href="#webserverconfig_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1582,7 +1582,7 @@ will be used to run this environment.
 <a href="#webservernetworkaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
 {{% /md %}}</dd></dl>
@@ -1611,7 +1611,7 @@ will be used to run this environment.
 <a href="#database_config_python" style="color: inherit; text-decoration: inherit;">database_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1620,7 +1620,7 @@ will be used to run this environment.
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigencryptionconfig">Environment<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The encryption options for the Cloud Composer environment and its dependencies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1637,7 +1637,7 @@ will be used to run this environment.
 <a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1656,7 +1656,7 @@ will be used to run this environment.
 <a href="#private_environment_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>environment_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1665,7 +1665,7 @@ will be used to run this environment.
 <a href="#software_config_python" style="color: inherit; text-decoration: inherit;">software_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1674,7 +1674,7 @@ will be used to run this environment.
 <a href="#web_server_config_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1683,7 +1683,7 @@ will be used to run this environment.
 <a href="#web_server_network_access_control_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>network_<wbr>access_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
 {{% /md %}}</dd></dl>
@@ -1848,7 +1848,7 @@ If unspecified, defaults to 100GB. Cannot be updated.
 <a href="#ipallocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration for controlling how IPs are allocated in the GKE cluster.
 Structure is documented below.
@@ -1866,6 +1866,14 @@ composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxpodspernode_csharp">
+<a href="#maxpodspernode_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods<wbr>Per<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1975,6 +1983,14 @@ Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maxpodspernode_go">
+<a href="#maxpodspernode_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Pods<wbr>Per<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
@@ -2064,7 +2080,7 @@ If unspecified, defaults to 100GB. Cannot be updated.
 <a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration for controlling how IPs are allocated in the GKE cluster.
 Structure is documented below.
@@ -2082,6 +2098,14 @@ composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxpodspernode_nodejs">
+<a href="#maxpodspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods<wbr>Per<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2172,7 +2196,7 @@ If unspecified, defaults to 100GB. Cannot be updated.
 <a href="#ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentconfignodeconfigipallocationpolicy">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration for controlling how IPs are allocated in the GKE cluster.
 Structure is documented below.
@@ -2190,6 +2214,14 @@ composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_pods_per_node_python">
+<a href="#max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods_<wbr>per_<wbr>node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -3152,7 +3184,7 @@ manually changed to a non-standard values.
 <a href="#allowedipranges_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrolallowediprange">List&lt;Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrolallowediprange">List&lt;Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range&gt;</a></span>
     </dt>
     <dd>{{% md %}}-
 A collection of allowed IP ranges with descriptions. Structure is documented below.
@@ -3180,7 +3212,7 @@ A collection of allowed IP ranges with descriptions. Structure is documented bel
 <a href="#allowedipranges_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrolallowediprange">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrolallowediprange">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}-
 A collection of allowed IP ranges with descriptions. Structure is documented below.
@@ -3194,7 +3226,7 @@ A collection of allowed IP ranges with descriptions. Structure is documented bel
 <a href="#allowed_ip_ranges_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrolallowediprange">Sequence[Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrolallowediprange">Sequence[Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}-
 A collection of allowed IP ranges with descriptions. Structure is documented below.

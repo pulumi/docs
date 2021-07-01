@@ -50,6 +50,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">cloud_asset_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">cloud_billing_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">cloud_build_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">cloud_build_worker_pool_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">cloud_functions_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">cloud_identity_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">cloud_iot_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -127,6 +128,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">tags_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tpu_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">user_project_override</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">vertex_ai_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">vpc_access_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">workflows_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -413,6 +415,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="cloudbuildcustomendpoint_csharp">
 <a href="#cloudbuildcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Build<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cloudbuildworkerpoolcustomendpoint_csharp">
+<a href="#cloudbuildworkerpoolcustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Build<wbr>Worker<wbr>Pool<wbr>Custom<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1035,6 +1045,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="vertexaicustomendpoint_csharp">
+<a href="#vertexaicustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Vertex<wbr>Ai<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vpcaccesscustomendpoint_csharp">
 <a href="#vpcaccesscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Access<wbr>Custom<wbr>Endpoint</a>
 </span>
@@ -1131,7 +1149,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#batching_go" style="color: inherit; text-decoration: inherit;">Batching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerbatching">Provider<wbr>Batching</a></span>
+        <span class="property-type"><a href="#providerbatching">Provider<wbr>Batching<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,6 +1235,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="cloudbuildcustomendpoint_go">
 <a href="#cloudbuildcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Build<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cloudbuildworkerpoolcustomendpoint_go">
+<a href="#cloudbuildworkerpoolcustomendpoint_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Build<wbr>Worker<wbr>Pool<wbr>Custom<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1839,6 +1865,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="vertexaicustomendpoint_go">
+<a href="#vertexaicustomendpoint_go" style="color: inherit; text-decoration: inherit;">Vertex<wbr>Ai<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vpcaccesscustomendpoint_go">
 <a href="#vpcaccesscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Access<wbr>Custom<wbr>Endpoint</a>
 </span>
@@ -2021,6 +2055,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="cloudbuildcustomendpoint_nodejs">
 <a href="#cloudbuildcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Build<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cloudbuildworkerpoolcustomendpoint_nodejs">
+<a href="#cloudbuildworkerpoolcustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Build<wbr>Worker<wbr>Pool<wbr>Custom<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2643,6 +2685,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="vertexaicustomendpoint_nodejs">
+<a href="#vertexaicustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">vertex<wbr>Ai<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vpcaccesscustomendpoint_nodejs">
 <a href="#vpcaccesscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Access<wbr>Custom<wbr>Endpoint</a>
 </span>
@@ -2825,6 +2875,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="cloud_build_custom_endpoint_python">
 <a href="#cloud_build_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>build_<wbr>custom_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cloud_build_worker_pool_custom_endpoint_python">
+<a href="#cloud_build_worker_pool_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>build_<wbr>worker_<wbr>pool_<wbr>custom_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3444,6 +3502,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vertex_ai_custom_endpoint_python">
+<a href="#vertex_ai_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">vertex_<wbr>ai_<wbr>custom_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

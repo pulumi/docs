@@ -546,7 +546,7 @@ You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVers
 <a href="#versiontemplate_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
+        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 Structure is documented below.
@@ -1096,7 +1096,7 @@ You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVers
 <a href="#state_versiontemplate_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
+        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 Structure is documented below.

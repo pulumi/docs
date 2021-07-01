@@ -619,7 +619,7 @@ If it is not provided, the provider project is used.
 <a href="#defaultadmissionrule_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Admission<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
+        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
 rule.
@@ -630,7 +630,7 @@ Structure is documented below.
 <a href="#admissionwhitelistpatterns_go" style="color: inherit; text-decoration: inherit;">Admission<wbr>Whitelist<wbr>Patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">[]Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern</a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">[]Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
@@ -642,7 +642,7 @@ Structure is documented below.
 <a href="#clusteradmissionrules_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admission<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">[]Policy<wbr>Cluster<wbr>Admission<wbr>Rule</a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">[]Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
 all container images used in a pod creation request must be attested
@@ -1089,7 +1089,7 @@ If it is not provided, the provider project is used.
 <a href="#state_admissionwhitelistpatterns_go" style="color: inherit; text-decoration: inherit;">Admission<wbr>Whitelist<wbr>Patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">[]Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern</a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">[]Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
@@ -1101,7 +1101,7 @@ Structure is documented below.
 <a href="#state_clusteradmissionrules_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admission<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">[]Policy<wbr>Cluster<wbr>Admission<wbr>Rule</a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">[]Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
 all container images used in a pod creation request must be attested
@@ -1114,7 +1114,7 @@ admission rule per cluster spec.
 <a href="#state_defaultadmissionrule_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Admission<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
+        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
 rule.

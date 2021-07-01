@@ -626,7 +626,7 @@ If it is not provided, the provider project is used.
 <a href="#attestationauthoritynote_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority<wbr>Note</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
 Structure is documented below.
@@ -982,7 +982,7 @@ If it is not provided, the provider project is used.
 <a href="#state_attestationauthoritynote_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority<wbr>Note</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
 Structure is documented below.
@@ -1155,7 +1155,7 @@ different naming pattern.
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">List&lt;Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">List&lt;Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}Public keys that verify attestations signed by this attestor. This
 field may be updated.
@@ -1261,7 +1261,7 @@ different naming pattern.
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}Public keys that verify attestations signed by this attestor. This
 field may be updated.
@@ -1314,7 +1314,7 @@ different naming pattern.
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">Sequence[Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">Sequence[Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}Public keys that verify attestations signed by this attestor. This
 field may be updated.
@@ -1376,7 +1376,7 @@ See the documentation on publicKey cases below for details.
 <a href="#pkixpublickey_csharp" style="color: inherit; text-decoration: inherit;">Pkix<wbr>Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A raw PKIX SubjectPublicKeyInfo format public key.
 NOTE: id may be explicitly provided by the caller when using this
@@ -1492,7 +1492,7 @@ See the documentation on publicKey cases below for details.
 <a href="#pkixpublickey_nodejs" style="color: inherit; text-decoration: inherit;">pkix<wbr>Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A raw PKIX SubjectPublicKeyInfo format public key.
 NOTE: id may be explicitly provided by the caller when using this
@@ -1550,7 +1550,7 @@ See the documentation on publicKey cases below for details.
 <a href="#pkix_public_key_python" style="color: inherit; text-decoration: inherit;">pkix_<wbr>public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A raw PKIX SubjectPublicKeyInfo format public key.
 NOTE: id may be explicitly provided by the caller when using this

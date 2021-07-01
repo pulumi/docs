@@ -489,7 +489,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerdestination">Trigger<wbr>Destination</a></span>
+        <span class="property-type"><a href="#triggerdestination">Trigger<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Destination specifies where the events should be sent to.
 {{% /md %}}</dd><dt class="property-required"
@@ -507,7 +507,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#matchingcriterias_go" style="color: inherit; text-decoration: inherit;">Matching<wbr>Criterias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggermatchingcriteria">[]Trigger<wbr>Matching<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#triggermatchingcriteria">[]Trigger<wbr>Matching<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -552,7 +552,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#transports_go" style="color: inherit; text-decoration: inherit;">Transports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertransport">[]Trigger<wbr>Transport</a></span>
+        <span class="property-type"><a href="#triggertransport">[]Trigger<wbr>Transport<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
 {{% /md %}}</dd></dl>
@@ -1112,7 +1112,7 @@ The following state arguments are supported:
 <a href="#state_destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerdestination">Trigger<wbr>Destination</a></span>
+        <span class="property-type"><a href="#triggerdestination">Trigger<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Destination specifies where the events should be sent to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1147,7 @@ The following state arguments are supported:
 <a href="#state_matchingcriterias_go" style="color: inherit; text-decoration: inherit;">Matching<wbr>Criterias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggermatchingcriteria">[]Trigger<wbr>Matching<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#triggermatchingcriteria">[]Trigger<wbr>Matching<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1183,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_transports_go" style="color: inherit; text-decoration: inherit;">Transports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertransport">[]Trigger<wbr>Transport</a></span>
+        <span class="property-type"><a href="#triggertransport">[]Trigger<wbr>Transport<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1415,7 +1415,7 @@ The following state arguments are supported:
 <a href="#cloudrunservice_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerdestinationcloudrunservice">Trigger<wbr>Destination<wbr>Cloud<wbr>Run<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerdestinationcloudrunservice">Trigger<wbr>Destination<wbr>Cloud<wbr>Run<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
 {{% /md %}}</dd></dl>
@@ -1441,7 +1441,7 @@ The following state arguments are supported:
 <a href="#cloudrunservice_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Run<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerdestinationcloudrunservice">Trigger<wbr>Destination<wbr>Cloud<wbr>Run<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerdestinationcloudrunservice">Trigger<wbr>Destination<wbr>Cloud<wbr>Run<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
 {{% /md %}}</dd></dl>
@@ -1454,7 +1454,7 @@ The following state arguments are supported:
 <a href="#cloud_run_service_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>run_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerdestinationcloudrunservice">Trigger<wbr>Destination<wbr>Cloud<wbr>Run<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerdestinationcloudrunservice">Trigger<wbr>Destination<wbr>Cloud<wbr>Run<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
 {{% /md %}}</dd></dl>
@@ -1685,7 +1685,7 @@ The following state arguments are supported:
 <a href="#pubsubs_csharp" style="color: inherit; text-decoration: inherit;">Pubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertransportpubsub">List&lt;Trigger<wbr>Transport<wbr>Pubsub<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#triggertransportpubsub">List&lt;Trigger<wbr>Transport<wbr>Pubsub&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
 {{% /md %}}</dd></dl>
@@ -1711,7 +1711,7 @@ The following state arguments are supported:
 <a href="#pubsubs_nodejs" style="color: inherit; text-decoration: inherit;">pubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertransportpubsub">Trigger<wbr>Transport<wbr>Pubsub<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#triggertransportpubsub">Trigger<wbr>Transport<wbr>Pubsub[]</a></span>
     </dt>
     <dd>{{% md %}}The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
 {{% /md %}}</dd></dl>
@@ -1724,7 +1724,7 @@ The following state arguments are supported:
 <a href="#pubsubs_python" style="color: inherit; text-decoration: inherit;">pubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertransportpubsub">Sequence[Trigger<wbr>Transport<wbr>Pubsub<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggertransportpubsub">Sequence[Trigger<wbr>Transport<wbr>Pubsub]</a></span>
     </dt>
     <dd>{{% md %}}The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
 {{% /md %}}</dd></dl>

@@ -668,7 +668,7 @@ is not provided, the provider project is used.
 <a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcor">[]Bucket<wbr>Cor</a></span>
+        <span class="property-type"><a href="#bucketcor">[]Bucket<wbr>Cor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -685,7 +685,7 @@ is not provided, the provider project is used.
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's encryption configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -714,7 +714,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#lifecyclerules_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">[]Bucket<wbr>Lifecycle<wbr>Rule</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">[]Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -732,7 +732,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging</a></span>
+        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -769,7 +769,7 @@ is not provided, the provider project is used.
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -796,7 +796,7 @@ is not provided, the provider project is used.
 <a href="#versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -805,7 +805,7 @@ is not provided, the provider project is used.
 <a href="#website_go" style="color: inherit; text-decoration: inherit;">Website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration if the bucket acts as a website. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -1593,7 +1593,7 @@ is not provided, the provider project is used.
 <a href="#state_cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcor">[]Bucket<wbr>Cor</a></span>
+        <span class="property-type"><a href="#bucketcor">[]Bucket<wbr>Cor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1610,7 +1610,7 @@ is not provided, the provider project is used.
 <a href="#state_encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's encryption configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1639,7 +1639,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#state_lifecyclerules_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">[]Bucket<wbr>Lifecycle<wbr>Rule</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">[]Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1657,7 +1657,7 @@ bucket that contains objects, the provider will fail that run.
 <a href="#state_logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging</a></span>
+        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1694,7 @@ is not provided, the provider project is used.
 <a href="#state_retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1739,7 +1739,7 @@ is not provided, the provider project is used.
 <a href="#state_versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1748,7 +1748,7 @@ is not provided, the provider project is used.
 <a href="#state_website_go" style="color: inherit; text-decoration: inherit;">Website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration if the bucket acts as a website. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2338,7 +2338,7 @@ is not provided, the provider project is used.
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2347,7 +2347,7 @@ is not provided, the provider project is used.
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulecondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerulecondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2382,7 +2382,7 @@ is not provided, the provider project is used.
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2391,7 +2391,7 @@ is not provided, the provider project is used.
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulecondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerulecondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2404,7 +2404,7 @@ is not provided, the provider project is used.
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2413,7 +2413,7 @@ is not provided, the provider project is used.
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulecondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerulecondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2529,7 +2529,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
+    <dd>{{% md %}}A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when an object is created before midnight of the specified date in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customtimebefore_csharp">
@@ -2538,7 +2538,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
+    <dd>{{% md %}}A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when the customTime metadata for the object is set to an earlier date than the date used in this lifecycle condition.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dayssincecustomtime_csharp">
@@ -2547,7 +2547,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Date in RFC 3339 (e.g. `2017-06-13`) when an object's Custom-Time metadata is earlier than the date specified in this condition.
+    <dd>{{% md %}}Days since the date set in the `customTime` metadata for the object. This condition is satisfied when the current date and time is at least the specified number of days after the `customTime`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dayssincenoncurrenttime_csharp">
@@ -2614,7 +2614,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
+    <dd>{{% md %}}A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when an object is created before midnight of the specified date in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customtimebefore_go">
@@ -2623,7 +2623,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
+    <dd>{{% md %}}A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when the customTime metadata for the object is set to an earlier date than the date used in this lifecycle condition.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dayssincecustomtime_go">
@@ -2632,7 +2632,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Date in RFC 3339 (e.g. `2017-06-13`) when an object's Custom-Time metadata is earlier than the date specified in this condition.
+    <dd>{{% md %}}Days since the date set in the `customTime` metadata for the object. This condition is satisfied when the current date and time is at least the specified number of days after the `customTime`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dayssincenoncurrenttime_go">
@@ -2699,7 +2699,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
+    <dd>{{% md %}}A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when an object is created before midnight of the specified date in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customtimebefore_nodejs">
@@ -2708,7 +2708,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
+    <dd>{{% md %}}A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when the customTime metadata for the object is set to an earlier date than the date used in this lifecycle condition.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dayssincecustomtime_nodejs">
@@ -2717,7 +2717,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Date in RFC 3339 (e.g. `2017-06-13`) when an object's Custom-Time metadata is earlier than the date specified in this condition.
+    <dd>{{% md %}}Days since the date set in the `customTime` metadata for the object. This condition is satisfied when the current date and time is at least the specified number of days after the `customTime`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dayssincenoncurrenttime_nodejs">
@@ -2784,7 +2784,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
+    <dd>{{% md %}}A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when an object is created before midnight of the specified date in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_time_before_python">
@@ -2793,7 +2793,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
+    <dd>{{% md %}}A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when the customTime metadata for the object is set to an earlier date than the date used in this lifecycle condition.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="days_since_custom_time_python">
@@ -2802,7 +2802,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Date in RFC 3339 (e.g. `2017-06-13`) when an object's Custom-Time metadata is earlier than the date specified in this condition.
+    <dd>{{% md %}}Days since the date set in the `customTime` metadata for the object. This condition is satisfied when the current date and time is at least the specified number of days after the `customTime`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="days_since_noncurrent_time_python">

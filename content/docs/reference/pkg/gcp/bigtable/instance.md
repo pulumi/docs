@@ -375,7 +375,7 @@ is not provided, the provider project is used.
 <a href="#clusters_go" style="color: inherit; text-decoration: inherit;">Clusters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecluster">[]Instance<wbr>Cluster</a></span>
+        <span class="property-type"><a href="#instancecluster">[]Instance<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
 See structure below.
@@ -858,7 +858,7 @@ is not provided, the provider project is used.
 <a href="#state_clusters_go" style="color: inherit; text-decoration: inherit;">Clusters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecluster">[]Instance<wbr>Cluster</a></span>
+        <span class="property-type"><a href="#instancecluster">[]Instance<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
 See structure below.
@@ -1096,6 +1096,15 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The ID of the Cloud Bigtable cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="kmskeyname_csharp">
+<a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="numnodes_csharp">
 <a href="#numnodes_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Nodes</a>
 </span>
@@ -1139,6 +1148,15 @@ Bigtable instances are noted on the [Cloud Bigtable locations page](https://clou
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Cloud Bigtable cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyname_go">
+<a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numnodes_go">
@@ -1186,6 +1204,15 @@ Bigtable instances are noted on the [Cloud Bigtable locations page](https://clou
     <dd>{{% md %}}The ID of the Cloud Bigtable cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="kmskeyname_nodejs">
+<a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="numnodes_nodejs">
 <a href="#numnodes_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Nodes</a>
 </span>
@@ -1229,6 +1256,15 @@ Bigtable instances are noted on the [Cloud Bigtable locations page](https://clou
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Cloud Bigtable cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_name_python">
+<a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="num_nodes_python">

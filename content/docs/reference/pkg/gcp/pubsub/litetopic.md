@@ -388,7 +388,7 @@ Structure is documented below.
 <a href="#partitionconfig_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#litetopicpartitionconfig">Lite<wbr>Topic<wbr>Partition<wbr>Config</a></span>
+        <span class="property-type"><a href="#litetopicpartitionconfig">Lite<wbr>Topic<wbr>Partition<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for this topic's partitions.
 Structure is documented below.
@@ -417,7 +417,7 @@ If it is not provided, the provider project is used.
 <a href="#retentionconfig_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#litetopicretentionconfig">Lite<wbr>Topic<wbr>Retention<wbr>Config</a></span>
+        <span class="property-type"><a href="#litetopicretentionconfig">Lite<wbr>Topic<wbr>Retention<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for a topic's message retention.
 Structure is documented below.
@@ -818,7 +818,7 @@ Structure is documented below.
 <a href="#state_partitionconfig_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#litetopicpartitionconfig">Lite<wbr>Topic<wbr>Partition<wbr>Config</a></span>
+        <span class="property-type"><a href="#litetopicpartitionconfig">Lite<wbr>Topic<wbr>Partition<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for this topic's partitions.
 Structure is documented below.
@@ -847,7 +847,7 @@ If it is not provided, the provider project is used.
 <a href="#state_retentionconfig_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#litetopicretentionconfig">Lite<wbr>Topic<wbr>Retention<wbr>Config</a></span>
+        <span class="property-type"><a href="#litetopicretentionconfig">Lite<wbr>Topic<wbr>Retention<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for a topic's message retention.
 Structure is documented below.
@@ -1012,7 +1012,7 @@ Structure is documented below.
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#litetopicpartitionconfigcapacity">Lite<wbr>Topic<wbr>Partition<wbr>Config<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#litetopicpartitionconfigcapacity">Lite<wbr>Topic<wbr>Partition<wbr>Config<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}The capacity configuration.
 Structure is documented below.
@@ -1058,7 +1058,7 @@ Structure is documented below.
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#litetopicpartitionconfigcapacity">Lite<wbr>Topic<wbr>Partition<wbr>Config<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#litetopicpartitionconfigcapacity">Lite<wbr>Topic<wbr>Partition<wbr>Config<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}The capacity configuration.
 Structure is documented below.
@@ -1081,7 +1081,7 @@ Structure is documented below.
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#litetopicpartitionconfigcapacity">Lite<wbr>Topic<wbr>Partition<wbr>Config<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#litetopicpartitionconfigcapacity">Lite<wbr>Topic<wbr>Partition<wbr>Config<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}The capacity configuration.
 Structure is documented below.

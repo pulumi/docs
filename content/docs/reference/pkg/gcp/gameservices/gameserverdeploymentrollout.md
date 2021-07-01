@@ -450,7 +450,7 @@ applied by default to all realms and clusters. For example,
 <a href="#gameserverconfigoverrides_go" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Config<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">[]Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override</a></span>
+        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">[]Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
@@ -873,7 +873,7 @@ applied by default to all realms and clusters. For example,
 <a href="#state_gameserverconfigoverrides_go" style="color: inherit; text-decoration: inherit;">Game<wbr>Server<wbr>Config<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">[]Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override</a></span>
+        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">[]Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
@@ -1044,7 +1044,7 @@ If it is not provided, the provider project is used.
 <a href="#realmsselector_csharp" style="color: inherit; text-decoration: inherit;">Realms<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selection by realms.
 Structure is documented below.
@@ -1090,7 +1090,7 @@ Structure is documented below.
 <a href="#realmsselector_nodejs" style="color: inherit; text-decoration: inherit;">realms<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selection by realms.
 Structure is documented below.
@@ -1113,7 +1113,7 @@ Structure is documented below.
 <a href="#realms_selector_python" style="color: inherit; text-decoration: inherit;">realms_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selection by realms.
 Structure is documented below.

@@ -484,7 +484,7 @@ mode, which can take one of the following options:
 <a href="#advertisedipranges_go" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerpeeradvertisediprange">[]Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range</a></span>
+        <span class="property-type"><a href="#routerpeeradvertisediprange">[]Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in
 custom mode. This field can only be populated if advertiseMode
@@ -1248,7 +1248,7 @@ mode, which can take one of the following options:
 <a href="#state_advertisedipranges_go" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerpeeradvertisediprange">[]Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range</a></span>
+        <span class="property-type"><a href="#routerpeeradvertisediprange">[]Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in
 custom mode. This field can only be populated if advertiseMode

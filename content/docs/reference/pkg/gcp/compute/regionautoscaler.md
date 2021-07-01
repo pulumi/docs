@@ -569,7 +569,7 @@ If it is not provided, the provider project is used.
 <a href="#autoscalingpolicy_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can
 define one or more of the policies for an autoscaler: cpuUtilization,
@@ -1111,7 +1111,7 @@ be a positive float value. If not defined, the default is 0.8.
 <a href="#state_autoscalingpolicy_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicy">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the autoscaling algorithm. You can
 define one or more of the policies for an autoscaler: cpuUtilization,
@@ -1415,7 +1415,7 @@ and time the startup process.
 <a href="#cpuutilization_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicycpuutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicycpuutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to
 scale based on the average CPU utilization of a managed instance
@@ -1427,7 +1427,7 @@ Structure is documented below.
 <a href="#loadbalancingutilization_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.
 Structure is documented below.
@@ -1437,7 +1437,7 @@ Structure is documented below.
 <a href="#metrics_csharp" style="color: inherit; text-decoration: inherit;">Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">List&lt;Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">List&lt;Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.
 Structure is documented below.
@@ -1458,7 +1458,7 @@ Possible values are `OFF`, `ONLY_UP`, and `ON`.
 <a href="#scaledowncontrol_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}Defines scale down controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
@@ -1469,7 +1469,7 @@ Structure is documented below.
 <a href="#scaleincontrol_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>In<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaleincontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaleincontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}Defines scale in controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
@@ -1480,7 +1480,7 @@ Structure is documented below.
 <a href="#scalingschedules_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">List&lt;Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">List&lt;Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and they can overlap.
 Structure is documented below.
@@ -1655,7 +1655,7 @@ and time the startup process.
 <a href="#cpuutilization_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicycpuutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicycpuutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to
 scale based on the average CPU utilization of a managed instance
@@ -1667,7 +1667,7 @@ Structure is documented below.
 <a href="#loadbalancingutilization_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.
 Structure is documented below.
@@ -1677,7 +1677,7 @@ Structure is documented below.
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.
 Structure is documented below.
@@ -1698,7 +1698,7 @@ Possible values are `OFF`, `ONLY_UP`, and `ON`.
 <a href="#scaledowncontrol_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}Defines scale down controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
@@ -1709,7 +1709,7 @@ Structure is documented below.
 <a href="#scaleincontrol_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>In<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaleincontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaleincontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}Defines scale in controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
@@ -1720,7 +1720,7 @@ Structure is documented below.
 <a href="#scalingschedules_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule[]</a></span>
     </dt>
     <dd>{{% md %}}Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and they can overlap.
 Structure is documented below.
@@ -1775,7 +1775,7 @@ and time the startup process.
 <a href="#cpu_utilization_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicycpuutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicycpuutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Defines the CPU utilization policy that allows the autoscaler to
 scale based on the average CPU utilization of a managed instance
@@ -1787,7 +1787,7 @@ Structure is documented below.
 <a href="#load_balancing_utilization_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a load balancer.
 Structure is documented below.
@@ -1797,7 +1797,7 @@ Structure is documented below.
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">Sequence[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric<wbr>Args]</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicymetric">Sequence[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric]</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters of autoscaling based on a custom metric.
 Structure is documented below.
@@ -1818,7 +1818,7 @@ Possible values are `OFF`, `ONLY_UP`, and `ON`.
 <a href="#scale_down_control_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}Defines scale down controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
@@ -1829,7 +1829,7 @@ Structure is documented below.
 <a href="#scale_in_control_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>in_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaleincontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaleincontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}Defines scale in controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
@@ -1840,7 +1840,7 @@ Structure is documented below.
 <a href="#scaling_schedules_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">Sequence[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">Sequence[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule]</a></span>
     </dt>
     <dd>{{% md %}}Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and they can overlap.
 Structure is documented below.
@@ -2394,7 +2394,7 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
 <a href="#maxscaleddownreplicas_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Scaled<wbr>Down<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2442,7 +2442,7 @@ to include directives regarding slower scale down, as described above.
 <a href="#maxscaleddownreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scaled<wbr>Down<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2466,7 +2466,7 @@ to include directives regarding slower scale down, as described above.
 <a href="#max_scaled_down_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>scaled_<wbr>down_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2590,7 +2590,7 @@ For example, specify 80 for 80%.
 <a href="#maxscaledinreplicas_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Scaled<wbr>In<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaleincontrolmaxscaledinreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Max<wbr>Scaled<wbr>In<wbr>Replicas<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaleincontrolmaxscaledinreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Max<wbr>Scaled<wbr>In<wbr>Replicas</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2638,7 +2638,7 @@ to include directives regarding slower scale down, as described above.
 <a href="#maxscaledinreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scaled<wbr>In<wbr>Replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaleincontrolmaxscaledinreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Max<wbr>Scaled<wbr>In<wbr>Replicas<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaleincontrolmaxscaledinreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Max<wbr>Scaled<wbr>In<wbr>Replicas</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2662,7 +2662,7 @@ to include directives regarding slower scale down, as described above.
 <a href="#max_scaled_in_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>scaled_<wbr>in_<wbr>replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaleincontrolmaxscaledinreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Max<wbr>Scaled<wbr>In<wbr>Replicas<wbr>Args</a></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscaleincontrolmaxscaledinreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Max<wbr>Scaled<wbr>In<wbr>Replicas</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.

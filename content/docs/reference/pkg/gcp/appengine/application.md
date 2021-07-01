@@ -398,7 +398,7 @@ by the provider, but will be rejected by the API.
 <a href="#featuresettings_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings</a></span>
+        <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
 {{% /md %}}</dd><dt class="property-optional"
@@ -407,7 +407,7 @@ by the provider, but will be rejected by the API.
 <a href="#iap_go" style="color: inherit; text-decoration: inherit;">Iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationiap">Application<wbr>Iap</a></span>
+        <span class="property-type"><a href="#applicationiap">Application<wbr>Iap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
 {{% /md %}}</dd><dt class="property-optional"
@@ -1225,7 +1225,7 @@ by the provider, but will be rejected by the API.
 <a href="#state_featuresettings_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings</a></span>
+        <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1243,7 +1243,7 @@ by the provider, but will be rejected by the API.
 <a href="#state_iap_go" style="color: inherit; text-decoration: inherit;">Iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationiap">Application<wbr>Iap</a></span>
+        <span class="property-type"><a href="#applicationiap">Application<wbr>Iap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
 {{% /md %}}</dd><dt class="property-optional"
@@ -1291,7 +1291,7 @@ you may get a "Permission denied" error.
 <a href="#state_urldispatchrules_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Dispatch<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationurldispatchrule">[]Application<wbr>Url<wbr>Dispatch<wbr>Rule</a></span>
+        <span class="property-type"><a href="#applicationurldispatchrule">[]Application<wbr>Url<wbr>Dispatch<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
 {{% /md %}}</dd></dl>

@@ -820,7 +820,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#state_attestations_go" style="color: inherit; text-decoration: inherit;">Attestations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyringimportjobattestation">[]Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Attestation</a></span>
+        <span class="property-type"><a href="#keyringimportjobattestation">[]Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Attestation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
 statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
@@ -889,7 +889,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#state_publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyringimportjobpublickey">[]Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key</a></span>
+        <span class="property-type"><a href="#keyringimportjobpublickey">[]Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
 {{% /md %}}</dd><dt class="property-optional"

@@ -561,7 +561,7 @@ Structure is documented below.
 <a href="#fleetconfigs_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigfleetconfig">[]Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config</a></span>
+        <span class="property-type"><a href="#gameserverconfigfleetconfig">[]Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one.
@@ -609,7 +609,7 @@ If it is not provided, the provider project is used.
 <a href="#scalingconfigs_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfig">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
@@ -1124,7 +1124,7 @@ Structure is documented below.
 <a href="#state_fleetconfigs_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigfleetconfig">[]Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config</a></span>
+        <span class="property-type"><a href="#gameserverconfigfleetconfig">[]Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one.
@@ -1172,7 +1172,7 @@ If it is not provided, the provider project is used.
 <a href="#state_scalingconfigs_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfig">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
@@ -1509,7 +1509,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The schedules to which this scaling config applies.
 Structure is documented below.
@@ -1519,7 +1519,7 @@ Structure is documented below.
 <a href="#selectors_csharp" style="color: inherit; text-decoration: inherit;">Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector&gt;</a></span>
     </dt>
     <dd>{{% md %}}Labels used to identify the clusters to which this scaling config
 applies. A cluster is subject to this scaling config if its labels match
@@ -1601,7 +1601,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule[]</a></span>
     </dt>
     <dd>{{% md %}}The schedules to which this scaling config applies.
 Structure is documented below.
@@ -1611,7 +1611,7 @@ Structure is documented below.
 <a href="#selectors_nodejs" style="color: inherit; text-decoration: inherit;">selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector[]</a></span>
     </dt>
     <dd>{{% md %}}Labels used to identify the clusters to which this scaling config
 applies. A cluster is subject to this scaling config if its labels match
@@ -1647,7 +1647,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">Sequence[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">Sequence[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule]</a></span>
     </dt>
     <dd>{{% md %}}The schedules to which this scaling config applies.
 Structure is documented below.
@@ -1657,7 +1657,7 @@ Structure is documented below.
 <a href="#selectors_python" style="color: inherit; text-decoration: inherit;">selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">Sequence[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">Sequence[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector]</a></span>
     </dt>
     <dd>{{% md %}}Labels used to identify the clusters to which this scaling config
 applies. A cluster is subject to this scaling config if its labels match

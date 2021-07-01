@@ -510,7 +510,7 @@ region is specified, it is taken from the provider configuration.
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayiammembercondition">Gateway<wbr>Iam<wbr>Member<wbr>Condition</a></span>
+        <span class="property-type"><a href="#gatewayiammembercondition">Gateway<wbr>Iam<wbr>Member<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -959,7 +959,7 @@ region is specified, it is taken from the provider configuration.
 <a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewayiammembercondition">Gateway<wbr>Iam<wbr>Member<wbr>Condition</a></span>
+        <span class="property-type"><a href="#gatewayiammembercondition">Gateway<wbr>Iam<wbr>Member<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

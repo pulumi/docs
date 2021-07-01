@@ -244,7 +244,7 @@ If it is not provided, the provider project is used.
 <a href="#authority_go" style="color: inherit; text-decoration: inherit;">Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#membershipauthority">Membership<wbr>Authority</a></span>
+        <span class="property-type"><a href="#membershipauthority">Membership<wbr>Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authority encodes how Google will recognize identities from this Membership.
 See the workload identity documentation for more details:
@@ -265,7 +265,7 @@ Structure is documented below.
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#membershipendpoint">Membership<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#membershipendpoint">Membership<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
 Structure is documented below.
@@ -719,7 +719,7 @@ If it is not provided, the provider project is used.
 <a href="#state_authority_go" style="color: inherit; text-decoration: inherit;">Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#membershipauthority">Membership<wbr>Authority</a></span>
+        <span class="property-type"><a href="#membershipauthority">Membership<wbr>Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authority encodes how Google will recognize identities from this Membership.
 See the workload identity documentation for more details:
@@ -740,7 +740,7 @@ Structure is documented below.
 <a href="#state_endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#membershipendpoint">Membership<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#membershipendpoint">Membership<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
 Structure is documented below.
@@ -996,7 +996,7 @@ If it is not provided, the provider project is used.
 <a href="#gkecluster_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#membershipendpointgkecluster">Membership<wbr>Endpoint<wbr>Gke<wbr>Cluster<wbr>Args</a></span>
+        <span class="property-type"><a href="#membershipendpointgkecluster">Membership<wbr>Endpoint<wbr>Gke<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
 Structure is documented below.
@@ -1024,7 +1024,7 @@ Structure is documented below.
 <a href="#gkecluster_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#membershipendpointgkecluster">Membership<wbr>Endpoint<wbr>Gke<wbr>Cluster<wbr>Args</a></span>
+        <span class="property-type"><a href="#membershipendpointgkecluster">Membership<wbr>Endpoint<wbr>Gke<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
 Structure is documented below.
@@ -1038,7 +1038,7 @@ Structure is documented below.
 <a href="#gke_cluster_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#membershipendpointgkecluster">Membership<wbr>Endpoint<wbr>Gke<wbr>Cluster<wbr>Args</a></span>
+        <span class="property-type"><a href="#membershipendpointgkecluster">Membership<wbr>Endpoint<wbr>Gke<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
 Structure is documented below.

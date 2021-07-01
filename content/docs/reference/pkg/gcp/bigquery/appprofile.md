@@ -608,7 +608,7 @@ If it is not provided, the provider project is used.
 <a href="#singleclusterrouting_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Cluster<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing</a></span>
+        <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a single-cluster routing policy.
 Structure is documented below.
@@ -1140,7 +1140,7 @@ If it is not provided, the provider project is used.
 <a href="#state_singleclusterrouting_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Cluster<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing</a></span>
+        <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a single-cluster routing policy.
 Structure is documented below.

@@ -416,7 +416,7 @@ If it is not provided, the provider project is used.
 <a href="#deliveryconfig_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#litesubscriptiondeliveryconfig">Lite<wbr>Subscription<wbr>Delivery<wbr>Config</a></span>
+        <span class="property-type"><a href="#litesubscriptiondeliveryconfig">Lite<wbr>Subscription<wbr>Delivery<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for this subscription's message delivery.
 Structure is documented below.
@@ -833,7 +833,7 @@ If it is not provided, the provider project is used.
 <a href="#state_deliveryconfig_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#litesubscriptiondeliveryconfig">Lite<wbr>Subscription<wbr>Delivery<wbr>Config</a></span>
+        <span class="property-type"><a href="#litesubscriptiondeliveryconfig">Lite<wbr>Subscription<wbr>Delivery<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for this subscription's message delivery.
 Structure is documented below.

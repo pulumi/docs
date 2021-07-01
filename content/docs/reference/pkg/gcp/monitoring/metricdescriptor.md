@@ -624,7 +624,7 @@ Possible values are `STRING`, `BOOL`, and `INT64`.
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdescriptorlabel">[]Metric<wbr>Descriptor<wbr>Label</a></span>
+        <span class="property-type"><a href="#metricdescriptorlabel">[]Metric<wbr>Descriptor<wbr>Label<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of labels that can be used to describe a specific instance of this metric type. In order to delete a label, the entire resource must be deleted, then created with the desired labels.
 Structure is documented below.
@@ -644,7 +644,7 @@ Possible values are `LAUNCH_STAGE_UNSPECIFIED`, `UNIMPLEMENTED`, `PRELAUNCH`, `E
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdescriptormetadata">Metric<wbr>Descriptor<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#metricdescriptormetadata">Metric<wbr>Descriptor<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata which can be used to guide usage of the metric.
 Structure is documented below.
@@ -1359,7 +1359,7 @@ Possible values are `STRING`, `BOOL`, and `INT64`.
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdescriptorlabel">[]Metric<wbr>Descriptor<wbr>Label</a></span>
+        <span class="property-type"><a href="#metricdescriptorlabel">[]Metric<wbr>Descriptor<wbr>Label<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of labels that can be used to describe a specific instance of this metric type. In order to delete a label, the entire resource must be deleted, then created with the desired labels.
 Structure is documented below.
@@ -1379,7 +1379,7 @@ Possible values are `LAUNCH_STAGE_UNSPECIFIED`, `UNIMPLEMENTED`, `PRELAUNCH`, `E
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdescriptormetadata">Metric<wbr>Descriptor<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#metricdescriptormetadata">Metric<wbr>Descriptor<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata which can be used to guide usage of the metric.
 Structure is documented below.

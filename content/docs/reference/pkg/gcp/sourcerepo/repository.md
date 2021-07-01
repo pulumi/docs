@@ -447,7 +447,7 @@ If it is not provided, the provider project is used.
 <a href="#pubsubconfigs_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositorypubsubconfig">[]Repository<wbr>Pubsub<wbr>Config</a></span>
+        <span class="property-type"><a href="#repositorypubsubconfig">[]Repository<wbr>Pubsub<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How this repository publishes a change in the repository through Cloud Pub/Sub.
 Keyed by the topic names.
@@ -862,7 +862,7 @@ If it is not provided, the provider project is used.
 <a href="#state_pubsubconfigs_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositorypubsubconfig">[]Repository<wbr>Pubsub<wbr>Config</a></span>
+        <span class="property-type"><a href="#repositorypubsubconfig">[]Repository<wbr>Pubsub<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}How this repository publishes a change in the repository through Cloud Pub/Sub.
 Keyed by the topic names.

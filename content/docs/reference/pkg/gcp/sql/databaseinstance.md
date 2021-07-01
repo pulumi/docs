@@ -25,7 +25,7 @@ To upgrade your First-generation instance, update your config that the instance 
   the above documentation:
 * `region`
 * `database_version` (if applicable)
-* `tier`\
+* `tier`
   Remove any fields that are not applicable to Second-generation instances:
 * `settings.crash_safe_replication`
 * `settings.replication_type`
@@ -548,9 +548,7 @@ The DatabaseInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
-resource creation, the provider will attempt to clone another instance as indicated in the context. The
-configuration is detailed below.
+    <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseversion_csharp">
@@ -600,9 +598,9 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the instance that will act as
-the master in the replication setup. Note, this requires the master to have
-`binary_log_enabled` set, as well as existing backups.
+    <dd>{{% md %}}The name of the existing instance that will
+act as the master in the replication setup. Note, this requires the master to
+have `binary_log_enabled` set, as well as existing backups.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -654,6 +652,7 @@ configuration is detailed below. Valid only for MySQL instances.
         <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The context needed to restore the database to a backup run. This field will
+<<<<<<< HEAD
 cause the provider to trigger the database to restore from the backup run indicated. The configuration is detailed below.
 **NOTE:** Restoring from a backup is an imperative action and not recommended via the provider. Adding or modifying this
 block during resource creation/update will trigger the restore action after the resource is created/updated.
@@ -686,11 +685,9 @@ configuration is detailed below. Required if `clone` is not set.
 <a href="#clone_go" style="color: inherit; text-decoration: inherit;">Clone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone</a></span>
+        <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
-resource creation, the provider will attempt to clone another instance as indicated in the context. The
-configuration is detailed below.
+    <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseversion_go">
@@ -740,9 +737,9 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the instance that will act as
-the master in the replication setup. Note, this requires the master to have
-`binary_log_enabled` set, as well as existing backups.
+    <dd>{{% md %}}The name of the existing instance that will
+act as the master in the replication setup. Note, this requires the master to
+have `binary_log_enabled` set, as well as existing backups.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -781,7 +778,7 @@ make sure you understand this.
 <a href="#replicaconfiguration_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below. Valid only for MySQL instances.
@@ -791,9 +788,10 @@ configuration is detailed below. Valid only for MySQL instances.
 <a href="#restorebackupcontext_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Backup<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</a></span>
+        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The context needed to restore the database to a backup run. This field will
+<<<<<<< HEAD
 cause the provider to trigger the database to restore from the backup run indicated. The configuration is detailed below.
 **NOTE:** Restoring from a backup is an imperative action and not recommended via the provider. Adding or modifying this
 block during resource creation/update will trigger the restore action after the resource is created/updated.
@@ -812,7 +810,7 @@ block during resource creation/update will trigger the restore action after the 
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettings">Database<wbr>Instance<wbr>Settings</a></span>
+        <span class="property-type"><a href="#databaseinstancesettings">Database<wbr>Instance<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below. Required if `clone` is not set.
@@ -828,9 +826,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
-resource creation, the provider will attempt to clone another instance as indicated in the context. The
-configuration is detailed below.
+    <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseversion_nodejs">
@@ -880,9 +876,9 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the instance that will act as
-the master in the replication setup. Note, this requires the master to have
-`binary_log_enabled` set, as well as existing backups.
+    <dd>{{% md %}}The name of the existing instance that will
+act as the master in the replication setup. Note, this requires the master to
+have `binary_log_enabled` set, as well as existing backups.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -934,6 +930,7 @@ configuration is detailed below. Valid only for MySQL instances.
         <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The context needed to restore the database to a backup run. This field will
+<<<<<<< HEAD
 cause the provider to trigger the database to restore from the backup run indicated. The configuration is detailed below.
 **NOTE:** Restoring from a backup is an imperative action and not recommended via the provider. Adding or modifying this
 block during resource creation/update will trigger the restore action after the resource is created/updated.
@@ -968,9 +965,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
-resource creation, the provider will attempt to clone another instance as indicated in the context. The
-configuration is detailed below.
+    <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_version_python">
@@ -1020,9 +1015,9 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the instance that will act as
-the master in the replication setup. Note, this requires the master to have
-`binary_log_enabled` set, as well as existing backups.
+    <dd>{{% md %}}The name of the existing instance that will
+act as the master in the replication setup. Note, this requires the master to
+have `binary_log_enabled` set, as well as existing backups.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1074,6 +1069,7 @@ configuration is detailed below. Valid only for MySQL instances.
         <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The context needed to restore the database to a backup run. This field will
+<<<<<<< HEAD
 cause the provider to trigger the database to restore from the backup run indicated. The configuration is detailed below.
 **NOTE:** Restoring from a backup is an imperative action and not recommended via the provider. Adding or modifying this
 block during resource creation/update will trigger the restore action after the resource is created/updated.
@@ -1596,9 +1592,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
-resource creation, the provider will attempt to clone another instance as indicated in the context. The
-configuration is detailed below.
+    <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionname_csharp">
@@ -1675,9 +1669,9 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the instance that will act as
-the master in the replication setup. Note, this requires the master to have
-`binary_log_enabled` set, as well as existing backups.
+    <dd>{{% md %}}The name of the existing instance that will
+act as the master in the replication setup. Note, this requires the master to
+have `binary_log_enabled` set, as well as existing backups.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1747,6 +1741,7 @@ configuration is detailed below. Valid only for MySQL instances.
         <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The context needed to restore the database to a backup run. This field will
+<<<<<<< HEAD
 cause the provider to trigger the database to restore from the backup run indicated. The configuration is detailed below.
 **NOTE:** Restoring from a backup is an imperative action and not recommended via the provider. Adding or modifying this
 block during resource creation/update will trigger the restore action after the resource is created/updated.
@@ -1806,11 +1801,9 @@ configuration is detailed below. Required if `clone` is not set.
 <a href="#state_clone_go" style="color: inherit; text-decoration: inherit;">Clone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone</a></span>
+        <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
-resource creation, the provider will attempt to clone another instance as indicated in the context. The
-configuration is detailed below.
+    <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionname_go">
@@ -1877,7 +1870,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
 <a href="#state_ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstanceipaddress">[]Database<wbr>Instance<wbr>Ip<wbr>Address</a></span>
+        <span class="property-type"><a href="#databaseinstanceipaddress">[]Database<wbr>Instance<wbr>Ip<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1887,9 +1880,9 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the instance that will act as
-the master in the replication setup. Note, this requires the master to have
-`binary_log_enabled` set, as well as existing backups.
+    <dd>{{% md %}}The name of the existing instance that will
+act as the master in the replication setup. Note, this requires the master to
+have `binary_log_enabled` set, as well as existing backups.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1946,7 +1939,7 @@ make sure you understand this.
 <a href="#state_replicaconfiguration_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below. Valid only for MySQL instances.
@@ -1956,9 +1949,10 @@ configuration is detailed below. Valid only for MySQL instances.
 <a href="#state_restorebackupcontext_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Backup<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</a></span>
+        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The context needed to restore the database to a backup run. This field will
+<<<<<<< HEAD
 cause the provider to trigger the database to restore from the backup run indicated. The configuration is detailed below.
 **NOTE:** Restoring from a backup is an imperative action and not recommended via the provider. Adding or modifying this
 block during resource creation/update will trigger the restore action after the resource is created/updated.
@@ -1986,7 +1980,7 @@ block during resource creation/update will trigger the restore action after the 
 <a href="#state_servercacerts_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Certs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstanceservercacert">[]Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert</a></span>
+        <span class="property-type"><a href="#databaseinstanceservercacert">[]Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2004,7 +1998,7 @@ instance.
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettings">Database<wbr>Instance<wbr>Settings</a></span>
+        <span class="property-type"><a href="#databaseinstancesettings">Database<wbr>Instance<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below. Required if `clone` is not set.
@@ -2020,9 +2014,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
-resource creation, the provider will attempt to clone another instance as indicated in the context. The
-configuration is detailed below.
+    <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionname_nodejs">
@@ -2099,9 +2091,9 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the instance that will act as
-the master in the replication setup. Note, this requires the master to have
-`binary_log_enabled` set, as well as existing backups.
+    <dd>{{% md %}}The name of the existing instance that will
+act as the master in the replication setup. Note, this requires the master to
+have `binary_log_enabled` set, as well as existing backups.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -2171,6 +2163,7 @@ configuration is detailed below. Valid only for MySQL instances.
         <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The context needed to restore the database to a backup run. This field will
+<<<<<<< HEAD
 cause the provider to trigger the database to restore from the backup run indicated. The configuration is detailed below.
 **NOTE:** Restoring from a backup is an imperative action and not recommended via the provider. Adding or modifying this
 block during resource creation/update will trigger the restore action after the resource is created/updated.
@@ -2232,9 +2225,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The context needed to create this instance as a clone of another instance. When this field is set during
-resource creation, the provider will attempt to clone another instance as indicated in the context. The
-configuration is detailed below.
+    <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_name_python">
@@ -2311,9 +2302,9 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the instance that will act as
-the master in the replication setup. Note, this requires the master to have
-`binary_log_enabled` set, as well as existing backups.
+    <dd>{{% md %}}The name of the existing instance that will
+act as the master in the replication setup. Note, this requires the master to
+have `binary_log_enabled` set, as well as existing backups.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -2383,6 +2374,7 @@ configuration is detailed below. Valid only for MySQL instances.
         <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The context needed to restore the database to a backup run. This field will
+<<<<<<< HEAD
 cause the provider to trigger the database to restore from the backup run indicated. The configuration is detailed below.
 **NOTE:** Restoring from a backup is an imperative action and not recommended via the provider. Adding or modifying this
 block during resource creation/update will trigger the restore action after the resource is created/updated.
@@ -3468,7 +3460,7 @@ instances, ensure that `settings.backup_configuration.enabled` and
 <a href="#backupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -3489,7 +3481,7 @@ when crash-safe replication flags are enabled.
 <a href="#databaseflags_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">List&lt;Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">List&lt;Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3532,7 +3524,7 @@ when crash-safe replication flags are enabled.
 <a href="#insightsconfig_csharp" style="color: inherit; text-decoration: inherit;">Insights<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsinsightsconfig">Database<wbr>Instance<wbr>Settings<wbr>Insights<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsinsightsconfig">Database<wbr>Instance<wbr>Settings<wbr>Insights<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3540,7 +3532,7 @@ when crash-safe replication flags are enabled.
 <a href="#ipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3548,7 +3540,7 @@ when crash-safe replication flags are enabled.
 <a href="#locationpreference_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3556,7 +3548,7 @@ when crash-safe replication flags are enabled.
 <a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3834,7 +3826,7 @@ instances, ensure that `settings.backup_configuration.enabled` and
 <a href="#backupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -3855,7 +3847,7 @@ when crash-safe replication flags are enabled.
 <a href="#databaseflags_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3898,7 +3890,7 @@ when crash-safe replication flags are enabled.
 <a href="#insightsconfig_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsinsightsconfig">Database<wbr>Instance<wbr>Settings<wbr>Insights<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsinsightsconfig">Database<wbr>Instance<wbr>Settings<wbr>Insights<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3906,7 +3898,7 @@ when crash-safe replication flags are enabled.
 <a href="#ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3914,7 +3906,7 @@ when crash-safe replication flags are enabled.
 <a href="#locationpreference_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3922,7 +3914,7 @@ when crash-safe replication flags are enabled.
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4017,7 +4009,7 @@ instances, ensure that `settings.backup_configuration.enabled` and
 <a href="#backup_configuration_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -4038,7 +4030,7 @@ when crash-safe replication flags are enabled.
 <a href="#database_flags_python" style="color: inherit; text-decoration: inherit;">database_<wbr>flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">Sequence[Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">Sequence[Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4081,7 +4073,7 @@ when crash-safe replication flags are enabled.
 <a href="#insights_config_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsinsightsconfig">Database<wbr>Instance<wbr>Settings<wbr>Insights<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsinsightsconfig">Database<wbr>Instance<wbr>Settings<wbr>Insights<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4089,7 +4081,7 @@ when crash-safe replication flags are enabled.
 <a href="#ip_configuration_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4097,7 +4089,7 @@ when crash-safe replication flags are enabled.
 <a href="#location_preference_python" style="color: inherit; text-decoration: inherit;">location_<wbr>preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4105,7 +4097,7 @@ when crash-safe replication flags are enabled.
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4157,7 +4149,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
 <a href="#backupretentionsettings_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsbackupconfigurationbackupretentionsettings">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsbackupconfigurationbackupretentionsettings">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Backup retention settings. The configuration is detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4297,7 +4289,7 @@ configuration starts.
 <a href="#backupretentionsettings_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsbackupconfigurationbackupretentionsettings">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsbackupconfigurationbackupretentionsettings">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Backup retention settings. The configuration is detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4367,7 +4359,7 @@ configuration starts.
 <a href="#backup_retention_settings_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsbackupconfigurationbackupretentionsettings">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsbackupconfigurationbackupretentionsettings">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Backup<wbr>Retention<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Backup retention settings. The configuration is detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4793,7 +4785,7 @@ the whitelist to become active.
 <a href="#authorizednetworks_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">List&lt;Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">List&lt;Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4883,7 +4875,7 @@ This setting can be updated, but it cannot be removed after it is set.
 <a href="#authorizednetworks_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4928,7 +4920,7 @@ This setting can be updated, but it cannot be removed after it is set.
 <a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">Sequence[Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">Sequence[Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

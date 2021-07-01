@@ -264,7 +264,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featurespec">Feature<wbr>Spec</a></span>
+        <span class="property-type"><a href="#featurespec">Feature<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
 {{% /md %}}</dd></dl>
@@ -784,7 +784,7 @@ The following state arguments are supported:
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featurespec">Feature<wbr>Spec</a></span>
+        <span class="property-type"><a href="#featurespec">Feature<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
 {{% /md %}}</dd><dt class="property-optional"
@@ -962,7 +962,7 @@ The following state arguments are supported:
 <a href="#multiclusteringress_csharp" style="color: inherit; text-decoration: inherit;">Multiclusteringress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featurespecmulticlusteringress">Feature<wbr>Spec<wbr>Multiclusteringress<wbr>Args</a></span>
+        <span class="property-type"><a href="#featurespecmulticlusteringress">Feature<wbr>Spec<wbr>Multiclusteringress</a></span>
     </dt>
     <dd>{{% md %}}Multicluster Ingress-specific spec.
 The `multiclusteringress` block supports:
@@ -990,7 +990,7 @@ The `multiclusteringress` block supports:
 <a href="#multiclusteringress_nodejs" style="color: inherit; text-decoration: inherit;">multiclusteringress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featurespecmulticlusteringress">Feature<wbr>Spec<wbr>Multiclusteringress<wbr>Args</a></span>
+        <span class="property-type"><a href="#featurespecmulticlusteringress">Feature<wbr>Spec<wbr>Multiclusteringress</a></span>
     </dt>
     <dd>{{% md %}}Multicluster Ingress-specific spec.
 The `multiclusteringress` block supports:
@@ -1004,7 +1004,7 @@ The `multiclusteringress` block supports:
 <a href="#multiclusteringress_python" style="color: inherit; text-decoration: inherit;">multiclusteringress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featurespecmulticlusteringress">Feature<wbr>Spec<wbr>Multiclusteringress<wbr>Args</a></span>
+        <span class="property-type"><a href="#featurespecmulticlusteringress">Feature<wbr>Spec<wbr>Multiclusteringress</a></span>
     </dt>
     <dd>{{% md %}}Multicluster Ingress-specific spec.
 The `multiclusteringress` block supports:

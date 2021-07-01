@@ -780,7 +780,7 @@ Structure is documented below.
 <a href="#groupplacementpolicy_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
@@ -790,7 +790,7 @@ Structure is documented below.
 <a href="#instanceschedulepolicy_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy</a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for scheduling instance operations.
 Structure is documented below.
@@ -834,7 +834,7 @@ If it is not provided, the provider project is used.
 <a href="#snapshotschedulepolicy_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy for creating snapshots of persistent disks.
 Structure is documented below.
@@ -1321,7 +1321,7 @@ Structure is documented below.
 <a href="#state_groupplacementpolicy_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
@@ -1331,7 +1331,7 @@ Structure is documented below.
 <a href="#state_instanceschedulepolicy_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy</a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicy">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource policy for scheduling instance operations.
 Structure is documented below.
@@ -1384,7 +1384,7 @@ If it is not provided, the provider project is used.
 <a href="#state_snapshotschedulepolicy_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy for creating snapshots of persistent disks.
 Structure is documented below.
@@ -1755,7 +1755,7 @@ from the tz database: http://en.wikipedia.org/wiki/Tz_database.
 <a href="#vmstartschedule_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Start<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstartschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstartschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for starting instances.
 Structure is documented below.
@@ -1765,7 +1765,7 @@ Structure is documented below.
 <a href="#vmstopschedule_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Stop<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstopschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstopschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for stopping instances.
 Structure is documented below.
@@ -1859,7 +1859,7 @@ from the tz database: http://en.wikipedia.org/wiki/Tz_database.
 <a href="#vmstartschedule_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Start<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstartschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstartschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for starting instances.
 Structure is documented below.
@@ -1869,7 +1869,7 @@ Structure is documented below.
 <a href="#vmstopschedule_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Stop<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstopschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstopschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for stopping instances.
 Structure is documented below.
@@ -1911,7 +1911,7 @@ from the tz database: http://en.wikipedia.org/wiki/Tz_database.
 <a href="#vm_start_schedule_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>start_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstartschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstartschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Start<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for starting instances.
 Structure is documented below.
@@ -1921,7 +1921,7 @@ Structure is documented below.
 <a href="#vm_stop_schedule_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>stop_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstopschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicyinstanceschedulepolicyvmstopschedule">Resource<wbr>Policy<wbr>Instance<wbr>Schedule<wbr>Policy<wbr>Vm<wbr>Stop<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Specifies the schedule for stopping instances.
 Structure is documented below.
@@ -2045,7 +2045,7 @@ Structure is documented below.
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2054,7 +2054,7 @@ Structure is documented below.
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
 Structure is documented below.
@@ -2064,7 +2064,7 @@ Structure is documented below.
 <a href="#snapshotproperties_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
 Structure is documented below.
@@ -2111,7 +2111,7 @@ Structure is documented below.
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2120,7 +2120,7 @@ Structure is documented below.
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
 Structure is documented below.
@@ -2130,7 +2130,7 @@ Structure is documented below.
 <a href="#snapshotproperties_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
 Structure is documented below.
@@ -2144,7 +2144,7 @@ Structure is documented below.
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Specifies the frequency for the operation, using the unix-cron format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2153,7 +2153,7 @@ Structure is documented below.
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
 Structure is documented below.
@@ -2163,7 +2163,7 @@ Structure is documented below.
 <a href="#snapshot_properties_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
 Structure is documented below.
@@ -2281,7 +2281,7 @@ Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
 <a href="#dailyschedule_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The policy will execute every nth day at the specified time.
 Structure is documented below.
@@ -2291,7 +2291,7 @@ Structure is documented below.
 <a href="#hourlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
 Structure is documented below.
@@ -2301,7 +2301,7 @@ Structure is documented below.
 <a href="#weeklyschedule_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
 Structure is documented below.
@@ -2349,7 +2349,7 @@ Structure is documented below.
 <a href="#dailyschedule_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The policy will execute every nth day at the specified time.
 Structure is documented below.
@@ -2359,7 +2359,7 @@ Structure is documented below.
 <a href="#hourlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
 Structure is documented below.
@@ -2369,7 +2369,7 @@ Structure is documented below.
 <a href="#weeklyschedule_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
 Structure is documented below.
@@ -2383,7 +2383,7 @@ Structure is documented below.
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The policy will execute every nth day at the specified time.
 Structure is documented below.
@@ -2393,7 +2393,7 @@ Structure is documented below.
 <a href="#hourly_schedule_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
 Structure is documented below.
@@ -2403,7 +2403,7 @@ Structure is documented below.
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
 Structure is documented below.
@@ -2599,7 +2599,7 @@ Structure is documented below.
 <a href="#dayofweeks_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">List&lt;Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">List&lt;Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week&gt;</a></span>
     </dt>
     <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
 Structure is documented below.
@@ -2627,7 +2627,7 @@ Structure is documented below.
 <a href="#dayofweeks_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week[]</a></span>
     </dt>
     <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
 Structure is documented below.
@@ -2641,7 +2641,7 @@ Structure is documented below.
 <a href="#day_of_weeks_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>weeks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">Sequence[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">Sequence[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week]</a></span>
     </dt>
     <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
 Structure is documented below.

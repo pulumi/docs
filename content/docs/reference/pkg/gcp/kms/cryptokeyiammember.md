@@ -763,7 +763,7 @@ the provider's project setting will be used as a fallback.
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyiammembercondition">Crypto<wbr>Key<wbr>IAMMember<wbr>Condition</a></span>
+        <span class="property-type"><a href="#cryptokeyiammembercondition">Crypto<wbr>Key<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
@@ -1139,7 +1139,7 @@ the provider's project setting will be used as a fallback.
 <a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyiammembercondition">Crypto<wbr>Key<wbr>IAMMember<wbr>Condition</a></span>
+        <span class="property-type"><a href="#cryptokeyiammembercondition">Crypto<wbr>Key<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.

@@ -519,7 +519,7 @@ Format: accessPolicies/{policy_id}
 <a href="#accesslevels_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevel">[]Access<wbr>Levels<wbr>Access<wbr>Level</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevel">[]Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The desired Access Levels that should replace all existing Access Levels in the Access Policy.
 Structure is documented below.
@@ -787,7 +787,7 @@ Format: accessPolicies/{policy_id}
 <a href="#state_accesslevels_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Levels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevel">[]Access<wbr>Levels<wbr>Access<wbr>Level</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevel">[]Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The desired Access Levels that should replace all existing Access Levels in the Access Policy.
 Structure is documented below.
@@ -890,7 +890,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 <a href="#basic_csharp" style="color: inherit; text-decoration: inherit;">Basic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelbasic">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelbasic">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic</a></span>
     </dt>
     <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
 Structure is documented below.
@@ -900,7 +900,7 @@ Structure is documented below.
 <a href="#custom_csharp" style="color: inherit; text-decoration: inherit;">Custom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelcustom">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Custom<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelcustom">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Custom</a></span>
     </dt>
     <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
 See CEL spec at: https://github.com/google/cel-spec.
@@ -998,7 +998,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 <a href="#basic_nodejs" style="color: inherit; text-decoration: inherit;">basic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelbasic">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelbasic">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic</a></span>
     </dt>
     <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
 Structure is documented below.
@@ -1008,7 +1008,7 @@ Structure is documented below.
 <a href="#custom_nodejs" style="color: inherit; text-decoration: inherit;">custom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelcustom">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Custom<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelcustom">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Custom</a></span>
     </dt>
     <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
 See CEL spec at: https://github.com/google/cel-spec.
@@ -1052,7 +1052,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 <a href="#basic_python" style="color: inherit; text-decoration: inherit;">basic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelbasic">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelbasic">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic</a></span>
     </dt>
     <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
 Structure is documented below.
@@ -1062,7 +1062,7 @@ Structure is documented below.
 <a href="#custom_python" style="color: inherit; text-decoration: inherit;">custom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelcustom">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Custom<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelcustom">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Custom</a></span>
     </dt>
     <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
 See CEL spec at: https://github.com/google/cel-spec.
@@ -1088,7 +1088,7 @@ Structure is documented below.
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelbasiccondition">List&lt;Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelbasiccondition">List&lt;Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.
 Structure is documented below.
@@ -1146,7 +1146,7 @@ Possible values are `AND` and `OR`.
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelbasiccondition">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelbasiccondition">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.
 Structure is documented below.
@@ -1175,7 +1175,7 @@ Possible values are `AND` and `OR`.
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelbasiccondition">Sequence[Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelbasiccondition">Sequence[Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.
 Structure is documented below.
@@ -1206,7 +1206,7 @@ Possible values are `AND` and `OR`.
 <a href="#devicepolicy_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelbasicconditiondevicepolicy">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelbasicconditiondevicepolicy">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
@@ -1374,7 +1374,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 <a href="#devicepolicy_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelbasicconditiondevicepolicy">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelbasicconditiondevicepolicy">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
@@ -1458,7 +1458,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 <a href="#device_policy_python" style="color: inherit; text-decoration: inherit;">device_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelbasicconditiondevicepolicy">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelbasicconditiondevicepolicy">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
@@ -1566,7 +1566,7 @@ Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UN
 <a href="#osconstraints_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelbasicconditiondevicepolicyosconstraint">List&lt;Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelbasicconditiondevicepolicyosconstraint">List&lt;Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed OS versions.
 An empty list allows all types and all versions.
@@ -1696,7 +1696,7 @@ Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UN
 <a href="#osconstraints_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelbasicconditiondevicepolicyosconstraint">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelbasicconditiondevicepolicyosconstraint">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed OS versions.
 An empty list allows all types and all versions.
@@ -1761,7 +1761,7 @@ Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UN
 <a href="#os_constraints_python" style="color: inherit; text-decoration: inherit;">os_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelbasicconditiondevicepolicyosconstraint">Sequence[Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelbasicconditiondevicepolicyosconstraint">Sequence[Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint]</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed OS versions.
 An empty list allows all types and all versions.
@@ -1908,7 +1908,7 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
 <a href="#expr_csharp" style="color: inherit; text-decoration: inherit;">Expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelcustomexpr">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Custom<wbr>Expr<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelcustomexpr">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Custom<wbr>Expr</a></span>
     </dt>
     <dd>{{% md %}}Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
 This page details the objects and attributes that are used to the build the CEL expressions for
@@ -1940,7 +1940,7 @@ Structure is documented below.
 <a href="#expr_nodejs" style="color: inherit; text-decoration: inherit;">expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelcustomexpr">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Custom<wbr>Expr<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelcustomexpr">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Custom<wbr>Expr</a></span>
     </dt>
     <dd>{{% md %}}Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
 This page details the objects and attributes that are used to the build the CEL expressions for
@@ -1956,7 +1956,7 @@ Structure is documented below.
 <a href="#expr_python" style="color: inherit; text-decoration: inherit;">expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelsaccesslevelcustomexpr">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Custom<wbr>Expr<wbr>Args</a></span>
+        <span class="property-type"><a href="#accesslevelsaccesslevelcustomexpr">Access<wbr>Levels<wbr>Access<wbr>Level<wbr>Custom<wbr>Expr</a></span>
     </dt>
     <dd>{{% md %}}Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
 This page details the objects and attributes that are used to the build the CEL expressions for

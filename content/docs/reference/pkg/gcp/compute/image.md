@@ -597,7 +597,7 @@ RFC1035.
 <a href="#guestosfeatures_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Os<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageguestosfeature">[]Image<wbr>Guest<wbr>Os<wbr>Feature</a></span>
+        <span class="property-type"><a href="#imageguestosfeature">[]Image<wbr>Guest<wbr>Os<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system.
 Applicable only for bootable images.
@@ -651,7 +651,7 @@ If it is not provided, the provider project is used.
 <a href="#rawdisk_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
+        <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the raw disk image.
 Structure is documented below.
@@ -1551,7 +1551,7 @@ RFC1035.
 <a href="#state_guestosfeatures_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Os<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageguestosfeature">[]Image<wbr>Guest<wbr>Os<wbr>Feature</a></span>
+        <span class="property-type"><a href="#imageguestosfeature">[]Image<wbr>Guest<wbr>Os<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of features to enable on the guest operating system.
 Applicable only for bootable images.
@@ -1614,7 +1614,7 @@ If it is not provided, the provider project is used.
 <a href="#state_rawdisk_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk</a></span>
+        <span class="property-type"><a href="#imagerawdisk">Image<wbr>Raw<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the raw disk image.
 Structure is documented below.

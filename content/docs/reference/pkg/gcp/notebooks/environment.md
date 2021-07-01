@@ -372,7 +372,7 @@ Structure is documented below.
 <a href="#containerimage_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentcontainerimage">Environment<wbr>Container<wbr>Image</a></span>
+        <span class="property-type"><a href="#environmentcontainerimage">Environment<wbr>Container<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
@@ -430,7 +430,7 @@ Format: projects/{project_id}
 <a href="#vmimage_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvmimage">Environment<wbr>Vm<wbr>Image</a></span>
+        <span class="property-type"><a href="#environmentvmimage">Environment<wbr>Vm<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
@@ -921,7 +921,7 @@ Structure is documented below.
 <a href="#state_containerimage_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentcontainerimage">Environment<wbr>Container<wbr>Image</a></span>
+        <span class="property-type"><a href="#environmentcontainerimage">Environment<wbr>Container<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
@@ -997,7 +997,7 @@ Format: projects/{project_id}
 <a href="#state_vmimage_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvmimage">Environment<wbr>Vm<wbr>Image</a></span>
+        <span class="property-type"><a href="#environmentvmimage">Environment<wbr>Vm<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.

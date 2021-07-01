@@ -440,7 +440,7 @@ The NamespaceIamBinding resource accepts the following [input]({{< relref "/docs
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespaceiambindingcondition">Namespace<wbr>Iam<wbr>Binding<wbr>Condition</a></span>
+        <span class="property-type"><a href="#namespaceiambindingcondition">Namespace<wbr>Iam<wbr>Binding<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -811,7 +811,7 @@ The following state arguments are supported:
 <a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespaceiambindingcondition">Namespace<wbr>Iam<wbr>Binding<wbr>Condition</a></span>
+        <span class="property-type"><a href="#namespaceiambindingcondition">Namespace<wbr>Iam<wbr>Binding<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

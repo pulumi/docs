@@ -1179,7 +1179,7 @@ Structure is documented below.
 <a href="#inspectconfig_go" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
@@ -1581,7 +1581,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
 <a href="#state_inspectconfig_go" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
@@ -1749,7 +1749,7 @@ Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
 <a href="#custominfotypes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
 Structure is documented below.
@@ -1778,7 +1778,7 @@ Structure is documented below.
 <a href="#infotypes_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiginfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiginfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type&gt;</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -1788,7 +1788,7 @@ Structure is documented below.
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimits">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimits">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.
 Structure is documented below.
@@ -1809,7 +1809,7 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
 <a href="#rulesets_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigruleset">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigruleset">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
 other rules are executed in the order they are specified for each info type.
@@ -1919,7 +1919,7 @@ Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
 <a href="#custominfotypes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
 Structure is documented below.
@@ -1948,7 +1948,7 @@ Structure is documented below.
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiginfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiginfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -1958,7 +1958,7 @@ Structure is documented below.
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimits">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimits">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.
 Structure is documented below.
@@ -1979,7 +1979,7 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
 <a href="#rulesets_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigruleset">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigruleset">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
 other rules are executed in the order they are specified for each info type.
@@ -2004,7 +2004,7 @@ Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
 <a href="#custom_info_types_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
 Structure is documented below.
@@ -2033,7 +2033,7 @@ Structure is documented below.
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiginfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiginfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -2043,7 +2043,7 @@ Structure is documented below.
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimits">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimits">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.
 Structure is documented below.
@@ -2064,7 +2064,7 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
 <a href="#rule_sets_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigruleset">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigruleset">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
 other rules are executed in the order they are specified for each info type.
@@ -2081,7 +2081,7 @@ Structure is documented below.
 <a href="#infotype_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
 infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
@@ -2094,7 +2094,7 @@ Structure is documented below.
 <a href="#dictionary_csharp" style="color: inherit; text-decoration: inherit;">Dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -2126,7 +2126,7 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
 <a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
@@ -2136,7 +2136,7 @@ Structure is documented below.
 <a href="#storedtype_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
 Structure is documented below.
@@ -2219,7 +2219,7 @@ Structure is documented below.
 <a href="#infotype_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
 infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
@@ -2232,7 +2232,7 @@ Structure is documented below.
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -2264,7 +2264,7 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
@@ -2274,7 +2274,7 @@ Structure is documented below.
 <a href="#storedtype_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
 Structure is documented below.
@@ -2288,7 +2288,7 @@ Structure is documented below.
 <a href="#info_type_python" style="color: inherit; text-decoration: inherit;">info_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
 infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
@@ -2301,7 +2301,7 @@ Structure is documented below.
 <a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -2333,7 +2333,7 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
@@ -2343,7 +2343,7 @@ Structure is documented below.
 <a href="#stored_type_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
 Structure is documented below.
@@ -2359,7 +2359,7 @@ Structure is documented below.
 <a href="#cloudstoragepath_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
@@ -2369,7 +2369,7 @@ Structure is documented below.
 <a href="#wordlist_csharp" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
@@ -2407,7 +2407,7 @@ Structure is documented below.
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
@@ -2417,7 +2417,7 @@ Structure is documented below.
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
@@ -2431,7 +2431,7 @@ Structure is documented below.
 <a href="#cloud_storage_path_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
@@ -2441,7 +2441,7 @@ Structure is documented below.
 <a href="#word_list_python" style="color: inherit; text-decoration: inherit;">word_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
@@ -2855,7 +2855,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
 <a href="#maxfindingsperinfotypes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.
 Structure is documented below.
@@ -2919,7 +2919,7 @@ Structure is documented below.
 <a href="#maxfindingsperinfotypes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings<wbr>Per<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.
 Structure is documented below.
@@ -2951,7 +2951,7 @@ Structure is documented below.
 <a href="#max_findings_per_info_types_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.
 Structure is documented below.
@@ -2967,7 +2967,7 @@ Structure is documented below.
 <a href="#infotype_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
 infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
@@ -3019,7 +3019,7 @@ Structure is documented below.
 <a href="#infotype_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
 infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
@@ -3045,7 +3045,7 @@ Structure is documented below.
 <a href="#info_type_python" style="color: inherit; text-decoration: inherit;">info_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
 infoTypes and that infoType is specified in `info_types` field. Specifying the latter adds findings to the
@@ -3131,7 +3131,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
 <a href="#infotypes_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetinfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetinfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type&gt;</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -3141,7 +3141,7 @@ Structure is documented below.
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrule">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrule">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.
 Structure is documented below.
@@ -3179,7 +3179,7 @@ Structure is documented below.
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -3189,7 +3189,7 @@ Structure is documented below.
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.
 Structure is documented below.
@@ -3203,7 +3203,7 @@ Structure is documented below.
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetinfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetinfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -3213,7 +3213,7 @@ Structure is documented below.
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrule">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrule">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.
 Structure is documented below.
@@ -3287,7 +3287,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
 <a href="#exclusionrule_csharp" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
 Structure is documented below.
@@ -3297,7 +3297,7 @@ Structure is documented below.
 <a href="#hotwordrule_csharp" style="color: inherit; text-decoration: inherit;">Hotword<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.
 Structure is documented below.
@@ -3335,7 +3335,7 @@ Structure is documented below.
 <a href="#exclusionrule_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
 Structure is documented below.
@@ -3345,7 +3345,7 @@ Structure is documented below.
 <a href="#hotwordrule_nodejs" style="color: inherit; text-decoration: inherit;">hotword<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.
 Structure is documented below.
@@ -3359,7 +3359,7 @@ Structure is documented below.
 <a href="#exclusion_rule_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
 Structure is documented below.
@@ -3369,7 +3369,7 @@ Structure is documented below.
 <a href="#hotword_rule_python" style="color: inherit; text-decoration: inherit;">hotword_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.
 Structure is documented below.
@@ -3395,7 +3395,7 @@ Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, a
 <a href="#dictionary_csharp" style="color: inherit; text-decoration: inherit;">Dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -3405,7 +3405,7 @@ Structure is documented below.
 <a href="#excludeinfotypes_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypes">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypes">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
@@ -3415,7 +3415,7 @@ Structure is documented below.
 <a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
@@ -3483,7 +3483,7 @@ Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, a
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -3493,7 +3493,7 @@ Structure is documented below.
 <a href="#excludeinfotypes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypes">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypes">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
@@ -3503,7 +3503,7 @@ Structure is documented below.
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
@@ -3527,7 +3527,7 @@ Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, a
 <a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
@@ -3537,7 +3537,7 @@ Structure is documented below.
 <a href="#exclude_info_types_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypes">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypes">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
@@ -3547,7 +3547,7 @@ Structure is documented below.
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
@@ -3563,7 +3563,7 @@ Structure is documented below.
 <a href="#cloudstoragepath_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
@@ -3573,7 +3573,7 @@ Structure is documented below.
 <a href="#wordlist_csharp" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
@@ -3611,7 +3611,7 @@ Structure is documented below.
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
@@ -3621,7 +3621,7 @@ Structure is documented below.
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
@@ -3635,7 +3635,7 @@ Structure is documented below.
 <a href="#cloud_storage_path_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
@@ -3645,7 +3645,7 @@ Structure is documented below.
 <a href="#word_list_python" style="color: inherit; text-decoration: inherit;">word_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
@@ -3773,7 +3773,7 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 <a href="#infotypes_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type&gt;</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -3801,7 +3801,7 @@ Structure is documented below.
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -3815,7 +3815,7 @@ Structure is documented below.
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
@@ -3983,7 +3983,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 <a href="#hotwordregex_csharp" style="color: inherit; text-decoration: inherit;">Hotword<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulehotwordregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Hotword<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulehotwordregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Hotword<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.
 Structure is documented below.
@@ -3993,7 +3993,7 @@ Structure is documented below.
 <a href="#likelihoodadjustment_csharp" style="color: inherit; text-decoration: inherit;">Likelihood<wbr>Adjustment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulelikelihoodadjustment">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Likelihood<wbr>Adjustment<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulelikelihoodadjustment">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Likelihood<wbr>Adjustment</a></span>
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.
 Structure is documented below.
@@ -4003,7 +4003,7 @@ Structure is documented below.
 <a href="#proximity_csharp" style="color: inherit; text-decoration: inherit;">Proximity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordruleproximity">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Proximity<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordruleproximity">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Proximity</a></span>
     </dt>
     <dd>{{% md %}}Proximity of the finding within which the entire hotword must reside. The total length of the window cannot
 exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be
@@ -4059,7 +4059,7 @@ Structure is documented below.
 <a href="#hotwordregex_nodejs" style="color: inherit; text-decoration: inherit;">hotword<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulehotwordregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Hotword<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulehotwordregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Hotword<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.
 Structure is documented below.
@@ -4069,7 +4069,7 @@ Structure is documented below.
 <a href="#likelihoodadjustment_nodejs" style="color: inherit; text-decoration: inherit;">likelihood<wbr>Adjustment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulelikelihoodadjustment">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Likelihood<wbr>Adjustment<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulelikelihoodadjustment">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Likelihood<wbr>Adjustment</a></span>
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.
 Structure is documented below.
@@ -4079,7 +4079,7 @@ Structure is documented below.
 <a href="#proximity_nodejs" style="color: inherit; text-decoration: inherit;">proximity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordruleproximity">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Proximity<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordruleproximity">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Proximity</a></span>
     </dt>
     <dd>{{% md %}}Proximity of the finding within which the entire hotword must reside. The total length of the window cannot
 exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be
@@ -4097,7 +4097,7 @@ Structure is documented below.
 <a href="#hotword_regex_python" style="color: inherit; text-decoration: inherit;">hotword_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulehotwordregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Hotword<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulehotwordregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Hotword<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.
 Structure is documented below.
@@ -4107,7 +4107,7 @@ Structure is documented below.
 <a href="#likelihood_adjustment_python" style="color: inherit; text-decoration: inherit;">likelihood_<wbr>adjustment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulelikelihoodadjustment">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Likelihood<wbr>Adjustment<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulelikelihoodadjustment">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Likelihood<wbr>Adjustment</a></span>
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.
 Structure is documented below.
@@ -4117,7 +4117,7 @@ Structure is documented below.
 <a href="#proximity_python" style="color: inherit; text-decoration: inherit;">proximity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordruleproximity">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Proximity<wbr>Args</a></span>
+        <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordruleproximity">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Proximity</a></span>
     </dt>
     <dd>{{% md %}}Proximity of the finding within which the entire hotword must reside. The total length of the window cannot
 exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be

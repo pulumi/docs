@@ -483,7 +483,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicecredential">[]Device<wbr>Credential</a></span>
+        <span class="property-type"><a href="#devicecredential">[]Device<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device.
 Structure is documented below.
@@ -493,7 +493,7 @@ Structure is documented below.
 <a href="#gatewayconfig_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicegatewayconfig">Device<wbr>Gateway<wbr>Config</a></span>
+        <span class="property-type"><a href="#devicegatewayconfig">Device<wbr>Gateway<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.
 Structure is documented below.
@@ -1406,7 +1406,7 @@ unique.
 <a href="#state_configs_go" style="color: inherit; text-decoration: inherit;">Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceconfig">[]Device<wbr>Config</a></span>
+        <span class="property-type"><a href="#deviceconfig">[]Device<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1415,7 +1415,7 @@ unique.
 <a href="#state_credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicecredential">[]Device<wbr>Credential</a></span>
+        <span class="property-type"><a href="#devicecredential">[]Device<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device.
 Structure is documented below.
@@ -1425,7 +1425,7 @@ Structure is documented below.
 <a href="#state_gatewayconfig_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicegatewayconfig">Device<wbr>Gateway<wbr>Config</a></span>
+        <span class="property-type"><a href="#devicegatewayconfig">Device<wbr>Gateway<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.
 Structure is documented below.
@@ -1453,7 +1453,7 @@ Structure is documented below.
 <a href="#state_lasterrorstatuses_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Error<wbr>Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicelasterrorstatus">[]Device<wbr>Last<wbr>Error<wbr>Status</a></span>
+        <span class="property-type"><a href="#devicelasterrorstatus">[]Device<wbr>Last<wbr>Error<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1545,7 +1545,7 @@ unique.
 <a href="#state_states_go" style="color: inherit; text-decoration: inherit;">States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicestate">[]Device<wbr>State<wbr>Type</a></span>
+        <span class="property-type"><a href="#devicestate">[]Device<wbr>State<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
 {{% /md %}}</dd></dl>
@@ -2037,7 +2037,7 @@ unique.
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicecredentialpublickey">Device<wbr>Credential<wbr>Public<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#devicecredentialpublickey">Device<wbr>Credential<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A public key used to verify the signature of JSON Web Tokens (JWTs).
 Structure is documented below.
@@ -2083,7 +2083,7 @@ Structure is documented below.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicecredentialpublickey">Device<wbr>Credential<wbr>Public<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#devicecredentialpublickey">Device<wbr>Credential<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A public key used to verify the signature of JSON Web Tokens (JWTs).
 Structure is documented below.
@@ -2106,7 +2106,7 @@ Structure is documented below.
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicecredentialpublickey">Device<wbr>Credential<wbr>Public<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#devicecredentialpublickey">Device<wbr>Credential<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A public key used to verify the signature of JSON Web Tokens (JWTs).
 Structure is documented below.

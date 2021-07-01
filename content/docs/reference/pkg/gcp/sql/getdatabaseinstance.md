@@ -321,7 +321,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the instance that will act as
+    <dd>{{% md %}}The name of the existing instance that will act as
 the master in the replication setup.
 {{% /md %}}</dd><dt class="property-"
             title="">
@@ -510,7 +510,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the instance that will act as
+    <dd>{{% md %}}The name of the existing instance that will act as
 the master in the replication setup.
 {{% /md %}}</dd><dt class="property-"
             title="">
@@ -699,7 +699,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the instance that will act as
+    <dd>{{% md %}}The name of the existing instance that will act as
 the master in the replication setup.
 {{% /md %}}</dd><dt class="property-"
             title="">
@@ -888,7 +888,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the instance that will act as
+    <dd>{{% md %}}The name of the existing instance that will act as
 the master in the replication setup.
 {{% /md %}}</dd><dt class="property-"
             title="">

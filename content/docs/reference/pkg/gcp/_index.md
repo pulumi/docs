@@ -86,6 +86,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="storage/" title="storage"><span class="symbol module"></span>storage</a></li>
     <li><a href="tags/" title="tags"><span class="symbol module"></span>tags</a></li>
     <li><a href="tpu/" title="tpu"><span class="symbol module"></span>tpu</a></li>
+    <li><a href="vertex/" title="vertex"><span class="symbol module"></span>vertex</a></li>
     <li><a href="vpcaccess/" title="vpcaccess"><span class="symbol module"></span>vpcaccess</a></li>
     <li><a href="workflows/" title="workflows"><span class="symbol module"></span>workflows</a></li>
 </ul>
@@ -104,6 +105,6 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.10.1</dd>
+	<dd>5.11.0</dd>
 </dl>
 

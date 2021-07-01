@@ -351,7 +351,7 @@ fred@example.com
 <a href="#view_go" style="color: inherit; text-decoration: inherit;">View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
+        <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A view from a different dataset to grant access to. Queries
 executed against that view will have read access to tables in
@@ -997,7 +997,7 @@ fred@example.com
 <a href="#state_view_go" style="color: inherit; text-decoration: inherit;">View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View</a></span>
+        <span class="property-type"><a href="#datasetaccessview">Dataset<wbr>Access<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A view from a different dataset to grant access to. Queries
 executed against that view will have read access to tables in

@@ -417,7 +417,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 <a href="#hivemetastoreconfig_go" style="color: inherit; text-decoration: inherit;">Hive<wbr>Metastore<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metastoreservicehivemetastoreconfig">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config</a></span>
+        <span class="property-type"><a href="#metastoreservicehivemetastoreconfig">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration information specific to running Hive metastore software as the metastore service.
 Structure is documented below.
@@ -446,7 +446,7 @@ The default value is `global`.
 <a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metastoreservicemaintenancewindow">Metastore<wbr>Service<wbr>Maintenance<wbr>Window</a></span>
+        <span class="property-type"><a href="#metastoreservicemaintenancewindow">Metastore<wbr>Service<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The one hour maintenance window of the metastore service.
 This specifies when the service can be restarted for maintenance purposes in UTC time.
@@ -1219,7 +1219,7 @@ Possible values are `DEVELOPER` and `ENTERPRISE`.
 <a href="#state_hivemetastoreconfig_go" style="color: inherit; text-decoration: inherit;">Hive<wbr>Metastore<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metastoreservicehivemetastoreconfig">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config</a></span>
+        <span class="property-type"><a href="#metastoreservicehivemetastoreconfig">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration information specific to running Hive metastore software as the metastore service.
 Structure is documented below.
@@ -1248,7 +1248,7 @@ The default value is `global`.
 <a href="#state_maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metastoreservicemaintenancewindow">Metastore<wbr>Service<wbr>Maintenance<wbr>Window</a></span>
+        <span class="property-type"><a href="#metastoreservicemaintenancewindow">Metastore<wbr>Service<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The one hour maintenance window of the metastore service.
 This specifies when the service can be restarted for maintenance purposes in UTC time.
@@ -1648,7 +1648,7 @@ The mappings override system defaults (some keys cannot be overridden)
 <a href="#kerberosconfig_csharp" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metastoreservicehivemetastoreconfigkerberosconfig">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#metastoreservicehivemetastoreconfigkerberosconfig">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Kerberos<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information used to configure the Hive metastore service as a service principal in a Kerberos realm.
 Structure is documented below.
@@ -1714,7 +1714,7 @@ The mappings override system defaults (some keys cannot be overridden)
 <a href="#kerberosconfig_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metastoreservicehivemetastoreconfigkerberosconfig">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#metastoreservicehivemetastoreconfigkerberosconfig">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Kerberos<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information used to configure the Hive metastore service as a service principal in a Kerberos realm.
 Structure is documented below.
@@ -1747,7 +1747,7 @@ The mappings override system defaults (some keys cannot be overridden)
 <a href="#kerberos_config_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metastoreservicehivemetastoreconfigkerberosconfig">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#metastoreservicehivemetastoreconfigkerberosconfig">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Kerberos<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information used to configure the Hive metastore service as a service principal in a Kerberos realm.
 Structure is documented below.
@@ -1763,7 +1763,7 @@ Structure is documented below.
 <a href="#keytab_csharp" style="color: inherit; text-decoration: inherit;">Keytab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metastoreservicehivemetastoreconfigkerberosconfigkeytab">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Keytab<wbr>Args</a></span>
+        <span class="property-type"><a href="#metastoreservicehivemetastoreconfigkerberosconfigkeytab">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Keytab</a></span>
     </dt>
     <dd>{{% md %}}A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
 Structure is documented below.
@@ -1827,7 +1827,7 @@ Structure is documented below.
 <a href="#keytab_nodejs" style="color: inherit; text-decoration: inherit;">keytab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metastoreservicehivemetastoreconfigkerberosconfigkeytab">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Keytab<wbr>Args</a></span>
+        <span class="property-type"><a href="#metastoreservicehivemetastoreconfigkerberosconfigkeytab">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Keytab</a></span>
     </dt>
     <dd>{{% md %}}A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
 Structure is documented below.
@@ -1859,7 +1859,7 @@ Structure is documented below.
 <a href="#keytab_python" style="color: inherit; text-decoration: inherit;">keytab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metastoreservicehivemetastoreconfigkerberosconfigkeytab">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Keytab<wbr>Args</a></span>
+        <span class="property-type"><a href="#metastoreservicehivemetastoreconfigkerberosconfigkeytab">Metastore<wbr>Service<wbr>Hive<wbr>Metastore<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Keytab</a></span>
     </dt>
     <dd>{{% md %}}A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
 Structure is documented below.

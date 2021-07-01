@@ -494,7 +494,7 @@ is not provided, the provider will use a default.
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteriammembercondition">Cluster<wbr>IAMMember<wbr>Condition</a></span>
+        <span class="property-type"><a href="#clusteriammembercondition">Cluster<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -947,7 +947,7 @@ is not provided, the provider will use a default.
 <a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteriammembercondition">Cluster<wbr>IAMMember<wbr>Condition</a></span>
+        <span class="property-type"><a href="#clusteriammembercondition">Cluster<wbr>IAMMember<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

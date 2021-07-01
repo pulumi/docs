@@ -1734,7 +1734,7 @@ this field is set to false, the revision name will still autogenerate.)
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
 and annotations.
@@ -1764,7 +1764,7 @@ If it is not provided, the provider project is used.
 <a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to
 be stamped out. The template references the container image, and may also
@@ -1782,7 +1782,7 @@ Structure is documented below.
 <a href="#traffics_go" style="color: inherit; text-decoration: inherit;">Traffics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">[]Service<wbr>Traffic</a></span>
+        <span class="property-type"><a href="#servicetraffic">[]Service<wbr>Traffic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
 and Configurations
@@ -2307,7 +2307,7 @@ this field is set to false, the revision name will still autogenerate.)
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
 and annotations.
@@ -2337,7 +2337,7 @@ If it is not provided, the provider project is used.
 <a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">[]Service<wbr>Status</a></span>
+        <span class="property-type"><a href="#servicestatus">[]Service<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2346,7 +2346,7 @@ If it is not provided, the provider project is used.
 <a href="#state_template_go" style="color: inherit; text-decoration: inherit;">Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to
 be stamped out. The template references the container image, and may also
@@ -2364,7 +2364,7 @@ Structure is documented below.
 <a href="#state_traffics_go" style="color: inherit; text-decoration: inherit;">Traffics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">[]Service<wbr>Traffic</a></span>
+        <span class="property-type"><a href="#servicetraffic">[]Service<wbr>Traffic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
 and Configurations
@@ -2944,7 +2944,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatuscondition">List&lt;Service<wbr>Status<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicestatuscondition">List&lt;Service<wbr>Status<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3032,7 +3032,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatuscondition">Service<wbr>Status<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicestatuscondition">Service<wbr>Status<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3076,7 +3076,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatuscondition">Sequence[Service<wbr>Status<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicestatuscondition">Sequence[Service<wbr>Status<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3268,7 +3268,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
 and annotations.
@@ -3279,7 +3279,7 @@ Structure is documented below.
 <a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).
 Structure is documented below.
@@ -3318,7 +3318,7 @@ Structure is documented below.
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
 and annotations.
@@ -3329,7 +3329,7 @@ Structure is documented below.
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).
 Structure is documented below.
@@ -3343,7 +3343,7 @@ Structure is documented below.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
 and annotations.
@@ -3354,7 +3354,7 @@ Structure is documented below.
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).
 Structure is documented below.
@@ -3782,7 +3782,7 @@ requests per container of the Revision. Values are:
 <a href="#containers_csharp" style="color: inherit; text-decoration: inherit;">Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainer">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainer">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container&gt;</a></span>
     </dt>
     <dd>{{% md %}}Container defines the unit of execution for this Revision.
 In the context of a Revision, we disallow a number of the fields of
@@ -3830,7 +3830,7 @@ that the system will manipulate this based on routability and load.
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespecvolume">List&lt;Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetemplatespecvolume">List&lt;Service<wbr>Template<wbr>Spec<wbr>Volume&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3922,7 +3922,7 @@ requests per container of the Revision. Values are:
 <a href="#containers_nodejs" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainer">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainer">Service<wbr>Template<wbr>Spec<wbr>Container[]</a></span>
     </dt>
     <dd>{{% md %}}Container defines the unit of execution for this Revision.
 In the context of a Revision, we disallow a number of the fields of
@@ -3970,7 +3970,7 @@ that the system will manipulate this based on routability and load.
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespecvolume">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicetemplatespecvolume">Service<wbr>Template<wbr>Spec<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3992,7 +3992,7 @@ requests per container of the Revision. Values are:
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainer">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainer">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container]</a></span>
     </dt>
     <dd>{{% md %}}Container defines the unit of execution for this Revision.
 In the context of a Revision, we disallow a number of the fields of
@@ -4040,7 +4040,7 @@ that the system will manipulate this based on routability and load.
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespecvolume">Sequence[Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespecvolume">Sequence[Service<wbr>Template<wbr>Spec<wbr>Volume]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4099,7 +4099,7 @@ https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument
 <a href="#envfroms_csharp" style="color: inherit; text-decoration: inherit;">Env<wbr>Froms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From&gt;</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -4115,7 +4115,7 @@ Structure is documented below.
 <a href="#envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenv">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenv">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container.
 Structure is documented below.
@@ -4125,7 +4125,7 @@ Structure is documented below.
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerport">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerport">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of open ports in the container.
 More Info:
@@ -4137,7 +4137,7 @@ Structure is documented below.
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}Compute Resources required by this container. Used to set values such as max memory
 More info:
@@ -4149,7 +4149,7 @@ Structure is documented below.
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainervolumemount">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainervolumemount">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -4339,7 +4339,7 @@ https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument
 <a href="#envfroms_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Froms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From[]</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -4355,7 +4355,7 @@ Structure is documented below.
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenv">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenv">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env[]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container.
 Structure is documented below.
@@ -4365,7 +4365,7 @@ Structure is documented below.
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerport">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerport">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}List of open ports in the container.
 More Info:
@@ -4377,7 +4377,7 @@ Structure is documented below.
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}Compute Resources required by this container. Used to set values such as max memory
 More info:
@@ -4389,7 +4389,7 @@ Structure is documented below.
 <a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainervolumemount">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainervolumemount">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -4459,7 +4459,7 @@ https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument
 <a href="#env_froms_python" style="color: inherit; text-decoration: inherit;">env_<wbr>froms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From]</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -4475,7 +4475,7 @@ Structure is documented below.
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenv">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenv">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container.
 Structure is documented below.
@@ -4485,7 +4485,7 @@ Structure is documented below.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerport">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerport">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port]</a></span>
     </dt>
     <dd>{{% md %}}List of open ports in the container.
 More Info:
@@ -4497,7 +4497,7 @@ Structure is documented below.
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}Compute Resources required by this container. Used to set values such as max memory
 More info:
@@ -4509,7 +4509,7 @@ Structure is documented below.
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainervolumemount">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainervolumemount">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Volume<wbr>Mount]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -4561,7 +4561,7 @@ Defaults to "".
 <a href="#valuefrom_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4635,7 +4635,7 @@ Defaults to "".
 <a href="#valuefrom_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4672,7 +4672,7 @@ Defaults to "".
 <a href="#value_from_python" style="color: inherit; text-decoration: inherit;">value_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4686,7 +4686,7 @@ Defaults to "".
 <a href="#configmapref_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Map<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from.
 Structure is documented below.
@@ -4705,7 +4705,7 @@ Structure is documented below.
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -4752,7 +4752,7 @@ Structure is documented below.
 <a href="#configmapref_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from.
 Structure is documented below.
@@ -4771,7 +4771,7 @@ Structure is documented below.
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -4785,7 +4785,7 @@ Structure is documented below.
 <a href="#config_map_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from.
 Structure is documented below.
@@ -4804,7 +4804,7 @@ Structure is documented below.
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -4820,7 +4820,7 @@ Structure is documented below.
 <a href="#localobjectreference_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -4866,7 +4866,7 @@ Structure is documented below.
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -4889,7 +4889,7 @@ Structure is documented below.
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -4968,7 +4968,7 @@ Structure is documented below.
 <a href="#localobjectreference_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -5014,7 +5014,7 @@ Structure is documented below.
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -5037,7 +5037,7 @@ Structure is documented below.
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -5116,7 +5116,7 @@ Structure is documented below.
 <a href="#secretkeyref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefromsecretkeyref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefromsecretkeyref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}Selects a key (version) of a secret in Secret Manager.
 Structure is documented below.
@@ -5144,7 +5144,7 @@ Structure is documented below.
 <a href="#secretkeyref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefromsecretkeyref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefromsecretkeyref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}Selects a key (version) of a secret in Secret Manager.
 Structure is documented below.
@@ -5158,7 +5158,7 @@ Structure is documented below.
 <a href="#secret_key_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefromsecretkeyref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvvaluefromsecretkeyref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Value<wbr>From<wbr>Secret<wbr>Key<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}Selects a key (version) of a secret in Secret Manager.
 Structure is documented below.
@@ -5611,7 +5611,7 @@ not contain ':'.
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespecvolumesecret">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespecvolumesecret">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret</a></span>
     </dt>
     <dd>{{% md %}}The secret's value will be presented as the content of a file whose
 name is defined in the item path. If no items are defined, the name of
@@ -5661,7 +5661,7 @@ Structure is documented below.
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespecvolumesecret">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespecvolumesecret">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret</a></span>
     </dt>
     <dd>{{% md %}}The secret's value will be presented as the content of a file whose
 name is defined in the item path. If no items are defined, the name of
@@ -5686,7 +5686,7 @@ Structure is documented below.
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespecvolumesecret">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicetemplatespecvolumesecret">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret</a></span>
     </dt>
     <dd>{{% md %}}The secret's value will be presented as the content of a file whose
 name is defined in the item path. If no items are defined, the name of
@@ -5721,7 +5721,7 @@ annotation.
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespecvolumesecretitem">List&lt;Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetemplatespecvolumesecretitem">List&lt;Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, the volume will expose a file whose name is the
 secret_name.
@@ -5791,7 +5791,7 @@ annotation.
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespecvolumesecretitem">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicetemplatespecvolumesecretitem">Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, the volume will expose a file whose name is the
 secret_name.
@@ -5826,7 +5826,7 @@ annotation.
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespecvolumesecretitem">Sequence[Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespecvolumesecretitem">Sequence[Service<wbr>Template<wbr>Spec<wbr>Volume<wbr>Secret<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}If unspecified, the volume will expose a file whose name is the
 secret_name.

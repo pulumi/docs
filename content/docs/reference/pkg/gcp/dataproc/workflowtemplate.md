@@ -574,7 +574,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#jobs_go" style="color: inherit; text-decoration: inherit;">Jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejob">[]Workflow<wbr>Template<wbr>Job</a></span>
+        <span class="property-type"><a href="#workflowtemplatejob">[]Workflow<wbr>Template<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The Directed Acyclic Graph of Jobs to submit.
 {{% /md %}}</dd><dt class="property-required"
@@ -592,7 +592,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacement">Workflow<wbr>Template<wbr>Placement</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacement">Workflow<wbr>Template<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. WorkflowTemplate scheduling information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -628,7 +628,7 @@ The WorkflowTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateparameter">[]Workflow<wbr>Template<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#workflowtemplateparameter">[]Workflow<wbr>Template<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1202,7 +1202,7 @@ The following state arguments are supported:
 <a href="#state_jobs_go" style="color: inherit; text-decoration: inherit;">Jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejob">[]Workflow<wbr>Template<wbr>Job</a></span>
+        <span class="property-type"><a href="#workflowtemplatejob">[]Workflow<wbr>Template<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. The Directed Acyclic Graph of Jobs to submit.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1238,7 +1238,7 @@ The following state arguments are supported:
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateparameter">[]Workflow<wbr>Template<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#workflowtemplateparameter">[]Workflow<wbr>Template<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1247,7 +1247,7 @@ The following state arguments are supported:
 <a href="#state_placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacement">Workflow<wbr>Template<wbr>Placement</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacement">Workflow<wbr>Template<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. WorkflowTemplate scheduling information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1508,7 +1508,7 @@ The following state arguments are supported:
 <a href="#hadoopjob_csharp" style="color: inherit; text-decoration: inherit;">Hadoop<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobhadoopjob">Workflow<wbr>Template<wbr>Job<wbr>Hadoop<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobhadoopjob">Workflow<wbr>Template<wbr>Job<wbr>Hadoop<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Hadoop job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1517,7 +1517,7 @@ The following state arguments are supported:
 <a href="#hivejob_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobhivejob">Workflow<wbr>Template<wbr>Job<wbr>Hive<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobhivejob">Workflow<wbr>Template<wbr>Job<wbr>Hive<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Hive job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1535,7 +1535,7 @@ The following state arguments are supported:
 <a href="#pigjob_csharp" style="color: inherit; text-decoration: inherit;">Pig<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpigjob">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpigjob">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Pig job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1553,7 +1553,7 @@ The following state arguments are supported:
 <a href="#prestojob_csharp" style="color: inherit; text-decoration: inherit;">Presto<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobprestojob">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobprestojob">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Presto job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1562,7 +1562,7 @@ The following state arguments are supported:
 <a href="#pysparkjob_csharp" style="color: inherit; text-decoration: inherit;">Pyspark<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpysparkjob">Workflow<wbr>Template<wbr>Job<wbr>Pyspark<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpysparkjob">Workflow<wbr>Template<wbr>Job<wbr>Pyspark<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a PySpark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1571,7 +1571,7 @@ The following state arguments are supported:
 <a href="#scheduling_csharp" style="color: inherit; text-decoration: inherit;">Scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobscheduling">Workflow<wbr>Template<wbr>Job<wbr>Scheduling<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobscheduling">Workflow<wbr>Template<wbr>Job<wbr>Scheduling</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1580,7 +1580,7 @@ The following state arguments are supported:
 <a href="#sparkjob_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparkjob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparkjob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Spark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1589,7 +1589,7 @@ The following state arguments are supported:
 <a href="#sparkrjob_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>RJob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparkrjob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>RJob<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparkrjob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>RJob</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a SparkR job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1598,7 +1598,7 @@ The following state arguments are supported:
 <a href="#sparksqljob_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Sql<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparksqljob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparksqljob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a SparkSql job.
 {{% /md %}}</dd></dl>
@@ -1732,7 +1732,7 @@ The following state arguments are supported:
 <a href="#hadoopjob_nodejs" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobhadoopjob">Workflow<wbr>Template<wbr>Job<wbr>Hadoop<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobhadoopjob">Workflow<wbr>Template<wbr>Job<wbr>Hadoop<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Hadoop job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1741,7 +1741,7 @@ The following state arguments are supported:
 <a href="#hivejob_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobhivejob">Workflow<wbr>Template<wbr>Job<wbr>Hive<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobhivejob">Workflow<wbr>Template<wbr>Job<wbr>Hive<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Hive job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1759,7 +1759,7 @@ The following state arguments are supported:
 <a href="#pigjob_nodejs" style="color: inherit; text-decoration: inherit;">pig<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpigjob">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpigjob">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Pig job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1777,7 +1777,7 @@ The following state arguments are supported:
 <a href="#prestojob_nodejs" style="color: inherit; text-decoration: inherit;">presto<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobprestojob">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobprestojob">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Presto job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1786,7 +1786,7 @@ The following state arguments are supported:
 <a href="#pysparkjob_nodejs" style="color: inherit; text-decoration: inherit;">pyspark<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpysparkjob">Workflow<wbr>Template<wbr>Job<wbr>Pyspark<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpysparkjob">Workflow<wbr>Template<wbr>Job<wbr>Pyspark<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a PySpark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1795,7 +1795,7 @@ The following state arguments are supported:
 <a href="#scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobscheduling">Workflow<wbr>Template<wbr>Job<wbr>Scheduling<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobscheduling">Workflow<wbr>Template<wbr>Job<wbr>Scheduling</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1804,7 +1804,7 @@ The following state arguments are supported:
 <a href="#sparkjob_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparkjob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparkjob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Spark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1813,7 +1813,7 @@ The following state arguments are supported:
 <a href="#sparkrjob_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>RJob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparkrjob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>RJob<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparkrjob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>RJob</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a SparkR job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1822,7 +1822,7 @@ The following state arguments are supported:
 <a href="#sparksqljob_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Sql<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparksqljob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparksqljob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a SparkSql job.
 {{% /md %}}</dd></dl>
@@ -1844,7 +1844,7 @@ The following state arguments are supported:
 <a href="#hadoop_job_python" style="color: inherit; text-decoration: inherit;">hadoop_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobhadoopjob">Workflow<wbr>Template<wbr>Job<wbr>Hadoop<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobhadoopjob">Workflow<wbr>Template<wbr>Job<wbr>Hadoop<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Hadoop job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1853,7 +1853,7 @@ The following state arguments are supported:
 <a href="#hive_job_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobhivejob">Workflow<wbr>Template<wbr>Job<wbr>Hive<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobhivejob">Workflow<wbr>Template<wbr>Job<wbr>Hive<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Hive job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1871,7 +1871,7 @@ The following state arguments are supported:
 <a href="#pig_job_python" style="color: inherit; text-decoration: inherit;">pig_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpigjob">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpigjob">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Pig job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1889,7 +1889,7 @@ The following state arguments are supported:
 <a href="#presto_job_python" style="color: inherit; text-decoration: inherit;">presto_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobprestojob">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobprestojob">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Presto job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1898,7 +1898,7 @@ The following state arguments are supported:
 <a href="#pyspark_job_python" style="color: inherit; text-decoration: inherit;">pyspark_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpysparkjob">Workflow<wbr>Template<wbr>Job<wbr>Pyspark<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpysparkjob">Workflow<wbr>Template<wbr>Job<wbr>Pyspark<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a PySpark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1907,7 +1907,7 @@ The following state arguments are supported:
 <a href="#scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobscheduling">Workflow<wbr>Template<wbr>Job<wbr>Scheduling<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobscheduling">Workflow<wbr>Template<wbr>Job<wbr>Scheduling</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1916,7 +1916,7 @@ The following state arguments are supported:
 <a href="#spark_job_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparkjob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparkjob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a Spark job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1925,7 +1925,7 @@ The following state arguments are supported:
 <a href="#spark_r_job_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>r_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparkrjob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>RJob<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparkrjob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>RJob</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a SparkR job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1934,7 +1934,7 @@ The following state arguments are supported:
 <a href="#spark_sql_job_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>sql_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparksqljob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparksqljob">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job is a SparkSql job.
 {{% /md %}}</dd></dl>
@@ -1985,7 +1985,7 @@ The following state arguments are supported:
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobhadoopjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Hadoop<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobhadoopjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Hadoop<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2137,7 +2137,7 @@ The following state arguments are supported:
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobhadoopjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Hadoop<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobhadoopjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Hadoop<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2213,7 +2213,7 @@ The following state arguments are supported:
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobhadoopjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Hadoop<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobhadoopjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Hadoop<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2345,7 +2345,7 @@ The following state arguments are supported:
 <a href="#querylist_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobhivejobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Hive<wbr>Job<wbr>Query<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobhivejobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Hive<wbr>Job<wbr>Query<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2461,7 +2461,7 @@ The following state arguments are supported:
 <a href="#querylist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobhivejobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Hive<wbr>Job<wbr>Query<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobhivejobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Hive<wbr>Job<wbr>Query<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2519,7 +2519,7 @@ The following state arguments are supported:
 <a href="#query_list_python" style="color: inherit; text-decoration: inherit;">query_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobhivejobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Hive<wbr>Job<wbr>Query<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobhivejobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Hive<wbr>Job<wbr>Query<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2615,7 +2615,7 @@ The following state arguments are supported:
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpigjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpigjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2642,7 +2642,7 @@ The following state arguments are supported:
 <a href="#querylist_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpigjobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Query<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpigjobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Query<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2749,7 +2749,7 @@ The following state arguments are supported:
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpigjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpigjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2776,7 +2776,7 @@ The following state arguments are supported:
 <a href="#querylist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpigjobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Query<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpigjobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Query<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2816,7 +2816,7 @@ The following state arguments are supported:
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpigjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpigjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2843,7 +2843,7 @@ The following state arguments are supported:
 <a href="#query_list_python" style="color: inherit; text-decoration: inherit;">query_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpigjobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Query<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpigjobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Pig<wbr>Job<wbr>Query<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2993,7 +2993,7 @@ The following state arguments are supported:
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobprestojobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobprestojobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3029,7 +3029,7 @@ The following state arguments are supported:
 <a href="#querylist_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobprestojobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Query<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobprestojobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Query<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.
 {{% /md %}}</dd></dl>
@@ -3127,7 +3127,7 @@ The following state arguments are supported:
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobprestojobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobprestojobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3163,7 +3163,7 @@ The following state arguments are supported:
 <a href="#querylist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobprestojobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Query<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobprestojobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Query<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.
 {{% /md %}}</dd></dl>
@@ -3194,7 +3194,7 @@ The following state arguments are supported:
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobprestojobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobprestojobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3230,7 +3230,7 @@ The following state arguments are supported:
 <a href="#query_list_python" style="color: inherit; text-decoration: inherit;">query_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobprestojobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Query<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobprestojobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Presto<wbr>Job<wbr>Query<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.
 {{% /md %}}</dd></dl>
@@ -3398,7 +3398,7 @@ The following state arguments are supported:
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpysparkjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Pyspark<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpysparkjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Pyspark<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3550,7 +3550,7 @@ The following state arguments are supported:
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpysparkjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Pyspark<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpysparkjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Pyspark<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3626,7 +3626,7 @@ The following state arguments are supported:
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobpysparkjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Pyspark<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobpysparkjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Pyspark<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3839,7 +3839,7 @@ The following state arguments are supported:
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparkjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparkjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3991,7 +3991,7 @@ The following state arguments are supported:
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparkjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparkjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4067,7 +4067,7 @@ The following state arguments are supported:
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparkjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparkjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4199,7 +4199,7 @@ The following state arguments are supported:
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparkrjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>RJob<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparkrjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>RJob<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4315,7 +4315,7 @@ The following state arguments are supported:
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparkrjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>RJob<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparkrjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>RJob<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4373,7 +4373,7 @@ The following state arguments are supported:
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparkrjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>RJob<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparkrjobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>RJob<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4460,7 +4460,7 @@ The following state arguments are supported:
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparksqljobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparksqljobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4487,7 +4487,7 @@ The following state arguments are supported:
 <a href="#querylist_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparksqljobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Query<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparksqljobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Query<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4576,7 +4576,7 @@ The following state arguments are supported:
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparksqljobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparksqljobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4603,7 +4603,7 @@ The following state arguments are supported:
 <a href="#querylist_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparksqljobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Query<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparksqljobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Query<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4634,7 +4634,7 @@ The following state arguments are supported:
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparksqljobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Logging<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparksqljobloggingconfig">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The runtime log config for job execution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4661,7 +4661,7 @@ The following state arguments are supported:
 <a href="#query_list_python" style="color: inherit; text-decoration: inherit;">query_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplatejobsparksqljobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Query<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplatejobsparksqljobquerylist">Workflow<wbr>Template<wbr>Job<wbr>Spark<wbr>Sql<wbr>Job<wbr>Query<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}A list of queries.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4820,7 +4820,7 @@ The following state arguments are supported:
 <a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateparametervalidation">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateparametervalidation">Workflow<wbr>Template<wbr>Parameter<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}Optional. Validation rules to be applied to this parameter's value.
 {{% /md %}}</dd></dl>
@@ -4900,7 +4900,7 @@ The following state arguments are supported:
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateparametervalidation">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateparametervalidation">Workflow<wbr>Template<wbr>Parameter<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}Optional. Validation rules to be applied to this parameter's value.
 {{% /md %}}</dd></dl>
@@ -4940,7 +4940,7 @@ The following state arguments are supported:
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateparametervalidation">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateparametervalidation">Workflow<wbr>Template<wbr>Parameter<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}Optional. Validation rules to be applied to this parameter's value.
 {{% /md %}}</dd></dl>
@@ -4955,7 +4955,7 @@ The following state arguments are supported:
 <a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateparametervalidationregex">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateparametervalidationregex">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Validation based on regular expressions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4964,7 +4964,7 @@ The following state arguments are supported:
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateparametervalidationvalues">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateparametervalidationvalues">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
 {{% /md %}}</dd></dl>
@@ -4999,7 +4999,7 @@ The following state arguments are supported:
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateparametervalidationregex">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateparametervalidationregex">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Validation based on regular expressions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5008,7 +5008,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateparametervalidationvalues">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateparametervalidationvalues">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
 {{% /md %}}</dd></dl>
@@ -5021,7 +5021,7 @@ The following state arguments are supported:
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateparametervalidationregex">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateparametervalidationregex">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Validation based on regular expressions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5030,7 +5030,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateparametervalidationvalues">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Values<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateparametervalidationvalues">Workflow<wbr>Template<wbr>Parameter<wbr>Validation<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.
 {{% /md %}}</dd></dl>
@@ -5153,7 +5153,7 @@ The following state arguments are supported:
 <a href="#clusterselector_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementclusterselector">Workflow<wbr>Template<wbr>Placement<wbr>Cluster<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementclusterselector">Workflow<wbr>Template<wbr>Placement<wbr>Cluster<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Optional. A selector that chooses target cluster for jobs based on metadata. The selector is evaluated at the time each job is submitted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5162,7 +5162,7 @@ The following state arguments are supported:
 <a href="#managedcluster_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedcluster">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedcluster">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}A cluster that is managed by the workflow.
 {{% /md %}}</dd></dl>
@@ -5197,7 +5197,7 @@ The following state arguments are supported:
 <a href="#clusterselector_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementclusterselector">Workflow<wbr>Template<wbr>Placement<wbr>Cluster<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementclusterselector">Workflow<wbr>Template<wbr>Placement<wbr>Cluster<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Optional. A selector that chooses target cluster for jobs based on metadata. The selector is evaluated at the time each job is submitted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5206,7 +5206,7 @@ The following state arguments are supported:
 <a href="#managedcluster_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedcluster">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedcluster">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}A cluster that is managed by the workflow.
 {{% /md %}}</dd></dl>
@@ -5219,7 +5219,7 @@ The following state arguments are supported:
 <a href="#cluster_selector_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementclusterselector">Workflow<wbr>Template<wbr>Placement<wbr>Cluster<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementclusterselector">Workflow<wbr>Template<wbr>Placement<wbr>Cluster<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Optional. A selector that chooses target cluster for jobs based on metadata. The selector is evaluated at the time each job is submitted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5228,7 +5228,7 @@ The following state arguments are supported:
 <a href="#managed_cluster_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedcluster">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedcluster">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}A cluster that is managed by the workflow.
 {{% /md %}}</dd></dl>
@@ -5342,7 +5342,7 @@ The following state arguments are supported:
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Required. The cluster configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5404,7 +5404,7 @@ The following state arguments are supported:
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Required. The cluster configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5435,7 +5435,7 @@ The following state arguments are supported:
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Required. The cluster configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5459,7 +5459,7 @@ The following state arguments are supported:
 <a href="#autoscalingconfig_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigautoscalingconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigautoscalingconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5468,7 +5468,7 @@ The following state arguments are supported:
 <a href="#encryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigencryptionconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigencryptionconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Encryption settings for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5477,7 +5477,7 @@ The following state arguments are supported:
 <a href="#endpointconfig_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigendpointconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigendpointconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Port/endpoint configuration for this cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -5486,7 +5486,7 @@ The following state arguments are supported:
 <a href="#gceclusterconfig_csharp" style="color: inherit; text-decoration: inherit;">Gce<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The shared Compute Engine config settings for all instances in a cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5495,7 +5495,7 @@ The following state arguments are supported:
 <a href="#gkeclusterconfig_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as `gce_cluster_config`, `master_config`, `worker_config`, `secondary_worker_config`, and `autoscaling_config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5504,7 +5504,7 @@ The following state arguments are supported:
 <a href="#initializationactions_csharp" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiginitializationaction">List&lt;Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiginitializationaction">List&lt;Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's `role` metadata to run an executable on a master or worker node, as shown below using `curl` (you can also use `wget`): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if ; then ... master specific actions ... else ... worker specific actions ... fi
 {{% /md %}}</dd><dt class="property-optional"
@@ -5513,7 +5513,7 @@ The following state arguments are supported:
 <a href="#lifecycleconfig_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiglifecycleconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiglifecycleconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Lifecycle setting for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5522,7 +5522,7 @@ The following state arguments are supported:
 <a href="#masterconfig_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5531,7 +5531,7 @@ The following state arguments are supported:
 <a href="#metastoreconfig_csharp" style="color: inherit; text-decoration: inherit;">Metastore<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmetastoreconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Metastore<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmetastoreconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Metastore<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metastore configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5540,7 +5540,7 @@ The following state arguments are supported:
 <a href="#secondaryworkerconfig_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5549,7 +5549,7 @@ The following state arguments are supported:
 <a href="#securityconfig_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Security settings for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5558,7 +5558,7 @@ The following state arguments are supported:
 <a href="#softwareconfig_csharp" style="color: inherit; text-decoration: inherit;">Software<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsoftwareconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsoftwareconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The config settings for software inside the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5585,7 +5585,7 @@ The following state arguments are supported:
 <a href="#workerconfig_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.
 {{% /md %}}</dd></dl>
@@ -5737,7 +5737,7 @@ The following state arguments are supported:
 <a href="#autoscalingconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigautoscalingconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigautoscalingconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5746,7 +5746,7 @@ The following state arguments are supported:
 <a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigencryptionconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigencryptionconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Encryption settings for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5755,7 +5755,7 @@ The following state arguments are supported:
 <a href="#endpointconfig_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigendpointconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigendpointconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Port/endpoint configuration for this cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -5764,7 +5764,7 @@ The following state arguments are supported:
 <a href="#gceclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The shared Compute Engine config settings for all instances in a cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5773,7 +5773,7 @@ The following state arguments are supported:
 <a href="#gkeclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as `gce_cluster_config`, `master_config`, `worker_config`, `secondary_worker_config`, and `autoscaling_config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5782,7 +5782,7 @@ The following state arguments are supported:
 <a href="#initializationactions_nodejs" style="color: inherit; text-decoration: inherit;">initialization<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiginitializationaction">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiginitializationaction">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's `role` metadata to run an executable on a master or worker node, as shown below using `curl` (you can also use `wget`): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if ; then ... master specific actions ... else ... worker specific actions ... fi
 {{% /md %}}</dd><dt class="property-optional"
@@ -5791,7 +5791,7 @@ The following state arguments are supported:
 <a href="#lifecycleconfig_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiglifecycleconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiglifecycleconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Lifecycle setting for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5800,7 +5800,7 @@ The following state arguments are supported:
 <a href="#masterconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5809,7 +5809,7 @@ The following state arguments are supported:
 <a href="#metastoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">metastore<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmetastoreconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Metastore<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmetastoreconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Metastore<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metastore configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5818,7 +5818,7 @@ The following state arguments are supported:
 <a href="#secondaryworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5827,7 +5827,7 @@ The following state arguments are supported:
 <a href="#securityconfig_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Security settings for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5836,7 +5836,7 @@ The following state arguments are supported:
 <a href="#softwareconfig_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsoftwareconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsoftwareconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The config settings for software inside the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5863,7 +5863,7 @@ The following state arguments are supported:
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.
 {{% /md %}}</dd></dl>
@@ -5876,7 +5876,7 @@ The following state arguments are supported:
 <a href="#autoscaling_config_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigautoscalingconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigautoscalingconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5885,7 +5885,7 @@ The following state arguments are supported:
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigencryptionconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigencryptionconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Encryption settings for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5894,7 +5894,7 @@ The following state arguments are supported:
 <a href="#endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigendpointconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigendpointconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Port/endpoint configuration for this cluster
 {{% /md %}}</dd><dt class="property-optional"
@@ -5903,7 +5903,7 @@ The following state arguments are supported:
 <a href="#gce_cluster_config_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>cluster_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The shared Compute Engine config settings for all instances in a cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5912,7 +5912,7 @@ The following state arguments are supported:
 <a href="#gke_cluster_config_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as `gce_cluster_config`, `master_config`, `worker_config`, `secondary_worker_config`, and `autoscaling_config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5921,7 +5921,7 @@ The following state arguments are supported:
 <a href="#initialization_actions_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiginitializationaction">Sequence[Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiginitializationaction">Sequence[Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's `role` metadata to run an executable on a master or worker node, as shown below using `curl` (you can also use `wget`): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if ; then ... master specific actions ... else ... worker specific actions ... fi
 {{% /md %}}</dd><dt class="property-optional"
@@ -5930,7 +5930,7 @@ The following state arguments are supported:
 <a href="#lifecycle_config_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiglifecycleconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiglifecycleconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Lifecycle setting for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5939,7 +5939,7 @@ The following state arguments are supported:
 <a href="#master_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5948,7 +5948,7 @@ The following state arguments are supported:
 <a href="#metastore_config_python" style="color: inherit; text-decoration: inherit;">metastore_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmetastoreconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Metastore<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmetastoreconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Metastore<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Metastore configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5957,7 +5957,7 @@ The following state arguments are supported:
 <a href="#secondary_worker_config_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5966,7 +5966,7 @@ The following state arguments are supported:
 <a href="#security_config_python" style="color: inherit; text-decoration: inherit;">security_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Security settings for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5975,7 +5975,7 @@ The following state arguments are supported:
 <a href="#software_config_python" style="color: inherit; text-decoration: inherit;">software_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsoftwareconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsoftwareconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The config settings for software inside the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6002,7 +6002,7 @@ The following state arguments are supported:
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine config settings for additional worker instances in a cluster.
 {{% /md %}}</dd></dl>
@@ -6246,7 +6246,7 @@ Output only. The map of port descriptions to URLs. Will only be populated if ena
 <a href="#nodegroupaffinity_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Group<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfignodegroupaffinity">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Node<wbr>Group<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfignodegroupaffinity">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Node<wbr>Group<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Optional. Node Group Affinity for sole-tenant clusters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6264,7 +6264,7 @@ Output only. The map of port descriptions to URLs. Will only be populated if ena
 <a href="#reservationaffinity_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfigreservationaffinity">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfigreservationaffinity">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Reservation<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Optional. Reservation Affinity for consuming Zonal reservation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6452,7 +6452,7 @@ Output only. The map of port descriptions to URLs. Will only be populated if ena
 <a href="#nodegroupaffinity_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfignodegroupaffinity">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Node<wbr>Group<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfignodegroupaffinity">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Node<wbr>Group<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Optional. Node Group Affinity for sole-tenant clusters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6470,7 +6470,7 @@ Output only. The map of port descriptions to URLs. Will only be populated if ena
 <a href="#reservationaffinity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfigreservationaffinity">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfigreservationaffinity">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Reservation<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Optional. Reservation Affinity for consuming Zonal reservation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6555,7 +6555,7 @@ Output only. The map of port descriptions to URLs. Will only be populated if ena
 <a href="#node_group_affinity_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfignodegroupaffinity">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Node<wbr>Group<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfignodegroupaffinity">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Node<wbr>Group<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Optional. Node Group Affinity for sole-tenant clusters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6573,7 +6573,7 @@ Output only. The map of port descriptions to URLs. Will only be populated if ena
 <a href="#reservation_affinity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfigreservationaffinity">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggceclusterconfigreservationaffinity">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Reservation<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}Optional. Reservation Affinity for consuming Zonal reservation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6813,7 +6813,7 @@ Output only. The map of port descriptions to URLs. Will only be populated if ena
 <a href="#namespacedgkedeploymenttarget_csharp" style="color: inherit; text-decoration: inherit;">Namespaced<wbr>Gke<wbr>Deployment<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfignamespacedgkedeploymenttarget">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config<wbr>Namespaced<wbr>Gke<wbr>Deployment<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfignamespacedgkedeploymenttarget">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config<wbr>Namespaced<wbr>Gke<wbr>Deployment<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Optional. A target for the deployment.
 {{% /md %}}</dd></dl>
@@ -6839,7 +6839,7 @@ Output only. The map of port descriptions to URLs. Will only be populated if ena
 <a href="#namespacedgkedeploymenttarget_nodejs" style="color: inherit; text-decoration: inherit;">namespaced<wbr>Gke<wbr>Deployment<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfignamespacedgkedeploymenttarget">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config<wbr>Namespaced<wbr>Gke<wbr>Deployment<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfignamespacedgkedeploymenttarget">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config<wbr>Namespaced<wbr>Gke<wbr>Deployment<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Optional. A target for the deployment.
 {{% /md %}}</dd></dl>
@@ -6852,7 +6852,7 @@ Output only. The map of port descriptions to URLs. Will only be populated if ena
 <a href="#namespaced_gke_deployment_target_python" style="color: inherit; text-decoration: inherit;">namespaced_<wbr>gke_<wbr>deployment_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfignamespacedgkedeploymenttarget">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config<wbr>Namespaced<wbr>Gke<wbr>Deployment<wbr>Target<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfiggkeclusterconfignamespacedgkedeploymenttarget">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Gke<wbr>Cluster<wbr>Config<wbr>Namespaced<wbr>Gke<wbr>Deployment<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Optional. A target for the deployment.
 {{% /md %}}</dd></dl>
@@ -7213,7 +7213,7 @@ Output only. The time when cluster became idle (most recent job finished) and be
 <a href="#accelerators_csharp" style="color: inherit; text-decoration: inherit;">Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigaccelerator">List&lt;Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigaccelerator">List&lt;Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for these instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7222,7 +7222,7 @@ Output only. The time when cluster became idle (most recent job finished) and be
 <a href="#diskconfig_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Disk option config settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7269,7 +7269,7 @@ Output only. Specifies that this instance group contains preemptible instances.
 <a href="#managedgroupconfigs_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Group<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigmanagedgroupconfig">List&lt;Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Managed<wbr>Group<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigmanagedgroupconfig">List&lt;Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Managed<wbr>Group<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
@@ -7407,7 +7407,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#accelerators_nodejs" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigaccelerator">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigaccelerator">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for these instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7416,7 +7416,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Disk option config settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7463,7 +7463,7 @@ Output only. Specifies that this instance group contains preemptible instances.
 <a href="#managedgroupconfigs_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Group<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigmanagedgroupconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Managed<wbr>Group<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigmanagedgroupconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Managed<wbr>Group<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
@@ -7504,7 +7504,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigaccelerator">Sequence[Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigaccelerator">Sequence[Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for these instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7513,7 +7513,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Disk option config settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7560,7 +7560,7 @@ Output only. Specifies that this instance group contains preemptible instances.
 <a href="#managed_group_configs_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>group_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigmanagedgroupconfig">Sequence[Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Managed<wbr>Group<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigmasterconfigmanagedgroupconfig">Sequence[Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Managed<wbr>Group<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
@@ -7955,7 +7955,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#accelerators_csharp" style="color: inherit; text-decoration: inherit;">Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigaccelerator">List&lt;Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigaccelerator">List&lt;Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for these instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7964,7 +7964,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#diskconfig_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Disk option config settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8011,7 +8011,7 @@ Output only. Specifies that this instance group contains preemptible instances.
 <a href="#managedgroupconfigs_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Group<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigmanagedgroupconfig">List&lt;Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Managed<wbr>Group<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigmanagedgroupconfig">List&lt;Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Managed<wbr>Group<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
@@ -8149,7 +8149,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#accelerators_nodejs" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigaccelerator">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigaccelerator">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for these instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8158,7 +8158,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Disk option config settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8205,7 +8205,7 @@ Output only. Specifies that this instance group contains preemptible instances.
 <a href="#managedgroupconfigs_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Group<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigmanagedgroupconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Managed<wbr>Group<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigmanagedgroupconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Managed<wbr>Group<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
@@ -8246,7 +8246,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigaccelerator">Sequence[Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigaccelerator">Sequence[Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for these instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8255,7 +8255,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Disk option config settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8302,7 +8302,7 @@ Output only. Specifies that this instance group contains preemptible instances.
 <a href="#managed_group_configs_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>group_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigmanagedgroupconfig">Sequence[Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Managed<wbr>Group<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecondaryworkerconfigmanagedgroupconfig">Sequence[Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Managed<wbr>Group<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
@@ -8643,7 +8643,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#kerberosconfig_csharp" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfigkerberosconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfigkerberosconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kerberos related configuration.
 {{% /md %}}</dd></dl>
@@ -8669,7 +8669,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#kerberosconfig_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfigkerberosconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfigkerberosconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kerberos related configuration.
 {{% /md %}}</dd></dl>
@@ -8682,7 +8682,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#kerberos_config_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfigkerberosconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigsecurityconfigkerberosconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kerberos related configuration.
 {{% /md %}}</dd></dl>
@@ -9345,7 +9345,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#accelerators_csharp" style="color: inherit; text-decoration: inherit;">Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigaccelerator">List&lt;Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigaccelerator">List&lt;Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for these instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9354,7 +9354,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#diskconfig_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Disk option config settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9401,7 +9401,7 @@ Output only. Specifies that this instance group contains preemptible instances.
 <a href="#managedgroupconfigs_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Group<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigmanagedgroupconfig">List&lt;Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Managed<wbr>Group<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigmanagedgroupconfig">List&lt;Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Managed<wbr>Group<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
@@ -9539,7 +9539,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#accelerators_nodejs" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigaccelerator">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigaccelerator">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for these instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9548,7 +9548,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Disk option config settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9595,7 +9595,7 @@ Output only. Specifies that this instance group contains preemptible instances.
 <a href="#managedgroupconfigs_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Group<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigmanagedgroupconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Managed<wbr>Group<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigmanagedgroupconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Managed<wbr>Group<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.
@@ -9636,7 +9636,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigaccelerator">Sequence[Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigaccelerator">Sequence[Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}Optional. The Compute Engine accelerator configuration for these instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9645,7 +9645,7 @@ Output only. The config for Compute Engine Instance Group Manager that manages t
 <a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigdiskconfig">Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. Disk option config settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9692,7 +9692,7 @@ Output only. Specifies that this instance group contains preemptible instances.
 <a href="#managed_group_configs_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>group_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigmanagedgroupconfig">Sequence[Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Managed<wbr>Group<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workflowtemplateplacementmanagedclusterconfigworkerconfigmanagedgroupconfig">Sequence[Workflow<wbr>Template<wbr>Placement<wbr>Managed<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Managed<wbr>Group<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.

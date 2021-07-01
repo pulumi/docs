@@ -405,7 +405,7 @@ in state, a `destroy` or `update` that would delete the instance will fail.
 <a href="#encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseencryptionconfig">Database<wbr>Encryption<wbr>Config</a></span>
+        <span class="property-type"><a href="#databaseencryptionconfig">Database<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption configuration for the database
 Structure is documented below.
@@ -888,7 +888,7 @@ in state, a `destroy` or `update` that would delete the instance will fail.
 <a href="#state_encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseencryptionconfig">Database<wbr>Encryption<wbr>Config</a></span>
+        <span class="property-type"><a href="#databaseencryptionconfig">Database<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption configuration for the database
 Structure is documented below.

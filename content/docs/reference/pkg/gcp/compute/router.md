@@ -539,7 +539,7 @@ If it is not provided, the provider project is used.
 <a href="#bgp_go" style="color: inherit; text-decoration: inherit;">Bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerbgp">Router<wbr>Bgp</a></span>
+        <span class="property-type"><a href="#routerbgp">Router<wbr>Bgp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BGP information specific to this router.
 Structure is documented below.
@@ -1109,7 +1109,7 @@ If it is not provided, the provider project is used.
 <a href="#state_bgp_go" style="color: inherit; text-decoration: inherit;">Bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerbgp">Router<wbr>Bgp</a></span>
+        <span class="property-type"><a href="#routerbgp">Router<wbr>Bgp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BGP information specific to this router.
 Structure is documented below.
@@ -1436,7 +1436,7 @@ This enum field has the one valid value: ALL_SUBNETS
 <a href="#advertisedipranges_csharp" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerbgpadvertisediprange">List&lt;Router<wbr>Bgp<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routerbgpadvertisediprange">List&lt;Router<wbr>Bgp<wbr>Advertised<wbr>Ip<wbr>Range&gt;</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in
 custom mode. This field can only be populated if advertiseMode
@@ -1546,7 +1546,7 @@ This enum field has the one valid value: ALL_SUBNETS
 <a href="#advertisedipranges_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerbgpadvertisediprange">Router<wbr>Bgp<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#routerbgpadvertisediprange">Router<wbr>Bgp<wbr>Advertised<wbr>Ip<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in
 custom mode. This field can only be populated if advertiseMode
@@ -1601,7 +1601,7 @@ This enum field has the one valid value: ALL_SUBNETS
 <a href="#advertised_ip_ranges_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerbgpadvertisediprange">Sequence[Router<wbr>Bgp<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routerbgpadvertisediprange">Sequence[Router<wbr>Bgp<wbr>Advertised<wbr>Ip<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in
 custom mode. This field can only be populated if advertiseMode

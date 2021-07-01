@@ -832,7 +832,7 @@ will not be inferred from the provider.
 <a href="#auditlogconfigs_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iamauditconfigauditlogconfig">[]IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#iamauditconfigauditlogconfig">[]IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1193,7 +1193,7 @@ will not be inferred from the provider.
 <a href="#state_auditlogconfigs_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iamauditconfigauditlogconfig">[]IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#iamauditconfigauditlogconfig">[]IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
