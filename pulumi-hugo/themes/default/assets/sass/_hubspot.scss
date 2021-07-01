@@ -108,6 +108,10 @@
             }
         }
 
+        &.newsletter-dark-border input {
+            @apply border-gray-800;
+        }
+
         &.newsletter-wide input {
             @apply w-full;
 

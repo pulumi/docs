@@ -435,4 +435,40 @@
             bottom: 25rem;
         }
     }
+
+    &.cloud-engineering-summit-big-dots {
+        .circle-right {
+            @apply rounded-full absolute bg-salmon-600;
+            width: 12.5rem;
+            height: 12.5rem;
+            right: -6.25rem;
+        }
+
+        .circle-left {
+            @apply rounded-full absolute bg-purple-600;
+            width: 12.5rem;
+            height: 12.5rem;
+            left: -6.25rem;
+            bottom: -10rem;
+        }
+    }
+
+    &.cloud-engineering-summit-small-dots {
+        .dot-background-container {
+            @apply w-1/5 relative;
+            height: calc(100% - 15rem);
+
+            .dot-background-overlay {
+                @apply w-full h-full absolute left-0;
+                background-color: rgba(255,255,255,0.5);
+                top: 15rem;
+                z-index: 0;
+            }
+
+            .dot-background {
+                @apply absolute left-0;
+                top: 15rem;
+            }
+        }
+    }
 }

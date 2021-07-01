@@ -1,6 +1,7 @@
 import { Component, Host, h, Prop, State } from "@stencil/core";
 
 interface CountdownData {
+    remainingTimeInMS: number;
     days: number;
     hours: number;
     minutes: number;
@@ -17,10 +18,13 @@ export class DateCountdown {
     dateString: string;
 
     @Prop()
-    textClass: string = "";
+    textClass = "";
 
     @Prop()
-    valueLabelClass: string = "";
+    valueLabelClass = "";
+
+    @Prop()
+    countdownOverText = "";
 
     @State()
     countdownData: CountdownData;
@@ -33,12 +37,13 @@ export class DateCountdown {
 
     private generateCountdownData(end: number) {
         const now = Date.now();
-        const distance = end - now;
+        const remainingTimeInMS = end - now;
         this.countdownData = {
-            days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-            hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-            minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-            seconds: Math.floor((distance % (1000 * 60)) / 1000),
+            remainingTimeInMS,
+            days: Math.floor(remainingTimeInMS / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((remainingTimeInMS % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+            minutes: Math.floor((remainingTimeInMS % (1000 * 60 * 60)) / (1000 * 60)),
+            seconds: Math.floor((remainingTimeInMS % (1000 * 60)) / 1000),
         }
     }
 
@@ -47,12 +52,18 @@ export class DateCountdown {
     }
 
     private renderCountdown() {
-        const { days, hours, minutes, seconds } = this.countdownData;
+        const { days, hours, minutes, seconds, remainingTimeInMS } = this.countdownData;
         return <p class={this.textClass}>
-            <span>{ days }{this.renderValueLabel("days")} </span>
-            <span>{ hours }{this.renderValueLabel("hours")} </span>
-            <span>{ minutes }{this.renderValueLabel("minutes")} </span>
-            <span>{ seconds }{this.renderValueLabel("seconds")}</span>
+            { remainingTimeInMS > 0 ?
+                <span>
+                    <span>{ days }{this.renderValueLabel("days")} </span>
+                    <span>{ hours }{this.renderValueLabel("hours")} </span>
+                    <span>{ minutes }{this.renderValueLabel("minutes")} </span>
+                    <span>{ seconds }{this.renderValueLabel("seconds")}</span>
+                </span>
+            :
+                this.countdownOverText
+            }
         </p>;
     }
 

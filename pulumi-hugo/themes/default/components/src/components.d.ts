@@ -40,6 +40,7 @@ export namespace Components {
         "theme": string;
     }
     interface PulumiDateCountdown {
+        "countdownOverText": string;
         "dateString": string;
         "textClass": string;
         "valueLabelClass": string;
@@ -267,6 +268,7 @@ declare namespace LocalJSX {
         "theme"?: string;
     }
     interface PulumiDateCountdown {
+        "countdownOverText"?: string;
         "dateString"?: string;
         "textClass"?: string;
         "valueLabelClass"?: string;
