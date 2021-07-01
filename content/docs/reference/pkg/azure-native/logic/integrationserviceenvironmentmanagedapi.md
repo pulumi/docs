@@ -790,7 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagecontentlink_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The package content link parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -798,7 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rediscacheconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Cache<wbr>Connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The package content link parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -830,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagecontentlink_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The package content link parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rediscacheconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Cache<wbr>Connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The package content link parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -850,7 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_content_link_python" style="color: inherit; text-decoration: inherit;">package_<wbr>content_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The package content link parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redis_cache_connection_string_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>cache_<wbr>connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadataresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The package content link parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1238,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentparameters_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadatasetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadatasetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The connector deployment parameters metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1286,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdlservice_csharp" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Wsdl<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Wsdl<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The WSDL service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1406,7 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentparameters_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadatasetresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadatasetresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The connector deployment parameters metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1454,7 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdlservice_nodejs" style="color: inherit; text-decoration: inherit;">wsdl<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The WSDL service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1490,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_parameters_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apideploymentparametermetadatasetresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apideploymentparametermetadatasetresponse">Api<wbr>Deployment<wbr>Parameter<wbr>Metadata<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The connector deployment parameters metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1538,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdl_service_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The WSDL service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1642,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apidefinitions_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Definitions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Definitions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The api definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1650,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The backend service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1682,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generalinformation_csharp" style="color: inherit; text-decoration: inherit;">General<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcegeneralinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcegeneralinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The api general information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1690,7 +1690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integrationserviceenvironment_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Service<wbr>Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1698,7 +1698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcemetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcemetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1714,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcepoliciesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcepoliciesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The policies for the API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1858,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apidefinitions_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The api definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1866,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The backend service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1898,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generalinformation_nodejs" style="color: inherit; text-decoration: inherit;">general<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcegeneralinformationresponse">Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcegeneralinformationresponse">Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The api general information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1906,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integrationserviceenvironment_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Service<wbr>Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1914,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcemetadataresponse">Api<wbr>Resource<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcemetadataresponse">Api<wbr>Resource<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1930,7 +1930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcepoliciesresponse">Api<wbr>Resource<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcepoliciesresponse">Api<wbr>Resource<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The policies for the API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1966,7 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_definitions_python" style="color: inherit; text-decoration: inherit;">api_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The api definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1974,7 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The backend service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2006,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#general_information_python" style="color: inherit; text-decoration: inherit;">general_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcegeneralinformationresponse">Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcegeneralinformationresponse">Api<wbr>Resource<wbr>General<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The api general information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2014,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#integration_service_environment_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>service_<wbr>environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The integration service environment reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2022,7 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcemetadataresponse">Api<wbr>Resource<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcemetadataresponse">Api<wbr>Resource<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2038,7 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcepoliciesresponse">Api<wbr>Resource<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcepoliciesresponse">Api<wbr>Resource<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The policies for the API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -511,7 +511,7 @@ The OfficeDataConnector resource accepts the following [input]({{< relref "/docs
 <a href="#datatypes_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypes">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypes">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The available data types for the connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -800,7 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exchange_csharp" style="color: inherit; text-decoration: inherit;">Exchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesexchange">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Exchange<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesexchange">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Exchange</a></span>
     </dt>
     <dd>{{% md %}}Exchange data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -808,7 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharepoint_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypessharepoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Share<wbr>Point<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypessharepoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Share<wbr>Point</a></span>
     </dt>
     <dd>{{% md %}}SharePoint data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -816,7 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesteams">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Teams<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesteams">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Teams</a></span>
     </dt>
     <dd>{{% md %}}Teams data type connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -856,7 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exchange_nodejs" style="color: inherit; text-decoration: inherit;">exchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesexchange">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Exchange<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesexchange">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Exchange</a></span>
     </dt>
     <dd>{{% md %}}Exchange data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -864,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharepoint_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypessharepoint">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Share<wbr>Point<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypessharepoint">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Share<wbr>Point</a></span>
     </dt>
     <dd>{{% md %}}SharePoint data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -872,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesteams">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Teams<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesteams">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Teams</a></span>
     </dt>
     <dd>{{% md %}}Teams data type connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -884,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exchange_python" style="color: inherit; text-decoration: inherit;">exchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesexchange">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Exchange<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesexchange">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Exchange</a></span>
     </dt>
     <dd>{{% md %}}Exchange data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -892,7 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#share_point_python" style="color: inherit; text-decoration: inherit;">share_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypessharepoint">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Share<wbr>Point<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypessharepoint">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Share<wbr>Point</a></span>
     </dt>
     <dd>{{% md %}}SharePoint data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,7 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesteams">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Teams<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesteams">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Teams</a></span>
     </dt>
     <dd>{{% md %}}Teams data type connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -964,7 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exchange_csharp" style="color: inherit; text-decoration: inherit;">Exchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesresponseexchange">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Exchange<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesresponseexchange">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Exchange</a></span>
     </dt>
     <dd>{{% md %}}Exchange data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -972,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharepoint_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesresponsesharepoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Share<wbr>Point<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesresponsesharepoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Share<wbr>Point</a></span>
     </dt>
     <dd>{{% md %}}SharePoint data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -980,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesresponseteams">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Teams<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesresponseteams">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Teams</a></span>
     </dt>
     <dd>{{% md %}}Teams data type connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1020,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exchange_nodejs" style="color: inherit; text-decoration: inherit;">exchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesresponseexchange">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Exchange<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesresponseexchange">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Exchange</a></span>
     </dt>
     <dd>{{% md %}}Exchange data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1028,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharepoint_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesresponsesharepoint">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Share<wbr>Point<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesresponsesharepoint">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Share<wbr>Point</a></span>
     </dt>
     <dd>{{% md %}}SharePoint data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1036,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesresponseteams">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Teams<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesresponseteams">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Teams</a></span>
     </dt>
     <dd>{{% md %}}Teams data type connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1048,7 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exchange_python" style="color: inherit; text-decoration: inherit;">exchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesresponseexchange">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Exchange<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesresponseexchange">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Exchange</a></span>
     </dt>
     <dd>{{% md %}}Exchange data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1056,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#share_point_python" style="color: inherit; text-decoration: inherit;">share_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesresponsesharepoint">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Share<wbr>Point<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesresponsesharepoint">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Share<wbr>Point</a></span>
     </dt>
     <dd>{{% md %}}SharePoint data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1064,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#officedataconnectordatatypesresponseteams">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Teams<wbr>Args</a></span>
+        <span class="property-type"><a href="#officedataconnectordatatypesresponseteams">Office<wbr>Data<wbr>Connector<wbr>Data<wbr>Types<wbr>Response<wbr>Teams</a></span>
     </dt>
     <dd>{{% md %}}Teams data type connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}

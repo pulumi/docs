@@ -418,7 +418,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#storageaccount_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountproperties">Storage<wbr>Account<wbr>Properties</a></span>
+        <span class="property-type"><a href="#storageaccountproperties">Storage<wbr>Account<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the storage account for the machine learning team account.{{% /md %}}</dd><dt class="property-required"
             title="Required">

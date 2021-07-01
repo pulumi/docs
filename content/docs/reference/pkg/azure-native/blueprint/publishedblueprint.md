@@ -494,7 +494,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Parameter<wbr>Definition</span>
+        <span class="property-type">map[string]Parameter<wbr>Definition<wbr>Args</span>
     </dt>
     <dd>{{% md %}}Parameters required by this blueprint definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +502,7 @@ The PublishedBlueprint resource accepts the following [input]({{< relref "/docs/
 <a href="#resourcegroups_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Resource<wbr>Group<wbr>Definition</span>
+        <span class="property-type">map[string]Resource<wbr>Group<wbr>Definition<wbr>Args</span>
     </dt>
     <dd>{{% md %}}Resource group placeholders defined by this blueprint definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

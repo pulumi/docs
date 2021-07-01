@@ -860,7 +860,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed identity associated with the policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -884,7 +884,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
 <a href="#noncompliancemessages_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Compliance<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noncompliancemessage">[]Non<wbr>Compliance<wbr>Message</a></span>
+        <span class="property-type"><a href="#noncompliancemessage">[]Non<wbr>Compliance<wbr>Message<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The messages that describe why a resource is non-compliant with the policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,7 +900,7 @@ The PolicyAssignment resource accepts the following [input]({{< relref "/docs/in
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Parameter<wbr>Values<wbr>Value</span>
+        <span class="property-type">map[string]Parameter<wbr>Values<wbr>Value<wbr>Args</span>
     </dt>
     <dd>{{% md %}}The parameter values for the assigned policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The identity type. This is the only required field when adding a system assigned identity to a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

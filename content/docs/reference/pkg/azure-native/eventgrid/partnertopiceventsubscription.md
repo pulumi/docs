@@ -440,7 +440,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#deadletterdestination_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestination">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestination">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -449,7 +449,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#deadletterwithresourceidentity_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>With<wbr>Resource<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deadletterwithresourceidentity">Dead<wbr>Letter<wbr>With<wbr>Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#deadletterwithresourceidentity">Dead<wbr>Letter<wbr>With<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dead letter destination of the event subscription. Any event that cannot be delivered to its' destination is sent to the dead letter destination.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -458,7 +458,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#deliverywithresourceidentity_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>With<wbr>Resource<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverywithresourceidentity">Delivery<wbr>With<wbr>Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#deliverywithresourceidentity">Delivery<wbr>With<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -467,7 +467,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#eventhubeventsubscriptiondestination">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#hybridconnectioneventsubscriptiondestination">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#servicebusqueueeventsubscriptiondestination">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#servicebustopiceventsubscriptiondestination">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#storagequeueeventsubscriptiondestination">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#webhookeventsubscriptiondestination">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestination">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestination">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestination">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestination">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestination">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#webhookeventsubscriptiondestination">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -500,7 +500,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionfilter">Event<wbr>Subscription<wbr>Filter</a></span>
+        <span class="property-type"><a href="#eventsubscriptionfilter">Event<wbr>Subscription<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the filter for the event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -516,7 +516,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1355,7 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deadletterdestination_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -1364,7 +1364,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1397,7 +1397,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#deadletterdestination_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestination">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestination">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -1406,7 +1406,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentity">Event<wbr>Subscription<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentity">Event<wbr>Subscription<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1418,7 +1418,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#dead_letter_destination_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestination">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestination">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -1427,7 +1427,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentity">Event<wbr>Subscription<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentity">Event<wbr>Subscription<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1441,7 +1441,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#deadletterdestination_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -1450,7 +1450,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1483,7 +1483,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#deadletterdestination_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -1492,7 +1492,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1504,7 +1504,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#dead_letter_destination_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -1513,7 +1513,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1527,7 +1527,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#webhookeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#eventhubeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#hybridconnectioneventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#servicebusqueueeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#servicebustopiceventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#storagequeueeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#webhookeventsubscriptiondestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -1536,7 +1536,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1569,7 +1569,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestination">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestination">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestination">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestination">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestination">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#webhookeventsubscriptiondestination">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#eventhubeventsubscriptiondestination">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#hybridconnectioneventsubscriptiondestination">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#servicebusqueueeventsubscriptiondestination">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#servicebustopiceventsubscriptiondestination">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#storagequeueeventsubscriptiondestination">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#webhookeventsubscriptiondestination">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -1578,7 +1578,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentity">Event<wbr>Subscription<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentity">Event<wbr>Subscription<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1590,7 +1590,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestination">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestination">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestination">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestination">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestination">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#webhookeventsubscriptiondestination">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#eventhubeventsubscriptiondestination">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#hybridconnectioneventsubscriptiondestination">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#servicebusqueueeventsubscriptiondestination">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#servicebustopiceventsubscriptiondestination">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#storagequeueeventsubscriptiondestination">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#webhookeventsubscriptiondestination">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -1599,7 +1599,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentity">Event<wbr>Subscription<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentity">Event<wbr>Subscription<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1613,7 +1613,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#webhookeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#eventhubeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#hybridconnectioneventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#servicebusqueueeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#servicebustopiceventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#storagequeueeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#webhookeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -1622,7 +1622,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1655,7 +1655,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestinationresponse">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestinationresponse">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestinationresponse">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#webhookeventsubscriptiondestinationresponse">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#eventhubeventsubscriptiondestinationresponse">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#hybridconnectioneventsubscriptiondestinationresponse">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#servicebusqueueeventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#servicebustopiceventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#storagequeueeventsubscriptiondestinationresponse">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#webhookeventsubscriptiondestinationresponse">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -1664,7 +1664,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1676,7 +1676,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestinationresponse">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestinationresponse">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestinationresponse">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#webhookeventsubscriptiondestinationresponse">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#eventhubeventsubscriptiondestinationresponse">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#hybridconnectioneventsubscriptiondestinationresponse">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#servicebusqueueeventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#servicebustopiceventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#storagequeueeventsubscriptiondestinationresponse">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#webhookeventsubscriptiondestinationresponse">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -1685,7 +1685,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1925,7 +1925,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advancedfilters_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args[]</span>
+        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>In<wbr>Advanced<wbr>Filter | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>Contains<wbr>Advanced<wbr>Filter | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>In<wbr>Advanced<wbr>Filter | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter[]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1973,7 +1973,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter, Number<wbr>In<wbr>Advanced<wbr>Filter, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter, String<wbr>Contains<wbr>Advanced<wbr>Filter, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter, String<wbr>In<wbr>Advanced<wbr>Filter, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2119,7 +2119,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advancedfilters_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2167,7 +2167,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

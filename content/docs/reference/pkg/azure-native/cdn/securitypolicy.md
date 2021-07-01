@@ -418,7 +418,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicywebapplicationfirewallparameters">Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#securitypolicywebapplicationfirewallparameters">Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}object which contains security policy parameters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of domains.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -877,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}List of domains.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}List of domains.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -919,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of domains.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -959,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of domains.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -979,7 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of domains.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_csharp" style="color: inherit; text-decoration: inherit;">Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociation">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociation">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association&gt;</a></span>
     </dt>
     <dd>{{% md %}}Waf associations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1009,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wafpolicy_csharp" style="color: inherit; text-decoration: inherit;">Waf<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1041,7 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_nodejs" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociation">Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociation">Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association[]</a></span>
     </dt>
     <dd>{{% md %}}Waf associations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wafpolicy_nodejs" style="color: inherit; text-decoration: inherit;">waf<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1061,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_python" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociation">Sequence[Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociation">Sequence[Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association]</a></span>
     </dt>
     <dd>{{% md %}}Waf associations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#waf_policy_python" style="color: inherit; text-decoration: inherit;">waf_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1083,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_csharp" style="color: inherit; text-decoration: inherit;">Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Waf associations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1091,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wafpolicy_csharp" style="color: inherit; text-decoration: inherit;">Waf<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1123,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_nodejs" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociationresponse">Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociationresponse">Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Waf associations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1131,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wafpolicy_nodejs" style="color: inherit; text-decoration: inherit;">waf<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1143,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associations_python" style="color: inherit; text-decoration: inherit;">associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociationresponse">Sequence[Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitypolicywebapplicationfirewallassociationresponse">Sequence[Security<wbr>Policy<wbr>Web<wbr>Application<wbr>Firewall<wbr>Association<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Waf associations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1151,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#waf_policy_python" style="color: inherit; text-decoration: inherit;">waf_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}

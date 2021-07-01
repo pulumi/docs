@@ -340,7 +340,7 @@ The ProximityPlacementGroup resource accepts the following [input]({{< relref "/
 <a href="#colocationstatus_go" style="color: inherit; text-decoration: inherit;">Colocation<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatus">Instance<wbr>View<wbr>Status</a></span>
+        <span class="property-type"><a href="#instanceviewstatus">Instance<wbr>View<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -775,7 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusleveltypes">Status<wbr>Level<wbr>Types</a></span>
+        <span class="property-type"><a href="#statusleveltypes">string</a></span>
     </dt>
     <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1127,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#colocationstatus_csharp" style="color: inherit; text-decoration: inherit;">Colocation<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes colocation status of a resource in the Proximity Placement Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1167,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#colocationstatus_nodejs" style="color: inherit; text-decoration: inherit;">colocation<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes colocation status of a resource in the Proximity Placement Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1187,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#colocation_status_python" style="color: inherit; text-decoration: inherit;">colocation_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes colocation status of a resource in the Proximity Placement Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

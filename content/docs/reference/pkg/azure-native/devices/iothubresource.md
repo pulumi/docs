@@ -560,7 +560,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubskuinfo">Iot<wbr>Hub<wbr>Sku<wbr>Info</a></span>
+        <span class="property-type"><a href="#iothubskuinfo">Iot<wbr>Hub<wbr>Sku<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IotHub SKU info{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -584,7 +584,7 @@ The IotHubResource resource accepts the following [input]({{< relref "/docs/intr
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubproperties">Iot<wbr>Hub<wbr>Properties</a></span>
+        <span class="property-type"><a href="#iothubproperties">Iot<wbr>Hub<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IotHub properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#feedback_csharp" style="color: inherit; text-decoration: inherit;">Feedback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#feedbackproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Feedback<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#feedbackproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Feedback<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#feedback_nodejs" style="color: inherit; text-decoration: inherit;">feedback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#feedbackproperties">Feedback<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#feedbackproperties">Feedback<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1085,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#feedback_python" style="color: inherit; text-decoration: inherit;">feedback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#feedbackproperties">Feedback<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#feedbackproperties">Feedback<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1115,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#feedback_csharp" style="color: inherit; text-decoration: inherit;">Feedback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#feedbackpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Feedback<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#feedbackpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Feedback<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#feedback_nodejs" style="color: inherit; text-decoration: inherit;">feedback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#feedbackpropertiesresponse">Feedback<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#feedbackpropertiesresponse">Feedback<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1199,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#feedback_python" style="color: inherit; text-decoration: inherit;">feedback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#feedbackpropertiesresponse">Feedback<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#feedbackpropertiesresponse">Feedback<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the feedback queue for cloud-to-device messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2401,7 +2401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2409,7 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudtodevice_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>To<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtodeviceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtodeviceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Cloud<wbr>To<wbr>Device<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2433,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventhubendpoints_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Properties<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Properties&gt;</span>
     </dt>
     <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2449,7 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipfilterrules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipfilterrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Ip<wbr>Filter<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2457,7 +2457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagingendpoints_csharp" style="color: inherit; text-decoration: inherit;">Messaging<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Messaging<wbr>Endpoint<wbr>Properties<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Messaging<wbr>Endpoint<wbr>Properties&gt;</span>
     </dt>
     <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2473,7 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkrulesets_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkrulesetproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2481,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection&gt;</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2497,7 +2497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_csharp" style="color: inherit; text-decoration: inherit;">Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2505,7 +2505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageendpoints_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Storage<wbr>Endpoint<wbr>Properties<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Storage<wbr>Endpoint<wbr>Properties&gt;</span>
     </dt>
     <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2633,7 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationrule">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationrule">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2641,7 +2641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudtodevice_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>To<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtodeviceproperties">Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtodeviceproperties">Cloud<wbr>To<wbr>Device<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2665,7 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventhubendpoints_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Event<wbr>Hub<wbr>Properties<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Event<wbr>Hub<wbr>Properties}</span>
     </dt>
     <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2681,7 +2681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipfilterrules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterrule">Ip<wbr>Filter<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipfilterrule">Ip<wbr>Filter<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2689,7 +2689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagingendpoints_nodejs" style="color: inherit; text-decoration: inherit;">messaging<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Messaging<wbr>Endpoint<wbr>Properties<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Messaging<wbr>Endpoint<wbr>Properties}</span>
     </dt>
     <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2705,7 +2705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkrulesets_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetproperties">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkrulesetproperties">Network<wbr>Rule<wbr>Set<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">Private<wbr>Endpoint<wbr>Connection<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">Private<wbr>Endpoint<wbr>Connection[]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2729,7 +2729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_nodejs" style="color: inherit; text-decoration: inherit;">routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingproperties">Routing<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingproperties">Routing<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2737,7 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageendpoints_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Storage<wbr>Endpoint<wbr>Properties<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Storage<wbr>Endpoint<wbr>Properties}</span>
     </dt>
     <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2749,7 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_policies_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationrule">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationrule">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2757,7 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_to_device_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>to_<wbr>device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtodeviceproperties">Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtodeviceproperties">Cloud<wbr>To<wbr>Device<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2781,7 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_hub_endpoints_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Event<wbr>Hub<wbr>Properties<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Event<wbr>Hub<wbr>Properties]</span>
     </dt>
     <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2797,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterrule">Sequence[Ip<wbr>Filter<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipfilterrule">Sequence[Ip<wbr>Filter<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2805,7 +2805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messaging_endpoints_python" style="color: inherit; text-decoration: inherit;">messaging_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Messaging<wbr>Endpoint<wbr>Properties<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Messaging<wbr>Endpoint<wbr>Properties]</span>
     </dt>
     <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2821,7 +2821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_rule_sets_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetproperties">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkrulesetproperties">Network<wbr>Rule<wbr>Set<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2829,7 +2829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">Sequence[Private<wbr>Endpoint<wbr>Connection]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2845,7 +2845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_python" style="color: inherit; text-decoration: inherit;">routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingproperties">Routing<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingproperties">Routing<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2853,7 +2853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_endpoints_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Storage<wbr>Endpoint<wbr>Properties<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Storage<wbr>Endpoint<wbr>Properties]</span>
     </dt>
     <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2875,7 +2875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothublocationdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Iot<wbr>Hub<wbr>Location<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iothublocationdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Iot<wbr>Hub<wbr>Location<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Primary and secondary location for iot hub{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2899,7 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2907,7 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudtodevice_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>To<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtodevicepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtodevicepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2931,7 +2931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventhubendpoints_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2947,7 +2947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipfilterrules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipfilterruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2955,7 +2955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagingendpoints_csharp" style="color: inherit; text-decoration: inherit;">Messaging<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Messaging<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Messaging<wbr>Endpoint<wbr>Properties<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2971,7 +2971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkrulesets_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkrulesetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2979,7 +2979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2995,7 +2995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_csharp" style="color: inherit; text-decoration: inherit;">Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3003,7 +3003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageendpoints_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Storage<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Storage<wbr>Endpoint<wbr>Properties<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3171,7 +3171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothublocationdescriptionresponse">Iot<wbr>Hub<wbr>Location<wbr>Description<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#iothublocationdescriptionresponse">Iot<wbr>Hub<wbr>Location<wbr>Description<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Primary and secondary location for iot hub{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3195,7 +3195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleresponse">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleresponse">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3203,7 +3203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloudtodevice_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>To<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtodevicepropertiesresponse">Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtodevicepropertiesresponse">Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3227,7 +3227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventhubendpoints_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Event<wbr>Hub<wbr>Properties<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Event<wbr>Hub<wbr>Properties<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3243,7 +3243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipfilterrules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterruleresponse">Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipfilterruleresponse">Ip<wbr>Filter<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3251,7 +3251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagingendpoints_nodejs" style="color: inherit; text-decoration: inherit;">messaging<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Messaging<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Messaging<wbr>Endpoint<wbr>Properties<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3267,7 +3267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkrulesets_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetpropertiesresponse">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkrulesetpropertiesresponse">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3275,7 +3275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3291,7 +3291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_nodejs" style="color: inherit; text-decoration: inherit;">routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingpropertiesresponse">Routing<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingpropertiesresponse">Routing<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3299,7 +3299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageendpoints_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Storage<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Storage<wbr>Endpoint<wbr>Properties<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3319,7 +3319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothublocationdescriptionresponse">Sequence[Iot<wbr>Hub<wbr>Location<wbr>Description<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iothublocationdescriptionresponse">Sequence[Iot<wbr>Hub<wbr>Location<wbr>Description<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Primary and secondary location for iot hub{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3343,7 +3343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_policies_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleresponse">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleresponse">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The shared access policies you can use to secure a connection to the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3351,7 +3351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cloud_to_device_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>to_<wbr>device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtodevicepropertiesresponse">Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtodevicepropertiesresponse">Cloud<wbr>To<wbr>Device<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IoT hub cloud-to-device messaging properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3375,7 +3375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_hub_endpoints_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Event<wbr>Hub<wbr>Properties<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Event<wbr>Hub<wbr>Properties<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The Event Hub-compatible endpoint properties. The only possible keys to this dictionary is events. This key has to be present in the dictionary while making create or update calls for the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3391,7 +3391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfilterruleresponse">Sequence[Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipfilterruleresponse">Sequence[Ip<wbr>Filter<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3399,7 +3399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messaging_endpoints_python" style="color: inherit; text-decoration: inherit;">messaging_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Messaging<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Messaging<wbr>Endpoint<wbr>Properties<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The messaging endpoint properties for the file upload notification queue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3415,7 +3415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_rule_sets_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetpropertiesresponse">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkrulesetpropertiesresponse">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3423,7 +3423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3439,7 +3439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_python" style="color: inherit; text-decoration: inherit;">routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingpropertiesresponse">Routing<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingpropertiesresponse">Routing<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The routing related properties of the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3447,7 +3447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_endpoints_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Storage<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Storage<wbr>Endpoint<wbr>Properties<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The list of Azure Storage endpoints where you can upload files. Currently you can configure only one Azure Storage account and that MUST have its key as $default. Specifying more than one storage account causes an error to be thrown. Not specifying a value for this property when the enableFileUploadNotifications property is set to True, causes an error to be thrown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4443,7 +4443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetiprule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkrulesetiprule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IP Rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4499,7 +4499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetiprule">Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkrulesetiprule">Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}List of IP Rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4527,7 +4527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetiprule">Sequence[Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkrulesetiprule">Sequence[Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}List of IP Rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4557,7 +4557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkrulesetipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IP Rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4613,7 +4613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetipruleresponse">Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkrulesetipruleresponse">Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of IP Rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4641,7 +4641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetipruleresponse">Sequence[Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkrulesetipruleresponse">Sequence[Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of IP Rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4663,7 +4663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4687,7 +4687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4699,7 +4699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4713,7 +4713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4737,7 +4737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4749,7 +4749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4763,7 +4763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4771,7 +4771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4803,7 +4803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4811,7 +4811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4823,7 +4823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4831,7 +4831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4861,7 +4861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4933,7 +4933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4969,7 +4969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5685,7 +5685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventhubs_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingeventhubproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routingeventhubproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Event<wbr>Hub<wbr>Properties&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5693,7 +5693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusqueues_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebusqueueendpointproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routingservicebusqueueendpointproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5701,7 +5701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebustopics_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebustopicendpointproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routingservicebustopicendpointproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5709,7 +5709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagecontainers_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingstoragecontainerproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routingstoragecontainerproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Storage<wbr>Container<wbr>Properties&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5757,7 +5757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventhubs_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingeventhubproperties">Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#routingeventhubproperties">Routing<wbr>Event<wbr>Hub<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5765,7 +5765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusqueues_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Queues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebusqueueendpointproperties">Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#routingservicebusqueueendpointproperties">Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5773,7 +5773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebustopics_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebustopicendpointproperties">Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#routingservicebustopicendpointproperties">Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5781,7 +5781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagecontainers_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingstoragecontainerproperties">Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#routingstoragecontainerproperties">Routing<wbr>Storage<wbr>Container<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5793,7 +5793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_hubs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingeventhubproperties">Sequence[Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routingeventhubproperties">Sequence[Routing<wbr>Event<wbr>Hub<wbr>Properties]</a></span>
     </dt>
     <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5801,7 +5801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_queues_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebusqueueendpointproperties">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routingservicebusqueueendpointproperties">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties]</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5809,7 +5809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_topics_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebustopicendpointproperties">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routingservicebustopicendpointproperties">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties]</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5817,7 +5817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_containers_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingstoragecontainerproperties">Sequence[Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routingstoragecontainerproperties">Sequence[Routing<wbr>Storage<wbr>Container<wbr>Properties]</a></span>
     </dt>
     <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5831,7 +5831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventhubs_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingeventhubpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routingeventhubpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5839,7 +5839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusqueues_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebusqueueendpointpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routingservicebusqueueendpointpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5847,7 +5847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebustopics_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebustopicendpointpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routingservicebustopicendpointpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5855,7 +5855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagecontainers_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingstoragecontainerpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routingstoragecontainerpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5903,7 +5903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventhubs_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingeventhubpropertiesresponse">Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#routingeventhubpropertiesresponse">Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5911,7 +5911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusqueues_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Queues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebusqueueendpointpropertiesresponse">Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#routingservicebusqueueendpointpropertiesresponse">Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5919,7 +5919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebustopics_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebustopicendpointpropertiesresponse">Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#routingservicebustopicendpointpropertiesresponse">Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5927,7 +5927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagecontainers_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingstoragecontainerpropertiesresponse">Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#routingstoragecontainerpropertiesresponse">Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5939,7 +5939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_hubs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingeventhubpropertiesresponse">Sequence[Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routingeventhubpropertiesresponse">Sequence[Routing<wbr>Event<wbr>Hub<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5947,7 +5947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_queues_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queues</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebusqueueendpointpropertiesresponse">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routingservicebusqueueendpointpropertiesresponse">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5955,7 +5955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_topics_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingservicebustopicendpointpropertiesresponse">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routingservicebustopicendpointpropertiesresponse">Sequence[Routing<wbr>Service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5963,7 +5963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_containers_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingstoragecontainerpropertiesresponse">Sequence[Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routingstoragecontainerpropertiesresponse">Sequence[Routing<wbr>Storage<wbr>Container<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6525,7 +6525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingendpoints">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Endpoints<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingendpoints">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Endpoints</a></span>
     </dt>
     <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6533,7 +6533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enrichments_csharp" style="color: inherit; text-decoration: inherit;">Enrichments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enrichmentproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Enrichment<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#enrichmentproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Enrichment<wbr>Properties&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6541,7 +6541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fallbackroute_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fallbackrouteproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Fallback<wbr>Route<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#fallbackrouteproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Fallback<wbr>Route<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6549,7 +6549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Route<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routeproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Route<wbr>Properties&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6597,7 +6597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingendpoints">Routing<wbr>Endpoints<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingendpoints">Routing<wbr>Endpoints</a></span>
     </dt>
     <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6605,7 +6605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enrichments_nodejs" style="color: inherit; text-decoration: inherit;">enrichments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enrichmentproperties">Enrichment<wbr>Properties<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#enrichmentproperties">Enrichment<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6613,7 +6613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fallbackroute_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fallbackrouteproperties">Fallback<wbr>Route<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#fallbackrouteproperties">Fallback<wbr>Route<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6621,7 +6621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeproperties">Route<wbr>Properties<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#routeproperties">Route<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6633,7 +6633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingendpoints">Routing<wbr>Endpoints<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingendpoints">Routing<wbr>Endpoints</a></span>
     </dt>
     <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6641,7 +6641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enrichments_python" style="color: inherit; text-decoration: inherit;">enrichments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enrichmentproperties">Sequence[Enrichment<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#enrichmentproperties">Sequence[Enrichment<wbr>Properties]</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6649,7 +6649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fallback_route_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fallbackrouteproperties">Fallback<wbr>Route<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#fallbackrouteproperties">Fallback<wbr>Route<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6657,7 +6657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routeproperties">Sequence[Route<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routeproperties">Sequence[Route<wbr>Properties]</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6671,7 +6671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Routing<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6679,7 +6679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enrichments_csharp" style="color: inherit; text-decoration: inherit;">Enrichments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enrichmentpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Enrichment<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#enrichmentpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Enrichment<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6687,7 +6687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fallbackroute_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fallbackroutepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Fallback<wbr>Route<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fallbackroutepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Fallback<wbr>Route<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6695,7 +6695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routepropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Route<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routepropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Route<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6743,7 +6743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingendpointsresponse">Routing<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingendpointsresponse">Routing<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6751,7 +6751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enrichments_nodejs" style="color: inherit; text-decoration: inherit;">enrichments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enrichmentpropertiesresponse">Enrichment<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#enrichmentpropertiesresponse">Enrichment<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6759,7 +6759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fallbackroute_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fallbackroutepropertiesresponse">Fallback<wbr>Route<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fallbackroutepropertiesresponse">Fallback<wbr>Route<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6767,7 +6767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routepropertiesresponse">Route<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#routepropertiesresponse">Route<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6779,7 +6779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingendpointsresponse">Routing<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingendpointsresponse">Routing<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6787,7 +6787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enrichments_python" style="color: inherit; text-decoration: inherit;">enrichments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enrichmentpropertiesresponse">Sequence[Enrichment<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#enrichmentpropertiesresponse">Sequence[Enrichment<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6795,7 +6795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fallback_route_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fallbackroutepropertiesresponse">Fallback<wbr>Route<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fallbackroutepropertiesresponse">Fallback<wbr>Route<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6803,7 +6803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routepropertiesresponse">Sequence[Route<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routepropertiesresponse">Sequence[Route<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.{{% /md %}}</dd></dl>
 {{% /choosable %}}

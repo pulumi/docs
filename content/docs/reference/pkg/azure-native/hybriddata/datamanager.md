@@ -365,7 +365,7 @@ region is specified on update the request will succeed.{{% /md %}}</dd><dt class
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

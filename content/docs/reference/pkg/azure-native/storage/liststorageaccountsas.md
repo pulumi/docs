@@ -215,7 +215,7 @@ The following arguments are supported:
 <a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpprotocol">Http<wbr>Protocol</a></span>
+        <span class="property-type"><a href="#httpprotocol">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol permitted for a request made with the account SAS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

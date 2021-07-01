@@ -559,7 +559,7 @@ The SecurityRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#destinationapplicationsecuritygroups_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Application<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsecuritygroup">[]Application<wbr>Security<wbr>Group<wbr>Type</a></span>
+        <span class="property-type"><a href="#applicationsecuritygroup">[]Application<wbr>Security<wbr>Group<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The application security group specified as destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -631,7 +631,7 @@ The SecurityRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sourceapplicationsecuritygroups_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Application<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsecuritygroup">[]Application<wbr>Security<wbr>Group<wbr>Type</a></span>
+        <span class="property-type"><a href="#applicationsecuritygroup">[]Application<wbr>Security<wbr>Group<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The application security group specified as source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

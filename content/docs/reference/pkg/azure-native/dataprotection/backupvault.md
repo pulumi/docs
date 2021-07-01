@@ -550,7 +550,7 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupvault">Backup<wbr>Vault<wbr>Type</a></span>
+        <span class="property-type"><a href="#backupvault">Backup<wbr>Vault<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}BackupVaultResource properties{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -574,7 +574,7 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dppidentitydetails">Dpp<wbr>Identity<wbr>Details</a></span>
+        <span class="property-type"><a href="#dppidentitydetails">Dpp<wbr>Identity<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input Managed Identity Details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -893,7 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagesettings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesetting">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Storage<wbr>Setting<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storagesetting">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Storage<wbr>Setting&gt;</a></span>
     </dt>
     <dd>{{% md %}}Storage Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -917,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagesettings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesetting">Storage<wbr>Setting<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#storagesetting">Storage<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}Storage Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -929,7 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_settings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesetting">Sequence[Storage<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storagesetting">Sequence[Storage<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}Storage Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -951,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagesettings_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Storage<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#storagesettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Storage<wbr>Setting<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Storage Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -991,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagesettings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesettingresponse">Storage<wbr>Setting<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#storagesettingresponse">Storage<wbr>Setting<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Storage Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1011,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_settings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagesettingresponse">Sequence[Storage<wbr>Setting<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storagesettingresponse">Sequence[Storage<wbr>Setting<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Storage Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}

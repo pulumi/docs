@@ -798,7 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labvmsshutdown_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Vms<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The auto-shutdown schedule, if one has been set at the lab or lab resource level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -806,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labvmsstartup_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Vms<wbr>Startup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The auto-startup schedule, if one has been set at the lab or lab resource level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -918,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labvmsshutdown_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Vms<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The auto-shutdown schedule, if one has been set at the lab or lab resource level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labvmsstartup_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Vms<wbr>Startup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The auto-startup schedule, if one has been set at the lab or lab resource level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lab_vms_shutdown_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>vms_<wbr>shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The auto-shutdown schedule, if one has been set at the lab or lab resource level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -986,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lab_vms_startup_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>vms_<wbr>startup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The auto-startup schedule, if one has been set at the lab or lab resource level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1342,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Day<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#daydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Day<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1350,7 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourlyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1366,7 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationsettings_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1414,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Week<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Week<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1606,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1614,7 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourlyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1630,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationsettings_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1678,7 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weeklyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1738,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1746,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hourly_recurrence_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1762,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1810,7 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekly_recurrence_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}

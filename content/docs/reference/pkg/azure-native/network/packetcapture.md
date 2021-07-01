@@ -434,7 +434,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#storagelocation_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturestoragelocation">Packet<wbr>Capture<wbr>Storage<wbr>Location</a></span>
+        <span class="property-type"><a href="#packetcapturestoragelocation">Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage location for a packet capture session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -458,7 +458,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturefilter">[]Packet<wbr>Capture<wbr>Filter</a></span>
+        <span class="property-type"><a href="#packetcapturefilter">[]Packet<wbr>Capture<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of packet capture filters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

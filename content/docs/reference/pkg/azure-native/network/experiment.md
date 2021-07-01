@@ -429,7 +429,7 @@ The Experiment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#endpointa_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>A</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimentendpoint">Experiment<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#experimentendpoint">Experiment<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoint A of an experiment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -437,7 +437,7 @@ The Experiment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#endpointb_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>B</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimentendpoint">Experiment<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#experimentendpoint">Experiment<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The endpoint B of an experiment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

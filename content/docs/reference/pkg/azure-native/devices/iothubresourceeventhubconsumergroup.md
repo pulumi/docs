@@ -368,7 +368,7 @@ The IotHubResourceEventHubConsumerGroup resource accepts the following [input]({
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubconsumergroupname">Event<wbr>Hub<wbr>Consumer<wbr>Group<wbr>Name</a></span>
+        <span class="property-type"><a href="#eventhubconsumergroupname">Event<wbr>Hub<wbr>Consumer<wbr>Group<wbr>Name<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EventHub consumer group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}

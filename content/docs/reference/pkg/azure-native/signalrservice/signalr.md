@@ -610,7 +610,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrcorssettings">Signal<wbr>RCors<wbr>Settings</a></span>
+        <span class="property-type"><a href="#signalrcorssettings">Signal<wbr>RCors<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +618,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrfeature">[]Signal<wbr>RFeature</a></span>
+        <span class="property-type"><a href="#signalrfeature">[]Signal<wbr>RFeature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of SignalR featureFlags. e.g. ServiceMode.
 
@@ -647,7 +647,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#networkacls_go" style="color: inherit; text-decoration: inherit;">Network<wbr>ACLs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrnetworkacls">Signal<wbr>RNetwork<wbr>ACLs</a></span>
+        <span class="property-type"><a href="#signalrnetworkacls">Signal<wbr>RNetwork<wbr>ACLs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network ACLs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -663,7 +663,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
+        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The billing information of the resource.(e.g. Free, Standard){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -679,7 +679,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#upstream_go" style="color: inherit; text-decoration: inherit;">Upstream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverlessupstreamsettings">Serverless<wbr>Upstream<wbr>Settings</a></span>
+        <span class="property-type"><a href="#serverlessupstreamsettings">Serverless<wbr>Upstream<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upstream settings when the Azure SignalR is in server-less mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1740,7 +1740,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1748,7 +1748,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1844,7 +1844,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1852,7 +1852,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1896,7 +1896,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1904,7 +1904,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2438,7 +2438,7 @@ If present, following values are allowed:
 <a href="#templates_csharp" style="color: inherit; text-decoration: inherit;">Templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Upstream<wbr>Template<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#upstreamtemplate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Upstream<wbr>Template&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2462,7 +2462,7 @@ If present, following values are allowed:
 <a href="#templates_nodejs" style="color: inherit; text-decoration: inherit;">templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplate">Upstream<wbr>Template<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#upstreamtemplate">Upstream<wbr>Template[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2474,7 +2474,7 @@ If present, following values are allowed:
 <a href="#templates_python" style="color: inherit; text-decoration: inherit;">templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplate">Sequence[Upstream<wbr>Template<wbr>Args]</a></span>
+        <span class="property-type"><a href="#upstreamtemplate">Sequence[Upstream<wbr>Template]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2488,7 +2488,7 @@ If present, following values are allowed:
 <a href="#templates_csharp" style="color: inherit; text-decoration: inherit;">Templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Upstream<wbr>Template<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#upstreamtemplateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Upstream<wbr>Template<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2512,7 +2512,7 @@ If present, following values are allowed:
 <a href="#templates_nodejs" style="color: inherit; text-decoration: inherit;">templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplateresponse">Upstream<wbr>Template<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#upstreamtemplateresponse">Upstream<wbr>Template<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2524,7 +2524,7 @@ If present, following values are allowed:
 <a href="#templates_python" style="color: inherit; text-decoration: inherit;">templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplateresponse">Sequence[Upstream<wbr>Template<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#upstreamtemplateresponse">Sequence[Upstream<wbr>Template<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2916,7 +2916,7 @@ If present, following values are allowed:
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointacl">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLArgs&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointacl">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACL&gt;</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2924,7 +2924,7 @@ If present, following values are allowed:
 <a href="#publicnetwork_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkacl">Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Network<wbr>ACLArgs</a></span>
+        <span class="property-type"><a href="#networkacl">Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Network<wbr>ACL</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2972,7 +2972,7 @@ If present, following values are allowed:
 <a href="#privateendpoints_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointacl">Private<wbr>Endpoint<wbr>ACLArgs[]</a></span>
+        <span class="property-type"><a href="#privateendpointacl">Private<wbr>Endpoint<wbr>ACL[]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2980,7 +2980,7 @@ If present, following values are allowed:
 <a href="#publicnetwork_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkacl">Network<wbr>ACLArgs</a></span>
+        <span class="property-type"><a href="#networkacl">Network<wbr>ACL</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3000,7 +3000,7 @@ If present, following values are allowed:
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointacl">Sequence[Private<wbr>Endpoint<wbr>ACLArgs]</a></span>
+        <span class="property-type"><a href="#privateendpointacl">Sequence[Private<wbr>Endpoint<wbr>ACL]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3008,7 +3008,7 @@ If present, following values are allowed:
 <a href="#public_network_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkacl">Network<wbr>ACLArgs</a></span>
+        <span class="property-type"><a href="#networkacl">Network<wbr>ACL</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3030,7 +3030,7 @@ If present, following values are allowed:
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointaclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointaclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLResponse&gt;</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3038,7 +3038,7 @@ If present, following values are allowed:
 <a href="#publicnetwork_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Network<wbr>ACLResponse<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkaclresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Network<wbr>ACLResponse</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3086,7 +3086,7 @@ If present, following values are allowed:
 <a href="#privateendpoints_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointaclresponse">Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#privateendpointaclresponse">Private<wbr>Endpoint<wbr>ACLResponse[]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3094,7 +3094,7 @@ If present, following values are allowed:
 <a href="#publicnetwork_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3114,7 +3114,7 @@ If present, following values are allowed:
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointaclresponse">Sequence[Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointaclresponse">Sequence[Private<wbr>Endpoint<wbr>ACLResponse]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3122,7 +3122,7 @@ If present, following values are allowed:
 <a href="#public_network_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}

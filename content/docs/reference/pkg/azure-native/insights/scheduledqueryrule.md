@@ -886,7 +886,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action</a> | <a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action</a></span>
+        <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action<wbr>Args</a> | <a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -902,7 +902,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#source">Source</a></span>
+        <span class="property-type"><a href="#source">Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -958,7 +958,7 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedule">Schedule</a></span>
+        <span class="property-type"><a href="#schedule">Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1531,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggercondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Trigger<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggercondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Trigger<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1539,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aznsaction_csharp" style="color: inherit; text-decoration: inherit;">Azns<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aznsactiongroup">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#aznsactiongroup">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Az<wbr>Ns<wbr>Action<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1603,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggercondition">Trigger<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggercondition">Trigger<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1611,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aznsaction_nodejs" style="color: inherit; text-decoration: inherit;">azns<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aznsactiongroup">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#aznsactiongroup">Az<wbr>Ns<wbr>Action<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1639,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggercondition">Trigger<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggercondition">Trigger<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1647,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azns_action_python" style="color: inherit; text-decoration: inherit;">azns_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aznsactiongroup">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Args</a></span>
+        <span class="property-type"><a href="#aznsactiongroup">Az<wbr>Ns<wbr>Action<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1677,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Trigger<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Trigger<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1685,7 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aznsaction_csharp" style="color: inherit; text-decoration: inherit;">Azns<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aznsactiongroupresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#aznsactiongroupresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1749,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerconditionresponse">Trigger<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerconditionresponse">Trigger<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1757,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aznsaction_nodejs" style="color: inherit; text-decoration: inherit;">azns<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1785,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerconditionresponse">Trigger<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#triggerconditionresponse">Trigger<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azns_action_python" style="color: inherit; text-decoration: inherit;">azns_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2089,7 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dimension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2129,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dimension">Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dimension">Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2149,7 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dimension">Sequence[Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dimension">Sequence[Dimension]</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2171,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dimension<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2211,7 +2211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dimensionresponse">Dimension<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dimensionresponse">Dimension<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2231,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dimensionresponse">Sequence[Dimension<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dimensionresponse">Sequence[Dimension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2791,7 +2791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#criteria">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Criteria<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#criteria">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Criteria&gt;</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2815,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#criteria">Criteria<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#criteria">Criteria[]</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2827,7 +2827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#criteria">Sequence[Criteria<wbr>Args]</a></span>
+        <span class="property-type"><a href="#criteria">Sequence[Criteria]</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2841,7 +2841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#criteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Criteria<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#criteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Criteria<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2865,7 +2865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#criteriaresponse">Criteria<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#criteriaresponse">Criteria<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2877,7 +2877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#criteriaresponse">Sequence[Criteria<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#criteriaresponse">Sequence[Criteria<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3433,7 +3433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetrictrigger">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#logmetrictrigger">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Metric<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3489,7 +3489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetrictrigger">Log<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#logmetrictrigger">Log<wbr>Metric<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3517,7 +3517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetrictrigger">Log<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#logmetrictrigger">Log<wbr>Metric<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3547,7 +3547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetrictriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logmetrictriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Metric<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3603,7 +3603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3631,7 +3631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd></dl>
 {{% /choosable %}}

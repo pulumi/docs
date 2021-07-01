@@ -297,7 +297,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
 <a href="#virtualnetwork_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkprofile">Virtual<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#virtualnetworkprofile">Virtual<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description of the Virtual Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -305,7 +305,7 @@ The AppServiceEnvironment resource accepts the following [input]({{< relref "/do
 <a href="#clustersettings_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepair">[]Name<wbr>Value<wbr>Pair</a></span>
+        <span class="property-type"><a href="#namevaluepair">[]Name<wbr>Value<wbr>Pair<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom settings for changing the behavior of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

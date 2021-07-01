@@ -443,7 +443,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#wsfcdomainprofile_go" style="color: inherit; text-decoration: inherit;">Wsfc<wbr>Domain<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomainprofile">Wsfc<wbr>Domain<wbr>Profile</a></span>
+        <span class="property-type"><a href="#wsfcdomainprofile">Wsfc<wbr>Domain<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}

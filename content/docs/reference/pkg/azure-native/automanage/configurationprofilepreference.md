@@ -391,7 +391,7 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceproperties">Configuration<wbr>Profile<wbr>Preference<wbr>Properties</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceproperties">Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1050,7 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#antimalware_csharp" style="color: inherit; text-decoration: inherit;">Anti<wbr>Malware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1058,7 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmbackup_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1090,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#antimalware_nodejs" style="color: inherit; text-decoration: inherit;">anti<wbr>Malware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1098,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmbackup_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1110,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anti_malware_python" style="color: inherit; text-decoration: inherit;">anti_<wbr>malware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_backup_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1132,7 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#antimalware_csharp" style="color: inherit; text-decoration: inherit;">Anti<wbr>Malware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1140,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmbackup_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1172,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#antimalware_nodejs" style="color: inherit; text-decoration: inherit;">anti<wbr>Malware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1180,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmbackup_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1192,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anti_malware_python" style="color: inherit; text-decoration: inherit;">anti_<wbr>malware</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1200,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_backup_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}

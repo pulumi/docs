@@ -347,7 +347,7 @@ The SubAccountTagRule resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monitoringtagrulesproperties">Monitoring<wbr>Tag<wbr>Rules<wbr>Properties</a></span>
+        <span class="property-type"><a href="#monitoringtagrulesproperties">Monitoring<wbr>Tag<wbr>Rules<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of the properties for a TagRules resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filteringtags_csharp" style="color: inherit; text-decoration: inherit;">Filtering<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filteringtag">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Filtering<wbr>Tag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#filteringtag">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Filtering<wbr>Tag&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -918,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filteringtags_nodejs" style="color: inherit; text-decoration: inherit;">filtering<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filteringtag">Filtering<wbr>Tag<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#filteringtag">Filtering<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filtering_tags_python" style="color: inherit; text-decoration: inherit;">filtering_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filteringtag">Sequence[Filtering<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filteringtag">Sequence[Filtering<wbr>Tag]</a></span>
     </dt>
     <dd>{{% md %}}List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -992,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filteringtags_csharp" style="color: inherit; text-decoration: inherit;">Filtering<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filteringtagresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Filtering<wbr>Tag<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#filteringtagresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Filtering<wbr>Tag<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1064,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filteringtags_nodejs" style="color: inherit; text-decoration: inherit;">filtering<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filteringtagresponse">Filtering<wbr>Tag<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#filteringtagresponse">Filtering<wbr>Tag<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filtering_tags_python" style="color: inherit; text-decoration: inherit;">filtering_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filteringtagresponse">Sequence[Filtering<wbr>Tag<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filteringtagresponse">Sequence[Filtering<wbr>Tag<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1138,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logrules_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logrules">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Log<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#logrules">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Log<wbr>Rules</a></span>
     </dt>
     <dd>{{% md %}}Set of rules for sending logs for the Monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1162,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logrules_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logrules">Log<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#logrules">Log<wbr>Rules</a></span>
     </dt>
     <dd>{{% md %}}Set of rules for sending logs for the Monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1174,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_rules_python" style="color: inherit; text-decoration: inherit;">log_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logrules">Log<wbr>Rules<wbr>Args</a></span>
+        <span class="property-type"><a href="#logrules">Log<wbr>Rules</a></span>
     </dt>
     <dd>{{% md %}}Set of rules for sending logs for the Monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1196,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1204,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logrules_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logrulesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Log<wbr>Rules<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logrulesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Log<wbr>Rules<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Set of rules for sending logs for the Monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1252,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1260,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logrules_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logrulesresponse">Log<wbr>Rules<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logrulesresponse">Log<wbr>Rules<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Set of rules for sending logs for the Monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1280,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1288,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_rules_python" style="color: inherit; text-decoration: inherit;">log_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logrulesresponse">Log<wbr>Rules<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logrulesresponse">Log<wbr>Rules<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Set of rules for sending logs for the Monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

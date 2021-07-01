@@ -652,7 +652,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#action">Action</a></span>
+        <span class="property-type"><a href="#action">Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -660,7 +660,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#correlationfilter_go" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#correlationfilter">Correlation<wbr>Filter</a></span>
+        <span class="property-type"><a href="#correlationfilter">Correlation<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of correlationFilter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -668,7 +668,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#filtertype_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertype">Filter<wbr>Type</a></span>
+        <span class="property-type"><a href="#filtertype">string</a></span>
     </dt>
     <dd>{{% md %}}Filter type that is evaluated against a BrokeredMessage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -684,7 +684,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sqlfilter_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlfilter">Sql<wbr>Filter</a></span>
+        <span class="property-type"><a href="#sqlfilter">Sql<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of sqlFilter{{% /md %}}</dd></dl>
 {{% /choosable %}}

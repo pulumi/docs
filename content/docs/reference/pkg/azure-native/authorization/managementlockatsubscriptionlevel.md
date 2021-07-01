@@ -330,7 +330,7 @@ The ManagementLockAtSubscriptionLevel resource accepts the following [input]({{<
 <a href="#owners_go" style="color: inherit; text-decoration: inherit;">Owners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementlockowner">[]Management<wbr>Lock<wbr>Owner</a></span>
+        <span class="property-type"><a href="#managementlockowner">[]Management<wbr>Lock<wbr>Owner<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd></dl>
 {{% /choosable %}}

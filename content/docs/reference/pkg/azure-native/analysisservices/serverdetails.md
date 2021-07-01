@@ -450,7 +450,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
+        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Analysis Services resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +458,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#asadministrators_go" style="color: inherit; text-decoration: inherit;">As<wbr>Administrators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveradministrators">Server<wbr>Administrators</a></span>
+        <span class="property-type"><a href="#serveradministrators">Server<wbr>Administrators<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of AS server administrators{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +474,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#gatewaydetails_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydetails">Gateway<wbr>Details</a></span>
+        <span class="property-type"><a href="#gatewaydetails">Gateway<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway details configured for the AS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +482,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ipv4firewallsettings_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>V4Firewall<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallsettings">IPv4Firewall<wbr>Settings</a></span>
+        <span class="property-type"><a href="#ipv4firewallsettings">IPv4Firewall<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +506,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#querypoolconnectionmode_go" style="color: inherit; text-decoration: inherit;">Querypool<wbr>Connection<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionmode">Connection<wbr>Mode</a></span>
+        <span class="property-type"><a href="#connectionmode">string</a></span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1395,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>IPv4Firewall<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipv4firewallrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>IPv4Firewall<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1435,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallrules_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallrule">IPv4Firewall<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipv4firewallrule">IPv4Firewall<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1455,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallrule">Sequence[IPv4Firewall<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipv4firewallrule">Sequence[IPv4Firewall<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1477,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipv4firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>IPv4Firewall<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1517,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewallrules_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallruleresponse">IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipv4firewallruleresponse">IPv4Firewall<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1537,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv4firewallruleresponse">Sequence[IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipv4firewallruleresponse">Sequence[IPv4Firewall<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}

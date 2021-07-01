@@ -411,7 +411,7 @@ The VirtualApplianceSite resource accepts the following [input]({{< relref "/doc
 <a href="#o365policy_go" style="color: inherit; text-decoration: inherit;">O365Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#office365policyproperties">Office365Policy<wbr>Properties</a></span>
+        <span class="property-type"><a href="#office365policyproperties">Office365Policy<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office 365 Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -942,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#breakoutcategories_csharp" style="color: inherit; text-decoration: inherit;">Break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypolicies">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args</a></span>
+        <span class="property-type"><a href="#breakoutcategorypolicies">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Break<wbr>Out<wbr>Category<wbr>Policies</a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -966,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#breakoutcategories_nodejs" style="color: inherit; text-decoration: inherit;">break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypolicies">Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args</a></span>
+        <span class="property-type"><a href="#breakoutcategorypolicies">Break<wbr>Out<wbr>Category<wbr>Policies</a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -978,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#break_out_categories_python" style="color: inherit; text-decoration: inherit;">break_<wbr>out_<wbr>categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypolicies">Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args</a></span>
+        <span class="property-type"><a href="#breakoutcategorypolicies">Break<wbr>Out<wbr>Category<wbr>Policies</a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -992,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#breakoutcategories_csharp" style="color: inherit; text-decoration: inherit;">Break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1016,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#breakoutcategories_nodejs" style="color: inherit; text-decoration: inherit;">break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1028,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#break_out_categories_python" style="color: inherit; text-decoration: inherit;">break_<wbr>out_<wbr>categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#breakoutcategorypoliciesresponse">Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}

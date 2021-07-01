@@ -428,7 +428,7 @@ The VirtualNetworkLink resource accepts the following [input]({{< relref "/docs/
 <a href="#virtualnetwork_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

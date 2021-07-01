@@ -450,7 +450,7 @@ The StorageAccountCredential resource accepts the following [input]({{< relref "
 <a href="#accountkey_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypted storage key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

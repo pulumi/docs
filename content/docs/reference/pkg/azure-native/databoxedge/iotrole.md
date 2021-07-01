@@ -508,7 +508,7 @@ The IoTRole resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#iotdevicedetails_go" style="color: inherit; text-decoration: inherit;">Io<wbr>TDevice<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotdeviceinfo">Io<wbr>TDevice<wbr>Info</a></span>
+        <span class="property-type"><a href="#iotdeviceinfo">Io<wbr>TDevice<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IoT device metadata to which data box edge device needs to be connected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -516,7 +516,7 @@ The IoTRole resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#iotedgedevicedetails_go" style="color: inherit; text-decoration: inherit;">Io<wbr>TEdge<wbr>Device<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotdeviceinfo">Io<wbr>TDevice<wbr>Info</a></span>
+        <span class="property-type"><a href="#iotdeviceinfo">Io<wbr>TDevice<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}IoT edge device to which the IoT role needs to be configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -540,7 +540,7 @@ The IoTRole resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#computeresource_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeresource">Compute<wbr>Resource</a></span>
+        <span class="property-type"><a href="#computeresource">Compute<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource allocation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -548,7 +548,7 @@ The IoTRole resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#iotedgeagentinfo_go" style="color: inherit; text-decoration: inherit;">Io<wbr>TEdge<wbr>Agent<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotedgeagentinfo">Io<wbr>TEdge<wbr>Agent<wbr>Info</a></span>
+        <span class="property-type"><a href="#iotedgeagentinfo">Io<wbr>TEdge<wbr>Agent<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Iot edge agent details to download the agent and bootstrap iot runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -564,7 +564,7 @@ The IoTRole resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sharemappings_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountpointmap">[]Mount<wbr>Point<wbr>Map</a></span>
+        <span class="property-type"><a href="#mountpointmap">[]Mount<wbr>Point<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mount points of shares in role(s).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1135,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#symmetrickey_csharp" style="color: inherit; text-decoration: inherit;">Symmetric<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#symmetrickey">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Symmetric<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#symmetrickey">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Symmetric<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Symmetric key for authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1159,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#symmetrickey_nodejs" style="color: inherit; text-decoration: inherit;">symmetric<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#symmetrickey">Symmetric<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#symmetrickey">Symmetric<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Symmetric key for authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1171,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#symmetric_key_python" style="color: inherit; text-decoration: inherit;">symmetric_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#symmetrickey">Symmetric<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#symmetrickey">Symmetric<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Symmetric key for authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1185,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#symmetrickey_csharp" style="color: inherit; text-decoration: inherit;">Symmetric<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#symmetrickeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Symmetric<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#symmetrickeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Symmetric<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Symmetric key for authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1209,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#symmetrickey_nodejs" style="color: inherit; text-decoration: inherit;">symmetric<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#symmetrickeyresponse">Symmetric<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#symmetrickeyresponse">Symmetric<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Symmetric key for authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1221,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#symmetric_key_python" style="color: inherit; text-decoration: inherit;">symmetric_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#symmetrickeyresponse">Symmetric<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#symmetrickeyresponse">Symmetric<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Symmetric key for authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1445,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret</a></span>
     </dt>
     <dd>{{% md %}}Repository user password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1501,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret</a></span>
     </dt>
     <dd>{{% md %}}Repository user password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1529,7 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret</a></span>
     </dt>
     <dd>{{% md %}}Repository user password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1559,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Repository user password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1615,7 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Repository user password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1643,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Repository user password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1673,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#authentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}Encrypted IoT device/IoT edge device connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1745,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authentication">Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#authentication">Authentication</a></span>
     </dt>
     <dd>{{% md %}}Encrypted IoT device/IoT edge device connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1781,7 +1781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authentication">Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#authentication">Authentication</a></span>
     </dt>
     <dd>{{% md %}}Encrypted IoT device/IoT edge device connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1819,7 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#authenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Encrypted IoT device/IoT edge device connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1891,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationresponse">Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#authenticationresponse">Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Encrypted IoT device/IoT edge device connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1927,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationresponse">Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#authenticationresponse">Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Encrypted IoT device/IoT edge device connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagerepository_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerepositorycredential">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Image<wbr>Repository<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagerepositorycredential">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Image<wbr>Repository<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}Image repository details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2021,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagerepository_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerepositorycredential">Image<wbr>Repository<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagerepositorycredential">Image<wbr>Repository<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}Image repository details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2049,7 +2049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_repository_python" style="color: inherit; text-decoration: inherit;">image_<wbr>repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerepositorycredential">Image<wbr>Repository<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagerepositorycredential">Image<wbr>Repository<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}Image repository details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2079,7 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagerepository_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerepositorycredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Image<wbr>Repository<wbr>Credential<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagerepositorycredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Image<wbr>Repository<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Image repository details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2135,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagerepository_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerepositorycredentialresponse">Image<wbr>Repository<wbr>Credential<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagerepositorycredentialresponse">Image<wbr>Repository<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Image repository details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2163,7 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_repository_python" style="color: inherit; text-decoration: inherit;">image_<wbr>repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagerepositorycredentialresponse">Image<wbr>Repository<wbr>Credential<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagerepositorycredentialresponse">Image<wbr>Repository<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Image repository details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2457,7 +2457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret</a></span>
     </dt>
     <dd>{{% md %}}Connection string based on the symmetric key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2481,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret</a></span>
     </dt>
     <dd>{{% md %}}Connection string based on the symmetric key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2493,7 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret</a></span>
     </dt>
     <dd>{{% md %}}Connection string based on the symmetric key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2507,7 +2507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection string based on the symmetric key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2531,7 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection string based on the symmetric key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2543,7 +2543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecretresponse">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection string based on the symmetric key.{{% /md %}}</dd></dl>
 {{% /choosable %}}

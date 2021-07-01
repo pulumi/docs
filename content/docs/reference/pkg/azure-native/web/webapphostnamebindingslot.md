@@ -321,7 +321,7 @@ The WebAppHostNameBindingSlot resource accepts the following [input]({{< relref 
 <a href="#azureresourcetype_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourcetype">Azure<wbr>Resource<wbr>Type</a></span>
+        <span class="property-type"><a href="#azureresourcetype">string</a></span>
     </dt>
     <dd>{{% md %}}Azure resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -329,7 +329,7 @@ The WebAppHostNameBindingSlot resource accepts the following [input]({{< relref 
 <a href="#customhostnamednsrecordtype_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Host<wbr>Name<wbr>Dns<wbr>Record<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamednsrecordtype">Custom<wbr>Host<wbr>Name<wbr>Dns<wbr>Record<wbr>Type</a></span>
+        <span class="property-type"><a href="#customhostnamednsrecordtype">string</a></span>
     </dt>
     <dd>{{% md %}}Custom DNS record type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -353,7 +353,7 @@ The WebAppHostNameBindingSlot resource accepts the following [input]({{< relref 
 <a href="#hostnametype_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnametype">Host<wbr>Name<wbr>Type</a></span>
+        <span class="property-type"><a href="#hostnametype">string</a></span>
     </dt>
     <dd>{{% md %}}Hostname type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -377,7 +377,7 @@ The WebAppHostNameBindingSlot resource accepts the following [input]({{< relref 
 <a href="#sslstate_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslstate">Ssl<wbr>State</a></span>
+        <span class="property-type"><a href="#sslstate">string</a></span>
     </dt>
     <dd>{{% md %}}SSL type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

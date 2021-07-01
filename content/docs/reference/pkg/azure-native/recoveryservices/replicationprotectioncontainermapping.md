@@ -397,7 +397,7 @@ The ReplicationProtectionContainerMapping resource accepts the following [input]
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createprotectioncontainermappinginputproperties">Create<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#createprotectioncontainermappinginputproperties">Create<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure protection input properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -938,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2acontainermappinginput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AContainer<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmwarecbtcontainermappinginput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2acontainermappinginput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AContainer<wbr>Mapping<wbr>Input</a> | <a href="#vmwarecbtcontainermappinginput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Provider specific input for pairing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2acontainermappinginput">A2AContainer<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmwarecbtcontainermappinginput">VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2acontainermappinginput">A2AContainer<wbr>Mapping<wbr>Input</a> | <a href="#vmwarecbtcontainermappinginput">VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Provider specific input for pairing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1022,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_input_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2acontainermappinginput">A2AContainer<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmwarecbtcontainermappinginput">VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2acontainermappinginput">A2AContainer<wbr>Mapping<wbr>Input</a> | <a href="#vmwarecbtcontainermappinginput">VMware<wbr>Cbt<wbr>Container<wbr>Mapping<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Provider specific input for pairing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1124,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1372,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_nodejs" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1496,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1952,7 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrordetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1976,7 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarecbtprotectioncontainermappingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</a> | <a href="#vmwarecbtprotectioncontainermappingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provider specific provider details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2136,7 +2136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrordetails_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Health error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2160,7 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarecbtprotectioncontainermappingdetailsresponse">VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</a> | <a href="#vmwarecbtprotectioncontainermappingdetailsresponse">VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provider specific provider details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2228,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_error_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>error_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Health error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2252,7 +2252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarecbtprotectioncontainermappingdetailsresponse">VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</a> | <a href="#vmwarecbtprotectioncontainermappingdetailsresponse">VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provider specific provider details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

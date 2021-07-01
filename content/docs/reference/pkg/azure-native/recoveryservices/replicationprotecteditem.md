@@ -398,7 +398,7 @@ The ReplicationProtectedItem resource accepts the following [input]({{< relref "
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enableprotectioninputproperties">Enable<wbr>Protection<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#enableprotectioninputproperties">Enable<wbr>Protection<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable protection input properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -685,7 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptioninfo_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The recovery disk encryption information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -781,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmdisks_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2avmdiskinputdetails">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AVm<wbr>Disk<wbr>Input<wbr>Details<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#a2avmdiskinputdetails">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AVm<wbr>Disk<wbr>Input<wbr>Details&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of vm disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -789,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmmanageddisks_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Managed<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2avmmanageddiskinputdetails">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AVm<wbr>Managed<wbr>Disk<wbr>Input<wbr>Details<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#a2avmmanageddiskinputdetails">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AVm<wbr>Managed<wbr>Disk<wbr>Input<wbr>Details&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of vm managed disk details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -917,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptioninfo_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptioninfo">Disk<wbr>Encryption<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptioninfo">Disk<wbr>Encryption<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The recovery disk encryption information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmdisks_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2avmdiskinputdetails">A2AVm<wbr>Disk<wbr>Input<wbr>Details<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#a2avmdiskinputdetails">A2AVm<wbr>Disk<wbr>Input<wbr>Details[]</a></span>
     </dt>
     <dd>{{% md %}}The list of vm disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmmanageddisks_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Managed<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2avmmanageddiskinputdetails">A2AVm<wbr>Managed<wbr>Disk<wbr>Input<wbr>Details<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#a2avmmanageddiskinputdetails">A2AVm<wbr>Managed<wbr>Disk<wbr>Input<wbr>Details[]</a></span>
     </dt>
     <dd>{{% md %}}The list of vm managed disk details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1033,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_info_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptioninfo">Disk<wbr>Encryption<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptioninfo">Disk<wbr>Encryption<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The recovery disk encryption information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_disks_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2avmdiskinputdetails">Sequence[A2AVm<wbr>Disk<wbr>Input<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#a2avmdiskinputdetails">Sequence[A2AVm<wbr>Disk<wbr>Input<wbr>Details]</a></span>
     </dt>
     <dd>{{% md %}}The list of vm disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_managed_disks_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>managed_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2avmmanageddiskinputdetails">Sequence[A2AVm<wbr>Managed<wbr>Disk<wbr>Input<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#a2avmmanageddiskinputdetails">Sequence[A2AVm<wbr>Managed<wbr>Disk<wbr>Input<wbr>Details]</a></span>
     </dt>
     <dd>{{% md %}}The list of vm managed disk details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2843,7 +2843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#a2aprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtected<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2851,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectedmanageddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Managed<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotectedmanageddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtected<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#a2aprotectedmanageddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtected<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected managed disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2979,7 +2979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unprotecteddisks_csharp" style="color: inherit; text-decoration: inherit;">Unprotected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aunprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AUnprotected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#a2aunprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AUnprotected<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of unprotected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2987,7 +2987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine nic details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3011,7 +3011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsyncedconfigdetails_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Synced<wbr>Config<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurevmsyncedconfigdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>To<wbr>Azure<wbr>Vm<wbr>Synced<wbr>Config<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretoazurevmsyncedconfigdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>To<wbr>Azure<wbr>Vm<wbr>Synced<wbr>Config<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The synced configuration details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3507,7 +3507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteddisks_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotecteddiskdetailsresponse">A2AProtected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#a2aprotecteddiskdetailsresponse">A2AProtected<wbr>Disk<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3515,7 +3515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectedmanageddisks_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Managed<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotectedmanageddiskdetailsresponse">A2AProtected<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#a2aprotectedmanageddiskdetailsresponse">A2AProtected<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected managed disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3643,7 +3643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unprotecteddisks_nodejs" style="color: inherit; text-decoration: inherit;">unprotected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aunprotecteddiskdetailsresponse">A2AUnprotected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#a2aunprotecteddiskdetailsresponse">A2AUnprotected<wbr>Disk<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of unprotected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3651,7 +3651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine nic details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3675,7 +3675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsyncedconfigdetails_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Synced<wbr>Config<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurevmsyncedconfigdetailsresponse">Azure<wbr>To<wbr>Azure<wbr>Vm<wbr>Synced<wbr>Config<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretoazurevmsyncedconfigdetailsresponse">Azure<wbr>To<wbr>Azure<wbr>Vm<wbr>Synced<wbr>Config<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The synced configuration details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3839,7 +3839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotecteddiskdetailsresponse">Sequence[A2AProtected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#a2aprotecteddiskdetailsresponse">Sequence[A2AProtected<wbr>Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3847,7 +3847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_managed_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>managed_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotectedmanageddiskdetailsresponse">Sequence[A2AProtected<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#a2aprotectedmanageddiskdetailsresponse">Sequence[A2AProtected<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected managed disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3975,7 +3975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unprotected_disks_python" style="color: inherit; text-decoration: inherit;">unprotected_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aunprotecteddiskdetailsresponse">Sequence[A2AUnprotected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#a2aunprotecteddiskdetailsresponse">Sequence[A2AUnprotected<wbr>Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of unprotected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3983,7 +3983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine nic details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4007,7 +4007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_synced_config_details_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>synced_<wbr>config_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurevmsyncedconfigdetailsresponse">Azure<wbr>To<wbr>Azure<wbr>Vm<wbr>Synced<wbr>Config<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretoazurevmsyncedconfigdetailsresponse">Azure<wbr>To<wbr>Azure<wbr>Vm<wbr>Synced<wbr>Config<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The synced configuration details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4185,7 +4185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptioninfo_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The recovery disk encryption information (for one / single pass flows).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4305,7 +4305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptioninfo_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptioninfo">Disk<wbr>Encryption<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptioninfo">Disk<wbr>Encryption<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The recovery disk encryption information (for one / single pass flows).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4365,7 +4365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_info_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptioninfo">Disk<wbr>Encryption<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptioninfo">Disk<wbr>Encryption<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The recovery disk encryption information (for one / single pass flows).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4427,7 +4427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputendpoints_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Input<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inputendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Input<wbr>Endpoint<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Azure VM input endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4467,7 +4467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputendpoints_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputendpointresponse">Input<wbr>Endpoint<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#inputendpointresponse">Input<wbr>Endpoint<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The Azure VM input endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4487,7 +4487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_endpoints_python" style="color: inherit; text-decoration: inherit;">input_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputendpointresponse">Sequence[Input<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inputendpointresponse">Sequence[Input<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The Azure VM input endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5105,7 +5105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkeyinfo_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionkeyinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionkeyinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The recovery KeyVault reference for secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5113,7 +5113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkeyinfo_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyencryptionkeyinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Key<wbr>Encryption<wbr>Key<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The recovery KeyVault reference for key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5145,7 +5145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkeyinfo_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionkeyinfo">Disk<wbr>Encryption<wbr>Key<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionkeyinfo">Disk<wbr>Encryption<wbr>Key<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The recovery KeyVault reference for secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5153,7 +5153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkeyinfo_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyinfo">Key<wbr>Encryption<wbr>Key<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyencryptionkeyinfo">Key<wbr>Encryption<wbr>Key<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The recovery KeyVault reference for key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5165,7 +5165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_key_info_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionkeyinfo">Disk<wbr>Encryption<wbr>Key<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionkeyinfo">Disk<wbr>Encryption<wbr>Key<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The recovery KeyVault reference for secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5173,7 +5173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encryption_key_info_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyencryptionkeyinfo">Key<wbr>Encryption<wbr>Key<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyencryptionkeyinfo">Key<wbr>Encryption<wbr>Key<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The recovery KeyVault reference for key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5285,7 +5285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aenableprotectioninput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AEnable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#hypervreplicaazureenableprotectioninput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#inmageazurev2enableprotectioninput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Enable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#inmageenableprotectioninput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#inmagercmenableprotectioninput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#sanenableprotectioninput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>San<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2aenableprotectioninput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AEnable<wbr>Protection<wbr>Input</a> | <a href="#hypervreplicaazureenableprotectioninput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Enable<wbr>Protection<wbr>Input</a> | <a href="#inmageazurev2enableprotectioninput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Enable<wbr>Protection<wbr>Input</a> | <a href="#inmageenableprotectioninput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Enable<wbr>Protection<wbr>Input</a> | <a href="#inmagercmenableprotectioninput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Enable<wbr>Protection<wbr>Input</a> | <a href="#sanenableprotectioninput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>San<wbr>Enable<wbr>Protection<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5341,7 +5341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aenableprotectioninput">A2AEnable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#hypervreplicaazureenableprotectioninput">Hyper<wbr>VReplica<wbr>Azure<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#inmageazurev2enableprotectioninput">In<wbr>Mage<wbr>Azure<wbr>V2Enable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#inmageenableprotectioninput">In<wbr>Mage<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#inmagercmenableprotectioninput">In<wbr>Mage<wbr>Rcm<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#sanenableprotectioninput">San<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2aenableprotectioninput">A2AEnable<wbr>Protection<wbr>Input</a> | <a href="#hypervreplicaazureenableprotectioninput">Hyper<wbr>VReplica<wbr>Azure<wbr>Enable<wbr>Protection<wbr>Input</a> | <a href="#inmageazurev2enableprotectioninput">In<wbr>Mage<wbr>Azure<wbr>V2Enable<wbr>Protection<wbr>Input</a> | <a href="#inmageenableprotectioninput">In<wbr>Mage<wbr>Enable<wbr>Protection<wbr>Input</a> | <a href="#inmagercmenableprotectioninput">In<wbr>Mage<wbr>Rcm<wbr>Enable<wbr>Protection<wbr>Input</a> | <a href="#sanenableprotectioninput">San<wbr>Enable<wbr>Protection<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5369,7 +5369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aenableprotectioninput">A2AEnable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#hypervreplicaazureenableprotectioninput">Hyper<wbr>VReplica<wbr>Azure<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#inmageazurev2enableprotectioninput">In<wbr>Mage<wbr>Azure<wbr>V2Enable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#inmageenableprotectioninput">In<wbr>Mage<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#inmagercmenableprotectioninput">In<wbr>Mage<wbr>Rcm<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a> | <a href="#sanenableprotectioninput">San<wbr>Enable<wbr>Protection<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2aenableprotectioninput">A2AEnable<wbr>Protection<wbr>Input</a> | <a href="#hypervreplicaazureenableprotectioninput">Hyper<wbr>VReplica<wbr>Azure<wbr>Enable<wbr>Protection<wbr>Input</a> | <a href="#inmageazurev2enableprotectioninput">In<wbr>Mage<wbr>Azure<wbr>V2Enable<wbr>Protection<wbr>Input</a> | <a href="#inmageenableprotectioninput">In<wbr>Mage<wbr>Enable<wbr>Protection<wbr>Input</a> | <a href="#inmagercmenableprotectioninput">In<wbr>Mage<wbr>Rcm<wbr>Enable<wbr>Protection<wbr>Input</a> | <a href="#sanenableprotectioninput">San<wbr>Enable<wbr>Protection<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5463,7 +5463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5711,7 +5711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_nodejs" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5835,7 +5835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6475,7 +6475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurevmdiskdetails_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Vm<wbr>Disk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmdiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurevmdiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Azure VM Disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6499,7 +6499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialreplicationdetails_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6531,7 +6531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdetails_csharp" style="color: inherit; text-decoration: inherit;">OSDetails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>OSDetails<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>OSDetails<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The operating system info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6659,7 +6659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6899,7 +6899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurevmdiskdetails_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Vm<wbr>Disk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmdiskdetailsresponse">Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azurevmdiskdetailsresponse">Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Azure VM Disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6923,7 +6923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialreplicationdetails_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6955,7 +6955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdetails_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>SDetails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdetailsresponse">OSDetails<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdetailsresponse">OSDetails<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The operating system info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7083,7 +7083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7111,7 +7111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_vm_disk_details_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>vm_<wbr>disk_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmdiskdetailsresponse">Sequence[Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurevmdiskdetailsresponse">Sequence[Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Azure VM Disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7135,7 +7135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_replication_details_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7167,7 +7167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#o_s_details_python" style="color: inherit; text-decoration: inherit;">o_<wbr>s_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdetailsresponse">OSDetails<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdetailsresponse">OSDetails<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The operating system info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7295,7 +7295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7325,7 +7325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialreplicationdetails_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7341,7 +7341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmdiskdetails_csharp" style="color: inherit; text-decoration: inherit;">VMDisk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7357,7 +7357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7445,7 +7445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialreplicationdetails_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7461,7 +7461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmdiskdetails_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>MDisk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">Disk<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7477,7 +7477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7505,7 +7505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_replication_details_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7521,7 +7521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v_m_disk_details_python" style="color: inherit; text-decoration: inherit;">v_<wbr>m_<wbr>disk_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">Sequence[Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">Sequence[Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7537,7 +7537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7567,7 +7567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialreplicationdetails_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7583,7 +7583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmdiskdetails_csharp" style="color: inherit; text-decoration: inherit;">VMDisk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7599,7 +7599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7687,7 +7687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialreplicationdetails_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7703,7 +7703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmdiskdetails_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>MDisk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">Disk<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7719,7 +7719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7747,7 +7747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_replication_details_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7763,7 +7763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v_m_disk_details_python" style="color: inherit; text-decoration: inherit;">v_<wbr>m_<wbr>disk_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">Sequence[Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">Sequence[Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7779,7 +7779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7809,7 +7809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialreplicationdetails_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7825,7 +7825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmdiskdetails_csharp" style="color: inherit; text-decoration: inherit;">VMDisk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7841,7 +7841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7929,7 +7929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialreplicationdetails_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Replication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7945,7 +7945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmdiskdetails_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>MDisk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">Disk<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7961,7 +7961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7989,7 +7989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_replication_details_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8005,7 +8005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v_m_disk_details_python" style="color: inherit; text-decoration: inherit;">v_<wbr>m_<wbr>disk_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">Sequence[Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">Sequence[Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8021,7 +8021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8473,7 +8473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskstoinclude_csharp" style="color: inherit; text-decoration: inherit;">Disks<wbr>To<wbr>Include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageazurev2diskinputdetails">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Disk<wbr>Input<wbr>Details<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inmageazurev2diskinputdetails">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Disk<wbr>Input<wbr>Details&gt;</a></span>
     </dt>
     <dd>{{% md %}}The disks to include list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8801,7 +8801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskstoinclude_nodejs" style="color: inherit; text-decoration: inherit;">disks<wbr>To<wbr>Include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageazurev2diskinputdetails">In<wbr>Mage<wbr>Azure<wbr>V2Disk<wbr>Input<wbr>Details<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#inmageazurev2diskinputdetails">In<wbr>Mage<wbr>Azure<wbr>V2Disk<wbr>Input<wbr>Details[]</a></span>
     </dt>
     <dd>{{% md %}}The disks to include list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8965,7 +8965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disks_to_include_python" style="color: inherit; text-decoration: inherit;">disks_<wbr>to_<wbr>include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageazurev2diskinputdetails">Sequence[In<wbr>Mage<wbr>Azure<wbr>V2Disk<wbr>Input<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inmageazurev2diskinputdetails">Sequence[In<wbr>Mage<wbr>Azure<wbr>V2Disk<wbr>Input<wbr>Details]</a></span>
     </dt>
     <dd>{{% md %}}The disks to include list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9751,7 +9751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurevmdiskdetails_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>VMDisk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmdiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azurevmdiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Azure VM Disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9927,7 +9927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageazurev2protecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inmageazurev2protecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Protected<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9935,7 +9935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectedmanageddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Managed<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageazurev2manageddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inmageazurev2manageddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Managed<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected managed disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10111,7 +10111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The validation errors of the on-premise machine Value can be list of validation errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10135,7 +10135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10623,7 +10623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurevmdiskdetails_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>VMDisk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmdiskdetailsresponse">Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#azurevmdiskdetailsresponse">Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Azure VM Disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10799,7 +10799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteddisks_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageazurev2protecteddiskdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#inmageazurev2protecteddiskdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Protected<wbr>Disk<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10807,7 +10807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectedmanageddisks_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Managed<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageazurev2manageddiskdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#inmageazurev2manageddiskdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Managed<wbr>Disk<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected managed disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10983,7 +10983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The validation errors of the on-premise machine Value can be list of validation errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11007,7 +11007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11059,7 +11059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_vm_disk_details_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>vm_<wbr>disk_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmdiskdetailsresponse">Sequence[Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurevmdiskdetailsresponse">Sequence[Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Azure VM Disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11235,7 +11235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageazurev2protecteddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Azure<wbr>V2Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inmageazurev2protecteddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Azure<wbr>V2Protected<wbr>Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11243,7 +11243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_managed_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>managed_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageazurev2manageddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Azure<wbr>V2Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inmageazurev2manageddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Azure<wbr>V2Managed<wbr>Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected managed disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11419,7 +11419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The validation errors of the on-premise machine Value can be list of validation errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11443,7 +11443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11473,7 +11473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksignatureoptions_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Signature<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagedisksignatureexclusionoptions">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Disk<wbr>Signature<wbr>Exclusion<wbr>Options<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inmagedisksignatureexclusionoptions">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Disk<wbr>Signature<wbr>Exclusion<wbr>Options&gt;</a></span>
     </dt>
     <dd>{{% md %}}The guest disk signature based option for disk exclusion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11481,7 +11481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumeoptions_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagevolumeexclusionoptions">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Volume<wbr>Exclusion<wbr>Options<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inmagevolumeexclusionoptions">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Volume<wbr>Exclusion<wbr>Options&gt;</a></span>
     </dt>
     <dd>{{% md %}}The volume label based option for disk exclusion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11513,7 +11513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksignatureoptions_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Signature<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagedisksignatureexclusionoptions">In<wbr>Mage<wbr>Disk<wbr>Signature<wbr>Exclusion<wbr>Options<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#inmagedisksignatureexclusionoptions">In<wbr>Mage<wbr>Disk<wbr>Signature<wbr>Exclusion<wbr>Options[]</a></span>
     </dt>
     <dd>{{% md %}}The guest disk signature based option for disk exclusion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11521,7 +11521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumeoptions_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagevolumeexclusionoptions">In<wbr>Mage<wbr>Volume<wbr>Exclusion<wbr>Options<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#inmagevolumeexclusionoptions">In<wbr>Mage<wbr>Volume<wbr>Exclusion<wbr>Options[]</a></span>
     </dt>
     <dd>{{% md %}}The volume label based option for disk exclusion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11533,7 +11533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_signature_options_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>signature_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagedisksignatureexclusionoptions">Sequence[In<wbr>Mage<wbr>Disk<wbr>Signature<wbr>Exclusion<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inmagedisksignatureexclusionoptions">Sequence[In<wbr>Mage<wbr>Disk<wbr>Signature<wbr>Exclusion<wbr>Options]</a></span>
     </dt>
     <dd>{{% md %}}The guest disk signature based option for disk exclusion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11541,7 +11541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_options_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagevolumeexclusionoptions">Sequence[In<wbr>Mage<wbr>Volume<wbr>Exclusion<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inmagevolumeexclusionoptions">Sequence[In<wbr>Mage<wbr>Volume<wbr>Exclusion<wbr>Options]</a></span>
     </dt>
     <dd>{{% md %}}The volume label based option for disk exclusion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11653,7 +11653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskexclusioninput_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Exclusion<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagediskexclusioninput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Disk<wbr>Exclusion<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#inmagediskexclusioninput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Disk<wbr>Exclusion<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The enable disk exclusion input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11821,7 +11821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskexclusioninput_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Exclusion<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagediskexclusioninput">In<wbr>Mage<wbr>Disk<wbr>Exclusion<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#inmagediskexclusioninput">In<wbr>Mage<wbr>Disk<wbr>Exclusion<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The enable disk exclusion input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11905,7 +11905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_exclusion_input_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>exclusion_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagediskexclusioninput">In<wbr>Mage<wbr>Disk<wbr>Exclusion<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#inmagediskexclusioninput">In<wbr>Mage<wbr>Disk<wbr>Exclusion<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The enable disk exclusion input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12911,7 +12911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksdefault_csharp" style="color: inherit; text-decoration: inherit;">Disks<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmdisksdefaultinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Disks<wbr>Default<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#inmagercmdisksdefaultinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Disks<wbr>Default<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The default disk input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12919,7 +12919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskstoinclude_csharp" style="color: inherit; text-decoration: inherit;">Disks<wbr>To<wbr>Include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmdiskinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Disk<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inmagercmdiskinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Disk<wbr>Input&gt;</a></span>
     </dt>
     <dd>{{% md %}}The disks to include list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13207,7 +13207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksdefault_nodejs" style="color: inherit; text-decoration: inherit;">disks<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmdisksdefaultinput">In<wbr>Mage<wbr>Rcm<wbr>Disks<wbr>Default<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#inmagercmdisksdefaultinput">In<wbr>Mage<wbr>Rcm<wbr>Disks<wbr>Default<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The default disk input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13215,7 +13215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskstoinclude_nodejs" style="color: inherit; text-decoration: inherit;">disks<wbr>To<wbr>Include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmdiskinput">In<wbr>Mage<wbr>Rcm<wbr>Disk<wbr>Input<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#inmagercmdiskinput">In<wbr>Mage<wbr>Rcm<wbr>Disk<wbr>Input[]</a></span>
     </dt>
     <dd>{{% md %}}The disks to include list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13355,7 +13355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disks_default_python" style="color: inherit; text-decoration: inherit;">disks_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmdisksdefaultinput">In<wbr>Mage<wbr>Rcm<wbr>Disks<wbr>Default<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#inmagercmdisksdefaultinput">In<wbr>Mage<wbr>Rcm<wbr>Disks<wbr>Default<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The default disk input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13363,7 +13363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disks_to_include_python" style="color: inherit; text-decoration: inherit;">disks_<wbr>to_<wbr>include</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmdiskinput">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Disk<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inmagercmdiskinput">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Disk<wbr>Input]</a></span>
     </dt>
     <dd>{{% md %}}The disks to include list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14761,7 +14761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentupgradeblockingerrordetails_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmagentupgradeblockingerrordetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inmagercmagentupgradeblockingerrordetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The agent upgrade blocking error information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14857,7 +14857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastagentupgradeerrordetails_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmlastagentupgradeerrordetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inmagercmlastagentupgradeerrordetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The last agent upgrade error information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14921,7 +14921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mobilityagentdetails_csharp" style="color: inherit; text-decoration: inherit;">Mobility<wbr>Agent<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmmobilityagentdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inmagercmmobilityagentdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mobility agent information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14969,7 +14969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inmagercmprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15105,7 +15105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inmagercmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15473,7 +15473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentupgradeblockingerrordetails_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmagentupgradeblockingerrordetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#inmagercmagentupgradeblockingerrordetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The agent upgrade blocking error information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15569,7 +15569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastagentupgradeerrordetails_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmlastagentupgradeerrordetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#inmagercmlastagentupgradeerrordetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The last agent upgrade error information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15633,7 +15633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mobilityagentdetails_nodejs" style="color: inherit; text-decoration: inherit;">mobility<wbr>Agent<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmmobilityagentdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inmagercmmobilityagentdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mobility agent information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15681,7 +15681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteddisks_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmprotecteddiskdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#inmagercmprotecteddiskdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15817,7 +15817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmnicdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#inmagercmnicdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The network details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15829,7 +15829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_upgrade_blocking_error_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>upgrade_<wbr>blocking_<wbr>error_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmagentupgradeblockingerrordetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inmagercmagentupgradeblockingerrordetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The agent upgrade blocking error information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15925,7 +15925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_agent_upgrade_error_details_python" style="color: inherit; text-decoration: inherit;">last_<wbr>agent_<wbr>upgrade_<wbr>error_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmlastagentupgradeerrordetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inmagercmlastagentupgradeerrordetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The last agent upgrade error information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15989,7 +15989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mobility_agent_details_python" style="color: inherit; text-decoration: inherit;">mobility_<wbr>agent_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmmobilityagentdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inmagercmmobilityagentdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mobility agent information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16037,7 +16037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmprotecteddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inmagercmprotecteddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16173,7 +16173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmnicdetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inmagercmnicdetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The network details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16195,7 +16195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentdetails_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageagentdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Agent<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inmageagentdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Agent<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16323,7 +16323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdetails_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>OSDisk<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>OSDisk<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The OS details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16347,7 +16347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#inmageprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16379,7 +16379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resyncdetails_csharp" style="color: inherit; text-decoration: inherit;">Resync<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resync details of the machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16443,7 +16443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The validation errors of the on-premise machine Value can be list of validation errors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16459,7 +16459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16795,7 +16795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentdetails_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageagentdetailsresponse">In<wbr>Mage<wbr>Agent<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inmageagentdetailsresponse">In<wbr>Mage<wbr>Agent<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16923,7 +16923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdetails_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskdetailsresponse">OSDisk<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskdetailsresponse">OSDisk<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The OS details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16947,7 +16947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteddisks_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageprotecteddiskdetailsresponse">In<wbr>Mage<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#inmageprotecteddiskdetailsresponse">In<wbr>Mage<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16979,7 +16979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resyncdetails_nodejs" style="color: inherit; text-decoration: inherit;">resync<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resync details of the machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17043,7 +17043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The validation errors of the on-premise machine Value can be list of validation errors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17059,7 +17059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmnics_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">VMNic<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17095,7 +17095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageagentdetailsresponse">In<wbr>Mage<wbr>Agent<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inmageagentdetailsresponse">In<wbr>Mage<wbr>Agent<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17223,7 +17223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_details_python" style="color: inherit; text-decoration: inherit;">os_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskdetailsresponse">OSDisk<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskdetailsresponse">OSDisk<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The OS details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17247,7 +17247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageprotecteddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#inmageprotecteddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17279,7 +17279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resync_details_python" style="color: inherit; text-decoration: inherit;">resync_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resync details of the machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17343,7 +17343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The validation errors of the on-premise machine Value can be list of validation errors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17359,7 +17359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18553,7 +18553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentscenario_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Scenario</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Current<wbr>Scenario<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18585,7 +18585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of health errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18681,7 +18681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2areplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AReplication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicaazurereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabasereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabluereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicareplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmageazurev2replicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2areplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AReplication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicaazurereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabasereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabluereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicareplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#inmageazurev2replicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response</a> | <a href="#inmagercmreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#inmagereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Replication provider custom settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18993,7 +18993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentscenario_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Scenario</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19025,7 +19025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of health errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19121,7 +19121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2areplicationdetailsresponse">A2AReplication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicaazurereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabasereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabluereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicareplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmageazurev2replicationdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmreplicationdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagereplicationdetailsresponse">In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2areplicationdetailsresponse">A2AReplication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicaazurereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabasereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabluereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicareplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#inmageazurev2replicationdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response</a> | <a href="#inmagercmreplicationdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#inmagereplicationdetailsresponse">In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Replication provider custom settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19213,7 +19213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_scenario_python" style="color: inherit; text-decoration: inherit;">current_<wbr>scenario</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19245,7 +19245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of health errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19341,7 +19341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2areplicationdetailsresponse">A2AReplication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicaazurereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabasereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabluereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicareplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmageazurev2replicationdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmreplicationdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagereplicationdetailsresponse">In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2areplicationdetailsresponse">A2AReplication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicaazurereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabasereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabluereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicareplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#inmageazurev2replicationdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response</a> | <a href="#inmagercmreplicationdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#inmagereplicationdetailsresponse">In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Replication provider custom settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19581,7 +19581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tfoipconfigs_csharp" style="color: inherit; text-decoration: inherit;">Tfo<wbr>IPConfigs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>IPConfig<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>IPConfig<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP configurations to be used by NIC during test failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20021,7 +20021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tfoipconfigs_nodejs" style="color: inherit; text-decoration: inherit;">tfo<wbr>IPConfigs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigresponse">IPConfig<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipconfigresponse">IPConfig<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The IP configurations to be used by NIC during test failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20241,7 +20241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tfo_ip_configs_python" style="color: inherit; text-decoration: inherit;">tfo_<wbr>ip_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigresponse">Sequence[IPConfig<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipconfigresponse">Sequence[IPConfig<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The IP configurations to be used by NIC during test failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

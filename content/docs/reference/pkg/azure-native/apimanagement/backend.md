@@ -722,7 +722,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendcredentialscontract">Backend<wbr>Credentials<wbr>Contract</a></span>
+        <span class="property-type"><a href="#backendcredentialscontract">Backend<wbr>Credentials<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Credentials Contract Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -738,7 +738,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproperties">Backend<wbr>Properties</a></span>
+        <span class="property-type"><a href="#backendproperties">Backend<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Properties contract{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -746,7 +746,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#proxy_go" style="color: inherit; text-decoration: inherit;">Proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproxycontract">Backend<wbr>Proxy<wbr>Contract</a></span>
+        <span class="property-type"><a href="#backendproxycontract">Backend<wbr>Proxy<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Proxy Contract Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +770,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendtlsproperties">Backend<wbr>Tls<wbr>Properties</a></span>
+        <span class="property-type"><a href="#backendtlsproperties">Backend<wbr>Tls<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend TLS Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1277,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Authorization<wbr>Header<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentials">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentials">Backend<wbr>Authorization<wbr>Header<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1409,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentials">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentials">Backend<wbr>Authorization<wbr>Header<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1455,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1543,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1587,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1633,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicefabriccluster_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Fabric<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1657,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicefabriccluster_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Fabric<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterproperties">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterproperties">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1669,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_fabric_cluster_python" style="color: inherit; text-decoration: inherit;">service_<wbr>fabric_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterproperties">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterproperties">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1683,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicefabriccluster_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Fabric<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1707,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicefabriccluster_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Fabric<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1719,7 +1719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_fabric_cluster_python" style="color: inherit; text-decoration: inherit;">service_<wbr>fabric_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2027,7 +2027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverx509names_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>X509Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatename">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>X509Certificate<wbr>Name<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x509certificatename">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>X509Certificate<wbr>Name&gt;</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2131,7 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverx509names_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>X509Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatename">X509Certificate<wbr>Name<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#x509certificatename">X509Certificate<wbr>Name[]</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2183,7 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_x509_names_python" style="color: inherit; text-decoration: inherit;">server_<wbr>x509_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatename">Sequence[X509Certificate<wbr>Name<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x509certificatename">Sequence[X509Certificate<wbr>Name]</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2237,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverx509names_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>X509Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatenameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>X509Certificate<wbr>Name<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#x509certificatenameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>X509Certificate<wbr>Name<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2341,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverx509names_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>X509Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatenameresponse">X509Certificate<wbr>Name<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#x509certificatenameresponse">X509Certificate<wbr>Name<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2393,7 +2393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_x509_names_python" style="color: inherit; text-decoration: inherit;">server_<wbr>x509_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatenameresponse">Sequence[X509Certificate<wbr>Name<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x509certificatenameresponse">Sequence[X509Certificate<wbr>Name<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}

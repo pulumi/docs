@@ -771,7 +771,7 @@ The DataFlow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow</a></span>
+        <span class="property-type"><a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1142,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1158,7 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1166,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1230,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1254,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemalinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1274,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1290,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1298,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1320,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1336,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1344,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1408,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1424,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1432,7 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemalinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1452,7 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1468,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1476,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1498,7 +1498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1514,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1522,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1586,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1602,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemalinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1630,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1646,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1654,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1676,7 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1692,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1700,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1764,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1780,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemalinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1808,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1824,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1832,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2318,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowfolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Folder<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataflowfolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Folder</a></span>
     </dt>
     <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2334,7 +2334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsink">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Sink<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataflowsink">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Sink&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2342,7 +2342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataflowsource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Source&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2350,7 +2350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transformations_csharp" style="color: inherit; text-decoration: inherit;">Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformation">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Transformation<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#transformation">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Transformation&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2438,7 +2438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowfolder">Data<wbr>Flow<wbr>Folder<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataflowfolder">Data<wbr>Flow<wbr>Folder</a></span>
     </dt>
     <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2454,7 +2454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsink">Data<wbr>Flow<wbr>Sink<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dataflowsink">Data<wbr>Flow<wbr>Sink[]</a></span>
     </dt>
     <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2462,7 +2462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsource">Data<wbr>Flow<wbr>Source<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dataflowsource">Data<wbr>Flow<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2470,7 +2470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transformations_nodejs" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformation">Transformation<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#transformation">Transformation[]</a></span>
     </dt>
     <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2498,7 +2498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowfolder">Data<wbr>Flow<wbr>Folder<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataflowfolder">Data<wbr>Flow<wbr>Folder</a></span>
     </dt>
     <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2514,7 +2514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsink">Sequence[Data<wbr>Flow<wbr>Sink<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dataflowsink">Sequence[Data<wbr>Flow<wbr>Sink]</a></span>
     </dt>
     <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2522,7 +2522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsource">Sequence[Data<wbr>Flow<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dataflowsource">Sequence[Data<wbr>Flow<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2530,7 +2530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformation">Sequence[Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transformation">Sequence[Transformation]</a></span>
     </dt>
     <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2560,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Response<wbr>Folder<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
     </dt>
     <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2576,7 +2576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Sink<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Sink<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2584,7 +2584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Source<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2592,7 +2592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transformations_csharp" style="color: inherit; text-decoration: inherit;">Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Transformation<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#transformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Transformation<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2680,7 +2680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
     </dt>
     <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2696,7 +2696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsinkresponse">Data<wbr>Flow<wbr>Sink<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">Data<wbr>Flow<wbr>Sink<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2704,7 +2704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsourceresponse">Data<wbr>Flow<wbr>Source<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">Data<wbr>Flow<wbr>Source<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2712,7 +2712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transformations_nodejs" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformationresponse">Transformation<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#transformationresponse">Transformation<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2740,7 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
     </dt>
     <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2756,7 +2756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsinkresponse">Sequence[Data<wbr>Flow<wbr>Sink<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">Sequence[Data<wbr>Flow<wbr>Sink<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2764,7 +2764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsourceresponse">Sequence[Data<wbr>Flow<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">Sequence[Data<wbr>Flow<wbr>Source<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2772,7 +2772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformationresponse">Sequence[Transformation<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transformationresponse">Sequence[Transformation<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -521,7 +521,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#mappings_go" style="color: inherit; text-decoration: inherit;">Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictionmappings">Prediction<wbr>Mappings</a></span>
+        <span class="property-type"><a href="#predictionmappings">Prediction<wbr>Mappings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of the link mapping of prediction.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -593,7 +593,7 @@ The Prediction resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#grades_go" style="color: inherit; text-decoration: inherit;">Grades</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#predictiongrades">[]Prediction<wbr>Grades</a></span>
+        <span class="property-type"><a href="#predictiongrades">[]Prediction<wbr>Grades<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The prediction grades.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

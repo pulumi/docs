@@ -456,7 +456,7 @@ The ManagedNetworkGroup resource accepts the following [input]({{< relref "/docs
 <a href="#managementgroups_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">[]Resource<wbr>Id</a></span>
+        <span class="property-type"><a href="#resourceid">[]Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The collection of management groups covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -464,7 +464,7 @@ The ManagedNetworkGroup resource accepts the following [input]({{< relref "/docs
 <a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">[]Resource<wbr>Id</a></span>
+        <span class="property-type"><a href="#resourceid">[]Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The collection of  subnets covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -472,7 +472,7 @@ The ManagedNetworkGroup resource accepts the following [input]({{< relref "/docs
 <a href="#subscriptions_go" style="color: inherit; text-decoration: inherit;">Subscriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">[]Resource<wbr>Id</a></span>
+        <span class="property-type"><a href="#resourceid">[]Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The collection of subscriptions covered by the Managed Network{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -480,7 +480,7 @@ The ManagedNetworkGroup resource accepts the following [input]({{< relref "/docs
 <a href="#virtualnetworks_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">[]Resource<wbr>Id</a></span>
+        <span class="property-type"><a href="#resourceid">[]Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The collection of virtual nets covered by the Managed Network{{% /md %}}</dd></dl>
 {{% /choosable %}}

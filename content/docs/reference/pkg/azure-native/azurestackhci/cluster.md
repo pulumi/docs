@@ -1447,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Stack<wbr>HCI.<wbr>Inputs.<wbr>Cluster<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusternoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Azure<wbr>Stack<wbr>HCI.<wbr>Inputs.<wbr>Cluster<wbr>Node<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of nodes reported by the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1535,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternoderesponse">Cluster<wbr>Node<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clusternoderesponse">Cluster<wbr>Node<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of nodes reported by the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1579,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternoderesponse">Sequence[Cluster<wbr>Node<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternoderesponse">Sequence[Cluster<wbr>Node<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of nodes reported by the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}

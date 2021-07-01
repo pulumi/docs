@@ -567,7 +567,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#destinationnetwork_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">Network<wbr>Ref</a></span>
+        <span class="property-type"><a href="#networkref">Network<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -583,7 +583,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sourcenetwork_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">Network<wbr>Ref</a></span>
+        <span class="property-type"><a href="#networkref">Network<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -607,7 +607,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#http_go" style="color: inherit; text-decoration: inherit;">Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpconfig">[]Http<wbr>Config</a></span>
+        <span class="property-type"><a href="#httpconfig">[]Http<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -631,7 +631,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tcp_go" style="color: inherit; text-decoration: inherit;">Tcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpconfig">[]Tcp<wbr>Config</a></span>
+        <span class="property-type"><a href="#tcpconfig">[]Tcp<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1404,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfig">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Host<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httphostconfig">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Host<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1460,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfig">Http<wbr>Host<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#httphostconfig">Http<wbr>Host<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1488,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfig">Sequence[Http<wbr>Host<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httphostconfig">Sequence[Http<wbr>Host<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1518,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Host<wbr>Config<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httphostconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Host<wbr>Config<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1574,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfigresponse">Http<wbr>Host<wbr>Config<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#httphostconfigresponse">Http<wbr>Host<wbr>Config<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1602,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfigresponse">Sequence[Http<wbr>Host<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httphostconfigresponse">Sequence[Http<wbr>Host<wbr>Config<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1640,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfig">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httprouteconfig">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1680,7 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfig">Http<wbr>Route<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#httprouteconfig">Http<wbr>Route<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1700,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfig">Sequence[Http<wbr>Route<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httprouteconfig">Sequence[Http<wbr>Route<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1722,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Config<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httprouteconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Config<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1762,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfigresponse">Http<wbr>Route<wbr>Config<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#httprouteconfigresponse">Http<wbr>Route<wbr>Config<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1782,7 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfigresponse">Sequence[Http<wbr>Route<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httprouteconfigresponse">Sequence[Http<wbr>Route<wbr>Config<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1796,7 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1804,7 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchrule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchrule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1852,7 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestination">Gateway<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestination">Gateway<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1860,7 +1860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchrule">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchrule">Http<wbr>Route<wbr>Match<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1880,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestination">Gateway<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestination">Gateway<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1888,7 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchrule">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchrule">Http<wbr>Route<wbr>Match<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1910,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1918,7 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchruleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchruleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1966,7 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1974,7 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchruleresponse">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchruleresponse">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1994,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2002,7 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchruleresponse">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchruleresponse">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2480,7 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpath">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchpath">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2488,7 +2488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheader">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httproutematchheader">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Header&gt;</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2520,7 +2520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpath">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchpath">Http<wbr>Route<wbr>Match<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2528,7 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheader">Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#httproutematchheader">Http<wbr>Route<wbr>Match<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2540,7 +2540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpath">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchpath">Http<wbr>Route<wbr>Match<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2548,7 +2548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheader">Sequence[Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httproutematchheader">Sequence[Http<wbr>Route<wbr>Match<wbr>Header]</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2562,7 +2562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpathresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchpathresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2570,7 +2570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheaderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#httproutematchheaderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2602,7 +2602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpathresponse">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchpathresponse">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2610,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheaderresponse">Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#httproutematchheaderresponse">Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2622,7 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpathresponse">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httproutematchpathresponse">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2630,7 +2630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheaderresponse">Sequence[Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httproutematchheaderresponse">Sequence[Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2644,7 +2644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointrefs_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointref">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointref">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2684,7 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointrefs_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointref">Endpoint<wbr>Ref<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointref">Endpoint<wbr>Ref[]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2704,7 +2704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_refs_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointref">Sequence[Endpoint<wbr>Ref<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointref">Sequence[Endpoint<wbr>Ref]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2726,7 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointrefs_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2766,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointrefs_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">Endpoint<wbr>Ref<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">Endpoint<wbr>Ref<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2786,7 +2786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_refs_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">Sequence[Endpoint<wbr>Ref<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">Sequence[Endpoint<wbr>Ref<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2830,7 +2830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2886,7 +2886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestination">Gateway<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestination">Gateway<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2914,7 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestination">Gateway<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestination">Gateway<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2944,7 +2944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3000,7 +3000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3028,7 +3028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">

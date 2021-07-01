@@ -478,7 +478,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#criteria_go" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertcriteria">Health<wbr>Alert<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#healthalertcriteria">Health<wbr>Alert<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -510,7 +510,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertaction">[]Health<wbr>Alert<wbr>Action</a></span>
+        <span class="property-type"><a href="#healthalertaction">[]Health<wbr>Alert<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1033,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1057,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterion">Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterion">Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion[]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1069,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterion">Sequence[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterion">Sequence[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1083,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1107,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1119,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">Sequence[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">Sequence[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1323,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstates_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>State<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthstate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>State&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1379,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstates_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstate">Health<wbr>State<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healthstate">Health<wbr>State[]</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1407,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_states_python" style="color: inherit; text-decoration: inherit;">health_<wbr>states</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstate">Sequence[Health<wbr>State<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthstate">Sequence[Health<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstates_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>State<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthstateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>State<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1493,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstates_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstateresponse">Health<wbr>State<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healthstateresponse">Health<wbr>State<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1521,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_states_python" style="color: inherit; text-decoration: inherit;">health_<wbr>states</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthstateresponse">Sequence[Health<wbr>State<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthstateresponse">Sequence[Health<wbr>State<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

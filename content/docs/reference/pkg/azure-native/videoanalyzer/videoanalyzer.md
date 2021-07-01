@@ -432,7 +432,7 @@ The VideoAnalyzer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountencryption">Account<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#accountencryption">Account<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The account encryption properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -448,7 +448,7 @@ The VideoAnalyzer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">[]Storage<wbr>Account</a></span>
+        <span class="property-type"><a href="#storageaccount">[]Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -464,7 +464,7 @@ The VideoAnalyzer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#videoanalyzeridentity">Video<wbr>Analyzer<wbr>Identity</a></span>
+        <span class="property-type"><a href="#videoanalyzeridentity">Video<wbr>Analyzer<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of managed identities associated with the Video Analyzer resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -815,7 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Resource<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,7 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of the key used to encrypt the account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -871,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -879,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of the key used to encrypt the account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -899,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -907,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of the key used to encrypt the account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -963,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -971,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the key used to encrypt the account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1035,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1043,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the key used to encrypt the account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1071,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1079,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the key used to encrypt the account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1415,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Resource<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A managed identity that Video Analyzer will use to access the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1455,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A managed identity that Video Analyzer will use to access the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1475,7 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A managed identity that Video Analyzer will use to access the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1505,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A managed identity that Video Analyzer will use to access the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1561,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A managed identity that Video Analyzer will use to access the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1589,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A managed identity that Video Analyzer will use to access the storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1985,7 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Managed<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Video<wbr>Analyzer.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Managed<wbr>Identity<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The User Assigned Managed Identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2025,7 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Managed<wbr>Identity<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Managed<wbr>Identity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The User Assigned Managed Identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2045,7 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Managed<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Managed<wbr>Identity<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The User Assigned Managed Identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}

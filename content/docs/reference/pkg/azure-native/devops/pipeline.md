@@ -545,7 +545,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#bootstrapconfiguration_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootstrapconfiguration">Bootstrap<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#bootstrapconfiguration">Bootstrap<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration used to bootstrap the Pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1082,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetemplate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Pipeline<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetemplate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Pipeline<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Template used to bootstrap the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1090,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepository">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Code<wbr>Repository<wbr>Args</a></span>
+        <span class="property-type"><a href="#coderepository">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Code<wbr>Repository</a></span>
     </dt>
     <dd>{{% md %}}Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1122,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetemplate">Pipeline<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetemplate">Pipeline<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Template used to bootstrap the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1130,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcerepository_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepository">Code<wbr>Repository<wbr>Args</a></span>
+        <span class="property-type"><a href="#coderepository">Code<wbr>Repository</a></span>
     </dt>
     <dd>{{% md %}}Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1142,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetemplate">Pipeline<wbr>Template<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetemplate">Pipeline<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Template used to bootstrap the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepository">Code<wbr>Repository<wbr>Args</a></span>
+        <span class="property-type"><a href="#coderepository">Code<wbr>Repository</a></span>
     </dt>
     <dd>{{% md %}}Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1164,7 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetemplateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Pipeline<wbr>Template<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetemplateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Pipeline<wbr>Template<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Template used to bootstrap the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1172,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepositoryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Code<wbr>Repository<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#coderepositoryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Code<wbr>Repository<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1204,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetemplateresponse">Pipeline<wbr>Template<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetemplateresponse">Pipeline<wbr>Template<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Template used to bootstrap the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1212,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcerepository_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepositoryresponse">Code<wbr>Repository<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#coderepositoryresponse">Code<wbr>Repository<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1224,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetemplateresponse">Pipeline<wbr>Template<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetemplateresponse">Pipeline<wbr>Template<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Template used to bootstrap the pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1232,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#coderepositoryresponse">Code<wbr>Repository<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#coderepositoryresponse">Code<wbr>Repository<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1270,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorization">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1358,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorization">Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorization">Authorization</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1402,7 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorization">Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorization">Authorization</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1448,7 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Authorization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1536,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1580,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Authorization info to access the code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

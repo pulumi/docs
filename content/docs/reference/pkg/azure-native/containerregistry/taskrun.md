@@ -412,7 +412,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
+        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -428,7 +428,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runrequest_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuildrequest">Docker<wbr>Build<wbr>Request</a> | <a href="#encodedtaskrunrequest">Encoded<wbr>Task<wbr>Run<wbr>Request</a> | <a href="#filetaskrunrequest">File<wbr>Task<wbr>Run<wbr>Request</a> | <a href="#taskrunrequest">Task<wbr>Run<wbr>Request</a></span>
+        <span class="property-type"><a href="#dockerbuildrequest">Docker<wbr>Build<wbr>Request<wbr>Args</a> | <a href="#encodedtaskrunrequest">Encoded<wbr>Task<wbr>Run<wbr>Request<wbr>Args</a> | <a href="#filetaskrunrequest">File<wbr>Task<wbr>Run<wbr>Request<wbr>Args</a> | <a href="#taskrunrequest">Task<wbr>Run<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request (parameters) for the run{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customregistries_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Custom<wbr>Registry<wbr>Credentials<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Custom<wbr>Registry<wbr>Credentials&gt;</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1171,7 +1171,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#sourceregistry_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Registry<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Registry<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1205,7 +1205,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#customregistries_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Custom<wbr>Registry<wbr>Credentials<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Custom<wbr>Registry<wbr>Credentials}</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1215,7 +1215,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#sourceregistry_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentials">Source<wbr>Registry<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentials">Source<wbr>Registry<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1227,7 +1227,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#custom_registries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Custom<wbr>Registry<wbr>Credentials<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Custom<wbr>Registry<wbr>Credentials]</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1237,7 +1237,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#source_registry_python" style="color: inherit; text-decoration: inherit;">source_<wbr>registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentials">Source<wbr>Registry<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentials">Source<wbr>Registry<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1251,7 +1251,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#customregistries_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Custom<wbr>Registry<wbr>Credentials<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1261,7 +1261,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#sourceregistry_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1295,7 +1295,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#customregistries_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Custom<wbr>Registry<wbr>Credentials<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1305,7 +1305,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#sourceregistry_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1317,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#custom_registries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Custom<wbr>Registry<wbr>Credentials<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1327,7 +1327,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#source_registry_python" style="color: inherit; text-decoration: inherit;">source_<wbr>registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1353,7 +1353,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd><dt cla
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobject">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
@@ -1362,7 +1362,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobject">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1419,7 +1419,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd><dt cla
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Secret<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobject">Secret<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
@@ -1428,7 +1428,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Secret<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobject">Secret<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1452,7 +1452,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd><dt cla
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Secret<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobject">Secret<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
@@ -1461,7 +1461,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Secret<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobject">Secret<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1487,7 +1487,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd><dt cla
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
@@ -1496,7 +1496,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1553,7 +1553,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd><dt cla
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
@@ -1562,7 +1562,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1586,7 +1586,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd><dt cla
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
@@ -1595,7 +1595,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1617,7 +1617,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1625,7 +1625,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#agentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1641,7 +1641,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argument">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Argument<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#argument">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Argument&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1649,7 +1649,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1851,7 +1851,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1859,7 +1859,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1875,7 +1875,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argument">Argument<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#argument">Argument[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1883,7 +1883,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentials">Credentials</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1968,7 +1968,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1976,7 +1976,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1992,7 +1992,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argument">Sequence[Argument<wbr>Args]</a></span>
+        <span class="property-type"><a href="#argument">Sequence[Argument]</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2000,7 +2000,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentials">Credentials</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2087,7 +2087,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2095,7 +2095,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2111,7 +2111,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Argument<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#argumentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Argument<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2119,7 +2119,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2321,7 +2321,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2329,7 +2329,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2345,7 +2345,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">Argument<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#argumentresponse">Argument<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2353,7 +2353,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2438,7 +2438,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2446,7 +2446,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2462,7 +2462,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">Sequence[Argument<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#argumentresponse">Sequence[Argument<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2470,7 +2470,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2557,7 +2557,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2565,7 +2565,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2581,7 +2581,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2630,7 +2630,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#setvalue">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2743,7 +2743,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2751,7 +2751,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2767,7 +2767,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentials">Credentials</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2816,7 +2816,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">Set<wbr>Value<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#setvalue">Set<wbr>Value[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2836,7 +2836,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2844,7 +2844,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2860,7 +2860,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentials">Credentials</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2909,7 +2909,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">Sequence[Set<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#setvalue">Sequence[Set<wbr>Value]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2931,7 +2931,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2939,7 +2939,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2955,7 +2955,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3004,7 +3004,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3117,7 +3117,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3125,7 +3125,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3141,7 +3141,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3190,7 +3190,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3210,7 +3210,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3218,7 +3218,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3234,7 +3234,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3283,7 +3283,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3297,7 +3297,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3313,7 +3313,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3329,7 +3329,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3370,7 +3370,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#setvalue">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3483,7 +3483,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3499,7 +3499,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3515,7 +3515,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentials">Credentials</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3556,7 +3556,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">Set<wbr>Value<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#setvalue">Set<wbr>Value[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3576,7 +3576,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3592,7 +3592,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3608,7 +3608,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentials">Credentials</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3649,7 +3649,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">Sequence[Set<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#setvalue">Sequence[Set<wbr>Value]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3671,7 +3671,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3687,7 +3687,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3703,7 +3703,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3744,7 +3744,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3857,7 +3857,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3873,7 +3873,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3889,7 +3889,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3930,7 +3930,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3950,7 +3950,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3966,7 +3966,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3982,7 +3982,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4023,7 +4023,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4069,7 +4069,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -4100,7 +4100,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4147,7 +4147,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -4186,7 +4186,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -4227,7 +4227,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -4305,7 +4305,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -4344,7 +4344,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -4515,7 +4515,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#images_csharp" style="color: inherit; text-decoration: inherit;">Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Image<wbr>Descriptor<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Image<wbr>Descriptor<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of image updates that caused the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4571,7 +4571,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">Image<wbr>Descriptor<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">Image<wbr>Descriptor<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of image updates that caused the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4599,7 +4599,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">Sequence[Image<wbr>Descriptor<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">Sequence[Image<wbr>Descriptor<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of image updates that caused the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4647,7 +4647,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argument">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Argument<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#argument">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Argument&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of override arguments to be used when
 executing a build step.{{% /md %}}</dd><dt class="property-optional"
@@ -4688,7 +4688,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#setvalue">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4753,7 +4753,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argument">Argument<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#argument">Argument[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of override arguments to be used when
 executing a build step.{{% /md %}}</dd><dt class="property-optional"
@@ -4794,7 +4794,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">Set<wbr>Value<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#setvalue">Set<wbr>Value[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4806,7 +4806,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argument">Sequence[Argument<wbr>Args]</a></span>
+        <span class="property-type"><a href="#argument">Sequence[Argument]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of override arguments to be used when
 executing a build step.{{% /md %}}</dd><dt class="property-optional"
@@ -4847,7 +4847,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">Sequence[Set<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#setvalue">Sequence[Set<wbr>Value]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4861,7 +4861,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Argument<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#argumentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Argument<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of override arguments to be used when
 executing a build step.{{% /md %}}</dd><dt class="property-optional"
@@ -4902,7 +4902,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4967,7 +4967,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">Argument<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#argumentresponse">Argument<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of override arguments to be used when
 executing a build step.{{% /md %}}</dd><dt class="property-optional"
@@ -5008,7 +5008,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5020,7 +5020,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">Sequence[Argument<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#argumentresponse">Sequence[Argument<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of override arguments to be used when
 executing a build step.{{% /md %}}</dd><dt class="property-optional"
@@ -5061,7 +5061,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5345,7 +5345,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#logartifact_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Artifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Image<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Image<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The image description for the log artifact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5369,7 +5369,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5385,7 +5385,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#agentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5425,7 +5425,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#imageupdatetrigger_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Update<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageupdatetriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Image<wbr>Update<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageupdatetriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Image<wbr>Update<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The image update trigger that caused the run. This is applicable if the task has base image trigger configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5449,7 +5449,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#outputimages_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Image<wbr>Descriptor<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Image<wbr>Descriptor<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5457,7 +5457,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run will happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5497,7 +5497,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#sourcetrigger_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetriggerdescriptorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcetriggerdescriptorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source trigger that caused the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5529,7 +5529,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#timertrigger_csharp" style="color: inherit; text-decoration: inherit;">Timer<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertriggerdescriptorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Timer<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timertriggerdescriptorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Timer<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The timer trigger that caused the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5769,7 +5769,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#logartifact_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Artifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">Image<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">Image<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The image description for the log artifact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5793,7 +5793,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5809,7 +5809,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5849,7 +5849,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#imageupdatetrigger_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Update<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageupdatetriggerresponse">Image<wbr>Update<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageupdatetriggerresponse">Image<wbr>Update<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The image update trigger that caused the run. This is applicable if the task has base image trigger configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5873,7 +5873,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#outputimages_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">Image<wbr>Descriptor<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">Image<wbr>Descriptor<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5881,7 +5881,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run will happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5921,7 +5921,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#sourcetrigger_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetriggerdescriptorresponse">Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcetriggerdescriptorresponse">Source<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source trigger that caused the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5953,7 +5953,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#timertrigger_nodejs" style="color: inherit; text-decoration: inherit;">timer<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertriggerdescriptorresponse">Timer<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timertriggerdescriptorresponse">Timer<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The timer trigger that caused the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5981,7 +5981,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#log_artifact_python" style="color: inherit; text-decoration: inherit;">log_<wbr>artifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">Image<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">Image<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The image description for the log artifact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6005,7 +6005,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6021,7 +6021,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6061,7 +6061,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#image_update_trigger_python" style="color: inherit; text-decoration: inherit;">image_<wbr>update_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageupdatetriggerresponse">Image<wbr>Update<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageupdatetriggerresponse">Image<wbr>Update<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The image update trigger that caused the run. This is applicable if the task has base image trigger configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6085,7 +6085,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#output_images_python" style="color: inherit; text-decoration: inherit;">output_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">Sequence[Image<wbr>Descriptor<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">Sequence[Image<wbr>Descriptor<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6093,7 +6093,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run will happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6133,7 +6133,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#source_trigger_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetriggerdescriptorresponse">Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcetriggerdescriptorresponse">Source<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source trigger that caused the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6165,7 +6165,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#timer_trigger_python" style="color: inherit; text-decoration: inherit;">timer_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertriggerdescriptorresponse">Timer<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timertriggerdescriptorresponse">Timer<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The timer trigger that caused the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7255,7 +7255,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#overridetaskstepproperties_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Task<wbr>Step<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overridetaskstepproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#overridetaskstepproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Override<wbr>Task<wbr>Step<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Set of overridable parameters that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7343,7 +7343,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#overridetaskstepproperties_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Task<wbr>Step<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overridetaskstepproperties">Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#overridetaskstepproperties">Override<wbr>Task<wbr>Step<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Set of overridable parameters that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7387,7 +7387,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#override_task_step_properties_python" style="color: inherit; text-decoration: inherit;">override_<wbr>task_<wbr>step_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overridetaskstepproperties">Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#overridetaskstepproperties">Override<wbr>Task<wbr>Step<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Set of overridable parameters that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7433,7 +7433,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#overridetaskstepproperties_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Task<wbr>Step<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overridetasksteppropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#overridetasksteppropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Set of overridable parameters that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7521,7 +7521,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#overridetaskstepproperties_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Task<wbr>Step<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overridetasksteppropertiesresponse">Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#overridetasksteppropertiesresponse">Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Set of overridable parameters that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7565,7 +7565,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#override_task_step_properties_python" style="color: inherit; text-decoration: inherit;">override_<wbr>task_<wbr>step_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overridetasksteppropertiesresponse">Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#overridetasksteppropertiesresponse">Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Set of overridable parameters that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}

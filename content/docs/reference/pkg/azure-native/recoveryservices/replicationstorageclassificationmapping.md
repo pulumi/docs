@@ -381,7 +381,7 @@ The ReplicationStorageClassificationMapping resource accepts the following [inpu
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagemappinginputproperties">Storage<wbr>Mapping<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#storagemappinginputproperties">Storage<wbr>Mapping<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage mapping input properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

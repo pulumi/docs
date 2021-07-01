@@ -421,7 +421,7 @@ The SqlResourceSqlRoleDefinition resource accepts the following [input]({{< relr
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permission">[]Permission</a></span>
+        <span class="property-type"><a href="#permission">[]Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of operations allowed through this Role Definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -445,7 +445,7 @@ The SqlResourceSqlRoleDefinition resource accepts the following [input]({{< relr
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#roledefinitiontype">Role<wbr>Definition<wbr>Type</a></span>
+        <span class="property-type"><a href="#roledefinitiontype">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Role Definition was built-in or user created.{{% /md %}}</dd></dl>
 {{% /choosable %}}

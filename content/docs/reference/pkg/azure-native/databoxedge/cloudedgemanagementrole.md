@@ -613,7 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_csharp" style="color: inherit; text-decoration: inherit;">Subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Edge<wbr>Profile<wbr>Subscription<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Edge<wbr>Profile<wbr>Subscription<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -637,7 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_nodejs" style="color: inherit; text-decoration: inherit;">subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -649,7 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_python" style="color: inherit; text-decoration: inherit;">subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -687,7 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registeredfeatures_csharp" style="color: inherit; text-decoration: inherit;">Registered<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -855,7 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registeredfeatures_nodejs" style="color: inherit; text-decoration: inherit;">registered<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">Subscription<wbr>Registered<wbr>Features<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">Subscription<wbr>Registered<wbr>Features<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -939,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registered_features_python" style="color: inherit; text-decoration: inherit;">registered_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">Sequence[Subscription<wbr>Registered<wbr>Features<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">Sequence[Subscription<wbr>Registered<wbr>Features<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

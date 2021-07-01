@@ -459,7 +459,7 @@ The DigitalTwinsEndpoint resource accepts the following [input]({{< relref "/doc
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventgrid">Event<wbr>Grid</a> | <a href="#eventhub">Event<wbr>Hub</a> | <a href="#servicebus">Service<wbr>Bus</a></span>
+        <span class="property-type"><a href="#eventgrid">Event<wbr>Grid<wbr>Args</a> | <a href="#eventhub">Event<wbr>Hub<wbr>Args</a> | <a href="#servicebus">Service<wbr>Bus<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DigitalTwinsInstance endpoint resource properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">

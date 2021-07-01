@@ -676,7 +676,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobdetails">Job<wbr>Details</a></span>
+        <span class="property-type"><a href="#jobdetails">Job<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the job properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2733,7 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deliverypackage_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverypackageinformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Delivery<wbr>Package<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverypackageinformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Delivery<wbr>Package<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2749,7 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivelist_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatus">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Drive<wbr>Status<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#drivestatus">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Drive<wbr>Status&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2757,7 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Encryption<wbr>Key<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionkeydetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Encryption<wbr>Key<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2765,7 +2765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_csharp" style="color: inherit; text-decoration: inherit;">Export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#export">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Export<wbr>Args</a></span>
+        <span class="property-type"><a href="#export">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Export</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2813,7 +2813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnaddress_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddress">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnaddress">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2821,7 +2821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnpackage_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Package<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#packageinformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Package<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2829,7 +2829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnshipping_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Shipping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshipping">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Shipping<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnshipping">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Shipping</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2837,7 +2837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shippinginformation_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Shipping<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippinginformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Shipping<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3029,7 +3029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deliverypackage_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverypackageinformation">Delivery<wbr>Package<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverypackageinformation">Delivery<wbr>Package<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3045,7 +3045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivelist_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatus">Drive<wbr>Status<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#drivestatus">Drive<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3053,7 +3053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetails">Encryption<wbr>Key<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionkeydetails">Encryption<wbr>Key<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3061,7 +3061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_nodejs" style="color: inherit; text-decoration: inherit;">export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#export">Export<wbr>Args</a></span>
+        <span class="property-type"><a href="#export">Export</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3109,7 +3109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnaddress_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddress">Return<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnaddress">Return<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3117,7 +3117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformation">Package<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#packageinformation">Package<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3125,7 +3125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnshipping_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Shipping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshipping">Return<wbr>Shipping<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnshipping">Return<wbr>Shipping</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3133,7 +3133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shippinginformation_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformation">Shipping<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippinginformation">Shipping<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3177,7 +3177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverypackageinformation">Delivery<wbr>Package<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverypackageinformation">Delivery<wbr>Package<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3193,7 +3193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drive_list_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatus">Sequence[Drive<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#drivestatus">Sequence[Drive<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3201,7 +3201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetails">Encryption<wbr>Key<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionkeydetails">Encryption<wbr>Key<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3209,7 +3209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_python" style="color: inherit; text-decoration: inherit;">export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#export">Export<wbr>Args</a></span>
+        <span class="property-type"><a href="#export">Export</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3257,7 +3257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#return_address_python" style="color: inherit; text-decoration: inherit;">return_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddress">Return<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnaddress">Return<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3265,7 +3265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformation">Package<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#packageinformation">Package<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3273,7 +3273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#return_shipping_python" style="color: inherit; text-decoration: inherit;">return_<wbr>shipping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshipping">Return<wbr>Shipping<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnshipping">Return<wbr>Shipping</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3281,7 +3281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shipping_information_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformation">Shipping<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippinginformation">Shipping<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3327,7 +3327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deliverypackage_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverypackageinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Delivery<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverypackageinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Delivery<wbr>Package<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3343,7 +3343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivelist_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Drive<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#drivestatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Drive<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3351,7 +3351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Encryption<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionkeydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Encryption<wbr>Key<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3359,7 +3359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_csharp" style="color: inherit; text-decoration: inherit;">Export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Export<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Export<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3407,7 +3407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnaddress_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Address<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Address<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3415,7 +3415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnpackage_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#packageinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Package<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3423,7 +3423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnshipping_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Shipping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshippingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Shipping<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnshippingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Shipping<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3431,7 +3431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shippinginformation_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Shipping<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippinginformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Shipping<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3623,7 +3623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deliverypackage_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3639,7 +3639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivelist_nodejs" style="color: inherit; text-decoration: inherit;">drive<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatusresponse">Drive<wbr>Status<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#drivestatusresponse">Drive<wbr>Status<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3647,7 +3647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetailsresponse">Encryption<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionkeydetailsresponse">Encryption<wbr>Key<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3655,7 +3655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_nodejs" style="color: inherit; text-decoration: inherit;">export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportresponse">Export<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportresponse">Export<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3703,7 +3703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnaddress_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddressresponse">Return<wbr>Address<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnaddressresponse">Return<wbr>Address<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3711,7 +3711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnpackage_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3719,7 +3719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#returnshipping_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Shipping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshippingresponse">Return<wbr>Shipping<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnshippingresponse">Return<wbr>Shipping<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3727,7 +3727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shippinginformation_nodejs" style="color: inherit; text-decoration: inherit;">shipping<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformationresponse">Shipping<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippinginformationresponse">Shipping<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3771,7 +3771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3787,7 +3787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drive_list_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatusresponse">Sequence[Drive<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#drivestatusresponse">Sequence[Drive<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3795,7 +3795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetailsresponse">Encryption<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionkeydetailsresponse">Encryption<wbr>Key<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3803,7 +3803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_python" style="color: inherit; text-decoration: inherit;">export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportresponse">Export<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportresponse">Export<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3851,7 +3851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#return_address_python" style="color: inherit; text-decoration: inherit;">return_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddressresponse">Return<wbr>Address<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnaddressresponse">Return<wbr>Address<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3859,7 +3859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3867,7 +3867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#return_shipping_python" style="color: inherit; text-decoration: inherit;">return_<wbr>shipping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshippingresponse">Return<wbr>Shipping<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#returnshippingresponse">Return<wbr>Shipping<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3875,7 +3875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shipping_information_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformationresponse">Shipping<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#shippinginformationresponse">Shipping<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

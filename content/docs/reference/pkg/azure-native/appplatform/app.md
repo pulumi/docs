@@ -415,7 +415,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentityproperties">Managed<wbr>Identity<wbr>Properties</a></span>
+        <span class="property-type"><a href="#managedidentityproperties">Managed<wbr>Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Managed Identity type of the app resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -431,7 +431,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appresourceproperties">App<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#appresourceproperties">App<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the App resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -702,7 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentdisk_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Persistent<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentdisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Persistent<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temporarydisk_csharp" style="color: inherit; text-decoration: inherit;">Temporary<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Temporary<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#temporarydisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Temporary<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -806,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentdisk_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdisk">Persistent<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentdisk">Persistent<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temporarydisk_nodejs" style="color: inherit; text-decoration: inherit;">temporary<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydisk">Temporary<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#temporarydisk">Temporary<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -858,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistent_disk_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdisk">Persistent<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentdisk">Persistent<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temporary_disk_python" style="color: inherit; text-decoration: inherit;">temporary_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydisk">Temporary<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#temporarydisk">Temporary<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -936,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentdisk_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Persistent<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Persistent<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -952,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temporarydisk_csharp" style="color: inherit; text-decoration: inherit;">Temporary<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Temporary<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#temporarydiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Temporary<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1088,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentdisk_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdiskresponse">Persistent<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentdiskresponse">Persistent<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1104,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temporarydisk_nodejs" style="color: inherit; text-decoration: inherit;">temporary<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydiskresponse">Temporary<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#temporarydiskresponse">Temporary<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1164,7 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistent_disk_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentdiskresponse">Persistent<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#persistentdiskresponse">Persistent<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Persistent disk settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1180,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#temporary_disk_python" style="color: inherit; text-decoration: inherit;">temporary_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#temporarydiskresponse">Temporary<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#temporarydiskresponse">Temporary<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Temporary disk settings{{% /md %}}</dd></dl>
 {{% /choosable %}}

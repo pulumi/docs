@@ -696,7 +696,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesresourceidentity">Services<wbr>Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#servicesresourceidentity">Services<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Setting indicating whether the service has a managed identity associated with it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -712,7 +712,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesproperties">Services<wbr>Properties</a></span>
+        <span class="property-type"><a href="#servicesproperties">Services<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The common properties of a service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1095,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1119,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1131,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1161,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1185,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1265,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1289,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1341,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2737,7 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccesspolicyentry">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceaccesspolicyentry">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Access<wbr>Policy<wbr>Entry&gt;</a></span>
     </dt>
     <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2745,7 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acrconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Acr<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceacrconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceacrconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Acr<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2753,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Authentication<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2761,7 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecorsconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cors<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2769,7 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cosmosdbconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cosmos<wbr>Db<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecosmosdbconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecosmosdbconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2777,7 +2777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exportconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceexportconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceexportconfigurationinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Export<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2873,7 +2873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccesspolicyentry">Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceaccesspolicyentry">Service<wbr>Access<wbr>Policy<wbr>Entry[]</a></span>
     </dt>
     <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2881,7 +2881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acrconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">acr<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceacrconfigurationinfo">Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceacrconfigurationinfo">Service<wbr>Acr<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2889,7 +2889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfigurationinfo">Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfigurationinfo">Service<wbr>Authentication<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2897,7 +2897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfigurationinfo">Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecorsconfigurationinfo">Service<wbr>Cors<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2905,7 +2905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cosmosdbconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cosmos<wbr>Db<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecosmosdbconfigurationinfo">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecosmosdbconfigurationinfo">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2913,7 +2913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exportconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceexportconfigurationinfo">Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceexportconfigurationinfo">Service<wbr>Export<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2921,7 +2921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">Private<wbr>Endpoint<wbr>Connection<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">Private<wbr>Endpoint<wbr>Connection[]</a></span>
     </dt>
     <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2941,7 +2941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccesspolicyentry">Sequence[Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceaccesspolicyentry">Sequence[Service<wbr>Access<wbr>Policy<wbr>Entry]</a></span>
     </dt>
     <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2949,7 +2949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acr_configuration_python" style="color: inherit; text-decoration: inherit;">acr_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceacrconfigurationinfo">Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceacrconfigurationinfo">Service<wbr>Acr<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2957,7 +2957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_configuration_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfigurationinfo">Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfigurationinfo">Service<wbr>Authentication<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2965,7 +2965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cors_configuration_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfigurationinfo">Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecorsconfigurationinfo">Service<wbr>Cors<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2973,7 +2973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cosmos_db_configuration_python" style="color: inherit; text-decoration: inherit;">cosmos_<wbr>db_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecosmosdbconfigurationinfo">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecosmosdbconfigurationinfo">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2981,7 +2981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_configuration_python" style="color: inherit; text-decoration: inherit;">export_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceexportconfigurationinfo">Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceexportconfigurationinfo">Service<wbr>Export<wbr>Configuration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2989,7 +2989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">Sequence[Private<wbr>Endpoint<wbr>Connection]</a></span>
     </dt>
     <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3019,7 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccesspolicyentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceaccesspolicyentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3027,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acrconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Acr<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3035,7 +3035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3043,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3051,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cosmosdbconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cosmos<wbr>Db<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3059,7 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exportconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3067,7 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3171,7 +3171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccesspolicyentryresponse">Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serviceaccesspolicyentryresponse">Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3179,7 +3179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acrconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">acr<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3187,7 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3195,7 +3195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3203,7 +3203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cosmosdbconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cosmos<wbr>Db<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3211,7 +3211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exportconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3219,7 +3219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3247,7 +3247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccesspolicyentryresponse">Sequence[Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceaccesspolicyentryresponse">Sequence[Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3255,7 +3255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acr_configuration_python" style="color: inherit; text-decoration: inherit;">acr_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3263,7 +3263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_configuration_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3271,7 +3271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cors_configuration_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3279,7 +3279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cosmos_db_configuration_python" style="color: inherit; text-decoration: inherit;">cosmos_<wbr>db_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3287,7 +3287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#export_configuration_python" style="color: inherit; text-decoration: inherit;">export_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3295,7 +3295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

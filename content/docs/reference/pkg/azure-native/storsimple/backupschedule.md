@@ -447,7 +447,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#schedulerecurrence_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulerecurrence">Schedule<wbr>Recurrence</a></span>
+        <span class="property-type"><a href="#schedulerecurrence">Schedule<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -479,7 +479,7 @@ The BackupSchedule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kind">Kind</a></span>
+        <span class="property-type"><a href="#kind">string</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}

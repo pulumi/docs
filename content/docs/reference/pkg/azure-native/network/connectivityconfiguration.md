@@ -442,7 +442,7 @@ The ConnectivityConfiguration resource accepts the following [input]({{< relref 
 <a href="#appliestogroups_go" style="color: inherit; text-decoration: inherit;">Applies<wbr>To<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectivitygroupitem">[]Connectivity<wbr>Group<wbr>Item</a></span>
+        <span class="property-type"><a href="#connectivitygroupitem">[]Connectivity<wbr>Group<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Groups for configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

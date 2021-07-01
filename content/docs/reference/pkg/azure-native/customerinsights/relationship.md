@@ -447,7 +447,7 @@ The Relationship resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cardinality_go" style="color: inherit; text-decoration: inherit;">Cardinality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cardinalitytypes">Cardinality<wbr>Types</a></span>
+        <span class="property-type"><a href="#cardinalitytypes">string</a></span>
     </dt>
     <dd>{{% md %}}The Relationship Cardinality.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -479,7 +479,7 @@ The Relationship resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertydefinition">[]Property<wbr>Definition</a></span>
+        <span class="property-type"><a href="#propertydefinition">[]Property<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Relationship.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -487,7 +487,7 @@ The Relationship resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#lookupmappings_go" style="color: inherit; text-decoration: inherit;">Lookup<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiptypemapping">[]Relationship<wbr>Type<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#relationshiptypemapping">[]Relationship<wbr>Type<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional property to be used to map fields in profile to their strong ids in related profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1346,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumvalidvalues_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformat">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformat">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1594,7 +1594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumvalidvalues_nodejs" style="color: inherit; text-decoration: inherit;">enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformat">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformat">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format[]</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1718,7 +1718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enum_valid_values_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>valid_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformat">Sequence[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args]</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformat">Sequence[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format]</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1820,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourceprecedencerules_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Precedence<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceprecedenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasourceprecedenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Precedence<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1852,7 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumvalidvalues_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2084,7 +2084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourceprecedencerules_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Precedence<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceprecedenceresponse">Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datasourceprecedenceresponse">Data<wbr>Source<wbr>Precedence<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2116,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumvalidvalues_nodejs" style="color: inherit; text-decoration: inherit;">enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2216,7 +2216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_precedence_rules_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>precedence_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceprecedenceresponse">Sequence[Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasourceprecedenceresponse">Sequence[Data<wbr>Source<wbr>Precedence<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2248,7 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enum_valid_values_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>valid_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Sequence[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Sequence[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2514,7 +2514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiptypefieldmapping">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#relationshiptypefieldmapping">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Relationship<wbr>Type<wbr>Field<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2538,7 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiptypefieldmapping">Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#relationshiptypefieldmapping">Relationship<wbr>Type<wbr>Field<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2550,7 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiptypefieldmapping">Sequence[Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#relationshiptypefieldmapping">Sequence[Relationship<wbr>Type<wbr>Field<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2564,7 +2564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiptypefieldmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#relationshiptypefieldmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2588,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldmappings_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiptypefieldmappingresponse">Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#relationshiptypefieldmappingresponse">Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2600,7 +2600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_mappings_python" style="color: inherit; text-decoration: inherit;">field_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiptypefieldmappingresponse">Sequence[Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#relationshiptypefieldmappingresponse">Sequence[Relationship<wbr>Type<wbr>Field<wbr>Mapping<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -410,7 +410,7 @@ The ManagementAssociation resource accepts the following [input]({{< relref "/do
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementassociationproperties">Management<wbr>Association<wbr>Properties</a></span>
+        <span class="property-type"><a href="#managementassociationproperties">Management<wbr>Association<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for ManagementAssociation object supported by the OperationsManagement resource provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}

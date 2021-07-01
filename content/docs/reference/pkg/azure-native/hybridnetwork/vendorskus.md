@@ -706,7 +706,7 @@ The VendorSkus resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#networkfunctiontemplate_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctiontemplate">Network<wbr>Function<wbr>Template</a></span>
+        <span class="property-type"><a href="#networkfunctiontemplate">Network<wbr>Function<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The template definition of the network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1807,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1831,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1843,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1857,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1881,7 +1881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1893,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1907,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customprofile_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#customprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1915,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterface">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1923,7 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1947,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2059,7 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customprofile_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprofile">Custom<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#customprofile">Custom<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2067,7 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">Network<wbr>Interface<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkinterface">Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2075,7 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofile">Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofile">Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2099,7 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2135,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_profile_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprofile">Custom<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#customprofile">Custom<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2143,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">Sequence[Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterface">Sequence[Network<wbr>Interface]</a></span>
     </dt>
     <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2151,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofile">Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofile">Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2175,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2213,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customprofile_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#customprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Custom<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2221,7 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2229,7 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2253,7 +2253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2365,7 +2365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customprofile_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprofileresponse">Custom<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#customprofileresponse">Custom<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2373,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">Network<wbr>Interface<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">Network<wbr>Interface<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2381,7 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2405,7 +2405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2441,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_profile_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprofileresponse">Custom<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#customprofileresponse">Custom<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the custom settings for the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2449,7 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">Sequence[Network<wbr>Interface<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">Sequence[Network<wbr>Interface<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The network interface configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2457,7 +2457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osprofileresponse">Os<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2481,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2545,7 +2545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkfunctionroleconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Role<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionroleconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkfunctionroleconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2569,7 +2569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkfunctionroleconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Function<wbr>Role<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionroleconfiguration">Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkfunctionroleconfiguration">Network<wbr>Function<wbr>Role<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2581,7 +2581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_function_role_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>function_<wbr>role_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionroleconfiguration">Sequence[Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkfunctionroleconfiguration">Sequence[Network<wbr>Function<wbr>Role<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2595,7 +2595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkfunctionroleconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Function<wbr>Role<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2619,7 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkfunctionroleconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Function<wbr>Role<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2631,7 +2631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_function_role_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>function_<wbr>role_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">Sequence[Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkfunctionroleconfigurationresponse">Sequence[Network<wbr>Function<wbr>Role<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}An array of network function role definitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2645,7 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2717,7 +2717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfiguration">Network<wbr>Interface<wbr>IPConfiguration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfiguration">Network<wbr>Interface<wbr>IPConfiguration[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2753,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfiguration">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfiguration">Sequence[Network<wbr>Interface<wbr>IPConfiguration]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3211,7 +3211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>IPConfiguration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3283,7 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3319,7 +3319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3411,7 +3411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vhd_csharp" style="color: inherit; text-decoration: inherit;">Vhd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3483,7 +3483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vhd_nodejs" style="color: inherit; text-decoration: inherit;">vhd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3519,7 +3519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vhd_python" style="color: inherit; text-decoration: inherit;">vhd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The virtual hard disk.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3671,7 +3671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Linux<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3743,7 +3743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3779,7 +3779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3817,7 +3817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3889,7 +3889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3925,7 +3925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4003,7 +4003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4027,7 +4027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickey">Ssh<wbr>Public<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sshpublickey">Ssh<wbr>Public<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4039,7 +4039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickey">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sshpublickey">Sequence[Ssh<wbr>Public<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4053,7 +4053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4077,7 +4077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">Ssh<wbr>Public<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4089,7 +4089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4267,7 +4267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisk">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadisk">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Data<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4275,7 +4275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The image reference properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4283,7 +4283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4323,7 +4323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisk">Data<wbr>Disk<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datadisk">Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4331,7 +4331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereference">Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The image reference properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4339,7 +4339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdisk">Os<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdisk">Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4351,7 +4351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadisk">Sequence[Data<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datadisk">Sequence[Data<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4359,7 +4359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereference">Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The image reference properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4367,7 +4367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdisk">Os<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdisk">Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4381,7 +4381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4389,7 +4389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The image reference properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4397,7 +4397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Network.<wbr>Inputs.<wbr>Os<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4437,7 +4437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskresponse">Data<wbr>Disk<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datadiskresponse">Data<wbr>Disk<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4445,7 +4445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The image reference properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4453,7 +4453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskresponse">Os<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskresponse">Os<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4465,7 +4465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskresponse">Sequence[Data<wbr>Disk<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datadiskresponse">Sequence[Data<wbr>Disk<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4473,7 +4473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The image reference properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4481,7 +4481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskresponse">Os<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskresponse">Os<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}

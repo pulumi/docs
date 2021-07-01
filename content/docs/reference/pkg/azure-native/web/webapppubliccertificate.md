@@ -258,7 +258,7 @@ The WebAppPublicCertificate resource accepts the following [input]({{< relref "/
 <a href="#publiccertificatelocation_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Certificate<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publiccertificatelocation">Public<wbr>Certificate<wbr>Location</a></span>
+        <span class="property-type"><a href="#publiccertificatelocation">string</a></span>
     </dt>
     <dd>{{% md %}}Public Certificate Location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

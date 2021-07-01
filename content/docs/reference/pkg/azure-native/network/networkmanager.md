@@ -451,7 +451,7 @@ The NetworkManager resource accepts the following [input]({{< relref "/docs/intr
 <a href="#networkmanagerscopes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Manager<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkmanagerpropertiesnetworkmanagerscopes">Network<wbr>Manager<wbr>Properties<wbr>Network<wbr>Manager<wbr>Scopes</a></span>
+        <span class="property-type"><a href="#networkmanagerpropertiesnetworkmanagerscopes">Network<wbr>Manager<wbr>Properties<wbr>Network<wbr>Manager<wbr>Scopes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scope of Network Manager.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

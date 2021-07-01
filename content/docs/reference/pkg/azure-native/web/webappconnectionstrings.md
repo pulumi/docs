@@ -232,7 +232,7 @@ The WebAppConnectionStrings resource accepts the following [input]({{< relref "/
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Conn<wbr>String<wbr>Value<wbr>Type<wbr>Pair</span>
+        <span class="property-type">map[string]Conn<wbr>String<wbr>Value<wbr>Type<wbr>Pair<wbr>Args</span>
     </dt>
     <dd>{{% md %}}Connection strings.{{% /md %}}</dd></dl>
 {{% /choosable %}}

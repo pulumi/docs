@@ -384,7 +384,7 @@ The EmailTemplate resource accepts the following [input]({{< relref "/docs/intro
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailtemplateparameterscontractproperties">[]Email<wbr>Template<wbr>Parameters<wbr>Contract<wbr>Properties</a></span>
+        <span class="property-type"><a href="#emailtemplateparameterscontractproperties">[]Email<wbr>Template<wbr>Parameters<wbr>Contract<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Email Template Parameter values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

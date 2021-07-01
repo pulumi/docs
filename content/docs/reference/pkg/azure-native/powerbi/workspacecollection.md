@@ -232,7 +232,7 @@ The WorkspaceCollection resource accepts the following [input]({{< relref "/docs
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresku">Azure<wbr>Sku</a></span>
+        <span class="property-type"><a href="#azuresku">Azure<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -4744,7 +4744,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#aadprofile_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteraadprofile">Managed<wbr>Cluster<wbr>AADProfile</a></span>
+        <span class="property-type"><a href="#managedclusteraadprofile">Managed<wbr>Cluster<wbr>AADProfile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of Azure Active Directory configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4752,7 +4752,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#addonprofiles_go" style="color: inherit; text-decoration: inherit;">Addon<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Managed<wbr>Cluster<wbr>Addon<wbr>Profile</span>
+        <span class="property-type">map[string]Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args</span>
     </dt>
     <dd>{{% md %}}Profile of managed cluster add-on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4760,7 +4760,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#agentpoolprofiles_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteragentpoolprofile">[]Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile</a></span>
+        <span class="property-type"><a href="#managedclusteragentpoolprofile">[]Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4768,7 +4768,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#apiserveraccessprofile_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Server<wbr>Access<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterapiserveraccessprofile">Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile</a></span>
+        <span class="property-type"><a href="#managedclusterapiserveraccessprofile">Managed<wbr>Cluster<wbr>APIServer<wbr>Access<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Access profile for managed cluster API server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4776,7 +4776,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#autoscalerprofile_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpropertiesautoscalerprofile">Managed<wbr>Cluster<wbr>Properties<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
+        <span class="property-type"><a href="#managedclusterpropertiesautoscalerprofile">Managed<wbr>Cluster<wbr>Properties<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters to be applied to the cluster-autoscaler when enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4784,7 +4784,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#autoupgradeprofile_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterautoupgradeprofile">Managed<wbr>Cluster<wbr>Auto<wbr>Upgrade<wbr>Profile</a></span>
+        <span class="property-type"><a href="#managedclusterautoupgradeprofile">Managed<wbr>Cluster<wbr>Auto<wbr>Upgrade<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of auto upgrade configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4832,7 +4832,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extended location of the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4848,7 +4848,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#httpproxyconfig_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterhttpproxyconfig">Managed<wbr>Cluster<wbr>HTTPProxy<wbr>Config</a></span>
+        <span class="property-type"><a href="#managedclusterhttpproxyconfig">Managed<wbr>Cluster<wbr>HTTPProxy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configurations for provisioning the cluster with HTTP proxy servers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4856,7 +4856,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteridentity">Managed<wbr>Cluster<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedclusteridentity">Managed<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the managed cluster, if configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4864,7 +4864,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identityprofile_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Managed<wbr>Cluster<wbr>Properties<wbr>Identity<wbr>Profile</span>
+        <span class="property-type">map[string]Managed<wbr>Cluster<wbr>Properties<wbr>Identity<wbr>Profile<wbr>Args</span>
     </dt>
     <dd>{{% md %}}Identities associated with the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4880,7 +4880,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#linuxprofile_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicelinuxprofile">Container<wbr>Service<wbr>Linux<wbr>Profile</a></span>
+        <span class="property-type"><a href="#containerservicelinuxprofile">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for Linux VMs in the container service cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4896,7 +4896,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicenetworkprofile">Container<wbr>Service<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#containerservicenetworkprofile">Container<wbr>Service<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of network configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4912,7 +4912,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#podidentityprofile_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Identity<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityprofile">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityprofile">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile of managed cluster pod identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4920,7 +4920,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#privatelinkresources_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkresource">[]Private<wbr>Link<wbr>Resource</a></span>
+        <span class="property-type"><a href="#privatelinkresource">[]Private<wbr>Link<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private link resources associated with the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4936,7 +4936,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#serviceprincipalprofile_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterserviceprincipalprofile">Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile</a></span>
+        <span class="property-type"><a href="#managedclusterserviceprincipalprofile">Managed<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about a service principal identity for the cluster to use for manipulating Azure APIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4944,7 +4944,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclustersku">Managed<wbr>Cluster<wbr>SKU</a></span>
+        <span class="property-type"><a href="#managedclustersku">Managed<wbr>Cluster<wbr>SKUArgs</a></span>
     </dt>
     <dd>{{% md %}}The managed cluster SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4960,7 +4960,7 @@ The ManagedCluster resource accepts the following [input]({{< relref "/docs/intr
 <a href="#windowsprofile_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterwindowsprofile">Managed<wbr>Cluster<wbr>Windows<wbr>Profile</a></span>
+        <span class="property-type"><a href="#managedclusterwindowsprofile">Managed<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for Windows VMs in the container service cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5927,7 +5927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5999,7 +5999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6035,7 +6035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Sequence[Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Sequence[Cloud<wbr>Error<wbr>Body<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6065,7 +6065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details about the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6089,7 +6089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details about the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6101,7 +6101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details about the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6123,7 +6123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicesshconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6163,7 +6163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfiguration">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicesshconfiguration">Container<wbr>Service<wbr>Ssh<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6183,7 +6183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfiguration">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicesshconfiguration">Container<wbr>Service<wbr>Ssh<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6205,7 +6205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6245,7 +6245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6265,7 +6265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6295,7 +6295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerprofile_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6463,7 +6463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerprofile_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofile">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofile">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6547,7 +6547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_profile_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofile">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofile">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6633,7 +6633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerprofile_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6801,7 +6801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerprofile_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6885,7 +6885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_profile_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponse">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6955,7 +6955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6979,7 +6979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickey">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickey">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6991,7 +6991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickey">Sequence[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickey">Sequence[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7005,7 +7005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7029,7 +7029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickeyresponse">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickeyresponse">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7041,7 +7041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerservicesshpublickeyresponse">Sequence[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerservicesshpublickeyresponse">Sequence[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8213,7 +8213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8285,7 +8285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfig">Sysctl<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfig">Sysctl<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8321,7 +8321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfig">Sysctl<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfig">Sysctl<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8359,7 +8359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8431,7 +8431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8467,7 +8467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9325,7 +9325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9381,7 +9381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9409,7 +9409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusteraddonprofileresponseidentity">Managed<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Response<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Information of user assigned identity used by this add-on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9609,7 +9609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeletconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubeletconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9625,7 +9625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>OSConfig</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Linux<wbr>OSConfig<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Linux<wbr>OSConfig</a></span>
     </dt>
     <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9785,7 +9785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Agent<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10145,7 +10145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10161,7 +10161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>OSConfig</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosconfig">Linux<wbr>OSConfig<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosconfig">Linux<wbr>OSConfig</a></span>
     </dt>
     <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10321,7 +10321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettings">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettings">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10413,7 +10413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10429,7 +10429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_os_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosconfig">Linux<wbr>OSConfig<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosconfig">Linux<wbr>OSConfig</a></span>
     </dt>
     <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10589,7 +10589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettings">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettings">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10635,7 +10635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#powerstate_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#powerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Power<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#powerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Power<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10707,7 +10707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeletconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubeletconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10723,7 +10723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>OSConfig</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Linux<wbr>OSConfig<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Linux<wbr>OSConfig<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10883,7 +10883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11219,7 +11219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#powerstate_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11291,7 +11291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11307,7 +11307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxosconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>OSConfig</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11467,7 +11467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11511,7 +11511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#powerstateresponse">Power<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes whether the Agent Pool is Running or Stopped{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11583,7 +11583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11599,7 +11599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_os_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11759,7 +11759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettingsresponse">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12201,7 +12201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster. Type 'SystemAssigned' will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type 'None' will not use MSI for the managed cluster, service principal will be used instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12287,7 +12287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
     </dt>
     <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12359,7 +12359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
     <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12395,7 +12395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Cluster<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
     </dt>
     <dd>{{% md %}}The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12499,7 +12499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effectiveoutboundips_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12515,7 +12515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedoutboundips_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofilemanagedoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofilemanagedoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Managed<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12523,7 +12523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundipprefixes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundipprefixes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPPrefixes</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12531,7 +12531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundips_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12603,7 +12603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effectiveoutboundips_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12619,7 +12619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedoutboundips_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofilemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofilemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Managed<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12627,7 +12627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundipprefixes_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPPrefixes</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12635,7 +12635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundips_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12655,7 +12655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effective_outbound_ips_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>outbound_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12671,7 +12671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_outbound_ips_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>outbound_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofilemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofilemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Managed<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12679,7 +12679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outbound_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPPrefixes</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12687,7 +12687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outbound_ips_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12751,7 +12751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12775,7 +12775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefixes_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12787,7 +12787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12801,7 +12801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12825,7 +12825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12837,7 +12837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12859,7 +12859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effectiveoutboundips_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12875,7 +12875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedoutboundips_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12883,7 +12883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12891,7 +12891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundips_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12963,7 +12963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effectiveoutboundips_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12979,7 +12979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedoutboundips_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12987,7 +12987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundipprefixes_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12995,7 +12995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundips_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13015,7 +13015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effective_outbound_ips_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>outbound_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The effective outbound IP resources of the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13031,7 +13031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_outbound_ips_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>outbound_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponsemanagedoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Managed<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired managed outbound IPs for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13039,7 +13039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outbound_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundipprefixes">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPPrefixes</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP Prefix resources for the cluster load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13047,7 +13047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outbound_ips_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterloadbalancerprofileresponseoutboundips">Managed<wbr>Cluster<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for the cluster load balancer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13111,7 +13111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefixes_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13135,7 +13135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefixes_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPPrefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13147,7 +13147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_prefixes_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP prefix resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13161,7 +13161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13185,7 +13185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13197,7 +13197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of public IP resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13211,7 +13211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#userassignedidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13283,7 +13283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentity">User<wbr>Assigned<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#userassignedidentity">User<wbr>Assigned<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13319,7 +13319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentity">User<wbr>Assigned<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#userassignedidentity">User<wbr>Assigned<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13601,7 +13601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentity">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentity">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity&gt;</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13609,7 +13609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentityexceptions_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Exceptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityexception">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityexception">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception&gt;</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13673,7 +13673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentity">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentity">Managed<wbr>Cluster<wbr>Pod<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13681,7 +13681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentityexceptions_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Exceptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityexception">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityexception">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception[]</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13709,7 +13709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentity">Sequence[Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentity">Sequence[Managed<wbr>Cluster<wbr>Pod<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13717,7 +13717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identity_exceptions_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>exceptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityexception">Sequence[Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityexception">Sequence[Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception]</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13747,7 +13747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13755,7 +13755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentityexceptions_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Exceptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13819,7 +13819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13827,7 +13827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentityexceptions_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Exceptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13855,7 +13855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityresponse">Sequence[Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityresponse">Sequence[Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13863,7 +13863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identity_exceptions_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>exceptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">Sequence[Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityexceptionresponse">Sequence[Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}User assigned pod identity exception settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13877,7 +13877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userassignedidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13901,7 +13901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioninginfo_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13981,7 +13981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14005,7 +14005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioninginfo_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14033,7 +14033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14057,7 +14057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_info_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedclusterpodidentityresponseprovisioninginfo">Managed<wbr>Cluster<wbr>Pod<wbr>Identity<wbr>Response<wbr>Provisioning<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14087,7 +14087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14111,7 +14111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14123,7 +14123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Pod identity assignment error (if any).{{% /md %}}</dd></dl>
 {{% /choosable %}}

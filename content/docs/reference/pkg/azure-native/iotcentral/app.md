@@ -379,7 +379,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appskuinfo">App<wbr>Sku<wbr>Info</a></span>
+        <span class="property-type"><a href="#appskuinfo">App<wbr>Sku<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A valid instance SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

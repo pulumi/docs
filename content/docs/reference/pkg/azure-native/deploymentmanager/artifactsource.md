@@ -494,7 +494,7 @@ The ArtifactSource resource accepts the following [input]({{< relref "/docs/intr
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sasauthentication">Sas<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#sasauthentication">Sas<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication method to use to access the artifact source.{{% /md %}}</dd><dt class="property-required"
             title="Required">

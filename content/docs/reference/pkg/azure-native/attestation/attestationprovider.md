@@ -217,7 +217,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestationservicecreationspecificparams">Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params</a></span>
+        <span class="property-type"><a href="#attestationservicecreationspecificparams">Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -640,7 +640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policysigningcertificates_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Signing<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwebkeyset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Attestation.<wbr>Inputs.<wbr>JSONWeb<wbr>Key<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonwebkeyset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Attestation.<wbr>Inputs.<wbr>JSONWeb<wbr>Key<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -664,7 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policysigningcertificates_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Signing<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwebkeyset">JSONWeb<wbr>Key<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonwebkeyset">JSONWeb<wbr>Key<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -676,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_signing_certificates_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>signing_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwebkeyset">JSONWeb<wbr>Key<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#jsonwebkeyset">JSONWeb<wbr>Key<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1352,7 +1352,7 @@ certificate.{{% /md %}}</dd><dt class="property-optional"
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwebkey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Attestation.<wbr>Inputs.<wbr>JSONWeb<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jsonwebkey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Attestation.<wbr>Inputs.<wbr>JSONWeb<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}The value of the "keys" parameter is an array of JWK values.  By
 default, the order of the JWK values within the array does not imply
@@ -1384,7 +1384,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwebkey">JSONWeb<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jsonwebkey">JSONWeb<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}The value of the "keys" parameter is an array of JWK values.  By
 default, the order of the JWK values within the array does not imply
@@ -1400,7 +1400,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwebkey">Sequence[JSONWeb<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonwebkey">Sequence[JSONWeb<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}The value of the "keys" parameter is an array of JWK values.  By
 default, the order of the JWK values within the array does not imply
@@ -1434,7 +1434,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Attestation.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Attestation.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1458,7 +1458,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Attestation.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Attestation.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1538,7 +1538,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1562,7 +1562,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1590,7 +1590,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1614,7 +1614,7 @@ desired.{{% /md %}}</dd></dl>
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}

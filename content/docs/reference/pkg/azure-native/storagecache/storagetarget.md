@@ -726,7 +726,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#blobnfs_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Nfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobnfstarget">Blob<wbr>Nfs<wbr>Target</a></span>
+        <span class="property-type"><a href="#blobnfstarget">Blob<wbr>Nfs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is blobNfs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +734,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#clfs_go" style="color: inherit; text-decoration: inherit;">Clfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clfstarget">Clfs<wbr>Target</a></span>
+        <span class="property-type"><a href="#clfstarget">Clfs<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is clfs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +742,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#junctions_go" style="color: inherit; text-decoration: inherit;">Junctions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacejunction">[]Namespace<wbr>Junction</a></span>
+        <span class="property-type"><a href="#namespacejunction">[]Namespace<wbr>Junction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of Cache namespace junctions to target for namespace associations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +750,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#nfs3_go" style="color: inherit; text-decoration: inherit;">Nfs3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfs3target">Nfs3Target</a></span>
+        <span class="property-type"><a href="#nfs3target">Nfs3Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is nfs3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +774,7 @@ The StorageTarget resource accepts the following [input]({{< relref "/docs/intro
 <a href="#unknown_go" style="color: inherit; text-decoration: inherit;">Unknown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unknowntarget">Unknown<wbr>Target</a></span>
+        <span class="property-type"><a href="#unknowntarget">Unknown<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties when targetType is unknown.{{% /md %}}</dd></dl>
 {{% /choosable %}}

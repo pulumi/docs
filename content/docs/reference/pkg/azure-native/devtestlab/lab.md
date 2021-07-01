@@ -409,7 +409,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#announcement_go" style="color: inherit; text-decoration: inherit;">Announcement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labannouncementproperties">Lab<wbr>Announcement<wbr>Properties</a></span>
+        <span class="property-type"><a href="#labannouncementproperties">Lab<wbr>Announcement<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of any lab announcement associated with this lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -483,7 +483,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
 <a href="#support_go" style="color: inherit; text-decoration: inherit;">Support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labsupportproperties">Lab<wbr>Support<wbr>Properties</a></span>
+        <span class="property-type"><a href="#labsupportproperties">Lab<wbr>Support<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of any lab support message associated with this lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -398,7 +398,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchanneldestination">Event<wbr>Channel<wbr>Destination</a></span>
+        <span class="property-type"><a href="#eventchanneldestination">Event<wbr>Channel<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the destination of an event channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -423,7 +423,7 @@ the event channel and corresponding partner topic are deleted.{{% /md %}}</dd><d
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchannelfilter">Event<wbr>Channel<wbr>Filter</a></span>
+        <span class="property-type"><a href="#eventchannelfilter">Event<wbr>Channel<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the filter for the event channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -440,7 +440,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchannelsource">Event<wbr>Channel<wbr>Source</a></span>
+        <span class="property-type"><a href="#eventchannelsource">Event<wbr>Channel<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source of the event channel. This represents a unique resource in the partner's resource model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1251,7 +1251,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#advancedfilters_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args[]</span>
+        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>In<wbr>Advanced<wbr>Filter | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>Contains<wbr>Advanced<wbr>Filter | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>In<wbr>Advanced<wbr>Filter | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter[]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event channels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1263,7 +1263,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter, Number<wbr>In<wbr>Advanced<wbr>Filter, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter, String<wbr>Contains<wbr>Advanced<wbr>Filter, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter, String<wbr>In<wbr>Advanced<wbr>Filter, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event channels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1301,7 +1301,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#advancedfilters_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event channels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1313,7 +1313,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event channels.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -394,7 +394,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#activedirectories_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectory">[]Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#activedirectory">[]Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directories{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +402,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountencryption">Account<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#accountencryption">Account<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

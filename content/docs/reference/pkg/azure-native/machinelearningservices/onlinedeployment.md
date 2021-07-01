@@ -772,7 +772,7 @@ The OnlineDeployment resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#k8sonlinedeployment">K8s<wbr>Online<wbr>Deployment</a> | <a href="#managedonlinedeployment">Managed<wbr>Online<wbr>Deployment</a></span>
+        <span class="property-type"><a href="#k8sonlinedeployment">K8s<wbr>Online<wbr>Deployment<wbr>Args</a> | <a href="#managedonlinedeployment">Managed<wbr>Online<wbr>Deployment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes of the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -804,7 +804,7 @@ The OnlineDeployment resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service identity associated with a resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2335,7 +2335,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#codeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2343,7 +2343,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#containerresourcerequirements_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirements">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirements">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}The resource requirements for the container (cpu and memory).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2375,7 +2375,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#livenessprobe_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2383,7 +2383,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#model_csharp" style="color: inherit; text-decoration: inherit;">Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#idassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Id<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#outputpathassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Path<wbr>Asset<wbr>Reference</a> | <a href="#idassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Id<wbr>Asset<wbr>Reference</a> | <a href="#outputpathassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Path<wbr>Asset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2399,7 +2399,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#requestsettings_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onlinerequestsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Online<wbr>Request<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#onlinerequestsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Online<wbr>Request<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2407,7 +2407,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Args</a> | <a href="#manualscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings</a> | <a href="#manualscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2519,7 +2519,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#codeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfiguration">Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfiguration">Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2527,7 +2527,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#containerresourcerequirements_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirements">Container<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirements">Container<wbr>Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}The resource requirements for the container (cpu and memory).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2559,7 +2559,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettings">Probe<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettings">Probe<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2567,7 +2567,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreference">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#idassetreference">Id<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#outputpathassetreference">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreference">Data<wbr>Path<wbr>Asset<wbr>Reference</a> | <a href="#idassetreference">Id<wbr>Asset<wbr>Reference</a> | <a href="#outputpathassetreference">Output<wbr>Path<wbr>Asset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2583,7 +2583,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#requestsettings_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onlinerequestsettings">Online<wbr>Request<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#onlinerequestsettings">Online<wbr>Request<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2591,7 +2591,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#scalesettings_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Auto<wbr>Scale<wbr>Settings<wbr>Args</a> | <a href="#manualscalesettings">Manual<wbr>Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Auto<wbr>Scale<wbr>Settings</a> | <a href="#manualscalesettings">Manual<wbr>Scale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2611,7 +2611,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#code_configuration_python" style="color: inherit; text-decoration: inherit;">code_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfiguration">Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfiguration">Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2619,7 +2619,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#container_resource_requirements_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirements">Container<wbr>Resource<wbr>Requirements<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirements">Container<wbr>Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}The resource requirements for the container (cpu and memory).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2651,7 +2651,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettings">Probe<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettings">Probe<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2659,7 +2659,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreference">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#idassetreference">Id<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#outputpathassetreference">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreference">Data<wbr>Path<wbr>Asset<wbr>Reference</a> | <a href="#idassetreference">Id<wbr>Asset<wbr>Reference</a> | <a href="#outputpathassetreference">Output<wbr>Path<wbr>Asset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2675,7 +2675,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#request_settings_python" style="color: inherit; text-decoration: inherit;">request_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onlinerequestsettings">Online<wbr>Request<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#onlinerequestsettings">Online<wbr>Request<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2683,7 +2683,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Auto<wbr>Scale<wbr>Settings<wbr>Args</a> | <a href="#manualscalesettings">Manual<wbr>Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Auto<wbr>Scale<wbr>Settings</a> | <a href="#manualscalesettings">Manual<wbr>Scale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2713,7 +2713,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#codeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Code<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2721,7 +2721,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#containerresourcerequirements_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource requirements for the container (cpu and memory).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2753,7 +2753,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#livenessprobe_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2761,7 +2761,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#model_csharp" style="color: inherit; text-decoration: inherit;">Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#idassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Id<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#outputpathassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#idassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Id<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#outputpathassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2777,7 +2777,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#requestsettings_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onlinerequestsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Online<wbr>Request<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#onlinerequestsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Online<wbr>Request<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2785,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#manualscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response</a> | <a href="#manualscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2913,7 +2913,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#codeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfigurationresponse">Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfigurationresponse">Code<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2921,7 +2921,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#containerresourcerequirements_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource requirements for the container (cpu and memory).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2953,7 +2953,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2961,7 +2961,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreferenceresponse">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#idassetreferenceresponse">Id<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#outputpathassetreferenceresponse">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreferenceresponse">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#idassetreferenceresponse">Id<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#outputpathassetreferenceresponse">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2977,7 +2977,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#requestsettings_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2985,7 +2985,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#scalesettings_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a> | <a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3013,7 +3013,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#code_configuration_python" style="color: inherit; text-decoration: inherit;">code_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfigurationresponse">Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfigurationresponse">Code<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3021,7 +3021,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#container_resource_requirements_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource requirements for the container (cpu and memory).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3053,7 +3053,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3061,7 +3061,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreferenceresponse">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#idassetreferenceresponse">Id<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#outputpathassetreferenceresponse">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreferenceresponse">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#idassetreferenceresponse">Id<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#outputpathassetreferenceresponse">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3077,7 +3077,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#request_settings_python" style="color: inherit; text-decoration: inherit;">request_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3085,7 +3085,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a> | <a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3107,7 +3107,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#codeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3147,7 +3147,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#livenessprobe_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3155,7 +3155,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#model_csharp" style="color: inherit; text-decoration: inherit;">Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#idassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Id<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#outputpathassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Path<wbr>Asset<wbr>Reference</a> | <a href="#idassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Id<wbr>Asset<wbr>Reference</a> | <a href="#outputpathassetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Path<wbr>Asset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3171,7 +3171,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#readinessprobe_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3179,7 +3179,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#requestsettings_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onlinerequestsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Online<wbr>Request<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#onlinerequestsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Online<wbr>Request<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3187,7 +3187,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Args</a> | <a href="#manualscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings</a> | <a href="#manualscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3307,7 +3307,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#codeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfiguration">Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfiguration">Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3347,7 +3347,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettings">Probe<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettings">Probe<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3355,7 +3355,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreference">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#idassetreference">Id<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#outputpathassetreference">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreference">Data<wbr>Path<wbr>Asset<wbr>Reference</a> | <a href="#idassetreference">Id<wbr>Asset<wbr>Reference</a> | <a href="#outputpathassetreference">Output<wbr>Path<wbr>Asset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3371,7 +3371,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#readinessprobe_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettings">Probe<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettings">Probe<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3379,7 +3379,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#requestsettings_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onlinerequestsettings">Online<wbr>Request<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#onlinerequestsettings">Online<wbr>Request<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3387,7 +3387,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#scalesettings_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Auto<wbr>Scale<wbr>Settings<wbr>Args</a> | <a href="#manualscalesettings">Manual<wbr>Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Auto<wbr>Scale<wbr>Settings</a> | <a href="#manualscalesettings">Manual<wbr>Scale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3407,7 +3407,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#code_configuration_python" style="color: inherit; text-decoration: inherit;">code_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfiguration">Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfiguration">Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3447,7 +3447,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettings">Probe<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettings">Probe<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3455,7 +3455,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreference">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#idassetreference">Id<wbr>Asset<wbr>Reference<wbr>Args</a> | <a href="#outputpathassetreference">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreference">Data<wbr>Path<wbr>Asset<wbr>Reference</a> | <a href="#idassetreference">Id<wbr>Asset<wbr>Reference</a> | <a href="#outputpathassetreference">Output<wbr>Path<wbr>Asset<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3471,7 +3471,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettings">Probe<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettings">Probe<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3479,7 +3479,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#request_settings_python" style="color: inherit; text-decoration: inherit;">request_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onlinerequestsettings">Online<wbr>Request<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#onlinerequestsettings">Online<wbr>Request<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3487,7 +3487,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Auto<wbr>Scale<wbr>Settings<wbr>Args</a> | <a href="#manualscalesettings">Manual<wbr>Scale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Auto<wbr>Scale<wbr>Settings</a> | <a href="#manualscalesettings">Manual<wbr>Scale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3517,7 +3517,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#codeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Code<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3557,7 +3557,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#livenessprobe_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3565,7 +3565,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#model_csharp" style="color: inherit; text-decoration: inherit;">Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#idassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Id<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#outputpathassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#idassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Id<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#outputpathassetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3581,7 +3581,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#readinessprobe_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3589,7 +3589,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#requestsettings_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onlinerequestsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Online<wbr>Request<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#onlinerequestsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Online<wbr>Request<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3597,7 +3597,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#manualscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response</a> | <a href="#manualscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3733,7 +3733,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#codeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfigurationresponse">Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfigurationresponse">Code<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3773,7 +3773,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3781,7 +3781,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreferenceresponse">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#idassetreferenceresponse">Id<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#outputpathassetreferenceresponse">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreferenceresponse">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#idassetreferenceresponse">Id<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#outputpathassetreferenceresponse">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3797,7 +3797,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#readinessprobe_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3805,7 +3805,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#requestsettings_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3813,7 +3813,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#scalesettings_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a> | <a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3841,7 +3841,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#code_configuration_python" style="color: inherit; text-decoration: inherit;">code_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#codeconfigurationresponse">Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#codeconfigurationresponse">Code<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Code configuration for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3881,7 +3881,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3889,7 +3889,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapathassetreferenceresponse">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#idassetreferenceresponse">Id<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#outputpathassetreferenceresponse">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapathassetreferenceresponse">Data<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#idassetreferenceresponse">Id<wbr>Asset<wbr>Reference<wbr>Response</a> | <a href="#outputpathassetreferenceresponse">Output<wbr>Path<wbr>Asset<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reference to the model asset for the endpoint deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3905,7 +3905,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3913,7 +3913,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#request_settings_python" style="color: inherit; text-decoration: inherit;">request_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3921,7 +3921,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a> | <a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4919,7 +4919,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Meta&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4959,7 +4959,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Meta}</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4979,7 +4979,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Meta]</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5051,7 +5051,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5123,7 +5123,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5159,7 +5159,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Meta<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Dictionary of the user assigned identities, key is ARM resource ID of the UAI.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -464,7 +464,7 @@ The EncryptionScope resource accepts the following [input]({{< relref "/docs/int
 <a href="#keyvaultproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionscopekeyvaultproperties">Encryption<wbr>Scope<wbr>Key<wbr>Vault<wbr>Properties</a></span>
+        <span class="property-type"><a href="#encryptionscopekeyvaultproperties">Encryption<wbr>Scope<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

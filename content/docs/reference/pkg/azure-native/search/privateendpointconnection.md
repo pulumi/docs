@@ -360,7 +360,7 @@ The PrivateEndpointConnection resource accepts the following [input]({{< relref 
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -575,7 +575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesprivateendpoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesprivateendpoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Private<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint resource from Microsoft.Network provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -583,7 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -615,7 +615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesprivateendpoint">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesprivateendpoint">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Private<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint resource from Microsoft.Network provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -623,7 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesprivatelinkserviceconnectionstate">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesprivatelinkserviceconnectionstate">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -635,7 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesprivateendpoint">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesprivateendpoint">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Private<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint resource from Microsoft.Network provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -643,7 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesprivatelinkserviceconnectionstate">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesprivatelinkserviceconnectionstate">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -751,7 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatus">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>Status</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatus">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -821,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivateendpoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivateendpoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint resource from Microsoft.Network provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -829,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -861,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivateendpoint">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivateendpoint">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint resource from Microsoft.Network provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -869,7 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivatelinkserviceconnectionstate">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivatelinkserviceconnectionstate">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -881,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivateendpoint">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivateendpoint">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint resource from Microsoft.Network provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivatelinkserviceconnectionstate">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivatelinkserviceconnectionstate">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}

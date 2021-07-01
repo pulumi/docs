@@ -891,7 +891,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#hostingmode_go" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostingmode">Hosting<wbr>Mode</a></span>
+        <span class="property-type"><a href="#hostingmode">string</a></span>
     </dt>
     <dd>{{% md %}}Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -899,7 +899,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -915,7 +915,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#networkruleset_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkruleset">Network<wbr>Rule<wbr>Set</a></span>
+        <span class="property-type"><a href="#networkruleset">Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network specific rules that determine how the Azure Cognitive Search service may be reached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -931,7 +931,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
+        <span class="property-type"><a href="#publicnetworkaccess">string</a></span>
     </dt>
     <dd>{{% md %}}This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -955,7 +955,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Search Service, which determines price tier and capacity limits. This property is required when creating a new Search Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1766,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Ip<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1790,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">Ip<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#iprule">Ip<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1802,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">Sequence[Ip<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iprule">Sequence[Ip<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1816,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Ip<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Ip<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1840,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">Ip<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipruleresponse">Ip<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1852,7 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">Sequence[Ip<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipruleresponse">Sequence[Ip<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1866,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivateendpoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivateendpoint">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint resource from Microsoft.Network provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1874,7 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1906,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivateendpoint">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivateendpoint">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint resource from Microsoft.Network provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1914,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivatelinkserviceconnectionstate">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivatelinkserviceconnectionstate">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1926,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivateendpoint">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivateendpoint">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint resource from Microsoft.Network provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1934,7 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivatelinkserviceconnectionstate">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponseprivatelinkserviceconnectionstate">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2136,7 +2136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2208,7 +2208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2244,7 +2244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2518,7 +2518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Search.<wbr>Inputs.<wbr>Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2590,7 +2590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourcepropertiesresponse">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourcepropertiesresponse">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2626,7 +2626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourcepropertiesresponse">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourcepropertiesresponse">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2652,7 +2652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuname">Sku<wbr>Name</a></span>
+        <span class="property-type"><a href="#skuname">string</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to 3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard, but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity'). 'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per partition, up to 12 partitions.'{{% /md %}}</dd></dl>
 {{% /choosable %}}

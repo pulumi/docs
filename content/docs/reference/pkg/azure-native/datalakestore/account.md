@@ -565,7 +565,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionconfig">Encryption<wbr>Config</a></span>
+        <span class="property-type"><a href="#encryptionconfig">Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault encryption configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -573,7 +573,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryptionstate_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionstate">Encryption<wbr>State</a></span>
+        <span class="property-type"><a href="#encryptionstate">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of encryption for this Data Lake Store account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -581,7 +581,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallallowazureips_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Allow<wbr>Azure<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallowazureipsstate">Firewall<wbr>Allow<wbr>Azure<wbr>Ips<wbr>State</a></span>
+        <span class="property-type"><a href="#firewallallowazureipsstate">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -589,7 +589,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallrules_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createfirewallrulewithaccountparameters">[]Create<wbr>Firewall<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#createfirewallrulewithaccountparameters">[]Create<wbr>Firewall<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this Data Lake Store account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -597,7 +597,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#firewallstate_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallstate">Firewall<wbr>State</a></span>
+        <span class="property-type"><a href="#firewallstate">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of the IP address firewall for this Data Lake Store account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -605,7 +605,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentity">Encryption<wbr>Identity</a></span>
+        <span class="property-type"><a href="#encryptionidentity">Encryption<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault encryption identity, if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +621,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#newtier_go" style="color: inherit; text-decoration: inherit;">New<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tiertype">Tier<wbr>Type</a></span>
+        <span class="property-type"><a href="#tiertype">string</a></span>
     </dt>
     <dd>{{% md %}}The commitment tier to use for next month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -637,7 +637,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trustedidproviderstate_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Id<wbr>Provider<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trustedidproviderstate">Trusted<wbr>Id<wbr>Provider<wbr>State<wbr>Enum</a></span>
+        <span class="property-type"><a href="#trustedidproviderstate">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of the trusted identity provider feature for this Data Lake Store account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -645,7 +645,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trustedidproviders_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Id<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createtrustedidproviderwithaccountparameters">[]Create<wbr>Trusted<wbr>Id<wbr>Provider<wbr>With<wbr>Account<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#createtrustedidproviderwithaccountparameters">[]Create<wbr>Trusted<wbr>Id<wbr>Provider<wbr>With<wbr>Account<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of trusted identity providers associated with this Data Lake Store account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -653,7 +653,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createvirtualnetworkrulewithaccountparameters">[]Create<wbr>Virtual<wbr>Network<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#createvirtualnetworkrulewithaccountparameters">[]Create<wbr>Virtual<wbr>Network<wbr>Rule<wbr>With<wbr>Account<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules associated with this Data Lake Store account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1586,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultmetainfo_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Meta<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultmetainfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultmetainfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Meta<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault information for connecting to user managed encryption keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1626,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultmetainfo_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Meta<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultmetainfo">Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultmetainfo">Key<wbr>Vault<wbr>Meta<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault information for connecting to user managed encryption keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1646,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_meta_info_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>meta_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultmetainfo">Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultmetainfo">Key<wbr>Vault<wbr>Meta<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault information for connecting to user managed encryption keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1668,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultmetainfo_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Meta<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultmetainforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultmetainforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Lake<wbr>Store.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault information for connecting to user managed encryption keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1708,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultmetainfo_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Meta<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultmetainforesponse">Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultmetainforesponse">Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault information for connecting to user managed encryption keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1728,7 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_meta_info_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>meta_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultmetainforesponse">Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultmetainforesponse">Key<wbr>Vault<wbr>Meta<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Key Vault information for connecting to user managed encryption keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -407,7 +407,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#offerdetail_go" style="color: inherit; text-decoration: inherit;">Offer<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationresourcepropertiesofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Offer<wbr>Detail</a></span>
+        <span class="property-type"><a href="#organizationresourcepropertiesofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Offer<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -431,7 +431,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#userdetail_go" style="color: inherit; text-decoration: inherit;">User<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationresourcepropertiesuserdetail">Organization<wbr>Resource<wbr>Properties<wbr>User<wbr>Detail</a></span>
+        <span class="property-type"><a href="#organizationresourcepropertiesuserdetail">Organization<wbr>Resource<wbr>Properties<wbr>User<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Subscriber detail{{% /md %}}</dd></dl>
 {{% /choosable %}}

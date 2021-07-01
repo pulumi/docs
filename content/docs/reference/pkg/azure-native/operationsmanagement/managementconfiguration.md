@@ -334,7 +334,7 @@ The ManagementConfiguration resource accepts the following [input]({{< relref "/
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementconfigurationproperties">Management<wbr>Configuration<wbr>Properties</a></span>
+        <span class="property-type"><a href="#managementconfigurationproperties">Management<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -713,7 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Operations<wbr>Management.<wbr>Inputs.<wbr>Arm<wbr>Template<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#armtemplateparameter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Operations<wbr>Management.<wbr>Inputs.<wbr>Arm<wbr>Template<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}Parameters to run the ARM template{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -785,7 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameter">Arm<wbr>Template<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#armtemplateparameter">Arm<wbr>Template<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Parameters to run the ARM template{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -821,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameter">Sequence[Arm<wbr>Template<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#armtemplateparameter">Sequence[Arm<wbr>Template<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}Parameters to run the ARM template{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -859,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Operations<wbr>Management.<wbr>Inputs.<wbr>Arm<wbr>Template<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#armtemplateparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Operations<wbr>Management.<wbr>Inputs.<wbr>Arm<wbr>Template<wbr>Parameter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Parameters to run the ARM template{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -947,7 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameterresponse">Arm<wbr>Template<wbr>Parameter<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#armtemplateparameterresponse">Arm<wbr>Template<wbr>Parameter<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Parameters to run the ARM template{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -991,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armtemplateparameterresponse">Sequence[Arm<wbr>Template<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#armtemplateparameterresponse">Sequence[Arm<wbr>Template<wbr>Parameter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Parameters to run the ARM template{{% /md %}}</dd><dt class="property-required"
             title="Required">

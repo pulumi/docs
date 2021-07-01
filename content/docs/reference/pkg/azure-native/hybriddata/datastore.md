@@ -534,7 +534,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#customersecrets_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customersecret">[]Customer<wbr>Secret</a></span>
+        <span class="property-type"><a href="#customersecret">[]Customer<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

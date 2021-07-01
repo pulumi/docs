@@ -341,7 +341,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#allowlistrules_go" style="color: inherit; text-decoration: inherit;">Allowlist<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowlistcustomalertrule">[]Allowlist<wbr>Custom<wbr>Alert<wbr>Rule</a></span>
+        <span class="property-type"><a href="#allowlistcustomalertrule">[]Allowlist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The allow-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -349,7 +349,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#denylistrules_go" style="color: inherit; text-decoration: inherit;">Denylist<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#denylistcustomalertrule">[]Denylist<wbr>Custom<wbr>Alert<wbr>Rule</a></span>
+        <span class="property-type"><a href="#denylistcustomalertrule">[]Denylist<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The deny-list custom alert rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -365,7 +365,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#thresholdrules_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#thresholdcustomalertrule">[]Threshold<wbr>Custom<wbr>Alert<wbr>Rule</a></span>
+        <span class="property-type"><a href="#thresholdcustomalertrule">[]Threshold<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of custom alert threshold rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -373,7 +373,7 @@ The DeviceSecurityGroup resource accepts the following [input]({{< relref "/docs
 <a href="#timewindowrules_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowcustomalertrule">[]Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule</a></span>
+        <span class="property-type"><a href="#timewindowcustomalertrule">[]Time<wbr>Window<wbr>Custom<wbr>Alert<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of custom alert time-window rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}

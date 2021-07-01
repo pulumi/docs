@@ -530,7 +530,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#domainsecuritysettings_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainsecuritysettings">Domain<wbr>Security<wbr>Settings</a></span>
+        <span class="property-type"><a href="#domainsecuritysettings">Domain<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DomainSecurity Settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +562,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ldapssettings_go" style="color: inherit; text-decoration: inherit;">Ldaps<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ldapssettings">Ldaps<wbr>Settings</a></span>
+        <span class="property-type"><a href="#ldapssettings">Ldaps<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Secure LDAP Settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +578,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#notificationsettings_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings</a></span>
+        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification Settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +586,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#replicasets_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicaset">[]Replica<wbr>Set</a></span>
+        <span class="property-type"><a href="#replicaset">[]Replica<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of ReplicaSets{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +594,7 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resourceforestsettings_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Forest<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceforestsettings">Resource<wbr>Forest<wbr>Settings</a></span>
+        <span class="property-type"><a href="#resourceforestsettings">Resource<wbr>Forest<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource Forest Settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3005,7 +3005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migrationprogress_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationprogressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Migration<wbr>Progress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3061,7 +3061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migrationprogress_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3089,7 +3089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migration_progress_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3523,7 +3523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthalerts_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthalertresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Alerts{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3539,7 +3539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthmonitors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Monitors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthmonitorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Health<wbr>Monitor<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healthmonitorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Health<wbr>Monitor<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Monitors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3691,7 +3691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthalerts_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertresponse">Health<wbr>Alert<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healthalertresponse">Health<wbr>Alert<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Alerts{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3707,7 +3707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthmonitors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Monitors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthmonitorresponse">Health<wbr>Monitor<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healthmonitorresponse">Health<wbr>Monitor<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Monitors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3775,7 +3775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_alerts_python" style="color: inherit; text-decoration: inherit;">health_<wbr>alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthalertresponse">Sequence[Health<wbr>Alert<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthalertresponse">Sequence[Health<wbr>Alert<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Alerts{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3791,7 +3791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_monitors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>monitors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthmonitorresponse">Sequence[Health<wbr>Monitor<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthmonitorresponse">Sequence[Health<wbr>Monitor<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Domain Health Monitors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3853,7 +3853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foresttrust">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Forest<wbr>Trust<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#foresttrust">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Forest<wbr>Trust&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3893,7 +3893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foresttrust">Forest<wbr>Trust<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#foresttrust">Forest<wbr>Trust[]</a></span>
     </dt>
     <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3913,7 +3913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foresttrust">Sequence[Forest<wbr>Trust<wbr>Args]</a></span>
+        <span class="property-type"><a href="#foresttrust">Sequence[Forest<wbr>Trust]</a></span>
     </dt>
     <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3935,7 +3935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foresttrustresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Forest<wbr>Trust<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#foresttrustresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad.<wbr>Inputs.<wbr>Forest<wbr>Trust<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3975,7 +3975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foresttrustresponse">Forest<wbr>Trust<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#foresttrustresponse">Forest<wbr>Trust<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3995,7 +3995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foresttrustresponse">Sequence[Forest<wbr>Trust<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#foresttrustresponse">Sequence[Forest<wbr>Trust<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd></dl>
 {{% /choosable %}}

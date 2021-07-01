@@ -480,7 +480,7 @@ The Gallery resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sharingprofile_go" style="color: inherit; text-decoration: inherit;">Sharing<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharingprofile">Sharing<wbr>Profile</a></span>
+        <span class="property-type"><a href="#sharingprofile">Sharing<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for gallery sharing to subscription or tenant{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1007,7 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharingprofilegroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sharing<wbr>Profile<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sharingprofilegroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sharing<wbr>Profile<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of sharing profile groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1047,7 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharingprofilegroupresponse">Sharing<wbr>Profile<wbr>Group<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sharingprofilegroupresponse">Sharing<wbr>Profile<wbr>Group<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of sharing profile groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1067,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharingprofilegroupresponse">Sequence[Sharing<wbr>Profile<wbr>Group<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sharingprofilegroupresponse">Sequence[Sharing<wbr>Profile<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of sharing profile groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

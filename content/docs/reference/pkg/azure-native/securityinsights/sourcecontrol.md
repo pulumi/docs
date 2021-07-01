@@ -493,7 +493,7 @@ The SourceControl resource accepts the following [input]({{< relref "/docs/intro
 <a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repository">Repository</a></span>
+        <span class="property-type"><a href="#repository">Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Repository metadata.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1100,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathmapping_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentpathmap">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Content<wbr>Path<wbr>Map<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#contentpathmap">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Content<wbr>Path<wbr>Map&gt;</a></span>
     </dt>
     <dd>{{% md %}}Dictionary of source control content type and path mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathmapping_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentpathmap">Content<wbr>Path<wbr>Map<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#contentpathmap">Content<wbr>Path<wbr>Map[]</a></span>
     </dt>
     <dd>{{% md %}}Dictionary of source control content type and path mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1184,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_mapping_python" style="color: inherit; text-decoration: inherit;">path_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentpathmap">Sequence[Content<wbr>Path<wbr>Map<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentpathmap">Sequence[Content<wbr>Path<wbr>Map]</a></span>
     </dt>
     <dd>{{% md %}}Dictionary of source control content type and path mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1214,7 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathmapping_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentpathmapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Content<wbr>Path<wbr>Map<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#contentpathmapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Content<wbr>Path<wbr>Map<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Dictionary of source control content type and path mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1270,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathmapping_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentpathmapresponse">Content<wbr>Path<wbr>Map<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#contentpathmapresponse">Content<wbr>Path<wbr>Map<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Dictionary of source control content type and path mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1298,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_mapping_python" style="color: inherit; text-decoration: inherit;">path_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentpathmapresponse">Sequence[Content<wbr>Path<wbr>Map<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentpathmapresponse">Sequence[Content<wbr>Path<wbr>Map<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Dictionary of source control content type and path mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

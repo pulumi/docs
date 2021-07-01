@@ -745,7 +745,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#dataflows_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Flows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflow">[]Data<wbr>Flow</a></span>
+        <span class="property-type"><a href="#dataflow">[]Data<wbr>Flow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification of data flows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +753,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#datasources_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruledatasources">Data<wbr>Collection<wbr>Rule<wbr>Data<wbr>Sources</a></span>
+        <span class="property-type"><a href="#datacollectionruledatasources">Data<wbr>Collection<wbr>Rule<wbr>Data<wbr>Sources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification of data sources. 
 This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.{{% /md %}}</dd><dt class="property-optional"
@@ -770,7 +770,7 @@ This property is optional and can be omitted if the rule is meant to be used via
 <a href="#destinations_go" style="color: inherit; text-decoration: inherit;">Destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacollectionruledestinations">Data<wbr>Collection<wbr>Rule<wbr>Destinations</a></span>
+        <span class="property-type"><a href="#datacollectionruledestinations">Data<wbr>Collection<wbr>Rule<wbr>Destinations<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification of destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1187,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Extension<wbr>Data<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#extensiondatasource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Extension<wbr>Data<wbr>Source&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1195,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performancecounters_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#perfcounterdatasource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1203,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syslog_csharp" style="color: inherit; text-decoration: inherit;">Syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Syslog<wbr>Data<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syslogdatasource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Syslog<wbr>Data<wbr>Source&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1211,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowseventlogs_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1259,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasource">Extension<wbr>Data<wbr>Source<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#extensiondatasource">Extension<wbr>Data<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1267,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performancecounters_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasource">Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#perfcounterdatasource">Perf<wbr>Counter<wbr>Data<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1275,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syslog_nodejs" style="color: inherit; text-decoration: inherit;">syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasource">Syslog<wbr>Data<wbr>Source<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#syslogdatasource">Syslog<wbr>Data<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1283,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowseventlogs_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasource">Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasource">Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1295,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasource">Sequence[Extension<wbr>Data<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#extensiondatasource">Sequence[Extension<wbr>Data<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performance_counters_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasource">Sequence[Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#perfcounterdatasource">Sequence[Perf<wbr>Counter<wbr>Data<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syslog_python" style="color: inherit; text-decoration: inherit;">syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasource">Sequence[Syslog<wbr>Data<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syslogdatasource">Sequence[Syslog<wbr>Data<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1319,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_event_logs_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>event_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasource">Sequence[Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasource">Sequence[Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1333,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitormetrics_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Monitor<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecazuremonitormetrics">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Destinations<wbr>Spec<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationsspecazuremonitormetrics">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Destinations<wbr>Spec<wbr>Azure<wbr>Monitor<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalytics_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestination">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Destination<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loganalyticsdestination">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Destination&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1373,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitormetrics_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Monitor<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecazuremonitormetrics">Destinations<wbr>Spec<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationsspecazuremonitormetrics">Destinations<wbr>Spec<wbr>Azure<wbr>Monitor<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1381,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalytics_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestination">Log<wbr>Analytics<wbr>Destination<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#loganalyticsdestination">Log<wbr>Analytics<wbr>Destination[]</a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1393,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_monitor_metrics_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>monitor_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecazuremonitormetrics">Destinations<wbr>Spec<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationsspecazuremonitormetrics">Destinations<wbr>Spec<wbr>Azure<wbr>Monitor<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1401,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_analytics_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestination">Sequence[Log<wbr>Analytics<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loganalyticsdestination">Sequence[Log<wbr>Analytics<wbr>Destination]</a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1415,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Extension<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#extensiondatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Extension<wbr>Data<wbr>Source<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1423,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performancecounters_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#perfcounterdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1431,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syslog_csharp" style="color: inherit; text-decoration: inherit;">Syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Syslog<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syslogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Syslog<wbr>Data<wbr>Source<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1439,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowseventlogs_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1487,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasourceresponse">Extension<wbr>Data<wbr>Source<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#extensiondatasourceresponse">Extension<wbr>Data<wbr>Source<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1495,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performancecounters_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasourceresponse">Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#perfcounterdatasourceresponse">Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1503,7 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syslog_nodejs" style="color: inherit; text-decoration: inherit;">syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasourceresponse">Syslog<wbr>Data<wbr>Source<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#syslogdatasourceresponse">Syslog<wbr>Data<wbr>Source<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1511,7 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowseventlogs_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasourceresponse">Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasourceresponse">Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1523,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extensiondatasourceresponse">Sequence[Extension<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#extensiondatasourceresponse">Sequence[Extension<wbr>Data<wbr>Source<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Azure VM extension data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1531,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#performance_counters_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#perfcounterdatasourceresponse">Sequence[Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#perfcounterdatasourceresponse">Sequence[Perf<wbr>Counter<wbr>Data<wbr>Source<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of performance counter data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1539,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syslog_python" style="color: inherit; text-decoration: inherit;">syslog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syslogdatasourceresponse">Sequence[Syslog<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syslogdatasourceresponse">Sequence[Syslog<wbr>Data<wbr>Source<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Syslog data source configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1547,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_event_logs_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>event_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowseventlogdatasourceresponse">Sequence[Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#windowseventlogdatasourceresponse">Sequence[Windows<wbr>Event<wbr>Log<wbr>Data<wbr>Source<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Event Log data source configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1561,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitormetrics_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Monitor<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalytics_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestinationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Destination<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loganalyticsdestinationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Analytics<wbr>Destination<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1601,7 +1601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitormetrics_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Monitor<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalytics_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestinationresponse">Log<wbr>Analytics<wbr>Destination<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#loganalyticsdestinationresponse">Log<wbr>Analytics<wbr>Destination<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1621,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_monitor_metrics_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>monitor_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationsspecresponseazuremonitormetrics">Destinations<wbr>Spec<wbr>Response<wbr>Azure<wbr>Monitor<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}Azure Monitor Metrics destination.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1629,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_analytics_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsdestinationresponse">Sequence[Log<wbr>Analytics<wbr>Destination<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loganalyticsdestinationresponse">Sequence[Log<wbr>Analytics<wbr>Destination<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Log Analytics destinations.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -510,7 +510,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 <a href="#remoteaddressspace_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +518,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 <a href="#remotebgpcommunities_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Bgp<wbr>Communities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkbgpcommunities">Virtual<wbr>Network<wbr>Bgp<wbr>Communities</a></span>
+        <span class="property-type"><a href="#virtualnetworkbgpcommunities">Virtual<wbr>Network<wbr>Bgp<wbr>Communities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network's Bgp Communities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +526,7 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 <a href="#remotevirtualnetwork_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -468,7 +468,7 @@ The DiskPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disk">[]Disk</a></span>
+        <span class="property-type"><a href="#disk">[]Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

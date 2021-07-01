@@ -311,7 +311,7 @@ The WebAppSourceControlSlot resource accepts the following [input]({{< relref "/
 <a href="#githubactionconfiguration_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactionconfiguration">Git<wbr>Hub<wbr>Action<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#githubactionconfiguration">Git<wbr>Hub<wbr>Action<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If GitHub Action is selected, than the associated configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncodeconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncodeconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action code configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -818,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncontainerconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncontainerconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action container configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncodeconfiguration">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncodeconfiguration">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action code configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncontainerconfiguration">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncontainerconfiguration">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action container configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -918,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_configuration_python" style="color: inherit; text-decoration: inherit;">code_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncodeconfiguration">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncodeconfiguration">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action code configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_configuration_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncontainerconfiguration">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncontainerconfiguration">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action container configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -956,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codeconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncodeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncodeconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action code configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -964,7 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncontainerconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncontainerconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action container configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1028,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncodeconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncodeconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action code configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1036,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncontainerconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncontainerconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action container configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1064,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_configuration_python" style="color: inherit; text-decoration: inherit;">code_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncodeconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncodeconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action code configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1072,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_configuration_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncontainerconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncontainerconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action container configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

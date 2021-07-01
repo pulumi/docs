@@ -316,7 +316,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#consent_go" style="color: inherit; text-decoration: inherit;">Consent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainpurchaseconsent">Domain<wbr>Purchase<wbr>Consent</a></span>
+        <span class="property-type"><a href="#domainpurchaseconsent">Domain<wbr>Purchase<wbr>Consent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Legal agreement consent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -324,7 +324,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contactadmin_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact</a></span>
+        <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Administrative contact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -332,7 +332,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contactbilling_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Billing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact</a></span>
+        <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Billing contact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -340,7 +340,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contactregistrant_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Registrant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact</a></span>
+        <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Registrant contact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -348,7 +348,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#contacttech_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Tech</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contact">Contact</a></span>
+        <span class="property-type"><a href="#contact">Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Technical contact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -380,7 +380,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#dnstype_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnstype">Dns<wbr>Type</a></span>
+        <span class="property-type"><a href="#dnstype">string</a></span>
     </dt>
     <dd>{{% md %}}Current DNS type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -436,7 +436,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#targetdnstype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Dns<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dnstype">Dns<wbr>Type</a></span>
+        <span class="property-type"><a href="#dnstype">string</a></span>
     </dt>
     <dd>{{% md %}}Target DNS type (would be used for migration){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1409,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressmailing_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Mailing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#address">Pulumi.<wbr>Azure<wbr>Native.<wbr>Domain<wbr>Registration.<wbr>Inputs.<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#address">Pulumi.<wbr>Azure<wbr>Native.<wbr>Domain<wbr>Registration.<wbr>Inputs.<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}Mailing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1561,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressmailing_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Mailing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#address">Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#address">Address</a></span>
     </dt>
     <dd>{{% md %}}Mailing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1637,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_mailing_python" style="color: inherit; text-decoration: inherit;">address_<wbr>mailing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#address">Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#address">Address</a></span>
     </dt>
     <dd>{{% md %}}Mailing address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

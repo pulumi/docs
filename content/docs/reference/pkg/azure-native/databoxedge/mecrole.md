@@ -343,7 +343,7 @@ The MECRole resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activation key of the MEC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

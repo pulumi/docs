@@ -408,7 +408,7 @@ The NotificationRegistration resource accepts the following [input]({{< relref "
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationregistrationproperties">Notification<wbr>Registration<wbr>Properties</a></span>
+        <span class="property-type"><a href="#notificationregistrationproperties">Notification<wbr>Registration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -843,7 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationendpoints_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Notification<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#notificationendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Notification<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -915,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationendpoints_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationendpoint">Notification<wbr>Endpoint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#notificationendpoint">Notification<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -951,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_endpoints_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationendpoint">Sequence[Notification<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#notificationendpoint">Sequence[Notification<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -989,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationendpoints_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Notification<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#notificationendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Notification<wbr>Endpoint<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notificationendpoints_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationendpointresponse">Notification<wbr>Endpoint<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#notificationendpointresponse">Notification<wbr>Endpoint<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notification_endpoints_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationendpointresponse">Sequence[Notification<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#notificationendpointresponse">Sequence[Notification<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

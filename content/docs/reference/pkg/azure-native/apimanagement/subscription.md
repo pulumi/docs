@@ -486,7 +486,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionstate">Subscription<wbr>State<wbr>Enum</a></span>
+        <span class="property-type"><a href="#subscriptionstate">string</a></span>
     </dt>
     <dd>{{% md %}}Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.{{% /md %}}</dd></dl>
 {{% /choosable %}}

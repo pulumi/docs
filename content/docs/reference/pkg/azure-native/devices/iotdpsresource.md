@@ -362,7 +362,7 @@ The IotDpsResource resource accepts the following [input]({{< relref "/docs/intr
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotdpspropertiesdescription">Iot<wbr>Dps<wbr>Properties<wbr>Description</a></span>
+        <span class="property-type"><a href="#iotdpspropertiesdescription">Iot<wbr>Dps<wbr>Properties<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service specific properties for a provisioning service{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +378,7 @@ The IotDpsResource resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iotdpsskuinfo">Iot<wbr>Dps<wbr>Sku<wbr>Info</a></span>
+        <span class="property-type"><a href="#iotdpsskuinfo">Iot<wbr>Dps<wbr>Sku<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sku info for a provisioning Service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescription">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescription">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iothubs_csharp" style="color: inherit; text-decoration: inherit;">Iot<wbr>Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdefinitiondescription">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iothubdefinitiondescription">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Iot<wbr>Hub<wbr>Definition<wbr>Description&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipfilterrules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetipfilterrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Target<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetipfilterrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Target<wbr>Ip<wbr>Filter<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection&gt;</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescription">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescription">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description[]</a></span>
     </dt>
     <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iothubs_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdefinitiondescription">Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#iothubdefinitiondescription">Iot<wbr>Hub<wbr>Definition<wbr>Description[]</a></span>
     </dt>
     <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -905,7 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipfilterrules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetipfilterrule">Target<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#targetipfilterrule">Target<wbr>Ip<wbr>Filter<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -913,7 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">Private<wbr>Endpoint<wbr>Connection<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">Private<wbr>Endpoint<wbr>Connection[]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -957,7 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_policies_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescription">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescription">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description]</a></span>
     </dt>
     <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iot_hubs_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdefinitiondescription">Sequence[Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iothubdefinitiondescription">Sequence[Iot<wbr>Hub<wbr>Definition<wbr>Description]</a></span>
     </dt>
     <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -973,7 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetipfilterrule">Sequence[Target<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#targetipfilterrule">Sequence[Target<wbr>Ip<wbr>Filter<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -981,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnection">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointconnection">Sequence[Private<wbr>Endpoint<wbr>Connection]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1051,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iothubs_csharp" style="color: inherit; text-decoration: inherit;">Iot<wbr>Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdefinitiondescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iothubdefinitiondescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1067,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipfilterrules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetipfilterruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Target<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetipfilterruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Target<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationpolicies_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1243,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iothubs_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdefinitiondescriptionresponse">Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#iothubdefinitiondescriptionresponse">Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1251,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipfilterrules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetipfilterruleresponse">Target<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#targetipfilterruleresponse">Target<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1259,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1327,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_policies_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sharedaccesssignatureauthorizationruleaccessrightsdescriptionresponse">Sequence[Shared<wbr>Access<wbr>Signature<wbr>Authorization<wbr>Rule<wbr>Access<wbr>Rights<wbr>Description<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of authorization keys for a provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1335,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iot_hubs_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdefinitiondescriptionresponse">Sequence[Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iothubdefinitiondescriptionresponse">Sequence[Iot<wbr>Hub<wbr>Definition<wbr>Description<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of IoT hubs associated with this provisioning service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1343,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_filter_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetipfilterruleresponse">Sequence[Target<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#targetipfilterruleresponse">Sequence[Target<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The IP filter rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1351,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections created on this IotHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1987,7 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2011,7 +2011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2023,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionproperties">Private<wbr>Endpoint<wbr>Connection<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2037,7 +2037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2061,7 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2073,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstate">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2087,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2095,7 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2127,7 +2127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2135,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2147,7 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current state of a private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2155,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint property of a private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2185,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2257,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2293,7 +2293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of a private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3071,7 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipfiltertargettype">Ip<wbr>Filter<wbr>Target<wbr>Type</a></span>
+        <span class="property-type"><a href="#ipfiltertargettype">string</a></span>
     </dt>
     <dd>{{% md %}}Target for requests captured by this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}

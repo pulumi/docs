@@ -399,7 +399,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
 <a href="#contactdetails_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
+        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contact details for the address{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -431,7 +431,7 @@ The AddressByName resource accepts the following [input]({{< relref "/docs/intro
 <a href="#shippingaddress_go" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address</a></span>
+        <span class="property-type"><a href="#shippingaddress">Shipping<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shipping details for the address{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -568,7 +568,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#packageapplications_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msixpackageapplications">[]Msix<wbr>Package<wbr>Applications</a></span>
+        <span class="property-type"><a href="#msixpackageapplications">[]Msix<wbr>Package<wbr>Applications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of package applications. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -576,7 +576,7 @@ The MSIXPackage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#packagedependencies_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#msixpackagedependencies">[]Msix<wbr>Package<wbr>Dependencies</a></span>
+        <span class="property-type"><a href="#msixpackagedependencies">[]Msix<wbr>Package<wbr>Dependencies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of package dependencies. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -406,7 +406,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createnetworkmappinginputproperties">Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#createnetworkmappinginputproperties">Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input properties for creating network mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -817,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabricspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurecreatenetworkmappinginput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmmtoazurecreatenetworkmappinginput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmmtovmmcreatenetworkmappinginput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Vmm<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretoazurecreatenetworkmappinginput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input</a> | <a href="#vmmtoazurecreatenetworkmappinginput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input</a> | <a href="#vmmtovmmcreatenetworkmappinginput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Vmm<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Fabric specific input properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabricspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurecreatenetworkmappinginput">Azure<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmmtoazurecreatenetworkmappinginput">Vmm<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmmtovmmcreatenetworkmappinginput">Vmm<wbr>To<wbr>Vmm<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretoazurecreatenetworkmappinginput">Azure<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input</a> | <a href="#vmmtoazurecreatenetworkmappinginput">Vmm<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input</a> | <a href="#vmmtovmmcreatenetworkmappinginput">Vmm<wbr>To<wbr>Vmm<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Fabric specific input properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabric_specific_details_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>specific_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurecreatenetworkmappinginput">Azure<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmmtoazurecreatenetworkmappinginput">Vmm<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmmtovmmcreatenetworkmappinginput">Vmm<wbr>To<wbr>Vmm<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretoazurecreatenetworkmappinginput">Azure<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input</a> | <a href="#vmmtoazurecreatenetworkmappinginput">Vmm<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input</a> | <a href="#vmmtovmmcreatenetworkmappinginput">Vmm<wbr>To<wbr>Vmm<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Fabric specific input properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -931,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabricspecificsettings_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Specific<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabricspecificsettings_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Specific<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1159,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabric_specific_settings_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>specific_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -402,7 +402,7 @@ The VNetPeering resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#remotevirtualnetwork_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatremotevirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Remote<wbr>Virtual<wbr>Network</a></span>
+        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatremotevirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Remote<wbr>Virtual<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -450,7 +450,7 @@ The VNetPeering resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#databricksaddressspace_go" style="color: inherit; text-decoration: inherit;">Databricks<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the databricks virtual network address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +458,7 @@ The VNetPeering resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#databricksvirtualnetwork_go" style="color: inherit; text-decoration: inherit;">Databricks<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatdatabricksvirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Databricks<wbr>Virtual<wbr>Network</a></span>
+        <span class="property-type"><a href="#virtualnetworkpeeringpropertiesformatdatabricksvirtualnetwork">Virtual<wbr>Network<wbr>Peering<wbr>Properties<wbr>Format<wbr>Databricks<wbr>Virtual<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}} The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +474,7 @@ The VNetPeering resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#remoteaddressspace_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

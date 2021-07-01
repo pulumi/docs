@@ -556,7 +556,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#input_go" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinput">Live<wbr>Event<wbr>Input<wbr>Type</a></span>
+        <span class="property-type"><a href="#liveeventinput">Live<wbr>Event<wbr>Input<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Live event input settings. It defines how the live event receives input from a contribution encoder.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -580,7 +580,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#crosssiteaccesspolicies_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Site<wbr>Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crosssiteaccesspolicies">Cross<wbr>Site<wbr>Access<wbr>Policies</a></span>
+        <span class="property-type"><a href="#crosssiteaccesspolicies">Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Live event cross site access policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -596,7 +596,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventencoding">Live<wbr>Event<wbr>Encoding</a></span>
+        <span class="property-type"><a href="#liveeventencoding">Live<wbr>Event<wbr>Encoding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -628,7 +628,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#preview_go" style="color: inherit; text-decoration: inherit;">Preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreview">Live<wbr>Event<wbr>Preview</a></span>
+        <span class="property-type"><a href="#liveeventpreview">Live<wbr>Event<wbr>Preview<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -652,7 +652,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#transcriptions_go" style="color: inherit; text-decoration: inherit;">Transcriptions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventtranscription">[]Live<wbr>Event<wbr>Transcription</a></span>
+        <span class="property-type"><a href="#liveeventtranscription">[]Live<wbr>Event<wbr>Transcription<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1375,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprange">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPRange<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprange">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPRange&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1399,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprange">IPRange<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#iprange">IPRange[]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1411,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprange">Sequence[IPRange<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iprange">Sequence[IPRange]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1425,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPRange<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPRange<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1449,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">IPRange<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#iprangeresponse">IPRange<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1461,7 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">Sequence[IPRange<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iprangeresponse">Sequence[IPRange<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2197,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputaccesscontrol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventinputaccesscontrol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2213,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2285,7 +2285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputaccesscontrol">Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventinputaccesscontrol">Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2301,7 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpoint">Live<wbr>Event<wbr>Endpoint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#liveeventendpoint">Live<wbr>Event<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2329,7 +2329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputaccesscontrol">Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventinputaccesscontrol">Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2345,7 +2345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpoint">Sequence[Live<wbr>Event<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventendpoint">Sequence[Live<wbr>Event<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2367,7 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2391,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2403,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2417,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2441,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2453,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2501,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2517,7 +2517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2589,7 +2589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2605,7 +2605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpointresponse">Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#liveeventendpointresponse">Live<wbr>Event<wbr>Endpoint<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2633,7 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventinputaccesscontrolresponse">Live<wbr>Event<wbr>Input<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access control for live event input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2649,7 +2649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpointresponse">Sequence[Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventendpointresponse">Sequence[Live<wbr>Event<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The input endpoints for the live event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2999,7 +2999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewaccesscontrol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventpreviewaccesscontrol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3015,7 +3015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventendpoint">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3087,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewaccesscontrol">Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventpreviewaccesscontrol">Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3103,7 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpoint">Live<wbr>Event<wbr>Endpoint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#liveeventendpoint">Live<wbr>Event<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3131,7 +3131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewaccesscontrol">Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventpreviewaccesscontrol">Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3147,7 +3147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpoint">Sequence[Live<wbr>Event<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventendpoint">Sequence[Live<wbr>Event<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3177,7 +3177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3201,7 +3201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3213,7 +3213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3227,7 +3227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3251,7 +3251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3263,7 +3263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IP access control properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3277,7 +3277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3293,7 +3293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Endpoint<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3365,7 +3365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3381,7 +3381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpointresponse">Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#liveeventendpointresponse">Live<wbr>Event<wbr>Endpoint<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3409,7 +3409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventpreviewaccesscontrolresponse">Live<wbr>Event<wbr>Preview<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access control for live event preview.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3425,7 +3425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventendpointresponse">Sequence[Live<wbr>Event<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventendpointresponse">Sequence[Live<wbr>Event<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints for preview. Do not share the preview URL with the live event audience.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3455,7 +3455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputtrackselection_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Track<wbr>Selection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputtrackselection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventinputtrackselection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection&gt;</a></span>
     </dt>
     <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3471,7 +3471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputtranscriptiontrack_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Transcription<wbr>Track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventoutputtranscriptiontrack">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrack">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track</a></span>
     </dt>
     <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3511,7 +3511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputtrackselection_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Track<wbr>Selection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputtrackselection">Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#liveeventinputtrackselection">Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection[]</a></span>
     </dt>
     <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3527,7 +3527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputtranscriptiontrack_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Transcription<wbr>Track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventoutputtranscriptiontrack">Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrack">Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track</a></span>
     </dt>
     <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3539,7 +3539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_track_selection_python" style="color: inherit; text-decoration: inherit;">input_<wbr>track_<wbr>selection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputtrackselection">Sequence[Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventinputtrackselection">Sequence[Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection]</a></span>
     </dt>
     <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3555,7 +3555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_transcription_track_python" style="color: inherit; text-decoration: inherit;">output_<wbr>transcription_<wbr>track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventoutputtranscriptiontrack">Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrack">Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track</a></span>
     </dt>
     <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3569,7 +3569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputtrackselection_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Track<wbr>Selection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3585,7 +3585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputtranscriptiontrack_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Transcription<wbr>Track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3625,7 +3625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputtrackselection_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Track<wbr>Selection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3641,7 +3641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputtranscriptiontrack_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Transcription<wbr>Track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3653,7 +3653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_track_selection_python" style="color: inherit; text-decoration: inherit;">input_<wbr>track_<wbr>selection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">Sequence[Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventinputtrackselectionresponse">Sequence[Live<wbr>Event<wbr>Input<wbr>Track<wbr>Selection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3669,7 +3669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_transcription_track_python" style="color: inherit; text-decoration: inherit;">output_<wbr>transcription_<wbr>track</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#liveeventoutputtranscriptiontrackresponse">Live<wbr>Event<wbr>Output<wbr>Transcription<wbr>Track<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.{{% /md %}}</dd></dl>
 {{% /choosable %}}

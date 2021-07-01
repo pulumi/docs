@@ -1207,7 +1207,7 @@ The AzurePowerShellScript resource accepts the following [input]({{< relref "/do
 <a href="#containersettings_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerconfiguration">Container<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#containerconfiguration">Container<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Container settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1215,7 +1215,7 @@ The AzurePowerShellScript resource accepts the following [input]({{< relref "/do
 <a href="#environmentvariables_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">[]Environment<wbr>Variable</a></span>
+        <span class="property-type"><a href="#environmentvariable">[]Environment<wbr>Variable<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to pass over to the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1231,7 +1231,7 @@ The AzurePowerShellScript resource accepts the following [input]({{< relref "/do
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1271,7 +1271,7 @@ The AzurePowerShellScript resource accepts the following [input]({{< relref "/do
 <a href="#storageaccountsettings_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountconfiguration">Storage<wbr>Account<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#storageaccountconfiguration">Storage<wbr>Account<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Storage Account settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2286,7 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalinfo_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#erroradditionalinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Error<wbr>Additional<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#erroradditionalinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Error<wbr>Additional<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2302,7 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2374,7 +2374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalinfo_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#erroradditionalinforesponse">Error<wbr>Additional<wbr>Info<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#erroradditionalinforesponse">Error<wbr>Additional<wbr>Info<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2390,7 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2418,7 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#erroradditionalinforesponse">Sequence[Error<wbr>Additional<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#erroradditionalinforesponse">Sequence[Error<wbr>Additional<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2434,7 +2434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Sequence[Error<wbr>Response<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Sequence[Error<wbr>Response<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The error details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2562,7 +2562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2618,7 +2618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2646,7 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2722,7 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Resources.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error that is relayed from the script execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2826,7 +2826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error that is relayed from the script execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2878,7 +2878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error that is relayed from the script execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}

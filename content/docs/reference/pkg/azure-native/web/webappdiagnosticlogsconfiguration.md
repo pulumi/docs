@@ -251,7 +251,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
 <a href="#applicationlogs_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationlogsconfig">Application<wbr>Logs<wbr>Config</a></span>
+        <span class="property-type"><a href="#applicationlogsconfig">Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Application logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -259,7 +259,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
 <a href="#detailederrormessages_go" style="color: inherit; text-decoration: inherit;">Detailed<wbr>Error<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledconfig">Enabled<wbr>Config</a></span>
+        <span class="property-type"><a href="#enabledconfig">Enabled<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed error messages configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -267,7 +267,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
 <a href="#failedrequeststracing_go" style="color: inherit; text-decoration: inherit;">Failed<wbr>Requests<wbr>Tracing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enabledconfig">Enabled<wbr>Config</a></span>
+        <span class="property-type"><a href="#enabledconfig">Enabled<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Failed requests tracing configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -275,7 +275,7 @@ The WebAppDiagnosticLogsConfiguration resource accepts the following [input]({{<
 <a href="#httplogs_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httplogsconfig">Http<wbr>Logs<wbr>Config</a></span>
+        <span class="property-type"><a href="#httplogsconfig">Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuretablestorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Table<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemapplicationlogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -570,7 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuretablestorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Table<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfig">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfig">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemapplicationlogsconfig">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemapplicationlogsconfig">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -598,7 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_table_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>table_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfig">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfig">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemapplicationlogsconfig">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemapplicationlogsconfig">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -628,7 +628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -636,7 +636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuretablestorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Table<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,7 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -684,7 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -692,7 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuretablestorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Table<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -700,7 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -712,7 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstorageapplicationlogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Application logs to blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_table_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>table_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretablestorageapplicationlogsconfigresponse">Azure<wbr>Table<wbr>Storage<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Application logs to azure table storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -728,7 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemapplicationlogsconfigresponse">File<wbr>System<wbr>Application<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Application logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -772,7 +772,7 @@ Remove blobs older than X days.
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loglevel">Log<wbr>Level</a></span>
+        <span class="property-type"><a href="#loglevel">string</a></span>
     </dt>
     <dd>{{% md %}}Log level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1258,7 +1258,7 @@ Remove blobs older than X days.
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loglevel">Log<wbr>Level</a></span>
+        <span class="property-type"><a href="#loglevel">string</a></span>
     </dt>
     <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1506,7 +1506,7 @@ Remove blobs older than X days.
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loglevel">Log<wbr>Level</a></span>
+        <span class="property-type"><a href="#loglevel">string</a></span>
     </dt>
     <dd>{{% md %}}Log level.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1854,7 +1854,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragehttplogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstoragehttplogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1862,7 +1862,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemhttplogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemhttplogsconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Http<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1894,7 +1894,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragehttplogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstoragehttplogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1902,7 +1902,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemhttplogsconfig">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemhttplogsconfig">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1914,7 +1914,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragehttplogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstoragehttplogsconfig">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1922,7 +1922,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemhttplogsconfig">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemhttplogsconfig">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1936,7 +1936,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1944,7 +1944,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemhttplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemhttplogsconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1976,7 +1976,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1984,7 +1984,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemhttplogsconfigresponse">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemhttplogsconfigresponse">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1996,7 +1996,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureblobstoragehttplogsconfigresponse">Azure<wbr>Blob<wbr>Storage<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Http logs to azure blob storage configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2004,7 +2004,7 @@ Value can range between 25 and 100.{{% /md %}}</dd></dl>
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemhttplogsconfigresponse">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemhttplogsconfigresponse">File<wbr>System<wbr>Http<wbr>Logs<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Http logs to file system configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}

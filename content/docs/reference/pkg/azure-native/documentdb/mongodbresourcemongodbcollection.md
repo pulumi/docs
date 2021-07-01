@@ -453,7 +453,7 @@ The MongoDBResourceMongoDBCollection resource accepts the following [input]({{< 
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcollectionresource">Mongo<wbr>DBCollection<wbr>Resource</a></span>
+        <span class="property-type"><a href="#mongodbcollectionresource">Mongo<wbr>DBCollection<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a MongoDB collection{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -485,7 +485,7 @@ The MongoDBResourceMongoDBCollection resource accepts the following [input]({{< 
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options</a></span>
+        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -872,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -912,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -932,7 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1014,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1076,7 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_csharp" style="color: inherit; text-decoration: inherit;">Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mongoindexresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1196,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_nodejs" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexresponse">Mongo<wbr>Index<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#mongoindexresponse">Mongo<wbr>Index<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1256,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_python" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexresponse">Sequence[Mongo<wbr>Index<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mongoindexresponse">Sequence[Mongo<wbr>Index<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1294,7 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_csharp" style="color: inherit; text-decoration: inherit;">Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindex">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mongoindex">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1366,7 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_nodejs" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindex">Mongo<wbr>Index<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#mongoindex">Mongo<wbr>Index[]</a></span>
     </dt>
     <dd>{{% md %}}List of index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1402,7 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_python" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindex">Sequence[Mongo<wbr>Index<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mongoindex">Sequence[Mongo<wbr>Index]</a></span>
     </dt>
     <dd>{{% md %}}List of index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1424,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexkeys">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexkeys">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1432,7 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1464,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexkeys">Mongo<wbr>Index<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexkeys">Mongo<wbr>Index<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1472,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexoptions">Mongo<wbr>Index<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexoptions">Mongo<wbr>Index<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1484,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexkeys">Mongo<wbr>Index<wbr>Keys<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexkeys">Mongo<wbr>Index<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1492,7 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexoptions">Mongo<wbr>Index<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexoptions">Mongo<wbr>Index<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1770,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexkeysresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1778,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Mongo<wbr>Index<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1810,7 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexkeysresponse">Mongo<wbr>Index<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexkeysresponse">Mongo<wbr>Index<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1818,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexoptionsresponse">Mongo<wbr>Index<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexoptionsresponse">Mongo<wbr>Index<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1830,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexkeysresponse">Mongo<wbr>Index<wbr>Keys<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexkeysresponse">Mongo<wbr>Index<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1838,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongoindexoptionsresponse">Mongo<wbr>Index<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mongoindexoptionsresponse">Mongo<wbr>Index<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cosmos DB MongoDB collection index key options{{% /md %}}</dd></dl>
 {{% /choosable %}}

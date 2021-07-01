@@ -612,7 +612,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepaction">Job<wbr>Step<wbr>Action</a></span>
+        <span class="property-type"><a href="#jobstepaction">Job<wbr>Step<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action payload of the job step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -668,7 +668,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#executionoptions_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepexecutionoptions">Job<wbr>Step<wbr>Execution<wbr>Options</a></span>
+        <span class="property-type"><a href="#jobstepexecutionoptions">Job<wbr>Step<wbr>Execution<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Execution options for the job step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -676,7 +676,7 @@ The JobStep resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#output_go" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstepoutput">Job<wbr>Step<wbr>Output<wbr>Type</a></span>
+        <span class="property-type"><a href="#jobstepoutput">Job<wbr>Step<wbr>Output<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Output destination properties of the job step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

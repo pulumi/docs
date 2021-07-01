@@ -427,7 +427,7 @@ The PeeringService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringservicesku">Peering<wbr>Service<wbr>Sku</a></span>
+        <span class="property-type"><a href="#peeringservicesku">Peering<wbr>Service<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU that defines the type of the peering service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

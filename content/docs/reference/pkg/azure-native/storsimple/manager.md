@@ -380,7 +380,7 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cisintrinsicsettings_go" style="color: inherit; text-decoration: inherit;">Cis<wbr>Intrinsic<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managerintrinsicsettings">Manager<wbr>Intrinsic<wbr>Settings</a></span>
+        <span class="property-type"><a href="#managerintrinsicsettings">Manager<wbr>Intrinsic<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the type of StorSimple Manager.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -420,7 +420,7 @@ The Manager resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managersku">Manager<wbr>Sku</a></span>
+        <span class="property-type"><a href="#managersku">Manager<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

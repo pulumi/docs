@@ -408,7 +408,7 @@ The SqlResourceSqlUserDefinedFunction resource accepts the following [input]({{<
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqluserdefinedfunctionresource">Sql<wbr>User<wbr>Defined<wbr>Function<wbr>Resource</a></span>
+        <span class="property-type"><a href="#sqluserdefinedfunctionresource">Sql<wbr>User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a userDefinedFunction{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -432,7 +432,7 @@ The SqlResourceSqlUserDefinedFunction resource accepts the following [input]({{<
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options</a></span>
+        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -833,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -853,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -629,7 +629,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#hostpoolreferences_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinghostpoolreference">[]Scaling<wbr>Host<wbr>Pool<wbr>Reference</a></span>
+        <span class="property-type"><a href="#scalinghostpoolreference">[]Scaling<wbr>Host<wbr>Pool<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingHostPoolReference definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -645,7 +645,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetidentity">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Identity</a></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetidentity">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -677,7 +677,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetplan">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Plan</a></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetplan">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -701,7 +701,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalingschedule">[]Scaling<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#scalingschedule">[]Scaling<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -709,7 +709,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetsku">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Sku</a></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetsku">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1276,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2038,7 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skutier">Sku<wbr>Tier</a></span>
+        <span class="property-type"><a href="#skutier">string</a></span>
     </dt>
     <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd></dl>
 {{% /choosable %}}

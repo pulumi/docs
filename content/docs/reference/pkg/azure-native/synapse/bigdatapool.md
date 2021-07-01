@@ -593,7 +593,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#autopause_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autopauseproperties">Auto<wbr>Pause<wbr>Properties</a></span>
+        <span class="property-type"><a href="#autopauseproperties">Auto<wbr>Pause<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto-pausing properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -601,7 +601,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#autoscale_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleproperties">Auto<wbr>Scale<wbr>Properties</a></span>
+        <span class="property-type"><a href="#autoscaleproperties">Auto<wbr>Scale<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -633,7 +633,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#customlibraries_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Libraries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#libraryinfo">[]Library<wbr>Info</a></span>
+        <span class="property-type"><a href="#libraryinfo">[]Library<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -649,7 +649,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dynamicexecutorallocation_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Executor<wbr>Allocation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicexecutorallocation">Dynamic<wbr>Executor<wbr>Allocation</a></span>
+        <span class="property-type"><a href="#dynamicexecutorallocation">Dynamic<wbr>Executor<wbr>Allocation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +673,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#libraryrequirements_go" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#libraryrequirements">Library<wbr>Requirements</a></span>
+        <span class="property-type"><a href="#libraryrequirements">Library<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Library version requirements{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -729,7 +729,7 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sparkconfigproperties_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#libraryrequirements">Library<wbr>Requirements</a></span>
+        <span class="property-type"><a href="#libraryrequirements">Library<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spark configuration file to specify additional properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -591,7 +591,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#p2svpnserverconfigradiusclientrootcertificates_go" style="color: inherit; text-decoration: inherit;">P2SVpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#p2svpnserverconfigradiusclientrootcertificate">[]P2SVpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#p2svpnserverconfigradiusclientrootcertificate">[]P2SVpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Radius client root certificate of P2SVpnServerConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -599,7 +599,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#p2svpnserverconfigradiusserverrootcertificates_go" style="color: inherit; text-decoration: inherit;">P2SVpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#p2svpnserverconfigradiusserverrootcertificate">[]P2SVpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#p2svpnserverconfigradiusserverrootcertificate">[]P2SVpn<wbr>Server<wbr>Config<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Radius Server root certificate of P2SVpnServerConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -607,7 +607,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#p2svpnserverconfigvpnclientrevokedcertificates_go" style="color: inherit; text-decoration: inherit;">P2SVpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#p2svpnserverconfigvpnclientrevokedcertificate">[]P2SVpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#p2svpnserverconfigvpnclientrevokedcertificate">[]P2SVpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VPN client revoked certificate of P2SVpnServerConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -615,7 +615,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#p2svpnserverconfigvpnclientrootcertificates_go" style="color: inherit; text-decoration: inherit;">P2SVpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#p2svpnserverconfigvpnclientrootcertificate">[]P2SVpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#p2svpnserverconfigvpnclientrootcertificate">[]P2SVpn<wbr>Server<wbr>Config<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VPN client root certificate of P2SVpnServerConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -647,7 +647,7 @@ The P2sVpnServerConfiguration resource accepts the following [input]({{< relref 
 <a href="#vpnclientipsecpolicies_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicy">[]Ipsec<wbr>Policy</a></span>
+        <span class="property-type"><a href="#ipsecpolicy">[]Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VpnClientIpsecPolicies for P2SVpnServerConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

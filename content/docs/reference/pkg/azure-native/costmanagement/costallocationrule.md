@@ -677,7 +677,7 @@ The CostAllocationRule resource accepts the following [input]({{< relref "/docs/
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruleproperties">Cost<wbr>Allocation<wbr>Rule<wbr>Properties</a></span>
+        <span class="property-type"><a href="#costallocationruleproperties">Cost<wbr>Allocation<wbr>Rule<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cost allocation rule properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1096,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresources_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Source<wbr>Cost<wbr>Allocation<wbr>Resource&gt;</a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1104,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresources_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetcostallocationresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Target<wbr>Cost<wbr>Allocation<wbr>Resource&gt;</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1136,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresources_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresource">Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresource">Source<wbr>Cost<wbr>Allocation<wbr>Resource[]</a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1144,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresource">Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#targetcostallocationresource">Target<wbr>Cost<wbr>Allocation<wbr>Resource[]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1156,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resources_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresource">Sequence[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresource">Sequence[Source<wbr>Cost<wbr>Allocation<wbr>Resource]</a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1164,7 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresource">Sequence[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#targetcostallocationresource">Sequence[Target<wbr>Cost<wbr>Allocation<wbr>Resource]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1178,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresources_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1186,7 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresources_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetcostallocationresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1218,7 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresources_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresourceresponse">Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresourceresponse">Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1226,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresourceresponse">Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#targetcostallocationresourceresponse">Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1238,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resources_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresourceresponse">Sequence[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresourceresponse">Sequence[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresourceresponse">Sequence[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#targetcostallocationresourceresponse">Sequence[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1260,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#costallocationruledetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Rule<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1316,7 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetails">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#costallocationruledetails">Cost<wbr>Allocation<wbr>Rule<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1344,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetails">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#costallocationruledetails">Cost<wbr>Allocation<wbr>Rule<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1382,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#costallocationruledetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1470,7 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1514,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1834,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Proportion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#costallocationproportion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Proportion&gt;</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1906,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportion">Cost<wbr>Allocation<wbr>Proportion<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#costallocationproportion">Cost<wbr>Allocation<wbr>Proportion[]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1942,7 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportion">Sequence[Cost<wbr>Allocation<wbr>Proportion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#costallocationproportion">Sequence[Cost<wbr>Allocation<wbr>Proportion]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1980,7 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Proportion<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#costallocationproportionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Proportion<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2052,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportionresponse">Cost<wbr>Allocation<wbr>Proportion<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#costallocationproportionresponse">Cost<wbr>Allocation<wbr>Proportion<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2088,7 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportionresponse">Sequence[Cost<wbr>Allocation<wbr>Proportion<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#costallocationproportionresponse">Sequence[Cost<wbr>Allocation<wbr>Proportion<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}

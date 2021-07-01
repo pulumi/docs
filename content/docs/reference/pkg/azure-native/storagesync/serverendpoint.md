@@ -1403,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesnottieringerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#filesnottieringerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1459,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesnottieringerrorresponse">Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#filesnottieringerrorresponse">Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1487,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesnottieringerrorresponse">Sequence[Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filesnottieringerrorresponse">Sequence[Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2005,7 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheperformance_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2013,7 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datepolicystatus_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of the date policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2021,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesnottiering_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Not<wbr>Tiering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2069,7 +2069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spacesavings_csharp" style="color: inherit; text-decoration: inherit;">Space<wbr>Savings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2077,7 +2077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumefreespacepolicystatus_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2173,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheperformance_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2181,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datepolicystatus_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of the date policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2189,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesnottiering_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Not<wbr>Tiering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2237,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spacesavings_nodejs" style="color: inherit; text-decoration: inherit;">space<wbr>Savings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2245,7 +2245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumefreespacepolicystatus_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2257,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_performance_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2265,7 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_policy_status_python" style="color: inherit; text-decoration: inherit;">date_<wbr>policy_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of the date policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2273,7 +2273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#files_not_tiering_python" style="color: inherit; text-decoration: inherit;">files_<wbr>not_<wbr>tiering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2321,7 +2321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#space_savings_python" style="color: inherit; text-decoration: inherit;">space_<wbr>savings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2329,7 +2329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_free_space_policy_status_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>free_<wbr>space_<wbr>policy_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2547,7 +2547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recallerrors_csharp" style="color: inherit; text-decoration: inherit;">Recall<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointrecallerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serverendpointrecallerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of recall errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2603,7 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recallerrors_nodejs" style="color: inherit; text-decoration: inherit;">recall<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointrecallerrorresponse">Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serverendpointrecallerrorresponse">Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of recall errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2631,7 +2631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recall_errors_python" style="color: inherit; text-decoration: inherit;">recall_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointrecallerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serverendpointrecallerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of recall errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2863,7 +2863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesnotsyncingerrors_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Not<wbr>Syncing<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2983,7 +2983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesnotsyncingerrors_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Not<wbr>Syncing<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3043,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#files_not_syncing_errors_python" style="color: inherit; text-decoration: inherit;">files_<wbr>not_<wbr>syncing_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3113,7 +3113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#downloadactivity_csharp" style="color: inherit; text-decoration: inherit;">Download<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Download sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3129,7 +3129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#downloadstatus_csharp" style="color: inherit; text-decoration: inherit;">Download<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Download Status{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3169,7 +3169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadactivity_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Upload sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3185,7 +3185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadstatus_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Upload Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3297,7 +3297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#downloadactivity_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Download sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3313,7 +3313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#downloadstatus_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Download Status{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3353,7 +3353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadactivity_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Upload sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3369,7 +3369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadstatus_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Upload Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3389,7 +3389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#download_activity_python" style="color: inherit; text-decoration: inherit;">download_<wbr>activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Download sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3405,7 +3405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#download_status_python" style="color: inherit; text-decoration: inherit;">download_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Download Status{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3445,7 +3445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_activity_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Upload sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3461,7 +3461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_status_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Upload Status{{% /md %}}</dd></dl>
 {{% /choosable %}}

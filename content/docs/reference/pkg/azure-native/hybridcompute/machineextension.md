@@ -1046,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1118,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1154,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}

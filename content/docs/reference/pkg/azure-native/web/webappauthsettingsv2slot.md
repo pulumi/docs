@@ -277,7 +277,7 @@ The WebAppAuthSettingsV2Slot resource accepts the following [input]({{< relref "
 <a href="#globalvalidation_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalvalidation">Global<wbr>Validation</a></span>
+        <span class="property-type"><a href="#globalvalidation">Global<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -285,7 +285,7 @@ The WebAppAuthSettingsV2Slot resource accepts the following [input]({{< relref "
 <a href="#httpsettings_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpsettings">Http<wbr>Settings</a></span>
+        <span class="property-type"><a href="#httpsettings">Http<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -293,7 +293,7 @@ The WebAppAuthSettingsV2Slot resource accepts the following [input]({{< relref "
 <a href="#identityproviders_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviders">Identity<wbr>Providers</a></span>
+        <span class="property-type"><a href="#identityproviders">Identity<wbr>Providers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -309,7 +309,7 @@ The WebAppAuthSettingsV2Slot resource accepts the following [input]({{< relref "
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#login">Login</a></span>
+        <span class="property-type"><a href="#login">Login<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow of users using App Service Authentication/Authorization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -317,7 +317,7 @@ The WebAppAuthSettingsV2Slot resource accepts the following [input]({{< relref "
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authplatform">Auth<wbr>Platform</a></span>
+        <span class="property-type"><a href="#authplatform">Auth<wbr>Platform<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the platform of App Service Authentication/Authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1180,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1188,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appleregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Apple<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#appleregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Apple<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Apple registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1252,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1260,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appleregistration">Apple<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#appleregistration">Apple<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Apple registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1288,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1296,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appleregistration">Apple<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#appleregistration">Apple<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Apple registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1674,7 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1682,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appleregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Apple<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#appleregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Apple<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Apple registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1794,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1802,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appleregistrationresponse">Apple<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#appleregistrationresponse">Apple<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Apple registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1854,7 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1862,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appleregistrationresponse">Apple<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#appleregistrationresponse">Apple<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Apple registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2306,7 +2306,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectorylogin">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Login<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectorylogin">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2314,7 +2314,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory app registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2322,7 +2322,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryvalidation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryvalidation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2414,7 +2414,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectorylogin">Azure<wbr>Active<wbr>Directory<wbr>Login<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectorylogin">Azure<wbr>Active<wbr>Directory<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2422,7 +2422,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryregistration">Azure<wbr>Active<wbr>Directory<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryregistration">Azure<wbr>Active<wbr>Directory<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory app registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2430,7 +2430,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryvalidation">Azure<wbr>Active<wbr>Directory<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryvalidation">Azure<wbr>Active<wbr>Directory<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2468,7 +2468,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectorylogin">Azure<wbr>Active<wbr>Directory<wbr>Login<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectorylogin">Azure<wbr>Active<wbr>Directory<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2476,7 +2476,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryregistration">Azure<wbr>Active<wbr>Directory<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryregistration">Azure<wbr>Active<wbr>Directory<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory app registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2484,7 +2484,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryvalidation">Azure<wbr>Active<wbr>Directory<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryvalidation">Azure<wbr>Active<wbr>Directory<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3388,7 +3388,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryloginresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Login<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryloginresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Login<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3396,7 +3396,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory app registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3404,7 +3404,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryvalidationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Validation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryvalidationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Validation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3544,7 +3544,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryloginresponse">Azure<wbr>Active<wbr>Directory<wbr>Login<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryloginresponse">Azure<wbr>Active<wbr>Directory<wbr>Login<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3552,7 +3552,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryregistrationresponse">Azure<wbr>Active<wbr>Directory<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryregistrationresponse">Azure<wbr>Active<wbr>Directory<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory app registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3560,7 +3560,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryvalidationresponse">Azure<wbr>Active<wbr>Directory<wbr>Validation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryvalidationresponse">Azure<wbr>Active<wbr>Directory<wbr>Validation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3622,7 +3622,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryloginresponse">Azure<wbr>Active<wbr>Directory<wbr>Login<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryloginresponse">Azure<wbr>Active<wbr>Directory<wbr>Login<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3630,7 +3630,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryregistrationresponse">Azure<wbr>Active<wbr>Directory<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryregistrationresponse">Azure<wbr>Active<wbr>Directory<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory app registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3638,7 +3638,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryvalidationresponse">Azure<wbr>Active<wbr>Directory<wbr>Validation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryvalidationresponse">Azure<wbr>Active<wbr>Directory<wbr>Validation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3660,7 +3660,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#jwtclaimchecks_csharp" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Claim<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtclaimchecks">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Jwt<wbr>Claim<wbr>Checks<wbr>Args</a></span>
+        <span class="property-type"><a href="#jwtclaimchecks">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Jwt<wbr>Claim<wbr>Checks</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3716,7 +3716,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#jwtclaimchecks_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Claim<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtclaimchecks">Jwt<wbr>Claim<wbr>Checks<wbr>Args</a></span>
+        <span class="property-type"><a href="#jwtclaimchecks">Jwt<wbr>Claim<wbr>Checks</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3744,7 +3744,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#jwt_claim_checks_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>claim_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtclaimchecks">Jwt<wbr>Claim<wbr>Checks<wbr>Args</a></span>
+        <span class="property-type"><a href="#jwtclaimchecks">Jwt<wbr>Claim<wbr>Checks</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3798,7 +3798,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#jwtclaimchecks_csharp" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Claim<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtclaimchecksresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Jwt<wbr>Claim<wbr>Checks<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jwtclaimchecksresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Jwt<wbr>Claim<wbr>Checks<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3902,7 +3902,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#jwtclaimchecks_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Claim<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtclaimchecksresponse">Jwt<wbr>Claim<wbr>Checks<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jwtclaimchecksresponse">Jwt<wbr>Claim<wbr>Checks<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3954,7 +3954,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#jwt_claim_checks_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>claim_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jwtclaimchecksresponse">Jwt<wbr>Claim<wbr>Checks<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jwtclaimchecksresponse">Jwt<wbr>Claim<wbr>Checks<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the checks that should be made while validating the JWT Claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3992,7 +3992,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebappsregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestaticwebappsregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Static Web Apps registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4048,7 +4048,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebappsregistration">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestaticwebappsregistration">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Static Web Apps registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4076,7 +4076,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebappsregistration">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestaticwebappsregistration">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Static Web Apps registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4390,7 +4390,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebappsregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestaticwebappsregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Static Web Apps registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4494,7 +4494,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebappsregistrationresponse">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestaticwebappsregistrationresponse">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Static Web Apps registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4546,7 +4546,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebappsregistrationresponse">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestaticwebappsregistrationresponse">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Static Web Apps registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5194,7 +5194,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#convention_go" style="color: inherit; text-decoration: inherit;">Convention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cookieexpirationconvention">Cookie<wbr>Expiration<wbr>Convention</a></span>
+        <span class="property-type"><a href="#cookieexpirationconvention">string</a></span>
     </dt>
     <dd>{{% md %}}The convention used when determining the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5532,7 +5532,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectlogin">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Login<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectlogin">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5540,7 +5540,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the custom Open ID Connect provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5604,7 +5604,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectlogin">Open<wbr>Id<wbr>Connect<wbr>Login<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectlogin">Open<wbr>Id<wbr>Connect<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5612,7 +5612,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectregistration">Open<wbr>Id<wbr>Connect<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectregistration">Open<wbr>Id<wbr>Connect<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the custom Open ID Connect provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5640,7 +5640,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectlogin">Open<wbr>Id<wbr>Connect<wbr>Login<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectlogin">Open<wbr>Id<wbr>Connect<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5648,7 +5648,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectregistration">Open<wbr>Id<wbr>Connect<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectregistration">Open<wbr>Id<wbr>Connect<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the custom Open ID Connect provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5702,7 +5702,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectloginresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Login<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectloginresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Login<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5710,7 +5710,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the custom Open ID Connect provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5822,7 +5822,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectloginresponse">Open<wbr>Id<wbr>Connect<wbr>Login<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectloginresponse">Open<wbr>Id<wbr>Connect<wbr>Login<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5830,7 +5830,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectregistrationresponse">Open<wbr>Id<wbr>Connect<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectregistrationresponse">Open<wbr>Id<wbr>Connect<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the custom Open ID Connect provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5882,7 +5882,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectloginresponse">Open<wbr>Id<wbr>Connect<wbr>Login<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectloginresponse">Open<wbr>Id<wbr>Connect<wbr>Login<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5890,7 +5890,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectregistrationresponse">Open<wbr>Id<wbr>Connect<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectregistrationresponse">Open<wbr>Id<wbr>Connect<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the custom Open ID Connect provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5928,7 +5928,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5936,7 +5936,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>App<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#appregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>App<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Facebook provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6016,7 +6016,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6024,7 +6024,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appregistration">App<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#appregistration">App<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Facebook provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6060,7 +6060,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6068,7 +6068,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appregistration">App<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#appregistration">App<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Facebook provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6130,7 +6130,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6138,7 +6138,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>App<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#appregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>App<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Facebook provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6266,7 +6266,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6274,7 +6274,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appregistrationresponse">App<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#appregistrationresponse">App<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Facebook provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6334,7 +6334,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6342,7 +6342,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appregistrationresponse">App<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#appregistrationresponse">App<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Facebook provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6652,7 +6652,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#convention_go" style="color: inherit; text-decoration: inherit;">Convention</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardproxyconvention">Forward<wbr>Proxy<wbr>Convention</a></span>
+        <span class="property-type"><a href="#forwardproxyconvention">string</a></span>
     </dt>
     <dd>{{% md %}}The convention used to determine the url of the request made.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7050,7 +7050,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7058,7 +7058,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Client<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Client<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the GitHub provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7122,7 +7122,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7130,7 +7130,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the GitHub provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7158,7 +7158,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7166,7 +7166,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the GitHub provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7220,7 +7220,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7228,7 +7228,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Client<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Client<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the GitHub provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7340,7 +7340,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7348,7 +7348,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the GitHub provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7400,7 +7400,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7408,7 +7408,7 @@ read or write to this property.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the GitHub provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7502,7 +7502,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#unauthenticatedclientaction_go" style="color: inherit; text-decoration: inherit;">Unauthenticated<wbr>Client<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unauthenticatedclientactionv2">Unauthenticated<wbr>Client<wbr>Action<wbr>V2</a></span>
+        <span class="property-type"><a href="#unauthenticatedclientactionv2">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take when an unauthenticated client attempts to access the app.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7906,7 +7906,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7914,7 +7914,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Client<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Client<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7922,7 +7922,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Allowed<wbr>Audiences<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Allowed<wbr>Audiences<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7994,7 +7994,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8002,7 +8002,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8010,7 +8010,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidation">Allowed<wbr>Audiences<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidation">Allowed<wbr>Audiences<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8038,7 +8038,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8046,7 +8046,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8054,7 +8054,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidation">Allowed<wbr>Audiences<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidation">Allowed<wbr>Audiences<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8108,7 +8108,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8116,7 +8116,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Client<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Client<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8124,7 +8124,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Allowed<wbr>Audiences<wbr>Validation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Allowed<wbr>Audiences<wbr>Validation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8244,7 +8244,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8252,7 +8252,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8260,7 +8260,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Allowed<wbr>Audiences<wbr>Validation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Allowed<wbr>Audiences<wbr>Validation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8312,7 +8312,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8320,7 +8320,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8328,7 +8328,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Allowed<wbr>Audiences<wbr>Validation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Allowed<wbr>Audiences<wbr>Validation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active Directory token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8342,7 +8342,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#forwardproxy_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardproxy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Forward<wbr>Proxy<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardproxy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Forward<wbr>Proxy</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of a forward proxy used to make the requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8366,7 +8366,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpsettingsroutes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Http<wbr>Settings<wbr>Routes<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpsettingsroutes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Http<wbr>Settings<wbr>Routes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the paths HTTP requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8414,7 +8414,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#forwardproxy_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardproxy">Forward<wbr>Proxy<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardproxy">Forward<wbr>Proxy</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of a forward proxy used to make the requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8438,7 +8438,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpsettingsroutes">Http<wbr>Settings<wbr>Routes<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpsettingsroutes">Http<wbr>Settings<wbr>Routes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the paths HTTP requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8450,7 +8450,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#forward_proxy_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardproxy">Forward<wbr>Proxy<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardproxy">Forward<wbr>Proxy</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of a forward proxy used to make the requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8474,7 +8474,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpsettingsroutes">Http<wbr>Settings<wbr>Routes<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpsettingsroutes">Http<wbr>Settings<wbr>Routes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the paths HTTP requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8512,7 +8512,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#forwardproxy_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardproxyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Forward<wbr>Proxy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardproxyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Forward<wbr>Proxy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of a forward proxy used to make the requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8536,7 +8536,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpsettingsroutesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Http<wbr>Settings<wbr>Routes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpsettingsroutesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Http<wbr>Settings<wbr>Routes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the paths HTTP requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8632,7 +8632,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#forwardproxy_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardproxyresponse">Forward<wbr>Proxy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardproxyresponse">Forward<wbr>Proxy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of a forward proxy used to make the requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8656,7 +8656,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpsettingsroutesresponse">Http<wbr>Settings<wbr>Routes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpsettingsroutesresponse">Http<wbr>Settings<wbr>Routes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the paths HTTP requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8692,7 +8692,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#forward_proxy_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardproxyresponse">Forward<wbr>Proxy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardproxyresponse">Forward<wbr>Proxy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of a forward proxy used to make the requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8716,7 +8716,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpsettingsroutesresponse">Http<wbr>Settings<wbr>Routes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httpsettingsroutesresponse">Http<wbr>Settings<wbr>Routes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the paths HTTP requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8990,7 +8990,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#apple_csharp" style="color: inherit; text-decoration: inherit;">Apple</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apple">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Apple<wbr>Args</a></span>
+        <span class="property-type"><a href="#apple">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Apple</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Apple provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8998,7 +8998,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#azureactivedirectory_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectory">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectory">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active directory provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9006,7 +9006,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#azurestaticwebapps_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Static<wbr>Web<wbr>Apps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebapps">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestaticwebapps">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Static<wbr>Web<wbr>Apps</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Static Web Apps provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9014,7 +9014,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-optio
 <a href="#customopenidconnectproviders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider&gt;</span>
     </dt>
     <dd>{{% md %}}The map of the name of the alias of each custom Open ID Connect provider to the
 configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
@@ -9023,7 +9023,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#facebook_csharp" style="color: inherit; text-decoration: inherit;">Facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebook">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Facebook<wbr>Args</a></span>
+        <span class="property-type"><a href="#facebook">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Facebook</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Facebook provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9031,7 +9031,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#github_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#github">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Args</a></span>
+        <span class="property-type"><a href="#github">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Git<wbr>Hub</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the GitHub provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9039,7 +9039,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#google_csharp" style="color: inherit; text-decoration: inherit;">Google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#google">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#google">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9055,7 +9055,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#legacymicrosoftaccount_csharp" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Microsoft<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#legacymicrosoftaccount">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Legacy<wbr>Microsoft<wbr>Account<wbr>Args</a></span>
+        <span class="property-type"><a href="#legacymicrosoftaccount">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Legacy<wbr>Microsoft<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the legacy Microsoft Account provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9063,7 +9063,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#twitter_csharp" style="color: inherit; text-decoration: inherit;">Twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Twitter<wbr>Args</a></span>
+        <span class="property-type"><a href="#twitter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Twitter</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Twitter provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9160,7 +9160,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#apple_nodejs" style="color: inherit; text-decoration: inherit;">apple</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apple">Apple<wbr>Args</a></span>
+        <span class="property-type"><a href="#apple">Apple</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Apple provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9168,7 +9168,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#azureactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectory">Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectory">Azure<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active directory provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9176,7 +9176,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#azurestaticwebapps_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Static<wbr>Web<wbr>Apps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebapps">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestaticwebapps">Azure<wbr>Static<wbr>Web<wbr>Apps</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Static Web Apps provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9184,7 +9184,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#customopenidconnectproviders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider}</span>
     </dt>
     <dd>{{% md %}}The map of the name of the alias of each custom Open ID Connect provider to the
 configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
@@ -9193,7 +9193,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#facebook_nodejs" style="color: inherit; text-decoration: inherit;">facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebook">Facebook<wbr>Args</a></span>
+        <span class="property-type"><a href="#facebook">Facebook</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Facebook provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9201,7 +9201,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#github_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#github">Git<wbr>Hub<wbr>Args</a></span>
+        <span class="property-type"><a href="#github">Git<wbr>Hub</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the GitHub provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9209,7 +9209,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#google_nodejs" style="color: inherit; text-decoration: inherit;">google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#google">Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#google">Google</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9225,7 +9225,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#legacymicrosoftaccount_nodejs" style="color: inherit; text-decoration: inherit;">legacy<wbr>Microsoft<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#legacymicrosoftaccount">Legacy<wbr>Microsoft<wbr>Account<wbr>Args</a></span>
+        <span class="property-type"><a href="#legacymicrosoftaccount">Legacy<wbr>Microsoft<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the legacy Microsoft Account provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9233,7 +9233,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#twitter_nodejs" style="color: inherit; text-decoration: inherit;">twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitter">Twitter<wbr>Args</a></span>
+        <span class="property-type"><a href="#twitter">Twitter</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Twitter provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9245,7 +9245,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#apple_python" style="color: inherit; text-decoration: inherit;">apple</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apple">Apple<wbr>Args</a></span>
+        <span class="property-type"><a href="#apple">Apple</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Apple provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9253,7 +9253,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#azure_active_directory_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectory">Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectory">Azure<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active directory provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9261,7 +9261,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#azure_static_web_apps_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>static_<wbr>web_<wbr>apps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebapps">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestaticwebapps">Azure<wbr>Static<wbr>Web<wbr>Apps</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Static Web Apps provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9269,7 +9269,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#custom_open_id_connect_providers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>open_<wbr>id_<wbr>connect_<wbr>providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider]</span>
     </dt>
     <dd>{{% md %}}The map of the name of the alias of each custom Open ID Connect provider to the
 configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
@@ -9278,7 +9278,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#facebook_python" style="color: inherit; text-decoration: inherit;">facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebook">Facebook<wbr>Args</a></span>
+        <span class="property-type"><a href="#facebook">Facebook</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Facebook provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9286,7 +9286,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#git_hub_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#github">Git<wbr>Hub<wbr>Args</a></span>
+        <span class="property-type"><a href="#github">Git<wbr>Hub</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the GitHub provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9294,7 +9294,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#google_python" style="color: inherit; text-decoration: inherit;">google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#google">Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#google">Google</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9310,7 +9310,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#legacy_microsoft_account_python" style="color: inherit; text-decoration: inherit;">legacy_<wbr>microsoft_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#legacymicrosoftaccount">Legacy<wbr>Microsoft<wbr>Account<wbr>Args</a></span>
+        <span class="property-type"><a href="#legacymicrosoftaccount">Legacy<wbr>Microsoft<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the legacy Microsoft Account provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9318,7 +9318,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#twitter_python" style="color: inherit; text-decoration: inherit;">twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitter">Twitter<wbr>Args</a></span>
+        <span class="property-type"><a href="#twitter">Twitter</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Twitter provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9356,7 +9356,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#apple_csharp" style="color: inherit; text-decoration: inherit;">Apple</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Apple<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#appleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Apple<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Apple provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9364,7 +9364,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#azureactivedirectory_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active directory provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9372,7 +9372,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#azurestaticwebapps_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Static<wbr>Web<wbr>Apps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebappsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestaticwebappsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Static Web Apps provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9380,7 +9380,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#customopenidconnectproviders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The map of the name of the alias of each custom Open ID Connect provider to the
 configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
@@ -9389,7 +9389,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#facebook_csharp" style="color: inherit; text-decoration: inherit;">Facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Facebook<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#facebookresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Facebook<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Facebook provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9397,7 +9397,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#github_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the GitHub provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9405,7 +9405,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#google_csharp" style="color: inherit; text-decoration: inherit;">Google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Google<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#googleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Google<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9421,7 +9421,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#legacymicrosoftaccount_csharp" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Microsoft<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#legacymicrosoftaccountresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Legacy<wbr>Microsoft<wbr>Account<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#legacymicrosoftaccountresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Legacy<wbr>Microsoft<wbr>Account<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the legacy Microsoft Account provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9429,7 +9429,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#twitter_csharp" style="color: inherit; text-decoration: inherit;">Twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Twitter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#twitterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Twitter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Twitter provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9574,7 +9574,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#apple_nodejs" style="color: inherit; text-decoration: inherit;">apple</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appleresponse">Apple<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#appleresponse">Apple<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Apple provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9582,7 +9582,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#azureactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryresponse">Azure<wbr>Active<wbr>Directory<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryresponse">Azure<wbr>Active<wbr>Directory<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active directory provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9590,7 +9590,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#azurestaticwebapps_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Static<wbr>Web<wbr>Apps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebappsresponse">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestaticwebappsresponse">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Static Web Apps provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9598,7 +9598,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#customopenidconnectproviders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The map of the name of the alias of each custom Open ID Connect provider to the
 configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
@@ -9607,7 +9607,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#facebook_nodejs" style="color: inherit; text-decoration: inherit;">facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookresponse">Facebook<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#facebookresponse">Facebook<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Facebook provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9615,7 +9615,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#github_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubresponse">Git<wbr>Hub<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubresponse">Git<wbr>Hub<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the GitHub provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9623,7 +9623,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#google_nodejs" style="color: inherit; text-decoration: inherit;">google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleresponse">Google<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#googleresponse">Google<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9639,7 +9639,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#legacymicrosoftaccount_nodejs" style="color: inherit; text-decoration: inherit;">legacy<wbr>Microsoft<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#legacymicrosoftaccountresponse">Legacy<wbr>Microsoft<wbr>Account<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#legacymicrosoftaccountresponse">Legacy<wbr>Microsoft<wbr>Account<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the legacy Microsoft Account provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9647,7 +9647,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#twitter_nodejs" style="color: inherit; text-decoration: inherit;">twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitterresponse">Twitter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#twitterresponse">Twitter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Twitter provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9683,7 +9683,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#apple_python" style="color: inherit; text-decoration: inherit;">apple</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appleresponse">Apple<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#appleresponse">Apple<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Apple provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9691,7 +9691,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#azure_active_directory_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryresponse">Azure<wbr>Active<wbr>Directory<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryresponse">Azure<wbr>Active<wbr>Directory<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Active directory provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9699,7 +9699,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#azure_static_web_apps_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>static_<wbr>web_<wbr>apps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestaticwebappsresponse">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestaticwebappsresponse">Azure<wbr>Static<wbr>Web<wbr>Apps<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Azure Static Web Apps provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9707,7 +9707,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#custom_open_id_connect_providers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>open_<wbr>id_<wbr>connect_<wbr>providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Custom<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The map of the name of the alias of each custom Open ID Connect provider to the
 configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
@@ -9716,7 +9716,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#facebook_python" style="color: inherit; text-decoration: inherit;">facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#facebookresponse">Facebook<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#facebookresponse">Facebook<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Facebook provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9724,7 +9724,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#git_hub_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubresponse">Git<wbr>Hub<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubresponse">Git<wbr>Hub<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the GitHub provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9732,7 +9732,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#google_python" style="color: inherit; text-decoration: inherit;">google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#googleresponse">Google<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#googleresponse">Google<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Google provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9748,7 +9748,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#legacy_microsoft_account_python" style="color: inherit; text-decoration: inherit;">legacy_<wbr>microsoft_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#legacymicrosoftaccountresponse">Legacy<wbr>Microsoft<wbr>Account<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#legacymicrosoftaccountresponse">Legacy<wbr>Microsoft<wbr>Account<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the legacy Microsoft Account provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9756,7 +9756,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#twitter_python" style="color: inherit; text-decoration: inherit;">twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitterresponse">Twitter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#twitterresponse">Twitter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the Twitter provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10110,7 +10110,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10118,7 +10118,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Client<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Client<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the legacy Microsoft Account provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10126,7 +10126,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Allowed<wbr>Audiences<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Allowed<wbr>Audiences<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the legacy Microsoft Account provider token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10198,7 +10198,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10206,7 +10206,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the legacy Microsoft Account provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10214,7 +10214,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidation">Allowed<wbr>Audiences<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidation">Allowed<wbr>Audiences<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the legacy Microsoft Account provider token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10242,7 +10242,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopes">Login<wbr>Scopes</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10250,7 +10250,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistration">Client<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the legacy Microsoft Account provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10258,7 +10258,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidation">Allowed<wbr>Audiences<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidation">Allowed<wbr>Audiences<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the legacy Microsoft Account provider token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10312,7 +10312,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10320,7 +10320,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Client<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Client<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the legacy Microsoft Account provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10328,7 +10328,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Allowed<wbr>Audiences<wbr>Validation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Allowed<wbr>Audiences<wbr>Validation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the legacy Microsoft Account provider token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10448,7 +10448,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10456,7 +10456,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the legacy Microsoft Account provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10464,7 +10464,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Allowed<wbr>Audiences<wbr>Validation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Allowed<wbr>Audiences<wbr>Validation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the legacy Microsoft Account provider token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10516,7 +10516,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginscopesresponse">Login<wbr>Scopes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10524,7 +10524,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientregistrationresponse">Client<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the legacy Microsoft Account provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10532,7 +10532,7 @@ configuration settings of the custom Open ID Connect provider.{{% /md %}}</dd><d
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Allowed<wbr>Audiences<wbr>Validation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#allowedaudiencesvalidationresponse">Allowed<wbr>Audiences<wbr>Validation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the legacy Microsoft Account provider token validation flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10556,7 +10556,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#cookieexpiration_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cookieexpiration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Cookie<wbr>Expiration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cookieexpiration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Cookie<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10572,7 +10572,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#nonce_csharp" style="color: inherit; text-decoration: inherit;">Nonce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonce">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Nonce<wbr>Args</a></span>
+        <span class="property-type"><a href="#nonce">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Nonce</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the nonce used in the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10588,7 +10588,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginroutes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Routes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginroutes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Routes</a></span>
     </dt>
     <dd>{{% md %}}The routes that specify the endpoints used for login and logout requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10596,7 +10596,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#tokenstore_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenstore">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Token<wbr>Store<wbr>Args</a></span>
+        <span class="property-type"><a href="#tokenstore">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Token<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the token store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10680,7 +10680,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#cookieexpiration_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cookieexpiration">Cookie<wbr>Expiration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cookieexpiration">Cookie<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10696,7 +10696,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#nonce_nodejs" style="color: inherit; text-decoration: inherit;">nonce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonce">Nonce<wbr>Args</a></span>
+        <span class="property-type"><a href="#nonce">Nonce</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the nonce used in the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10712,7 +10712,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginroutes">Login<wbr>Routes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginroutes">Login<wbr>Routes</a></span>
     </dt>
     <dd>{{% md %}}The routes that specify the endpoints used for login and logout requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10720,7 +10720,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#tokenstore_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenstore">Token<wbr>Store<wbr>Args</a></span>
+        <span class="property-type"><a href="#tokenstore">Token<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the token store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10742,7 +10742,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#cookie_expiration_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cookieexpiration">Cookie<wbr>Expiration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cookieexpiration">Cookie<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10758,7 +10758,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#nonce_python" style="color: inherit; text-decoration: inherit;">nonce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonce">Nonce<wbr>Args</a></span>
+        <span class="property-type"><a href="#nonce">Nonce</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the nonce used in the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10774,7 +10774,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginroutes">Login<wbr>Routes<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginroutes">Login<wbr>Routes</a></span>
     </dt>
     <dd>{{% md %}}The routes that specify the endpoints used for login and logout requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10782,7 +10782,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#token_store_python" style="color: inherit; text-decoration: inherit;">token_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenstore">Token<wbr>Store<wbr>Args</a></span>
+        <span class="property-type"><a href="#tokenstore">Token<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the token store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10830,7 +10830,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#cookieexpiration_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cookieexpirationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Cookie<wbr>Expiration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cookieexpirationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Cookie<wbr>Expiration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10846,7 +10846,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#nonce_csharp" style="color: inherit; text-decoration: inherit;">Nonce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Nonce<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nonceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Nonce<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the nonce used in the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10862,7 +10862,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginroutesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Routes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginroutesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Login<wbr>Routes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The routes that specify the endpoints used for login and logout requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10870,7 +10870,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#tokenstore_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenstoreresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Token<wbr>Store<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tokenstoreresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Token<wbr>Store<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the token store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11002,7 +11002,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#cookieexpiration_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cookieexpirationresponse">Cookie<wbr>Expiration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cookieexpirationresponse">Cookie<wbr>Expiration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11018,7 +11018,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#nonce_nodejs" style="color: inherit; text-decoration: inherit;">nonce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonceresponse">Nonce<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nonceresponse">Nonce<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the nonce used in the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11034,7 +11034,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginroutesresponse">Login<wbr>Routes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginroutesresponse">Login<wbr>Routes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The routes that specify the endpoints used for login and logout requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11042,7 +11042,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#tokenstore_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenstoreresponse">Token<wbr>Store<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tokenstoreresponse">Token<wbr>Store<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the token store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11088,7 +11088,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#cookie_expiration_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cookieexpirationresponse">Cookie<wbr>Expiration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cookieexpirationresponse">Cookie<wbr>Expiration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the session cookie's expiration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11104,7 +11104,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#nonce_python" style="color: inherit; text-decoration: inherit;">nonce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nonceresponse">Nonce<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#nonceresponse">Nonce<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the nonce used in the login flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11120,7 +11120,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loginroutesresponse">Login<wbr>Routes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#loginroutesresponse">Login<wbr>Routes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The routes that specify the endpoints used for login and logout requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11128,7 +11128,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#token_store_python" style="color: inherit; text-decoration: inherit;">token_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenstoreresponse">Token<wbr>Store<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#tokenstoreresponse">Token<wbr>Store<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the token store.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12030,7 +12030,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcredentialmethod">Client<wbr>Credential<wbr>Method</a></span>
+        <span class="property-type"><a href="#clientcredentialmethod">string</a></span>
     </dt>
     <dd>{{% md %}}The method that should be used to authenticate the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13150,7 +13150,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#clientcredential_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectclientcredential">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectclientcredential">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}The authentication credentials of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13174,7 +13174,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#openidconnectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Id<wbr>Connect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the endpoints used for the custom Open ID Connect provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13222,7 +13222,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#clientcredential_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectclientcredential">Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectclientcredential">Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}The authentication credentials of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13246,7 +13246,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#openidconnectconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Id<wbr>Connect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectconfig">Open<wbr>Id<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectconfig">Open<wbr>Id<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the endpoints used for the custom Open ID Connect provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13258,7 +13258,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#client_credential_python" style="color: inherit; text-decoration: inherit;">client_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectclientcredential">Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectclientcredential">Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}The authentication credentials of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13282,7 +13282,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#open_id_connect_configuration_python" style="color: inherit; text-decoration: inherit;">open_<wbr>id_<wbr>connect_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectconfig">Open<wbr>Id<wbr>Connect<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectconfig">Open<wbr>Id<wbr>Connect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the endpoints used for the custom Open ID Connect provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13320,7 +13320,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#clientcredential_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectclientcredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectclientcredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication credentials of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13344,7 +13344,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#openidconnectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Id<wbr>Connect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Connect<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the endpoints used for the custom Open ID Connect provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13440,7 +13440,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#clientcredential_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectclientcredentialresponse">Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectclientcredentialresponse">Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication credentials of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13464,7 +13464,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#openidconnectconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Id<wbr>Connect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectconfigresponse">Open<wbr>Id<wbr>Connect<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectconfigresponse">Open<wbr>Id<wbr>Connect<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the endpoints used for the custom Open ID Connect provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13500,7 +13500,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#client_credential_python" style="color: inherit; text-decoration: inherit;">client_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectclientcredentialresponse">Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectclientcredentialresponse">Open<wbr>Id<wbr>Connect<wbr>Client<wbr>Credential<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication credentials of the custom Open ID Connect provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13524,7 +13524,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#open_id_connect_configuration_python" style="color: inherit; text-decoration: inherit;">open_<wbr>id_<wbr>connect_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidconnectconfigresponse">Open<wbr>Id<wbr>Connect<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#openidconnectconfigresponse">Open<wbr>Id<wbr>Connect<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the endpoints used for the custom Open ID Connect provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13538,7 +13538,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstoragetokenstore">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Blob<wbr>Storage<wbr>Token<wbr>Store<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstoragetokenstore">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Blob<wbr>Storage<wbr>Token<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if blob storage is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13555,7 +13555,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemtokenstore">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Token<wbr>Store<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemtokenstore">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Token<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if a file system is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13630,7 +13630,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstoragetokenstore">Blob<wbr>Storage<wbr>Token<wbr>Store<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstoragetokenstore">Blob<wbr>Storage<wbr>Token<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if blob storage is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13647,7 +13647,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemtokenstore">File<wbr>System<wbr>Token<wbr>Store<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemtokenstore">File<wbr>System<wbr>Token<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if a file system is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13676,7 +13676,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstoragetokenstore">Blob<wbr>Storage<wbr>Token<wbr>Store<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstoragetokenstore">Blob<wbr>Storage<wbr>Token<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if blob storage is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13693,7 +13693,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemtokenstore">File<wbr>System<wbr>Token<wbr>Store<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemtokenstore">File<wbr>System<wbr>Token<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if a file system is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13748,7 +13748,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstoragetokenstoreresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Blob<wbr>Storage<wbr>Token<wbr>Store<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstoragetokenstoreresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Blob<wbr>Storage<wbr>Token<wbr>Store<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if blob storage is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13765,7 +13765,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemtokenstoreresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Token<wbr>Store<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemtokenstoreresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>File<wbr>System<wbr>Token<wbr>Store<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if a file system is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13888,7 +13888,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstoragetokenstoreresponse">Blob<wbr>Storage<wbr>Token<wbr>Store<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstoragetokenstoreresponse">Blob<wbr>Storage<wbr>Token<wbr>Store<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if blob storage is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13905,7 +13905,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemtokenstoreresponse">File<wbr>System<wbr>Token<wbr>Store<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemtokenstoreresponse">File<wbr>System<wbr>Token<wbr>Store<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if a file system is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13958,7 +13958,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstoragetokenstoreresponse">Blob<wbr>Storage<wbr>Token<wbr>Store<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstoragetokenstoreresponse">Blob<wbr>Storage<wbr>Token<wbr>Store<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if blob storage is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13975,7 +13975,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesystemtokenstoreresponse">File<wbr>System<wbr>Token<wbr>Store<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filesystemtokenstoreresponse">File<wbr>System<wbr>Token<wbr>Store<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the storage of the tokens if a file system is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14022,7 +14022,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitterregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Twitter<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#twitterregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Twitter<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Twitter provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14078,7 +14078,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitterregistration">Twitter<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#twitterregistration">Twitter<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Twitter provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14106,7 +14106,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd></dl>
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitterregistration">Twitter<wbr>Registration<wbr>Args</a></span>
+        <span class="property-type"><a href="#twitterregistration">Twitter<wbr>Registration</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Twitter provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14508,7 +14508,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitterregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Twitter<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#twitterregistrationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Twitter<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Twitter provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14612,7 +14612,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitterregistrationresponse">Twitter<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#twitterregistrationresponse">Twitter<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Twitter provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14664,7 +14664,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#twitterregistrationresponse">Twitter<wbr>Registration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#twitterregistrationresponse">Twitter<wbr>Registration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings of the app registration for the Twitter provider.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -472,7 +472,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresku">Azure<wbr>Sku</a></span>
+        <span class="property-type"><a href="#azuresku">Azure<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -528,7 +528,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the cluster, if configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -536,7 +536,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#keyvaultproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault properties for the cluster encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -552,7 +552,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#optimizedautoscale_go" style="color: inherit; text-decoration: inherit;">Optimized<wbr>Autoscale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#optimizedautoscale">Optimized<wbr>Autoscale</a></span>
+        <span class="property-type"><a href="#optimizedautoscale">Optimized<wbr>Autoscale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optimized auto scale definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -568,7 +568,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#trustedexternaltenants_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>External<wbr>Tenants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trustedexternaltenant">[]Trusted<wbr>External<wbr>Tenant</a></span>
+        <span class="property-type"><a href="#trustedexternaltenant">[]Trusted<wbr>External<wbr>Tenant<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster's external tenants.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -576,7 +576,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualnetworkconfiguration_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfiguration">Virtual<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfiguration">Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1719,7 +1719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Kusto.<wbr>Inputs.<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Kusto.<wbr>Inputs.<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1791,7 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1827,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2299,7 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#languageextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Kusto.<wbr>Inputs.<wbr>Language<wbr>Extension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#languageextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Kusto.<wbr>Inputs.<wbr>Language<wbr>Extension<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of language extensions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2323,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#languageextensionresponse">Language<wbr>Extension<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#languageextensionresponse">Language<wbr>Extension<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of language extensions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2335,7 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#languageextensionresponse">Sequence[Language<wbr>Extension<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#languageextensionresponse">Sequence[Language<wbr>Extension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of language extensions.{{% /md %}}</dd></dl>
 {{% /choosable %}}

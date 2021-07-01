@@ -703,7 +703,7 @@ The setting in this value can control the behavior of the control plane for Auth
 <a href="#defaultprovider_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#builtinauthenticationprovider">Built<wbr>In<wbr>Authentication<wbr>Provider</a></span>
+        <span class="property-type"><a href="#builtinauthenticationprovider">string</a></span>
     </dt>
     <dd>{{% md %}}The default authentication provider to use when multiple providers are configured.
 This setting is only needed if multiple providers are configured and the unauthenticated client
@@ -957,7 +957,7 @@ application used for sign-in.{{% /md %}}</dd><dt class="property-optional"
 <a href="#unauthenticatedclientaction_go" style="color: inherit; text-decoration: inherit;">Unauthenticated<wbr>Client<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unauthenticatedclientaction">Unauthenticated<wbr>Client<wbr>Action</a></span>
+        <span class="property-type"><a href="#unauthenticatedclientaction">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take when an unauthenticated client attempts to access the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

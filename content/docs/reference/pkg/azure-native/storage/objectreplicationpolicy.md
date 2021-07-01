@@ -951,7 +951,7 @@ The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyrule">[]Object<wbr>Replication<wbr>Policy<wbr>Rule</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyrule">[]Object<wbr>Replication<wbr>Policy<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage account object replication rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1442,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyfilter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyfilter">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Object<wbr>Replication<wbr>Policy<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Optional. An object that defines the filter set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1514,7 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyfilter">Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyfilter">Object<wbr>Replication<wbr>Policy<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Optional. An object that defines the filter set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1550,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyfilter">Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyfilter">Object<wbr>Replication<wbr>Policy<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Optional. An object that defines the filter set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1588,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional. An object that defines the filter set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1660,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional. An object that defines the filter set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1696,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional. An object that defines the filter set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

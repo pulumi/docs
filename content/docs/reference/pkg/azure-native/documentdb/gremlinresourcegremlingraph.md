@@ -556,7 +556,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphresource">Gremlin<wbr>Graph<wbr>Resource</a></span>
+        <span class="property-type"><a href="#gremlingraphresource">Gremlin<wbr>Graph<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a Gremlin graph{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -588,7 +588,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options</a></span>
+        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1679,7 +1679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1719,7 +1719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1739,7 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1903,7 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1943,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1963,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2017,7 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflictresolutionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the graph.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2033,7 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexing<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#indexingpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexing<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2041,7 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Container<wbr>Partition<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerpartitionkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Container<wbr>Partition<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2049,7 +2049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeypolicy_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uniquekeypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2169,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflictresolutionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Conflict<wbr>Resolution<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Conflict<wbr>Resolution<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the graph.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2185,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicyresponse">Indexing<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#indexingpolicyresponse">Indexing<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkeyresponse">Container<wbr>Partition<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerpartitionkeyresponse">Container<wbr>Partition<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2201,7 +2201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeypolicy_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicyresponse">Unique<wbr>Key<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uniquekeypolicyresponse">Unique<wbr>Key<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2245,7 +2245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflict_resolution_policy_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Conflict<wbr>Resolution<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Conflict<wbr>Resolution<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the graph.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2261,7 +2261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexing_policy_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicyresponse">Indexing<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#indexingpolicyresponse">Indexing<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2269,7 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkeyresponse">Container<wbr>Partition<wbr>Key<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerpartitionkeyresponse">Container<wbr>Partition<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2277,7 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unique_key_policy_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>key_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicyresponse">Unique<wbr>Key<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uniquekeypolicyresponse">Unique<wbr>Key<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2299,7 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflictresolutionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Conflict<wbr>Resolution<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the graph.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2315,7 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexing<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#indexingpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2323,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkey">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Container<wbr>Partition<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerpartitionkey">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Container<wbr>Partition<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2331,7 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeypolicy_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#uniquekeypolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2403,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflictresolutionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicy">Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicy">Conflict<wbr>Resolution<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the graph.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2419,7 +2419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicy">Indexing<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#indexingpolicy">Indexing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2427,7 +2427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkey">Container<wbr>Partition<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerpartitionkey">Container<wbr>Partition<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2435,7 +2435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeypolicy_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicy">Unique<wbr>Key<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#uniquekeypolicy">Unique<wbr>Key<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2455,7 +2455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflict_resolution_policy_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicy">Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicy">Conflict<wbr>Resolution<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the graph.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2471,7 +2471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexing_policy_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicy">Indexing<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#indexingpolicy">Indexing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2479,7 +2479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkey">Container<wbr>Partition<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#containerpartitionkey">Container<wbr>Partition<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2487,7 +2487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unique_key_policy_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>key_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicy">Unique<wbr>Key<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#uniquekeypolicy">Unique<wbr>Key<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2501,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_csharp" style="color: inherit; text-decoration: inherit;">Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexes">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexes<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#indexes">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexes&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2541,7 +2541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_nodejs" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexes">Indexes<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#indexes">Indexes[]</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2561,7 +2561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_python" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexes">Sequence[Indexes<wbr>Args]</a></span>
+        <span class="property-type"><a href="#indexes">Sequence[Indexes]</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2583,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_csharp" style="color: inherit; text-decoration: inherit;">Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexes<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#indexesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Indexes<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2623,7 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_nodejs" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexesresponse">Indexes<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#indexesresponse">Indexes<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2643,7 +2643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_python" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexesresponse">Sequence[Indexes<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#indexesresponse">Sequence[Indexes<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2961,7 +2961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositeindexes_csharp" style="color: inherit; text-decoration: inherit;">Composite<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepath">List&lt;Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Composite<wbr>Path<wbr>Args&gt;&gt;</a></span>
+        <span class="property-type"><a href="#compositepath">List&lt;Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Composite<wbr>Path&gt;&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2969,7 +2969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedpaths_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpath">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Excluded<wbr>Path<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#excludedpath">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Excluded<wbr>Path&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2977,7 +2977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedpaths_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpath">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Included<wbr>Path<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#includedpath">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Included<wbr>Path&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2993,7 +2993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spatialindexes_csharp" style="color: inherit; text-decoration: inherit;">Spatial<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspec">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Spatial<wbr>Spec<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#spatialspec">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Spatial<wbr>Spec&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3065,7 +3065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositeindexes_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepath">Composite<wbr>Path<wbr>Args[][]</a></span>
+        <span class="property-type"><a href="#compositepath">Composite<wbr>Path[][]</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3073,7 +3073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedpaths_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpath">Excluded<wbr>Path<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#excludedpath">Excluded<wbr>Path[]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3081,7 +3081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedpaths_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpath">Included<wbr>Path<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#includedpath">Included<wbr>Path[]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3097,7 +3097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spatialindexes_nodejs" style="color: inherit; text-decoration: inherit;">spatial<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspec">Spatial<wbr>Spec<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#spatialspec">Spatial<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3117,7 +3117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#composite_indexes_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepath">Sequence[Sequence[Composite<wbr>Path<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#compositepath">Sequence[Sequence[Composite<wbr>Path]]</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3125,7 +3125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_paths_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpath">Sequence[Excluded<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#excludedpath">Sequence[Excluded<wbr>Path]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3133,7 +3133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#included_paths_python" style="color: inherit; text-decoration: inherit;">included_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpath">Sequence[Included<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#includedpath">Sequence[Included<wbr>Path]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3149,7 +3149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spatial_indexes_python" style="color: inherit; text-decoration: inherit;">spatial_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspec">Sequence[Spatial<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spatialspec">Sequence[Spatial<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3171,7 +3171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositeindexes_csharp" style="color: inherit; text-decoration: inherit;">Composite<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepathresponse">List&lt;Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Composite<wbr>Path<wbr>Response<wbr>Args&gt;&gt;</a></span>
+        <span class="property-type"><a href="#compositepathresponse">List&lt;Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Composite<wbr>Path<wbr>Response&gt;&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3179,7 +3179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedpaths_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Excluded<wbr>Path<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#excludedpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Excluded<wbr>Path<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3187,7 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedpaths_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Included<wbr>Path<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#includedpathresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Included<wbr>Path<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3203,7 +3203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spatialindexes_csharp" style="color: inherit; text-decoration: inherit;">Spatial<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspecresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Spatial<wbr>Spec<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#spatialspecresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Spatial<wbr>Spec<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3275,7 +3275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositeindexes_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepathresponse">Composite<wbr>Path<wbr>Response<wbr>Args[][]</a></span>
+        <span class="property-type"><a href="#compositepathresponse">Composite<wbr>Path<wbr>Response[][]</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3283,7 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedpaths_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpathresponse">Excluded<wbr>Path<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#excludedpathresponse">Excluded<wbr>Path<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3291,7 +3291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedpaths_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpathresponse">Included<wbr>Path<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#includedpathresponse">Included<wbr>Path<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3307,7 +3307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spatialindexes_nodejs" style="color: inherit; text-decoration: inherit;">spatial<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspecresponse">Spatial<wbr>Spec<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#spatialspecresponse">Spatial<wbr>Spec<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3327,7 +3327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#composite_indexes_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepathresponse">Sequence[Sequence[Composite<wbr>Path<wbr>Response<wbr>Args]]</a></span>
+        <span class="property-type"><a href="#compositepathresponse">Sequence[Sequence[Composite<wbr>Path<wbr>Response]]</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3335,7 +3335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_paths_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpathresponse">Sequence[Excluded<wbr>Path<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#excludedpathresponse">Sequence[Excluded<wbr>Path<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3343,7 +3343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#included_paths_python" style="color: inherit; text-decoration: inherit;">included_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpathresponse">Sequence[Included<wbr>Path<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#includedpathresponse">Sequence[Included<wbr>Path<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3359,7 +3359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spatial_indexes_python" style="color: inherit; text-decoration: inherit;">spatial_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspecresponse">Sequence[Spatial<wbr>Spec<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spatialspecresponse">Sequence[Spatial<wbr>Spec<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3651,7 +3651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeys_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#uniquekey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3675,7 +3675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeys_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekey">Unique<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#uniquekey">Unique<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3687,7 +3687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unique_keys_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekey">Sequence[Unique<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uniquekey">Sequence[Unique<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3701,7 +3701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeys_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#uniquekeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Unique<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3725,7 +3725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeys_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeyresponse">Unique<wbr>Key<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#uniquekeyresponse">Unique<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3737,7 +3737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unique_keys_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeyresponse">Sequence[Unique<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uniquekeyresponse">Sequence[Unique<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}

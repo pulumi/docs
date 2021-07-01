@@ -243,7 +243,7 @@ The JitRequest resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#jitauthorizationpolicies_go" style="color: inherit; text-decoration: inherit;">Jit<wbr>Authorization<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitauthorizationpolicies">[]Jit<wbr>Authorization<wbr>Policies</a></span>
+        <span class="property-type"><a href="#jitauthorizationpolicies">[]Jit<wbr>Authorization<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The JIT authorization policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -251,7 +251,7 @@ The JitRequest resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#jitschedulingpolicy_go" style="color: inherit; text-decoration: inherit;">Jit<wbr>Scheduling<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitschedulingpolicy">Jit<wbr>Scheduling<wbr>Policy</a></span>
+        <span class="property-type"><a href="#jitschedulingpolicy">Jit<wbr>Scheduling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The JIT request properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">

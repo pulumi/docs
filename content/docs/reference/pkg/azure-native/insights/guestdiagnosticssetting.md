@@ -605,7 +605,7 @@ The GuestDiagnosticsSetting resource accepts the following [input]({{< relref "/
 <a href="#datasources_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasource">[]Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#datasource">[]Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}the array of data source object which are configured to collect and send data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -908,7 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -924,7 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sinkconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Sink<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sinkconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Sink<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -964,7 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfiguration">Data<wbr>Source<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceconfiguration">Data<wbr>Source<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -980,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sinkconfiguration">Sink<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sinkconfiguration">Sink<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -992,7 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfiguration">Data<wbr>Source<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceconfiguration">Data<wbr>Source<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1008,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sinkconfiguration">Sequence[Sink<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sinkconfiguration">Sequence[Sink<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1022,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventlogs_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventlogconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Event<wbr>Log<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventlogconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Event<wbr>Log<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1030,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfcounters_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Performance<wbr>Counter<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#performancecounterconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Performance<wbr>Counter<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1038,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_csharp" style="color: inherit; text-decoration: inherit;">Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etwproviderconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Etw<wbr>Provider<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#etwproviderconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Etw<wbr>Provider<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1078,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventlogs_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventlogconfiguration">Event<wbr>Log<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#eventlogconfiguration">Event<wbr>Log<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfcounters_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterconfiguration">Performance<wbr>Counter<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#performancecounterconfiguration">Performance<wbr>Counter<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1094,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_nodejs" style="color: inherit; text-decoration: inherit;">providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etwproviderconfiguration">Etw<wbr>Provider<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#etwproviderconfiguration">Etw<wbr>Provider<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1106,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_logs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventlogconfiguration">Sequence[Event<wbr>Log<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventlogconfiguration">Sequence[Event<wbr>Log<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1114,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perf_counters_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterconfiguration">Sequence[Performance<wbr>Counter<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#performancecounterconfiguration">Sequence[Performance<wbr>Counter<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1122,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_python" style="color: inherit; text-decoration: inherit;">providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etwproviderconfiguration">Sequence[Etw<wbr>Provider<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#etwproviderconfiguration">Sequence[Etw<wbr>Provider<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1136,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventlogs_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventlogconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Event<wbr>Log<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventlogconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Event<wbr>Log<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1144,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfcounters_csharp" style="color: inherit; text-decoration: inherit;">Perf<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Performance<wbr>Counter<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#performancecounterconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Performance<wbr>Counter<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1152,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_csharp" style="color: inherit; text-decoration: inherit;">Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etwproviderconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Etw<wbr>Provider<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#etwproviderconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Etw<wbr>Provider<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1192,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventlogs_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventlogconfigurationresponse">Event<wbr>Log<wbr>Configuration<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#eventlogconfigurationresponse">Event<wbr>Log<wbr>Configuration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1200,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfcounters_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterconfigurationresponse">Performance<wbr>Counter<wbr>Configuration<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#performancecounterconfigurationresponse">Performance<wbr>Counter<wbr>Configuration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1208,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_nodejs" style="color: inherit; text-decoration: inherit;">providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etwproviderconfigurationresponse">Etw<wbr>Provider<wbr>Configuration<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#etwproviderconfigurationresponse">Etw<wbr>Provider<wbr>Configuration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1220,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_logs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventlogconfigurationresponse">Sequence[Event<wbr>Log<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventlogconfigurationresponse">Sequence[Event<wbr>Log<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Windows event logs configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1228,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perf_counters_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>counters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#performancecounterconfigurationresponse">Sequence[Performance<wbr>Counter<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#performancecounterconfigurationresponse">Sequence[Performance<wbr>Counter<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Performance counter configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1236,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providers_python" style="color: inherit; text-decoration: inherit;">providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etwproviderconfigurationresponse">Sequence[Etw<wbr>Provider<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#etwproviderconfigurationresponse">Sequence[Etw<wbr>Provider<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}ETW providers configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1250,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1266,7 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sinkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Sink<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sinkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Sink<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1306,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfigurationresponse">Data<wbr>Source<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceconfigurationresponse">Data<wbr>Source<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1322,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sinkconfigurationresponse">Sink<wbr>Configuration<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sinkconfigurationresponse">Sink<wbr>Configuration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1334,7 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceconfigurationresponse">Data<wbr>Source<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceconfigurationresponse">Data<wbr>Source<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1350,7 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sinkconfigurationresponse">Sequence[Sink<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sinkconfigurationresponse">Sequence[Sink<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1592,7 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etweventconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Etw<wbr>Event<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#etweventconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Etw<wbr>Event<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1632,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etweventconfiguration">Etw<wbr>Event<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#etweventconfiguration">Etw<wbr>Event<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1652,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etweventconfiguration">Sequence[Etw<wbr>Event<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#etweventconfiguration">Sequence[Etw<wbr>Event<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1674,7 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etweventconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Etw<wbr>Event<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#etweventconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Etw<wbr>Event<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1714,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etweventconfigurationresponse">Etw<wbr>Event<wbr>Configuration<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#etweventconfigurationresponse">Etw<wbr>Event<wbr>Configuration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1734,7 +1734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#etweventconfigurationresponse">Sequence[Etw<wbr>Event<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#etweventconfigurationresponse">Sequence[Etw<wbr>Event<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">

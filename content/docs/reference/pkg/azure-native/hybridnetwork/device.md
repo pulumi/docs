@@ -361,7 +361,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#azurestackedge_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Stack<wbr>Edge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the Azure stack edge device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

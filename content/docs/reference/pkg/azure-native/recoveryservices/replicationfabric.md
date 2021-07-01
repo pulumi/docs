@@ -327,7 +327,7 @@ The ReplicationFabric resource accepts the following [input]({{< relref "/docs/i
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fabriccreationinputproperties">Fabric<wbr>Creation<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#fabriccreationinputproperties">Fabric<wbr>Creation<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fabric creation input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -590,7 +590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentdiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Agent<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#agentdiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Agent<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The details of agent disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -678,7 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentdiskdetailsresponse">Agent<wbr>Disk<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#agentdiskdetailsresponse">Agent<wbr>Disk<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The details of agent disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -722,7 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentdiskdetailsresponse">Sequence[Agent<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#agentdiskdetailsresponse">Sequence[Agent<wbr>Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The details of agent disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1248,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1352,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1404,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1564,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefabriccreationinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#inmagercmfabriccreationinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#vmwarev2fabriccreationinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>V2Fabric<wbr>Creation<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefabriccreationinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fabric<wbr>Creation<wbr>Input</a> | <a href="#inmagercmfabriccreationinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input</a> | <a href="#vmwarev2fabriccreationinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>V2Fabric<wbr>Creation<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Fabric provider specific creation input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1588,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefabriccreationinput">Azure<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#inmagercmfabriccreationinput">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#vmwarev2fabriccreationinput">VMware<wbr>V2Fabric<wbr>Creation<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefabriccreationinput">Azure<wbr>Fabric<wbr>Creation<wbr>Input</a> | <a href="#inmagercmfabriccreationinput">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input</a> | <a href="#vmwarev2fabriccreationinput">VMware<wbr>V2Fabric<wbr>Creation<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Fabric provider specific creation input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1600,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_details_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefabriccreationinput">Azure<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#inmagercmfabriccreationinput">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input<wbr>Args</a> | <a href="#vmwarev2fabriccreationinput">VMware<wbr>V2Fabric<wbr>Creation<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefabriccreationinput">Azure<wbr>Fabric<wbr>Creation<wbr>Input</a> | <a href="#inmagercmfabriccreationinput">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Creation<wbr>Input</a> | <a href="#vmwarev2fabriccreationinput">VMware<wbr>V2Fabric<wbr>Creation<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Fabric provider specific creation input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1622,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefabricspecificdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervsitedetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VSite<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmfabricspecificdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwaredetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarev2fabricspecificdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmmdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefabricspecificdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response</a> | <a href="#hypervsitedetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VSite<wbr>Details<wbr>Response</a> | <a href="#inmagercmfabricspecificdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response</a> | <a href="#vmwaredetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Details<wbr>Response</a> | <a href="#vmwarev2fabricspecificdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response</a> | <a href="#vmmdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vmm<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Fabric specific settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1630,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptiondetails_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Encryption<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Encryption<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Encryption details for the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1654,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrordetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Fabric health error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1670,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolloverencryptiondetails_csharp" style="color: inherit; text-decoration: inherit;">Rollover<wbr>Encryption<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Encryption<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Encryption<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Rollover encryption details for the fabric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1758,7 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefabricspecificdetailsresponse">Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervsitedetailsresponse">Hyper<wbr>VSite<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmfabricspecificdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwaredetailsresponse">VMware<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarev2fabricspecificdetailsresponse">VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmmdetailsresponse">Vmm<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefabricspecificdetailsresponse">Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response</a> | <a href="#hypervsitedetailsresponse">Hyper<wbr>VSite<wbr>Details<wbr>Response</a> | <a href="#inmagercmfabricspecificdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response</a> | <a href="#vmwaredetailsresponse">VMware<wbr>Details<wbr>Response</a> | <a href="#vmwarev2fabricspecificdetailsresponse">VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response</a> | <a href="#vmmdetailsresponse">Vmm<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Fabric specific settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1766,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptiondetails_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Encryption details for the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1790,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrordetails_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Fabric health error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1806,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolloverencryptiondetails_nodejs" style="color: inherit; text-decoration: inherit;">rollover<wbr>Encryption<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Rollover encryption details for the fabric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1826,7 +1826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_details_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefabricspecificdetailsresponse">Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervsitedetailsresponse">Hyper<wbr>VSite<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmfabricspecificdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwaredetailsresponse">VMware<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarev2fabricspecificdetailsresponse">VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmmdetailsresponse">Vmm<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefabricspecificdetailsresponse">Azure<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response</a> | <a href="#hypervsitedetailsresponse">Hyper<wbr>VSite<wbr>Details<wbr>Response</a> | <a href="#inmagercmfabricspecificdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Fabric<wbr>Specific<wbr>Details<wbr>Response</a> | <a href="#vmwaredetailsresponse">VMware<wbr>Details<wbr>Response</a> | <a href="#vmwarev2fabricspecificdetailsresponse">VMware<wbr>V2Fabric<wbr>Specific<wbr>Details<wbr>Response</a> | <a href="#vmmdetailsresponse">Vmm<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Fabric specific settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1834,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_details_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Encryption details for the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1858,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_error_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>error_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Fabric health error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1874,7 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollover_encryption_details_python" style="color: inherit; text-decoration: inherit;">rollover_<wbr>encryption_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptiondetailsresponse">Encryption<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Rollover encryption details for the fabric.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1968,7 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2216,7 +2216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innerhealtherrors_nodejs" style="color: inherit; text-decoration: inherit;">inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Inner<wbr>Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2340,7 +2340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2598,7 +2598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceagentidentity_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Agent<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for source agent authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2670,7 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceagentidentity_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Agent<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for source agent authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2706,7 +2706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_agent_identity_python" style="color: inherit; text-decoration: inherit;">source_<wbr>agent_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproviderinput">Identity<wbr>Provider<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}The identity provider input for source agent authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2728,7 +2728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentdetails_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Agent<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#agentdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Agent<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of agent details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2752,7 +2752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dras_csharp" style="color: inherit; text-decoration: inherit;">Dras</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dradetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Dra<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dradetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Dra<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of DRAs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2768,7 +2768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processservers_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#processserverdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Process<wbr>Server<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#processserverdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Process<wbr>Server<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of process servers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2776,7 +2776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pushinstallers_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Installers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pushinstallerdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Push<wbr>Installer<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#pushinstallerdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Push<wbr>Installer<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of push installers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2784,7 +2784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rcmproxies_csharp" style="color: inherit; text-decoration: inherit;">Rcm<wbr>Proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rcmproxydetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Rcm<wbr>Proxy<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rcmproxydetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Rcm<wbr>Proxy<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of RCM proxies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2792,7 +2792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationagents_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Agents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationagentdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Replication<wbr>Agent<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#replicationagentdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Replication<wbr>Agent<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of replication agents.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2800,7 +2800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reprotectagents_csharp" style="color: inherit; text-decoration: inherit;">Reprotect<wbr>Agents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reprotectagentdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Reprotect<wbr>Agent<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reprotectagentdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Reprotect<wbr>Agent<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of reprotect agents.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2960,7 +2960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentdetails_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentdetailsresponse">Agent<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#agentdetailsresponse">Agent<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of agent details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2984,7 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dras_nodejs" style="color: inherit; text-decoration: inherit;">dras</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dradetailsresponse">Dra<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dradetailsresponse">Dra<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of DRAs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3000,7 +3000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processservers_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#processserverdetailsresponse">Process<wbr>Server<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#processserverdetailsresponse">Process<wbr>Server<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of process servers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3008,7 +3008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pushinstallers_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Installers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pushinstallerdetailsresponse">Push<wbr>Installer<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#pushinstallerdetailsresponse">Push<wbr>Installer<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of push installers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3016,7 +3016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rcmproxies_nodejs" style="color: inherit; text-decoration: inherit;">rcm<wbr>Proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rcmproxydetailsresponse">Rcm<wbr>Proxy<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rcmproxydetailsresponse">Rcm<wbr>Proxy<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of RCM proxies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3024,7 +3024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationagents_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Agents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationagentdetailsresponse">Replication<wbr>Agent<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#replicationagentdetailsresponse">Replication<wbr>Agent<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of replication agents.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3032,7 +3032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reprotectagents_nodejs" style="color: inherit; text-decoration: inherit;">reprotect<wbr>Agents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reprotectagentdetailsresponse">Reprotect<wbr>Agent<wbr>Details<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reprotectagentdetailsresponse">Reprotect<wbr>Agent<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of reprotect agents.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3076,7 +3076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentdetailsresponse">Sequence[Agent<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#agentdetailsresponse">Sequence[Agent<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of agent details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3100,7 +3100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dras_python" style="color: inherit; text-decoration: inherit;">dras</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dradetailsresponse">Sequence[Dra<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dradetailsresponse">Sequence[Dra<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of DRAs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3116,7 +3116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_servers_python" style="color: inherit; text-decoration: inherit;">process_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#processserverdetailsresponse">Sequence[Process<wbr>Server<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#processserverdetailsresponse">Sequence[Process<wbr>Server<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of process servers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3124,7 +3124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#push_installers_python" style="color: inherit; text-decoration: inherit;">push_<wbr>installers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pushinstallerdetailsresponse">Sequence[Push<wbr>Installer<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pushinstallerdetailsresponse">Sequence[Push<wbr>Installer<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of push installers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3132,7 +3132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rcm_proxies_python" style="color: inherit; text-decoration: inherit;">rcm_<wbr>proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rcmproxydetailsresponse">Sequence[Rcm<wbr>Proxy<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rcmproxydetailsresponse">Sequence[Rcm<wbr>Proxy<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of RCM proxies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3140,7 +3140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_agents_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>agents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationagentdetailsresponse">Sequence[Replication<wbr>Agent<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#replicationagentdetailsresponse">Sequence[Replication<wbr>Agent<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of replication agents.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3148,7 +3148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reprotect_agents_python" style="color: inherit; text-decoration: inherit;">reprotect_<wbr>agents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reprotectagentdetailsresponse">Sequence[Reprotect<wbr>Agent<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reprotectagentdetailsresponse">Sequence[Reprotect<wbr>Agent<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of reprotect agents.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3612,7 +3612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentversiondetails_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3620,7 +3620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastores_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Store<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datastoreresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Store<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of data stores in the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3636,7 +3636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3684,7 +3684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#marsagentversiondetails_csharp" style="color: inherit; text-decoration: inherit;">Mars<wbr>Agent<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Mars agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3716,7 +3716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionvolumes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionvolumeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Volume<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#retentionvolumeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Volume<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The retention volumes of Master target Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3724,7 +3724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3908,7 +3908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentversiondetails_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3916,7 +3916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastores_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreresponse">Data<wbr>Store<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datastoreresponse">Data<wbr>Store<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of data stores in the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3932,7 +3932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Health errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3980,7 +3980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#marsagentversiondetails_nodejs" style="color: inherit; text-decoration: inherit;">mars<wbr>Agent<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Mars agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4012,7 +4012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionvolumes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionvolumeresponse">Retention<wbr>Volume<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#retentionvolumeresponse">Retention<wbr>Volume<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The retention volumes of Master target Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4020,7 +4020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4056,7 +4056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_version_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4064,7 +4064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_stores_python" style="color: inherit; text-decoration: inherit;">data_<wbr>stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datastoreresponse">Sequence[Data<wbr>Store<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datastoreresponse">Sequence[Data<wbr>Store<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of data stores in the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4080,7 +4080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Health errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4128,7 +4128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mars_agent_version_details_python" style="color: inherit; text-decoration: inherit;">mars_<wbr>agent_<wbr>version_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Mars agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4160,7 +4160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_volumes_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionvolumeresponse">Sequence[Retention<wbr>Volume<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retentionvolumeresponse">Sequence[Retention<wbr>Volume<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The retention volumes of Master target Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4168,7 +4168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4336,7 +4336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4632,7 +4632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4780,7 +4780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4978,7 +4978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentversiondetails_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5026,7 +5026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5082,7 +5082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mobilityserviceupdates_csharp" style="color: inherit; text-decoration: inherit;">Mobility<wbr>Service<wbr>Updates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mobilityserviceupdateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mobility<wbr>Service<wbr>Update<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mobilityserviceupdateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mobility<wbr>Service<wbr>Update<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of the mobility service updates available on the Process Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5562,7 +5562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentversiondetails_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5610,7 +5610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Health errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5666,7 +5666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mobilityserviceupdates_nodejs" style="color: inherit; text-decoration: inherit;">mobility<wbr>Service<wbr>Updates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mobilityserviceupdateresponse">Mobility<wbr>Service<wbr>Update<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#mobilityserviceupdateresponse">Mobility<wbr>Service<wbr>Update<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of the mobility service updates available on the Process Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5854,7 +5854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_version_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5902,7 +5902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Health errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5958,7 +5958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mobility_service_updates_python" style="color: inherit; text-decoration: inherit;">mobility_<wbr>service_<wbr>updates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mobilityserviceupdateresponse">Sequence[Mobility<wbr>Service<wbr>Update<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mobilityserviceupdateresponse">Sequence[Mobility<wbr>Service<wbr>Update<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of the mobility service updates available on the Process Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6076,7 +6076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6180,7 +6180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6232,7 +6232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6286,7 +6286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6390,7 +6390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6442,7 +6442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6496,7 +6496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6600,7 +6600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6652,7 +6652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6706,7 +6706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6810,7 +6810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healtherrors_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Health<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6862,7 +6862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7160,7 +7160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentversiondetails_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7248,7 +7248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mastertargetservers_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Target<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mastertargetserverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Master<wbr>Target<wbr>Server<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mastertargetserverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Master<wbr>Target<wbr>Server<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Master Target servers associated with the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7272,7 +7272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processservers_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#processserverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Process<wbr>Server<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#processserverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Process<wbr>Server<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Process Servers associated with the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7304,7 +7304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runasaccounts_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runasaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Run<wbr>As<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#runasaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Run<wbr>As<wbr>Account<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of run as accounts created on the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7680,7 +7680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentversiondetails_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7768,7 +7768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mastertargetservers_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Target<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mastertargetserverresponse">Master<wbr>Target<wbr>Server<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#mastertargetserverresponse">Master<wbr>Target<wbr>Server<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Master Target servers associated with the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7792,7 +7792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processservers_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#processserverresponse">Process<wbr>Server<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#processserverresponse">Process<wbr>Server<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Process Servers associated with the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7824,7 +7824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runasaccounts_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runasaccountresponse">Run<wbr>As<wbr>Account<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#runasaccountresponse">Run<wbr>As<wbr>Account<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of run as accounts created on the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7940,7 +7940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_version_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#versiondetailsresponse">Version<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The agent version details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8028,7 +8028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_target_servers_python" style="color: inherit; text-decoration: inherit;">master_<wbr>target_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mastertargetserverresponse">Sequence[Master<wbr>Target<wbr>Server<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mastertargetserverresponse">Sequence[Master<wbr>Target<wbr>Server<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Master Target servers associated with the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8052,7 +8052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_servers_python" style="color: inherit; text-decoration: inherit;">process_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#processserverresponse">Sequence[Process<wbr>Server<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#processserverresponse">Sequence[Process<wbr>Server<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Process Servers associated with the fabric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8084,7 +8084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#run_as_accounts_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runasaccountresponse">Sequence[Run<wbr>As<wbr>Account<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runasaccountresponse">Sequence[Run<wbr>As<wbr>Account<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of run as accounts created on the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

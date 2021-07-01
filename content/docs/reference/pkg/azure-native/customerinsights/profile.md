@@ -707,7 +707,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#entitytype_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytypes">Entity<wbr>Types</a></span>
+        <span class="property-type"><a href="#entitytypes">string</a></span>
     </dt>
     <dd>{{% md %}}Type of entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -715,7 +715,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertydefinition">[]Property<wbr>Definition</a></span>
+        <span class="property-type"><a href="#propertydefinition">[]Property<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -779,7 +779,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#strongids_go" style="color: inherit; text-decoration: inherit;">Strong<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#strongid">[]Strong<wbr>Id</a></span>
+        <span class="property-type"><a href="#strongid">[]Strong<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The strong IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1762,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumvalidvalues_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformat">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformat">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2010,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumvalidvalues_nodejs" style="color: inherit; text-decoration: inherit;">enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformat">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformat">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format[]</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2134,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enum_valid_values_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>valid_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformat">Sequence[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args]</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformat">Sequence[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format]</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2236,7 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourceprecedencerules_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Precedence<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceprecedenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datasourceprecedenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Precedence<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2268,7 +2268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumvalidvalues_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2500,7 +2500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourceprecedencerules_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Precedence<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceprecedenceresponse">Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datasourceprecedenceresponse">Data<wbr>Source<wbr>Precedence<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2532,7 +2532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumvalidvalues_nodejs" style="color: inherit; text-decoration: inherit;">enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2632,7 +2632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_precedence_rules_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>precedence_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceprecedenceresponse">Sequence[Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasourceprecedenceresponse">Sequence[Data<wbr>Source<wbr>Precedence<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2664,7 +2664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enum_valid_values_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>valid_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Sequence[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Sequence[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -389,7 +389,7 @@ The TemplateSpecVersion resource accepts the following [input]({{< relref "/docs
 <a href="#linkedtemplates_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedtemplateartifact">[]Linked<wbr>Template<wbr>Artifact</a></span>
+        <span class="property-type"><a href="#linkedtemplateartifact">[]Linked<wbr>Template<wbr>Artifact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of linked template artifacts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -4780,7 +4780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcredentials_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Client<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Client<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5028,7 +5028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcredentials_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcredentialsresponse">Client<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientcredentialsresponse">Client<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5152,7 +5152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_credentials_python" style="color: inherit; text-decoration: inherit;">client_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcredentialsresponse">Client<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientcredentialsresponse">Client<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5616,7 +5616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The User who created the datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5632,7 +5632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modifiedby_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The User who modified the datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5656,7 +5656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuredatalakesection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Data<wbr>Lake<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakesectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakesectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5664,7 +5664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremysqlsection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>My<wbr>Sql<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremysqlsectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremysqlsectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5672,7 +5672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurepostgresqlsection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Postgre<wbr>Sql<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5680,7 +5680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuresqldatabasesection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Sql<wbr>Database<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5688,7 +5688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurestoragesection_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Storage<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragesectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestoragesectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5712,7 +5712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#glusterfssection_csharp" style="color: inherit; text-decoration: inherit;">Gluster<wbr>Fs<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfssectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Gluster<wbr>Fs<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#glusterfssectionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Gluster<wbr>Fs<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data specific to GlusterFS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5728,7 +5728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Linked<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Linked<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Info about origin if it is linked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5880,7 +5880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The User who created the datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5896,7 +5896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modifiedby_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The User who modified the datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5920,7 +5920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuredatalakesection_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Data<wbr>Lake<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakesectionresponse">Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakesectionresponse">Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5928,7 +5928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremysqlsection_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>My<wbr>Sql<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremysqlsectionresponse">Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremysqlsectionresponse">Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5936,7 +5936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurepostgresqlsection_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Postgre<wbr>Sql<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5944,7 +5944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuresqldatabasesection_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Sql<wbr>Database<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5952,7 +5952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurestoragesection_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Storage<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragesectionresponse">Azure<wbr>Storage<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestoragesectionresponse">Azure<wbr>Storage<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5976,7 +5976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#glusterfssection_nodejs" style="color: inherit; text-decoration: inherit;">gluster<wbr>Fs<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfssectionresponse">Gluster<wbr>Fs<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#glusterfssectionresponse">Gluster<wbr>Fs<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data specific to GlusterFS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5992,7 +5992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedinforesponse">Linked<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedinforesponse">Linked<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Info about origin if it is linked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6012,7 +6012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The User who created the datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6028,7 +6028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modified_by_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The User who modified the datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6052,7 +6052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_data_lake_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>data_<wbr>lake_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakesectionresponse">Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakesectionresponse">Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6060,7 +6060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_my_sql_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>my_<wbr>sql_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremysqlsectionresponse">Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremysqlsectionresponse">Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6068,7 +6068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_postgre_sql_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>postgre_<wbr>sql_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6076,7 +6076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_sql_database_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>sql_<wbr>database_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6084,7 +6084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_storage_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>storage_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragesectionresponse">Azure<wbr>Storage<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestoragesectionresponse">Azure<wbr>Storage<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6108,7 +6108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gluster_fs_section_python" style="color: inherit; text-decoration: inherit;">gluster_<wbr>fs_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfssectionresponse">Gluster<wbr>Fs<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#glusterfssectionresponse">Gluster<wbr>Fs<wbr>Section<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data specific to GlusterFS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6124,7 +6124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_info_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedinforesponse">Linked<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedinforesponse">Linked<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Info about origin if it is linked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6302,7 +6302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6374,7 +6374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6410,7 +6410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

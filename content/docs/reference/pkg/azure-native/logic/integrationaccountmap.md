@@ -603,7 +603,7 @@ The IntegrationAccountMap resource accepts the following [input]({{< relref "/do
 <a href="#parametersschema_go" style="color: inherit; text-decoration: inherit;">Parameters<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationaccountmappropertiesparametersschema">Integration<wbr>Account<wbr>Map<wbr>Properties<wbr>Parameters<wbr>Schema</a></span>
+        <span class="property-type"><a href="#integrationaccountmappropertiesparametersschema">Integration<wbr>Account<wbr>Map<wbr>Properties<wbr>Parameters<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters schema of integration account map.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Content<wbr>Hash<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1188,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenthash_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1232,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_hash_python" style="color: inherit; text-decoration: inherit;">content_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#contenthashresponse">Content<wbr>Hash<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The content hash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

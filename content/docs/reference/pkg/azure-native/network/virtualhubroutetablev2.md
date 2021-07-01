@@ -481,7 +481,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutev2">[]Virtual<wbr>Hub<wbr>Route<wbr>V2</a></span>
+        <span class="property-type"><a href="#virtualhubroutev2">[]Virtual<wbr>Hub<wbr>Route<wbr>V2Args</a></span>
     </dt>
     <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}

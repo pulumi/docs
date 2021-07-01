@@ -401,7 +401,7 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertiesencryption">Properties<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#propertiesencryption">Properties<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption settings for a configuration store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -417,7 +417,7 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisepolicyidentity">Enterprise<wbr>Policy<wbr>Identity</a></span>
+        <span class="property-type"><a href="#enterprisepolicyidentity">Enterprise<wbr>Policy<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the EnterprisePolicy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -433,7 +433,7 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#lockbox_go" style="color: inherit; text-decoration: inherit;">Lockbox</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertieslockbox">Properties<wbr>Lockbox</a></span>
+        <span class="property-type"><a href="#propertieslockbox">Properties<wbr>Lockbox<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings concerning lockbox.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -441,7 +441,7 @@ The EnterprisePolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#networkinjection_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Injection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertiesnetworkinjection">Properties<wbr>Network<wbr>Injection</a></span>
+        <span class="property-type"><a href="#propertiesnetworkinjection">Properties<wbr>Network<wbr>Injection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings concerning network injection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -788,7 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1146,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1186,7 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyproperties">Key<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyproperties">Key<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1206,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyproperties">Key<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyproperties">Key<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1228,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1268,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keypropertiesresponse">Key<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keypropertiesresponse">Key<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1288,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keypropertiesresponse">Key<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keypropertiesresponse">Key<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Identity of the secret that includes name and version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1302,7 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Key vault properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1342,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Key vault properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1362,7 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Key vault properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1434,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworks_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpropertieslist">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Properties<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkpropertieslist">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Properties<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}Network injection configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1458,7 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworks_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpropertieslist">Virtual<wbr>Network<wbr>Properties<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkpropertieslist">Virtual<wbr>Network<wbr>Properties<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}Network injection configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1470,7 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_networks_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpropertieslist">Virtual<wbr>Network<wbr>Properties<wbr>List<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkpropertieslist">Virtual<wbr>Network<wbr>Properties<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}Network injection configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1484,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Key vault properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1524,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Key vault properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1544,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Key vault properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1616,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworks_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpropertieslistresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Properties<wbr>List<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkpropertieslistresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Properties<wbr>List<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network injection configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1640,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworks_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpropertieslistresponse">Virtual<wbr>Network<wbr>Properties<wbr>List<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkpropertieslistresponse">Virtual<wbr>Network<wbr>Properties<wbr>List<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network injection configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1652,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_networks_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpropertieslistresponse">Virtual<wbr>Network<wbr>Properties<wbr>List<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkpropertieslistresponse">Virtual<wbr>Network<wbr>Properties<wbr>List<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network injection configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2040,7 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Subnet<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Subnet<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of a subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2080,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetproperties">Subnet<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetproperties">Subnet<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of a subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2100,7 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetproperties">Subnet<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetproperties">Subnet<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of a subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2122,7 +2122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkproperties">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Properties&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of virtual networks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2162,7 +2162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkproperties">Virtual<wbr>Network<wbr>Properties<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkproperties">Virtual<wbr>Network<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}Array of virtual networks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2182,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkproperties">Sequence[Virtual<wbr>Network<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnetworkproperties">Sequence[Virtual<wbr>Network<wbr>Properties]</a></span>
     </dt>
     <dd>{{% md %}}Array of virtual networks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2204,7 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of virtual networks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2244,7 +2244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpropertiesresponse">Virtual<wbr>Network<wbr>Properties<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkpropertiesresponse">Virtual<wbr>Network<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of virtual networks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2264,7 +2264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkpropertiesresponse">Sequence[Virtual<wbr>Network<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnetworkpropertiesresponse">Sequence[Virtual<wbr>Network<wbr>Properties<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of virtual networks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2286,7 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Subnet<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Power<wbr>Platform.<wbr>Inputs.<wbr>Subnet<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of a subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2326,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetpropertiesresponse">Subnet<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetpropertiesresponse">Subnet<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of a subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2346,7 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetpropertiesresponse">Subnet<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetpropertiesresponse">Subnet<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of a subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}

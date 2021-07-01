@@ -373,7 +373,7 @@ The WCFRelay resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#relaytype_go" style="color: inherit; text-decoration: inherit;">Relay<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relaytype">Relaytype</a></span>
+        <span class="property-type"><a href="#relaytype">string</a></span>
     </dt>
     <dd>{{% md %}}WCF relay type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

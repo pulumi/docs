@@ -966,7 +966,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringsku">Peering<wbr>Sku</a></span>
+        <span class="property-type"><a href="#peeringsku">Peering<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU that defines the tier and kind of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -974,7 +974,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#direct_go" style="color: inherit; text-decoration: inherit;">Direct</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringpropertiesdirect">Peering<wbr>Properties<wbr>Direct</a></span>
+        <span class="property-type"><a href="#peeringpropertiesdirect">Peering<wbr>Properties<wbr>Direct<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -982,7 +982,7 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#exchange_go" style="color: inherit; text-decoration: inherit;">Exchange</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringpropertiesexchange">Peering<wbr>Properties<wbr>Exchange</a></span>
+        <span class="property-type"><a href="#peeringpropertiesexchange">Peering<wbr>Properties<wbr>Exchange<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2025,7 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsession">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Bgp<wbr>Session<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsession">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Bgp<wbr>Session</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2129,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2181,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2267,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2435,7 +2435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2519,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2611,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsession">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Bgp<wbr>Session<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsession">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Bgp<wbr>Session</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2667,7 +2667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2695,7 +2695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsession">Bgp<wbr>Session</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2741,7 +2741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2829,7 +2829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsession_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2873,7 +2873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2955,7 +2955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Direct<wbr>Connection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#directconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Direct<wbr>Connection&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2971,7 +2971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3011,7 +3011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnection">Direct<wbr>Connection<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#directconnection">Direct<wbr>Connection[]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3027,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3039,7 +3039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnection">Sequence[Direct<wbr>Connection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#directconnection">Sequence[Direct<wbr>Connection]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3055,7 +3055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3077,7 +3077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Direct<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#directconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Direct<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3093,7 +3093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3149,7 +3149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnectionresponse">Direct<wbr>Connection<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#directconnectionresponse">Direct<wbr>Connection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3165,7 +3165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3185,7 +3185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directconnectionresponse">Sequence[Direct<wbr>Connection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#directconnectionresponse">Sequence[Direct<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3201,7 +3201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3215,7 +3215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Exchange<wbr>Connection<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#exchangeconnection">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Exchange<wbr>Connection&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3223,7 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3255,7 +3255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnection">Exchange<wbr>Connection<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#exchangeconnection">Exchange<wbr>Connection[]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3263,7 +3263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3275,7 +3275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnection">Sequence[Exchange<wbr>Connection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#exchangeconnection">Sequence[Exchange<wbr>Connection]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3283,7 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3297,7 +3297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Exchange<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#exchangeconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Exchange<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3305,7 +3305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Peering.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3337,7 +3337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnectionresponse">Exchange<wbr>Connection<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#exchangeconnectionresponse">Exchange<wbr>Connection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3345,7 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3357,7 +3357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangeconnectionresponse">Sequence[Exchange<wbr>Connection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#exchangeconnectionresponse">Sequence[Exchange<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3365,7 +3365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -420,7 +420,7 @@ The RegistrationDefinition resource accepts the following [input]({{< relref "/d
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plan">Plan</a></span>
+        <span class="property-type"><a href="#plan">Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plan details for the managed services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -428,7 +428,7 @@ The RegistrationDefinition resource accepts the following [input]({{< relref "/d
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationdefinitionproperties">Registration<wbr>Definition<wbr>Properties</a></span>
+        <span class="property-type"><a href="#registrationdefinitionproperties">Registration<wbr>Definition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of a registration definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_csharp" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorization">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Authorization<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#authorization">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Authorization&gt;</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1307,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_nodejs" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorization">Authorization<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#authorization">Authorization[]</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1343,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorization">Sequence[Authorization<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authorization">Sequence[Authorization]</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1381,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_csharp" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#authorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Authorization<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1485,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_nodejs" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1537,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Sequence[Authorization<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Sequence[Authorization<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-required"
             title="Required">

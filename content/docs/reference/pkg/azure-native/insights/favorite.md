@@ -450,7 +450,7 @@ The Favorite resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#favoritetype_go" style="color: inherit; text-decoration: inherit;">Favorite<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#favoritetype">Favorite<wbr>Type</a></span>
+        <span class="property-type"><a href="#favoritetype">string</a></span>
     </dt>
     <dd>{{% md %}}Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

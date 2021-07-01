@@ -366,7 +366,7 @@ The MoveCollection resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the MSI properties of the Move Collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -390,7 +390,7 @@ The MoveCollection resource accepts the following [input]({{< relref "/docs/intr
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#movecollectionproperties">Move<wbr>Collection<wbr>Properties</a></span>
+        <span class="property-type"><a href="#movecollectionproperties">Move<wbr>Collection<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move collection properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -987,7 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#movecollectionpropertiesresponseerrors">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Collection<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args</a></span>
+        <span class="property-type"><a href="#movecollectionpropertiesresponseerrors">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Collection<wbr>Properties<wbr>Response<wbr>Errors</a></span>
     </dt>
     <dd>{{% md %}}Defines the move collection errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1059,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#movecollectionpropertiesresponseerrors">Move<wbr>Collection<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args</a></span>
+        <span class="property-type"><a href="#movecollectionpropertiesresponseerrors">Move<wbr>Collection<wbr>Properties<wbr>Response<wbr>Errors</a></span>
     </dt>
     <dd>{{% md %}}Defines the move collection errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1095,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#movecollectionpropertiesresponseerrors">Move<wbr>Collection<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args</a></span>
+        <span class="property-type"><a href="#movecollectionpropertiesresponseerrors">Move<wbr>Collection<wbr>Properties<wbr>Response<wbr>Errors</a></span>
     </dt>
     <dd>{{% md %}}Defines the move collection errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1133,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1157,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1169,7 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1191,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1263,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1299,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Sequence[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Sequence[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">

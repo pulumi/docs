@@ -549,7 +549,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of ExpressRoutePort, if configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -557,7 +557,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#links_go" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelink">[]Express<wbr>Route<wbr>Link</a></span>
+        <span class="property-type"><a href="#expressroutelink">[]Express<wbr>Route<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of physical links of the ExpressRoutePort resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1164,7 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#macsecconfig_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Sec<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelinkmacsecconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutelinkmacsecconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}MacSec configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1236,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#macsecconfig_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Sec<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelinkmacsecconfig">Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutelinkmacsecconfig">Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}MacSec configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1272,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mac_sec_config_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>sec_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelinkmacsecconfig">Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutelinkmacsecconfig">Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}MacSec configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1744,7 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#macsecconfig_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Sec<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelinkmacsecconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutelinkmacsecconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}MacSec configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1928,7 +1928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#macsecconfig_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Sec<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelinkmacsecconfigresponse">Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutelinkmacsecconfigresponse">Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}MacSec configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2020,7 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mac_sec_config_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>sec_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutelinkmacsecconfigresponse">Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutelinkmacsecconfigresponse">Express<wbr>Route<wbr>Link<wbr>Mac<wbr>Sec<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}MacSec configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2088,7 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2174,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2246,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2282,7 +2282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}

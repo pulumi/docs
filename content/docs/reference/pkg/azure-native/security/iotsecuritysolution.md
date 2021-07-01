@@ -526,7 +526,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#additionalworkspaces_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Workspaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalworkspacesproperties">[]Additional<wbr>Workspaces<wbr>Properties</a></span>
+        <span class="property-type"><a href="#additionalworkspacesproperties">[]Additional<wbr>Workspaces<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of additional workspaces{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +558,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#recommendationsconfiguration_go" style="color: inherit; text-decoration: inherit;">Recommendations<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendationconfigurationproperties">[]Recommendation<wbr>Configuration<wbr>Properties</a></span>
+        <span class="property-type"><a href="#recommendationconfigurationproperties">[]Recommendation<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of the configuration status for each recommendation type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +598,7 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 <a href="#userdefinedresources_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userdefinedresourcesproperties">User<wbr>Defined<wbr>Resources<wbr>Properties</a></span>
+        <span class="property-type"><a href="#userdefinedresourcesproperties">User<wbr>Defined<wbr>Resources<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the IoT Security solution's user defined resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

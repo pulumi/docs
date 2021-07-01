@@ -382,7 +382,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#contactinformation_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details</a></span>
+        <span class="property-type"><a href="#contactdetails">Contact<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The contact details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -414,7 +414,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#shippingaddress_go" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#address">Address</a></span>
+        <span class="property-type"><a href="#address">Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The shipping address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1598,7 +1598,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#trackinginformation_csharp" style="color: inherit; text-decoration: inherit;">Tracking<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Tracking<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trackinginforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Tracking<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Tracking information related to the state in the ordering flow{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1688,7 +1688,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#trackinginformation_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">Tracking<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trackinginforesponse">Tracking<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Tracking information related to the state in the ordering flow{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1733,7 +1733,7 @@ by the already existing properties{{% /md %}}</dd><dt class="property-required"
 <a href="#tracking_information_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trackinginforesponse">Tracking<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#trackinginforesponse">Tracking<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Tracking information related to the state in the ordering flow{{% /md %}}</dd><dt class="property-required"
             title="Required">

@@ -504,7 +504,7 @@ The Query resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#related_go" style="color: inherit; text-decoration: inherit;">Related</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loganalyticsquerypackquerypropertiesrelated">Log<wbr>Analytics<wbr>Query<wbr>Pack<wbr>Query<wbr>Properties<wbr>Related</a></span>
+        <span class="property-type"><a href="#loganalyticsquerypackquerypropertiesrelated">Log<wbr>Analytics<wbr>Query<wbr>Pack<wbr>Query<wbr>Properties<wbr>Related<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The related metadata items for the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

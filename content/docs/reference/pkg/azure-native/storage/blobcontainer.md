@@ -492,7 +492,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#publicaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicaccess">Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#publicaccess">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether data in the container may be accessed publicly and the level of access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1187,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatehistory_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#updatehistorypropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Update<wbr>History<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#updatehistorypropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Update<wbr>History<wbr>Property<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1275,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatehistory_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#updatehistorypropertyresponse">Update<wbr>History<wbr>Property<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#updatehistorypropertyresponse">Update<wbr>History<wbr>Property<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1319,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_history_python" style="color: inherit; text-decoration: inherit;">update_<wbr>history</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#updatehistorypropertyresponse">Sequence[Update<wbr>History<wbr>Property<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#updatehistorypropertyresponse">Sequence[Update<wbr>History<wbr>Property<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1357,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tagpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Property<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1397,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagpropertyresponse">Tag<wbr>Property<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#tagpropertyresponse">Tag<wbr>Property<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1417,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagpropertyresponse">Sequence[Tag<wbr>Property<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tagpropertyresponse">Sequence[Tag<wbr>Property<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}

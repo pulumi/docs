@@ -405,7 +405,7 @@ The HyperVCollector resource accepts the following [input]({{< relref "/docs/int
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorproperties">Collector<wbr>Properties</a></span>
+        <span class="property-type"><a href="#collectorproperties">Collector<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -636,7 +636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spndetails_csharp" style="color: inherit; text-decoration: inherit;">Spn<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorbodyagentspnproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#collectorbodyagentspnproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -660,7 +660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spndetails_nodejs" style="color: inherit; text-decoration: inherit;">spn<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorbodyagentspnproperties">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#collectorbodyagentspnproperties">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -672,7 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spn_details_python" style="color: inherit; text-decoration: inherit;">spn_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorbodyagentspnproperties">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#collectorbodyagentspnproperties">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -710,7 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spndetails_csharp" style="color: inherit; text-decoration: inherit;">Spn<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -782,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spndetails_nodejs" style="color: inherit; text-decoration: inherit;">spn<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -818,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spn_details_python" style="color: inherit; text-decoration: inherit;">spn_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1188,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentproperties_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectoragentproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Collector<wbr>Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#collectoragentproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Collector<wbr>Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1228,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentproperties_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectoragentproperties">Collector<wbr>Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#collectoragentproperties">Collector<wbr>Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1248,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_properties_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectoragentproperties">Collector<wbr>Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#collectoragentproperties">Collector<wbr>Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1286,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentproperties_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectoragentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Collector<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#collectoragentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Collector<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1358,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentproperties_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectoragentpropertiesresponse">Collector<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#collectoragentpropertiesresponse">Collector<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1394,7 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_properties_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectoragentpropertiesresponse">Collector<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#collectoragentpropertiesresponse">Collector<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

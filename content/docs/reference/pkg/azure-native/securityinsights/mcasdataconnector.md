@@ -451,7 +451,7 @@ The MCASDataConnector resource accepts the following [input]({{< relref "/docs/i
 <a href="#datatypes_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mcasdataconnectordatatypes">MCASData<wbr>Connector<wbr>Data<wbr>Types</a></span>
+        <span class="property-type"><a href="#mcasdataconnectordatatypes">MCASData<wbr>Connector<wbr>Data<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The available data types for the connector.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -840,7 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alerts_csharp" style="color: inherit; text-decoration: inherit;">Alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataconnectordatatypecommon">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataconnectordatatypecommon">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common</a></span>
     </dt>
     <dd>{{% md %}}Alerts data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -848,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discoverylogs_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataconnectordatatypecommon">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataconnectordatatypecommon">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common</a></span>
     </dt>
     <dd>{{% md %}}Discovery log data type connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -880,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alerts_nodejs" style="color: inherit; text-decoration: inherit;">alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataconnectordatatypecommon">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataconnectordatatypecommon">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common</a></span>
     </dt>
     <dd>{{% md %}}Alerts data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -888,7 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discoverylogs_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataconnectordatatypecommon">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataconnectordatatypecommon">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common</a></span>
     </dt>
     <dd>{{% md %}}Discovery log data type connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -900,7 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alerts_python" style="color: inherit; text-decoration: inherit;">alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataconnectordatatypecommon">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataconnectordatatypecommon">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common</a></span>
     </dt>
     <dd>{{% md %}}Alerts data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -908,7 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discovery_logs_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataconnectordatatypecommon">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataconnectordatatypecommon">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common</a></span>
     </dt>
     <dd>{{% md %}}Discovery log data type connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -922,7 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alerts_csharp" style="color: inherit; text-decoration: inherit;">Alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataconnectordatatypecommonresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataconnectordatatypecommonresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Alerts data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discoverylogs_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataconnectordatatypecommonresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataconnectordatatypecommonresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Discovery log data type connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -962,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alerts_nodejs" style="color: inherit; text-decoration: inherit;">alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataconnectordatatypecommonresponse">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataconnectordatatypecommonresponse">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Alerts data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discoverylogs_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataconnectordatatypecommonresponse">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataconnectordatatypecommonresponse">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Discovery log data type connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -982,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alerts_python" style="color: inherit; text-decoration: inherit;">alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataconnectordatatypecommonresponse">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataconnectordatatypecommonresponse">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Alerts data type connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -990,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discovery_logs_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataconnectordatatypecommonresponse">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataconnectordatatypecommonresponse">Data<wbr>Connector<wbr>Data<wbr>Type<wbr>Common<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Discovery log data type connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}

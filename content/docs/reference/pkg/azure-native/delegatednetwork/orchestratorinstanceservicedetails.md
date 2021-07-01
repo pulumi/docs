@@ -432,7 +432,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
 <a href="#controllerdetails_go" style="color: inherit; text-decoration: inherit;">Controller<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#controllerdetails">Controller<wbr>Details<wbr>Type</a></span>
+        <span class="property-type"><a href="#controllerdetails">Controller<wbr>Details<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the controller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -472,7 +472,7 @@ The OrchestratorInstanceServiceDetails resource accepts the following [input]({{
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orchestratoridentity">Orchestrator<wbr>Identity</a></span>
+        <span class="property-type"><a href="#orchestratoridentity">Orchestrator<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the orchestrator{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1039,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters{{% /md %}}</dd></dl>
 {{% /choosable %}}

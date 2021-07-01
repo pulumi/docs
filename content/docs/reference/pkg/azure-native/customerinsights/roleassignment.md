@@ -509,7 +509,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#principals_go" style="color: inherit; text-decoration: inherit;">Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentprincipal">[]Assignment<wbr>Principal</a></span>
+        <span class="property-type"><a href="#assignmentprincipal">[]Assignment<wbr>Principal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The principals being assigned to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -541,7 +541,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#conflationpolicies_go" style="color: inherit; text-decoration: inherit;">Conflation<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -549,7 +549,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#connectors_go" style="color: inherit; text-decoration: inherit;">Connectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connectors set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -573,7 +573,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#interactions_go" style="color: inherit; text-decoration: inherit;">Interactions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Interactions set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -581,7 +581,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kpis_go" style="color: inherit; text-decoration: inherit;">Kpis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kpis set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -589,7 +589,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#links_go" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Links set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -597,7 +597,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#profiles_go" style="color: inherit; text-decoration: inherit;">Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profiles set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -605,7 +605,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#relationshiplinks_go" style="color: inherit; text-decoration: inherit;">Relationship<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationship links.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -613,7 +613,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#relationships_go" style="color: inherit; text-decoration: inherit;">Relationships</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the relationships.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +621,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#roleassignments_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Assignments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -629,7 +629,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#saspolicies_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sas Policies set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -637,7 +637,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#segments_go" style="color: inherit; text-decoration: inherit;">Segments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Role assignments set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -645,7 +645,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#views_go" style="color: inherit; text-decoration: inherit;">Views</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Views set for the assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -653,7 +653,7 @@ The RoleAssignment resource accepts the following [input]({{< relref "/docs/intr
 <a href="#widgettypes_go" style="color: inherit; text-decoration: inherit;">Widget<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description</a></span>
+        <span class="property-type"><a href="#resourcesetdescription">Resource<wbr>Set<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widget types set for the assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}

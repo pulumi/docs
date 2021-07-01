@@ -424,7 +424,7 @@ The NetworkGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#groupmembers_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmembersitem">[]Group<wbr>Members<wbr>Item</a></span>
+        <span class="property-type"><a href="#groupmembersitem">[]Group<wbr>Members<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Group members of network group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

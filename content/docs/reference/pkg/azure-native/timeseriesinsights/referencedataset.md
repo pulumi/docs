@@ -392,7 +392,7 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
 <a href="#keyproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referencedatasetkeyproperty">[]Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property</a></span>
+        <span class="property-type"><a href="#referencedatasetkeyproperty">[]Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of key properties for the reference data set.{{% /md %}}</dd><dt class="property-required"
             title="Required">

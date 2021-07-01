@@ -400,7 +400,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsettings">[]Log<wbr>Settings</a></span>
+        <span class="property-type"><a href="#logsettings">[]Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -705,7 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad<wbr>Iam.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad<wbr>Iam.<wbr>Inputs.<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -761,7 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicy">Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicy">Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -789,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicy">Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicy">Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -819,7 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad<wbr>Iam.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad<wbr>Iam.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -903,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -495,7 +495,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentproperties">Assessment<wbr>Properties</a></span>
+        <span class="property-type"><a href="#assessmentproperties">Assessment<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the assessment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -886,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuptime_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptime">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Vm<wbr>Uptime<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmuptime">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Vm<wbr>Uptime</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1150,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuptime_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptime">Vm<wbr>Uptime<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmuptime">Vm<wbr>Uptime</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1282,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_uptime_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptime">Vm<wbr>Uptime<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmuptime">Vm<wbr>Uptime</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1528,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuptime_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Vm<wbr>Uptime<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmuptimeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Vm<wbr>Uptime<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2016,7 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuptime_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptimeresponse">Vm<wbr>Uptime<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmuptimeresponse">Vm<wbr>Uptime<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2260,7 +2260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_uptime_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptimeresponse">Vm<wbr>Uptime<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmuptimeresponse">Vm<wbr>Uptime<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}

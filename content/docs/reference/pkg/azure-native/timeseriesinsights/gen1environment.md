@@ -409,7 +409,7 @@ The Gen1Environment resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -433,7 +433,7 @@ The Gen1Environment resource accepts the following [input]({{< relref "/docs/int
 <a href="#partitionkeyproperties_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesidproperty">[]Time<wbr>Series<wbr>Id<wbr>Property</a></span>
+        <span class="property-type"><a href="#timeseriesidproperty">[]Time<wbr>Series<wbr>Id<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_csharp" style="color: inherit; text-decoration: inherit;">Ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressenvironmentstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Ingress<wbr>Environment<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ingressenvironmentstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Ingress<wbr>Environment<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that represents the status of ingress on an environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -978,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warmstorage_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#warmstorageenvironmentstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Warm<wbr>Storage<wbr>Environment<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#warmstorageenvironmentstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Warm<wbr>Storage<wbr>Environment<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that represents the status of warm storage on an environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1010,7 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_nodejs" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressenvironmentstatusresponse">Ingress<wbr>Environment<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ingressenvironmentstatusresponse">Ingress<wbr>Environment<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that represents the status of ingress on an environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1018,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warmstorage_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#warmstorageenvironmentstatusresponse">Warm<wbr>Storage<wbr>Environment<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#warmstorageenvironmentstatusresponse">Warm<wbr>Storage<wbr>Environment<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that represents the status of warm storage on an environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1030,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressenvironmentstatusresponse">Ingress<wbr>Environment<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ingressenvironmentstatusresponse">Ingress<wbr>Environment<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that represents the status of ingress on an environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1038,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warm_storage_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#warmstorageenvironmentstatusresponse">Warm<wbr>Storage<wbr>Environment<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#warmstorageenvironmentstatusresponse">Warm<wbr>Storage<wbr>Environment<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that represents the status of warm storage on an environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1052,7 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statedetails_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentstatedetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Environment<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentstatedetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Environment<wbr>State<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that contains the details about an environment's state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1092,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statedetails_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentstatedetailsresponse">Environment<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentstatedetailsresponse">Environment<wbr>State<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that contains the details about an environment's state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1112,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_details_python" style="color: inherit; text-decoration: inherit;">state_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentstatedetailsresponse">Environment<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#environmentstatedetailsresponse">Environment<wbr>State<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that contains the details about an environment's state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

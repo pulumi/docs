@@ -407,7 +407,7 @@ The PeerAsn resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#peercontactdetail_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Contact<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contactdetail">[]Contact<wbr>Detail</a></span>
+        <span class="property-type"><a href="#contactdetail">[]Contact<wbr>Detail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The contact details of the peer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

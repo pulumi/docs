@@ -1822,7 +1822,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageversionstorageprofile">Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#galleryimageversionstorageprofile">Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1846,7 +1846,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#publishingprofile_go" style="color: inherit; text-decoration: inherit;">Publishing<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageversionpublishingprofile">Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile</a></span>
+        <span class="property-type"><a href="#galleryimageversionpublishingprofile">Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2361,7 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryption">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskimageencryption">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2369,7 +2369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskimageencryption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2401,7 +2401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryption">Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datadiskimageencryption">Data<wbr>Disk<wbr>Image<wbr>Encryption[]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2409,7 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryption">OSDisk<wbr>Image<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskimageencryption">OSDisk<wbr>Image<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2421,7 +2421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryption">Sequence[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datadiskimageencryption">Sequence[Data<wbr>Disk<wbr>Image<wbr>Encryption]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2429,7 +2429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryption">OSDisk<wbr>Image<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskimageencryption">OSDisk<wbr>Image<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2443,7 +2443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2451,7 +2451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>OSDisk<wbr>Image<wbr>Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2483,7 +2483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryptionresponse">Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2491,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2503,7 +2503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryptionresponse">Sequence[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">Sequence[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2511,7 +2511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2705,7 +2705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2725,7 +2725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostcaching">Host<wbr>Caching</a></span>
+        <span class="property-type"><a href="#hostcaching">string</a></span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2761,7 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2789,7 +2789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2827,7 +2827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2899,7 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2935,7 +2935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2981,7 +2981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetregions_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetregion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Target<wbr>Region&gt;</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3069,7 +3069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetregions_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregion">Target<wbr>Region<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#targetregion">Target<wbr>Region[]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3113,7 +3113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregion">Sequence[Target<wbr>Region<wbr>Args]</a></span>
+        <span class="property-type"><a href="#targetregion">Sequence[Target<wbr>Region]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3167,7 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetregions_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#targetregionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Target<wbr>Region<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3271,7 +3271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetregions_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregionresponse">Target<wbr>Region<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#targetregionresponse">Target<wbr>Region<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3323,7 +3323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregionresponse">Sequence[Target<wbr>Region<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#targetregionresponse">Sequence[Target<wbr>Region<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3337,7 +3337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimage">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimage">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Data<wbr>Disk<wbr>Image&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3345,7 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>OSDisk<wbr>Image<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryosdiskimage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>OSDisk<wbr>Image</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3353,7 +3353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3393,7 +3393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimage">Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimage">Gallery<wbr>Data<wbr>Disk<wbr>Image[]</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3401,7 +3401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimage">Gallery<wbr>OSDisk<wbr>Image<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryosdiskimage">Gallery<wbr>OSDisk<wbr>Image</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3409,7 +3409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3421,7 +3421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimage">Sequence[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimage">Sequence[Gallery<wbr>Data<wbr>Disk<wbr>Image]</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3429,7 +3429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimage">Gallery<wbr>OSDisk<wbr>Image<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryosdiskimage">Gallery<wbr>OSDisk<wbr>Image</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3437,7 +3437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3451,7 +3451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3459,7 +3459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>OSDisk<wbr>Image<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryosdiskimageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>OSDisk<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3467,7 +3467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3507,7 +3507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimageresponse">Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimageresponse">Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3515,7 +3515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3523,7 +3523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3535,7 +3535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimageresponse">Sequence[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimageresponse">Sequence[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3543,7 +3543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3551,7 +3551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3573,7 +3573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3585,7 +3585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostcaching">Host<wbr>Caching</a></span>
+        <span class="property-type"><a href="#hostcaching">string</a></span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3613,7 +3613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3633,7 +3633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3663,7 +3663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3719,7 +3719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3747,7 +3747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4045,7 +4045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionalreplicationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Regional<wbr>Replication<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4085,7 +4085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionalreplicationstatusresponse">Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">Regional<wbr>Replication<wbr>Status<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4105,7 +4105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionalreplicationstatusresponse">Sequence[Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">Sequence[Regional<wbr>Replication<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4157,7 +4157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimages">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionimages">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Images</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4229,7 +4229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimages">Encryption<wbr>Images<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionimages">Encryption<wbr>Images</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4265,7 +4265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimages">Encryption<wbr>Images<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionimages">Encryption<wbr>Images</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4303,7 +4303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimagesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Images<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4375,7 +4375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4411,7 +4411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

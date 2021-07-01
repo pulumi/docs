@@ -361,7 +361,7 @@ The B2CTenant resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createtenantrequestbodyproperties">Create<wbr>Tenant<wbr>Request<wbr>Body<wbr>Properties</a></span>
+        <span class="property-type"><a href="#createtenantrequestbodyproperties">Create<wbr>Tenant<wbr>Request<wbr>Body<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -377,7 +377,7 @@ The B2CTenant resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2cresourcesku">B2CResource<wbr>SKU</a></span>
+        <span class="property-type"><a href="#b2cresourcesku">B2CResource<wbr>SKUArgs</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -732,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2cresourceskuname">B2CResource<wbr>SKUName</a></span>
+        <span class="property-type"><a href="#b2cresourceskuname">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the SKU for the tenant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -740,7 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2cresourceskutier">B2CResource<wbr>SKUTier</a></span>
+        <span class="property-type"><a href="#b2cresourceskutier">string</a></span>
     </dt>
     <dd>{{% md %}}The tier of the tenant.{{% /md %}}</dd></dl>
 {{% /choosable %}}

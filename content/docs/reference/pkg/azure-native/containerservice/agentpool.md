@@ -2167,7 +2167,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#kubeletconfig_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config</a></span>
+        <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2183,7 +2183,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#linuxosconfig_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>OSConfig</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosconfig">Linux<wbr>OSConfig</a></span>
+        <span class="property-type"><a href="#linuxosconfig">Linux<wbr>OSConfig<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2343,7 +2343,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#upgradesettings_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpoolupgradesettings">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
+        <span class="property-type"><a href="#agentpoolupgradesettings">Agent<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for upgrading the agentpool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4098,7 +4098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4170,7 +4170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfig">Sysctl<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfig">Sysctl<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4206,7 +4206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfig">Sysctl<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfig">Sysctl<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4244,7 +4244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4316,7 +4316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4352,7 +4352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -318,7 +318,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resourcesets_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceset">Resource<wbr>Set</a></span>
+        <span class="property-type"><a href="#resourceset">Resource<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of a VM and the setting id it was created for{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

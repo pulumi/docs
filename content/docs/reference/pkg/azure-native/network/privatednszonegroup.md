@@ -378,7 +378,7 @@ The PrivateDnsZoneGroup resource accepts the following [input]({{< relref "/docs
 <a href="#privatednszoneconfigs_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatednszoneconfig">[]Private<wbr>Dns<wbr>Zone<wbr>Config</a></span>
+        <span class="property-type"><a href="#privatednszoneconfig">[]Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of private dns zone configurations of the private dns zone group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -715,7 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recordsets_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordsetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Record<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recordsetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Record<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of information regarding a recordSet, holding information to identify private resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -771,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recordsets_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordsetresponse">Record<wbr>Set<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recordsetresponse">Record<wbr>Set<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of information regarding a recordSet, holding information to identify private resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -799,7 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#record_sets_python" style="color: inherit; text-decoration: inherit;">record_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordsetresponse">Sequence[Record<wbr>Set<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recordsetresponse">Sequence[Record<wbr>Set<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of information regarding a recordSet, holding information to identify private resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

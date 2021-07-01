@@ -557,7 +557,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#apiserverprofile_go" style="color: inherit; text-decoration: inherit;">Apiserver<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiserverprofile">APIServer<wbr>Profile</a></span>
+        <span class="property-type"><a href="#apiserverprofile">APIServer<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster API server profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -565,7 +565,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#clusterprofile_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprofile">Cluster<wbr>Profile</a></span>
+        <span class="property-type"><a href="#clusterprofile">Cluster<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -573,7 +573,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#consoleprofile_go" style="color: inherit; text-decoration: inherit;">Console<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consoleprofile">Console<wbr>Profile</a></span>
+        <span class="property-type"><a href="#consoleprofile">Console<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The console profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -581,7 +581,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#ingressprofiles_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ingressprofile">[]Ingress<wbr>Profile</a></span>
+        <span class="property-type"><a href="#ingressprofile">[]Ingress<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster ingress profiles.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -597,7 +597,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#masterprofile_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#masterprofile">Master<wbr>Profile</a></span>
+        <span class="property-type"><a href="#masterprofile">Master<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster master profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -605,7 +605,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster network profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -629,7 +629,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#serviceprincipalprofile_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprincipalprofile">Service<wbr>Principal<wbr>Profile</a></span>
+        <span class="property-type"><a href="#serviceprincipalprofile">Service<wbr>Principal<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster service principal profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -645,7 +645,7 @@ The OpenShiftCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#workerprofiles_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workerprofile">[]Worker<wbr>Profile</a></span>
+        <span class="property-type"><a href="#workerprofile">[]Worker<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster worker profiles.{{% /md %}}</dd></dl>
 {{% /choosable %}}

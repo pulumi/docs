@@ -379,7 +379,7 @@ The ReplicationRecoveryPlan resource accepts the following [input]({{< relref "/
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createrecoveryplaninputproperties">Create<wbr>Recovery<wbr>Plan<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#createrecoveryplaninputproperties">Create<wbr>Recovery<wbr>Plan<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Recovery plan creation properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -650,7 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroup">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplangroup">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Group&gt;</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -682,7 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2ainput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>A2AInput<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplana2ainput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>A2AInput&gt;</a></span>
     </dt>
     <dd>{{% md %}}The provider specific input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -738,7 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroup">Recovery<wbr>Plan<wbr>Group<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recoveryplangroup">Recovery<wbr>Plan<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -770,7 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2ainput">Recovery<wbr>Plan<wbr>A2AInput<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recoveryplana2ainput">Recovery<wbr>Plan<wbr>A2AInput[]</a></span>
     </dt>
     <dd>{{% md %}}The provider specific input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -782,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroup">Sequence[Recovery<wbr>Plan<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplangroup">Sequence[Recovery<wbr>Plan<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -814,7 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_input_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2ainput">Sequence[Recovery<wbr>Plan<wbr>A2AInput<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplana2ainput">Sequence[Recovery<wbr>Plan<wbr>A2AInput]</a></span>
     </dt>
     <dd>{{% md %}}The provider specific input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1284,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanmanualactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanscriptactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response</a> | <a href="#recoveryplanmanualactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response</a> | <a href="#recoveryplanscriptactiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1356,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanmanualactiondetailsresponse">Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanscriptactiondetailsresponse">Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response</a> | <a href="#recoveryplanmanualactiondetailsresponse">Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response</a> | <a href="#recoveryplanscriptactiondetailsresponse">Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1392,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_details_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanmanualactiondetailsresponse">Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanscriptactiondetailsresponse">Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response</a> | <a href="#recoveryplanmanualactiondetailsresponse">Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response</a> | <a href="#recoveryplanscriptactiondetailsresponse">Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1544,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endgroupactions_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1552,7 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationprotecteditems_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Protected<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditem">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditem">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Protected<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1560,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startgroupactions_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1616,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endgroupactions_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">Recovery<wbr>Plan<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">Recovery<wbr>Plan<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1624,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationprotecteditems_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Protected<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditem">Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditem">Recovery<wbr>Plan<wbr>Protected<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1632,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startgroupactions_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">Recovery<wbr>Plan<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">Recovery<wbr>Plan<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1652,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_group_actions_python" style="color: inherit; text-decoration: inherit;">end_<wbr>group_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">Sequence[Recovery<wbr>Plan<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1660,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_protected_items_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>protected_<wbr>items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditem">Sequence[Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditem">Sequence[Recovery<wbr>Plan<wbr>Protected<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1668,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_group_actions_python" style="color: inherit; text-decoration: inherit;">start_<wbr>group_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">Sequence[Recovery<wbr>Plan<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1690,7 +1690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endgroupactions_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1698,7 +1698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationprotecteditems_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Protected<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1706,7 +1706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startgroupactions_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Action<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1762,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endgroupactions_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">Recovery<wbr>Plan<wbr>Action<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1770,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationprotecteditems_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Protected<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1778,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startgroupactions_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">Recovery<wbr>Plan<wbr>Action<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1798,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_group_actions_python" style="color: inherit; text-decoration: inherit;">end_<wbr>group_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1806,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_protected_items_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>protected_<wbr>items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">Sequence[Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">Sequence[Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1814,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_group_actions_python" style="color: inherit; text-decoration: inherit;">start_<wbr>group_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1908,7 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2adetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplana2adetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The provider id and provider specific details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1924,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentscenario_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Scenario</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Current<wbr>Scenario<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current scenario details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1964,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#recoveryplangroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Recovery<wbr>Plan<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2172,7 +2172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2adetailsresponse">Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recoveryplana2adetailsresponse">Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The provider id and provider specific details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2188,7 +2188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentscenario_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Scenario</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current scenario details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2228,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroupresponse">Recovery<wbr>Plan<wbr>Group<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#recoveryplangroupresponse">Recovery<wbr>Plan<wbr>Group<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2304,7 +2304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2adetailsresponse">Sequence[Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplana2adetailsresponse">Sequence[Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The provider id and provider specific details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2320,7 +2320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_scenario_python" style="color: inherit; text-decoration: inherit;">current_<wbr>scenario</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current scenario details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2360,7 +2360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroupresponse">Sequence[Recovery<wbr>Plan<wbr>Group<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplangroupresponse">Sequence[Recovery<wbr>Plan<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

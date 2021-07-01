@@ -447,7 +447,7 @@ The PrivateLinkScope resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hybridcomputeprivatelinkscopeproperties">Hybrid<wbr>Compute<wbr>Private<wbr>Link<wbr>Scope<wbr>Properties</a></span>
+        <span class="property-type"><a href="#hybridcomputeprivatelinkscopeproperties">Hybrid<wbr>Compute<wbr>Private<wbr>Link<wbr>Scope<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties that define a Azure Arc PrivateLinkScope resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

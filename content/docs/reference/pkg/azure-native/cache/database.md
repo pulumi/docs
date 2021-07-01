@@ -492,7 +492,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#modules_go" style="color: inherit; text-decoration: inherit;">Modules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#module">[]Module</a></span>
+        <span class="property-type"><a href="#module">[]Module<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional set of redis modules to enable in this database - modules can only be added at creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -500,7 +500,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#persistence_go" style="color: inherit; text-decoration: inherit;">Persistence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistence">Persistence</a></span>
+        <span class="property-type"><a href="#persistence">Persistence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Persistence settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1509,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:cache:Database cache1/db1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1/databases/db1 
+$ pulumi import azure-native:cache:Database cache1/default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1/databases/default 
 ```
 
 

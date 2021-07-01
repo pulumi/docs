@@ -403,7 +403,7 @@ The MHSMPrivateEndpointConnection resource accepts the following [input]({{< rel
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivatelinkserviceconnectionstate">MHSMPrivate<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a></span>
+        <span class="property-type"><a href="#mhsmprivatelinkserviceconnectionstate">MHSMPrivate<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -411,7 +411,7 @@ The MHSMPrivateEndpointConnection resource accepts the following [input]({{< rel
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmsku">Managed<wbr>Hsm<wbr>Sku</a></span>
+        <span class="property-type"><a href="#managedhsmsku">Managed<wbr>Hsm<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -358,7 +358,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
 <a href="#alertnotifications_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontactpropertiesalertnotifications">Security<wbr>Contact<wbr>Properties<wbr>Alert<wbr>Notifications</a></span>
+        <span class="property-type"><a href="#securitycontactpropertiesalertnotifications">Security<wbr>Contact<wbr>Properties<wbr>Alert<wbr>Notifications<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -374,7 +374,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
 <a href="#notificationsbyrole_go" style="color: inherit; text-decoration: inherit;">Notifications<wbr>By<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontactpropertiesnotificationsbyrole">Security<wbr>Contact<wbr>Properties<wbr>Notifications<wbr>By<wbr>Role</a></span>
+        <span class="property-type"><a href="#securitycontactpropertiesnotificationsbyrole">Security<wbr>Contact<wbr>Properties<wbr>Notifications<wbr>By<wbr>Role<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

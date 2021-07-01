@@ -526,7 +526,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#activekey_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyfordiskencryptionset">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionset">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault key which is currently used by this disk encryption set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +550,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsetidentity">Encryption<wbr>Set<wbr>Identity</a></span>
+        <span class="property-type"><a href="#encryptionsetidentity">Encryption<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1173,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1213,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1233,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1255,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1295,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1315,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}

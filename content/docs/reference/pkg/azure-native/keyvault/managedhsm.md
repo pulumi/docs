@@ -420,7 +420,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmproperties">Managed<wbr>Hsm<wbr>Properties</a></span>
+        <span class="property-type"><a href="#managedhsmproperties">Managed<wbr>Hsm<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the managed HSM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -428,7 +428,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmsku">Managed<wbr>Hsm<wbr>Sku</a></span>
+        <span class="property-type"><a href="#managedhsmsku">Managed<wbr>Hsm<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -825,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmiprule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMIPRule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mhsmiprule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMIPRule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -833,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmvirtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMVirtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mhsmvirtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMVirtual<wbr>Network<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -897,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmiprule">MHSMIPRule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#mhsmiprule">MHSMIPRule[]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -905,7 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmvirtualnetworkrule">MHSMVirtual<wbr>Network<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#mhsmvirtualnetworkrule">MHSMVirtual<wbr>Network<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -933,7 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmiprule">Sequence[MHSMIPRule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mhsmiprule">Sequence[MHSMIPRule]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -941,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmvirtualnetworkrule">Sequence[MHSMVirtual<wbr>Network<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mhsmvirtualnetworkrule">Sequence[MHSMVirtual<wbr>Network<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -971,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMIPRule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mhsmipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMIPRule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -979,7 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmvirtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMVirtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mhsmvirtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMVirtual<wbr>Network<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1043,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmipruleresponse">MHSMIPRule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#mhsmipruleresponse">MHSMIPRule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1051,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmvirtualnetworkruleresponse">MHSMVirtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#mhsmvirtualnetworkruleresponse">MHSMVirtual<wbr>Network<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1079,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmipruleresponse">Sequence[MHSMIPRule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mhsmipruleresponse">Sequence[MHSMIPRule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1087,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmvirtualnetworkruleresponse">Sequence[MHSMVirtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mhsmvirtualnetworkruleresponse">Sequence[MHSMVirtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1109,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMPrivate<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mhsmprivateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMPrivate<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMPrivate<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mhsmprivatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMPrivate<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1165,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivateendpointresponse">MHSMPrivate<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mhsmprivateendpointresponse">MHSMPrivate<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1173,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivatelinkserviceconnectionstateresponse">MHSMPrivate<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mhsmprivatelinkserviceconnectionstateresponse">MHSMPrivate<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1193,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivateendpointresponse">MHSMPrivate<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mhsmprivateendpointresponse">MHSMPrivate<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivatelinkserviceconnectionstateresponse">MHSMPrivate<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mhsmprivatelinkserviceconnectionstateresponse">MHSMPrivate<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1511,7 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmnetworkruleset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMNetwork<wbr>Rule<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#mhsmnetworkruleset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMNetwork<wbr>Rule<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1547,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createmode">Create<wbr>Mode</a></span>
+        <span class="property-type"><a href="#createmode">string</a></span>
     </dt>
     <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1647,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmnetworkruleset">MHSMNetwork<wbr>Rule<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#mhsmnetworkruleset">MHSMNetwork<wbr>Rule<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1715,7 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmnetworkruleset">MHSMNetwork<wbr>Rule<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#mhsmnetworkruleset">MHSMNetwork<wbr>Rule<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1761,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivateendpointconnectionitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMPrivate<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mhsmprivateendpointconnectionitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMPrivate<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections associated with the managed hsm pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1825,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmnetworkrulesetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMNetwork<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mhsmnetworkrulesetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMNetwork<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +1977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivateendpointconnectionitemresponse">MHSMPrivate<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#mhsmprivateendpointconnectionitemresponse">MHSMPrivate<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections associated with the managed hsm pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2041,7 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmnetworkrulesetresponse">MHSMNetwork<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mhsmnetworkrulesetresponse">MHSMNetwork<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2085,7 +2085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivateendpointconnectionitemresponse">Sequence[MHSMPrivate<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mhsmprivateendpointconnectionitemresponse">Sequence[MHSMPrivate<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections associated with the managed hsm pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2149,7 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmnetworkrulesetresponse">MHSMNetwork<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mhsmnetworkrulesetresponse">MHSMNetwork<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

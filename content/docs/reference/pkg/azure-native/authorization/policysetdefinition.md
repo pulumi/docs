@@ -672,7 +672,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#policydefinitions_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefinitionreference">[]Policy<wbr>Definition<wbr>Reference</a></span>
+        <span class="property-type"><a href="#policydefinitionreference">[]Policy<wbr>Definition<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of policy definition references.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -704,7 +704,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Parameter<wbr>Definitions<wbr>Value</span>
+        <span class="property-type">map[string]Parameter<wbr>Definitions<wbr>Value<wbr>Args</span>
     </dt>
     <dd>{{% md %}}The policy set definition parameters that can be used in policy definition references.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -712,7 +712,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#policydefinitiongroups_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefinitiongroup">[]Policy<wbr>Definition<wbr>Group</a></span>
+        <span class="property-type"><a href="#policydefinitiongroup">[]Policy<wbr>Definition<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metadata describing groups of policy definition references within the policy set definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1023,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1095,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1131,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvaluemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1315,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1387,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1423,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2109,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Values<wbr>Value<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Values<wbr>Value&gt;</span>
     </dt>
     <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2181,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Values<wbr>Value<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Values<wbr>Value}</span>
     </dt>
     <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2217,7 +2217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Values<wbr>Value<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Values<wbr>Value]</span>
     </dt>
     <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2255,7 +2255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Values<wbr>Value<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Values<wbr>Value<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2327,7 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Values<wbr>Value<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Parameter<wbr>Values<wbr>Value<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2363,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Values<wbr>Value<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Values<wbr>Value<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

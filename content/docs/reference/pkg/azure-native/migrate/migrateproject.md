@@ -372,7 +372,7 @@ The MigrateProject resource accepts the following [input]({{< relref "/docs/intr
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrateprojectproperties">Migrate<wbr>Project<wbr>Properties</a></span>
+        <span class="property-type"><a href="#migrateprojectproperties">Migrate<wbr>Project<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the nested properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -380,7 +380,7 @@ The MigrateProject resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrateprojecttags">Migrate<wbr>Project<wbr>Tags</a></span>
+        <span class="property-type"><a href="#migrateprojecttags">Migrate<wbr>Project<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -839,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Database<wbr>Project<wbr>Summary<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Servers<wbr>Project<wbr>Summary<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Database<wbr>Project<wbr>Summary<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Servers<wbr>Project<wbr>Summary<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Gets the summary of the migrate project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -927,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Database<wbr>Project<wbr>Summary<wbr>Response<wbr>Args | Servers<wbr>Project<wbr>Summary<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Database<wbr>Project<wbr>Summary<wbr>Response | Servers<wbr>Project<wbr>Summary<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Gets the summary of the migrate project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -971,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Union[Database<wbr>Project<wbr>Summary<wbr>Response<wbr>Args, Servers<wbr>Project<wbr>Summary<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Mapping[str, Union[Database<wbr>Project<wbr>Summary<wbr>Response, Servers<wbr>Project<wbr>Summary<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Gets the summary of the migrate project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

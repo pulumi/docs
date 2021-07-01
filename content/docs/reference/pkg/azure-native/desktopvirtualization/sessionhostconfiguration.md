@@ -487,7 +487,7 @@ The SessionHostConfiguration resource accepts the following [input]({{< relref "
 <a href="#domaininfo_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininfoproperties">Domain<wbr>Info<wbr>Properties</a></span>
+        <span class="property-type"><a href="#domaininfoproperties">Domain<wbr>Info<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Domain configurations of session hosts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -495,7 +495,7 @@ The SessionHostConfiguration resource accepts the following [input]({{< relref "
 <a href="#imageinfo_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageinfoproperties">Image<wbr>Info<wbr>Properties</a></span>
+        <span class="property-type"><a href="#imageinfoproperties">Image<wbr>Info<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Image configurations of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainadmin_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Credential<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The domain admin credentials.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localadmin_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Credential<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The local admin credentials.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -878,7 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainadmin_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialproperties">Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialproperties">Key<wbr>Vault<wbr>Credential<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The domain admin credentials.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -886,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localadmin_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialproperties">Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialproperties">Key<wbr>Vault<wbr>Credential<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The local admin credentials.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -898,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_admin_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialproperties">Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialproperties">Key<wbr>Vault<wbr>Credential<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The domain admin credentials.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_admin_python" style="color: inherit; text-decoration: inherit;">local_<wbr>admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialproperties">Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialproperties">Key<wbr>Vault<wbr>Credential<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The local admin credentials.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -920,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainadmin_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The domain admin credentials.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -928,7 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localadmin_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The local admin credentials.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -960,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainadmin_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialpropertiesresponse">Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialpropertiesresponse">Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The domain admin credentials.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -968,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localadmin_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialpropertiesresponse">Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialpropertiesresponse">Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The local admin credentials.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -980,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_admin_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialpropertiesresponse">Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialpropertiesresponse">Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The domain admin credentials.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -988,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_admin_python" style="color: inherit; text-decoration: inherit;">local_<wbr>admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialpropertiesresponse">Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialpropertiesresponse">Key<wbr>Vault<wbr>Credential<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The local admin credentials.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1002,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Credentials<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Credentials<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Credentials needed to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1074,7 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsproperties">Credentials<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsproperties">Credentials<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Credentials needed to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1110,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsproperties">Credentials<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsproperties">Credentials<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Credentials needed to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Credentials<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Credentials<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials needed to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1220,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialspropertiesresponse">Credentials<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialspropertiesresponse">Credentials<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials needed to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1256,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialspropertiesresponse">Credentials<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialspropertiesresponse">Credentials<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials needed to create the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1328,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#marketplaceinfo_csharp" style="color: inherit; text-decoration: inherit;">Market<wbr>Place<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#marketplaceinfoproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Market<wbr>Place<wbr>Info<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#marketplaceinfoproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Market<wbr>Place<wbr>Info<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The values to uniquely identify a gallery image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1400,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#marketplaceinfo_nodejs" style="color: inherit; text-decoration: inherit;">market<wbr>Place<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#marketplaceinfoproperties">Market<wbr>Place<wbr>Info<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#marketplaceinfoproperties">Market<wbr>Place<wbr>Info<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The values to uniquely identify a gallery image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1436,7 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#market_place_info_python" style="color: inherit; text-decoration: inherit;">market_<wbr>place_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#marketplaceinfoproperties">Market<wbr>Place<wbr>Info<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#marketplaceinfoproperties">Market<wbr>Place<wbr>Info<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The values to uniquely identify a gallery image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1474,7 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#marketplaceinfo_csharp" style="color: inherit; text-decoration: inherit;">Market<wbr>Place<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#marketplaceinfopropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Market<wbr>Place<wbr>Info<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#marketplaceinfopropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Market<wbr>Place<wbr>Info<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The values to uniquely identify a gallery image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1546,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#marketplaceinfo_nodejs" style="color: inherit; text-decoration: inherit;">market<wbr>Place<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#marketplaceinfopropertiesresponse">Market<wbr>Place<wbr>Info<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#marketplaceinfopropertiesresponse">Market<wbr>Place<wbr>Info<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The values to uniquely identify a gallery image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1582,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#market_place_info_python" style="color: inherit; text-decoration: inherit;">market_<wbr>place_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#marketplaceinfopropertiesresponse">Market<wbr>Place<wbr>Info<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#marketplaceinfopropertiesresponse">Market<wbr>Place<wbr>Info<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The values to uniquely identify a gallery image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

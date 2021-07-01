@@ -401,7 +401,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#galleries_go" style="color: inherit; text-decoration: inherit;">Galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategallery">[]Workbook<wbr>Template<wbr>Gallery</a></span>
+        <span class="property-type"><a href="#workbooktemplategallery">[]Workbook<wbr>Template<wbr>Gallery<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -433,7 +433,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#localized_go" style="color: inherit; text-decoration: inherit;">Localized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string][]Workbook<wbr>Template<wbr>Localized<wbr>Gallery</span>
+        <span class="property-type">map[string][]Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Args</span>
     </dt>
     <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleries_csharp" style="color: inherit; text-decoration: inherit;">Galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategallery">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workbooktemplategallery">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Gallery&gt;</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleries_nodejs" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategallery">Workbook<wbr>Template<wbr>Gallery<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#workbooktemplategallery">Workbook<wbr>Template<wbr>Gallery[]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1176,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleries_python" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategallery">Sequence[Workbook<wbr>Template<wbr>Gallery<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workbooktemplategallery">Sequence[Workbook<wbr>Template<wbr>Gallery]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1198,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleries_csharp" style="color: inherit; text-decoration: inherit;">Galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategalleryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#workbooktemplategalleryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleries_nodejs" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategalleryresponse">Workbook<wbr>Template<wbr>Gallery<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#workbooktemplategalleryresponse">Workbook<wbr>Template<wbr>Gallery<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1258,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleries_python" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategalleryresponse">Sequence[Workbook<wbr>Template<wbr>Gallery<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workbooktemplategalleryresponse">Sequence[Workbook<wbr>Template<wbr>Gallery<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

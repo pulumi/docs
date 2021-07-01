@@ -394,7 +394,7 @@ The MasterSite resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mastersiteproperties">Master<wbr>Site<wbr>Properties</a></span>
+        <span class="property-type"><a href="#mastersiteproperties">Master<wbr>Site<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested properties of Master site.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

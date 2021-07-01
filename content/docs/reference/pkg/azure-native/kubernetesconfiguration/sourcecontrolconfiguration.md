@@ -527,7 +527,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#helmoperatorproperties_go" style="color: inherit; text-decoration: inherit;">Helm<wbr>Operator<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#helmoperatorproperties">Helm<wbr>Operator<wbr>Properties</a></span>
+        <span class="property-type"><a href="#helmoperatorproperties">Helm<wbr>Operator<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for Helm operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

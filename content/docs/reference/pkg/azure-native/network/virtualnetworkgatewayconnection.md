@@ -698,7 +698,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#virtualnetworkgateway1_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgateway">Virtual<wbr>Network<wbr>Gateway<wbr>Type</a></span>
+        <span class="property-type"><a href="#virtualnetworkgateway">Virtual<wbr>Network<wbr>Gateway<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +762,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#ipsecpolicies_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicy">[]Ipsec<wbr>Policy</a></span>
+        <span class="property-type"><a href="#ipsecpolicy">[]Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +770,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#localnetworkgateway2_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Gateway2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localnetworkgateway">Local<wbr>Network<wbr>Gateway<wbr>Type</a></span>
+        <span class="property-type"><a href="#localnetworkgateway">Local<wbr>Network<wbr>Gateway<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to local network gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +786,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#peer_go" style="color: inherit; text-decoration: inherit;">Peer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to peerings resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -818,7 +818,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#trafficselectorpolicies_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficselectorpolicy">[]Traffic<wbr>Selector<wbr>Policy</a></span>
+        <span class="property-type"><a href="#trafficselectorpolicy">[]Traffic<wbr>Selector<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -842,7 +842,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 <a href="#virtualnetworkgateway2_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgateway">Virtual<wbr>Network<wbr>Gateway<wbr>Type</a></span>
+        <span class="property-type"><a href="#virtualnetworkgateway">Virtual<wbr>Network<wbr>Gateway<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to virtual network gateway resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1693,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address&gt;</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1765,7 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address[]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1839,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1911,7 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1947,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3191,7 +3191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3223,7 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localnetworkaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space</a></span>
     </dt>
     <dd>{{% md %}}Local network site address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3311,7 +3311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3343,7 +3343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localnetworkaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Network<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
     </dt>
     <dd>{{% md %}}Local network site address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3371,7 +3371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3403,7 +3403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_network_address_space_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>address_<wbr>space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
     </dt>
     <dd>{{% md %}}Local network site address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3473,7 +3473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3505,7 +3505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localnetworkaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Local network site address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3673,7 +3673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3705,7 +3705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localnetworkaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Network<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Local network site address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3773,7 +3773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3805,7 +3805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_network_address_space_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>address_<wbr>space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Local network site address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4567,7 +4567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4575,7 +4575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customroutes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4607,7 +4607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4615,7 +4615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewaydefaultsite_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Default<wbr>Site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4639,7 +4639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4655,7 +4655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaysku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaysku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4679,7 +4679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnclientconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4863,7 +4863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4871,7 +4871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customroutes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4903,7 +4903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4911,7 +4911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewaydefaultsite_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Default<wbr>Site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4935,7 +4935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration[]</a></span>
     </dt>
     <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4951,7 +4951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaysku">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaysku">Virtual<wbr>Network<wbr>Gateway<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4975,7 +4975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientconfiguration">Vpn<wbr>Client<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnclientconfiguration">Vpn<wbr>Client<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5011,7 +5011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5019,7 +5019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_routes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5051,7 +5051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5059,7 +5059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_default_site_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>default_<wbr>site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5083,7 +5083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration]</a></span>
     </dt>
     <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5099,7 +5099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaysku">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaysku">Virtual<wbr>Network<wbr>Gateway<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5123,7 +5123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_configuration_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientconfiguration">Vpn<wbr>Client<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnclientconfiguration">Vpn<wbr>Client<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5267,7 +5267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5275,7 +5275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5355,7 +5355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5363,7 +5363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5399,7 +5399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5407,7 +5407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5469,7 +5469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5477,7 +5477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5605,7 +5605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5613,7 +5613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5673,7 +5673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the public IP resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5681,7 +5681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the subnet resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5751,7 +5751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsettings_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5759,7 +5759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customroutes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5791,7 +5791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5799,7 +5799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewaydefaultsite_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Default<wbr>Site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5823,7 +5823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5839,7 +5839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5863,7 +5863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnclientconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6143,7 +6143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6151,7 +6151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customroutes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6183,7 +6183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6191,7 +6191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewaydefaultsite_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Default<wbr>Site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6215,7 +6215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6231,7 +6231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6255,7 +6255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientconfigurationresponse">Vpn<wbr>Client<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnclientconfigurationresponse">Vpn<wbr>Client<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6339,7 +6339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6347,7 +6347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_routes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6379,7 +6379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The extended location of type local virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6387,7 +6387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_default_site_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>default_<wbr>site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6411,7 +6411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfigurationresponse">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>IPConfiguration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}IP configurations for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6427,7 +6427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayskuresponse">Virtual<wbr>Network<wbr>Gateway<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6451,7 +6451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_configuration_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientconfigurationresponse">Vpn<wbr>Client<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnclientconfigurationresponse">Vpn<wbr>Client<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6949,7 +6949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radiusservers_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#radiusserver">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Radius<wbr>Server<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#radiusserver">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Radius<wbr>Server&gt;</a></span>
     </dt>
     <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6965,7 +6965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6973,7 +6973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientipsecpolicies_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Ipsec<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipsecpolicy">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Ipsec<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6989,7 +6989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientrevokedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Revoked<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrevokedcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpnclientrevokedcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6997,7 +6997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrootcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpnclientrootcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7149,7 +7149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radiusservers_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#radiusserver">Radius<wbr>Server<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#radiusserver">Radius<wbr>Server[]</a></span>
     </dt>
     <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7165,7 +7165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientaddresspool_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7173,7 +7173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicy">Ipsec<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipsecpolicy">Ipsec<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7189,7 +7189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientrevokedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Revoked<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrevokedcertificate">Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vpnclientrevokedcertificate">Vpn<wbr>Client<wbr>Revoked<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7197,7 +7197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrootcertificate">Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vpnclientrootcertificate">Vpn<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7249,7 +7249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radius_servers_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#radiusserver">Sequence[Radius<wbr>Server<wbr>Args]</a></span>
+        <span class="property-type"><a href="#radiusserver">Sequence[Radius<wbr>Server]</a></span>
     </dt>
     <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7265,7 +7265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_address_pool_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>address_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7273,7 +7273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_ipsec_policies_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>ipsec_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicy">Sequence[Ipsec<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipsecpolicy">Sequence[Ipsec<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7289,7 +7289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>revoked_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrevokedcertificate">Sequence[Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnclientrevokedcertificate">Sequence[Vpn<wbr>Client<wbr>Revoked<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7297,7 +7297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_root_certificates_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrootcertificate">Sequence[Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnclientrootcertificate">Sequence[Vpn<wbr>Client<wbr>Root<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7351,7 +7351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radiusservers_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#radiusserverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Radius<wbr>Server<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#radiusserverresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Radius<wbr>Server<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7367,7 +7367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7375,7 +7375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientipsecpolicies_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Ipsec<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Ipsec<wbr>Policy<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7391,7 +7391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientrevokedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Revoked<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7399,7 +7399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrootcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpnclientrootcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7551,7 +7551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radiusservers_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#radiusserverresponse">Radius<wbr>Server<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#radiusserverresponse">Radius<wbr>Server<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7567,7 +7567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientaddresspool_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7575,7 +7575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicyresponse">Ipsec<wbr>Policy<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">Ipsec<wbr>Policy<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7591,7 +7591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientrevokedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Revoked<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7599,7 +7599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnclientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrootcertificateresponse">Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vpnclientrootcertificateresponse">Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7651,7 +7651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radius_servers_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#radiusserverresponse">Sequence[Radius<wbr>Server<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#radiusserverresponse">Sequence[Radius<wbr>Server<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The radiusServers property for multiple radius server configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7667,7 +7667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_address_pool_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>address_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the address space resource which represents Address space for P2S VpnClient.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7675,7 +7675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_ipsec_policies_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>ipsec_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicyresponse">Sequence[Ipsec<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">Sequence[Ipsec<wbr>Policy<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientIpsecPolicies for virtual network gateway P2S client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7691,7 +7691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>revoked_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">Sequence[Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnclientrevokedcertificateresponse">Sequence[Vpn<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRevokedCertificate for Virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7699,7 +7699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_client_root_certificates_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnclientrootcertificateresponse">Sequence[Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnclientrootcertificateresponse">Sequence[Vpn<wbr>Client<wbr>Root<wbr>Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}VpnClientRootCertificate for virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}

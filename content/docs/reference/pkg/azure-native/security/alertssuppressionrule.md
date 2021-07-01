@@ -441,7 +441,7 @@ The AlertsSuppressionRule resource accepts the following [input]({{< relref "/do
 <a href="#suppressionalertsscope_go" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Alerts<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionalertsscope">Suppression<wbr>Alerts<wbr>Scope</a></span>
+        <span class="property-type"><a href="#suppressionalertsscope">Suppression<wbr>Alerts<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The suppression conditions{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -866,7 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeelement">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Scope<wbr>Element<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scopeelement">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Scope<wbr>Element&gt;</a></span>
     </dt>
     <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -890,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeelement">Scope<wbr>Element<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#scopeelement">Scope<wbr>Element[]</a></span>
     </dt>
     <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -902,7 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeelement">Sequence[Scope<wbr>Element<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scopeelement">Sequence[Scope<wbr>Element]</a></span>
     </dt>
     <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -916,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Scope<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scopeelementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Scope<wbr>Element<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -940,7 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeelementresponse">Scope<wbr>Element<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#scopeelementresponse">Scope<wbr>Element<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -952,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scopeelementresponse">Sequence[Scope<wbr>Element<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scopeelementresponse">Sequence[Scope<wbr>Element<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd></dl>
 {{% /choosable %}}

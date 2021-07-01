@@ -545,7 +545,7 @@ The VirtualMachineScaleSetVMRunCommand resource accepts the following [input]({{
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runcommandinputparameter">[]Run<wbr>Command<wbr>Input<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#runcommandinputparameter">[]Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -553,7 +553,7 @@ The VirtualMachineScaleSetVMRunCommand resource accepts the following [input]({{
 <a href="#protectedparameters_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runcommandinputparameter">[]Run<wbr>Command<wbr>Input<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#runcommandinputparameter">[]Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -585,7 +585,7 @@ The VirtualMachineScaleSetVMRunCommand resource accepts the following [input]({{
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineruncommandscriptsource">Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source</a></span>
+        <span class="property-type"><a href="#virtualmachineruncommandscriptsource">Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source of the run command script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1454,7 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1590,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1658,7 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}

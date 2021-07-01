@@ -357,7 +357,7 @@ The DataContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacontainer">Data<wbr>Container<wbr>Type</a></span>
+        <span class="property-type"><a href="#datacontainer">Data<wbr>Container<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes of the entity.{{% /md %}}</dd><dt class="property-required"
             title="Required">

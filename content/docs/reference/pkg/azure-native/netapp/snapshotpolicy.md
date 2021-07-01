@@ -472,7 +472,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#dailyschedule_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dailyschedule">Daily<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#dailyschedule">Daily<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for daily snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -488,7 +488,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#hourlyschedule_go" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hourlyschedule">Hourly<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#hourlyschedule">Hourly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for hourly snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -504,7 +504,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#monthlyschedule_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#monthlyschedule">Monthly<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#monthlyschedule">Monthly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for monthly snapshots{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -528,7 +528,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#weeklyschedule_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#weeklyschedule">Weekly<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#weeklyschedule">Weekly<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for weekly snapshots{{% /md %}}</dd></dl>
 {{% /choosable %}}

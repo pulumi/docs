@@ -511,7 +511,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#lenses_go" style="color: inherit; text-decoration: inherit;">Lenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardlens">[]Dashboard<wbr>Lens</a></span>
+        <span class="property-type"><a href="#dashboardlens">[]Dashboard<wbr>Lens<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -790,7 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_csharp" style="color: inherit; text-decoration: inherit;">Parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparts">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dashboardparts">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts&gt;</a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_nodejs" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparts">Dashboard<wbr>Parts<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dashboardparts">Dashboard<wbr>Parts[]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardparts">Sequence[Dashboard<wbr>Parts<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardparts">Sequence[Dashboard<wbr>Parts]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -904,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_csharp" style="color: inherit; text-decoration: inherit;">Parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -960,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_nodejs" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponse">Dashboard<wbr>Parts<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponse">Dashboard<wbr>Parts<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -988,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponse">Sequence[Dashboard<wbr>Parts<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponse">Sequence[Dashboard<wbr>Parts<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1010,7 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsposition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Position<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardpartsposition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Position</a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1018,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1050,7 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsposition">Dashboard<wbr>Parts<wbr>Position<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardpartsposition">Dashboard<wbr>Parts<wbr>Position</a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1058,7 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadata">Markdown<wbr>Part<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadata">Markdown<wbr>Part<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1070,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsposition">Dashboard<wbr>Parts<wbr>Position<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardpartsposition">Dashboard<wbr>Parts<wbr>Position</a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadata">Markdown<wbr>Part<wbr>Metadata<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadata">Markdown<wbr>Part<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1270,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponseposition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Response<wbr>Position<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponseposition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Response<wbr>Position</a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1278,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1310,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position</a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1318,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1330,7 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position<wbr>Args</a></span>
+        <span class="property-type"><a href="#dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position</a></span>
     </dt>
     <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1538,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1578,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1598,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1612,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettingssettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettingssettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1636,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1648,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatasettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatasettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1670,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1710,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1730,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1744,7 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettingssettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettingssettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1768,7 +1768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1780,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsesettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsesettingssettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1794,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content</a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1818,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content</a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1830,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content</a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2022,7 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatacontent">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatacontent">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Content</a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2046,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatacontent">Markdown<wbr>Part<wbr>Metadata<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatacontent">Markdown<wbr>Part<wbr>Metadata<wbr>Content</a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2058,7 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#markdownpartmetadatacontent">Markdown<wbr>Part<wbr>Metadata<wbr>Content<wbr>Args</a></span>
+        <span class="property-type"><a href="#markdownpartmetadatacontent">Markdown<wbr>Part<wbr>Metadata<wbr>Content</a></span>
     </dt>
     <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}

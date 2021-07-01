@@ -423,7 +423,7 @@ The Task resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskproperties">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a> | <a href="#connecttosourcesqlserversynctaskproperties">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Sync<wbr>Task<wbr>Properties</a> | <a href="#connecttosourcesqlservertaskproperties">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Properties</a> | <a href="#connecttotargetazuredbformysqltaskproperties">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Properties</a> | <a href="#connecttotargetazuredbforpostgresqlsynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a> | <a href="#connecttotargetsqldbtaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties</a> | <a href="#connecttotargetsqlmisynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties</a> | <a href="#connecttotargetsqlmitaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Properties</a> | <a href="#connecttotargetsqlsqldbsynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties</a> | <a href="#gettdecertificatessqltaskproperties">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Properties</a> | <a href="#getusertablessqlsynctaskproperties">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a> | <a href="#getusertablessqltaskproperties">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Properties</a> | <a href="#migratemysqlazuredbformysqlsynctaskproperties">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a> | <a href="#migratepostgresqlazuredbforpostgresqlsynctaskproperties">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties</a> | <a href="#migratesqlserversqldbsynctaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties</a> | <a href="#migratesqlserversqldbtaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties</a> | <a href="#migratesqlserversqlmisynctaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties</a> | <a href="#migratesqlserversqlmitaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties</a> | <a href="#validatemigrationinputsqlserversqldbsynctaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties</a> | <a href="#validatemigrationinputsqlserversqlmisynctaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties</a> | <a href="#validatemigrationinputsqlserversqlmitaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskproperties">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#connecttosourcesqlserversynctaskproperties">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#connecttosourcesqlservertaskproperties">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#connecttotargetazuredbformysqltaskproperties">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#connecttotargetazuredbforpostgresqlsynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#connecttotargetsqldbtaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#connecttotargetsqlmisynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#connecttotargetsqlmitaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args</a> | <a href="#connecttotargetsqlsqldbsynctaskproperties">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#gettdecertificatessqltaskproperties">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#getusertablessqlsynctaskproperties">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#getusertablessqltaskproperties">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#migratemysqlazuredbformysqlsynctaskproperties">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#migratepostgresqlazuredbforpostgresqlsynctaskproperties">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#migratesqlserversqldbsynctaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#migratesqlserversqldbtaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#migratesqlserversqlmisynctaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#migratesqlserversqlmitaskproperties">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args</a> | <a href="#validatemigrationinputsqlserversqldbsynctaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#validatemigrationinputsqlserversqlmisynctaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Properties<wbr>Args</a> | <a href="#validatemigrationinputsqlserversqlmitaskproperties">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom task properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listofbackupfiles_csharp" style="color: inherit; text-decoration: inherit;">List<wbr>Of<wbr>Backup<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupfileinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Backup<wbr>File<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#backupfileinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Backup<wbr>File<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of files in the backup set{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1324,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listofbackupfiles_nodejs" style="color: inherit; text-decoration: inherit;">list<wbr>Of<wbr>Backup<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupfileinforesponse">Backup<wbr>File<wbr>Info<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#backupfileinforesponse">Backup<wbr>File<wbr>Info<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of files in the backup set{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1408,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#list_of_backup_files_python" style="color: inherit; text-decoration: inherit;">list_<wbr>of_<wbr>backup_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupfileinforesponse">Sequence[Backup<wbr>File<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backupfileinforesponse">Sequence[Backup<wbr>File<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of files in the backup set{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1522,7 +1522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1546,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1558,7 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1572,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1596,7 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1608,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1654,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1742,7 +1742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1786,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1800,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1824,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinput">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinput">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1836,7 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinput">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinput">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1850,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1858,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1866,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1882,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1938,7 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1946,7 +1946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1954,7 +1954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskoutputresponse">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskoutputresponse">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1970,7 +1970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1982,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1990,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1998,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskoutputresponse">Sequence[Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskoutputresponse">Sequence[Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2014,7 +2014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcepostgresqlsynctaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2028,7 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2052,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2064,7 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2078,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2086,7 +2086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2110,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2166,7 +2166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2174,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2182,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response<wbr>Args | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response<wbr>Args | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2198,7 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2210,7 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2218,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2226,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2242,7 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2256,7 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Source SQL Server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2328,7 +2328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Source SQL Server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2364,7 +2364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Source SQL Server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2402,7 +2402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Source SQL Server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2474,7 +2474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Source SQL Server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2510,7 +2510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Source SQL Server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2588,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migrationeligibility_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Eligibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationeligibilityinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Eligibility<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationeligibilityinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Eligibility<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about eligibility of agent job for migration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2708,7 +2708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migrationeligibility_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Eligibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationeligibilityinforesponse">Migration<wbr>Eligibility<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationeligibilityinforesponse">Migration<wbr>Eligibility<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about eligibility of agent job for migration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2768,7 +2768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migration_eligibility_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>eligibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationeligibilityinforesponse">Migration<wbr>Eligibility<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationeligibilityinforesponse">Migration<wbr>Eligibility<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about eligibility of agent job for migration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2798,7 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasefiles_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasefileinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>File<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#databasefileinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>File<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of database files{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2902,7 +2902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasefiles_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasefileinforesponse">Database<wbr>File<wbr>Info<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#databasefileinforesponse">Database<wbr>File<wbr>Info<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of database files{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2954,7 +2954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_files_python" style="color: inherit; text-decoration: inherit;">database_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasefileinforesponse">Sequence[Database<wbr>File<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#databasefileinforesponse">Sequence[Database<wbr>File<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of database files{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3032,7 +3032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migrationeligibility_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Eligibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationeligibilityinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Eligibility<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationeligibilityinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Eligibility<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about eligibility of login for migration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3136,7 +3136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migrationeligibility_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Eligibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationeligibilityinforesponse">Migration<wbr>Eligibility<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationeligibilityinforesponse">Migration<wbr>Eligibility<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about eligibility of login for migration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3188,7 +3188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migration_eligibility_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>eligibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationeligibilityinforesponse">Migration<wbr>Eligibility<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationeligibilityinforesponse">Migration<wbr>Eligibility<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about eligibility of login for migration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3258,7 +3258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3378,7 +3378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3438,7 +3438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3452,7 +3452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3476,7 +3476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3488,7 +3488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinput">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3502,7 +3502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3510,7 +3510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3534,7 +3534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3590,7 +3590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3598,7 +3598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3606,7 +3606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response<wbr>Args | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response<wbr>Args | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response | Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3622,7 +3622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3634,7 +3634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3642,7 +3642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3650,7 +3650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response<wbr>Args, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Login<wbr>Level<wbr>Response, Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Task<wbr>Level<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3666,7 +3666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttosourcesqlservertaskinputresponse">Connect<wbr>To<wbr>Source<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3680,7 +3680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3688,7 +3688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3720,7 +3720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3728,7 +3728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3740,7 +3740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3748,7 +3748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3762,7 +3762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3770,7 +3770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3802,7 +3802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3810,7 +3810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3822,7 +3822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3830,7 +3830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3876,7 +3876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3964,7 +3964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4008,7 +4008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4022,7 +4022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4046,7 +4046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinput">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinput">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4058,7 +4058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinput">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinput">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4072,7 +4072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4080,7 +4080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4088,7 +4088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4104,7 +4104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4160,7 +4160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4168,7 +4168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4176,7 +4176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Output<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4192,7 +4192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4204,7 +4204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4212,7 +4212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4220,7 +4220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Output<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4236,7 +4236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbformysqltaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4250,7 +4250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4258,7 +4258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4290,7 +4290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4298,7 +4298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4310,7 +4310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4318,7 +4318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4332,7 +4332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4340,7 +4340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4372,7 +4372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4380,7 +4380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4392,7 +4392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4400,7 +4400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4446,7 +4446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4534,7 +4534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4578,7 +4578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors associated with the task{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4592,7 +4592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4616,7 +4616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinput">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinput">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4628,7 +4628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinput">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinput">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4642,7 +4642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4650,7 +4650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4658,7 +4658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4674,7 +4674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4730,7 +4730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4738,7 +4738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4746,7 +4746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4762,7 +4762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4774,7 +4774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4782,7 +4782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4790,7 +4790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4806,7 +4806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetazuredbforpostgresqlsynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4820,7 +4820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4844,7 +4844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4856,7 +4856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4870,7 +4870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4894,7 +4894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4906,7 +4906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5066,7 +5066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5090,7 +5090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5102,7 +5102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5116,7 +5116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5124,7 +5124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5132,7 +5132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5148,7 +5148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5204,7 +5204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5212,7 +5212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5220,7 +5220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5236,7 +5236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5248,7 +5248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5256,7 +5256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5264,7 +5264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5280,7 +5280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5294,7 +5294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureapp_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryapp">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryapp">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5302,7 +5302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5334,7 +5334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureapp_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5342,7 +5342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5354,7 +5354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_app_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5362,7 +5362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5376,7 +5376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureapp_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5384,7 +5384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5416,7 +5416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureapp_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5424,7 +5424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5436,7 +5436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_app_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5444,7 +5444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5474,7 +5474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5530,7 +5530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5558,7 +5558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5572,7 +5572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5596,7 +5596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5608,7 +5608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5622,7 +5622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5630,7 +5630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5638,7 +5638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmisynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmisynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5654,7 +5654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5710,7 +5710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5718,7 +5718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5726,7 +5726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmisynctaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmisynctaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5742,7 +5742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5754,7 +5754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5762,7 +5762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5770,7 +5770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmisynctaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmisynctaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5786,7 +5786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmisynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5800,7 +5800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL Server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5824,7 +5824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL Server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5836,7 +5836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL Server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5850,7 +5850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL Server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5874,7 +5874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL Server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5886,7 +5886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL Server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5940,7 +5940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6044,7 +6044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6096,7 +6096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6110,7 +6110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmitaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmitaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6134,7 +6134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmitaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmitaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6146,7 +6146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmitaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmitaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6160,7 +6160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6168,7 +6168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6176,7 +6176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmitaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmitaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6192,7 +6192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmitaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmitaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6248,7 +6248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6256,7 +6256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6264,7 +6264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmitaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmitaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6280,7 +6280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmitaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmitaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6292,7 +6292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6300,7 +6300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6308,7 +6308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmitaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmitaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6324,7 +6324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlmitaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlmitaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6338,7 +6338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6346,7 +6346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6378,7 +6378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6386,7 +6386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6398,7 +6398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6406,7 +6406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6420,7 +6420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6428,7 +6428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6460,7 +6460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6468,7 +6468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6480,7 +6480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6488,7 +6488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6502,7 +6502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6526,7 +6526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6538,7 +6538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinput">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6552,7 +6552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6560,7 +6560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6568,7 +6568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6584,7 +6584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6640,7 +6640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6648,7 +6648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6656,7 +6656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6672,7 +6672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6684,7 +6684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6692,7 +6692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6700,7 +6700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connecttotargetsqldbtaskoutputresponse">Sequence[Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6716,7 +6716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connecttotargetsqlsqldbsynctaskinputresponse">Connect<wbr>To<wbr>Target<wbr>Sql<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6738,7 +6738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validationerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validationerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validation<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened while performing data integrity validation{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6778,7 +6778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validationerrorresponse">Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validationerrorresponse">Validation<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened while performing data integrity validation{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6798,7 +6798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validationerrorresponse">Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validationerrorresponse">Validation<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened while performing data integrity validation{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8094,7 +8094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#waitstats_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Wait<wbr>Statistics<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Wait<wbr>Statistics<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of sql query execution wait types and the respective statistics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8198,7 +8198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#waitstats_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Wait<wbr>Statistics<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Wait<wbr>Statistics<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Dictionary of sql query execution wait types and the respective statistics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8250,7 +8250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wait_stats_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Wait<wbr>Statistics<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Wait<wbr>Statistics<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Dictionary of sql query execution wait types and the respective statistics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8492,7 +8492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for file share to be used for temporarily storing files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8500,7 +8500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8508,7 +8508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selectedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectedcertificateinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Selected<wbr>Certificate<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#selectedcertificateinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Selected<wbr>Certificate<wbr>Input&gt;</a></span>
     </dt>
     <dd>{{% md %}}List containing certificate names and corresponding password to use for encrypting the exported certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8548,7 +8548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for file share to be used for temporarily storing files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8556,7 +8556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8564,7 +8564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selectedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectedcertificateinput">Selected<wbr>Certificate<wbr>Input<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#selectedcertificateinput">Selected<wbr>Certificate<wbr>Input[]</a></span>
     </dt>
     <dd>{{% md %}}List containing certificate names and corresponding password to use for encrypting the exported certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8576,7 +8576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for file share to be used for temporarily storing files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8584,7 +8584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8592,7 +8592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_certificates_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectedcertificateinput">Sequence[Selected<wbr>Certificate<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#selectedcertificateinput">Sequence[Selected<wbr>Certificate<wbr>Input]</a></span>
     </dt>
     <dd>{{% md %}}List containing certificate names and corresponding password to use for encrypting the exported certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8606,7 +8606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for file share to be used for temporarily storing files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8614,7 +8614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8622,7 +8622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selectedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectedcertificateinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Selected<wbr>Certificate<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#selectedcertificateinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Selected<wbr>Certificate<wbr>Input<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List containing certificate names and corresponding password to use for encrypting the exported certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8662,7 +8662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for file share to be used for temporarily storing files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8670,7 +8670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8678,7 +8678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selectedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectedcertificateinputresponse">Selected<wbr>Certificate<wbr>Input<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#selectedcertificateinputresponse">Selected<wbr>Certificate<wbr>Input<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List containing certificate names and corresponding password to use for encrypting the exported certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8690,7 +8690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for file share to be used for temporarily storing files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8698,7 +8698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8706,7 +8706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_certificates_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selectedcertificateinputresponse">Sequence[Selected<wbr>Certificate<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#selectedcertificateinputresponse">Sequence[Selected<wbr>Certificate<wbr>Input<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List containing certificate names and corresponding password to use for encrypting the exported certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8728,7 +8728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8768,7 +8768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8788,7 +8788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8802,7 +8802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettdecertificatessqltaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#gettdecertificatessqltaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8826,7 +8826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettdecertificatessqltaskinput">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#gettdecertificatessqltaskinput">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8838,7 +8838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettdecertificatessqltaskinput">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#gettdecertificatessqltaskinput">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8852,7 +8852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8860,7 +8860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8868,7 +8868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettdecertificatessqltaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gettdecertificatessqltaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8884,7 +8884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettdecertificatessqltaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gettdecertificatessqltaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8940,7 +8940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8948,7 +8948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8956,7 +8956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettdecertificatessqltaskoutputresponse">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#gettdecertificatessqltaskoutputresponse">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Output<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8972,7 +8972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettdecertificatessqltaskinputresponse">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gettdecertificatessqltaskinputresponse">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8984,7 +8984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8992,7 +8992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9000,7 +9000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettdecertificatessqltaskoutputresponse">Sequence[Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gettdecertificatessqltaskoutputresponse">Sequence[Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Output<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9016,7 +9016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettdecertificatessqltaskinputresponse">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#gettdecertificatessqltaskinputresponse">Get<wbr>Tde<wbr>Certificates<wbr>Sql<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9046,7 +9046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9054,7 +9054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9118,7 +9118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9126,7 +9126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9154,7 +9154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9162,7 +9162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9192,7 +9192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9200,7 +9200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9264,7 +9264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9272,7 +9272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9300,7 +9300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9308,7 +9308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL DB{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9322,7 +9322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasestosourcetables_csharp" style="color: inherit; text-decoration: inherit;">Databases<wbr>To<wbr>Source<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of source tables{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9330,7 +9330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasestotargettables_csharp" style="color: inherit; text-decoration: inherit;">Databases<wbr>To<wbr>Target<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of target tables{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9346,7 +9346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9394,7 +9394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasestosourcetables_nodejs" style="color: inherit; text-decoration: inherit;">databases<wbr>To<wbr>Source<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Database<wbr>Table<wbr>Response<wbr>Args[]}</span>
+        <span class="property-type">{[key: string]: Database<wbr>Table<wbr>Response[]}</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of source tables{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9402,7 +9402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasestotargettables_nodejs" style="color: inherit; text-decoration: inherit;">databases<wbr>To<wbr>Target<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Database<wbr>Table<wbr>Response<wbr>Args[]}</span>
+        <span class="property-type">{[key: string]: Database<wbr>Table<wbr>Response[]}</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of target tables{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9418,7 +9418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9430,7 +9430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_to_source_tables_python" style="color: inherit; text-decoration: inherit;">databases_<wbr>to_<wbr>source_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Sequence[Database<wbr>Table<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Mapping[str, Sequence[Database<wbr>Table<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of source tables{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9438,7 +9438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_to_target_tables_python" style="color: inherit; text-decoration: inherit;">databases_<wbr>to_<wbr>target_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Sequence[Database<wbr>Table<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Mapping[str, Sequence[Database<wbr>Table<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of target tables{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9454,7 +9454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9468,7 +9468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqlsynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#getusertablessqlsynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9492,7 +9492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqlsynctaskinput">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#getusertablessqlsynctaskinput">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9504,7 +9504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqlsynctaskinput">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#getusertablessqlsynctaskinput">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9518,7 +9518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9526,7 +9526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9534,7 +9534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqlsynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getusertablessqlsynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9550,7 +9550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#getusertablessqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9606,7 +9606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9614,7 +9614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9622,7 +9622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqlsynctaskoutputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#getusertablessqlsynctaskoutputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9638,7 +9638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqlsynctaskinputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#getusertablessqlsynctaskinputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9650,7 +9650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9658,7 +9658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9666,7 +9666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqlsynctaskoutputresponse">Sequence[Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getusertablessqlsynctaskoutputresponse">Sequence[Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9682,7 +9682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqlsynctaskinputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#getusertablessqlsynctaskinputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9696,7 +9696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9736,7 +9736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9756,7 +9756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9778,7 +9778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9818,7 +9818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9838,7 +9838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9860,7 +9860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasestotables_csharp" style="color: inherit; text-decoration: inherit;">Databases<wbr>To<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Table<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of tables{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9876,7 +9876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9916,7 +9916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasestotables_nodejs" style="color: inherit; text-decoration: inherit;">databases<wbr>To<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Database<wbr>Table<wbr>Response<wbr>Args[]}</span>
+        <span class="property-type">{[key: string]: Database<wbr>Table<wbr>Response[]}</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of tables{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9932,7 +9932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9944,7 +9944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_to_tables_python" style="color: inherit; text-decoration: inherit;">databases_<wbr>to_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Sequence[Database<wbr>Table<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Mapping[str, Sequence[Database<wbr>Table<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Mapping from database name to list of tables{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9960,7 +9960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Validation errors{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9974,7 +9974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqltaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#getusertablessqltaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9998,7 +9998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqltaskinput">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#getusertablessqltaskinput">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10010,7 +10010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqltaskinput">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#getusertablessqltaskinput">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10024,7 +10024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10032,7 +10032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10040,7 +10040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqltaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getusertablessqltaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10056,7 +10056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqltaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#getusertablessqltaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10112,7 +10112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10120,7 +10120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10128,7 +10128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqltaskoutputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#getusertablessqltaskoutputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Output<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10144,7 +10144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqltaskinputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#getusertablessqltaskinputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10156,7 +10156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10164,7 +10164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10172,7 +10172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqltaskoutputresponse">Sequence[Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#getusertablessqltaskoutputresponse">Sequence[Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Output<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10188,7 +10188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusertablessqltaskinputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#getusertablessqltaskinputresponse">Get<wbr>User<wbr>Tables<wbr>Sql<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10480,7 +10480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened during the command execution{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10504,7 +10504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened during the command execution{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10516,7 +10516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened during the command execution{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10530,7 +10530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10538,7 +10538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemisynccompletecommandoutputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemisynccompletecommandoutputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Command output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10554,7 +10554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemisynccompletecommandinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemisynccompletecommandinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Command input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10602,7 +10602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10610,7 +10610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemisynccompletecommandoutputresponse">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemisynccompletecommandoutputresponse">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Command output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10626,7 +10626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemisynccompletecommandinputresponse">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemisynccompletecommandinputresponse">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Command input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10638,7 +10638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10646,7 +10646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemisynccompletecommandoutputresponse">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemisynccompletecommandoutputresponse">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Command output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10662,7 +10662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemisynccompletecommandinputresponse">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemisynccompletecommandinputresponse">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Command input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11032,7 +11032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11040,7 +11040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11048,7 +11048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11088,7 +11088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinput">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinput">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11096,7 +11096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11104,7 +11104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11116,7 +11116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinput">Sequence[Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinput">Sequence[Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11124,7 +11124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11132,7 +11132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninfo">My<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11146,7 +11146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11154,7 +11154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11162,7 +11162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11202,7 +11202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinputresponse">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinputresponse">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11210,7 +11210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11218,7 +11218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11230,7 +11230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinputresponse">Sequence[Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsyncdatabaseinputresponse">Sequence[Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11238,7 +11238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source MySQL{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11246,7 +11246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mysqlconnectioninforesponse">My<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for MySQL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11276,7 +11276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11332,7 +11332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11360,7 +11360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sequence[Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sequence[Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11904,7 +11904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11944,7 +11944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11964,7 +11964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12694,7 +12694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12718,7 +12718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinput">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinput">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12730,7 +12730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinput">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinput">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12744,7 +12744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12752,7 +12752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12776,7 +12776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12832,7 +12832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12840,7 +12840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12848,7 +12848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response<wbr>Args | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response | Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12864,7 +12864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinputresponse">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinputresponse">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12876,7 +12876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12884,7 +12884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12892,7 +12892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response, Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response, Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response, Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12908,7 +12908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinputresponse">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratemysqlazuredbformysqlsynctaskinputresponse">Migrate<wbr>My<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>My<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13278,7 +13278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13286,7 +13286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13294,7 +13294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13334,7 +13334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinput">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinput">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13342,7 +13342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13350,7 +13350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13362,7 +13362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinput">Sequence[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinput">Sequence[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13370,7 +13370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13378,7 +13378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninfo">Postgre<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13392,7 +13392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13400,7 +13400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13408,7 +13408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13448,7 +13448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinputresponse">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinputresponse">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13456,7 +13456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13464,7 +13464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13476,7 +13476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinputresponse">Sequence[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsyncdatabaseinputresponse">Sequence[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Database<wbr>Input<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13484,7 +13484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source PostgreSQL{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13492,7 +13492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#postgresqlconnectioninforesponse">Postgre<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for target Azure Database for PostgreSQL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13522,7 +13522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13578,7 +13578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13606,7 +13606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sequence[Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sequence[Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14150,7 +14150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14190,7 +14190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14210,7 +14210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14940,7 +14940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14964,7 +14964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinput">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinput">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14976,7 +14976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinput">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinput">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14990,7 +14990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14998,7 +14998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15022,7 +15022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15078,7 +15078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15086,7 +15086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15094,7 +15094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response<wbr>Args | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response | Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15110,7 +15110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinputresponse">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinputresponse">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15122,7 +15122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15130,7 +15130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15138,7 +15138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response, Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response, Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response, Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15154,7 +15154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinputresponse">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratepostgresqlazuredbforpostgresqlsynctaskinputresponse">Migrate<wbr>Postgre<wbr>Sql<wbr>Azure<wbr>Db<wbr>For<wbr>Postgre<wbr>Sql<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16008,7 +16008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16016,7 +16016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16024,7 +16024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16032,7 +16032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Validation options{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16080,7 +16080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16088,7 +16088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16096,7 +16096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16104,7 +16104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptions">Migration<wbr>Validation<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptions">Migration<wbr>Validation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Validation options{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16116,7 +16116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16124,7 +16124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16132,7 +16132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16140,7 +16140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptions">Migration<wbr>Validation<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptions">Migration<wbr>Validation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Validation options{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16154,7 +16154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16162,7 +16162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16170,7 +16170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16178,7 +16178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Validation options{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16226,7 +16226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16234,7 +16234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16242,7 +16242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16250,7 +16250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Migration<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Migration<wbr>Validation<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Validation options{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16262,7 +16262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16270,7 +16270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16278,7 +16278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16286,7 +16286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Migration<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Migration<wbr>Validation<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Validation options{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16316,7 +16316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16372,7 +16372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16400,7 +16400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sequence[Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syncmigrationdatabaseerroreventresponse">Sequence[Sync<wbr>Migration<wbr>Database<wbr>Error<wbr>Event<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of error events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16944,7 +16944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16984,7 +16984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17004,7 +17004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17766,7 +17766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17790,7 +17790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17802,7 +17802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17816,7 +17816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17824,7 +17824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17848,7 +17848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17904,7 +17904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17912,7 +17912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17920,7 +17920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17936,7 +17936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17948,7 +17948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17956,7 +17956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17964,7 +17964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Error<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Error<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -17980,7 +17980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsynctaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17994,7 +17994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18002,7 +18002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18010,7 +18010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18018,7 +18018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options for enabling various post migration validations. Available options, 
  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data. 
@@ -18070,7 +18070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18078,7 +18078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18086,7 +18086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18094,7 +18094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptions">Migration<wbr>Validation<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptions">Migration<wbr>Validation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options for enabling various post migration validations. Available options, 
  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data. 
@@ -18108,7 +18108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18116,7 +18116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18124,7 +18124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18132,7 +18132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptions">Migration<wbr>Validation<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptions">Migration<wbr>Validation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options for enabling various post migration validations. Available options, 
  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data. 
@@ -18148,7 +18148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18156,7 +18156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18164,7 +18164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18172,7 +18172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Options for enabling various post migration validations. Available options, 
  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data. 
@@ -18224,7 +18224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18232,7 +18232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18240,7 +18240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18248,7 +18248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationoptions_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Migration<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Migration<wbr>Validation<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Options for enabling various post migration validations. Available options, 
  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data. 
@@ -18262,7 +18262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbdatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Database<wbr>Input<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18270,7 +18270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18278,7 +18278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18286,7 +18286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_options_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Migration<wbr>Validation<wbr>Options<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationvalidationoptionsresponse">Migration<wbr>Validation<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Options for enabling various post migration validations. Available options, 
  1.) Data Integrity Check: Performs a checksum based comparison on source and target tables after the migration to ensure the correctness of the data. 
@@ -18334,7 +18334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18374,7 +18374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectsummary_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Summary of object results in the migration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18582,7 +18582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_nodejs" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18622,7 +18622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectsummary_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Summary of object results in the migration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18706,7 +18706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18746,7 +18746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_summary_python" style="color: inherit; text-decoration: inherit;">object_<wbr>summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Data<wbr>Item<wbr>Migration<wbr>Summary<wbr>Result<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Summary of object results in the migration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18800,7 +18800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataintegrityvalidationresult_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Integrity<wbr>Validation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataintegrityvalidationresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Data<wbr>Integrity<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataintegrityvalidationresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Data<wbr>Integrity<wbr>Validation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provides data integrity validation result between the source and target tables that are migrated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18832,7 +18832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryanalysisvalidationresult_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Analysis<wbr>Validation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryanalysisvalidationresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Query<wbr>Analysis<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#queryanalysisvalidationresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Query<wbr>Analysis<wbr>Validation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Results of some of the query execution result between source and target database{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18840,7 +18840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemavalidationresult_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Validation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemacomparisonvalidationresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#schemacomparisonvalidationresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provides schema comparison result between source and target database{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18968,7 +18968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataintegrityvalidationresult_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Integrity<wbr>Validation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataintegrityvalidationresultresponse">Data<wbr>Integrity<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataintegrityvalidationresultresponse">Data<wbr>Integrity<wbr>Validation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provides data integrity validation result between the source and target tables that are migrated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19000,7 +19000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryanalysisvalidationresult_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Analysis<wbr>Validation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryanalysisvalidationresultresponse">Query<wbr>Analysis<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#queryanalysisvalidationresultresponse">Query<wbr>Analysis<wbr>Validation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Results of some of the query execution result between source and target database{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19008,7 +19008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemavalidationresult_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Validation<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemacomparisonvalidationresultresponse">Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#schemacomparisonvalidationresultresponse">Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provides schema comparison result between source and target database{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19052,7 +19052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_integrity_validation_result_python" style="color: inherit; text-decoration: inherit;">data_<wbr>integrity_<wbr>validation_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataintegrityvalidationresultresponse">Data<wbr>Integrity<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dataintegrityvalidationresultresponse">Data<wbr>Integrity<wbr>Validation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provides data integrity validation result between the source and target tables that are migrated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19084,7 +19084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_analysis_validation_result_python" style="color: inherit; text-decoration: inherit;">query_<wbr>analysis_<wbr>validation_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryanalysisvalidationresultresponse">Query<wbr>Analysis<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#queryanalysisvalidationresultresponse">Query<wbr>Analysis<wbr>Validation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Results of some of the query execution result between source and target database{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19092,7 +19092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_validation_result_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>validation_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemacomparisonvalidationresultresponse">Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#schemacomparisonvalidationresultresponse">Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provides schema comparison result between source and target database{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19138,7 +19138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19178,7 +19178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19198,7 +19198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19220,7 +19220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasesummary_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Summary<wbr>Result<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Summary<wbr>Result<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Summary of database results in the migration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19252,7 +19252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19276,7 +19276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migrationreport_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Report</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationreportresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Report<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationreportresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Report<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration Report Result, provides unique url for downloading your migration report.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19468,7 +19468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasesummary_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Database<wbr>Summary<wbr>Result<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Database<wbr>Summary<wbr>Result<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Summary of database results in the migration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19500,7 +19500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_nodejs" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19524,7 +19524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migrationreport_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Report</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationreportresultresponse">Migration<wbr>Report<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationreportresultresponse">Migration<wbr>Report<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration Report Result, provides unique url for downloading your migration report.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19592,7 +19592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_summary_python" style="color: inherit; text-decoration: inherit;">database_<wbr>summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Database<wbr>Summary<wbr>Result<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Database<wbr>Summary<wbr>Result<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Summary of database results in the migration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19624,7 +19624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -19648,7 +19648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migration_report_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>report</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationreportresultresponse">Migration<wbr>Report<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migrationreportresultresponse">Migration<wbr>Report<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration Report Result, provides unique url for downloading your migration report.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20080,7 +20080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summaryresults_csharp" style="color: inherit; text-decoration: inherit;">Summary<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Database<wbr>Summary<wbr>Result<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migration<wbr>Validation<wbr>Database<wbr>Summary<wbr>Result<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Validation summary results for each database{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20152,7 +20152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summaryresults_nodejs" style="color: inherit; text-decoration: inherit;">summary<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Migration<wbr>Validation<wbr>Database<wbr>Summary<wbr>Result<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Migration<wbr>Validation<wbr>Database<wbr>Summary<wbr>Result<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Validation summary results for each database{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20188,7 +20188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_results_python" style="color: inherit; text-decoration: inherit;">summary_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Migration<wbr>Validation<wbr>Database<wbr>Summary<wbr>Result<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Migration<wbr>Validation<wbr>Database<wbr>Summary<wbr>Result<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Validation summary results for each database{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20202,7 +20202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbtaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbtaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20226,7 +20226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbtaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbtaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20238,7 +20238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbtaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbtaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20252,7 +20252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20260,7 +20260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20284,7 +20284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbtaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbtaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20340,7 +20340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20348,7 +20348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20356,7 +20356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Validation<wbr>Result<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Validation<wbr>Result<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Validation<wbr>Result<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Validation<wbr>Result<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20372,7 +20372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbtaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbtaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20384,7 +20384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20392,7 +20392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20400,7 +20400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Validation<wbr>Result<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Validation<wbr>Result<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Validation<wbr>Result<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Error<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Table<wbr>Level<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Output<wbr>Validation<wbr>Result<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20416,7 +20416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbtaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbtaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20454,7 +20454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for backing up this database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20526,7 +20526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for backing up this database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20562,7 +20562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for backing up this database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20600,7 +20600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for backing up this database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20672,7 +20672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for backing up this database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20708,7 +20708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for backing up this database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20722,7 +20722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureapp_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryapp">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryapp">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20730,7 +20730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20738,7 +20738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20754,7 +20754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20762,7 +20762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20826,7 +20826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureapp_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20834,7 +20834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20842,7 +20842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20858,7 +20858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20866,7 +20866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20878,7 +20878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_app_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20886,7 +20886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20894,7 +20894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20910,7 +20910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20918,7 +20918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20932,7 +20932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureapp_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20940,7 +20940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20948,7 +20948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20964,7 +20964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20972,7 +20972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21036,7 +21036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureapp_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21044,7 +21044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21052,7 +21052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21068,7 +21068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21076,7 +21076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21088,7 +21088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_app_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21096,7 +21096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21104,7 +21104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21120,7 +21120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21128,7 +21128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21142,7 +21142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activebackupsets_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Backup<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Backup<wbr>Set<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Backup sets that are currently active (Either being uploaded or getting restored){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21174,7 +21174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21182,7 +21182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullbackupsetinfo_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Set<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Backup<wbr>Set<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of full backup set{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21206,7 +21206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrestoredbackupsetinfo_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Restored<wbr>Backup<wbr>Set<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Backup<wbr>Set<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Last applied backup set information{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21342,7 +21342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activebackupsets_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Backup<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">Backup<wbr>Set<wbr>Info<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Backup sets that are currently active (Either being uploaded or getting restored){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21374,7 +21374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_nodejs" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21382,7 +21382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullbackupsetinfo_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Set<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">Backup<wbr>Set<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of full backup set{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21406,7 +21406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrestoredbackupsetinfo_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Restored<wbr>Backup<wbr>Set<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">Backup<wbr>Set<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Last applied backup set information{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21442,7 +21442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_backup_sets_python" style="color: inherit; text-decoration: inherit;">active_<wbr>backup_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">Sequence[Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">Sequence[Backup<wbr>Set<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Backup sets that are currently active (Either being uploaded or getting restored){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21474,7 +21474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21482,7 +21482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#full_backup_set_info_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>set_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">Backup<wbr>Set<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of full backup set{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21506,7 +21506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_restored_backup_set_info_python" style="color: inherit; text-decoration: inherit;">last_<wbr>restored_<wbr>backup_<wbr>set_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupsetinforesponse">Backup<wbr>Set<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backupsetinforesponse">Backup<wbr>Set<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Last applied backup set information{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21544,7 +21544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21584,7 +21584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21604,7 +21604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22028,7 +22028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22052,7 +22052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22064,7 +22064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22078,7 +22078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22086,7 +22086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22110,7 +22110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22166,7 +22166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22174,7 +22174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22182,7 +22182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22198,7 +22198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22210,7 +22210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22218,7 +22218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22226,7 +22226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Error<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Migration<wbr>Level<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22242,7 +22242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmisynctaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22256,7 +22256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupblobshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Blob<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Blob<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Blob<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22264,7 +22264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22272,7 +22272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22280,7 +22280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22288,7 +22288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22392,7 +22392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupblobshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Blob<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshare">Blob<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobshare">Blob<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22400,7 +22400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22408,7 +22408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22416,7 +22416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22424,7 +22424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22460,7 +22460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_blob_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>blob_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshare">Blob<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobshare">Blob<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22468,7 +22468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22476,7 +22476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22484,7 +22484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22492,7 +22492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22530,7 +22530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupblobshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Blob<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Blob<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Blob<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22538,7 +22538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22546,7 +22546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22554,7 +22554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22562,7 +22562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22666,7 +22666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupblobshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Blob<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshareresponse">Blob<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobshareresponse">Blob<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22674,7 +22674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22682,7 +22682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22690,7 +22690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22698,7 +22698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22734,7 +22734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_blob_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>blob_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshareresponse">Blob<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobshareresponse">Blob<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22742,7 +22742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22750,7 +22750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22758,7 +22758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22766,7 +22766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22812,7 +22812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Migration errors and warnings per job{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22948,7 +22948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_nodejs" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Migration errors and warnings per job{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23016,7 +23016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Migration errors and warnings per job{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23094,7 +23094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23246,7 +23246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_nodejs" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23322,7 +23322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23384,7 +23384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23424,7 +23424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23444,7 +23444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23474,7 +23474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Login migration errors and warnings per login{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23610,7 +23610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_nodejs" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Login migration errors and warnings per login{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23678,7 +23678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Login migration errors and warnings per login{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23764,7 +23764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23796,7 +23796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orphanedusersinfo_csharp" style="color: inherit; text-decoration: inherit;">Orphaned<wbr>Users<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orphaneduserinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Orphaned<wbr>User<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#orphaneduserinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Orphaned<wbr>User<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of orphaned users.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -23804,7 +23804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverroleresults_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Role<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Map of server role migration results.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24028,7 +24028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_nodejs" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24060,7 +24060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orphanedusersinfo_nodejs" style="color: inherit; text-decoration: inherit;">orphaned<wbr>Users<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orphaneduserinforesponse">Orphaned<wbr>User<wbr>Info<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#orphaneduserinforesponse">Orphaned<wbr>User<wbr>Info<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of orphaned users.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24068,7 +24068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverroleresults_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Role<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Map of server role migration results.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24160,7 +24160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24192,7 +24192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orphaned_users_info_python" style="color: inherit; text-decoration: inherit;">orphaned_<wbr>users_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orphaneduserinforesponse">Sequence[Orphaned<wbr>User<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#orphaneduserinforesponse">Sequence[Orphaned<wbr>User<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of orphaned users.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24200,7 +24200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_role_results_python" style="color: inherit; text-decoration: inherit;">server_<wbr>role_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Start<wbr>Migration<wbr>Scenario<wbr>Server<wbr>Role<wbr>Result<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Map of server role migration results.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24270,7 +24270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmitaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmitaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24294,7 +24294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmitaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmitaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24306,7 +24306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmitaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmitaskinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24320,7 +24320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24328,7 +24328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24352,7 +24352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmitaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmitaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24408,7 +24408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24416,7 +24416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24424,7 +24424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Error<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Login<wbr>Level<wbr>Response<wbr>Args | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Database<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Error<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Login<wbr>Level<wbr>Response | Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Migration<wbr>Level<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24440,7 +24440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmitaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmitaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24452,7 +24452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24460,7 +24460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24468,7 +24468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Database<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Error<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Login<wbr>Level<wbr>Response<wbr>Args, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Migration<wbr>Level<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Agent<wbr>Job<wbr>Level<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Database<wbr>Level<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Error<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Login<wbr>Level<wbr>Response, Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Migration<wbr>Level<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24484,7 +24484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmitaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmitaskinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24580,7 +24580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened during the command execution{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24620,7 +24620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened during the command execution{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24640,7 +24640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened during the command execution{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24662,7 +24662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24670,7 +24670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesynccompletecommandoutputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesynccompletecommandoutputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Command output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24686,7 +24686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesynccompletecommandinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesynccompletecommandinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Command input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24734,7 +24734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24742,7 +24742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesynccompletecommandoutputresponse">Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesynccompletecommandoutputresponse">Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Command output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24758,7 +24758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesynccompletecommandinputresponse">Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesynccompletecommandinputresponse">Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Command input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24770,7 +24770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24778,7 +24778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesynccompletecommandoutputresponse">Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesynccompletecommandoutputresponse">Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Command output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24794,7 +24794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesynccompletecommandinputresponse">Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#migratesynccompletecommandinputresponse">Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Command input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -25742,7 +25742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Inner errors that caused this error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -25798,7 +25798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Inner errors that caused this error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -25826,7 +25826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Inner errors that caused this error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26286,7 +26286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryresults_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryexecutionresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Query<wbr>Execution<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#queryexecutionresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Query<wbr>Execution<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of queries executed and it's execution results in source and target{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26294,7 +26294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validationerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validationerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validation<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Errors that are part of the execution{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -26326,7 +26326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryresults_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryexecutionresultresponse">Query<wbr>Execution<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#queryexecutionresultresponse">Query<wbr>Execution<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of queries executed and it's execution results in source and target{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26334,7 +26334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validationerrorresponse">Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validationerrorresponse">Validation<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Errors that are part of the execution{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -26346,7 +26346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_results_python" style="color: inherit; text-decoration: inherit;">query_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queryexecutionresultresponse">Query<wbr>Execution<wbr>Result<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#queryexecutionresultresponse">Query<wbr>Execution<wbr>Result<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of queries executed and it's execution results in source and target{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26354,7 +26354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validationerrorresponse">Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validationerrorresponse">Validation<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Errors that are part of the execution{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -26376,7 +26376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresult_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executionstatisticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Execution<wbr>Statistics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#executionstatisticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Execution<wbr>Statistics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Query analysis result from the source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26392,7 +26392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresult_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executionstatisticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Execution<wbr>Statistics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#executionstatisticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Execution<wbr>Statistics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Query analysis result from the target{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -26448,7 +26448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresult_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executionstatisticsresponse">Execution<wbr>Statistics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#executionstatisticsresponse">Execution<wbr>Statistics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Query analysis result from the source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26464,7 +26464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresult_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executionstatisticsresponse">Execution<wbr>Statistics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#executionstatisticsresponse">Execution<wbr>Statistics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Query analysis result from the target{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -26484,7 +26484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_result_python" style="color: inherit; text-decoration: inherit;">source_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executionstatisticsresponse">Execution<wbr>Statistics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#executionstatisticsresponse">Execution<wbr>Statistics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Query analysis result from the source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26500,7 +26500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_result_python" style="color: inherit; text-decoration: inherit;">target_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executionstatisticsresponse">Execution<wbr>Statistics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#executionstatisticsresponse">Execution<wbr>Statistics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Query analysis result from the target{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -26724,7 +26724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemadifferences_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Differences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemacomparisonvalidationresulttyperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Type<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#schemacomparisonvalidationresulttyperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Type<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of schema differences between the source and target databases{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26732,7 +26732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validationerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validationerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validation<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened while performing schema compare validation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26796,7 +26796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemadifferences_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Differences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemacomparisonvalidationresulttyperesponse">Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Type<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#schemacomparisonvalidationresulttyperesponse">Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Type<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of schema differences between the source and target databases{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26804,7 +26804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validationerrorresponse">Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validationerrorresponse">Validation<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened while performing schema compare validation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26832,7 +26832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_differences_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>differences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemacomparisonvalidationresulttyperesponse">Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Type<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#schemacomparisonvalidationresulttyperesponse">Schema<wbr>Comparison<wbr>Validation<wbr>Result<wbr>Type<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of schema differences between the source and target databases{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26840,7 +26840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validationerrorresponse">Validation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validationerrorresponse">Validation<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of errors that happened while performing schema compare validation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27752,7 +27752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_csharp" style="color: inherit; text-decoration: inherit;">Exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -27808,7 +27808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptionsandwarnings_nodejs" style="color: inherit; text-decoration: inherit;">exceptions<wbr>And<wbr>Warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -27836,7 +27836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exceptions_and_warnings_python" style="color: inherit; text-decoration: inherit;">exceptions_<wbr>and_<wbr>warnings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Migration exceptions and warnings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -27980,7 +27980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28004,7 +28004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinput">Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinput">Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28016,7 +28016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinput">Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinput">Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28030,7 +28030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28038,7 +28038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28046,7 +28046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28062,7 +28062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28118,7 +28118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28126,7 +28126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28134,7 +28134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskoutputresponse">Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskoutputresponse">Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28150,7 +28150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinputresponse">Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinputresponse">Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28162,7 +28162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28170,7 +28170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28178,7 +28178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskoutputresponse">Sequence[Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskoutputresponse">Sequence[Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Output<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28194,7 +28194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinputresponse">Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatesyncmigrationinputsqlservertaskinputresponse">Validate<wbr>Sync<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28208,7 +28208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureapp_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryapp">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryapp">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28216,7 +28216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28224,7 +28224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28240,7 +28240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28248,7 +28248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28312,7 +28312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureapp_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28320,7 +28320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28328,7 +28328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28344,7 +28344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28352,7 +28352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28364,7 +28364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_app_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryapp">Azure<wbr>Active<wbr>Directory<wbr>App</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28372,7 +28372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28380,7 +28380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28396,7 +28396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninfo">Mi<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28404,7 +28404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28418,7 +28418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureapp_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28426,7 +28426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28434,7 +28434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28450,7 +28450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28458,7 +28458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28522,7 +28522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureapp_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>App</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28530,7 +28530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28538,7 +28538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28554,7 +28554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28562,7 +28562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28574,7 +28574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_app_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureactivedirectoryappresponse">Azure<wbr>Active<wbr>Directory<wbr>App<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28582,7 +28582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28590,7 +28590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for source SQL Server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28606,7 +28606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#misqlconnectioninforesponse">Mi<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection information for Azure SQL Database Managed Instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28614,7 +28614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28644,7 +28644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with a selected database object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28700,7 +28700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with a selected database object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28728,7 +28728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with a selected database object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28742,7 +28742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28766,7 +28766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinput">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinput">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28778,7 +28778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinput">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinput">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28792,7 +28792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28800,7 +28800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28808,7 +28808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28824,7 +28824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28880,7 +28880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28888,7 +28888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28896,7 +28896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskoutputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskoutputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28912,7 +28912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28924,7 +28924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28932,7 +28932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28940,7 +28940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskoutputresponse">Sequence[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskoutputresponse">Sequence[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Output<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28956,7 +28956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmisynctaskinputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MISync<wbr>Task<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28970,7 +28970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupblobshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Blob<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Blob<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Blob<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28978,7 +28978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28986,7 +28986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -28994,7 +28994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29002,7 +29002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29090,7 +29090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupblobshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Blob<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshare">Blob<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobshare">Blob<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29098,7 +29098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29106,7 +29106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29114,7 +29114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29122,7 +29122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29150,7 +29150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_blob_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>blob_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshare">Blob<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobshare">Blob<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29158,7 +29158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29166,7 +29166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29174,7 +29174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29182,7 +29182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshare">File<wbr>Share<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshare">File<wbr>Share</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29212,7 +29212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupblobshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Blob<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Blob<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Blob<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29220,7 +29220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29228,7 +29228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29236,7 +29236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29244,7 +29244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29332,7 +29332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupblobshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Blob<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshareresponse">Blob<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobshareresponse">Blob<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29340,7 +29340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29348,7 +29348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29356,7 +29356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29364,7 +29364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfileshare_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>File<wbr>Share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29392,7 +29392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_blob_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>blob_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobshareresponse">Blob<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobshareresponse">Blob<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SAS URI of Azure Storage Account Container to be used for storing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29400,7 +29400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqlmidatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>MIDatabase<wbr>Input<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29408,7 +29408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29416,7 +29416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29424,7 +29424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_file_share_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>file_<wbr>share</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#fileshareresponse">File<wbr>Share<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup file share information for all selected databases.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29454,7 +29454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfoldererrors_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Folder<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the BackupFolder path{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29462,7 +29462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsharecredentialserrors_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Share<wbr>Credentials<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with backup share user name and password credentials{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29470,7 +29470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupstorageaccounterrors_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Storage<wbr>Account<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the storage account provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29478,7 +29478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#existingbackuperrors_csharp" style="color: inherit; text-decoration: inherit;">Existing<wbr>Backup<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with existing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29502,7 +29502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restoredatabasenameerrors_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Database<wbr>Name<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the RestoreDatabaseName{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29510,7 +29510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasebackupinfo_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Backup<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Backup<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#databasebackupinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Database<wbr>Backup<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about backup files when existing backup mode is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -29590,7 +29590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupfoldererrors_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Folder<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the BackupFolder path{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29598,7 +29598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsharecredentialserrors_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Share<wbr>Credentials<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with backup share user name and password credentials{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29606,7 +29606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupstorageaccounterrors_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Storage<wbr>Account<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the storage account provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29614,7 +29614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#existingbackuperrors_nodejs" style="color: inherit; text-decoration: inherit;">existing<wbr>Backup<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with existing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29638,7 +29638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restoredatabasenameerrors_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Database<wbr>Name<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the RestoreDatabaseName{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29646,7 +29646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasebackupinfo_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Backup<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupinforesponse">Database<wbr>Backup<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#databasebackupinforesponse">Database<wbr>Backup<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about backup files when existing backup mode is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -29658,7 +29658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_folder_errors_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>folder_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the BackupFolder path{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29666,7 +29666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_share_credentials_errors_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>share_<wbr>credentials_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with backup share user name and password credentials{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29674,7 +29674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_storage_account_errors_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>storage_<wbr>account_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the storage account provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29682,7 +29682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#existing_backup_errors_python" style="color: inherit; text-decoration: inherit;">existing_<wbr>backup_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with existing backup files.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29706,7 +29706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restore_database_name_errors_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>database_<wbr>name_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with the RestoreDatabaseName{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29714,7 +29714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_backup_info_python" style="color: inherit; text-decoration: inherit;">database_<wbr>backup_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupinforesponse">Database<wbr>Backup<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#databasebackupinforesponse">Database<wbr>Backup<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about backup files when existing backup mode is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -29728,7 +29728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -29752,7 +29752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinput">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinput">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -29764,7 +29764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinput">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinput">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -29778,7 +29778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29786,7 +29786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>OData<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29794,7 +29794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskoutputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29810,7 +29810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -29866,7 +29866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response | Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29874,7 +29874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">OData<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29882,7 +29882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskoutputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskoutputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29898,7 +29898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -29910,7 +29910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Migrate<wbr>MISync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response, Migrate<wbr>Sync<wbr>Complete<wbr>Command<wbr>Properties<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}Array of command properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29918,7 +29918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#odataerrorresponse">Sequence[OData<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Array of errors. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29926,7 +29926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskoutputresponse">Sequence[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskoutputresponse">Sequence[Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Output<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Task output. This is ignored if submitted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29942,7 +29942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#validatemigrationinputsqlserversqlmitaskinputresponse">Validate<wbr>Migration<wbr>Input<wbr>Sql<wbr>Server<wbr>Sql<wbr>MITask<wbr>Input<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Task input{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -29956,7 +29956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29964,7 +29964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source SQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -29972,7 +29972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -30012,7 +30012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -30020,7 +30020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source SQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -30028,7 +30028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -30040,7 +30040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinput">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -30048,7 +30048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source SQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -30056,7 +30056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninfo">Sql<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -30070,7 +30070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -30078,7 +30078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source SQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -30086,7 +30086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -30126,7 +30126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selecteddatabases_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -30134,7 +30134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source SQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -30142,7 +30142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetconnectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Connection<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -30154,7 +30154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selected_databases_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migratesqlserversqldbsyncdatabaseinputresponse">Sequence[Migrate<wbr>Sql<wbr>Server<wbr>Sql<wbr>Db<wbr>Sync<wbr>Database<wbr>Input<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Databases to migrate{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -30162,7 +30162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_connection_info_python" style="color: inherit; text-decoration: inherit;">source_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to source SQL server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -30170,7 +30170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_connection_info_python" style="color: inherit; text-decoration: inherit;">target_<wbr>connection_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectioninforesponse">Sql<wbr>Connection<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for connecting to target{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -30200,7 +30200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Migration.<wbr>Inputs.<wbr>Reportable<wbr>Exception<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with a selected database object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -30256,7 +30256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationerrors_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Reportable<wbr>Exception<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with a selected database object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -30284,7 +30284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#reportableexceptionresponse">Sequence[Reportable<wbr>Exception<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Errors associated with a selected database object{{% /md %}}</dd></dl>
 {{% /choosable %}}

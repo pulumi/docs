@@ -359,7 +359,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacenterresourceproperties">Data<wbr>Center<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#datacenterresourceproperties">Data<wbr>Center<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of a managed Cassandra data center.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -752,7 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seednodes_csharp" style="color: inherit; text-decoration: inherit;">Seed<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Seed<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#seednoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Seed<wbr>Node<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -856,7 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seednodes_nodejs" style="color: inherit; text-decoration: inherit;">seed<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -908,7 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seed_nodes_python" style="color: inherit; text-decoration: inherit;">seed_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">Sequence[Seed<wbr>Node<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#seednoderesponse">Sequence[Seed<wbr>Node<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

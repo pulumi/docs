@@ -466,7 +466,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableresource">Cassandra<wbr>Table<wbr>Resource</a></span>
+        <span class="property-type"><a href="#cassandratableresource">Cassandra<wbr>Table<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a Cassandra table{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -490,7 +490,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options</a></span>
+        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -985,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterkeys_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cluster<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusterkey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cluster<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#column">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#column">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Column&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkeys_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Partition<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#cassandrapartitionkey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Partition<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1041,7 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterkeys_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkey">Cluster<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clusterkey">Cluster<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#column">Column<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#column">Column[]</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkeys_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkey">Cassandra<wbr>Partition<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#cassandrapartitionkey">Cassandra<wbr>Partition<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1069,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_keys_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkey">Sequence[Cluster<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterkey">Sequence[Cluster<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1077,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#column">Sequence[Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#column">Sequence[Column]</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1085,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_keys_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkey">Sequence[Cassandra<wbr>Partition<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cassandrapartitionkey">Sequence[Cassandra<wbr>Partition<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1099,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterkeys_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cluster<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusterkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cluster<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1107,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#columnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#columnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Column<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1115,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkeys_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Partition<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#cassandrapartitionkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Partition<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1155,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterkeys_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkeyresponse">Cluster<wbr>Key<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clusterkeyresponse">Cluster<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1163,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#columnresponse">Column<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#columnresponse">Column<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkeys_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkeyresponse">Cassandra<wbr>Partition<wbr>Key<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#cassandrapartitionkeyresponse">Cassandra<wbr>Partition<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1183,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_keys_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkeyresponse">Sequence[Cluster<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterkeyresponse">Sequence[Cluster<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1191,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#columnresponse">Sequence[Column<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#columnresponse">Sequence[Column<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1199,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_keys_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkeyresponse">Sequence[Cassandra<wbr>Partition<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cassandrapartitionkeyresponse">Sequence[Cassandra<wbr>Partition<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1213,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1273,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1343,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschemaresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Schema<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cassandraschemaresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Schema<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1463,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschemaresponse">Cassandra<wbr>Schema<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cassandraschemaresponse">Cassandra<wbr>Schema<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1523,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschemaresponse">Cassandra<wbr>Schema<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cassandraschemaresponse">Cassandra<wbr>Schema<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1561,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschema">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#cassandraschema">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1633,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschema">Cassandra<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#cassandraschema">Cassandra<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1669,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschema">Cassandra<wbr>Schema<wbr>Args</a></span>
+        <span class="property-type"><a href="#cassandraschema">Cassandra<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2011,7 +2011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2051,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2071,7 +2071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

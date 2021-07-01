@@ -435,7 +435,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -443,7 +443,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#jitaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Jit<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationjitaccesspolicy">Application<wbr>Jit<wbr>Access<wbr>Policy</a></span>
+        <span class="property-type"><a href="#applicationjitaccesspolicy">Application<wbr>Jit<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managed application Jit access policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -483,7 +483,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plan">Plan</a></span>
+        <span class="property-type"><a href="#plan">Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The plan information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -491,7 +491,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1586,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jitapprovers_csharp" style="color: inherit; text-decoration: inherit;">Jit<wbr>Approvers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitapproverdefinition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Solutions.<wbr>Inputs.<wbr>Jit<wbr>Approver<wbr>Definition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jitapproverdefinition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Solutions.<wbr>Inputs.<wbr>Jit<wbr>Approver<wbr>Definition&gt;</a></span>
     </dt>
     <dd>{{% md %}}The JIT approvers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1658,7 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jitapprovers_nodejs" style="color: inherit; text-decoration: inherit;">jit<wbr>Approvers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitapproverdefinition">Jit<wbr>Approver<wbr>Definition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jitapproverdefinition">Jit<wbr>Approver<wbr>Definition[]</a></span>
     </dt>
     <dd>{{% md %}}The JIT approvers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1694,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jit_approvers_python" style="color: inherit; text-decoration: inherit;">jit_<wbr>approvers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitapproverdefinition">Sequence[Jit<wbr>Approver<wbr>Definition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitapproverdefinition">Sequence[Jit<wbr>Approver<wbr>Definition]</a></span>
     </dt>
     <dd>{{% md %}}The JIT approvers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1732,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jitapprovers_csharp" style="color: inherit; text-decoration: inherit;">Jit<wbr>Approvers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitapproverdefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Solutions.<wbr>Inputs.<wbr>Jit<wbr>Approver<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jitapproverdefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Solutions.<wbr>Inputs.<wbr>Jit<wbr>Approver<wbr>Definition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The JIT approvers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jitapprovers_nodejs" style="color: inherit; text-decoration: inherit;">jit<wbr>Approvers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitapproverdefinitionresponse">Jit<wbr>Approver<wbr>Definition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jitapproverdefinitionresponse">Jit<wbr>Approver<wbr>Definition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The JIT approvers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1840,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jit_approvers_python" style="color: inherit; text-decoration: inherit;">jit_<wbr>approvers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jitapproverdefinitionresponse">Sequence[Jit<wbr>Approver<wbr>Definition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jitapproverdefinitionresponse">Sequence[Jit<wbr>Approver<wbr>Definition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The JIT approvers{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2078,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2164,7 +2164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Solutions.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Solutions.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2236,7 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2272,7 +2272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Resource<wbr>Identity<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}

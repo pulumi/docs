@@ -585,7 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Details of the policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -593,7 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roledefinition_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}Details of role definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -601,7 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource scope{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -641,7 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Details of the policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -649,7 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roledefinition_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}Details of role definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -657,7 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource scope{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -669,7 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Details of the policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -677,7 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_definition_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}Details of role definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -685,7 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource scope{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -699,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principalresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Principal<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#principalresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Principal<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The name of the entity last modified it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -755,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principalresponse">Principal<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#principalresponse">Principal<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The name of the entity last modified it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -783,7 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principalresponse">Principal<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#principalresponse">Principal<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The name of the entity last modified it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

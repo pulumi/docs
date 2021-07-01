@@ -441,7 +441,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#advancedschedule_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedule">Advanced<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#advancedschedule">Advanced<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the AdvancedSchedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1008,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence&gt;</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1064,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence[]</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1092,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">Sequence[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args]</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">Sequence[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence]</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1286,7 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Automation.<wbr>Inputs.<wbr>Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1342,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1370,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Sequence[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Sequence[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

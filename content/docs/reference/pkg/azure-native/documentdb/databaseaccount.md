@@ -928,7 +928,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#location">[]Location</a></span>
+        <span class="property-type"><a href="#location">[]Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array that contains the georeplication locations enabled for the Cosmos DB account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -952,7 +952,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#apiproperties_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiproperties">Api<wbr>Properties</a></span>
+        <span class="property-type"><a href="#apiproperties">Api<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}API specific properties. Currently, supported only for MongoDB API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -960,7 +960,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#backuppolicy_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#continuousmodebackuppolicy">Continuous<wbr>Mode<wbr>Backup<wbr>Policy</a> | <a href="#periodicmodebackuppolicy">Periodic<wbr>Mode<wbr>Backup<wbr>Policy</a></span>
+        <span class="property-type"><a href="#continuousmodebackuppolicy">Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args</a> | <a href="#periodicmodebackuppolicy">Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -968,7 +968,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">[]Capability</a></span>
+        <span class="property-type"><a href="#capability">[]Capability<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of Cosmos DB capabilities for the account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -984,7 +984,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#consistencypolicy_go" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consistencypolicy">Consistency<wbr>Policy</a></span>
+        <span class="property-type"><a href="#consistencypolicy">Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The consistency policy for the Cosmos DB account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -992,7 +992,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corspolicy">[]Cors<wbr>Policy</a></span>
+        <span class="property-type"><a href="#corspolicy">[]Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1056,7 +1056,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1064,7 +1064,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressorrange">[]Ip<wbr>Address<wbr>Or<wbr>Range</a></span>
+        <span class="property-type"><a href="#ipaddressorrange">[]Ip<wbr>Address<wbr>Or<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of IpRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1104,7 +1104,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#networkaclbypass_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclbypass">Network<wbr>Acl<wbr>Bypass</a></span>
+        <span class="property-type"><a href="#networkaclbypass">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates what services are allowed to bypass firewall checks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1136,7 +1136,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">[]Virtual<wbr>Network<wbr>Rule</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">[]Virtual<wbr>Network<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of Virtual Network ACL rules configured for the Cosmos DB account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3417,7 +3417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3503,7 +3503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3575,7 +3575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3611,7 +3611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3733,7 +3733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodicmodeproperties_csharp" style="color: inherit; text-decoration: inherit;">Periodic<wbr>Mode<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodicmodeproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#periodicmodeproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3757,7 +3757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodicmodeproperties_nodejs" style="color: inherit; text-decoration: inherit;">periodic<wbr>Mode<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodicmodeproperties">Periodic<wbr>Mode<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#periodicmodeproperties">Periodic<wbr>Mode<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3769,7 +3769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodic_mode_properties_python" style="color: inherit; text-decoration: inherit;">periodic_<wbr>mode_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodicmodeproperties">Periodic<wbr>Mode<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#periodicmodeproperties">Periodic<wbr>Mode<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3783,7 +3783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodicmodeproperties_csharp" style="color: inherit; text-decoration: inherit;">Periodic<wbr>Mode<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodicmodepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Periodic<wbr>Mode<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3807,7 +3807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodicmodeproperties_nodejs" style="color: inherit; text-decoration: inherit;">periodic<wbr>Mode<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3819,7 +3819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodic_mode_properties_python" style="color: inherit; text-decoration: inherit;">periodic_<wbr>mode_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4029,7 +4029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4037,7 +4037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4149,7 +4149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4157,7 +4157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4209,7 +4209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4217,7 +4217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

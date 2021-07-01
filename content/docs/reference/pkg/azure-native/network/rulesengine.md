@@ -654,7 +654,7 @@ The RulesEngine resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesenginerule">[]Rules<wbr>Engine<wbr>Rule</a></span>
+        <span class="property-type"><a href="#rulesenginerule">[]Rules<wbr>Engine<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of rules that define a particular Rules Engine Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1227,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendpool_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Cache<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Cache<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1299,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendpool_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1307,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheconfiguration">Cache<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheconfiguration">Cache<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1335,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backend_pool_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1343,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_configuration_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheconfiguration">Cache<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheconfiguration">Cache<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendpool_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1381,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Cache<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Cache<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1445,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendpool_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1453,7 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheconfigurationresponse">Cache<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheconfigurationresponse">Cache<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1481,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backend_pool_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1489,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_configuration_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheconfigurationresponse">Cache<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cacheconfigurationresponse">Cache<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2351,7 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeraction">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#headeraction">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2359,7 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responseheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeraction">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#headeraction">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2367,7 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfigurationoverride_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Args</a> | <a href="#redirectconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration</a> | <a href="#redirectconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2407,7 +2407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeraction">Header<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#headeraction">Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2415,7 +2415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responseheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeraction">Header<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#headeraction">Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2423,7 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfigurationoverride_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration<wbr>Args</a> | <a href="#redirectconfiguration">Redirect<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration</a> | <a href="#redirectconfiguration">Redirect<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2435,7 +2435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_header_actions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeraction">Sequence[Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#headeraction">Sequence[Header<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2443,7 +2443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_header_actions_python" style="color: inherit; text-decoration: inherit;">response_<wbr>header_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeraction">Sequence[Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#headeraction">Sequence[Header<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2451,7 +2451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#route_configuration_override_python" style="color: inherit; text-decoration: inherit;">route_<wbr>configuration_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration<wbr>Args</a> | <a href="#redirectconfiguration">Redirect<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration</a> | <a href="#redirectconfiguration">Redirect<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2465,7 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#headeractionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2473,7 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responseheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#headeractionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2481,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfigurationoverride_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#redirectconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response</a> | <a href="#redirectconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2521,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionresponse">Header<wbr>Action<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#headeractionresponse">Header<wbr>Action<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2529,7 +2529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responseheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionresponse">Header<wbr>Action<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#headeractionresponse">Header<wbr>Action<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2537,7 +2537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routeconfigurationoverride_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a> | <a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2549,7 +2549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_header_actions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionresponse">Sequence[Header<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#headeractionresponse">Sequence[Header<wbr>Action<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2557,7 +2557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_header_actions_python" style="color: inherit; text-decoration: inherit;">response_<wbr>header_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionresponse">Sequence[Header<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#headeractionresponse">Sequence[Header<wbr>Action<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2565,7 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#route_configuration_override_python" style="color: inherit; text-decoration: inherit;">route_<wbr>configuration_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a> | <a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3127,7 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesengineaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3151,7 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesenginematchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesenginematchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3215,7 +3215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineaction">Rules<wbr>Engine<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesengineaction">Rules<wbr>Engine<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3239,7 +3239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesenginematchcondition">Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesenginematchcondition">Rules<wbr>Engine<wbr>Match<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3259,7 +3259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineaction">Rules<wbr>Engine<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesengineaction">Rules<wbr>Engine<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3283,7 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesenginematchcondition">Sequence[Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesenginematchcondition">Sequence[Rules<wbr>Engine<wbr>Match<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3305,7 +3305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesengineactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3329,7 +3329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesenginematchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#rulesenginematchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3393,7 +3393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineactionresponse">Rules<wbr>Engine<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesengineactionresponse">Rules<wbr>Engine<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3417,7 +3417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesenginematchconditionresponse">Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#rulesenginematchconditionresponse">Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3437,7 +3437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesengineactionresponse">Rules<wbr>Engine<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rulesengineactionresponse">Rules<wbr>Engine<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3461,7 +3461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesenginematchconditionresponse">Sequence[Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rulesenginematchconditionresponse">Sequence[Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

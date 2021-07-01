@@ -734,7 +734,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#pathrecommendations_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pathrecommendation">[]Path<wbr>Recommendation</a></span>
+        <span class="property-type"><a href="#pathrecommendation">[]Path<wbr>Recommendation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +742,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#protectionmode_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionmode">Protection<wbr>Mode</a></span>
+        <span class="property-type"><a href="#protectionmode">Protection<wbr>Mode<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +750,7 @@ The AdaptiveApplicationControl resource accepts the following [input]({{< relref
 <a href="#vmrecommendations_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmrecommendation">[]Vm<wbr>Recommendation</a></span>
+        <span class="property-type"><a href="#vmrecommendation">[]Vm<wbr>Recommendation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1279,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisherinfo_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Publisher<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#publisherinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Publisher<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernames_csharp" style="color: inherit; text-decoration: inherit;">Usernames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userrecommendation">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>User<wbr>Recommendation<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userrecommendation">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>User<wbr>Recommendation&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1431,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisherinfo_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherinfo">Publisher<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#publisherinfo">Publisher<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1455,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernames_nodejs" style="color: inherit; text-decoration: inherit;">usernames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userrecommendation">User<wbr>Recommendation<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#userrecommendation">User<wbr>Recommendation[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1507,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_info_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherinfo">Publisher<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#publisherinfo">Publisher<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1531,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernames_python" style="color: inherit; text-decoration: inherit;">usernames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userrecommendation">Sequence[User<wbr>Recommendation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userrecommendation">Sequence[User<wbr>Recommendation]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1585,7 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisherinfo_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Publisher<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publisherinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>Publisher<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernames_csharp" style="color: inherit; text-decoration: inherit;">Usernames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userrecommendationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>User<wbr>Recommendation<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#userrecommendationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Inputs.<wbr>User<wbr>Recommendation<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1737,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisherinfo_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherinforesponse">Publisher<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publisherinforesponse">Publisher<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1761,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernames_nodejs" style="color: inherit; text-decoration: inherit;">usernames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userrecommendationresponse">User<wbr>Recommendation<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#userrecommendationresponse">User<wbr>Recommendation<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1813,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_info_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publisherinforesponse">Publisher<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publisherinforesponse">Publisher<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Represents the publisher information of a process/rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernames_python" style="color: inherit; text-decoration: inherit;">usernames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userrecommendationresponse">Sequence[User<wbr>Recommendation<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userrecommendationresponse">Sequence[User<wbr>Recommendation<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

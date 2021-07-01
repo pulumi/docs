@@ -249,7 +249,7 @@ The WebAppAzureStorageAccountsSlot resource accepts the following [input]({{< re
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Azure<wbr>Storage<wbr>Info<wbr>Value</span>
+        <span class="property-type">map[string]Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Args</span>
     </dt>
     <dd>{{% md %}}Azure storage accounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -524,7 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragetype">Azure<wbr>Storage<wbr>Type</a></span>
+        <span class="property-type"><a href="#azurestoragetype">string</a></span>
     </dt>
     <dd>{{% md %}}Type of storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}

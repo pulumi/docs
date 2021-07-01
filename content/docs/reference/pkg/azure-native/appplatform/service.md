@@ -545,7 +545,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceproperties">Cluster<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#clusterresourceproperties">Cluster<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Service resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -561,7 +561,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sku of the Service resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -816,7 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Network<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -840,7 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -852,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofile">Network<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -890,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -962,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -998,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofileresponse">Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network profile of the Service{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1190,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundips_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponseoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofileresponseoutboundips">Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1198,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiredtraffics_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Traffics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requiredtrafficresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Required<wbr>Traffic<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#requiredtrafficresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>App<wbr>Platform.<wbr>Inputs.<wbr>Required<wbr>Traffic<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Required inbound or outbound traffics for Azure Spring Cloud instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1310,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outboundips_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponseoutboundips">Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofileresponseoutboundips">Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1318,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiredtraffics_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Traffics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requiredtrafficresponse">Required<wbr>Traffic<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#requiredtrafficresponse">Required<wbr>Traffic<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Required inbound or outbound traffics for Azure Spring Cloud instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1370,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outbound_ips_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkprofileresponseoutboundips">Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkprofileresponseoutboundips">Network<wbr>Profile<wbr>Response<wbr>Outbound<wbr>IPs</a></span>
     </dt>
     <dd>{{% md %}}Desired outbound IP resources for Azure Spring Cloud instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1378,7 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#required_traffics_python" style="color: inherit; text-decoration: inherit;">required_<wbr>traffics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requiredtrafficresponse">Sequence[Required<wbr>Traffic<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requiredtrafficresponse">Sequence[Required<wbr>Traffic<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Required inbound or outbound traffics for Azure Spring Cloud instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

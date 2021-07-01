@@ -378,7 +378,7 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity block returned by ARM resource that supports managed identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +394,7 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofileresourceproperties">Configuration<wbr>Profile<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#configurationprofileresourceproperties">Configuration<wbr>Profile<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of a configuration profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -789,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Notification<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -813,7 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -825,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -839,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -863,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -923,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitorworkspaceproperties_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspaceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspaceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Azure<wbr>Monitor<wbr>Workspace<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -963,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitorworkspaceproperties_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Monitor<wbr>Workspace<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspaceproperties">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspaceproperties">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -983,7 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_monitor_workspace_properties_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>monitor_<wbr>workspace_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspaceproperties">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspaceproperties">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1005,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitorworkspaceproperties_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1045,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitorworkspaceproperties_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Monitor<wbr>Workspace<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1065,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_monitor_workspace_properties_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>monitor_<wbr>workspace_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}

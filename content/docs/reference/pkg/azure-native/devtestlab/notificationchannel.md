@@ -430,7 +430,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#event">[]Event</a></span>
+        <span class="property-type"><a href="#event">[]Event<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of event for which this notification is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

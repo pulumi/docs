@@ -415,7 +415,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#capturedescription_go" style="color: inherit; text-decoration: inherit;">Capture<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capturedescription">Capture<wbr>Description</a></span>
+        <span class="property-type"><a href="#capturedescription">Capture<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of capture description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -447,7 +447,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitystatus">Entity<wbr>Status</a></span>
+        <span class="property-type"><a href="#entitystatus">string</a></span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the status of the Event Hub.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -806,7 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#destination">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encodingcapturedescription">Encoding<wbr>Capture<wbr>Description</a></span>
+        <span class="property-type"><a href="#encodingcapturedescription">string</a></span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -910,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destination">Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#destination">Destination</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -962,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destination">Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#destination">Destination</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1016,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Hub.<wbr>Inputs.<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1120,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationresponse">Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationresponse">Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1172,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#destinationresponse">Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#destinationresponse">Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of Destination where capture will be stored. (Storage Account, Blob Names){{% /md %}}</dd><dt class="property-optional"
             title="Optional">

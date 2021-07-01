@@ -458,7 +458,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#profilepropertyreferences_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Property<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantprofilepropertyreference">[]Participant<wbr>Profile<wbr>Property<wbr>Reference</a></span>
+        <span class="property-type"><a href="#participantprofilepropertyreference">[]Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The property references for the Profile of the Relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -466,7 +466,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#relatedprofilepropertyreferences_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Profile<wbr>Property<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#participantprofilepropertyreference">[]Participant<wbr>Profile<wbr>Property<wbr>Reference</a></span>
+        <span class="property-type"><a href="#participantprofilepropertyreference">[]Participant<wbr>Profile<wbr>Property<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The property references for the Related Profile of the Relationship.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -506,7 +506,7 @@ The RelationshipLink resource accepts the following [input]({{< relref "/docs/in
 <a href="#mappings_go" style="color: inherit; text-decoration: inherit;">Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#relationshiplinkfieldmapping">[]Relationship<wbr>Link<wbr>Field<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#relationshiplinkfieldmapping">[]Relationship<wbr>Link<wbr>Field<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mappings between Interaction and Relationship fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1187,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linktype_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linktypes">Link<wbr>Types</a></span>
+        <span class="property-type"><a href="#linktypes">string</a></span>
     </dt>
     <dd>{{% md %}}Link type.{{% /md %}}</dd></dl>
 {{% /choosable %}}

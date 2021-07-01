@@ -428,7 +428,7 @@ The CustomerEvent resource accepts the following [input]({{< relref "/docs/intro
 <a href="#receivers_go" style="color: inherit; text-decoration: inherit;">Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationeventreceiver">[]Notification<wbr>Event<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#notificationeventreceiver">[]Notification<wbr>Event<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The notification event receivers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -823,7 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receivervalue_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationreceivervalue">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Notification<wbr>Receiver<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationreceivervalue">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Notification<wbr>Receiver<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}The notification event receiver value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -863,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receivervalue_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationreceivervalue">Notification<wbr>Receiver<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationreceivervalue">Notification<wbr>Receiver<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}The notification event receiver value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -883,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_value_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationreceivervalue">Notification<wbr>Receiver<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationreceivervalue">Notification<wbr>Receiver<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}The notification event receiver value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -905,7 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receivervalue_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationreceivervalueresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Notification<wbr>Receiver<wbr>Value<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationreceivervalueresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Notification<wbr>Receiver<wbr>Value<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The notification event receiver value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -945,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receivervalue_nodejs" style="color: inherit; text-decoration: inherit;">receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationreceivervalueresponse">Notification<wbr>Receiver<wbr>Value<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationreceivervalueresponse">Notification<wbr>Receiver<wbr>Value<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The notification event receiver value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -965,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#receiver_value_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationreceivervalueresponse">Notification<wbr>Receiver<wbr>Value<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationreceivervalueresponse">Notification<wbr>Receiver<wbr>Value<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The notification event receiver value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -979,7 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distributiongrouplistreceivervalue_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiongrouplistreceivervalue">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiongrouplistreceivervalue">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -987,7 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionreceivervalue_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionreceivervalue">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Subscription<wbr>Receiver<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionreceivervalue">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Subscription<wbr>Receiver<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -995,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userobjectreceivervalue_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Object<wbr>Receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userobjectreceivervalue">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>User<wbr>Object<wbr>Receiver<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#userobjectreceivervalue">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>User<wbr>Object<wbr>Receiver<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1035,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distributiongrouplistreceivervalue_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiongrouplistreceivervalue">Distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiongrouplistreceivervalue">Distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1043,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionreceivervalue_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionreceivervalue">Subscription<wbr>Receiver<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionreceivervalue">Subscription<wbr>Receiver<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1051,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userobjectreceivervalue_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Object<wbr>Receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userobjectreceivervalue">User<wbr>Object<wbr>Receiver<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#userobjectreceivervalue">User<wbr>Object<wbr>Receiver<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1063,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distribution_group_list_receiver_value_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>group_<wbr>list_<wbr>receiver_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiongrouplistreceivervalue">Distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiongrouplistreceivervalue">Distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1071,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_receiver_value_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>receiver_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionreceivervalue">Subscription<wbr>Receiver<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionreceivervalue">Subscription<wbr>Receiver<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1079,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_object_receiver_value_python" style="color: inherit; text-decoration: inherit;">user_<wbr>object_<wbr>receiver_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userobjectreceivervalue">User<wbr>Object<wbr>Receiver<wbr>Value<wbr>Args</a></span>
+        <span class="property-type"><a href="#userobjectreceivervalue">User<wbr>Object<wbr>Receiver<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1093,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distributiongrouplistreceivervalue_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiongrouplistreceivervalueresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiongrouplistreceivervalueresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionreceivervalue_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionreceivervalueresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Subscription<wbr>Receiver<wbr>Value<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionreceivervalueresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>Subscription<wbr>Receiver<wbr>Value<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userobjectreceivervalue_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Object<wbr>Receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userobjectreceivervalueresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>User<wbr>Object<wbr>Receiver<wbr>Value<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userobjectreceivervalueresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Test<wbr>Base.<wbr>Inputs.<wbr>User<wbr>Object<wbr>Receiver<wbr>Value<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1149,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distributiongrouplistreceivervalue_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiongrouplistreceivervalueresponse">Distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiongrouplistreceivervalueresponse">Distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1157,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionreceivervalue_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionreceivervalueresponse">Subscription<wbr>Receiver<wbr>Value<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionreceivervalueresponse">Subscription<wbr>Receiver<wbr>Value<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1165,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userobjectreceivervalue_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Object<wbr>Receiver<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userobjectreceivervalueresponse">User<wbr>Object<wbr>Receiver<wbr>Value<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userobjectreceivervalueresponse">User<wbr>Object<wbr>Receiver<wbr>Value<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1177,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#distribution_group_list_receiver_value_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>group_<wbr>list_<wbr>receiver_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiongrouplistreceivervalueresponse">Distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#distributiongrouplistreceivervalueresponse">Distribution<wbr>Group<wbr>List<wbr>Receiver<wbr>Value<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_receiver_value_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>receiver_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionreceivervalueresponse">Subscription<wbr>Receiver<wbr>Value<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subscriptionreceivervalueresponse">Subscription<wbr>Receiver<wbr>Value<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_object_receiver_value_python" style="color: inherit; text-decoration: inherit;">user_<wbr>object_<wbr>receiver_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userobjectreceivervalueresponse">User<wbr>Object<wbr>Receiver<wbr>Value<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userobjectreceivervalueresponse">User<wbr>Object<wbr>Receiver<wbr>Value<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The user object receiver value.{{% /md %}}</dd></dl>
 {{% /choosable %}}

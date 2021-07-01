@@ -541,7 +541,7 @@ The ActionRuleByName resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroup">Action<wbr>Group</a> | <a href="#diagnostics">Diagnostics</a> | <a href="#suppression">Suppression</a></span>
+        <span class="property-type"><a href="#actiongroup">Action<wbr>Group<wbr>Args</a> | <a href="#diagnostics">Diagnostics<wbr>Args</a> | <a href="#suppression">Suppression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}action rule properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -788,7 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -804,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditions">Conditions</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -892,7 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#scope">Scope</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -920,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditions">Conditions</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -936,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#scope">Scope</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -998,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1014,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1166,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1226,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1242,7 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1454,7 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertcontext_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1462,7 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertruleid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1470,7 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1478,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitorcondition_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1486,7 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitorservice_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1494,7 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1502,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1574,7 +1574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertcontext_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1582,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertruleid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1590,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1598,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitorcondition_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1606,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitorservice_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1614,7 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1622,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1634,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alert_context_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1642,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alert_rule_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1650,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1658,7 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitor_condition_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1666,7 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitor_service_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1674,7 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1682,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#condition">Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#condition">Condition</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1696,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertcontext_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1704,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertruleid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1712,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1720,7 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitorcondition_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1728,7 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitorservice_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1736,7 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1744,7 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1816,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertcontext_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1824,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alertruleid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1832,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1840,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitorcondition_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1848,7 +1848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitorservice_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1856,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1864,7 +1864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1876,7 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alert_context_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert context (payload){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1884,7 +1884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alert_rule_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1892,7 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by alert rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1900,7 +1900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitor_condition_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1908,7 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitor_service_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by monitor service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1916,7 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by severity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1924,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter alerts by target resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1938,7 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1954,7 +1954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2010,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditions">Conditions</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2026,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#scope">Scope</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2046,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditions">Conditions</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2062,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#scope">Scope</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2116,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2132,7 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2252,7 +2252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2268,7 +2268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2320,7 +2320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2336,7 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2586,7 +2586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suppressionconfig_csharp" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2594,7 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2610,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#scope">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2674,7 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suppressionconfig_nodejs" style="color: inherit; text-decoration: inherit;">suppression<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionconfig">Suppression<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionconfig">Suppression<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2682,7 +2682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditions">Conditions</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2698,7 +2698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#scope">Scope</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2718,7 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suppression_config_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionconfig">Suppression<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionconfig">Suppression<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2726,7 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditions">Conditions<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditions">Conditions</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2742,7 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scope">Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#scope">Scope</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2772,7 +2772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2812,7 +2812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionschedule">Suppression<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionschedule">Suppression<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2832,7 +2832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionschedule">Suppression<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionschedule">Suppression<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2854,7 +2854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionscheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2894,7 +2894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionscheduleresponse">Suppression<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionscheduleresponse">Suppression<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2914,7 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionscheduleresponse">Suppression<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionscheduleresponse">Suppression<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}suppression schedule configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2960,7 +2960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suppressionconfig_csharp" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Suppression<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2968,7 +2968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2984,7 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3112,7 +3112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suppressionconfig_nodejs" style="color: inherit; text-decoration: inherit;">suppression<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionconfigresponse">Suppression<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionconfigresponse">Suppression<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3120,7 +3120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3136,7 +3136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3188,7 +3188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suppression_config_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#suppressionconfigresponse">Suppression<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#suppressionconfigresponse">Suppression<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}suppression configuration for the action rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3196,7 +3196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#conditionsresponse">Conditions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}conditions on which alerts will be filtered{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3212,7 +3212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scoperesponse">Scope<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}scope on which action rule will apply{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -356,7 +356,7 @@ The Setting resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cache_go" style="color: inherit; text-decoration: inherit;">Cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingspropertiescache">[]Settings<wbr>Properties<wbr>Cache</a></span>
+        <span class="property-type"><a href="#settingspropertiescache">[]Settings<wbr>Properties<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Array of scopes with additional details used by Cost Management in the Azure portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

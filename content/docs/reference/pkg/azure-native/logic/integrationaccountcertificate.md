@@ -408,7 +408,7 @@ The IntegrationAccountCertificate resource accepts the following [input]({{< rel
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreference">Key<wbr>Vault<wbr>Key<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreference">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key details in the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -791,7 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferencekeyvault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Key<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferencekeyvault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Key<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -847,7 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferencekeyvault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Key<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferencekeyvault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Key<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -875,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferencekeyvault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Key<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferencekeyvault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Key<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -955,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsekeyvault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsekeyvault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1011,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsekeyvault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsekeyvault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1039,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsekeyvault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsekeyvault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Key<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

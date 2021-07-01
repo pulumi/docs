@@ -1182,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error information of last collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1254,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error information of last collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1290,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error information of last collection{{% /md %}}</dd></dl>
 {{% /choosable %}}

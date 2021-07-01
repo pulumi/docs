@@ -395,7 +395,7 @@ The ManagedNetworkPeeringPolicy resource accepts the following [input]({{< relre
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managednetworkpeeringpolicyproperties">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties</a></span>
+        <span class="property-type"><a href="#managednetworkpeeringpolicyproperties">Managed<wbr>Network<wbr>Peering<wbr>Policy<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the properties of a Managed Network Policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -634,7 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hub_csharp" style="color: inherit; text-decoration: inherit;">Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_csharp" style="color: inherit; text-decoration: inherit;">Mesh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -650,7 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spokes_csharp" style="color: inherit; text-decoration: inherit;">Spokes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceid">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -706,7 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hub_nodejs" style="color: inherit; text-decoration: inherit;">hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_nodejs" style="color: inherit; text-decoration: inherit;">mesh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spokes_nodejs" style="color: inherit; text-decoration: inherit;">spokes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -742,7 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hub_python" style="color: inherit; text-decoration: inherit;">hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_python" style="color: inherit; text-decoration: inherit;">mesh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spokes_python" style="color: inherit; text-decoration: inherit;">spokes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceid">Sequence[Resource<wbr>Id]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -796,7 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hub_csharp" style="color: inherit; text-decoration: inherit;">Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -804,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_csharp" style="color: inherit; text-decoration: inherit;">Mesh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -812,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spokes_csharp" style="color: inherit; text-decoration: inherit;">Spokes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Network.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -900,7 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hub_nodejs" style="color: inherit; text-decoration: inherit;">hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -908,7 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_nodejs" style="color: inherit; text-decoration: inherit;">mesh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -916,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spokes_nodejs" style="color: inherit; text-decoration: inherit;">spokes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -952,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hub_python" style="color: inherit; text-decoration: inherit;">hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the hub virtual network ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -960,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mesh_python" style="color: inherit; text-decoration: inherit;">mesh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the mesh group IDs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -968,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spokes_python" style="color: inherit; text-decoration: inherit;">spokes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Sequence[Resource<wbr>Id<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the spokes group IDs{{% /md %}}</dd></dl>
 {{% /choosable %}}

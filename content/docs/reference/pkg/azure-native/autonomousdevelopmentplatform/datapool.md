@@ -361,7 +361,7 @@ The DataPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapoollocation">[]Data<wbr>Pool<wbr>Location</a></span>
+        <span class="property-type"><a href="#datapoollocation">[]Data<wbr>Pool<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of locations where Data Pool resources should be created{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -988,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapoolencryption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Autonomous<wbr>Development<wbr>Platform.<wbr>Inputs.<wbr>Data<wbr>Pool<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapoolencryption">Pulumi.<wbr>Azure<wbr>Native.<wbr>Autonomous<wbr>Development<wbr>Platform.<wbr>Inputs.<wbr>Data<wbr>Pool<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Encryption properties of a Data Pool location{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1028,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapoolencryption">Data<wbr>Pool<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapoolencryption">Data<wbr>Pool<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Encryption properties of a Data Pool location{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1048,7 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapoolencryption">Data<wbr>Pool<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapoolencryption">Data<wbr>Pool<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Encryption properties of a Data Pool location{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1070,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapoolencryptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Autonomous<wbr>Development<wbr>Platform.<wbr>Inputs.<wbr>Data<wbr>Pool<wbr>Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapoolencryptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Autonomous<wbr>Development<wbr>Platform.<wbr>Inputs.<wbr>Data<wbr>Pool<wbr>Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Encryption properties of a Data Pool location{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1110,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapoolencryptionresponse">Data<wbr>Pool<wbr>Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapoolencryptionresponse">Data<wbr>Pool<wbr>Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Encryption properties of a Data Pool location{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1130,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datapoolencryptionresponse">Data<wbr>Pool<wbr>Encryption<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#datapoolencryptionresponse">Data<wbr>Pool<wbr>Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Encryption properties of a Data Pool location{{% /md %}}</dd></dl>
 {{% /choosable %}}

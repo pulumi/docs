@@ -642,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsizes_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Sizes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Size<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sizeinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Size<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Represents a set of compute sizes that can serve this given size type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -730,7 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmsizes_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Sizes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeinforesponse">Size<wbr>Info<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sizeinforesponse">Size<wbr>Info<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Represents a set of compute sizes that can serve this given size type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -774,7 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_sizes_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>sizes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sizeinforesponse">Sequence[Size<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sizeinforesponse">Sequence[Size<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Represents a set of compute sizes that can serve this given size type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -998,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentsizes_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Sizes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsizeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Size<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#environmentsizeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Size<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Represents a list of size categories supported by this Lab Account (Small, Medium, Large){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1022,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentsizes_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Sizes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsizeresponse">Environment<wbr>Size<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#environmentsizeresponse">Environment<wbr>Size<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Represents a list of size categories supported by this Lab Account (Small, Medium, Large){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1034,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_sizes_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>sizes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsizeresponse">Sequence[Environment<wbr>Size<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#environmentsizeresponse">Sequence[Environment<wbr>Size<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Represents a list of size categories supported by this Lab Account (Small, Medium, Large){{% /md %}}</dd></dl>
 {{% /choosable %}}

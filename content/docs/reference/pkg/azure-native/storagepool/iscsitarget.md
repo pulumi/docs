@@ -427,7 +427,7 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tpgs_go" style="color: inherit; text-decoration: inherit;">Tpgs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetportalgroupcreate">[]Target<wbr>Portal<wbr>Group<wbr>Create</a></span>
+        <span class="property-type"><a href="#targetportalgroupcreate">[]Target<wbr>Portal<wbr>Group<wbr>Create<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of iSCSI target portal groups. Can have 1 portal group at most.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1358,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acl">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Acl<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#acl">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Acl&gt;</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1366,7 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#attributes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1374,7 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilun">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Iscsi<wbr>Lun<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iscsilun">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Iscsi<wbr>Lun&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of LUNs to be exposed through the iSCSI target portal group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1414,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acl">Acl<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#acl">Acl[]</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1422,7 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributes">Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#attributes">Attributes</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1430,7 +1430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilun">Iscsi<wbr>Lun<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#iscsilun">Iscsi<wbr>Lun[]</a></span>
     </dt>
     <dd>{{% md %}}List of LUNs to be exposed through the iSCSI target portal group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1442,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acl">Sequence[Acl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#acl">Sequence[Acl]</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1450,7 +1450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributes">Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#attributes">Attributes</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1458,7 +1458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilun">Sequence[Iscsi<wbr>Lun<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iscsilun">Sequence[Iscsi<wbr>Lun]</a></span>
     </dt>
     <dd>{{% md %}}List of LUNs to be exposed through the iSCSI target portal group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1472,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Acl<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#aclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Acl<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1480,7 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#attributesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1496,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilunresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Iscsi<wbr>Lun<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iscsilunresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Iscsi<wbr>Lun<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of LUNs to be exposed through iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1576,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclresponse">Acl<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#aclresponse">Acl<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1584,7 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1600,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilunresponse">Iscsi<wbr>Lun<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#iscsilunresponse">Iscsi<wbr>Lun<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of LUNs to be exposed through iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1628,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclresponse">Sequence[Acl<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#aclresponse">Sequence[Acl<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1636,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1652,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsilunresponse">Sequence[Iscsi<wbr>Lun<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iscsilunresponse">Sequence[Iscsi<wbr>Lun<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of LUNs to be exposed through iSCSI target portal group.{{% /md %}}</dd><dt class="property-required"
             title="Required">

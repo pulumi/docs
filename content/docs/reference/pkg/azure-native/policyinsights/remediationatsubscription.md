@@ -444,7 +444,7 @@ The RemediationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remediationfilters">Remediation<wbr>Filters</a></span>
+        <span class="property-type"><a href="#remediationfilters">Remediation<wbr>Filters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The filters that will be applied to determine which resources to remediate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

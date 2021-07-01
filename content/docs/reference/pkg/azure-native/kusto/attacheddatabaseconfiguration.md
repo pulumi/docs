@@ -481,7 +481,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
 <a href="#tablelevelsharingproperties_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Level<wbr>Sharing<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablelevelsharingproperties">Table<wbr>Level<wbr>Sharing<wbr>Properties</a></span>
+        <span class="property-type"><a href="#tablelevelsharingproperties">Table<wbr>Level<wbr>Sharing<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Table level sharing specifications{{% /md %}}</dd></dl>
 {{% /choosable %}}

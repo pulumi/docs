@@ -416,7 +416,7 @@ The ConnectionType resource accepts the following [input]({{< relref "/docs/intr
 <a href="#fielddefinitions_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]Field<wbr>Definition</span>
+        <span class="property-type">map[string]Field<wbr>Definition<wbr>Args</span>
     </dt>
     <dd>{{% md %}}Gets or sets the field definitions of the connection type.{{% /md %}}</dd><dt class="property-required"
             title="Required">

@@ -778,7 +778,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#externalreferences_go" style="color: inherit; text-decoration: inherit;">External<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligenceexternalreference">[]Threat<wbr>Intelligence<wbr>External<wbr>Reference</a></span>
+        <span class="property-type"><a href="#threatintelligenceexternalreference">[]Threat<wbr>Intelligence<wbr>External<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External References{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +786,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#granularmarkings_go" style="color: inherit; text-decoration: inherit;">Granular<wbr>Markings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">[]Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model</a></span>
+        <span class="property-type"><a href="#threatintelligencegranularmarkingmodel">[]Threat<wbr>Intelligence<wbr>Granular<wbr>Marking<wbr>Model<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Granular Markings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -802,7 +802,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#killchainphases_go" style="color: inherit; text-decoration: inherit;">Kill<wbr>Chain<wbr>Phases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligencekillchainphase">[]Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase</a></span>
+        <span class="property-type"><a href="#threatintelligencekillchainphase">[]Threat<wbr>Intelligence<wbr>Kill<wbr>Chain<wbr>Phase<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kill chain phases{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +858,7 @@ The ThreatIntelligenceIndicator resource accepts the following [input]({{< relre
 <a href="#parsedpattern_go" style="color: inherit; text-decoration: inherit;">Parsed<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligenceparsedpattern">[]Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern</a></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpattern">[]Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parsed patterns{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1975,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patterntypevalues_csharp" style="color: inherit; text-decoration: inherit;">Pattern<wbr>Type<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value&gt;</a></span>
     </dt>
     <dd>{{% md %}}Pattern type keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2015,7 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patterntypevalues_nodejs" style="color: inherit; text-decoration: inherit;">pattern<wbr>Type<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value[]</a></span>
     </dt>
     <dd>{{% md %}}Pattern type keys{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2035,7 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pattern_type_values_python" style="color: inherit; text-decoration: inherit;">pattern_<wbr>type_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">Sequence[Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#threatintelligenceparsedpatterntypevalue">Sequence[Threat<wbr>Intelligence<wbr>Parsed<wbr>Pattern<wbr>Type<wbr>Value]</a></span>
     </dt>
     <dd>{{% md %}}Pattern type keys{{% /md %}}</dd></dl>
 {{% /choosable %}}

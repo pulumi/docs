@@ -373,7 +373,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#scheduleentries_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleentry">[]Schedule<wbr>Entry</a></span>
+        <span class="property-type"><a href="#scheduleentry">[]Schedule<wbr>Entry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

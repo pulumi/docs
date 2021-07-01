@@ -411,7 +411,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#partnerservers_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partnerinfo">[]Partner<wbr>Info</a></span>
+        <span class="property-type"><a href="#partnerinfo">[]Partner<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of partner server information for the failover group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -419,7 +419,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#readwriteendpoint_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergroupreadwriteendpoint">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#failovergroupreadwriteendpoint">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Read-write endpoint of the failover group instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -459,7 +459,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#readonlyendpoint_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergroupreadonlyendpoint">Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#failovergroupreadonlyendpoint">Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Read-only endpoint of the failover group instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

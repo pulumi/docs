@@ -440,7 +440,7 @@ The MachineGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#machines_go" style="color: inherit; text-decoration: inherit;">Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machinereferencewithhints">[]Machine<wbr>Reference<wbr>With<wbr>Hints</a></span>
+        <span class="property-type"><a href="#machinereferencewithhints">[]Machine<wbr>Reference<wbr>With<wbr>Hints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}

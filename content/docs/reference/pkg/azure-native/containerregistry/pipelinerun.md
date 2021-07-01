@@ -535,7 +535,7 @@ The PipelineRun resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#request_go" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunrequest">Pipeline<wbr>Run<wbr>Request</a></span>
+        <span class="property-type"><a href="#pipelinerunrequest">Pipeline<wbr>Run<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request parameters for a pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1133,7 +1133,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinerunsourceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Source<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1141,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelineruntargetproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Target<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1227,7 +1227,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourceproperties">Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinerunsourceproperties">Pipeline<wbr>Run<wbr>Source<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1235,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetproperties">Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelineruntargetproperties">Pipeline<wbr>Run<wbr>Target<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1274,7 +1274,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourceproperties">Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinerunsourceproperties">Pipeline<wbr>Run<wbr>Source<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1282,7 +1282,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetproperties">Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelineruntargetproperties">Pipeline<wbr>Run<wbr>Target<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1323,7 +1323,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1331,7 +1331,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1417,7 +1417,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1425,7 +1425,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1464,7 +1464,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinerunsourcepropertiesresponse">Pipeline<wbr>Run<wbr>Source<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source properties of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1472,7 +1472,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelineruntargetpropertiesresponse">Pipeline<wbr>Run<wbr>Target<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The target properties of the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1518,7 +1518,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#progress_csharp" style="color: inherit; text-decoration: inherit;">Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#progresspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Progress<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#progresspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Progress<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current progress of the copy operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1526,7 +1526,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1550,7 +1550,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The target of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1558,7 +1558,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The trigger that caused the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1686,7 +1686,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#progress_nodejs" style="color: inherit; text-decoration: inherit;">progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#progresspropertiesresponse">Progress<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#progresspropertiesresponse">Progress<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current progress of the copy operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1694,7 +1694,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1718,7 +1718,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The target of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1726,7 +1726,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The trigger that caused the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1770,7 +1770,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#progress_python" style="color: inherit; text-decoration: inherit;">progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#progresspropertiesresponse">Progress<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#progresspropertiesresponse">Progress<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current progress of the copy operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1778,7 +1778,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1802,7 +1802,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#exportpipelinetargetpropertiesresponse">Export<wbr>Pipeline<wbr>Target<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The target of the pipeline run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1810,7 +1810,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinetriggerdescriptorresponse">Pipeline<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The trigger that caused the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2246,7 +2246,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#sourcetrigger_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source trigger that caused the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2270,7 +2270,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#sourcetrigger_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source trigger that caused the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2282,7 +2282,7 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
 <a href="#source_trigger_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#pipelinesourcetriggerdescriptorresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The source trigger that caused the pipeline run.{{% /md %}}</dd></dl>
 {{% /choosable %}}

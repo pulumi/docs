@@ -231,7 +231,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobproperties">Job<wbr>Properties</a></span>
+        <span class="property-type"><a href="#jobproperties">Job<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1012,7 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicauthentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Basic<wbr>Authentication<wbr>Args</a> | <a href="#clientcertauthentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Client<wbr>Cert<wbr>Authentication<wbr>Args</a> | <a href="#oauthauthentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>OAuth<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#basicauthentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Basic<wbr>Authentication</a> | <a href="#clientcertauthentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Client<wbr>Cert<wbr>Authentication</a> | <a href="#oauthauthentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>OAuth<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicauthentication">Basic<wbr>Authentication<wbr>Args</a> | <a href="#clientcertauthentication">Client<wbr>Cert<wbr>Authentication<wbr>Args</a> | <a href="#oauthauthentication">OAuth<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#basicauthentication">Basic<wbr>Authentication</a> | <a href="#clientcertauthentication">Client<wbr>Cert<wbr>Authentication</a> | <a href="#oauthauthentication">OAuth<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1144,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicauthentication">Basic<wbr>Authentication<wbr>Args</a> | <a href="#clientcertauthentication">Client<wbr>Cert<wbr>Authentication<wbr>Args</a> | <a href="#oauthauthentication">OAuth<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#basicauthentication">Basic<wbr>Authentication</a> | <a href="#clientcertauthentication">Client<wbr>Cert<wbr>Authentication</a> | <a href="#oauthauthentication">OAuth<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1190,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Basic<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#clientcertauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Client<wbr>Cert<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#oauthauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>OAuth<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#basicauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Basic<wbr>Authentication<wbr>Response</a> | <a href="#clientcertauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Client<wbr>Cert<wbr>Authentication<wbr>Response</a> | <a href="#oauthauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>OAuth<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1278,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicauthenticationresponse">Basic<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#clientcertauthenticationresponse">Client<wbr>Cert<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#oauthauthenticationresponse">OAuth<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#basicauthenticationresponse">Basic<wbr>Authentication<wbr>Response</a> | <a href="#clientcertauthenticationresponse">Client<wbr>Cert<wbr>Authentication<wbr>Response</a> | <a href="#oauthauthenticationresponse">OAuth<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1322,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicauthenticationresponse">Basic<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#clientcertauthenticationresponse">Client<wbr>Cert<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#oauthauthenticationresponse">OAuth<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#basicauthenticationresponse">Basic<wbr>Authentication<wbr>Response</a> | <a href="#clientcertauthenticationresponse">Client<wbr>Cert<wbr>Authentication<wbr>Response</a> | <a href="#oauthauthenticationresponse">OAuth<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1368,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#erroraction_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberroraction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#joberroraction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1376,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queuemessage_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1384,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequest">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Http<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequest">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Http<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1392,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1400,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusqueuemessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1408,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebustopicmessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1476,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobactiontype">Job<wbr>Action<wbr>Type</a></span>
+        <span class="property-type"><a href="#jobactiontype">string</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1488,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#erroraction_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberroraction">Job<wbr>Error<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#joberroraction">Job<wbr>Error<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1496,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queuemessage_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessage">Storage<wbr>Queue<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessage">Storage<wbr>Queue<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1504,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequest">Http<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequest">Http<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1512,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1520,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusqueuemessage_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessage">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessage">Service<wbr>Bus<wbr>Queue<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1528,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebustopicmessage_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Topic<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessage">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessage">Service<wbr>Bus<wbr>Topic<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1548,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_action_python" style="color: inherit; text-decoration: inherit;">error_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberroraction">Job<wbr>Error<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#joberroraction">Job<wbr>Error<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1556,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_message_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessage">Storage<wbr>Queue<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessage">Storage<wbr>Queue<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1564,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequest">Http<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequest">Http<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1572,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1580,7 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_queue_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessage">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessage">Service<wbr>Bus<wbr>Queue<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1588,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_topic_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessage">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessage">Service<wbr>Bus<wbr>Topic<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#erroraction_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberroractionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joberroractionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1618,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queuemessage_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1626,7 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Http<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Http<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1634,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1642,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusqueuemessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1650,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebustopicmessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1730,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#erroraction_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberroractionresponse">Job<wbr>Error<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joberroractionresponse">Job<wbr>Error<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1738,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queuemessage_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1746,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1754,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1762,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusqueuemessage_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1770,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebustopicmessage_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Topic<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1790,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_action_python" style="color: inherit; text-decoration: inherit;">error_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberroractionresponse">Job<wbr>Error<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joberroractionresponse">Job<wbr>Error<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1798,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_message_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1806,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1814,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1822,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_queue_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1830,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_topic_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1890,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queuemessage_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1898,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequest">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Http<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequest">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Http<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1906,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1914,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusqueuemessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1922,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebustopicmessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessage">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1982,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobactiontype">Job<wbr>Action<wbr>Type</a></span>
+        <span class="property-type"><a href="#jobactiontype">string</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job error action type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1994,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queuemessage_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessage">Storage<wbr>Queue<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessage">Storage<wbr>Queue<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2002,7 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequest">Http<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequest">Http<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2010,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2018,7 +2018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusqueuemessage_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessage">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessage">Service<wbr>Bus<wbr>Queue<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2026,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebustopicmessage_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Topic<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessage">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessage">Service<wbr>Bus<wbr>Topic<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2046,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_message_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessage">Storage<wbr>Queue<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessage">Storage<wbr>Queue<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2054,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequest">Http<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequest">Http<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2062,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2070,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_queue_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessage">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessage">Service<wbr>Bus<wbr>Queue<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2078,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_topic_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessage">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessage">Service<wbr>Bus<wbr>Topic<wbr>Message</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2100,7 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queuemessage_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2108,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Http<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Http<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2116,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2124,7 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusqueuemessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2132,7 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebustopicmessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2204,7 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queuemessage_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2212,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2220,7 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2228,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusqueuemessage_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2236,7 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebustopicmessage_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Topic<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2256,7 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_message_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2264,7 +2264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2272,7 +2272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2280,7 +2280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_queue_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2288,7 +2288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_topic_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2310,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2318,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrence">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrence">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2370,7 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstate">Job<wbr>State<wbr>Enum</a></span>
+        <span class="property-type"><a href="#jobstate">string</a></span>
     </dt>
     <dd>{{% md %}}Gets or set the job state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2382,7 +2382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobaction">Job<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobaction">Job<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2390,7 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrence">Job<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrence">Job<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2418,7 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobaction">Job<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobaction">Job<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2426,7 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrence">Job<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrence">Job<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2456,7 +2456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the job status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2464,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2472,7 +2472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2544,7 +2544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the job status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2552,7 +2552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobactionresponse">Job<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobactionresponse">Job<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2560,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceresponse">Job<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrenceresponse">Job<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2588,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the job status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2596,7 +2596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobactionresponse">Job<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobactionresponse">Job<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2604,7 +2604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceresponse">Job<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrenceresponse">Job<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2666,7 +2666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2694,7 +2694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencefrequency">Recurrence<wbr>Frequency</a></span>
+        <span class="property-type"><a href="#recurrencefrequency">string</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2754,7 +2754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedule">Job<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedule">Job<wbr>Recurrence<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2798,7 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedule">Job<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedule">Job<wbr>Recurrence<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2844,7 +2844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2932,7 +2932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Job<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Job<wbr>Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2976,7 +2976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Job<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Job<wbr>Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3014,7 +3014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3102,7 +3102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrence">Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrence">Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3146,7 +3146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrence">Sequence[Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrence">Sequence[Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3188,7 +3188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobscheduleday">Job<wbr>Schedule<wbr>Day</a></span>
+        <span class="property-type"><a href="#jobscheduleday">string</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3356,7 +3356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3444,7 +3444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3488,7 +3488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">Sequence[Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">Sequence[Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4142,7 +4142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrytype_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrytype">Retry<wbr>Type</a></span>
+        <span class="property-type"><a href="#retrytype">string</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry strategy to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4396,7 +4396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationtype">Service<wbr>Bus<wbr>Authentication<wbr>Type</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationtype">string</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5474,7 +5474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5482,7 +5482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokeredmessageproperties_csharp" style="color: inherit; text-decoration: inherit;">Brokered<wbr>Message<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5582,7 +5582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transporttype_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustransporttype">Service<wbr>Bus<wbr>Transport<wbr>Type</a></span>
+        <span class="property-type"><a href="#servicebustransporttype">string</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the transport type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5594,7 +5594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthentication">Service<wbr>Bus<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthentication">Service<wbr>Bus<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5602,7 +5602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokeredmessageproperties_nodejs" style="color: inherit; text-decoration: inherit;">brokered<wbr>Message<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5654,7 +5654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthentication">Service<wbr>Bus<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthentication">Service<wbr>Bus<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5662,7 +5662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokered_message_properties_python" style="color: inherit; text-decoration: inherit;">brokered_<wbr>message_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5716,7 +5716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5724,7 +5724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokeredmessageproperties_csharp" style="color: inherit; text-decoration: inherit;">Brokered<wbr>Message<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5836,7 +5836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5844,7 +5844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokeredmessageproperties_nodejs" style="color: inherit; text-decoration: inherit;">brokered<wbr>Message<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5896,7 +5896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5904,7 +5904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokered_message_properties_python" style="color: inherit; text-decoration: inherit;">brokered_<wbr>message_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5958,7 +5958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5966,7 +5966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokeredmessageproperties_csharp" style="color: inherit; text-decoration: inherit;">Brokered<wbr>Message<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6066,7 +6066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transporttype_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustransporttype">Service<wbr>Bus<wbr>Transport<wbr>Type</a></span>
+        <span class="property-type"><a href="#servicebustransporttype">string</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the transport type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6078,7 +6078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthentication">Service<wbr>Bus<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthentication">Service<wbr>Bus<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6086,7 +6086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokeredmessageproperties_nodejs" style="color: inherit; text-decoration: inherit;">brokered<wbr>Message<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6138,7 +6138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthentication">Service<wbr>Bus<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthentication">Service<wbr>Bus<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6146,7 +6146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokered_message_properties_python" style="color: inherit; text-decoration: inherit;">brokered_<wbr>message_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessageproperties">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6200,7 +6200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6208,7 +6208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokeredmessageproperties_csharp" style="color: inherit; text-decoration: inherit;">Brokered<wbr>Message<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6320,7 +6320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6328,7 +6328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokeredmessageproperties_nodejs" style="color: inherit; text-decoration: inherit;">brokered<wbr>Message<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6380,7 +6380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6388,7 +6388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#brokered_message_properties_python" style="color: inherit; text-decoration: inherit;">brokered_<wbr>message_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

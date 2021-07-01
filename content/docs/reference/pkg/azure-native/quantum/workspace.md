@@ -409,7 +409,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quantumworkspaceidentity">Quantum<wbr>Workspace<wbr>Identity</a></span>
+        <span class="property-type"><a href="#quantumworkspaceidentity">Quantum<wbr>Workspace<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Identity information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -425,7 +425,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#providers_go" style="color: inherit; text-decoration: inherit;">Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#provider">[]Provider</a></span>
+        <span class="property-type"><a href="#provider">[]Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of Providers selected for this Workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

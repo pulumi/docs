@@ -576,7 +576,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitystatus">Entity<wbr>Status</a></span>
+        <span class="property-type"><a href="#entitystatus">string</a></span>
     </dt>
     <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}

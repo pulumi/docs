@@ -502,7 +502,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#watchlistuserinfo">Watchlist<wbr>User<wbr>Info</a></span>
+        <span class="property-type"><a href="#watchlistuserinfo">Watchlist<wbr>User<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that created the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +550,7 @@ The WatchlistItem resource accepts the following [input]({{< relref "/docs/intro
 <a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#watchlistuserinfo">Watchlist<wbr>User<wbr>Info</a></span>
+        <span class="property-type"><a href="#watchlistuserinfo">Watchlist<wbr>User<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that updated the watchlist item{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

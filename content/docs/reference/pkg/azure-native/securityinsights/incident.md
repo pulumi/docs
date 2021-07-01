@@ -558,7 +558,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabel">[]Incident<wbr>Label</a></span>
+        <span class="property-type"><a href="#incidentlabel">[]Incident<wbr>Label<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +574,7 @@ The Incident resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info</a></span>
+        <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd></dl>
 {{% /choosable %}}

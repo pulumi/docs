@@ -2591,86 +2591,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
-			Location:          pulumi.String("westus"),
-			Overprovision:     pulumi.Bool(true),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Sku: &compute.SkuArgs{
-				Capacity: pulumi.Float64(3),
-				Name:     pulumi.String("Standard_D2s_v3"),
-				Tier:     pulumi.String("Standard"),
-			},
-			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: "Manual",
-			},
-			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
-				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
-					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
-						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							EnableIPForwarding: pulumi.Bool(true),
-							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
-								&compute.VirtualMachineScaleSetIPConfigurationArgs{
-									Name: pulumi.String("{vmss-name}"),
-									Subnet: &compute.ApiEntityReferenceArgs{
-										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
-									},
-								},
-							},
-							Name:    pulumi.String("{vmss-name}"),
-							Primary: pulumi.Bool(true),
-						},
-					},
-				},
-				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
-					AdminPassword:      pulumi.String("{your-password}"),
-					AdminUsername:      pulumi.String("{your-username}"),
-					ComputerNamePrefix: pulumi.String("{vmss-name}"),
-				},
-				SecurityProfile: &compute.SecurityProfileArgs{
-					SecurityType: "TrustedLaunch",
-					UefiSettings: &compute.UefiSettingsArgs{
-						SecureBootEnabled: pulumi.Bool(true),
-						VTpmEnabled:       pulumi.Bool(true),
-					},
-				},
-				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
-					ImageReference: &compute.ImageReferenceArgs{
-						Offer:     pulumi.String("windowsserver-gen2preview-preview"),
-						Publisher: pulumi.String("MicrosoftWindowsServer"),
-						Sku:       pulumi.String("windows10-tvm"),
-						Version:   pulumi.String("18363.592.2001092016"),
-					},
-					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      "ReadOnly",
-						CreateOption: pulumi.String("FromImage"),
-						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
-							StorageAccountType: pulumi.String("StandardSSD_LRS"),
-						},
-					},
-				},
-			},
-			VmScaleSetName: pulumi.String("{vmss-name}"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -5226,87 +5147,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
-			Location:      pulumi.String("westus"),
-			Overprovision: pulumi.Bool(true),
-			Plan: &compute.PlanArgs{
-				Name:      pulumi.String("windows2016"),
-				Product:   pulumi.String("windows-data-science-vm"),
-				Publisher: pulumi.String("microsoft-ads"),
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Sku: &compute.SkuArgs{
-				Capacity: pulumi.Float64(3),
-				Name:     pulumi.String("Standard_DS1_v2"),
-				Tier:     pulumi.String("Standard"),
-			},
-			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: "Manual",
-			},
-			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
-				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
-					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
-						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							EnableIPForwarding: pulumi.Bool(true),
-							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
-								&compute.VirtualMachineScaleSetIPConfigurationArgs{
-									Name: pulumi.String("{vmss-name}"),
-									Subnet: &compute.ApiEntityReferenceArgs{
-										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
-									},
-								},
-							},
-							Name:    pulumi.String("{vmss-name}"),
-							Primary: pulumi.Bool(true),
-						},
-					},
-				},
-				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
-					AdminPassword:      pulumi.String("{your-password}"),
-					AdminUsername:      pulumi.String("{your-username}"),
-					ComputerNamePrefix: pulumi.String("{vmss-name}"),
-				},
-				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
-					ImageReference: &compute.ImageReferenceArgs{
-						Offer:     pulumi.String("windows-data-science-vm"),
-						Publisher: pulumi.String("microsoft-ads"),
-						Sku:       pulumi.String("windows2016"),
-						Version:   pulumi.String("latest"),
-					},
-					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      "ReadOnly",
-						CreateOption: pulumi.String("FromImage"),
-						DiffDiskSettings: &compute.DiffDiskSettingsArgs{
-							Option: pulumi.String("Local"),
-						},
-						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
-							StorageAccountType: pulumi.String("Standard_LRS"),
-						},
-					},
-				},
-			},
-			VmScaleSetName: pulumi.String("{vmss-name}"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -8432,7 +8273,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#additionalcapabilities_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcapabilities">Additional<wbr>Capabilities</a></span>
+        <span class="property-type"><a href="#additionalcapabilities">Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional capabilities enabled or disabled on the Virtual Machines in the Virtual Machine Scale Set. For instance: whether the Virtual Machines have the capability to support attaching managed data disks with UltraSSD_LRS storage account type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8440,7 +8281,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#automaticrepairspolicy_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Repairs<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticrepairspolicy">Automatic<wbr>Repairs<wbr>Policy</a></span>
+        <span class="property-type"><a href="#automaticrepairspolicy">Automatic<wbr>Repairs<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy for automatic repairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8456,7 +8297,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extended location of the Virtual Machine Scale Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8464,7 +8305,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#hostgroup_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the dedicated host group that the virtual machine scale set resides in. <br><br>Minimum api-version: 2020-06-01.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8472,7 +8313,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetidentity">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetidentity">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the virtual machine scale set, if configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8504,7 +8345,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plan">Plan</a></span>
+        <span class="property-type"><a href="#plan">Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8520,7 +8361,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#proximityplacementgroup_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. <br><br>Minimum api-version: 2018-04-01.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8528,7 +8369,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#scaleinpolicy_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>In<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleinpolicy">Scale<wbr>In<wbr>Policy</a></span>
+        <span class="property-type"><a href="#scaleinpolicy">Scale<wbr>In<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the scale-in policy that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled-in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8544,7 +8385,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine scale set sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8560,7 +8401,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#upgradepolicy_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upgradepolicy">Upgrade<wbr>Policy</a></span>
+        <span class="property-type"><a href="#upgradepolicy">Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The upgrade policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8568,7 +8409,7 @@ The VirtualMachineScaleSet resource accepts the following [input]({{< relref "/d
 <a href="#virtualmachineprofile_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetvmprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>VMProfile</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetvmprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>VMProfile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9295,7 +9136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#componentname_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#componentnames">Component<wbr>Names</a></span>
+        <span class="property-type"><a href="#componentnames">string</a></span>
     </dt>
     <dd>{{% md %}}The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9311,7 +9152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passname_go" style="color: inherit; text-decoration: inherit;">Pass<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#passnames">Pass<wbr>Names</a></span>
+        <span class="property-type"><a href="#passnames">string</a></span>
     </dt>
     <dd>{{% md %}}The pass name. Currently, the only allowable value is OobeSystem.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9319,7 +9160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#settingname_go" style="color: inherit; text-decoration: inherit;">Setting<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingnames">Setting<wbr>Names</a></span>
+        <span class="property-type"><a href="#settingnames">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10321,7 +10162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnostics">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
+        <span class="property-type"><a href="#bootdiagnostics">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10345,7 +10186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnostics">Boot<wbr>Diagnostics<wbr>Args</a></span>
+        <span class="property-type"><a href="#bootdiagnostics">Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10357,7 +10198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnostics">Boot<wbr>Diagnostics<wbr>Args</a></span>
+        <span class="property-type"><a href="#bootdiagnostics">Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10371,7 +10212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnosticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Boot<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bootdiagnosticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Boot<wbr>Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10395,7 +10236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnosticsresponse">Boot<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bootdiagnosticsresponse">Boot<wbr>Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10407,7 +10248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bootdiagnosticsresponse">Boot<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#bootdiagnosticsresponse">Boot<wbr>Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11371,7 +11212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchsettings_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxpatchsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Patch<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxpatchsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Patch<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11387,7 +11228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11443,7 +11284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchsettings_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxpatchsettings">Linux<wbr>Patch<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxpatchsettings">Linux<wbr>Patch<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11459,7 +11300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11479,7 +11320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxpatchsettings">Linux<wbr>Patch<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxpatchsettings">Linux<wbr>Patch<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11495,7 +11336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfiguration">Ssh<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11517,7 +11358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchsettings_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxpatchsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11533,7 +11374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11589,7 +11430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchsettings_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11605,7 +11446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11625,7 +11466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11641,7 +11482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13283,7 +13124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminatenotificationprofile_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Notification<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminatenotificationprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Terminate<wbr>Notification<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminatenotificationprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Terminate<wbr>Notification<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies Terminate Scheduled Event related configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13307,7 +13148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminatenotificationprofile_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Notification<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminatenotificationprofile">Terminate<wbr>Notification<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminatenotificationprofile">Terminate<wbr>Notification<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies Terminate Scheduled Event related configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13319,7 +13160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminate_notification_profile_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>notification_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminatenotificationprofile">Terminate<wbr>Notification<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminatenotificationprofile">Terminate<wbr>Notification<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies Terminate Scheduled Event related configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13333,7 +13174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminatenotificationprofile_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Notification<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminatenotificationprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Terminate<wbr>Notification<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminatenotificationprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Terminate<wbr>Notification<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Terminate Scheduled Event related configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13357,7 +13198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminatenotificationprofile_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Notification<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminatenotificationprofileresponse">Terminate<wbr>Notification<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminatenotificationprofileresponse">Terminate<wbr>Notification<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Terminate Scheduled Event related configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13369,7 +13210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminate_notification_profile_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>notification_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminatenotificationprofileresponse">Terminate<wbr>Notification<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminatenotificationprofileresponse">Terminate<wbr>Notification<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Terminate Scheduled Event related configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13391,7 +13232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitytype_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitytypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Security<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#securitytypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Security<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13399,7 +13240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uefisettings_csharp" style="color: inherit; text-decoration: inherit;">Uefi<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uefisettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Uefi<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#uefisettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Uefi<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13419,7 +13260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitytype_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitytypes">Security<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#securitytypes">Security<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13447,7 +13288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitytypes">Security<wbr>Types</a></span>
+        <span class="property-type">string | <a href="#securitytypes">Security<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13455,7 +13296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uefisettings_nodejs" style="color: inherit; text-decoration: inherit;">uefi<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uefisettings">Uefi<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#uefisettings">Uefi<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13475,7 +13316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitytypes">Security<wbr>Types</a></span>
+        <span class="property-type">str | <a href="#securitytypes">Security<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13483,7 +13324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uefi_settings_python" style="color: inherit; text-decoration: inherit;">uefi_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uefisettings">Uefi<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#uefisettings">Uefi<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13513,7 +13354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uefisettings_csharp" style="color: inherit; text-decoration: inherit;">Uefi<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uefisettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Uefi<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Uefi<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13569,7 +13410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uefisettings_nodejs" style="color: inherit; text-decoration: inherit;">uefi<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13597,7 +13438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uefi_settings_python" style="color: inherit; text-decoration: inherit;">uefi_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13887,7 +13728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13911,7 +13752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickey">Ssh<wbr>Public<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sshpublickey">Ssh<wbr>Public<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13923,7 +13764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickey">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sshpublickey">Sequence[Ssh<wbr>Public<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13937,7 +13778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13961,7 +13802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">Ssh<wbr>Public<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13973,7 +13814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sshpublickeyresponse">Sequence[Ssh<wbr>Public<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with linux based VMs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14651,7 +14492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automaticosupgradepolicy_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>OSUpgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticosupgradepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Automatic<wbr>OSUpgrade<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#automaticosupgradepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Automatic<wbr>OSUpgrade<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters used for performing automatic OS Upgrade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14667,7 +14508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollingupgradepolicy_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rollingupgradepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#rollingupgradepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters used while performing a rolling upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14687,7 +14528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upgrademode">Upgrade<wbr>Mode</a></span>
+        <span class="property-type"><a href="#upgrademode">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.<br /><br /> **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14707,7 +14548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automaticosupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>OSUpgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticosupgradepolicy">Automatic<wbr>OSUpgrade<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#automaticosupgradepolicy">Automatic<wbr>OSUpgrade<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters used for performing automatic OS Upgrade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14723,7 +14564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollingupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rollingupgradepolicy">Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#rollingupgradepolicy">Rolling<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters used while performing a rolling upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14735,7 +14576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automatic_os_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>os_<wbr>upgrade_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticosupgradepolicy">Automatic<wbr>OSUpgrade<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#automaticosupgradepolicy">Automatic<wbr>OSUpgrade<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters used for performing automatic OS Upgrade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14751,7 +14592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolling_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rollingupgradepolicy">Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#rollingupgradepolicy">Rolling<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters used while performing a rolling upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14765,7 +14606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automaticosupgradepolicy_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>OSUpgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticosupgradepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Automatic<wbr>OSUpgrade<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#automaticosupgradepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Automatic<wbr>OSUpgrade<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters used for performing automatic OS Upgrade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14781,7 +14622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollingupgradepolicy_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rollingupgradepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rollingupgradepolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters used while performing a rolling upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14821,7 +14662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automaticosupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>OSUpgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticosupgradepolicyresponse">Automatic<wbr>OSUpgrade<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#automaticosupgradepolicyresponse">Automatic<wbr>OSUpgrade<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters used for performing automatic OS Upgrade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14837,7 +14678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rollingupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rollingupgradepolicyresponse">Rolling<wbr>Upgrade<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rollingupgradepolicyresponse">Rolling<wbr>Upgrade<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters used while performing a rolling upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14849,7 +14690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automatic_os_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>os_<wbr>upgrade_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticosupgradepolicyresponse">Automatic<wbr>OSUpgrade<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#automaticosupgradepolicyresponse">Automatic<wbr>OSUpgrade<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters used for performing automatic OS Upgrade.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14865,7 +14706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolling_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rollingupgradepolicyresponse">Rolling<wbr>Upgrade<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rollingupgradepolicyresponse">Rolling<wbr>Upgrade<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters used while performing a rolling upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15043,7 +14884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15051,7 +14892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaultcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vaultcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15083,7 +14924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15091,7 +14932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificate">Vault<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vaultcertificate">Vault<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15103,7 +14944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15111,7 +14952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificate">Sequence[Vault<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultcertificate">Sequence[Vault<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15125,7 +14966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15133,7 +14974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaultcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Certificate<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15165,7 +15006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15173,7 +15014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">Vault<wbr>Certificate<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">Vault<wbr>Certificate<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15185,7 +15026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15193,7 +15034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">Sequence[Vault<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">Sequence[Vault<wbr>Certificate<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15411,7 +15252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15455,7 +15296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachingtypes">Caching<wbr>Types</a></span>
+        <span class="property-type"><a href="#cachingtypes">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15563,7 +15404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15639,7 +15480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15717,7 +15558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15869,7 +15710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15945,7 +15786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16313,7 +16154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextension">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension&gt;</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine scale set child extension resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16353,7 +16194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextension">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextension">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension[]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine scale set child extension resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16373,7 +16214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextension">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextension">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine scale set child extension resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16395,7 +16236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine scale set child extension resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16435,7 +16276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextensionresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextensionresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine scale set child extension resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16455,7 +16296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextensionresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextensionresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine scale set child extension resources.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16887,7 +16728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationgatewaybackendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16895,7 +16736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationsecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to application security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16911,7 +16752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerbackendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16919,7 +16760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerinboundnatpools_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16943,7 +16784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The publicIPAddressConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16951,7 +16792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17055,7 +16896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationgatewaybackendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17063,7 +16904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationsecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to application security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17079,7 +16920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerbackendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17087,7 +16928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerinboundnatpools_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17111,7 +16952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfiguration">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfiguration">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The publicIPAddressConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17119,7 +16960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreference">Api<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreference">Api<wbr>Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17139,7 +16980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_gateway_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17147,7 +16988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_security_groups_python" style="color: inherit; text-decoration: inherit;">application_<wbr>security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to application security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17163,7 +17004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17171,7 +17012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_inbound_nat_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>inbound_<wbr>nat_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17195,7 +17036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfiguration">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfiguration">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The publicIPAddressConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17203,7 +17044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreference">Api<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreference">Api<wbr>Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17225,7 +17066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationgatewaybackendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17233,7 +17074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationsecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to application security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17249,7 +17090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerbackendaddresspools_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17257,7 +17098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerinboundnatpools_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17281,7 +17122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The publicIPAddressConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17289,7 +17130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17393,7 +17234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationgatewaybackendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17401,7 +17242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationsecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to application security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17417,7 +17258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerbackendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17425,7 +17266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loadbalancerinboundnatpools_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17449,7 +17290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The publicIPAddressConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17457,7 +17298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17477,7 +17318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_gateway_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17485,7 +17326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_security_groups_python" style="color: inherit; text-decoration: inherit;">application_<wbr>security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to application security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17501,7 +17342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17509,7 +17350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#load_balancer_inbound_nat_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>inbound_<wbr>nat_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to inbound Nat pools of the load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same basic sku load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17533,7 +17374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The publicIPAddressConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17541,7 +17382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17575,7 +17416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the virtual machine scale set. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17661,7 +17502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the virtual machine scale set. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17733,7 +17574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the virtual machine scale set. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17769,7 +17610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the virtual machine scale set. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18029,7 +17870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionset_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparameters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparameters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18069,7 +17910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionset_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparameters">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparameters">Disk<wbr>Encryption<wbr>Set<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18089,7 +17930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparameters">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparameters">Disk<wbr>Encryption<wbr>Set<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18111,7 +17952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionset_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18151,7 +17992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionset_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18171,7 +18012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18193,7 +18034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP configurations of the network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18217,7 +18058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the network interfaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18257,7 +18098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networksecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The network security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18361,7 +18202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetipconfiguration">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetipconfiguration">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP configurations of the network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18385,7 +18226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnssettings_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettings">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettings">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the network interfaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18425,7 +18266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networksecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The network security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18445,7 +18286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetipconfiguration">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetipconfiguration">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP configurations of the network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18469,7 +18310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettings">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettings">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the network interfaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18509,7 +18350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_security_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The network security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18631,7 +18472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP configurations of the network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18655,7 +18496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the network interfaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18695,7 +18536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networksecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18799,7 +18640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetipconfigurationresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetipconfigurationresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP configurations of the network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18823,7 +18664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnssettings_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettingsresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettingsresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the network interfaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18863,7 +18704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networksecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18883,7 +18724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetipconfigurationresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetipconfigurationresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>IPConfiguration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP configurations of the network interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18907,7 +18748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettingsresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationdnssettingsresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the network interfaces.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18947,7 +18788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_security_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network security group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18969,7 +18810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthprobe_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18985,7 +18826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaceconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of network configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19025,7 +18866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthprobe_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreference">Api<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreference">Api<wbr>Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19041,7 +18882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaceconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfiguration">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfiguration">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The list of network configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19053,7 +18894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_probe_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreference">Api<wbr>Entity<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreference">Api<wbr>Entity<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19069,7 +18910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interface_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfiguration">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfiguration">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}The list of network configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19083,7 +18924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthprobe_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Api<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19099,7 +18940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaceconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of network configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19139,7 +18980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthprobe_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19155,7 +18996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaceconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of network configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19167,7 +19008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_probe_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apientityreferenceresponse">Api<wbr>Entity<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19183,7 +19024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interface_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkconfigurationresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Configuration<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of network configurations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19213,7 +19054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diffdisksettings_csharp" style="color: inherit; text-decoration: inherit;">Diff<wbr>Disk<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diffdisksettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Diff<wbr>Disk<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#diffdisksettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Diff<wbr>Disk<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19229,7 +19070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the unmanaged user image to base the scale set on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19237,7 +19078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19289,7 +19130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachingtypes">Caching<wbr>Types</a></span>
+        <span class="property-type"><a href="#cachingtypes">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19337,7 +19178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemtypes">Operating<wbr>System<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemtypes">string</a></span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19381,7 +19222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diffdisksettings_nodejs" style="color: inherit; text-decoration: inherit;">diff<wbr>Disk<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diffdisksettings">Diff<wbr>Disk<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#diffdisksettings">Diff<wbr>Disk<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19397,7 +19238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the unmanaged user image to base the scale set on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19405,7 +19246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19465,7 +19306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diff_disk_settings_python" style="color: inherit; text-decoration: inherit;">diff_<wbr>disk_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diffdisksettings">Diff<wbr>Disk<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#diffdisksettings">Diff<wbr>Disk<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19481,7 +19322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddisk">Virtual<wbr>Hard<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the unmanaged user image to base the scale set on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19489,7 +19330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparameters">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19551,7 +19392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diffdisksettings_csharp" style="color: inherit; text-decoration: inherit;">Diff<wbr>Disk<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diffdisksettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Diff<wbr>Disk<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diffdisksettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Diff<wbr>Disk<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19567,7 +19408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the unmanaged user image to base the scale set on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19575,7 +19416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19719,7 +19560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diffdisksettings_nodejs" style="color: inherit; text-decoration: inherit;">diff<wbr>Disk<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diffdisksettingsresponse">Diff<wbr>Disk<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diffdisksettingsresponse">Diff<wbr>Disk<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19735,7 +19576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the unmanaged user image to base the scale set on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19743,7 +19584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manageddisk_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19803,7 +19644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diff_disk_settings_python" style="color: inherit; text-decoration: inherit;">diff_<wbr>disk_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diffdisksettingsresponse">Diff<wbr>Disk<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diffdisksettingsresponse">Diff<wbr>Disk<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19819,7 +19660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualharddiskresponse">Virtual<wbr>Hard<wbr>Disk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the unmanaged user image to base the scale set on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19827,7 +19668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetmanageddiskparametersresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Managed<wbr>Disk<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The managed disk parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19905,7 +19746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19913,7 +19754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroup">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Secret<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vaultsecretgroup">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Secret<wbr>Group&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19921,7 +19762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Windows<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies Windows operating system settings on the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20025,7 +19866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20033,7 +19874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroup">Vault<wbr>Secret<wbr>Group<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vaultsecretgroup">Vault<wbr>Secret<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20041,7 +19882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfiguration">Windows<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfiguration">Windows<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies Windows operating system settings on the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20085,7 +19926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfiguration">Linux<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20093,7 +19934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroup">Sequence[Vault<wbr>Secret<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultsecretgroup">Sequence[Vault<wbr>Secret<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20101,7 +19942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfiguration">Windows<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfiguration">Windows<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies Windows operating system settings on the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20147,7 +19988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20155,7 +19996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vaultsecretgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20163,7 +20004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Windows<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Windows operating system settings on the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20267,7 +20108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linuxconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20275,7 +20116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroupresponse">Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vaultsecretgroupresponse">Vault<wbr>Secret<wbr>Group<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20283,7 +20124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Windows operating system settings on the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20327,7 +20168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linux_configuration_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linuxconfigurationresponse">Linux<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20335,7 +20176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroupresponse">Sequence[Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultsecretgroupresponse">Sequence[Vault<wbr>Secret<wbr>Group<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20343,7 +20184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_configuration_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsconfigurationresponse">Windows<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Windows operating system settings on the virtual machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20373,7 +20214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the publicIP addresses .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20389,7 +20230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iptags_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetiptag">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetiptag">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of IP tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20405,7 +20246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefix_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The PublicIPPrefix from which to allocate publicIP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20413,7 +20254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddresssku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddresssku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}Describes the public IP Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20509,7 +20350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnssettings_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettings">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettings">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the publicIP addresses .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20525,7 +20366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iptags_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetiptag">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetiptag">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20541,7 +20382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefix_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPPrefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The PublicIPPrefix from which to allocate publicIP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20549,7 +20390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddresssku">Public<wbr>IPAddress<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddresssku">Public<wbr>IPAddress<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}Describes the public IP Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20577,7 +20418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettings">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettings">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the publicIP addresses .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20593,7 +20434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_tags_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetiptag">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetiptag">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20609,7 +20450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_prefix_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The PublicIPPrefix from which to allocate publicIP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20617,7 +20458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddresssku">Public<wbr>IPAddress<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddresssku">Public<wbr>IPAddress<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}Describes the public IP Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20747,7 +20588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the publicIP addresses .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20763,7 +20604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iptags_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetiptagresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetiptagresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of IP tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20779,7 +20620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefix_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPPrefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The PublicIPPrefix from which to allocate publicIP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20787,7 +20628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the public IP Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20883,7 +20724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnssettings_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettingsresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettingsresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the publicIP addresses .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20899,7 +20740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iptags_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetiptagresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetiptagresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20915,7 +20756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipprefix_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPPrefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The PublicIPPrefix from which to allocate publicIP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20923,7 +20764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressskuresponse">Public<wbr>IPAddress<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressskuresponse">Public<wbr>IPAddress<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the public IP Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -20951,7 +20792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettingsresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetpublicipaddressconfigurationdnssettingsresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Public<wbr>IPAddress<wbr>Configuration<wbr>Dns<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The dns settings to be applied on the publicIP addresses .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20967,7 +20808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_tags_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetiptagresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetiptagresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Ip<wbr>Tag<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP tags associated with the public IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20983,7 +20824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_prefix_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The PublicIPPrefix from which to allocate publicIP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20991,7 +20832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipaddressskuresponse">Public<wbr>IPAddress<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#publicipaddressskuresponse">Public<wbr>IPAddress<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the public IP Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21035,7 +20876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetdatadisk">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetdatadisk">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21043,7 +20884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21051,7 +20892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosdisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosdisk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21091,7 +20932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetdatadisk">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetdatadisk">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21099,7 +20940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereference">Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21107,7 +20948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosdisk">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosdisk">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21119,7 +20960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetdatadisk">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetdatadisk">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21127,7 +20968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereference">Image<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereference">Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21135,7 +20976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosdisk">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosdisk">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21149,7 +20990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetdatadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetdatadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21157,7 +20998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21165,7 +21006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21205,7 +21046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetdatadiskresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetdatadiskresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21213,7 +21054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21221,7 +21062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosdiskresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosdiskresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21233,7 +21074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetdatadiskresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetdatadiskresponse">Sequence[Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21241,7 +21082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagereferenceresponse">Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21249,7 +21090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosdiskresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosdiskresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSDisk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21263,7 +21104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#billingprofile_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Billing<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#billingprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Billing<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the billing related details of a Azure Spot VMSS. <br><br>Minimum api-version: 2019-03-01.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21271,7 +21112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnosticsprofile_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Diagnostics<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Diagnostics<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21287,7 +21128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensionprofile_csharp" style="color: inherit; text-decoration: inherit;">Extension<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextensionprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextensionprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of settings for extensions installed on virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21303,7 +21144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies properties of the network interfaces of the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21311,7 +21152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21327,7 +21168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduledeventsprofile_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Events<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledeventsprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Scheduled<wbr>Events<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduledeventsprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Scheduled<wbr>Events<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies Scheduled Event related configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21335,7 +21176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securityprofile_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Security<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Security<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Security related profile settings for the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21343,7 +21184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetstorageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetstorageprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21463,7 +21304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#billingprofile_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingprofile">Billing<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#billingprofile">Billing<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the billing related details of a Azure Spot VMSS. <br><br>Minimum api-version: 2019-03-01.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21471,7 +21312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnosticsprofile_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsprofile">Diagnostics<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsprofile">Diagnostics<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21487,7 +21328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensionprofile_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextensionprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextensionprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of settings for extensions installed on virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21503,7 +21344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies properties of the network interfaces of the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21511,7 +21352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21527,7 +21368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduledeventsprofile_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Events<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledeventsprofile">Scheduled<wbr>Events<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduledeventsprofile">Scheduled<wbr>Events<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies Scheduled Event related configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21535,7 +21376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securityprofile_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityprofile">Security<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityprofile">Security<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Security related profile settings for the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21543,7 +21384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetstorageprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetstorageprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21563,7 +21404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#billing_profile_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingprofile">Billing<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#billingprofile">Billing<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the billing related details of a Azure Spot VMSS. <br><br>Minimum api-version: 2019-03-01.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21571,7 +21412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_profile_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsprofile">Diagnostics<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsprofile">Diagnostics<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21587,7 +21428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extension_profile_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextensionprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextensionprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of settings for extensions installed on virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21603,7 +21444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies properties of the network interfaces of the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21611,7 +21452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21627,7 +21468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduled_events_profile_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>events_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledeventsprofile">Scheduled<wbr>Events<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduledeventsprofile">Scheduled<wbr>Events<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies Scheduled Event related configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21635,7 +21476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_profile_python" style="color: inherit; text-decoration: inherit;">security_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityprofile">Security<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityprofile">Security<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Security related profile settings for the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21643,7 +21484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetstorageprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetstorageprofile">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21665,7 +21506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#billingprofile_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Billing<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#billingprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Billing<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the billing related details of a Azure Spot VMSS. <br><br>Minimum api-version: 2019-03-01.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21673,7 +21514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnosticsprofile_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Diagnostics<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21689,7 +21530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensionprofile_csharp" style="color: inherit; text-decoration: inherit;">Extension<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextensionprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextensionprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of settings for extensions installed on virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21705,7 +21546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies properties of the network interfaces of the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21713,7 +21554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21729,7 +21570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduledeventsprofile_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Events<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledeventsprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Scheduled<wbr>Events<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduledeventsprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Scheduled<wbr>Events<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Scheduled Event related configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21737,7 +21578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securityprofile_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Security<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Security<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Security related profile settings for the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21745,7 +21586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetstorageprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetstorageprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21865,7 +21706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#billingprofile_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingprofileresponse">Billing<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#billingprofileresponse">Billing<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the billing related details of a Azure Spot VMSS. <br><br>Minimum api-version: 2019-03-01.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21873,7 +21714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnosticsprofile_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsprofileresponse">Diagnostics<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsprofileresponse">Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21889,7 +21730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extensionprofile_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextensionprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextensionprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of settings for extensions installed on virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21905,7 +21746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies properties of the network interfaces of the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21913,7 +21754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21929,7 +21770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduledeventsprofile_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Events<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledeventsprofileresponse">Scheduled<wbr>Events<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduledeventsprofileresponse">Scheduled<wbr>Events<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Scheduled Event related configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21937,7 +21778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securityprofile_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityprofileresponse">Security<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityprofileresponse">Security<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Security related profile settings for the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21945,7 +21786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetstorageprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetstorageprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21965,7 +21806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#billing_profile_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#billingprofileresponse">Billing<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#billingprofileresponse">Billing<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the billing related details of a Azure Spot VMSS. <br><br>Minimum api-version: 2019-03-01.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21973,7 +21814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_profile_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsprofileresponse">Diagnostics<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsprofileresponse">Diagnostics<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21989,7 +21830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extension_profile_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetextensionprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetextensionprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Extension<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of settings for extensions installed on virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22005,7 +21846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetnetworkprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies properties of the network interfaces of the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22013,7 +21854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetosprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetosprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>OSProfile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22029,7 +21870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduled_events_profile_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>events_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledeventsprofileresponse">Scheduled<wbr>Events<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduledeventsprofileresponse">Scheduled<wbr>Events<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies Scheduled Event related configurations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22037,7 +21878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_profile_python" style="color: inherit; text-decoration: inherit;">security_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityprofileresponse">Security<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityprofileresponse">Security<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Security related profile settings for the virtual machines in the scale set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22045,7 +21886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinescalesetstorageprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinescalesetstorageprofileresponse">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the virtual machine disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22067,7 +21908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listeners_csharp" style="color: inherit; text-decoration: inherit;">Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmlistener">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMListener<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#winrmlistener">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMListener&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Remote Management listeners{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22091,7 +21932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listeners_nodejs" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmlistener">Win<wbr>RMListener<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#winrmlistener">Win<wbr>RMListener[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Remote Management listeners{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22103,7 +21944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listeners_python" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmlistener">Sequence[Win<wbr>RMListener<wbr>Args]</a></span>
+        <span class="property-type"><a href="#winrmlistener">Sequence[Win<wbr>RMListener]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Remote Management listeners{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22117,7 +21958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listeners_csharp" style="color: inherit; text-decoration: inherit;">Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmlistenerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMListener<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#winrmlistenerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMListener<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Remote Management listeners{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22141,7 +21982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listeners_nodejs" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmlistenerresponse">Win<wbr>RMListener<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#winrmlistenerresponse">Win<wbr>RMListener<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Remote Management listeners{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22153,7 +21994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#listeners_python" style="color: inherit; text-decoration: inherit;">listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmlistenerresponse">Sequence[Win<wbr>RMListener<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#winrmlistenerresponse">Sequence[Win<wbr>RMListener<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of Windows Remote Management listeners{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22195,7 +22036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protocoltypes">Protocol<wbr>Types</a></span>
+        <span class="property-type"><a href="#protocoltypes">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of WinRM listener. <br><br> Possible values are: <br>**http** <br><br> **https**{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22331,7 +22172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalunattendcontent_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalunattendcontent">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Additional<wbr>Unattend<wbr>Content<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalunattendcontent">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Additional<wbr>Unattend<wbr>Content&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22347,7 +22188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchsettings_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Patch<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Patch<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22371,7 +22212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#winrm_csharp" style="color: inherit; text-decoration: inherit;">Win<wbr>RM</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMConfiguration<wbr>Args</a></span>
+        <span class="property-type"><a href="#winrmconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMConfiguration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22435,7 +22276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalunattendcontent_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalunattendcontent">Additional<wbr>Unattend<wbr>Content<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#additionalunattendcontent">Additional<wbr>Unattend<wbr>Content[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22451,7 +22292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchsettings_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchsettings">Patch<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchsettings">Patch<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22475,7 +22316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#winrm_nodejs" style="color: inherit; text-decoration: inherit;">win<wbr>RM</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmconfiguration">Win<wbr>RMConfiguration<wbr>Args</a></span>
+        <span class="property-type"><a href="#winrmconfiguration">Win<wbr>RMConfiguration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22487,7 +22328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_unattend_content_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalunattendcontent">Sequence[Additional<wbr>Unattend<wbr>Content<wbr>Args]</a></span>
+        <span class="property-type"><a href="#additionalunattendcontent">Sequence[Additional<wbr>Unattend<wbr>Content]</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22503,7 +22344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchsettings">Patch<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchsettings">Patch<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22527,7 +22368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#win_rm_python" style="color: inherit; text-decoration: inherit;">win_<wbr>rm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmconfiguration">Win<wbr>RMConfiguration<wbr>Args</a></span>
+        <span class="property-type"><a href="#winrmconfiguration">Win<wbr>RMConfiguration</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22541,7 +22382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalunattendcontent_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalunattendcontentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Additional<wbr>Unattend<wbr>Content<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#additionalunattendcontentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Additional<wbr>Unattend<wbr>Content<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22557,7 +22398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchsettings_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22581,7 +22422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#winrm_csharp" style="color: inherit; text-decoration: inherit;">Win<wbr>RM</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#winrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Win<wbr>RMConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22645,7 +22486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalunattendcontent_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalunattendcontentresponse">Additional<wbr>Unattend<wbr>Content<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#additionalunattendcontentresponse">Additional<wbr>Unattend<wbr>Content<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22661,7 +22502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patchsettings_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22685,7 +22526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#winrm_nodejs" style="color: inherit; text-decoration: inherit;">win<wbr>RM</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22697,7 +22538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_unattend_content_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalunattendcontentresponse">Sequence[Additional<wbr>Unattend<wbr>Content<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#additionalunattendcontentresponse">Sequence[Additional<wbr>Unattend<wbr>Content<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22713,7 +22554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22737,7 +22578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#win_rm_python" style="color: inherit; text-decoration: inherit;">win_<wbr>rm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd></dl>
 {{% /choosable %}}

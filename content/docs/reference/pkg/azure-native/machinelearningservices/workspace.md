@@ -654,7 +654,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionproperty">Encryption<wbr>Property</a></span>
+        <span class="property-type"><a href="#encryptionproperty">Encryption<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption settings of Azure ML workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +678,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -718,7 +718,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#servicemanagedresourcessettings_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Managed<wbr>Resources<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemanagedresourcessettings">Service<wbr>Managed<wbr>Resources<wbr>Settings</a></span>
+        <span class="property-type"><a href="#servicemanagedresourcessettings">Service<wbr>Managed<wbr>Resources<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service managed resource settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +726,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sharedprivatelinkresources_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Private<wbr>Link<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresource">[]Shared<wbr>Private<wbr>Link<wbr>Resource</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresource">[]Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of shared private link resources in this workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +734,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1553,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Customer Key vault properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1569,7 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityforcmk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>For<wbr>Cmk<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityforcmk">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>For<wbr>Cmk</a></span>
     </dt>
     <dd>{{% md %}}The identity that will be used to access the key vault for encryption at rest.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1609,7 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Customer Key vault properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1625,7 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityforcmk">Identity<wbr>For<wbr>Cmk<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityforcmk">Identity<wbr>For<wbr>Cmk</a></span>
     </dt>
     <dd>{{% md %}}The identity that will be used to access the key vault for encryption at rest.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1637,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Customer Key vault properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1653,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityforcmk">Identity<wbr>For<wbr>Cmk<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityforcmk">Identity<wbr>For<wbr>Cmk</a></span>
     </dt>
     <dd>{{% md %}}The identity that will be used to access the key vault for encryption at rest.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1667,7 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Customer Key vault properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1683,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityforcmkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>For<wbr>Cmk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityforcmkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>For<wbr>Cmk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity that will be used to access the key vault for encryption at rest.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1723,7 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Customer Key vault properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1739,7 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityforcmkresponse">Identity<wbr>For<wbr>Cmk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityforcmkresponse">Identity<wbr>For<wbr>Cmk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity that will be used to access the key vault for encryption at rest.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1751,7 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Customer Key vault properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1767,7 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityforcmkresponse">Identity<wbr>For<wbr>Cmk<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityforcmkresponse">Identity<wbr>For<wbr>Cmk<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity that will be used to access the key vault for encryption at rest.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1827,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">string</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2085,7 +2085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2121,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2453,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notebookpreparationerror_csharp" style="color: inherit; text-decoration: inherit;">Notebook<wbr>Preparation<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notebookpreparationerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Notebook<wbr>Preparation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notebookpreparationerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Notebook<wbr>Preparation<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error that occurs when preparing notebook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2509,7 +2509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notebookpreparationerror_nodejs" style="color: inherit; text-decoration: inherit;">notebook<wbr>Preparation<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notebookpreparationerrorresponse">Notebook<wbr>Preparation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notebookpreparationerrorresponse">Notebook<wbr>Preparation<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error that occurs when preparing notebook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2537,7 +2537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notebook_preparation_error_python" style="color: inherit; text-decoration: inherit;">notebook_<wbr>preparation_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notebookpreparationerrorresponse">Notebook<wbr>Preparation<wbr>Error<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notebookpreparationerrorresponse">Notebook<wbr>Preparation<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The error that occurs when preparing notebook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2575,7 +2575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2591,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2607,7 +2607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2623,7 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2631,7 +2631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2759,7 +2759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2775,7 +2775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2791,7 +2791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2807,7 +2807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2815,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2851,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2867,7 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Read only system data{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2883,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2899,7 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2907,7 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3197,7 +3197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cosmosdb_csharp" style="color: inherit; text-decoration: inherit;">Cosmos<wbr>Db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cosmosdbsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cosmosdbsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The settings for the service managed cosmosdb account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3221,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cosmosdb_nodejs" style="color: inherit; text-decoration: inherit;">cosmos<wbr>Db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cosmosdbsettings">Cosmos<wbr>Db<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cosmosdbsettings">Cosmos<wbr>Db<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The settings for the service managed cosmosdb account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3233,7 +3233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cosmos_db_python" style="color: inherit; text-decoration: inherit;">cosmos_<wbr>db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cosmosdbsettings">Cosmos<wbr>Db<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#cosmosdbsettings">Cosmos<wbr>Db<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The settings for the service managed cosmosdb account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3247,7 +3247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cosmosdb_csharp" style="color: inherit; text-decoration: inherit;">Cosmos<wbr>Db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cosmosdbsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cosmosdbsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the service managed cosmosdb account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3271,7 +3271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cosmosdb_nodejs" style="color: inherit; text-decoration: inherit;">cosmos<wbr>Db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cosmosdbsettingsresponse">Cosmos<wbr>Db<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cosmosdbsettingsresponse">Cosmos<wbr>Db<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the service managed cosmosdb account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3283,7 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cosmos_db_python" style="color: inherit; text-decoration: inherit;">cosmos_<wbr>db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cosmosdbsettingsresponse">Cosmos<wbr>Db<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cosmosdbsettingsresponse">Cosmos<wbr>Db<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the service managed cosmosdb account.{{% /md %}}</dd></dl>
 {{% /choosable %}}

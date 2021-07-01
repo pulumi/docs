@@ -403,7 +403,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#iothubs_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubsettings">[]Iot<wbr>Hub<wbr>Settings</a></span>
+        <span class="property-type"><a href="#iothubsettings">[]Iot<wbr>Hub<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of IoT Hubs associated with the account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

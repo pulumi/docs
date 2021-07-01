@@ -400,7 +400,7 @@ The SubscriptionDiagnosticSetting resource accepts the following [input]({{< rel
 <a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionlogsettings">[]Subscription<wbr>Log<wbr>Settings</a></span>
+        <span class="property-type"><a href="#subscriptionlogsettings">[]Subscription<wbr>Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

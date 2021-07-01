@@ -628,7 +628,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckstepproperties">Health<wbr>Check<wbr>Step<wbr>Properties</a> | <a href="#waitstepproperties">Wait<wbr>Step<wbr>Properties</a></span>
+        <span class="property-type"><a href="#healthcheckstepproperties">Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Args</a> | <a href="#waitstepproperties">Wait<wbr>Step<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1119,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1143,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributes">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributes">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1155,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributes">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributes">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1169,7 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1193,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1205,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1253,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequest">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#restrequest">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1309,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequest">Rest<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#restrequest">Rest<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1317,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponse">Rest<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponse">Rest<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1337,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequest">Rest<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#restrequest">Rest<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponse">Rest<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponse">Rest<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1367,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequestresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restrequestresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1375,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_csharp" style="color: inherit; text-decoration: inherit;">Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1423,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequestresponse">Rest<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restrequestresponse">Rest<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1431,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponse">Rest<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseresponse">Rest<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1451,7 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequestresponse">Rest<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restrequestresponse">Rest<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1459,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponse">Rest<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseresponse">Rest<wbr>Response<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1473,7 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthchecks_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheck">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resthealthcheck">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1545,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheck">Rest<wbr>Health<wbr>Check<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resthealthcheck">Rest<wbr>Health<wbr>Check[]</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1581,7 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheck">Sequence[Rest<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resthealthcheck">Sequence[Rest<wbr>Health<wbr>Check]</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1619,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthchecks_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resthealthcheckresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Health<wbr>Check<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1691,7 +1691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckresponse">Rest<wbr>Health<wbr>Check<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resthealthcheckresponse">Rest<wbr>Health<wbr>Check<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1727,7 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckresponse">Sequence[Rest<wbr>Health<wbr>Check<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resthealthcheckresponse">Sequence[Rest<wbr>Health<wbr>Check<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1791,7 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Args</a> | <a href="#rolloutidentityauthentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#apikeyauthentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication</a> | <a href="#rolloutidentityauthentication">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1847,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthentication">Api<wbr>Key<wbr>Authentication<wbr>Args</a> | <a href="#rolloutidentityauthentication">Rollout<wbr>Identity<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#apikeyauthentication">Api<wbr>Key<wbr>Authentication</a> | <a href="#rolloutidentityauthentication">Rollout<wbr>Identity<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1875,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthentication">Api<wbr>Key<wbr>Authentication<wbr>Args</a> | <a href="#rolloutidentityauthentication">Rollout<wbr>Identity<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#apikeyauthentication">Api<wbr>Key<wbr>Authentication</a> | <a href="#rolloutidentityauthentication">Rollout<wbr>Identity<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1931,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#rolloutidentityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Api<wbr>Key<wbr>Authentication<wbr>Response</a> | <a href="#rolloutidentityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Identity<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1987,7 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthenticationresponse">Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#rolloutidentityauthenticationresponse">Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Api<wbr>Key<wbr>Authentication<wbr>Response</a> | <a href="#rolloutidentityauthenticationresponse">Rollout<wbr>Identity<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2015,7 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthenticationresponse">Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#rolloutidentityauthenticationresponse">Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Api<wbr>Key<wbr>Authentication<wbr>Response</a> | <a href="#rolloutidentityauthenticationresponse">Rollout<wbr>Identity<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2045,7 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseregex">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseregex">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2085,7 +2085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseregex">Rest<wbr>Response<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseregex">Rest<wbr>Response<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2105,7 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseregex">Rest<wbr>Response<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseregex">Rest<wbr>Response<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2147,7 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchquantifier_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Quantifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restmatchquantifier">Rest<wbr>Match<wbr>Quantifier</a></span>
+        <span class="property-type"><a href="#restmatchquantifier">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether any or all of the expressions should match with the response content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2209,7 +2209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponseregex">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Response<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseresponseregex">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rest<wbr>Response<wbr>Response<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2249,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponseregex">Rest<wbr>Response<wbr>Response<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseresponseregex">Rest<wbr>Response<wbr>Response<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2269,7 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponseregex">Rest<wbr>Response<wbr>Response<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseresponseregex">Rest<wbr>Response<wbr>Response<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2509,7 +2509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Wait<wbr>Step<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#waitstepattributes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Wait<wbr>Step<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2533,7 +2533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributes">Wait<wbr>Step<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#waitstepattributes">Wait<wbr>Step<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2545,7 +2545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributes">Wait<wbr>Step<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#waitstepattributes">Wait<wbr>Step<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2559,7 +2559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Wait<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#waitstepattributesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Wait<wbr>Step<wbr>Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2583,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributesresponse">Wait<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#waitstepattributesresponse">Wait<wbr>Step<wbr>Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2595,7 +2595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributesresponse">Wait<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#waitstepattributesresponse">Wait<wbr>Step<wbr>Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}

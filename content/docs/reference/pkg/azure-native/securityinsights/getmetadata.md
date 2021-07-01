@@ -210,14 +210,6 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="contentid_csharp">
-<a href="#contentid_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -274,6 +266,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The creator of the content item.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="contentid_csharp">
+<a href="#contentid_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="dependencies_csharp">
 <a href="#dependencies_csharp" style="color: inherit; text-decoration: inherit;">Dependencies</a>
 </span>
@@ -317,14 +317,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="contentid_go">
-<a href="#contentid_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -382,6 +374,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The creator of the content item.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="contentid_go">
+<a href="#contentid_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="dependencies_go">
 <a href="#dependencies_go" style="color: inherit; text-decoration: inherit;">Dependencies</a>
 </span>
@@ -425,14 +425,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="contentid_nodejs">
-<a href="#contentid_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -490,6 +482,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The creator of the content item.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="contentid_nodejs">
+<a href="#contentid_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="dependencies_nodejs">
 <a href="#dependencies_nodejs" style="color: inherit; text-decoration: inherit;">dependencies</a>
 </span>
@@ -533,14 +533,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="content_id_python">
-<a href="#content_id_python" style="color: inherit; text-decoration: inherit;">content_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -597,6 +589,14 @@ The following output properties are available:
         <span class="property-type"><a href="#metadataauthorresponse">Metadata<wbr>Author<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The creator of the content item.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="content_id_python">
+<a href="#content_id_python" style="color: inherit; text-decoration: inherit;">content_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dependencies_python">
 <a href="#dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>

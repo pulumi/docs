@@ -366,7 +366,7 @@ The InstanceDetails resource accepts the following [input]({{< relref "/docs/int
 <a href="#administration_go" style="color: inherit; text-decoration: inherit;">Administration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dfpinstanceadministrators">DFPInstance<wbr>Administrators</a></span>
+        <span class="property-type"><a href="#dfpinstanceadministrators">DFPInstance<wbr>Administrators<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of DFP instance administrators{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

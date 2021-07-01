@@ -380,7 +380,7 @@ The SerialPort resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serialportstate">Serial<wbr>Port<wbr>State<wbr>Enum</a></span>
+        <span class="property-type"><a href="#serialportstate">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the port is enabled for a serial console connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}

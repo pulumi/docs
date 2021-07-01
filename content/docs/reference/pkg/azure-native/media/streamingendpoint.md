@@ -579,7 +579,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#accesscontrol_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control definition of the streaming endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -627,7 +627,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#crosssiteaccesspolicies_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Site<wbr>Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crosssiteaccesspolicies">Cross<wbr>Site<wbr>Access<wbr>Policies</a></span>
+        <span class="property-type"><a href="#crosssiteaccesspolicies">Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The streaming endpoint access policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1306,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamaisignatureheaderauthenticationkeylist_csharp" style="color: inherit; text-decoration: inherit;">Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkey">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1330,7 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamaisignatureheaderauthenticationkeylist_nodejs" style="color: inherit; text-decoration: inherit;">akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkey">Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkey">Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1342,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_signature_header_authentication_key_list_python" style="color: inherit; text-decoration: inherit;">akamai_<wbr>signature_<wbr>header_<wbr>authentication_<wbr>key_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkey">Sequence[Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkey">Sequence[Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1356,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamaisignatureheaderauthenticationkeylist_csharp" style="color: inherit; text-decoration: inherit;">Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1380,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamaisignatureheaderauthenticationkeylist_nodejs" style="color: inherit; text-decoration: inherit;">akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1392,7 +1392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_signature_header_authentication_key_list_python" style="color: inherit; text-decoration: inherit;">akamai_<wbr>signature_<wbr>header_<wbr>authentication_<wbr>key_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">Sequence[Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">Sequence[Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1798,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprange">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPRange<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprange">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPRange&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1822,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprange">IPRange<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#iprange">IPRange[]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1834,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprange">Sequence[IPRange<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iprange">Sequence[IPRange]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1848,7 +1848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPRange<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPRange<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1872,7 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">IPRange<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#iprangeresponse">IPRange<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1884,7 +1884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">Sequence[IPRange<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iprangeresponse">Sequence[IPRange<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2126,7 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_csharp" style="color: inherit; text-decoration: inherit;">Akamai</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Akamai<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Akamai<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2134,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2166,7 +2166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_nodejs" style="color: inherit; text-decoration: inherit;">akamai</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrol">Akamai<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrol">Akamai<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2174,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2186,7 +2186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_python" style="color: inherit; text-decoration: inherit;">akamai</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrol">Akamai<wbr>Access<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrol">Akamai<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2194,7 +2194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2208,7 +2208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_csharp" style="color: inherit; text-decoration: inherit;">Akamai</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Akamai<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Akamai<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2216,7 +2216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>IPAccess<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2248,7 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_nodejs" style="color: inherit; text-decoration: inherit;">akamai</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Akamai<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Akamai<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2256,7 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2268,7 +2268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_python" style="color: inherit; text-decoration: inherit;">akamai</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Akamai<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Akamai<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2276,7 +2276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}

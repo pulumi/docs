@@ -546,7 +546,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#addressspace_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AddressSpace that contains an array of IP address ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +554,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#bgpproperties_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings</a></span>
+        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +562,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deviceproperties_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceproperties">Device<wbr>Properties</a></span>
+        <span class="property-type"><a href="#deviceproperties">Device<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The device properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +602,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#o365policy_go" style="color: inherit; text-decoration: inherit;">O365Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#o365policyproperties">O365Policy<wbr>Properties</a></span>
+        <span class="property-type"><a href="#o365policyproperties">O365Policy<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office365 Policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +626,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualwan_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Wan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VirtualWAN to which the vpnSite belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +634,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vpnsitelinks_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Site<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnsitelink">[]Vpn<wbr>Site<wbr>Link</a></span>
+        <span class="property-type"><a href="#vpnsitelink">[]Vpn<wbr>Site<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of all vpn site links.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address&gt;</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address[]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1343,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1415,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1451,7 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2157,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#breakoutcategories_csharp" style="color: inherit; text-decoration: inherit;">Break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#o365breakoutcategorypolicies">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args</a></span>
+        <span class="property-type"><a href="#o365breakoutcategorypolicies">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>O365Break<wbr>Out<wbr>Category<wbr>Policies</a></span>
     </dt>
     <dd>{{% md %}}Office365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2181,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#breakoutcategories_nodejs" style="color: inherit; text-decoration: inherit;">break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#o365breakoutcategorypolicies">O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args</a></span>
+        <span class="property-type"><a href="#o365breakoutcategorypolicies">O365Break<wbr>Out<wbr>Category<wbr>Policies</a></span>
     </dt>
     <dd>{{% md %}}Office365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2193,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#break_out_categories_python" style="color: inherit; text-decoration: inherit;">break_<wbr>out_<wbr>categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#o365breakoutcategorypolicies">O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Args</a></span>
+        <span class="property-type"><a href="#o365breakoutcategorypolicies">O365Break<wbr>Out<wbr>Category<wbr>Policies</a></span>
     </dt>
     <dd>{{% md %}}Office365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2207,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#breakoutcategories_csharp" style="color: inherit; text-decoration: inherit;">Break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#o365breakoutcategorypoliciesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#o365breakoutcategorypoliciesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Office365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2231,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#breakoutcategories_nodejs" style="color: inherit; text-decoration: inherit;">break<wbr>Out<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#o365breakoutcategorypoliciesresponse">O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#o365breakoutcategorypoliciesresponse">O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Office365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2243,7 +2243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#break_out_categories_python" style="color: inherit; text-decoration: inherit;">break_<wbr>out_<wbr>categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#o365breakoutcategorypoliciesresponse">O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#o365breakoutcategorypoliciesresponse">O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Office365 breakout categories.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2685,7 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpproperties_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkbgpsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkbgpsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2717,7 +2717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkproperties_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkproviderproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkproviderproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Provider<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The link provider properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2789,7 +2789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpproperties_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkbgpsettings">Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkbgpsettings">Vpn<wbr>Link<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2821,7 +2821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkproperties_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkproviderproperties">Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkproviderproperties">Vpn<wbr>Link<wbr>Provider<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The link provider properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2841,7 +2841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_properties_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkbgpsettings">Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkbgpsettings">Vpn<wbr>Link<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2873,7 +2873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#link_properties_python" style="color: inherit; text-decoration: inherit;">link_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkproviderproperties">Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkproviderproperties">Vpn<wbr>Link<wbr>Provider<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The link provider properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2919,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpproperties_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkbgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkbgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2951,7 +2951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkproperties_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkproviderpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkproviderpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The link provider properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3071,7 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgpproperties_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkbgpsettingsresponse">Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkbgpsettingsresponse">Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3103,7 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkproperties_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkproviderpropertiesresponse">Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkproviderpropertiesresponse">Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The link provider properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3147,7 +3147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_properties_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkbgpsettingsresponse">Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkbgpsettingsresponse">Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3179,7 +3179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#link_properties_python" style="color: inherit; text-decoration: inherit;">link_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnlinkproviderpropertiesresponse">Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnlinkproviderpropertiesresponse">Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The link provider properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

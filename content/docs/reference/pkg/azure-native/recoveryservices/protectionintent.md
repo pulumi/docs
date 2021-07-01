@@ -419,7 +419,7 @@ The ProtectionIntent resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintent">Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent</a> | <a href="#azureresourceprotectionintent">Azure<wbr>Resource<wbr>Protection<wbr>Intent</a> | <a href="#azureworkloadautoprotectionintent">Azure<wbr>Workload<wbr>Auto<wbr>Protection<wbr>Intent</a> | <a href="#azureworkloadsqlautoprotectionintent">Azure<wbr>Workload<wbr>SQLAuto<wbr>Protection<wbr>Intent</a></span>
+        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintent">Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Args</a> | <a href="#azureresourceprotectionintent">Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Args</a> | <a href="#azureworkloadautoprotectionintent">Azure<wbr>Workload<wbr>Auto<wbr>Protection<wbr>Intent<wbr>Args</a> | <a href="#azureworkloadsqlautoprotectionintent">Azure<wbr>Workload<wbr>SQLAuto<wbr>Protection<wbr>Intent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectionIntentResource properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

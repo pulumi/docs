@@ -641,7 +641,7 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbookmanagedidentity">Workbook<wbr>Managed<wbr>Identity</a></span>
+        <span class="property-type"><a href="#workbookmanagedidentity">Workbook<wbr>Managed<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity used for BYOS{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1204,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbookuserassignedidentitiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workbookuserassignedidentitiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1244,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbookuserassignedidentitiesresponse">Workbook<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workbookuserassignedidentitiesresponse">Workbook<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1264,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbookuserassignedidentitiesresponse">Workbook<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#workbookuserassignedidentitiesresponse">Workbook<wbr>User<wbr>Assigned<wbr>Identities<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd></dl>
 {{% /choosable %}}

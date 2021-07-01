@@ -424,7 +424,7 @@ The ManagerExtendedInfo resource accepts the following [input]({{< relref "/docs
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kind">Kind</a></span>
+        <span class="property-type"><a href="#kind">string</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

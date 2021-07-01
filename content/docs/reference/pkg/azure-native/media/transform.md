@@ -362,7 +362,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutput">[]Transform<wbr>Output<wbr>Type</a></span>
+        <span class="property-type"><a href="#transformoutput">[]Transform<wbr>Output<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more TransformOutputs that the Transform should generate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3079,7 +3079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_csharp" style="color: inherit; text-decoration: inherit;">Crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3087,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deinterlace_csharp" style="color: inherit; text-decoration: inherit;">Deinterlace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlace">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Deinterlace<wbr>Args</a></span>
+        <span class="property-type"><a href="#deinterlace">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Deinterlace</a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3095,7 +3095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_csharp" style="color: inherit; text-decoration: inherit;">Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Overlay<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Overlay<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Overlay, Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Overlay&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3151,7 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_nodejs" style="color: inherit; text-decoration: inherit;">crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Rectangle</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3159,7 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deinterlace_nodejs" style="color: inherit; text-decoration: inherit;">deinterlace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlace">Deinterlace<wbr>Args</a></span>
+        <span class="property-type"><a href="#deinterlace">Deinterlace</a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3167,7 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_nodejs" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Overlay<wbr>Args | Video<wbr>Overlay<wbr>Args[]</span>
+        <span class="property-type">Audio<wbr>Overlay | Video<wbr>Overlay[]</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3187,7 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_python" style="color: inherit; text-decoration: inherit;">crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Rectangle</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3195,7 +3195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deinterlace_python" style="color: inherit; text-decoration: inherit;">deinterlace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlace">Deinterlace<wbr>Args</a></span>
+        <span class="property-type"><a href="#deinterlace">Deinterlace</a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3203,7 +3203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_python" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Audio<wbr>Overlay<wbr>Args, Video<wbr>Overlay<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Audio<wbr>Overlay, Video<wbr>Overlay]]</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3225,7 +3225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_csharp" style="color: inherit; text-decoration: inherit;">Crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3233,7 +3233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deinterlace_csharp" style="color: inherit; text-decoration: inherit;">Deinterlace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Deinterlace<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deinterlaceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Deinterlace<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3241,7 +3241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_csharp" style="color: inherit; text-decoration: inherit;">Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Overlay<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Overlay<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Overlay<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Overlay<wbr>Response&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3297,7 +3297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_nodejs" style="color: inherit; text-decoration: inherit;">crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3305,7 +3305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deinterlace_nodejs" style="color: inherit; text-decoration: inherit;">deinterlace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlaceresponse">Deinterlace<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deinterlaceresponse">Deinterlace<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3313,7 +3313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_nodejs" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Overlay<wbr>Response<wbr>Args | Video<wbr>Overlay<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Audio<wbr>Overlay<wbr>Response | Video<wbr>Overlay<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3333,7 +3333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_python" style="color: inherit; text-decoration: inherit;">crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3341,7 +3341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deinterlace_python" style="color: inherit; text-decoration: inherit;">deinterlace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlaceresponse">Deinterlace<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deinterlaceresponse">Deinterlace<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3349,7 +3349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_python" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Audio<wbr>Overlay<wbr>Response<wbr>Args, Video<wbr>Overlay<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Audio<wbr>Overlay<wbr>Response, Video<wbr>Overlay<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4357,7 +4357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h264layer">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>H264Layer<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#h264layer">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>H264Layer&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4477,7 +4477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h264layer">H264Layer<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#h264layer">H264Layer[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4537,7 +4537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h264layer">Sequence[H264Layer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#h264layer">Sequence[H264Layer]</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4641,7 +4641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h264layerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>H264Layer<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#h264layerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>H264Layer<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4761,7 +4761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h264layerresponse">H264Layer<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#h264layerresponse">H264Layer<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4821,7 +4821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h264layerresponse">Sequence[H264Layer<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#h264layerresponse">Sequence[H264Layer<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5781,7 +5781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h265layer">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>H265Layer<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#h265layer">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>H265Layer&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.265 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5901,7 +5901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h265layer">H265Layer<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#h265layer">H265Layer[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.265 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5961,7 +5961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h265layer">Sequence[H265Layer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#h265layer">Sequence[H265Layer]</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.265 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6049,7 +6049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h265layerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>H265Layer<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#h265layerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>H265Layer<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.265 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6169,7 +6169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h265layerresponse">H265Layer<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#h265layerresponse">H265Layer<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.265 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6229,7 +6229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h265layerresponse">Sequence[H265Layer<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#h265layerresponse">Sequence[H265Layer<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.265 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7005,7 +7005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jpglayer">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Jpg<wbr>Layer<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jpglayer">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Jpg<wbr>Layer&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7157,7 +7157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jpglayer">Jpg<wbr>Layer<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jpglayer">Jpg<wbr>Layer[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7233,7 +7233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jpglayer">Sequence[Jpg<wbr>Layer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jpglayer">Sequence[Jpg<wbr>Layer]</a></span>
     </dt>
     <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7311,7 +7311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jpglayerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Jpg<wbr>Layer<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jpglayerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Jpg<wbr>Layer<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7463,7 +7463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jpglayerresponse">Jpg<wbr>Layer<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#jpglayerresponse">Jpg<wbr>Layer<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7539,7 +7539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jpglayerresponse">Sequence[Jpg<wbr>Layer<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jpglayerresponse">Sequence[Jpg<wbr>Layer<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7893,7 +7893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfile">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7933,7 +7933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">Output<wbr>File<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#outputfile">Output<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7953,7 +7953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">Sequence[Output<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfile">Sequence[Output<wbr>File]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7975,7 +7975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8015,7 +8015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Output<wbr>File<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">Output<wbr>File<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8035,7 +8035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8057,7 +8057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfile">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8097,7 +8097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">Output<wbr>File<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#outputfile">Output<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8117,7 +8117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">Sequence[Output<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfile">Sequence[Output<wbr>File]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8139,7 +8139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8179,7 +8179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Output<wbr>File<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">Output<wbr>File<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8199,7 +8199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8463,7 +8463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pnglayer">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Png<wbr>Layer<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#pnglayer">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Png<wbr>Layer&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8599,7 +8599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pnglayer">Png<wbr>Layer<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#pnglayer">Png<wbr>Layer[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8667,7 +8667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pnglayer">Sequence[Png<wbr>Layer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pnglayer">Sequence[Png<wbr>Layer]</a></span>
     </dt>
     <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8737,7 +8737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pnglayerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Png<wbr>Layer<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#pnglayerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Png<wbr>Layer<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8873,7 +8873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pnglayerresponse">Png<wbr>Layer<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#pnglayerresponse">Png<wbr>Layer<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8941,7 +8941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pnglayerresponse">Sequence[Png<wbr>Layer<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pnglayerresponse">Sequence[Png<wbr>Layer<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9595,7 +9595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Filters<wbr>Args</a></span>
+        <span class="property-type"><a href="#filters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Filters</a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9635,7 +9635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_nodejs" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Aac<wbr>Audio<wbr>Args | Audio<wbr>Args | Copy<wbr>Audio<wbr>Args | Copy<wbr>Video<wbr>Args | H264Video<wbr>Args | H265Video<wbr>Args | Image<wbr>Args | Jpg<wbr>Image<wbr>Args | Png<wbr>Image<wbr>Args | Video<wbr>Args[]</span>
+        <span class="property-type">Aac<wbr>Audio | Audio | Copy<wbr>Audio | Copy<wbr>Video | H264Video | H265Video | Image | Jpg<wbr>Image | Png<wbr>Image | Video[]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9643,7 +9643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_nodejs" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Image<wbr>Format<wbr>Args | Jpg<wbr>Format<wbr>Args | Mp4Format<wbr>Args | Multi<wbr>Bitrate<wbr>Format<wbr>Args | Png<wbr>Format<wbr>Args | Transport<wbr>Stream<wbr>Format<wbr>Args[]</span>
+        <span class="property-type">Image<wbr>Format | Jpg<wbr>Format | Mp4Format | Multi<wbr>Bitrate<wbr>Format | Png<wbr>Format | Transport<wbr>Stream<wbr>Format[]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9651,7 +9651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filters">Filters<wbr>Args</a></span>
+        <span class="property-type"><a href="#filters">Filters</a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9663,7 +9663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_python" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Aac<wbr>Audio<wbr>Args, Audio<wbr>Args, Copy<wbr>Audio<wbr>Args, Copy<wbr>Video<wbr>Args, H264Video<wbr>Args, H265Video<wbr>Args, Image<wbr>Args, Jpg<wbr>Image<wbr>Args, Png<wbr>Image<wbr>Args, Video<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Aac<wbr>Audio, Audio, Copy<wbr>Audio, Copy<wbr>Video, H264Video, H265Video, Image, Jpg<wbr>Image, Png<wbr>Image, Video]]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9671,7 +9671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_python" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Image<wbr>Format<wbr>Args, Jpg<wbr>Format<wbr>Args, Mp4Format<wbr>Args, Multi<wbr>Bitrate<wbr>Format<wbr>Args, Png<wbr>Format<wbr>Args, Transport<wbr>Stream<wbr>Format<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Image<wbr>Format, Jpg<wbr>Format, Mp4Format, Multi<wbr>Bitrate<wbr>Format, Png<wbr>Format, Transport<wbr>Stream<wbr>Format]]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9679,7 +9679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filters">Filters<wbr>Args</a></span>
+        <span class="property-type"><a href="#filters">Filters</a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9709,7 +9709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Filters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filtersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Filters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9749,7 +9749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_nodejs" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Aac<wbr>Audio<wbr>Response<wbr>Args | Audio<wbr>Response<wbr>Args | Copy<wbr>Audio<wbr>Response<wbr>Args | Copy<wbr>Video<wbr>Response<wbr>Args | H264Video<wbr>Response<wbr>Args | H265Video<wbr>Response<wbr>Args | Image<wbr>Response<wbr>Args | Jpg<wbr>Image<wbr>Response<wbr>Args | Png<wbr>Image<wbr>Response<wbr>Args | Video<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Aac<wbr>Audio<wbr>Response | Audio<wbr>Response | Copy<wbr>Audio<wbr>Response | Copy<wbr>Video<wbr>Response | H264Video<wbr>Response | H265Video<wbr>Response | Image<wbr>Response | Jpg<wbr>Image<wbr>Response | Png<wbr>Image<wbr>Response | Video<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9757,7 +9757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_nodejs" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Image<wbr>Format<wbr>Response<wbr>Args | Jpg<wbr>Format<wbr>Response<wbr>Args | Mp4Format<wbr>Response<wbr>Args | Multi<wbr>Bitrate<wbr>Format<wbr>Response<wbr>Args | Png<wbr>Format<wbr>Response<wbr>Args | Transport<wbr>Stream<wbr>Format<wbr>Response<wbr>Args[]</span>
+        <span class="property-type">Image<wbr>Format<wbr>Response | Jpg<wbr>Format<wbr>Response | Mp4Format<wbr>Response | Multi<wbr>Bitrate<wbr>Format<wbr>Response | Png<wbr>Format<wbr>Response | Transport<wbr>Stream<wbr>Format<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9765,7 +9765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtersresponse">Filters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filtersresponse">Filters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9777,7 +9777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_python" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Aac<wbr>Audio<wbr>Response<wbr>Args, Audio<wbr>Response<wbr>Args, Copy<wbr>Audio<wbr>Response<wbr>Args, Copy<wbr>Video<wbr>Response<wbr>Args, H264Video<wbr>Response<wbr>Args, H265Video<wbr>Response<wbr>Args, Image<wbr>Response<wbr>Args, Jpg<wbr>Image<wbr>Response<wbr>Args, Png<wbr>Image<wbr>Response<wbr>Args, Video<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Aac<wbr>Audio<wbr>Response, Audio<wbr>Response, Copy<wbr>Audio<wbr>Response, Copy<wbr>Video<wbr>Response, H264Video<wbr>Response, H265Video<wbr>Response, Image<wbr>Response, Jpg<wbr>Image<wbr>Response, Png<wbr>Image<wbr>Response, Video<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9785,7 +9785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_python" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Image<wbr>Format<wbr>Response<wbr>Args, Jpg<wbr>Format<wbr>Response<wbr>Args, Mp4Format<wbr>Response<wbr>Args, Multi<wbr>Bitrate<wbr>Format<wbr>Response<wbr>Args, Png<wbr>Format<wbr>Response<wbr>Args, Transport<wbr>Stream<wbr>Format<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Image<wbr>Format<wbr>Response, Jpg<wbr>Format<wbr>Response, Mp4Format<wbr>Response, Multi<wbr>Bitrate<wbr>Format<wbr>Response, Png<wbr>Format<wbr>Response, Transport<wbr>Stream<wbr>Format<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9793,7 +9793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtersresponse">Filters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filtersresponse">Filters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10047,7 +10047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_csharp" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpreset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a> | <a href="#builtinstandardencoderpreset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#facedetectorpreset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Args</a> | <a href="#standardencoderpreset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#videoanalyzerpreset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpreset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset</a> | <a href="#builtinstandardencoderpreset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset</a> | <a href="#facedetectorpreset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset</a> | <a href="#standardencoderpreset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset</a> | <a href="#videoanalyzerpreset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Analyzer<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10103,7 +10103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_nodejs" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a> | <a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset<wbr>Args</a> | <a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#videoanalyzerpreset">Video<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset</a> | <a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset</a> | <a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset</a> | <a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset</a> | <a href="#videoanalyzerpreset">Video<wbr>Analyzer<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10131,7 +10131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a> | <a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset<wbr>Args</a> | <a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#videoanalyzerpreset">Video<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset</a> | <a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset</a> | <a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset</a> | <a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset</a> | <a href="#videoanalyzerpreset">Video<wbr>Analyzer<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10161,7 +10161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_csharp" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#builtinstandardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#facedetectorpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#standardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#videoanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Response</a> | <a href="#builtinstandardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#facedetectorpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Response</a> | <a href="#standardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#videoanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10217,7 +10217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_nodejs" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#videoanalyzerpresetresponse">Video<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response</a> | <a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response</a> | <a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#videoanalyzerpresetresponse">Video<wbr>Analyzer<wbr>Preset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10245,7 +10245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#videoanalyzerpresetresponse">Video<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response</a> | <a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response</a> | <a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#videoanalyzerpresetresponse">Video<wbr>Analyzer<wbr>Preset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10283,7 +10283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfile">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10323,7 +10323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">Output<wbr>File<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#outputfile">Output<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10343,7 +10343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">Sequence[Output<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfile">Sequence[Output<wbr>File]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10365,7 +10365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10405,7 +10405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Output<wbr>File<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">Output<wbr>File<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10425,7 +10425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10893,7 +10893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#croprectangle_csharp" style="color: inherit; text-decoration: inherit;">Crop<wbr>Rectangle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle</a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10933,7 +10933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle</a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11045,7 +11045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#croprectangle_nodejs" style="color: inherit; text-decoration: inherit;">crop<wbr>Rectangle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Rectangle</a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11085,7 +11085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Rectangle</a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11121,7 +11121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_rectangle_python" style="color: inherit; text-decoration: inherit;">crop_<wbr>rectangle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Rectangle</a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11161,7 +11161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Rectangle</a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11199,7 +11199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#croprectangle_csharp" style="color: inherit; text-decoration: inherit;">Crop<wbr>Rectangle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11239,7 +11239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11351,7 +11351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#croprectangle_nodejs" style="color: inherit; text-decoration: inherit;">crop<wbr>Rectangle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11391,7 +11391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11427,7 +11427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_rectangle_python" style="color: inherit; text-decoration: inherit;">crop_<wbr>rectangle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11467,7 +11467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -396,7 +396,7 @@ The AutoScaleVCore resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalevcoresku">Auto<wbr>Scale<wbr>VCore<wbr>Sku</a></span>
+        <span class="property-type"><a href="#autoscalevcoresku">Auto<wbr>Scale<wbr>VCore<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the auto scale v-core resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -428,7 +428,7 @@ The AutoScaleVCore resource accepts the following [input]({{< relref "/docs/intr
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdata">System<wbr>Data</a></span>
+        <span class="property-type"><a href="#systemdata">System<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

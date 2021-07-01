@@ -680,7 +680,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#creationdata_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#creationdata">Creation<wbr>Data</a></span>
+        <span class="property-type"><a href="#creationdata">Creation<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information. CreationData information cannot be changed after the disk has been created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -712,7 +712,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Encryption</a></span>
+        <span class="property-type"><a href="#encryption">Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +720,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#encryptionsettingscollection_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingscollection">Encryption<wbr>Settings<wbr>Collection</a></span>
+        <span class="property-type"><a href="#encryptionsettingscollection">Encryption<wbr>Settings<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -728,7 +728,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -768,7 +768,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemtypes">Operating<wbr>System<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemtypes">string</a></span>
     </dt>
     <dd>{{% md %}}The Operating System type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -776,7 +776,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#purchaseplan_go" style="color: inherit; text-decoration: inherit;">Purchase<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan</a></span>
+        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +784,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotsku">Snapshot<wbr>Sku</a></span>
+        <span class="property-type"><a href="#snapshotsku">Snapshot<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1431,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1439,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1567,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1575,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1635,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1643,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreference">Image<wbr>Disk<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1713,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1721,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1865,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1873,7 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagereference_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1941,7 +1941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1949,7 +1949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2221,7 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettings_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselement">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#encryptionsettingselement">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2277,7 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettings_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselement">Encryption<wbr>Settings<wbr>Element<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#encryptionsettingselement">Encryption<wbr>Settings<wbr>Element[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2305,7 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselement">Sequence[Encryption<wbr>Settings<wbr>Element<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionsettingselement">Sequence[Encryption<wbr>Settings<wbr>Element]</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2335,7 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettings_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#encryptionsettingselementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2391,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionsettings_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselementresponse">Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#encryptionsettingselementresponse">Encryption<wbr>Settings<wbr>Element<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2419,7 +2419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselementresponse">Sequence[Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionsettingselementresponse">Sequence[Encryption<wbr>Settings<wbr>Element<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2441,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2449,7 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2481,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreference">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreference">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2489,7 +2489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreference">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreference">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2501,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreference">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreference">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2509,7 +2509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreference">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreference">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2523,7 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2531,7 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2563,7 +2563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2571,7 +2571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2583,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2591,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3019,7 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3059,7 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3079,7 +3079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3101,7 +3101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3141,7 +3141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3161,7 +3161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3183,7 +3183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3223,7 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3243,7 +3243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3265,7 +3265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3305,7 +3305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3325,7 +3325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}

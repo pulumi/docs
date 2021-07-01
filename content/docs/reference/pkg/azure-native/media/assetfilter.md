@@ -569,7 +569,7 @@ The AssetFilter resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#firstquality_go" style="color: inherit; text-decoration: inherit;">First<wbr>Quality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firstquality">First<wbr>Quality</a></span>
+        <span class="property-type"><a href="#firstquality">First<wbr>Quality<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The first quality.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -577,7 +577,7 @@ The AssetFilter resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#presentationtimerange_go" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Time<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presentationtimerange">Presentation<wbr>Time<wbr>Range</a></span>
+        <span class="property-type"><a href="#presentationtimerange">Presentation<wbr>Time<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presentation time range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -585,7 +585,7 @@ The AssetFilter resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tracks_go" style="color: inherit; text-decoration: inherit;">Tracks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackselection">[]Filter<wbr>Track<wbr>Selection</a></span>
+        <span class="property-type"><a href="#filtertrackselection">[]Filter<wbr>Track<wbr>Selection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The tracks selection conditions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1176,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackpropertycondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#filtertrackpropertycondition">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Filter<wbr>Track<wbr>Property<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1200,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackpropertycondition">Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#filtertrackpropertycondition">Filter<wbr>Track<wbr>Property<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1212,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackpropertycondition">Sequence[Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filtertrackpropertycondition">Sequence[Filter<wbr>Track<wbr>Property<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1226,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1250,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trackselections_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1262,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">Sequence[Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filtertrackpropertyconditionresponse">Sequence[Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -586,7 +586,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#request_go" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestcontract">Request<wbr>Contract</a></span>
+        <span class="property-type"><a href="#requestcontract">Request<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An entity containing request details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +594,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#responses_go" style="color: inherit; text-decoration: inherit;">Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsecontract">[]Response<wbr>Contract</a></span>
+        <span class="property-type"><a href="#responsecontract">[]Response<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Array of Operation responses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +602,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#templateparameters_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">[]Parameter<wbr>Contract</a></span>
+        <span class="property-type"><a href="#parametercontract">[]Parameter<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Collection of URL template parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1373,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formparameters_csharp" style="color: inherit; text-decoration: inherit;">Form<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1461,7 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formparameters_nodejs" style="color: inherit; text-decoration: inherit;">form<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">Parameter<wbr>Contract<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#parametercontract">Parameter<wbr>Contract[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1505,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#form_parameters_python" style="color: inherit; text-decoration: inherit;">form_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract]</a></span>
     </dt>
     <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1551,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formparameters_csharp" style="color: inherit; text-decoration: inherit;">Form<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1639,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formparameters_nodejs" style="color: inherit; text-decoration: inherit;">form<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1683,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#form_parameters_python" style="color: inherit; text-decoration: inherit;">form_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1729,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1737,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1745,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#representationcontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1801,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">Parameter<wbr>Contract<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#parametercontract">Parameter<wbr>Contract[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparameters_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">Parameter<wbr>Contract<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#parametercontract">Parameter<wbr>Contract[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1817,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_nodejs" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontract">Representation<wbr>Contract<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#representationcontract">Representation<wbr>Contract[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1837,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1845,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1853,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontract">Sequence[Representation<wbr>Contract<wbr>Args]</a></span>
+        <span class="property-type"><a href="#representationcontract">Sequence[Representation<wbr>Contract]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1875,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1883,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1891,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1947,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1955,7 +1955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparameters_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1963,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_nodejs" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">Representation<wbr>Contract<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">Representation<wbr>Contract<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1983,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request query parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1999,7 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">Sequence[Representation<wbr>Contract<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">Sequence[Representation<wbr>Contract<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation request representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2029,7 +2029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,7 +2037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#representationcontract">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2101,7 +2101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">Parameter<wbr>Contract<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#parametercontract">Parameter<wbr>Contract[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2109,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_nodejs" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontract">Representation<wbr>Contract<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#representationcontract">Representation<wbr>Contract[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2137,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parametercontract">Sequence[Parameter<wbr>Contract]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2145,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontract">Sequence[Representation<wbr>Contract<wbr>Args]</a></span>
+        <span class="property-type"><a href="#representationcontract">Sequence[Representation<wbr>Contract]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2175,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Parameter<wbr>Contract<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2183,7 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Representation<wbr>Contract<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2247,7 +2247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Parameter<wbr>Contract<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2255,7 +2255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_nodejs" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">Representation<wbr>Contract<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">Representation<wbr>Contract<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2283,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parametercontractresponse">Sequence[Parameter<wbr>Contract<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2291,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#representationcontractresponse">Sequence[Representation<wbr>Contract<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#representationcontractresponse">Sequence[Representation<wbr>Contract<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Collection of operation response representations.{{% /md %}}</dd></dl>
 {{% /choosable %}}

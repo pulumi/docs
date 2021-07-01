@@ -391,7 +391,7 @@ The CustomIPPrefix resource accepts the following [input]({{< relref "/docs/intr
 <a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The extended location of the custom IP prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

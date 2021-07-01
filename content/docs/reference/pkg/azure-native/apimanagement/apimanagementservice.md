@@ -1768,7 +1768,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskuproperties">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskuproperties">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1776,7 +1776,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#additionallocations_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionallocation">[]Additional<wbr>Location</a></span>
+        <span class="property-type"><a href="#additionallocation">[]Additional<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional datacenter locations of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1784,7 +1784,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#apiversionconstraint_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Constraint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiversionconstraint">Api<wbr>Version<wbr>Constraint</a></span>
+        <span class="property-type"><a href="#apiversionconstraint">Api<wbr>Version<wbr>Constraint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Control Plane Apis version constraint for the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1792,7 +1792,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateconfiguration">[]Certificate<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#certificateconfiguration">[]Certificate<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1824,7 +1824,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#hostnameconfigurations_go" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnameconfiguration">[]Hostname<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#hostnameconfiguration">[]Hostname<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom hostname configuration of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1832,7 +1832,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceidentity">Api<wbr>Management<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#apimanagementserviceidentity">Api<wbr>Management<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity of the Api Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1880,7 +1880,7 @@ The ApiManagementService resource accepts the following [input]({{< relref "/doc
 <a href="#virtualnetworkconfiguration_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfiguration">Virtual<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfiguration">Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2759,7 +2759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskuproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskuproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2775,7 +2775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfiguration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration for the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2847,7 +2847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskuproperties">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskuproperties">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2863,7 +2863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfiguration">Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfiguration">Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration for the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2891,7 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskuproperties">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskuproperties">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2907,7 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfiguration">Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfiguration">Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration for the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2961,7 +2961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2977,7 +2977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration for the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3097,7 +3097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3113,7 +3113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Virtual<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Virtual<wbr>Network<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration for the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3165,7 +3165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apimanagementserviceskupropertiesresponse">Api<wbr>Management<wbr>Service<wbr>Sku<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SKU properties of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3181,7 +3181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Virtual<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigurationresponse">Virtual<wbr>Network<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual network configuration for the location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3211,7 +3211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -3257,7 +3257,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -3280,7 +3280,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -3321,7 +3321,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -3399,7 +3399,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -3438,7 +3438,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -3761,7 +3761,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3833,7 +3833,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformation">Certificate<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformation">Certificate<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3869,7 +3869,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformation">Certificate<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformation">Certificate<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3907,7 +3907,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3979,7 +3979,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformationresponse">Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformationresponse">Certificate<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4015,7 +4015,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformationresponse">Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformationresponse">Certificate<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4289,7 +4289,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformation">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4441,7 +4441,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformation">Certificate<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformation">Certificate<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4517,7 +4517,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformation">Certificate<wbr>Information<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformation">Certificate<wbr>Information</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4595,7 +4595,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Certificate<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4747,7 +4747,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformationresponse">Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformationresponse">Certificate<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4823,7 +4823,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateinformationresponse">Certificate<wbr>Information<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificateinformationresponse">Certificate<wbr>Information<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Certificate information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

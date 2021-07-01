@@ -1074,7 +1074,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the SKU name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1082,7 +1082,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesstier">Access<wbr>Tier</a></span>
+        <span class="property-type"><a href="#accesstier">string</a></span>
     </dt>
     <dd>{{% md %}}Required for storage accounts where kind = BlobStorage. The access tier used for billing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1114,7 +1114,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#azurefilesidentitybasedauthentication_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesidentitybasedauthentication">Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#azurefilesidentitybasedauthentication">Azure<wbr>Files<wbr>Identity<wbr>Based<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provides the identity based authentication settings for Azure Files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1122,7 +1122,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#customdomain_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomain">Custom<wbr>Domain</a></span>
+        <span class="property-type"><a href="#customdomain">Custom<wbr>Domain<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. To clear the existing custom domain, use an empty string for the custom domain name property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1146,7 +1146,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryption">Encryption</a></span>
+        <span class="property-type"><a href="#encryption">Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Not applicable. Azure Storage encryption is enabled for all storage accounts and cannot be disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1154,7 +1154,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Set the extended location of the resource. If not set, the storage account will be created in Azure main region. Otherwise it will be created in the specified extended location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1162,7 +1162,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identity">Identity</a></span>
+        <span class="property-type"><a href="#identity">Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1178,7 +1178,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#keypolicy_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keypolicy">Key<wbr>Policy</a></span>
+        <span class="property-type"><a href="#keypolicy">Key<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1210,7 +1210,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#networkruleset_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkruleset">Network<wbr>Rule<wbr>Set</a></span>
+        <span class="property-type"><a href="#networkruleset">Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network rule set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1218,7 +1218,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#routingpreference_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Preference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingpreference">Routing<wbr>Preference</a></span>
+        <span class="property-type"><a href="#routingpreference">Routing<wbr>Preference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maintains information about the network routing choice opted by the user for data transfer{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1226,7 +1226,7 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
 <a href="#saspolicy_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saspolicy">Sas<wbr>Policy</a></span>
+        <span class="property-type"><a href="#saspolicy">Sas<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SasPolicy assigned to the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2677,7 +2677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectoryproperties_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectoryproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#activedirectoryproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2717,7 +2717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectoryproperties_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectoryproperties">Active<wbr>Directory<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#activedirectoryproperties">Active<wbr>Directory<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2737,7 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_directory_properties_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectoryproperties">Active<wbr>Directory<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#activedirectoryproperties">Active<wbr>Directory<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2759,7 +2759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectoryproperties_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectorypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activedirectorypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Active<wbr>Directory<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2799,7 +2799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectoryproperties_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectorypropertiesresponse">Active<wbr>Directory<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activedirectorypropertiesresponse">Active<wbr>Directory<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2819,7 +2819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_directory_properties_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectorypropertiesresponse">Active<wbr>Directory<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#activedirectorypropertiesresponse">Active<wbr>Directory<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Required if choose AD.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2833,7 +2833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobranges_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestorerangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Range<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#blobrestorerangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Range<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Blob ranges to restore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2873,7 +2873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobranges_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestorerangeresponse">Blob<wbr>Restore<wbr>Range<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#blobrestorerangeresponse">Blob<wbr>Restore<wbr>Range<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Blob ranges to restore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2893,7 +2893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_ranges_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestorerangeresponse">Sequence[Blob<wbr>Restore<wbr>Range<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#blobrestorerangeresponse">Sequence[Blob<wbr>Restore<wbr>Range<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Blob ranges to restore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3005,7 +3005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestoreparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobrestoreparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Blob<wbr>Restore<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Blob restore request parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3077,7 +3077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestoreparametersresponse">Blob<wbr>Restore<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobrestoreparametersresponse">Blob<wbr>Restore<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Blob restore request parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3113,7 +3113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobrestoreparametersresponse">Blob<wbr>Restore<wbr>Parameters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobrestoreparametersresponse">Blob<wbr>Restore<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Blob restore request parameters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3405,7 +3405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionidentity_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The identity to be used with service-side encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3413,7 +3413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3429,7 +3429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservices">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservices">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3493,7 +3493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionidentity_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentity">Encryption<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionidentity">Encryption<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The identity to be used with service-side encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3501,7 +3501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3517,7 +3517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservices">Encryption<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservices">Encryption<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3537,7 +3537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_identity_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentity">Encryption<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionidentity">Encryption<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The identity to be used with service-side encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3545,7 +3545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3561,7 +3561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservices">Encryption<wbr>Services<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservices">Encryption<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3683,7 +3683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionidentity_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity to be used with service-side encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3691,7 +3691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3707,7 +3707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservicesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Services<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservicesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Services<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3771,7 +3771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionidentity_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentityresponse">Encryption<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionidentityresponse">Encryption<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity to be used with service-side encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3779,7 +3779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3795,7 +3795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservicesresponse">Encryption<wbr>Services<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservicesresponse">Encryption<wbr>Services<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3815,7 +3815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_identity_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionidentityresponse">Encryption<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionidentityresponse">Encryption<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity to be used with service-side encryption at rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3823,7 +3823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties provided by key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3839,7 +3839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservicesresponse">Encryption<wbr>Services<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservicesresponse">Encryption<wbr>Services<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of services which support encryption.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4049,7 +4049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_csharp" style="color: inherit; text-decoration: inherit;">Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4057,7 +4057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4065,7 +4065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_csharp" style="color: inherit; text-decoration: inherit;">Queue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4073,7 +4073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4121,7 +4121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_nodejs" style="color: inherit; text-decoration: inherit;">blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4129,7 +4129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4137,7 +4137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_nodejs" style="color: inherit; text-decoration: inherit;">queue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4145,7 +4145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4157,7 +4157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_python" style="color: inherit; text-decoration: inherit;">blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4165,7 +4165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4173,7 +4173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_python" style="color: inherit; text-decoration: inherit;">queue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4181,7 +4181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionservice">Encryption<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4195,7 +4195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_csharp" style="color: inherit; text-decoration: inherit;">Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4203,7 +4203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4211,7 +4211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_csharp" style="color: inherit; text-decoration: inherit;">Queue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4219,7 +4219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Encryption<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4267,7 +4267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_nodejs" style="color: inherit; text-decoration: inherit;">blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4275,7 +4275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4283,7 +4283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_nodejs" style="color: inherit; text-decoration: inherit;">queue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4291,7 +4291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4303,7 +4303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_python" style="color: inherit; text-decoration: inherit;">blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the blob storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4311,7 +4311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the file storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4319,7 +4319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_python" style="color: inherit; text-decoration: inherit;">queue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the queue storage service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4327,7 +4327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionserviceresponse">Encryption<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The encryption function of the table storage service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4389,7 +4389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internetendpoints_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the internet routing storage endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4397,7 +4397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftendpoints_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4525,7 +4525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internetendpoints_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the internet routing storage endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4533,7 +4533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftendpoints_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4593,7 +4593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internet_endpoints_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccountinternetendpointsresponse">Storage<wbr>Account<wbr>Internet<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the internet routing storage endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4601,7 +4601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoft_endpoints_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageaccountmicrosoftendpointsresponse">Storage<wbr>Account<wbr>Microsoft<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the microsoft routing storage endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4965,7 +4965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#action">Action</a></span>
+        <span class="property-type"><a href="#action">string</a></span>
     </dt>
     <dd>{{% md %}}The action of IP ACL rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5207,7 +5207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5279,7 +5279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5315,7 +5315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5999,7 +5999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>IPRule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#iprule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>IPRule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6007,7 +6007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceaccessrules_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceaccessrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Resource<wbr>Access<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceaccessrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Resource<wbr>Access<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the resource access rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6015,7 +6015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6087,7 +6087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">IPRule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#iprule">IPRule[]</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6095,7 +6095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceaccessrules_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceaccessrule">Resource<wbr>Access<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourceaccessrule">Resource<wbr>Access<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Sets the resource access rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6103,7 +6103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">Virtual<wbr>Network<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">Virtual<wbr>Network<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6131,7 +6131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">Sequence[IPRule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iprule">Sequence[IPRule]</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6139,7 +6139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_access_rules_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>access_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceaccessrule">Sequence[Resource<wbr>Access<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceaccessrule">Sequence[Resource<wbr>Access<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Sets the resource access rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6147,7 +6147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">Sequence[Virtual<wbr>Network<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6177,7 +6177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>IPRule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>IPRule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6185,7 +6185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceaccessrules_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceaccessruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Resource<wbr>Access<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourceaccessruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Resource<wbr>Access<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the resource access rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6193,7 +6193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6265,7 +6265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">IPRule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#ipruleresponse">IPRule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6273,7 +6273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceaccessrules_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceaccessruleresponse">Resource<wbr>Access<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#resourceaccessruleresponse">Resource<wbr>Access<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Sets the resource access rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6281,7 +6281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6309,7 +6309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">Sequence[IPRule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipruleresponse">Sequence[IPRule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Sets the IP ACL rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6317,7 +6317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_access_rules_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>access_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceaccessruleresponse">Sequence[Resource<wbr>Access<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceaccessruleresponse">Sequence[Resource<wbr>Access<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Sets the resource access rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6325,7 +6325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Sets the virtual network rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6355,7 +6355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6379,7 +6379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6459,7 +6459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6483,7 +6483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6511,7 +6511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6535,7 +6535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7989,7 +7989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#action">Action</a></span>
+        <span class="property-type"><a href="#action">string</a></span>
     </dt>
     <dd>{{% md %}}The action of virtual network rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

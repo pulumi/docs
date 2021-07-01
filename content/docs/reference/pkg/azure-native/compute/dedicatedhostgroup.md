@@ -824,7 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocatablevms_csharp" style="color: inherit; text-decoration: inherit;">Allocatable<wbr>VMs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse&gt;</a></span>
     </dt>
     <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -848,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocatablevms_nodejs" style="color: inherit; text-decoration: inherit;">allocatable<wbr>VMs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse[]</a></span>
     </dt>
     <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -860,7 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allocatable_vms_python" style="color: inherit; text-decoration: inherit;">allocatable_<wbr>vms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">Sequence[Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dedicatedhostallocatablevmresponse">Sequence[Dedicated<wbr>Host<wbr>Allocatable<wbr>VMResponse]</a></span>
     </dt>
     <dd>{{% md %}}The unutilized capacity of the dedicated host represented in terms of each VM size that is allowed to be deployed to the dedicated host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -874,7 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostinstanceviewwithnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>With<wbr>Name<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dedicatedhostinstanceviewwithnameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>With<wbr>Name<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of instance view of the dedicated hosts under the dedicated host group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -898,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostinstanceviewwithnameresponse">Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>With<wbr>Name<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dedicatedhostinstanceviewwithnameresponse">Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>With<wbr>Name<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of instance view of the dedicated hosts under the dedicated host group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -910,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostinstanceviewwithnameresponse">Sequence[Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>With<wbr>Name<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dedicatedhostinstanceviewwithnameresponse">Sequence[Dedicated<wbr>Host<wbr>Instance<wbr>View<wbr>With<wbr>Name<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of instance view of the dedicated hosts under the dedicated host group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -940,7 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablecapacity_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -948,7 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1012,7 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablecapacity_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1020,7 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1048,7 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#available_capacity_python" style="color: inherit; text-decoration: inherit;">available_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dedicatedhostavailablecapacityresponse">Dedicated<wbr>Host<wbr>Available<wbr>Capacity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Unutilized capacity of the dedicated host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1056,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}

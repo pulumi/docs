@@ -361,7 +361,7 @@ The MaintenanceConfiguration resource accepts the following [input]({{< relref "
 <a href="#notallowedtime_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Allowed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timespan">[]Time<wbr>Span</a></span>
+        <span class="property-type"><a href="#timespan">[]Time<wbr>Span<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time slots on which upgrade is not allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -369,7 +369,7 @@ The MaintenanceConfiguration resource accepts the following [input]({{< relref "
 <a href="#timeinweek_go" style="color: inherit; text-decoration: inherit;">Time<wbr>In<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeinweek">[]Time<wbr>In<wbr>Week</a></span>
+        <span class="property-type"><a href="#timeinweek">[]Time<wbr>In<wbr>Week<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekday time slots allowed to upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -508,7 +508,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobschedule">Job<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#jobschedule">Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule properties of the job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -863,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobscheduletype">Job<wbr>Schedule<wbr>Type</a></span>
+        <span class="property-type"><a href="#jobscheduletype">string</a></span>
     </dt>
     <dd>{{% md %}}Schedule interval type{{% /md %}}</dd></dl>
 {{% /choosable %}}

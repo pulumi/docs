@@ -474,7 +474,7 @@ The ExpressRouteCrossConnectionPeering resource accepts the following [input]({{
 <a href="#ipv6peeringconfig_go" style="color: inherit; text-decoration: inherit;">Ipv6Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6expressroutecircuitpeeringconfig">Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config</a></span>
+        <span class="property-type"><a href="#ipv6expressroutecircuitpeeringconfig">Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +482,7 @@ The ExpressRouteCrossConnectionPeering resource accepts the following [input]({{
 <a href="#microsoftpeeringconfig_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1543,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftpeeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1559,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routefilter_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftpeeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1647,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routefilter_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1675,7 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1691,7 +1691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#route_filter_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1721,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftpeeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1737,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routefilter_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftpeeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1825,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routefilter_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1853,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1869,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#route_filter_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

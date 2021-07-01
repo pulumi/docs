@@ -338,7 +338,7 @@ The VirtualMachineExtension resource accepts the following [input]({{< relref "/
 <a href="#instanceview_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineextensioninstanceview">Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View</a></span>
+        <span class="property-type"><a href="#virtualmachineextensioninstanceview">Virtual<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine extension instance view.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -837,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusleveltypes">Status<wbr>Level<wbr>Types</a></span>
+        <span class="property-type"><a href="#statusleveltypes">string</a></span>
     </dt>
     <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatus">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatus">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1179,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substatuses_csharp" style="color: inherit; text-decoration: inherit;">Substatuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatus">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatus">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1259,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatus">Instance<wbr>View<wbr>Status<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instanceviewstatus">Instance<wbr>View<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1267,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substatuses_nodejs" style="color: inherit; text-decoration: inherit;">substatuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatus">Instance<wbr>View<wbr>Status<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instanceviewstatus">Instance<wbr>View<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatus">Sequence[Instance<wbr>View<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceviewstatus">Sequence[Instance<wbr>View<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substatuses_python" style="color: inherit; text-decoration: inherit;">substatuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatus">Sequence[Instance<wbr>View<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceviewstatus">Sequence[Instance<wbr>View<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1357,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substatuses_csharp" style="color: inherit; text-decoration: inherit;">Substatuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1445,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substatuses_nodejs" style="color: inherit; text-decoration: inherit;">substatuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1481,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1489,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#substatuses_python" style="color: inherit; text-decoration: inherit;">substatuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The resource status information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

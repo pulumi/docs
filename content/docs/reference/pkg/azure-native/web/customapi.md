@@ -407,7 +407,7 @@ The CustomApi resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customapipropertiesdefinition">Custom<wbr>Api<wbr>Properties<wbr>Definition</a></span>
+        <span class="property-type"><a href="#customapipropertiesdefinition">Custom<wbr>Api<wbr>Properties<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom API properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -702,7 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customparameters_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>OAuth<wbr>Settings<wbr>Parameter&gt;</span>
     </dt>
     <dd>{{% md %}}OAuth parameters key is the name of parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customparameters_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Api<wbr>OAuth<wbr>Settings<wbr>Parameter}</span>
     </dt>
     <dd>{{% md %}}OAuth parameters key is the name of parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_parameters_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Api<wbr>OAuth<wbr>Settings<wbr>Parameter]</span>
     </dt>
     <dd>{{% md %}}OAuth parameters key is the name of parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1172,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customparameters_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}OAuth parameters key is the name of parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1292,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customparameters_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}OAuth parameters key is the name of parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1352,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_parameters_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}OAuth parameters key is the name of parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1692,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauthsettings_csharp" style="color: inherit; text-decoration: inherit;">OAuth<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioauthsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>OAuth<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#apioauthsettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>OAuth<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}OAuth settings for the connection provider{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1720,7 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionparametertype">Connection<wbr>Parameter<wbr>Type</a></span>
+        <span class="property-type"><a href="#connectionparametertype">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the parameter{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1732,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauthsettings_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioauthsettings">Api<wbr>OAuth<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#apioauthsettings">Api<wbr>OAuth<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}OAuth settings for the connection provider{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1752,7 +1752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#o_auth_settings_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioauthsettings">Api<wbr>OAuth<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#apioauthsettings">Api<wbr>OAuth<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}OAuth settings for the connection provider{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1774,7 +1774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauthsettings_csharp" style="color: inherit; text-decoration: inherit;">OAuth<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioauthsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>OAuth<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apioauthsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>OAuth<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OAuth settings for the connection provider{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1814,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauthsettings_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioauthsettingsresponse">Api<wbr>OAuth<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apioauthsettingsresponse">Api<wbr>OAuth<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OAuth settings for the connection provider{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1834,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#o_auth_settings_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioauthsettingsresponse">Api<wbr>OAuth<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apioauthsettingsresponse">Api<wbr>OAuth<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OAuth settings for the connection provider{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1910,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apidefinitions_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Definitions<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Definitions</a></span>
     </dt>
     <dd>{{% md %}}API Definitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1926,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendservice">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcebackendservice">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Backend<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The API backend service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1950,7 +1950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionparameters_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Parameter<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Parameter&gt;</span>
     </dt>
     <dd>{{% md %}}Connection parameters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1998,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdldefinition_csharp" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdldefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Wsdl<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdldefinition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Wsdl<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}The WSDL definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2110,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apidefinitions_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitions">Api<wbr>Resource<wbr>Definitions<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitions">Api<wbr>Resource<wbr>Definitions</a></span>
     </dt>
     <dd>{{% md %}}API Definitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2126,7 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendservice">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcebackendservice">Api<wbr>Resource<wbr>Backend<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The API backend service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2150,7 +2150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionparameters_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Connection<wbr>Parameter<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Connection<wbr>Parameter}</span>
     </dt>
     <dd>{{% md %}}Connection parameters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2198,7 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdldefinition_nodejs" style="color: inherit; text-decoration: inherit;">wsdl<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdldefinition">Wsdl<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdldefinition">Wsdl<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}The WSDL definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2210,7 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_definitions_python" style="color: inherit; text-decoration: inherit;">api_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitions">Api<wbr>Resource<wbr>Definitions<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitions">Api<wbr>Resource<wbr>Definitions</a></span>
     </dt>
     <dd>{{% md %}}API Definitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2226,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendservice">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcebackendservice">Api<wbr>Resource<wbr>Backend<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The API backend service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2250,7 +2250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_parameters_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Connection<wbr>Parameter<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Connection<wbr>Parameter]</span>
     </dt>
     <dd>{{% md %}}Connection parameters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2298,7 +2298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdl_definition_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdldefinition">Wsdl<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdldefinition">Wsdl<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}The WSDL definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2312,7 +2312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apidefinitions_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Definitions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Definitions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}API Definitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2328,7 +2328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The API backend service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2352,7 +2352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionparameters_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Parameter<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Connection parameters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2400,7 +2400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdldefinition_csharp" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdldefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Wsdl<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdldefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Wsdl<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The WSDL definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2512,7 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apidefinitions_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}API Definitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2528,7 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The API backend service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2552,7 +2552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionparameters_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Connection<wbr>Parameter<wbr>Response<wbr>Args}</span>
+        <span class="property-type">{[key: string]: Connection<wbr>Parameter<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Connection parameters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2600,7 +2600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdldefinition_nodejs" style="color: inherit; text-decoration: inherit;">wsdl<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdldefinitionresponse">Wsdl<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdldefinitionresponse">Wsdl<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The WSDL definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2612,7 +2612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_definitions_python" style="color: inherit; text-decoration: inherit;">api_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}API Definitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2628,7 +2628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The API backend service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2652,7 +2652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_parameters_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Connection<wbr>Parameter<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Connection<wbr>Parameter<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Connection parameters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2700,7 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdl_definition_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdldefinitionresponse">Wsdl<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdldefinitionresponse">Wsdl<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The WSDL definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2730,7 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlservice">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Wsdl<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlservice">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Wsdl<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2802,7 +2802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlservice">Wsdl<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlservice">Wsdl<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2838,7 +2838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlservice">Wsdl<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlservice">Wsdl<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2876,7 +2876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Wsdl<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Wsdl<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2948,7 +2948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2984,7 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

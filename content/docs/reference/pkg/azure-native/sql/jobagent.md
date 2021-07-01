@@ -385,7 +385,7 @@ The JobAgent resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name and tier of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

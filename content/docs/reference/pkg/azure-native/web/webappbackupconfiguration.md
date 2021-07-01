@@ -276,7 +276,7 @@ The WebAppBackupConfiguration resource accepts the following [input]({{< relref 
 <a href="#backupschedule_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupschedule">Backup<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#backupschedule">Backup<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -284,7 +284,7 @@ The WebAppBackupConfiguration resource accepts the following [input]({{< relref 
 <a href="#databases_go" style="color: inherit; text-decoration: inherit;">Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupsetting">[]Database<wbr>Backup<wbr>Setting</a></span>
+        <span class="property-type"><a href="#databasebackupsetting">[]Database<wbr>Backup<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

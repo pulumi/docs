@@ -326,7 +326,7 @@ The OperationByProviderRegistration resource accepts the following [input]({{< r
 <a href="#contents_go" style="color: inherit; text-decoration: inherit;">Contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationsdefinition">[]Operations<wbr>Definition</a></span>
+        <span class="property-type"><a href="#operationsdefinition">[]Operations<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -677,7 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_csharp" style="color: inherit; text-decoration: inherit;">Display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationsdefinitiondisplay">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Operations<wbr>Definition<wbr>Display<wbr>Args</a></span>
+        <span class="property-type"><a href="#operationsdefinitiondisplay">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Operations<wbr>Definition<wbr>Display</a></span>
     </dt>
     <dd>{{% md %}}Display information of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -781,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_nodejs" style="color: inherit; text-decoration: inherit;">display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationsdefinitiondisplay">Operations<wbr>Definition<wbr>Display<wbr>Args</a></span>
+        <span class="property-type"><a href="#operationsdefinitiondisplay">Operations<wbr>Definition<wbr>Display</a></span>
     </dt>
     <dd>{{% md %}}Display information of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -833,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_python" style="color: inherit; text-decoration: inherit;">display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationsdefinitiondisplay">Operations<wbr>Definition<wbr>Display<wbr>Args</a></span>
+        <span class="property-type"><a href="#operationsdefinitiondisplay">Operations<wbr>Definition<wbr>Display</a></span>
     </dt>
     <dd>{{% md %}}Display information of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">

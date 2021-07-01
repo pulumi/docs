@@ -495,7 +495,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#hostingenvironmentprofile_go" style="color: inherit; text-decoration: inherit;">Hosting<wbr>Environment<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostingenvironmentprofile">Hosting<wbr>Environment<wbr>Profile</a></span>
+        <span class="property-type"><a href="#hostingenvironmentprofile">Hosting<wbr>Environment<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification for the App Service Environment to use for the App Service plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -535,7 +535,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#kubeenvironmentprofile_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Environment<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeenvironmentprofile">Kube<wbr>Environment<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubeenvironmentprofile">Kube<wbr>Environment<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification for the Kubernetes Environment to use for the App Service plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -584,7 +584,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescription">Sku<wbr>Description</a></span>
+        <span class="property-type"><a href="#skudescription">Sku<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description of a SKU for a scalable resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2185,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Capability<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#capability">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Capability&gt;</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2233,7 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skucapacity_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2321,7 +2321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">Capability<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#capability">Capability[]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2369,7 +2369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skucapacity_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2389,7 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">Sequence[Capability<wbr>Args]</a></span>
+        <span class="property-type"><a href="#capability">Sequence[Capability]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_capacity_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2459,7 +2459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#capabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Capability<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2507,7 +2507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skucapacity_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Sku<wbr>Capacity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2595,7 +2595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">Capability<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#capabilityresponse">Capability<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2643,7 +2643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skucapacity_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2663,7 +2663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">Sequence[Capability<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#capabilityresponse">Sequence[Capability<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2711,7 +2711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_capacity_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

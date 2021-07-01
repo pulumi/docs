@@ -481,7 +481,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageidentifier">Gallery<wbr>Image<wbr>Identifier</a></span>
+        <span class="property-type"><a href="#galleryimageidentifier">Gallery<wbr>Image<wbr>Identifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the gallery image definition identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -521,7 +521,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#disallowed_go" style="color: inherit; text-decoration: inherit;">Disallowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disallowed">Disallowed</a></span>
+        <span class="property-type"><a href="#disallowed">Disallowed<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the disallowed disk types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -545,7 +545,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagefeature">[]Gallery<wbr>Image<wbr>Feature</a></span>
+        <span class="property-type"><a href="#galleryimagefeature">[]Gallery<wbr>Image<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of gallery image features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -585,7 +585,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#purchaseplan_go" style="color: inherit; text-decoration: inherit;">Purchase<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagepurchaseplan">Image<wbr>Purchase<wbr>Plan</a></span>
+        <span class="property-type"><a href="#imagepurchaseplan">Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the gallery image definition purchase plan. This is used by marketplace images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -593,7 +593,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#recommended_go" style="color: inherit; text-decoration: inherit;">Recommended</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendedmachineconfiguration">Recommended<wbr>Machine<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#recommendedmachineconfiguration">Recommended<wbr>Machine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1878,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerange">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Resource<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1886,7 +1886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vcpus_csharp" style="color: inherit; text-decoration: inherit;">VCPUs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerange">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Resource<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1918,7 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1926,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>CPUs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1938,7 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1946,7 +1946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v_cpus_python" style="color: inherit; text-decoration: inherit;">v_<wbr>cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1960,7 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1968,7 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vcpus_csharp" style="color: inherit; text-decoration: inherit;">VCPUs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Resource<wbr>Range<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2000,7 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2008,7 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>CPUs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2020,7 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2028,7 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v_cpus_python" style="color: inherit; text-decoration: inherit;">v_<wbr>cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd></dl>
 {{% /choosable %}}

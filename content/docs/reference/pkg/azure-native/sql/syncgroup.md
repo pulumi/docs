@@ -619,7 +619,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschema">Sync<wbr>Group<wbr>Schema</a></span>
+        <span class="property-type"><a href="#syncgroupschema">Sync<wbr>Group<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sync schema of the sync group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -627,7 +627,7 @@ The SyncGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name and capacity of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1512,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tables_csharp" style="color: inherit; text-decoration: inherit;">Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematable">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncgroupschematable">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1552,7 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tables_nodejs" style="color: inherit; text-decoration: inherit;">tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematable">Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#syncgroupschematable">Sync<wbr>Group<wbr>Schema<wbr>Table[]</a></span>
     </dt>
     <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1572,7 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematable">Sequence[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syncgroupschematable">Sequence[Sync<wbr>Group<wbr>Schema<wbr>Table]</a></span>
     </dt>
     <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1594,7 +1594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tables_csharp" style="color: inherit; text-decoration: inherit;">Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncgroupschematableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1634,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tables_nodejs" style="color: inherit; text-decoration: inherit;">tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematableresponse">Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#syncgroupschematableresponse">Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1654,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematableresponse">Sequence[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syncgroupschematableresponse">Sequence[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of tables in sync group schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1668,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematablecolumn">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumn">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1708,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematablecolumn">Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumn">Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1728,7 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematablecolumn">Sequence[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumn">Sequence[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column]</a></span>
     </dt>
     <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1978,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2018,7 +2018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2038,7 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">Sequence[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syncgroupschematablecolumnresponse">Sequence[Sync<wbr>Group<wbr>Schema<wbr>Table<wbr>Column<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of columns in sync group schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
