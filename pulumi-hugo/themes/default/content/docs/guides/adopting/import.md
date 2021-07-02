@@ -34,7 +34,7 @@ creating a new one. Using this option lets you specify
 the `import` behavior inside the Pulumi code for your infrastructure deployment, instead of outside of it in a manual workflow.
 
 {{% notes type="warning" %}}
-Your Pulumi stack must be configured correctly---e.g., using the same AWS region as the resource your importing---otherwise the resource will not be found.
+Your Pulumi stack must be configured correctly---e.g., using the same AWS region as the resource you're importing---otherwise the resource will not be found.
 {{% /notes %}}
 
 ### Pulumi Import Command
