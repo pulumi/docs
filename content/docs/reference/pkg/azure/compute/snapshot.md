@@ -441,7 +441,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#encryptionsettings_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotencryptionsettings">Snapshot<wbr>Encryption<wbr>Settings</a></span>
+        <span class="property-type"><a href="#snapshotencryptionsettings">Snapshot<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +994,7 @@ The following state arguments are supported:
 <a href="#state_encryptionsettings_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotencryptionsettings">Snapshot<wbr>Encryption<wbr>Settings</a></span>
+        <span class="property-type"><a href="#snapshotencryptionsettings">Snapshot<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1274,7 +1274,7 @@ The following state arguments are supported:
 <a href="#diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotencryptionsettingsdiskencryptionkey">Snapshot<wbr>Encryption<wbr>Settings<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#snapshotencryptionsettingsdiskencryptionkey">Snapshot<wbr>Encryption<wbr>Settings<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1282,7 +1282,7 @@ The following state arguments are supported:
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotencryptionsettingskeyencryptionkey">Snapshot<wbr>Encryption<wbr>Settings<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#snapshotencryptionsettingskeyencryptionkey">Snapshot<wbr>Encryption<wbr>Settings<wbr>Key<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1330,7 +1330,7 @@ The following state arguments are supported:
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotencryptionsettingsdiskencryptionkey">Snapshot<wbr>Encryption<wbr>Settings<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#snapshotencryptionsettingsdiskencryptionkey">Snapshot<wbr>Encryption<wbr>Settings<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1338,7 @@ The following state arguments are supported:
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotencryptionsettingskeyencryptionkey">Snapshot<wbr>Encryption<wbr>Settings<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#snapshotencryptionsettingskeyencryptionkey">Snapshot<wbr>Encryption<wbr>Settings<wbr>Key<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1358,7 +1358,7 @@ The following state arguments are supported:
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotencryptionsettingsdiskencryptionkey">Snapshot<wbr>Encryption<wbr>Settings<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#snapshotencryptionsettingsdiskencryptionkey">Snapshot<wbr>Encryption<wbr>Settings<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1366,7 +1366,7 @@ The following state arguments are supported:
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snapshotencryptionsettingskeyencryptionkey">Snapshot<wbr>Encryption<wbr>Settings<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#snapshotencryptionsettingskeyencryptionkey">Snapshot<wbr>Encryption<wbr>Settings<wbr>Key<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

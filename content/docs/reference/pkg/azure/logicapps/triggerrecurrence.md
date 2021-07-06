@@ -405,7 +405,7 @@ The TriggerRecurrence resource accepts the following [input]({{< relref "/docs/i
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerrecurrenceschedule">Trigger<wbr>Recurrence<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#triggerrecurrenceschedule">Trigger<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schedule` block as specified below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -860,7 +860,7 @@ The following state arguments are supported:
 <a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerrecurrenceschedule">Trigger<wbr>Recurrence<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#triggerrecurrenceschedule">Trigger<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schedule` block as specified below.
 {{% /md %}}</dd><dt class="property-optional"

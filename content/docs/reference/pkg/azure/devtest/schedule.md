@@ -479,7 +479,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#notificationsettings_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulenotificationsettings">Schedule<wbr>Notification<wbr>Settings</a></span>
+        <span class="property-type"><a href="#schedulenotificationsettings">Schedule<wbr>Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -514,7 +514,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#dailyrecurrence_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledailyrecurrence">Schedule<wbr>Daily<wbr>Recurrence</a></span>
+        <span class="property-type"><a href="#scheduledailyrecurrence">Schedule<wbr>Daily<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +522,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#hourlyrecurrence_go" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulehourlyrecurrence">Schedule<wbr>Hourly<wbr>Recurrence</a></span>
+        <span class="property-type"><a href="#schedulehourlyrecurrence">Schedule<wbr>Hourly<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +566,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#weeklyrecurrence_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleweeklyrecurrence">Schedule<wbr>Weekly<wbr>Recurrence</a></span>
+        <span class="property-type"><a href="#scheduleweeklyrecurrence">Schedule<wbr>Weekly<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1094,7 +1094,7 @@ The following state arguments are supported:
 <a href="#state_dailyrecurrence_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledailyrecurrence">Schedule<wbr>Daily<wbr>Recurrence</a></span>
+        <span class="property-type"><a href="#scheduledailyrecurrence">Schedule<wbr>Daily<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1102,7 +1102,7 @@ The following state arguments are supported:
 <a href="#state_hourlyrecurrence_go" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulehourlyrecurrence">Schedule<wbr>Hourly<wbr>Recurrence</a></span>
+        <span class="property-type"><a href="#schedulehourlyrecurrence">Schedule<wbr>Hourly<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1137,7 @@ The following state arguments are supported:
 <a href="#state_notificationsettings_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulenotificationsettings">Schedule<wbr>Notification<wbr>Settings</a></span>
+        <span class="property-type"><a href="#schedulenotificationsettings">Schedule<wbr>Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1190,7 +1190,7 @@ The following state arguments are supported:
 <a href="#state_weeklyrecurrence_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleweeklyrecurrence">Schedule<wbr>Weekly<wbr>Recurrence</a></span>
+        <span class="property-type"><a href="#scheduleweeklyrecurrence">Schedule<wbr>Weekly<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

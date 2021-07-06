@@ -531,7 +531,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
 <a href="#contentkeys_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streaminglocatorcontentkey">[]Streaming<wbr>Locator<wbr>Content<wbr>Key</a></span>
+        <span class="property-type"><a href="#streaminglocatorcontentkey">[]Streaming<wbr>Locator<wbr>Content<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `content_key` blocks as defined below. Changing this forces a new Streaming Locator to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1107,7 +1107,7 @@ The following state arguments are supported:
 <a href="#state_contentkeys_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streaminglocatorcontentkey">[]Streaming<wbr>Locator<wbr>Content<wbr>Key</a></span>
+        <span class="property-type"><a href="#streaminglocatorcontentkey">[]Streaming<wbr>Locator<wbr>Content<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `content_key` blocks as defined below. Changing this forces a new Streaming Locator to be created.
 {{% /md %}}</dd><dt class="property-optional"

@@ -656,7 +656,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverstorageprofile">Server<wbr>Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#serverstorageprofile">Server<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}all storage_profile properties have been moved to the top level. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1593,7 +1593,7 @@ The following state arguments are supported:
 <a href="#state_storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverstorageprofile">Server<wbr>Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#serverstorageprofile">Server<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}all storage_profile properties have been moved to the top level. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">

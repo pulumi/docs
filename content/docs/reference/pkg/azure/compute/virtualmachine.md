@@ -766,7 +766,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storageosdisk_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
 {{% /md %}}</dd><dt class="property-required"
@@ -784,7 +784,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#additionalcapabilities_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</a></span>
+        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -802,7 +802,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#bootdiagnostics_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</a></span>
+        <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -829,7 +829,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity</a></span>
+        <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -865,7 +865,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -874,7 +874,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#osprofilelinuxconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Linux<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -883,7 +883,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#osprofilesecrets_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilesecret">[]Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilesecret">[]Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +892,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#osprofilewindowsconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Windows<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -901,7 +901,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan</a></span>
+        <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -928,7 +928,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storagedatadisks_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestoragedatadisk">[]Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk</a></span>
+        <span class="property-type"><a href="#virtualmachinestoragedatadisk">[]Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -937,7 +937,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storageimagereference_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1832,7 +1832,7 @@ The following state arguments are supported:
 <a href="#state_additionalcapabilities_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</a></span>
+        <span class="property-type"><a href="#virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1850,7 +1850,7 @@ The following state arguments are supported:
 <a href="#state_bootdiagnostics_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</a></span>
+        <span class="property-type"><a href="#virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1877,7 +1877,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity</a></span>
+        <span class="property-type"><a href="#virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1922,7 +1922,7 @@ The following state arguments are supported:
 <a href="#state_osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `os_profile` block. Required when `create_option` in the `storage_os_disk` block is set to `FromImage`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1931,7 +1931,7 @@ The following state arguments are supported:
 <a href="#state_osprofilelinuxconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Linux<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_linux_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1940,7 +1940,7 @@ The following state arguments are supported:
 <a href="#state_osprofilesecrets_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilesecret">[]Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilesecret">[]Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_profile_secrets` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1949,7 +1949,7 @@ The following state arguments are supported:
 <a href="#state_osprofilewindowsconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Windows<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_profile_windows_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1958,7 +1958,7 @@ The following state arguments are supported:
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan</a></span>
+        <span class="property-type"><a href="#virtualmachineplan">Virtual<wbr>Machine<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1994,7 +1994,7 @@ The following state arguments are supported:
 <a href="#state_storagedatadisks_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestoragedatadisk">[]Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk</a></span>
+        <span class="property-type"><a href="#virtualmachinestoragedatadisk">[]Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_data_disk` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2003,7 +2003,7 @@ The following state arguments are supported:
 <a href="#state_storageimagereference_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2012,7 +2012,7 @@ The following state arguments are supported:
 <a href="#state_storageosdisk_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_os_disk` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2944,7 +2944,7 @@ The following state arguments are supported:
 <a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">List&lt;Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">List&lt;Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssh_keys` blocks. This field is required if `disable_password_authentication` is set to `true`.
 {{% /md %}}</dd></dl>
@@ -2988,7 +2988,7 @@ The following state arguments are supported:
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssh_keys` blocks. This field is required if `disable_password_authentication` is set to `true`.
 {{% /md %}}</dd></dl>
@@ -3010,7 +3010,7 @@ The following state arguments are supported:
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilelinuxconfigsshkey">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssh_keys` blocks. This field is required if `disable_password_authentication` is set to `true`.
 {{% /md %}}</dd></dl>
@@ -3124,7 +3124,7 @@ The following state arguments are supported:
 <a href="#vaultcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">List&lt;Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">List&lt;Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `vault_certificates` blocks.
 {{% /md %}}</dd></dl>
@@ -3168,7 +3168,7 @@ The following state arguments are supported:
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `vault_certificates` blocks.
 {{% /md %}}</dd></dl>
@@ -3190,7 +3190,7 @@ The following state arguments are supported:
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilesecretvaultcertificate">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}One or more `vault_certificates` blocks.
 {{% /md %}}</dd></dl>
@@ -3295,7 +3295,7 @@ The following state arguments are supported:
 <a href="#additionalunattendconfigs_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">List&lt;Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">List&lt;Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `additional_unattend_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3331,7 +3331,7 @@ The following state arguments are supported:
 <a href="#winrms_csharp" style="color: inherit; text-decoration: inherit;">Winrms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">List&lt;Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">List&lt;Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `winrm` block.
 {{% /md %}}</dd></dl>
@@ -3393,7 +3393,7 @@ The following state arguments are supported:
 <a href="#additionalunattendconfigs_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}A `additional_unattend_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3429,7 +3429,7 @@ The following state arguments are supported:
 <a href="#winrms_nodejs" style="color: inherit; text-decoration: inherit;">winrms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `winrm` block.
 {{% /md %}}</dd></dl>
@@ -3442,7 +3442,7 @@ The following state arguments are supported:
 <a href="#additional_unattend_configs_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigadditionalunattendconfig">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}A `additional_unattend_config` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3478,7 +3478,7 @@ The following state arguments are supported:
 <a href="#winrms_python" style="color: inherit; text-decoration: inherit;">winrms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineosprofilewindowsconfigwinrm">Sequence[Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm]</a></span>
     </dt>
     <dd>{{% md %}}One or more `winrm` block.
 {{% /md %}}</dd></dl>

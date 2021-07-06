@@ -487,7 +487,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#partnerservers_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergrouppartnerserver">[]Failover<wbr>Group<wbr>Partner<wbr>Server</a></span>
+        <span class="property-type"><a href="#failovergrouppartnerserver">[]Failover<wbr>Group<wbr>Partner<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of secondary servers as documented below
 {{% /md %}}</dd><dt class="property-required"
@@ -496,7 +496,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#readwriteendpointfailoverpolicy_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
+        <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read/write policy as documented below
 {{% /md %}}</dd><dt class="property-required"
@@ -541,7 +541,7 @@ The FailoverGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#readonlyendpointfailoverpolicy_go" style="color: inherit; text-decoration: inherit;">Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
+        <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}a read-only policy as documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1098,7 +1098,7 @@ The following state arguments are supported:
 <a href="#state_partnerservers_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergrouppartnerserver">[]Failover<wbr>Group<wbr>Partner<wbr>Server</a></span>
+        <span class="property-type"><a href="#failovergrouppartnerserver">[]Failover<wbr>Group<wbr>Partner<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of secondary servers as documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1107,7 +1107,7 @@ The following state arguments are supported:
 <a href="#state_readwriteendpointfailoverpolicy_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
+        <span class="property-type"><a href="#failovergroupreadwriteendpointfailoverpolicy">Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read/write policy as documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1116,7 @@ The following state arguments are supported:
 <a href="#state_readonlyendpointfailoverpolicy_go" style="color: inherit; text-decoration: inherit;">Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
+        <span class="property-type"><a href="#failovergroupreadonlyendpointfailoverpolicy">Failover<wbr>Group<wbr>Readonly<wbr>Endpoint<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}a read-only policy as documented below
 {{% /md %}}</dd><dt class="property-optional"

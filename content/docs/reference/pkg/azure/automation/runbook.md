@@ -514,7 +514,7 @@ The RunBook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#jobschedules_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookjobschedule">[]Run<wbr>Book<wbr>Job<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#runbookjobschedule">[]Run<wbr>Book<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -540,7 +540,7 @@ The RunBook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publishcontentlink_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookpublishcontentlink">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link</a></span>
+        <span class="property-type"><a href="#runbookpublishcontentlink">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The published runbook content link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1114,7 +1114,7 @@ The following state arguments are supported:
 <a href="#state_jobschedules_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookjobschedule">[]Run<wbr>Book<wbr>Job<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#runbookjobschedule">[]Run<wbr>Book<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1158,7 +1158,7 @@ The following state arguments are supported:
 <a href="#state_publishcontentlink_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Content<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookpublishcontentlink">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link</a></span>
+        <span class="property-type"><a href="#runbookpublishcontentlink">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The published runbook content link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1586,7 +1586,7 @@ The following state arguments are supported:
 <a href="#hash_csharp" style="color: inherit; text-decoration: inherit;">Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookpublishcontentlinkhash">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#runbookpublishcontentlinkhash">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1644,7 +1644,7 @@ The following state arguments are supported:
 <a href="#hash_nodejs" style="color: inherit; text-decoration: inherit;">hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookpublishcontentlinkhash">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#runbookpublishcontentlinkhash">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1673,7 +1673,7 @@ The following state arguments are supported:
 <a href="#hash_python" style="color: inherit; text-decoration: inherit;">hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookpublishcontentlinkhash">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#runbookpublishcontentlinkhash">Run<wbr>Book<wbr>Publish<wbr>Content<wbr>Link<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

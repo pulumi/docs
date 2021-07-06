@@ -403,7 +403,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#contact_go" style="color: inherit; text-decoration: inherit;">Contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordercontact">Order<wbr>Contact</a></span>
+        <span class="property-type"><a href="#ordercontact">Order<wbr>Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `contact` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -430,7 +430,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#shipmentaddress_go" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address</a></span>
+        <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `shipment_address block as defined below.
 {{% /md %}}</dd></dl>
@@ -1023,7 +1023,7 @@ The following state arguments are supported:
 <a href="#state_contact_go" style="color: inherit; text-decoration: inherit;">Contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordercontact">Order<wbr>Contact</a></span>
+        <span class="property-type"><a href="#ordercontact">Order<wbr>Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `contact` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1059,7 +1059,7 @@ The following state arguments are supported:
 <a href="#state_returntrackings_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Trackings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderreturntracking">[]Order<wbr>Return<wbr>Tracking</a></span>
+        <span class="property-type"><a href="#orderreturntracking">[]Order<wbr>Return<wbr>Tracking<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device. A `return_tracking` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1077,7 +1077,7 @@ The following state arguments are supported:
 <a href="#state_shipmentaddress_go" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address</a></span>
+        <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `shipment_address block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1086,7 +1086,7 @@ The following state arguments are supported:
 <a href="#state_shipmenthistories_go" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Histories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordershipmenthistory">[]Order<wbr>Shipment<wbr>History</a></span>
+        <span class="property-type"><a href="#ordershipmenthistory">[]Order<wbr>Shipment<wbr>History<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order. A `shipment_history` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1095,7 +1095,7 @@ The following state arguments are supported:
 <a href="#state_shipmenttrackings_go" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Trackings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordershipmenttracking">[]Order<wbr>Shipment<wbr>Tracking</a></span>
+        <span class="property-type"><a href="#ordershipmenttracking">[]Order<wbr>Shipment<wbr>Tracking<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device. A `shipment_tracking` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1104,7 +1104,7 @@ The following state arguments are supported:
 <a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatus">[]Order<wbr>Status</a></span>
+        <span class="property-type"><a href="#orderstatus">[]Order<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current status of the order. A `status` block as defined below.
 {{% /md %}}</dd></dl>

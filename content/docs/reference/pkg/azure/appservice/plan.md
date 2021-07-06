@@ -788,7 +788,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plansku">Plan<wbr>Sku</a></span>
+        <span class="property-type"><a href="#plansku">Plan<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1513,7 +1513,7 @@ The following state arguments are supported:
 <a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plansku">Plan<wbr>Sku</a></span>
+        <span class="property-type"><a href="#plansku">Plan<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"

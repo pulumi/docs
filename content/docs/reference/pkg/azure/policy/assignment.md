@@ -12,6 +12,8 @@ meta_desc: "Documentation for the azure.policy.Assignment resource with examples
 
 Configures the specified Policy Definition at the specified Scope. Also, Policy Set Definitions are supported.
 
+!> **Note:** The `azure.policy.Assignment` resource has been deprecated in favour of the `azure.management.GroupPolicyAssignment`, `azure.core.ResourcePolicyAssignment`, `azure.core.ResourceGroupPolicyAssignment` and `azure.core.SubscriptionPolicyAssignment` resources and will be removed in v3.0 of the Azure Provider.
+
 {{% examples %}}
 
 ## Example Usage
@@ -567,7 +569,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentidentity">Assignment<wbr>Identity</a></span>
+        <span class="property-type"><a href="#assignmentidentity">Assignment<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1152,7 +1154,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentidentity">Assignment<wbr>Identity</a></span>
+        <span class="property-type"><a href="#assignmentidentity">Assignment<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1465,7 +1467,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Managed Service Identity Type of this Policy Assignment. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you), or `None` (no use of a Managed Service Identity).
+    <dd>{{% md %}}The type of Managed Identity for this Policy Assignment. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1496,7 +1498,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Managed Service Identity Type of this Policy Assignment. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you), or `None` (no use of a Managed Service Identity).
+    <dd>{{% md %}}The type of Managed Identity for this Policy Assignment. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1527,7 +1529,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Managed Service Identity Type of this Policy Assignment. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you), or `None` (no use of a Managed Service Identity).
+    <dd>{{% md %}}The type of Managed Identity for this Policy Assignment. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1558,7 +1560,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Managed Service Identity Type of this Policy Assignment. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you), or `None` (no use of a Managed Service Identity).
+    <dd>{{% md %}}The type of Managed Identity for this Policy Assignment. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

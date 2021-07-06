@@ -638,7 +638,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity</a></span>
+        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -727,7 +727,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverstorageprofile">Server<wbr>Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#serverstorageprofile">Server<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}all storage_profile properties have been move to the top level. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -744,7 +744,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#threatdetectionpolicy_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverthreatdetectionpolicy">Server<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#serverthreatdetectionpolicy">Server<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration, known in the API as Server Security Alerts Policy. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd></dl>
@@ -1705,7 +1705,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity</a></span>
+        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1812,7 +1812,7 @@ The following state arguments are supported:
 <a href="#state_storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverstorageprofile">Server<wbr>Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#serverstorageprofile">Server<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}all storage_profile properties have been move to the top level. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1829,7 @@ The following state arguments are supported:
 <a href="#state_threatdetectionpolicy_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverthreatdetectionpolicy">Server<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#serverthreatdetectionpolicy">Server<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration, known in the API as Server Security Alerts Policy. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"

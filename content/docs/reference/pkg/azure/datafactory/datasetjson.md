@@ -526,7 +526,7 @@ The DatasetJson resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azureblobstoragelocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetjsonazureblobstoragelocation">Dataset<wbr>Json<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location</a></span>
+        <span class="property-type"><a href="#datasetjsonazureblobstoragelocation">Dataset<wbr>Json<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -562,7 +562,7 @@ The DatasetJson resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#httpserverlocation_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Server<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetjsonhttpserverlocation">Dataset<wbr>Json<wbr>Http<wbr>Server<wbr>Location</a></span>
+        <span class="property-type"><a href="#datasetjsonhttpserverlocation">Dataset<wbr>Json<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_server_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -589,7 +589,7 @@ The DatasetJson resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#schemacolumns_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetjsonschemacolumn">[]Dataset<wbr>Json<wbr>Schema<wbr>Column</a></span>
+        <span class="property-type"><a href="#datasetjsonschemacolumn">[]Dataset<wbr>Json<wbr>Schema<wbr>Column<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schema_column` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1176,7 +1176,7 @@ The following state arguments are supported:
 <a href="#state_azureblobstoragelocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetjsonazureblobstoragelocation">Dataset<wbr>Json<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location</a></span>
+        <span class="property-type"><a href="#datasetjsonazureblobstoragelocation">Dataset<wbr>Json<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1221,7 +1221,7 @@ The following state arguments are supported:
 <a href="#state_httpserverlocation_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Server<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetjsonhttpserverlocation">Dataset<wbr>Json<wbr>Http<wbr>Server<wbr>Location</a></span>
+        <span class="property-type"><a href="#datasetjsonhttpserverlocation">Dataset<wbr>Json<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_server_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1266,7 @@ The following state arguments are supported:
 <a href="#state_schemacolumns_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetjsonschemacolumn">[]Dataset<wbr>Json<wbr>Schema<wbr>Column</a></span>
+        <span class="property-type"><a href="#datasetjsonschemacolumn">[]Dataset<wbr>Json<wbr>Schema<wbr>Column<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schema_column` block as defined below.
 {{% /md %}}</dd></dl>

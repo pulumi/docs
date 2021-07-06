@@ -381,7 +381,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#customparameters_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomparameters">Workspace<wbr>Custom<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#workspacecustomparameters">Workspace<wbr>Custom<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_parameters` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -956,7 +956,7 @@ The following state arguments are supported:
 <a href="#state_customparameters_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecustomparameters">Workspace<wbr>Custom<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#workspacecustomparameters">Workspace<wbr>Custom<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_parameters` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -464,7 +464,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#actiongroup_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smartdetectoralertruleactiongroup">Smart<wbr>Detector<wbr>Alert<wbr>Rule<wbr>Action<wbr>Group</a></span>
+        <span class="property-type"><a href="#smartdetectoralertruleactiongroup">Smart<wbr>Detector<wbr>Alert<wbr>Rule<wbr>Action<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `action_group` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1067,7 +1067,7 @@ The following state arguments are supported:
 <a href="#state_actiongroup_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smartdetectoralertruleactiongroup">Smart<wbr>Detector<wbr>Alert<wbr>Rule<wbr>Action<wbr>Group</a></span>
+        <span class="property-type"><a href="#smartdetectoralertruleactiongroup">Smart<wbr>Detector<wbr>Alert<wbr>Rule<wbr>Action<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `action_group` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

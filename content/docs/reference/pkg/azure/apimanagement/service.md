@@ -190,9 +190,12 @@ const exampleService = new azure.apimanagement.Service("exampleService", {
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceAdditionalLocationArgs]]</span> = None<span class="p">,</span>
             <span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCertificateArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">client_certificate_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">gateway_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">hostname_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceHostnameConfigurationArgs]</span> = None<span class="p">,</span>
             <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServiceIdentityArgs]</span> = None<span class="p">,</span>
             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">min_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[ServicePolicyArgs]</span> = None<span class="p">,</span>
@@ -207,7 +210,8 @@ const exampleService = new azure.apimanagement.Service("exampleService", {
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">tenant_access</span><span class="p">:</span> <span class="nx">Optional[ServiceTenantAccessArgs]</span> = None<span class="p">,</span>
             <span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceVirtualNetworkConfigurationArgs]</span> = None<span class="p">,</span>
-            <span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+            <span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
@@ -391,6 +395,24 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientcertificateenabled_csharp">
+<a href="#clientcertificateenabled_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enforce a client certificate to be presented on each request to the gateway? This is only supported when sku type is `Consumption`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gatewaydisabled_csharp">
+<a href="#gatewaydisabled_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hostnameconfiguration_csharp">
 <a href="#hostnameconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Configuration</a>
 </span>
@@ -416,6 +438,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minapiversion_csharp">
+<a href="#minapiversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version which the control plane API calls to API Management service are limited with version equal to or newer than.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -516,6 +547,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zones_csharp">
+<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of availability zones.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -562,7 +602,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#additionallocations_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">[]Service<wbr>Additional<wbr>Location</a></span>
+        <span class="property-type"><a href="#serviceadditionallocation">[]Service<wbr>Additional<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -571,16 +611,34 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">[]Service<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#servicecertificate">[]Service<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificateenabled_go">
+<a href="#clientcertificateenabled_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enforce a client certificate to be presented on each request to the gateway? This is only supported when sku type is `Consumption`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gatewaydisabled_go">
+<a href="#gatewaydisabled_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostnameconfiguration_go">
 <a href="#hostnameconfiguration_go" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -589,7 +647,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -601,6 +659,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minapiversion_go">
+<a href="#minapiversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version which the control plane API calls to API Management service are limited with version equal to or newer than.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -625,7 +692,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -634,7 +701,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -643,7 +710,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#security_go" style="color: inherit; text-decoration: inherit;">Security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -652,7 +719,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#signin_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -661,7 +728,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#signup_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -679,7 +746,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tenantaccess_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -688,7 +755,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualnetworkconfiguration_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -701,6 +768,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zones_go">
+<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of availability zones.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -761,6 +837,24 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientcertificateenabled_nodejs">
+<a href="#clientcertificateenabled_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enforce a client certificate to be presented on each request to the gateway? This is only supported when sku type is `Consumption`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gatewaydisabled_nodejs">
+<a href="#gatewaydisabled_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hostnameconfiguration_nodejs">
 <a href="#hostnameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">hostname<wbr>Configuration</a>
 </span>
@@ -786,6 +880,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minapiversion_nodejs">
+<a href="#minapiversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version which the control plane API calls to API Management service are limited with version equal to or newer than.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -886,6 +989,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zones_nodejs">
+<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of availability zones.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -946,6 +1058,24 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="client_certificate_enabled_python">
+<a href="#client_certificate_enabled_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enforce a client certificate to be presented on each request to the gateway? This is only supported when sku type is `Consumption`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="gateway_disabled_python">
+<a href="#gateway_disabled_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hostname_configuration_python">
 <a href="#hostname_configuration_python" style="color: inherit; text-decoration: inherit;">hostname_<wbr>configuration</a>
 </span>
@@ -971,6 +1101,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="min_api_version_python">
+<a href="#min_api_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>api_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version which the control plane API calls to API Management service are limited with version equal to or newer than.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1071,6 +1210,15 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zones_python">
+<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of availability zones.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1435,13 +1583,16 @@ Get an existing Service resource's state with the given name, ID, and optional e
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceAdditionalLocationArgs]]</span> = None<span class="p">,</span>
         <span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCertificateArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">client_certificate_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">developer_portal_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">gateway_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">gateway_regional_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">gateway_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">hostname_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceHostnameConfigurationArgs]</span> = None<span class="p">,</span>
         <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServiceIdentityArgs]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">management_api_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">min_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[ServicePolicyArgs]</span> = None<span class="p">,</span>
@@ -1460,7 +1611,8 @@ Get an existing Service resource's state with the given name, ID, and optional e
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tenant_access</span><span class="p">:</span> <span class="nx">Optional[ServiceTenantAccessArgs]</span> = None<span class="p">,</span>
         <span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceVirtualNetworkConfigurationArgs]</span> = None<span class="p">,</span>
-        <span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+        <span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1591,6 +1743,15 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_clientcertificateenabled_csharp">
+<a href="#state_clientcertificateenabled_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enforce a client certificate to be presented on each request to the gateway? This is only supported when sku type is `Consumption`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_developerportalurl_csharp">
 <a href="#state_developerportalurl_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portal<wbr>Url</a>
 </span>
@@ -1598,6 +1759,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_gatewaydisabled_csharp">
+<a href="#state_gatewaydisabled_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayregionalurl_csharp">
@@ -1652,6 +1822,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_minapiversion_csharp">
+<a href="#state_minapiversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version which the control plane API calls to API Management service are limited with version equal to or newer than.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1824,6 +2003,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zones_csharp">
+<a href="#state_zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of availability zones.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1834,7 +2022,7 @@ The following state arguments are supported:
 <a href="#state_additionallocations_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">[]Service<wbr>Additional<wbr>Location</a></span>
+        <span class="property-type"><a href="#serviceadditionallocation">[]Service<wbr>Additional<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1843,9 +2031,18 @@ The following state arguments are supported:
 <a href="#state_certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">[]Service<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#servicecertificate">[]Service<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_clientcertificateenabled_go">
+<a href="#state_clientcertificateenabled_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enforce a client certificate to be presented on each request to the gateway? This is only supported when sku type is `Consumption`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developerportalurl_go">
@@ -1855,6 +2052,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_gatewaydisabled_go">
+<a href="#state_gatewaydisabled_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayregionalurl_go">
@@ -1879,7 +2085,7 @@ The following state arguments are supported:
 <a href="#state_hostnameconfiguration_go" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1888,7 +2094,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1909,6 +2115,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_minapiversion_go">
+<a href="#state_minapiversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version which the control plane API calls to API Management service are limited with version equal to or newer than.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1933,7 +2148,7 @@ The following state arguments are supported:
 <a href="#state_policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1960,7 +2175,7 @@ The following state arguments are supported:
 <a href="#state_protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2014,7 +2229,7 @@ The following state arguments are supported:
 <a href="#state_security_go" style="color: inherit; text-decoration: inherit;">Security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2023,7 +2238,7 @@ The following state arguments are supported:
 <a href="#state_signin_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2032,7 +2247,7 @@ The following state arguments are supported:
 <a href="#state_signup_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2059,7 +2274,7 @@ The following state arguments are supported:
 <a href="#state_tenantaccess_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access</a></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2068,7 +2283,7 @@ The following state arguments are supported:
 <a href="#state_virtualnetworkconfiguration_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2081,6 +2296,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zones_go">
+<a href="#state_zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of availability zones.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2105,6 +2329,15 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_clientcertificateenabled_nodejs">
+<a href="#state_clientcertificateenabled_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enforce a client certificate to be presented on each request to the gateway? This is only supported when sku type is `Consumption`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_developerportalurl_nodejs">
 <a href="#state_developerportalurl_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Portal<wbr>Url</a>
 </span>
@@ -2112,6 +2345,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_gatewaydisabled_nodejs">
+<a href="#state_gatewaydisabled_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayregionalurl_nodejs">
@@ -2166,6 +2408,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_minapiversion_nodejs">
+<a href="#state_minapiversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version which the control plane API calls to API Management service are limited with version equal to or newer than.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -2338,6 +2589,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zones_nodejs">
+<a href="#state_zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of availability zones.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2362,6 +2622,15 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_client_certificate_enabled_python">
+<a href="#state_client_certificate_enabled_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enforce a client certificate to be presented on each request to the gateway? This is only supported when sku type is `Consumption`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_developer_portal_url_python">
 <a href="#state_developer_portal_url_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portal_<wbr>url</a>
 </span>
@@ -2369,6 +2638,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_gateway_disabled_python">
+<a href="#state_gateway_disabled_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_regional_url_python">
@@ -2423,6 +2701,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_min_api_version_python">
+<a href="#state_min_api_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>api_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version which the control plane API calls to API Management service are limited with version equal to or newer than.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -2595,6 +2882,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zones_python">
+<a href="#state_zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of availability zones.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2652,7 +2948,7 @@ The following state arguments are supported:
 <a href="#virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below.  Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd></dl>
@@ -2750,7 +3046,7 @@ The following state arguments are supported:
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below.  Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd></dl>
@@ -2799,7 +3095,7 @@ The following state arguments are supported:
 <a href="#virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below.  Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd></dl>
@@ -2994,7 +3290,7 @@ The following state arguments are supported:
 <a href="#developerportals_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3003,7 +3299,7 @@ The following state arguments are supported:
 <a href="#managements_csharp" style="color: inherit; text-decoration: inherit;">Managements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Management&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3012,7 +3308,7 @@ The following state arguments are supported:
 <a href="#portals_csharp" style="color: inherit; text-decoration: inherit;">Portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationportal">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationportal">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Portal&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3021,7 +3317,7 @@ The following state arguments are supported:
 <a href="#proxies_csharp" style="color: inherit; text-decoration: inherit;">Proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationproxy">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationproxy">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Proxy&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3030,7 +3326,7 @@ The following state arguments are supported:
 <a href="#scms_csharp" style="color: inherit; text-decoration: inherit;">Scms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationscm">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationscm">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Scm&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
 {{% /md %}}</dd></dl>
@@ -3092,7 +3388,7 @@ The following state arguments are supported:
 <a href="#developerportals_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3101,7 +3397,7 @@ The following state arguments are supported:
 <a href="#managements_nodejs" style="color: inherit; text-decoration: inherit;">managements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">Service<wbr>Hostname<wbr>Configuration<wbr>Management[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3110,7 +3406,7 @@ The following state arguments are supported:
 <a href="#portals_nodejs" style="color: inherit; text-decoration: inherit;">portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationportal">Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationportal">Service<wbr>Hostname<wbr>Configuration<wbr>Portal[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3119,7 +3415,7 @@ The following state arguments are supported:
 <a href="#proxies_nodejs" style="color: inherit; text-decoration: inherit;">proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationproxy">Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationproxy">Service<wbr>Hostname<wbr>Configuration<wbr>Proxy[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3128,7 +3424,7 @@ The following state arguments are supported:
 <a href="#scms_nodejs" style="color: inherit; text-decoration: inherit;">scms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationscm">Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationscm">Service<wbr>Hostname<wbr>Configuration<wbr>Scm[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
 {{% /md %}}</dd></dl>
@@ -3141,7 +3437,7 @@ The following state arguments are supported:
 <a href="#developer_portals_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal]</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3150,7 +3446,7 @@ The following state arguments are supported:
 <a href="#managements_python" style="color: inherit; text-decoration: inherit;">managements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Management]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3159,7 +3455,7 @@ The following state arguments are supported:
 <a href="#portals_python" style="color: inherit; text-decoration: inherit;">portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationportal">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationportal">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Portal]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3168,7 +3464,7 @@ The following state arguments are supported:
 <a href="#proxies_python" style="color: inherit; text-decoration: inherit;">proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationproxy">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationproxy">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Proxy]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3177,7 +3473,7 @@ The following state arguments are supported:
 <a href="#scms_python" style="color: inherit; text-decoration: inherit;">scms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationscm">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationscm">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Scm]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
 {{% /md %}}</dd></dl>
@@ -5209,7 +5505,7 @@ The following state arguments are supported:
 <a href="#termsofservice_csharp" style="color: inherit; text-decoration: inherit;">Terms<wbr>Of<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}A `terms_of_service` block as defined below.
 {{% /md %}}</dd></dl>
@@ -5253,7 +5549,7 @@ The following state arguments are supported:
 <a href="#termsofservice_nodejs" style="color: inherit; text-decoration: inherit;">terms<wbr>Of<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}A `terms_of_service` block as defined below.
 {{% /md %}}</dd></dl>
@@ -5275,7 +5571,7 @@ The following state arguments are supported:
 <a href="#terms_of_service_python" style="color: inherit; text-decoration: inherit;">terms_<wbr>of_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}A `terms_of_service` block as defined below.
 {{% /md %}}</dd></dl>

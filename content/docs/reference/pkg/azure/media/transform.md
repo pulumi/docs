@@ -748,7 +748,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutput">[]Transform<wbr>Output<wbr>Type</a></span>
+        <span class="property-type"><a href="#transformoutput">[]Transform<wbr>Output<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `output` blocks as defined below. At least one `output` must be defined.
 {{% /md %}}</dd></dl>
@@ -1120,7 +1120,7 @@ The following state arguments are supported:
 <a href="#state_outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutput">[]Transform<wbr>Output<wbr>Type</a></span>
+        <span class="property-type"><a href="#transformoutput">[]Transform<wbr>Output<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `output` blocks as defined below. At least one `output` must be defined.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1251,7 +1251,7 @@ The following state arguments are supported:
 <a href="#audioanalyzerpreset_csharp" style="color: inherit; text-decoration: inherit;">Audio<wbr>Analyzer<wbr>Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputaudioanalyzerpreset">Transform<wbr>Output<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#transformoutputaudioanalyzerpreset">Transform<wbr>Output<wbr>Audio<wbr>Analyzer<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `audio_analyzer_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1260,7 +1260,7 @@ The following state arguments are supported:
 <a href="#builtinpreset_csharp" style="color: inherit; text-decoration: inherit;">Builtin<wbr>Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputbuiltinpreset">Transform<wbr>Output<wbr>Builtin<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#transformoutputbuiltinpreset">Transform<wbr>Output<wbr>Builtin<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `builtin_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1269,7 +1269,7 @@ The following state arguments are supported:
 <a href="#facedetectorpreset_csharp" style="color: inherit; text-decoration: inherit;">Face<wbr>Detector<wbr>Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputfacedetectorpreset">Transform<wbr>Output<wbr>Face<wbr>Detector<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#transformoutputfacedetectorpreset">Transform<wbr>Output<wbr>Face<wbr>Detector<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `face_detector_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1296,7 +1296,7 @@ The following state arguments are supported:
 <a href="#videoanalyzerpreset_csharp" style="color: inherit; text-decoration: inherit;">Video<wbr>Analyzer<wbr>Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputvideoanalyzerpreset">Transform<wbr>Output<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#transformoutputvideoanalyzerpreset">Transform<wbr>Output<wbr>Video<wbr>Analyzer<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `video_analyzer_preset` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1367,7 +1367,7 @@ The following state arguments are supported:
 <a href="#audioanalyzerpreset_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Analyzer<wbr>Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputaudioanalyzerpreset">Transform<wbr>Output<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#transformoutputaudioanalyzerpreset">Transform<wbr>Output<wbr>Audio<wbr>Analyzer<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `audio_analyzer_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1376,7 +1376,7 @@ The following state arguments are supported:
 <a href="#builtinpreset_nodejs" style="color: inherit; text-decoration: inherit;">builtin<wbr>Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputbuiltinpreset">Transform<wbr>Output<wbr>Builtin<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#transformoutputbuiltinpreset">Transform<wbr>Output<wbr>Builtin<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `builtin_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1385,7 +1385,7 @@ The following state arguments are supported:
 <a href="#facedetectorpreset_nodejs" style="color: inherit; text-decoration: inherit;">face<wbr>Detector<wbr>Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputfacedetectorpreset">Transform<wbr>Output<wbr>Face<wbr>Detector<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#transformoutputfacedetectorpreset">Transform<wbr>Output<wbr>Face<wbr>Detector<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `face_detector_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1412,7 +1412,7 @@ The following state arguments are supported:
 <a href="#videoanalyzerpreset_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Analyzer<wbr>Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputvideoanalyzerpreset">Transform<wbr>Output<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#transformoutputvideoanalyzerpreset">Transform<wbr>Output<wbr>Video<wbr>Analyzer<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `video_analyzer_preset` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1425,7 +1425,7 @@ The following state arguments are supported:
 <a href="#audio_analyzer_preset_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>analyzer_<wbr>preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputaudioanalyzerpreset">Transform<wbr>Output<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#transformoutputaudioanalyzerpreset">Transform<wbr>Output<wbr>Audio<wbr>Analyzer<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `audio_analyzer_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1434,7 +1434,7 @@ The following state arguments are supported:
 <a href="#builtin_preset_python" style="color: inherit; text-decoration: inherit;">builtin_<wbr>preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputbuiltinpreset">Transform<wbr>Output<wbr>Builtin<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#transformoutputbuiltinpreset">Transform<wbr>Output<wbr>Builtin<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `builtin_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1443,7 +1443,7 @@ The following state arguments are supported:
 <a href="#face_detector_preset_python" style="color: inherit; text-decoration: inherit;">face_<wbr>detector_<wbr>preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputfacedetectorpreset">Transform<wbr>Output<wbr>Face<wbr>Detector<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#transformoutputfacedetectorpreset">Transform<wbr>Output<wbr>Face<wbr>Detector<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `face_detector_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1470,7 +1470,7 @@ The following state arguments are supported:
 <a href="#video_analyzer_preset_python" style="color: inherit; text-decoration: inherit;">video_<wbr>analyzer_<wbr>preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputvideoanalyzerpreset">Transform<wbr>Output<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#transformoutputvideoanalyzerpreset">Transform<wbr>Output<wbr>Video<wbr>Analyzer<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `video_analyzer_preset` block as defined below.
 {{% /md %}}</dd></dl>

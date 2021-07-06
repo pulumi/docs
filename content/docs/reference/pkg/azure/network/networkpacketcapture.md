@@ -396,7 +396,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
 <a href="#storagelocation_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpacketcapturestoragelocation">Network<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location</a></span>
+        <span class="property-type"><a href="#networkpacketcapturestoragelocation">Network<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_location` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -414,7 +414,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpacketcapturefilter">[]Network<wbr>Packet<wbr>Capture<wbr>Filter</a></span>
+        <span class="property-type"><a href="#networkpacketcapturefilter">[]Network<wbr>Packet<wbr>Capture<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -907,7 +907,7 @@ The following state arguments are supported:
 <a href="#state_filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpacketcapturefilter">[]Network<wbr>Packet<wbr>Capture<wbr>Filter</a></span>
+        <span class="property-type"><a href="#networkpacketcapturefilter">[]Network<wbr>Packet<wbr>Capture<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -970,7 +970,7 @@ The following state arguments are supported:
 <a href="#state_storagelocation_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpacketcapturestoragelocation">Network<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location</a></span>
+        <span class="property-type"><a href="#networkpacketcapturestoragelocation">Network<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_location` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"

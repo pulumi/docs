@@ -370,7 +370,7 @@ The RouteFilter resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#rule_go" style="color: inherit; text-decoration: inherit;">Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routefilterrule">Route<wbr>Filter<wbr>Rule</a></span>
+        <span class="property-type"><a href="#routefilterrule">Route<wbr>Filter<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rules` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -751,7 +751,7 @@ The following state arguments are supported:
 <a href="#state_rule_go" style="color: inherit; text-decoration: inherit;">Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routefilterrule">Route<wbr>Filter<wbr>Rule</a></span>
+        <span class="property-type"><a href="#routefilterrule">Route<wbr>Filter<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rules` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

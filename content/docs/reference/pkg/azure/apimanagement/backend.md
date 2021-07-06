@@ -319,7 +319,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendcredentials">Backend<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#backendcredentials">Backend<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `credentials` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -346,7 +346,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#proxy_go" style="color: inherit; text-decoration: inherit;">Proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproxy">Backend<wbr>Proxy</a></span>
+        <span class="property-type"><a href="#backendproxy">Backend<wbr>Proxy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `proxy` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -364,7 +364,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicefabriccluster_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Fabric<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabriccluster">Backend<wbr>Service<wbr>Fabric<wbr>Cluster</a></span>
+        <span class="property-type"><a href="#backendservicefabriccluster">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `service_fabric_cluster` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -382,7 +382,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendtls">Backend<wbr>Tls</a></span>
+        <span class="property-type"><a href="#backendtls">Backend<wbr>Tls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tls` block as documented below.
 {{% /md %}}</dd></dl>
@@ -932,7 +932,7 @@ The following state arguments are supported:
 <a href="#state_credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendcredentials">Backend<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#backendcredentials">Backend<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `credentials` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -968,7 +968,7 @@ The following state arguments are supported:
 <a href="#state_proxy_go" style="color: inherit; text-decoration: inherit;">Proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproxy">Backend<wbr>Proxy</a></span>
+        <span class="property-type"><a href="#backendproxy">Backend<wbr>Proxy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `proxy` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -995,7 +995,7 @@ The following state arguments are supported:
 <a href="#state_servicefabriccluster_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Fabric<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabriccluster">Backend<wbr>Service<wbr>Fabric<wbr>Cluster</a></span>
+        <span class="property-type"><a href="#backendservicefabriccluster">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `service_fabric_cluster` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1013,7 +1013,7 @@ The following state arguments are supported:
 <a href="#state_tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendtls">Backend<wbr>Tls</a></span>
+        <span class="property-type"><a href="#backendtls">Backend<wbr>Tls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tls` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1270,7 +1270,7 @@ The following state arguments are supported:
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendcredentialsauthorization">Backend<wbr>Credentials<wbr>Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendcredentialsauthorization">Backend<wbr>Credentials<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}An `authorization` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1350,7 +1350,7 @@ The following state arguments are supported:
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendcredentialsauthorization">Backend<wbr>Credentials<wbr>Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendcredentialsauthorization">Backend<wbr>Credentials<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}An `authorization` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1390,7 +1390,7 @@ The following state arguments are supported:
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendcredentialsauthorization">Backend<wbr>Credentials<wbr>Authorization<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendcredentialsauthorization">Backend<wbr>Credentials<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}An `authorization` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1644,15 +1644,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="clientcertificatethumbprint_csharp">
-<a href="#clientcertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="managementendpoints_csharp">
 <a href="#managementendpoints_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Endpoints</a>
 </span>
@@ -1671,6 +1662,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The maximum number of retries when attempting resolve the partition.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientcertificateid_csharp">
+<a href="#clientcertificateid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client certificate resource id for the management endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificatethumbprint_csharp">
+<a href="#clientcertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="servercertificatethumbprints_csharp">
 <a href="#servercertificatethumbprints_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Certificate<wbr>Thumbprints</a>
 </span>
@@ -1684,7 +1693,7 @@ The following state arguments are supported:
 <a href="#serverx509names_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>X509Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterserverx509name">List&lt;Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Server<wbr>X509Name<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterserverx509name">List&lt;Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Server<wbr>X509Name&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_x509_name` blocks as documented below.
 {{% /md %}}</dd></dl>
@@ -1692,15 +1701,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="clientcertificatethumbprint_go">
-<a href="#clientcertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managementendpoints_go">
 <a href="#managementendpoints_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Endpoints</a>
@@ -1718,6 +1718,24 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of retries when attempting resolve the partition.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificateid_go">
+<a href="#clientcertificateid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client certificate resource id for the management endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificatethumbprint_go">
+<a href="#clientcertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servercertificatethumbprints_go">
@@ -1742,15 +1760,6 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="clientcertificatethumbprint_nodejs">
-<a href="#clientcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="managementendpoints_nodejs">
 <a href="#managementendpoints_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Endpoints</a>
 </span>
@@ -1769,6 +1778,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The maximum number of retries when attempting resolve the partition.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientcertificateid_nodejs">
+<a href="#clientcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client certificate resource id for the management endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificatethumbprint_nodejs">
+<a href="#clientcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="servercertificatethumbprints_nodejs">
 <a href="#servercertificatethumbprints_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate<wbr>Thumbprints</a>
 </span>
@@ -1782,7 +1809,7 @@ The following state arguments are supported:
 <a href="#serverx509names_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>X509Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterserverx509name">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Server<wbr>X509Name<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterserverx509name">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Server<wbr>X509Name[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_x509_name` blocks as documented below.
 {{% /md %}}</dd></dl>
@@ -1790,15 +1817,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="client_certificate_thumbprint_python">
-<a href="#client_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="management_endpoints_python">
 <a href="#management_endpoints_python" style="color: inherit; text-decoration: inherit;">management_<wbr>endpoints</a>
@@ -1818,6 +1836,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The maximum number of retries when attempting resolve the partition.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="client_certificate_id_python">
+<a href="#client_certificate_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client certificate resource id for the management endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_certificate_thumbprint_python">
+<a href="#client_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>thumbprint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="server_certificate_thumbprints_python">
 <a href="#server_certificate_thumbprints_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate_<wbr>thumbprints</a>
 </span>
@@ -1831,7 +1867,7 @@ The following state arguments are supported:
 <a href="#server_x509_names_python" style="color: inherit; text-decoration: inherit;">server_<wbr>x509_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterserverx509name">Sequence[Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Server<wbr>X509Name<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterserverx509name">Sequence[Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Server<wbr>X509Name]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_x509_name` blocks as documented below.
 {{% /md %}}</dd></dl>

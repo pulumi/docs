@@ -1070,7 +1070,7 @@ The following state arguments are supported:
 <a href="#state_identities_go" style="color: inherit; text-decoration: inherit;">Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentity">[]Account<wbr>Identity</a></span>
+        <span class="property-type"><a href="#accountidentity">[]Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

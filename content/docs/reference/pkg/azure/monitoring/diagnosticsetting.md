@@ -505,7 +505,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglog">[]Diagnostic<wbr>Setting<wbr>Log</a></span>
+        <span class="property-type"><a href="#diagnosticsettinglog">[]Diagnostic<wbr>Setting<wbr>Log<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `log` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -514,7 +514,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#metrics_go" style="color: inherit; text-decoration: inherit;">Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetric">[]Diagnostic<wbr>Setting<wbr>Metric</a></span>
+        <span class="property-type"><a href="#diagnosticsettingmetric">[]Diagnostic<wbr>Setting<wbr>Metric<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `metric` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1025,7 +1025,7 @@ The following state arguments are supported:
 <a href="#state_logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglog">[]Diagnostic<wbr>Setting<wbr>Log</a></span>
+        <span class="property-type"><a href="#diagnosticsettinglog">[]Diagnostic<wbr>Setting<wbr>Log<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `log` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1034,7 +1034,7 @@ The following state arguments are supported:
 <a href="#state_metrics_go" style="color: inherit; text-decoration: inherit;">Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetric">[]Diagnostic<wbr>Setting<wbr>Metric</a></span>
+        <span class="property-type"><a href="#diagnosticsettingmetric">[]Diagnostic<wbr>Setting<wbr>Metric<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `metric` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1273,7 +1273,7 @@ The following state arguments are supported:
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1335,7 +1335,7 @@ The following state arguments are supported:
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1366,7 +1366,7 @@ The following state arguments are supported:
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1489,7 +1489,7 @@ The following state arguments are supported:
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1551,7 +1551,7 @@ The following state arguments are supported:
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1582,7 +1582,7 @@ The following state arguments are supported:
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd></dl>

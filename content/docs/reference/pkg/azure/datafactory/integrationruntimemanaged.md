@@ -462,7 +462,7 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 <a href="#cataloginfo_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info</a></span>
+        <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -471,7 +471,7 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 <a href="#customsetupscript_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script</a></span>
+        <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -543,7 +543,7 @@ The IntegrationRuntimeManaged resource accepts the following [input]({{< relref 
 <a href="#vnetintegration_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Integration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration</a></span>
+        <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1112,7 +1112,7 @@ The following state arguments are supported:
 <a href="#state_cataloginfo_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info</a></span>
+        <span class="property-type"><a href="#integrationruntimemanagedcataloginfo">Integration<wbr>Runtime<wbr>Managed<wbr>Catalog<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1121,7 +1121,7 @@ The following state arguments are supported:
 <a href="#state_customsetupscript_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script</a></span>
+        <span class="property-type"><a href="#integrationruntimemanagedcustomsetupscript">Integration<wbr>Runtime<wbr>Managed<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1220,7 +1220,7 @@ The following state arguments are supported:
 <a href="#state_vnetintegration_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Integration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration</a></span>
+        <span class="property-type"><a href="#integrationruntimemanagedvnetintegration">Integration<wbr>Runtime<wbr>Managed<wbr>Vnet<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
 {{% /md %}}</dd></dl>

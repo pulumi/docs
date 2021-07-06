@@ -448,7 +448,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
 <a href="#allowrule_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule</a></span>
+        <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}an `allow_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -466,7 +466,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
 <a href="#rangerules_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitydevicegrouprangerule">[]Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule</a></span>
+        <span class="property-type"><a href="#securitydevicegrouprangerule">[]Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `range_rule` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -783,7 +783,7 @@ The following state arguments are supported:
 <a href="#state_allowrule_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule</a></span>
+        <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}an `allow_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -810,7 +810,7 @@ The following state arguments are supported:
 <a href="#state_rangerules_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitydevicegrouprangerule">[]Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule</a></span>
+        <span class="property-type"><a href="#securitydevicegrouprangerule">[]Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `range_rule` blocks as defined below.
 {{% /md %}}</dd></dl>

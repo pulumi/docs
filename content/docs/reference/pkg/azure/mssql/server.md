@@ -485,7 +485,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+    <dd>{{% md %}}Whether public network access is allowed for this server. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -541,7 +541,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#azureadadministrator_go" style="color: inherit; text-decoration: inherit;">Azuread<wbr>Administrator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverazureadadministrator">Server<wbr>Azuread<wbr>Administrator</a></span>
+        <span class="property-type"><a href="#serverazureadadministrator">Server<wbr>Azuread<wbr>Administrator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azuread_administrator` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -559,7 +559,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#extendedauditingpolicy_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverextendedauditingpolicy">Server<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Type</a></span>
+        <span class="property-type"><a href="#serverextendedauditingpolicy">Server<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -568,7 +568,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity</a></span>
+        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -606,7 +606,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+    <dd>{{% md %}}Whether public network access is allowed for this server. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -727,7 +727,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+    <dd>{{% md %}}Whether public network access is allowed for this server. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -848,7 +848,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+    <dd>{{% md %}}Whether public network access is allowed for this server. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1227,7 +1227,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+    <dd>{{% md %}}Whether public network access is allowed for this server. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
@@ -1292,7 +1292,7 @@ The following state arguments are supported:
 <a href="#state_azureadadministrator_go" style="color: inherit; text-decoration: inherit;">Azuread<wbr>Administrator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverazureadadministrator">Server<wbr>Azuread<wbr>Administrator</a></span>
+        <span class="property-type"><a href="#serverazureadadministrator">Server<wbr>Azuread<wbr>Administrator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azuread_administrator` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1310,7 +1310,7 @@ The following state arguments are supported:
 <a href="#state_extendedauditingpolicy_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverextendedauditingpolicy">Server<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Type</a></span>
+        <span class="property-type"><a href="#serverextendedauditingpolicy">Server<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1328,7 +1328,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity</a></span>
+        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1366,7 +1366,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+    <dd>{{% md %}}Whether public network access is allowed for this server. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1505,7 +1505,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+    <dd>{{% md %}}Whether public network access is allowed for this server. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
@@ -1644,7 +1644,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
+    <dd>{{% md %}}Whether public network access is allowed for this server. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">

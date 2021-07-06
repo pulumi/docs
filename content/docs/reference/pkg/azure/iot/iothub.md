@@ -787,7 +787,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubsku">Io<wbr>THub<wbr>Sku</a></span>
+        <span class="property-type"><a href="#iothubsku">Io<wbr>THub<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -796,7 +796,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubendpoint">[]Io<wbr>THub<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#iothubendpoint">[]Io<wbr>THub<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -805,7 +805,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#enrichments_go" style="color: inherit; text-decoration: inherit;">Enrichments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubenrichment">[]Io<wbr>THub<wbr>Enrichment</a></span>
+        <span class="property-type"><a href="#iothubenrichment">[]Io<wbr>THub<wbr>Enrichment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `enrichment` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -832,7 +832,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#fallbackroute_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubfallbackroute">Io<wbr>THub<wbr>Fallback<wbr>Route</a></span>
+        <span class="property-type"><a href="#iothubfallbackroute">Io<wbr>THub<wbr>Fallback<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `fallback_route` block as defined below. If the fallback route is enabled, messages that don't match any of the supplied routes are automatically sent to this route. Defaults to messages/events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -841,7 +841,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#fileupload_go" style="color: inherit; text-decoration: inherit;">File<wbr>Upload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubfileupload">Io<wbr>THub<wbr>File<wbr>Upload</a></span>
+        <span class="property-type"><a href="#iothubfileupload">Io<wbr>THub<wbr>File<wbr>Upload<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `file_upload` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -850,7 +850,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ipfilterrules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubipfilterrule">[]Io<wbr>THub<wbr>Ip<wbr>Filter<wbr>Rule</a></span>
+        <span class="property-type"><a href="#iothubipfilterrule">[]Io<wbr>THub<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_filter_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -895,7 +895,7 @@ The IoTHub resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubroute">[]Io<wbr>THub<wbr>Route</a></span>
+        <span class="property-type"><a href="#iothubroute">[]Io<wbr>THub<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `route` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1851,7 +1851,7 @@ The following state arguments are supported:
 <a href="#state_endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubendpoint">[]Io<wbr>THub<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#iothubendpoint">[]Io<wbr>THub<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1860,7 +1860,7 @@ The following state arguments are supported:
 <a href="#state_enrichments_go" style="color: inherit; text-decoration: inherit;">Enrichments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubenrichment">[]Io<wbr>THub<wbr>Enrichment</a></span>
+        <span class="property-type"><a href="#iothubenrichment">[]Io<wbr>THub<wbr>Enrichment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `enrichment` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1923,7 +1923,7 @@ The following state arguments are supported:
 <a href="#state_fallbackroute_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubfallbackroute">Io<wbr>THub<wbr>Fallback<wbr>Route</a></span>
+        <span class="property-type"><a href="#iothubfallbackroute">Io<wbr>THub<wbr>Fallback<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `fallback_route` block as defined below. If the fallback route is enabled, messages that don't match any of the supplied routes are automatically sent to this route. Defaults to messages/events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1932,7 +1932,7 @@ The following state arguments are supported:
 <a href="#state_fileupload_go" style="color: inherit; text-decoration: inherit;">File<wbr>Upload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubfileupload">Io<wbr>THub<wbr>File<wbr>Upload</a></span>
+        <span class="property-type"><a href="#iothubfileupload">Io<wbr>THub<wbr>File<wbr>Upload<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `file_upload` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1950,7 +1950,7 @@ The following state arguments are supported:
 <a href="#state_ipfilterrules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubipfilterrule">[]Io<wbr>THub<wbr>Ip<wbr>Filter<wbr>Rule</a></span>
+        <span class="property-type"><a href="#iothubipfilterrule">[]Io<wbr>THub<wbr>Ip<wbr>Filter<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_filter_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2004,7 +2004,7 @@ The following state arguments are supported:
 <a href="#state_routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubroute">[]Io<wbr>THub<wbr>Route</a></span>
+        <span class="property-type"><a href="#iothubroute">[]Io<wbr>THub<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `route` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2013,7 +2013,7 @@ The following state arguments are supported:
 <a href="#state_sharedaccesspolicies_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubsharedaccesspolicy">[]Io<wbr>THub<wbr>Shared<wbr>Access<wbr>Policy</a></span>
+        <span class="property-type"><a href="#iothubsharedaccesspolicy">[]Io<wbr>THub<wbr>Shared<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `shared_access_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2022,7 +2022,7 @@ The following state arguments are supported:
 <a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubsku">Io<wbr>THub<wbr>Sku</a></span>
+        <span class="property-type"><a href="#iothubsku">Io<wbr>THub<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

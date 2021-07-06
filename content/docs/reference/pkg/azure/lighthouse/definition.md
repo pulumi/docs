@@ -177,6 +177,7 @@ const example = new azure.lighthouse.Definition("example", {
                <span class="nx">lighthouse_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">managing_tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[DefinitionPlanArgs]</span> = None<span class="p">,</span>
                <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Definition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -322,7 +323,7 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the managing tenant.
+    <dd>{{% md %}}The ID of the managing tenant. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
@@ -331,7 +332,7 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the managed subscription.
+    <dd>{{% md %}}The ID of the managed subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -358,7 +359,16 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Lighthouse Definition.
+    <dd>{{% md %}}The name of the Lighthouse Definition. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plan_csharp">
+<a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#definitionplan">Definition<wbr>Plan<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `plan` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -369,7 +379,7 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#authorizations_go" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#definitionauthorization">[]Definition<wbr>Authorization</a></span>
+        <span class="property-type"><a href="#definitionauthorization">[]Definition<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An authorization block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -380,7 +390,7 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the managing tenant.
+    <dd>{{% md %}}The ID of the managing tenant. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
@@ -389,7 +399,7 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the managed subscription.
+    <dd>{{% md %}}The ID of the managed subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -416,7 +426,16 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Lighthouse Definition.
+    <dd>{{% md %}}The name of the Lighthouse Definition. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plan_go">
+<a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#definitionplan">Definition<wbr>Plan<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `plan` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -438,7 +457,7 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the managing tenant.
+    <dd>{{% md %}}The ID of the managing tenant. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
@@ -447,7 +466,7 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the managed subscription.
+    <dd>{{% md %}}The ID of the managed subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -474,7 +493,16 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Lighthouse Definition.
+    <dd>{{% md %}}The name of the Lighthouse Definition. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plan_nodejs">
+<a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#definitionplan">Definition<wbr>Plan<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `plan` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -496,7 +524,7 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the managing tenant.
+    <dd>{{% md %}}The ID of the managing tenant. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
@@ -505,7 +533,7 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the managed subscription.
+    <dd>{{% md %}}The ID of the managed subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -532,7 +560,16 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Lighthouse Definition.
+    <dd>{{% md %}}The name of the Lighthouse Definition. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="plan_python">
+<a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#definitionplan">Definition<wbr>Plan<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `plan` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -612,6 +649,7 @@ Get an existing Definition resource's state with the given name, ID, and optiona
         <span class="nx">lighthouse_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">managing_tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[DefinitionPlanArgs]</span> = None<span class="p">,</span>
         <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Definition</code></pre></div>
 {{% /choosable %}}
 
@@ -758,7 +796,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the managing tenant.
+    <dd>{{% md %}}The ID of the managing tenant. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -767,7 +805,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Lighthouse Definition.
+    <dd>{{% md %}}The name of the Lighthouse Definition. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_plan_csharp">
+<a href="#state_plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#definitionplan">Definition<wbr>Plan<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `plan` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_csharp">
@@ -776,7 +823,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the managed subscription.
+    <dd>{{% md %}}The ID of the managed subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -787,7 +834,7 @@ The following state arguments are supported:
 <a href="#state_authorizations_go" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#definitionauthorization">[]Definition<wbr>Authorization</a></span>
+        <span class="property-type"><a href="#definitionauthorization">[]Definition<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An authorization block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -816,7 +863,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the managing tenant.
+    <dd>{{% md %}}The ID of the managing tenant. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -825,7 +872,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Lighthouse Definition.
+    <dd>{{% md %}}The name of the Lighthouse Definition. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_plan_go">
+<a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#definitionplan">Definition<wbr>Plan<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `plan` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_go">
@@ -834,7 +890,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the managed subscription.
+    <dd>{{% md %}}The ID of the managed subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -874,7 +930,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the managing tenant.
+    <dd>{{% md %}}The ID of the managing tenant. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -883,7 +939,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Lighthouse Definition.
+    <dd>{{% md %}}The name of the Lighthouse Definition. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_plan_nodejs">
+<a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#definitionplan">Definition<wbr>Plan<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `plan` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_nodejs">
@@ -892,7 +957,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the managed subscription.
+    <dd>{{% md %}}The ID of the managed subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -932,7 +997,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the managing tenant.
+    <dd>{{% md %}}The ID of the managing tenant. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -941,7 +1006,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Lighthouse Definition.
+    <dd>{{% md %}}The name of the Lighthouse Definition. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_plan_python">
+<a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#definitionplan">Definition<wbr>Plan<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `plan` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_python">
@@ -950,7 +1024,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the managed subscription.
+    <dd>{{% md %}}The ID of the managed subscription. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1122,6 +1196,168 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the security group/service principal/user that would be assigned permissions to the projected subscription.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="definitionplan">Definition<wbr>Plan</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The plan name of the marketplace offer.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="product_csharp">
+<a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The product code of the plan.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID of the plan.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the plan.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The plan name of the marketplace offer.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="product_go">
+<a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The product code of the plan.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID of the plan.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the plan.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The plan name of the marketplace offer.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="product_nodejs">
+<a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The product code of the plan.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID of the plan.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the plan.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The plan name of the marketplace offer.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="product_python">
+<a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The product code of the plan.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID of the plan.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of the plan.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

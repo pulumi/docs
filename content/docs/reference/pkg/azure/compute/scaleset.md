@@ -1250,7 +1250,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#networkprofiles_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofile">[]Scale<wbr>Set<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofile">[]Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1259,7 +1259,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile</a></span>
+        <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1277,7 +1277,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku</a></span>
+        <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1286,7 +1286,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storageprofileosdisk_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd><dt class="property-required"
@@ -1313,7 +1313,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#bootdiagnostics_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</a></span>
+        <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1331,7 +1331,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#extensions_go" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetextension">[]Scale<wbr>Set<wbr>Extension</a></span>
+        <span class="property-type"><a href="#scalesetextension">[]Scale<wbr>Set<wbr>Extension<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1349,7 +1349,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity</a></span>
+        <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1384,7 +1384,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#osprofilelinuxconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Linux<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1393,7 +1393,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#osprofilesecrets_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecret">[]Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret</a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecret">[]Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1402,7 +1402,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#osprofilewindowsconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Windows<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1420,7 +1420,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan</a></span>
+        <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1447,7 +1447,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#rollingupgradepolicy_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
+        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1465,7 +1465,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storageprofiledatadisks_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">[]Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">[]Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1474,7 +1474,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storageprofileimagereference_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2487,7 +2487,7 @@ The following state arguments are supported:
 <a href="#state_bootdiagnostics_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</a></span>
+        <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2505,7 +2505,7 @@ The following state arguments are supported:
 <a href="#state_extensions_go" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetextension">[]Scale<wbr>Set<wbr>Extension</a></span>
+        <span class="property-type"><a href="#scalesetextension">[]Scale<wbr>Set<wbr>Extension<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2523,7 +2523,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity</a></span>
+        <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2558,7 +2558,7 @@ The following state arguments are supported:
 <a href="#state_networkprofiles_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofile">[]Scale<wbr>Set<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofile">[]Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2567,7 +2567,7 @@ The following state arguments are supported:
 <a href="#state_osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile</a></span>
+        <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2576,7 +2576,7 @@ The following state arguments are supported:
 <a href="#state_osprofilelinuxconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Linux<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2585,7 +2585,7 @@ The following state arguments are supported:
 <a href="#state_osprofilesecrets_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecret">[]Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret</a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecret">[]Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2594,7 +2594,7 @@ The following state arguments are supported:
 <a href="#state_osprofilewindowsconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Windows<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2612,7 +2612,7 @@ The following state arguments are supported:
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan</a></span>
+        <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2648,7 +2648,7 @@ The following state arguments are supported:
 <a href="#state_rollingupgradepolicy_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
+        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2666,7 +2666,7 @@ The following state arguments are supported:
 <a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku</a></span>
+        <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2675,7 +2675,7 @@ The following state arguments are supported:
 <a href="#state_storageprofiledatadisks_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">[]Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">[]Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -2684,7 +2684,7 @@ The following state arguments are supported:
 <a href="#state_storageprofileimagereference_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2693,7 +2693,7 @@ The following state arguments are supported:
 <a href="#state_storageprofileosdisk_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3764,7 +3764,7 @@ The following state arguments are supported:
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">List&lt;Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">List&lt;Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}An ip_configuration block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3800,7 +3800,7 @@ The following state arguments are supported:
 <a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A dns_settings block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3898,7 +3898,7 @@ The following state arguments are supported:
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}An ip_configuration block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3934,7 +3934,7 @@ The following state arguments are supported:
 <a href="#dnssettings_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A dns_settings block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3965,7 +3965,7 @@ The following state arguments are supported:
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">Sequence[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">Sequence[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}An ip_configuration block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4001,7 +4001,7 @@ The following state arguments are supported:
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A dns_settings block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4151,7 +4151,7 @@ The following state arguments are supported:
 <a href="#publicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration. The public_ip_address_configuration is documented below.
 {{% /md %}}</dd></dl>
@@ -4303,7 +4303,7 @@ The following state arguments are supported:
 <a href="#publicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration. The public_ip_address_configuration is documented below.
 {{% /md %}}</dd></dl>
@@ -4379,7 +4379,7 @@ The following state arguments are supported:
 <a href="#public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration. The public_ip_address_configuration is documented below.
 {{% /md %}}</dd></dl>
@@ -4691,7 +4691,7 @@ The following state arguments are supported:
 <a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">List&lt;Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">List&lt;Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of `path` and `key_data` to be placed on the virtual machine.
 {{% /md %}}</dd></dl>
@@ -4735,7 +4735,7 @@ The following state arguments are supported:
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of `path` and `key_data` to be placed on the virtual machine.
 {{% /md %}}</dd></dl>
@@ -4757,7 +4757,7 @@ The following state arguments are supported:
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of `path` and `key_data` to be placed on the virtual machine.
 {{% /md %}}</dd></dl>
@@ -4863,7 +4863,7 @@ The following state arguments are supported:
 <a href="#vaultcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">List&lt;Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">List&lt;Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Vault Certificates as documented below
 {{% /md %}}</dd></dl>
@@ -4907,7 +4907,7 @@ The following state arguments are supported:
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Vault Certificates as documented below
 {{% /md %}}</dd></dl>
@@ -4929,7 +4929,7 @@ The following state arguments are supported:
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Vault Certificates as documented below
 {{% /md %}}</dd></dl>
@@ -5034,7 +5034,7 @@ The following state arguments are supported:
 <a href="#additionalunattendconfigs_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">List&lt;Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">List&lt;Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}An Additional Unattended Config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5061,7 +5061,7 @@ The following state arguments are supported:
 <a href="#winrms_csharp" style="color: inherit; text-decoration: inherit;">Winrms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">List&lt;Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">List&lt;Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of WinRM configuration blocks as documented below.
 {{% /md %}}</dd></dl>
@@ -5114,7 +5114,7 @@ The following state arguments are supported:
 <a href="#additionalunattendconfigs_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}An Additional Unattended Config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5141,7 +5141,7 @@ The following state arguments are supported:
 <a href="#winrms_nodejs" style="color: inherit; text-decoration: inherit;">winrms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of WinRM configuration blocks as documented below.
 {{% /md %}}</dd></dl>
@@ -5154,7 +5154,7 @@ The following state arguments are supported:
 <a href="#additional_unattend_configs_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}An Additional Unattended Config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5181,7 +5181,7 @@ The following state arguments are supported:
 <a href="#winrms_python" style="color: inherit; text-decoration: inherit;">winrms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm]</a></span>
     </dt>
     <dd>{{% md %}}A collection of WinRM configuration blocks as documented below.
 {{% /md %}}</dd></dl>

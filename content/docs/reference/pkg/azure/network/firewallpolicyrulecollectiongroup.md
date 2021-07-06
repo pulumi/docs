@@ -689,7 +689,7 @@ The FirewallPolicyRuleCollectionGroup resource accepts the following [input]({{<
 <a href="#applicationrulecollections_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollection">[]Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollection">[]Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `application_rule_collection` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -707,7 +707,7 @@ The FirewallPolicyRuleCollectionGroup resource accepts the following [input]({{<
 <a href="#natrulecollections_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnatrulecollection">[]Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Nat<wbr>Rule<wbr>Collection</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnatrulecollection">[]Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `nat_rule_collection` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -716,7 +716,7 @@ The FirewallPolicyRuleCollectionGroup resource accepts the following [input]({{<
 <a href="#networkrulecollections_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnetworkrulecollection">[]Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Network<wbr>Rule<wbr>Collection</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnetworkrulecollection">[]Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Network<wbr>Rule<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_rule_collection` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1089,7 +1089,7 @@ The following state arguments are supported:
 <a href="#state_applicationrulecollections_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollection">[]Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollection">[]Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `application_rule_collection` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1116,7 @@ The following state arguments are supported:
 <a href="#state_natrulecollections_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnatrulecollection">[]Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Nat<wbr>Rule<wbr>Collection</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnatrulecollection">[]Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `nat_rule_collection` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1125,7 +1125,7 @@ The following state arguments are supported:
 <a href="#state_networkrulecollections_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Collections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnetworkrulecollection">[]Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Network<wbr>Rule<wbr>Collection</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnetworkrulecollection">[]Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Network<wbr>Rule<wbr>Collection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_rule_collection` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1301,7 +1301,7 @@ The following state arguments are supported:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionrule">List&lt;Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionrule">List&lt;Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` (application rule) blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1381,7 +1381,7 @@ The following state arguments are supported:
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionrule">Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionrule">Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` (application rule) blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1421,7 +1421,7 @@ The following state arguments are supported:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionrule">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionrule">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` (application rule) blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1445,7 +1445,7 @@ The following state arguments are supported:
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionruleprotocol">List&lt;Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionruleprotocol">List&lt;Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1561,7 +1561,7 @@ The following state arguments are supported:
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionruleprotocol">Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionruleprotocol">Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1619,7 +1619,7 @@ The following state arguments are supported:
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionruleprotocol">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupapplicationrulecollectionruleprotocol">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of network protocols this rule applies to. Possible values are `TCP`, `UDP`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1787,7 +1787,7 @@ The following state arguments are supported:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnatrulecollectionrule">List&lt;Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnatrulecollectionrule">List&lt;Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `rule` (nat rule) block as defined above.
 {{% /md %}}</dd></dl>
@@ -1867,7 +1867,7 @@ The following state arguments are supported:
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnatrulecollectionrule">Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnatrulecollectionrule">Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A `rule` (nat rule) block as defined above.
 {{% /md %}}</dd></dl>
@@ -1907,7 +1907,7 @@ The following state arguments are supported:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnatrulecollectionrule">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnatrulecollectionrule">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}A `rule` (nat rule) block as defined above.
 {{% /md %}}</dd></dl>
@@ -2255,7 +2255,7 @@ The following state arguments are supported:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnetworkrulecollectionrule">List&lt;Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Network<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnetworkrulecollectionrule">List&lt;Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Network<wbr>Rule<wbr>Collection<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` (network rule) blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -2335,7 +2335,7 @@ The following state arguments are supported:
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnetworkrulecollectionrule">Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Network<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnetworkrulecollectionrule">Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Network<wbr>Rule<wbr>Collection<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` (network rule) blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -2375,7 +2375,7 @@ The following state arguments are supported:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnetworkrulecollectionrule">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Network<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyrulecollectiongroupnetworkrulecollectionrule">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Collection<wbr>Group<wbr>Network<wbr>Rule<wbr>Collection<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` (network rule) blocks as defined above.
 {{% /md %}}</dd></dl>

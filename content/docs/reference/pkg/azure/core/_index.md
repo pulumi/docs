@@ -12,10 +12,14 @@ Explore the resources and functions of the azure.core module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="customprovider" title="CustomProvider"><span class="symbol resource"></span>CustomProvider</a></li>
+    <li><a href="portaltenantconfiguration" title="PortalTenantConfiguration"><span class="symbol resource"></span>PortalTenantConfiguration</a></li>
     <li><a href="resourcegroup" title="ResourceGroup"><span class="symbol resource"></span>ResourceGroup</a></li>
+    <li><a href="resourcegrouppolicyassignment" title="ResourceGroupPolicyAssignment"><span class="symbol resource"></span>ResourceGroupPolicyAssignment</a></li>
     <li><a href="resourcegrouptemplatedeployment" title="ResourceGroupTemplateDeployment"><span class="symbol resource"></span>ResourceGroupTemplateDeployment</a></li>
+    <li><a href="resourcepolicyassignment" title="ResourcePolicyAssignment"><span class="symbol resource"></span>ResourcePolicyAssignment</a></li>
     <li><a href="resourceproviderregistration" title="ResourceProviderRegistration"><span class="symbol resource"></span>ResourceProviderRegistration</a></li>
     <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
+    <li><a href="subscriptionpolicyassignment" title="SubscriptionPolicyAssignment"><span class="symbol resource"></span>SubscriptionPolicyAssignment</a></li>
     <li><a href="subscriptiontemplatedeployment" title="SubscriptionTemplateDeployment"><span class="symbol resource"></span>SubscriptionTemplateDeployment</a></li>
     <li><a href="templatedeployment" title="TemplateDeployment"><span class="symbol resource"></span>TemplateDeployment</a></li>
     <li><a href="tenanttemplatedeployment" title="TenantTemplateDeployment"><span class="symbol resource"></span>TenantTemplateDeployment</a></li>
@@ -41,6 +45,6 @@ Explore the resources and functions of the azure.core module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.7.0</dd>
+	<dd>4.9.0</dd>
 </dl>
 

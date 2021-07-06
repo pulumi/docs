@@ -551,7 +551,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#autoscalesettings_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -560,7 +560,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#conflictresolutionpolicy_go" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerconflictresolutionpolicy">Sql<wbr>Container<wbr>Conflict<wbr>Resolution<wbr>Policy</a></span>
+        <span class="property-type"><a href="#sqlcontainerconflictresolutionpolicy">Sql<wbr>Container<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -578,7 +578,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#indexingpolicy_go" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `indexing_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -614,7 +614,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#uniquekeys_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontaineruniquekey">[]Sql<wbr>Container<wbr>Unique<wbr>Key</a></span>
+        <span class="property-type"><a href="#sqlcontaineruniquekey">[]Sql<wbr>Container<wbr>Unique<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1201,7 +1201,7 @@ The following state arguments are supported:
 <a href="#state_autoscalesettings_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1210,7 +1210,7 @@ The following state arguments are supported:
 <a href="#state_conflictresolutionpolicy_go" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerconflictresolutionpolicy">Sql<wbr>Container<wbr>Conflict<wbr>Resolution<wbr>Policy</a></span>
+        <span class="property-type"><a href="#sqlcontainerconflictresolutionpolicy">Sql<wbr>Container<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1237,7 +1237,7 @@ The following state arguments are supported:
 <a href="#state_indexingpolicy_go" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `indexing_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1291,7 +1291,7 @@ The following state arguments are supported:
 <a href="#state_uniquekeys_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontaineruniquekey">[]Sql<wbr>Container<wbr>Unique<wbr>Key</a></span>
+        <span class="property-type"><a href="#sqlcontaineruniquekey">[]Sql<wbr>Container<wbr>Unique<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1737,7 +1737,7 @@ The following state arguments are supported:
 <a href="#compositeindices_csharp" style="color: inherit; text-decoration: inherit;">Composite<wbr>Indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindex">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindex">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `composite_index` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1746,7 +1746,7 @@ The following state arguments are supported:
 <a href="#excludedpaths_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerindexingpolicyexcludedpath">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyexcludedpath">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `excluded_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1755,7 +1755,7 @@ The following state arguments are supported:
 <a href="#includedpaths_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerindexingpolicyincludedpath">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyincludedpath">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `included_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1767,6 +1767,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the indexing mode. Possible values include: `Consistent` and `None`. Defaults to `Consistent`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spatialindices_csharp">
+<a href="#spatialindices_csharp" style="color: inherit; text-decoration: inherit;">Spatial<wbr>Indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyspatialindex">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Spatial<wbr>Index&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `spatial_index` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1807,6 +1816,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the indexing mode. Possible values include: `Consistent` and `None`. Defaults to `Consistent`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spatialindices_go">
+<a href="#spatialindices_go" style="color: inherit; text-decoration: inherit;">Spatial<wbr>Indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyspatialindex">[]Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Spatial<wbr>Index</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `spatial_index` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1817,7 +1835,7 @@ The following state arguments are supported:
 <a href="#compositeindices_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindex">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindex">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `composite_index` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1826,7 +1844,7 @@ The following state arguments are supported:
 <a href="#excludedpaths_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerindexingpolicyexcludedpath">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyexcludedpath">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `excluded_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1835,7 +1853,7 @@ The following state arguments are supported:
 <a href="#includedpaths_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerindexingpolicyincludedpath">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyincludedpath">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `included_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1847,6 +1865,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the indexing mode. Possible values include: `Consistent` and `None`. Defaults to `Consistent`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spatialindices_nodejs">
+<a href="#spatialindices_nodejs" style="color: inherit; text-decoration: inherit;">spatial<wbr>Indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyspatialindex">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Spatial<wbr>Index[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `spatial_index` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1857,7 +1884,7 @@ The following state arguments are supported:
 <a href="#composite_indices_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindex">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindex">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index]</a></span>
     </dt>
     <dd>{{% md %}}One or more `composite_index` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1866,7 +1893,7 @@ The following state arguments are supported:
 <a href="#excluded_paths_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerindexingpolicyexcludedpath">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyexcludedpath">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path]</a></span>
     </dt>
     <dd>{{% md %}}One or more `excluded_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1875,7 +1902,7 @@ The following state arguments are supported:
 <a href="#included_paths_python" style="color: inherit; text-decoration: inherit;">included_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerindexingpolicyincludedpath">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyincludedpath">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path]</a></span>
     </dt>
     <dd>{{% md %}}One or more `included_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1887,6 +1914,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the indexing mode. Possible values include: `Consistent` and `None`. Defaults to `Consistent`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spatial_indices_python">
+<a href="#spatial_indices_python" style="color: inherit; text-decoration: inherit;">spatial_<wbr>indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicyspatialindex">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Spatial<wbr>Index]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `spatial_index` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1899,7 +1935,7 @@ The following state arguments are supported:
 <a href="#indices_csharp" style="color: inherit; text-decoration: inherit;">Indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindexindex">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindexindex">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `index` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1925,7 +1961,7 @@ The following state arguments are supported:
 <a href="#indices_nodejs" style="color: inherit; text-decoration: inherit;">indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindexindex">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindexindex">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `index` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1938,7 +1974,7 @@ The following state arguments are supported:
 <a href="#indices_python" style="color: inherit; text-decoration: inherit;">indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindexindex">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindexindex">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index]</a></span>
     </dt>
     <dd>{{% md %}}One or more `index` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2139,6 +2175,96 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path for which the indexing behaviour applies to.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sqlcontainerindexingpolicyspatialindex">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Spatial<wbr>Index</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behaviour applies to. According to the service design, all spatial types including `LineString`, `MultiPolygon`, `Point`, and `Polygon` will be applied to the path.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="types_csharp">
+<a href="#types_csharp" style="color: inherit; text-decoration: inherit;">Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A set of spatial types of the path.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behaviour applies to. According to the service design, all spatial types including `LineString`, `MultiPolygon`, `Point`, and `Polygon` will be applied to the path.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="types_go">
+<a href="#types_go" style="color: inherit; text-decoration: inherit;">Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A set of spatial types of the path.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behaviour applies to. According to the service design, all spatial types including `LineString`, `MultiPolygon`, `Point`, and `Polygon` will be applied to the path.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="types_nodejs">
+<a href="#types_nodejs" style="color: inherit; text-decoration: inherit;">types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A set of spatial types of the path.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behaviour applies to. According to the service design, all spatial types including `LineString`, `MultiPolygon`, `Point`, and `Polygon` will be applied to the path.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="types_python">
+<a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A set of spatial types of the path.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -416,7 +416,7 @@ Possible value is  `ManagedIdentity` or `System`.
 <a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccountstorageaccount">[]Service<wbr>Account<wbr>Storage<wbr>Account</a></span>
+        <span class="property-type"><a href="#serviceaccountstorageaccount">[]Service<wbr>Account<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -425,7 +425,7 @@ Possible value is  `ManagedIdentity` or `System`.
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity</a></span>
+        <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -434,7 +434,7 @@ Possible value is  `ManagedIdentity` or `System`.
 <a href="#keydeliveryaccesscontrol_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Delivery<wbr>Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccountkeydeliveryaccesscontrol">Service<wbr>Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control</a></span>
+        <span class="property-type"><a href="#serviceaccountkeydeliveryaccesscontrol">Service<wbr>Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -903,7 +903,7 @@ Possible value is  `ManagedIdentity` or `System`.
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity</a></span>
+        <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -912,7 +912,7 @@ Possible value is  `ManagedIdentity` or `System`.
 <a href="#state_keydeliveryaccesscontrol_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Delivery<wbr>Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccountkeydeliveryaccesscontrol">Service<wbr>Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control</a></span>
+        <span class="property-type"><a href="#serviceaccountkeydeliveryaccesscontrol">Service<wbr>Account<wbr>Key<wbr>Delivery<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `key_delivery_access_control` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -948,7 +948,7 @@ Possible value is  `ManagedIdentity` or `System`.
 <a href="#state_storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccountstorageaccount">[]Service<wbr>Account<wbr>Storage<wbr>Account</a></span>
+        <span class="property-type"><a href="#serviceaccountstorageaccount">[]Service<wbr>Account<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"

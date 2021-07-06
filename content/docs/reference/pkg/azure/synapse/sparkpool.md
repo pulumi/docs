@@ -549,7 +549,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#autopause_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause</a></span>
+        <span class="property-type"><a href="#sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_pause` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -558,7 +558,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#autoscale_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale</a></span>
+        <span class="property-type"><a href="#sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -567,7 +567,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#libraryrequirement_go" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement</a></span>
+        <span class="property-type"><a href="#sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `library_requirement` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1162,7 +1162,7 @@ The following state arguments are supported:
 <a href="#state_autopause_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause</a></span>
+        <span class="property-type"><a href="#sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_pause` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1171,7 +1171,7 @@ The following state arguments are supported:
 <a href="#state_autoscale_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale</a></span>
+        <span class="property-type"><a href="#sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1180,7 +1180,7 @@ The following state arguments are supported:
 <a href="#state_libraryrequirement_go" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement</a></span>
+        <span class="property-type"><a href="#sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `library_requirement` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

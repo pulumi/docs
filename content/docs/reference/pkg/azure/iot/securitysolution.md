@@ -554,7 +554,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#recommendationsenabled_go" style="color: inherit; text-decoration: inherit;">Recommendations<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled</a></span>
+        <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `recommendations_enabled` block of options to enable or disable as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1222,7 @@ The following state arguments are supported:
 <a href="#state_recommendationsenabled_go" style="color: inherit; text-decoration: inherit;">Recommendations<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled</a></span>
+        <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `recommendations_enabled` block of options to enable or disable as defined below.
 {{% /md %}}</dd><dt class="property-optional"

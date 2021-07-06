@@ -458,7 +458,7 @@ The CaaRecord resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#records_go" style="color: inherit; text-decoration: inherit;">Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caarecordrecord">[]Caa<wbr>Record<wbr>Record</a></span>
+        <span class="property-type"><a href="#caarecordrecord">[]Caa<wbr>Record<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of values that make up the CAA record. Each `record` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -940,7 +940,7 @@ The following state arguments are supported:
 <a href="#state_records_go" style="color: inherit; text-decoration: inherit;">Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caarecordrecord">[]Caa<wbr>Record<wbr>Record</a></span>
+        <span class="property-type"><a href="#caarecordrecord">[]Caa<wbr>Record<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of values that make up the CAA record. Each `record` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"

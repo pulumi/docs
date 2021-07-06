@@ -520,7 +520,7 @@ The CassandraTable resource accepts the following [input]({{< relref "/docs/intr
 <a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschema">Cassandra<wbr>Table<wbr>Schema</a></span>
+        <span class="property-type"><a href="#cassandratableschema">Cassandra<wbr>Table<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schema` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -538,7 +538,7 @@ The CassandraTable resource accepts the following [input]({{< relref "/docs/intr
 <a href="#autoscalesettings_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableautoscalesettings">Cassandra<wbr>Table<wbr>Autoscale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#cassandratableautoscalesettings">Cassandra<wbr>Table<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -967,7 +967,7 @@ The following state arguments are supported:
 <a href="#state_autoscalesettings_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableautoscalesettings">Cassandra<wbr>Table<wbr>Autoscale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#cassandratableautoscalesettings">Cassandra<wbr>Table<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1002,7 +1002,7 @@ The following state arguments are supported:
 <a href="#state_schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschema">Cassandra<wbr>Table<wbr>Schema</a></span>
+        <span class="property-type"><a href="#cassandratableschema">Cassandra<wbr>Table<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schema` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1218,7 +1218,7 @@ The following state arguments are supported:
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemacolumn">List&lt;Cassandra<wbr>Table<wbr>Schema<wbr>Column<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#cassandratableschemacolumn">List&lt;Cassandra<wbr>Table<wbr>Schema<wbr>Column&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `column` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1227,7 +1227,7 @@ The following state arguments are supported:
 <a href="#partitionkeys_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemapartitionkey">List&lt;Cassandra<wbr>Table<wbr>Schema<wbr>Partition<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#cassandratableschemapartitionkey">List&lt;Cassandra<wbr>Table<wbr>Schema<wbr>Partition<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `partition_key` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1236,7 +1236,7 @@ The following state arguments are supported:
 <a href="#clusterkeys_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemaclusterkey">List&lt;Cassandra<wbr>Table<wbr>Schema<wbr>Cluster<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#cassandratableschemaclusterkey">List&lt;Cassandra<wbr>Table<wbr>Schema<wbr>Cluster<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `cluster_key` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1280,7 +1280,7 @@ The following state arguments are supported:
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemacolumn">Cassandra<wbr>Table<wbr>Schema<wbr>Column<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#cassandratableschemacolumn">Cassandra<wbr>Table<wbr>Schema<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `column` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1289,7 +1289,7 @@ The following state arguments are supported:
 <a href="#partitionkeys_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemapartitionkey">Cassandra<wbr>Table<wbr>Schema<wbr>Partition<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#cassandratableschemapartitionkey">Cassandra<wbr>Table<wbr>Schema<wbr>Partition<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `partition_key` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1298,7 +1298,7 @@ The following state arguments are supported:
 <a href="#clusterkeys_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemaclusterkey">Cassandra<wbr>Table<wbr>Schema<wbr>Cluster<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#cassandratableschemaclusterkey">Cassandra<wbr>Table<wbr>Schema<wbr>Cluster<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `cluster_key` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1311,7 +1311,7 @@ The following state arguments are supported:
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemacolumn">Sequence[Cassandra<wbr>Table<wbr>Schema<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cassandratableschemacolumn">Sequence[Cassandra<wbr>Table<wbr>Schema<wbr>Column]</a></span>
     </dt>
     <dd>{{% md %}}One or more `column` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1320,7 +1320,7 @@ The following state arguments are supported:
 <a href="#partition_keys_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemapartitionkey">Sequence[Cassandra<wbr>Table<wbr>Schema<wbr>Partition<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cassandratableschemapartitionkey">Sequence[Cassandra<wbr>Table<wbr>Schema<wbr>Partition<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}One or more `partition_key` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1329,7 +1329,7 @@ The following state arguments are supported:
 <a href="#cluster_keys_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemaclusterkey">Sequence[Cassandra<wbr>Table<wbr>Schema<wbr>Cluster<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cassandratableschemaclusterkey">Sequence[Cassandra<wbr>Table<wbr>Schema<wbr>Cluster<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}One or more `cluster_key` blocks as defined below.
 {{% /md %}}</dd></dl>

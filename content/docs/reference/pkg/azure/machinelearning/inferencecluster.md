@@ -698,7 +698,7 @@ The InferenceCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inferenceclusterssl">Inference<wbr>Cluster<wbr>Ssl</a></span>
+        <span class="property-type"><a href="#inferenceclusterssl">Inference<wbr>Cluster<wbr>Ssl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ssl` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1190,7 +1190,7 @@ The following state arguments are supported:
 <a href="#state_ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inferenceclusterssl">Inference<wbr>Cluster<wbr>Ssl</a></span>
+        <span class="property-type"><a href="#inferenceclusterssl">Inference<wbr>Cluster<wbr>Ssl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ssl` block as defined below. Changing this forces a new Machine Learning Inference Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"

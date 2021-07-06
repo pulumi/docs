@@ -610,7 +610,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#input_go" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinput">Live<wbr>Event<wbr>Input<wbr>Type</a></span>
+        <span class="property-type"><a href="#liveeventinput">Live<wbr>Event<wbr>Input<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -646,7 +646,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#crosssiteaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Site<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventcrosssiteaccesspolicy">Live<wbr>Event<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy</a></span>
+        <span class="property-type"><a href="#liveeventcrosssiteaccesspolicy">Live<wbr>Event<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -664,7 +664,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventencoding">Live<wbr>Event<wbr>Encoding</a></span>
+        <span class="property-type"><a href="#liveeventencoding">Live<wbr>Event<wbr>Encoding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `encoding` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -700,7 +700,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#preview_go" style="color: inherit; text-decoration: inherit;">Preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreview">Live<wbr>Event<wbr>Preview</a></span>
+        <span class="property-type"><a href="#liveeventpreview">Live<wbr>Event<wbr>Preview<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `preview` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1337,7 +1337,7 @@ The following state arguments are supported:
 <a href="#state_crosssiteaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Site<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventcrosssiteaccesspolicy">Live<wbr>Event<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy</a></span>
+        <span class="property-type"><a href="#liveeventcrosssiteaccesspolicy">Live<wbr>Event<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1355,7 +1355,7 @@ The following state arguments are supported:
 <a href="#state_encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventencoding">Live<wbr>Event<wbr>Encoding</a></span>
+        <span class="property-type"><a href="#liveeventencoding">Live<wbr>Event<wbr>Encoding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `encoding` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1373,7 +1373,7 @@ The following state arguments are supported:
 <a href="#state_input_go" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinput">Live<wbr>Event<wbr>Input<wbr>Type</a></span>
+        <span class="property-type"><a href="#liveeventinput">Live<wbr>Event<wbr>Input<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1409,7 +1409,7 @@ The following state arguments are supported:
 <a href="#state_preview_go" style="color: inherit; text-decoration: inherit;">Preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreview">Live<wbr>Event<wbr>Preview</a></span>
+        <span class="property-type"><a href="#liveeventpreview">Live<wbr>Event<wbr>Preview<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `preview` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1993,7 +1993,7 @@ The following state arguments are supported:
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputendpoint">List&lt;Live<wbr>Event<wbr>Input<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventinputendpoint">List&lt;Live<wbr>Event<wbr>Input<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2001,7 +2001,7 @@ The following state arguments are supported:
 <a href="#ipaccesscontrolallows_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Access<wbr>Control<wbr>Allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputipaccesscontrolallow">List&lt;Live<wbr>Event<wbr>Input<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventinputipaccesscontrolallow">List&lt;Live<wbr>Event<wbr>Input<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_access_control_allow` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2089,7 +2089,7 @@ The following state arguments are supported:
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputendpoint">Live<wbr>Event<wbr>Input<wbr>Endpoint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#liveeventinputendpoint">Live<wbr>Event<wbr>Input<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2097,7 @@ The following state arguments are supported:
 <a href="#ipaccesscontrolallows_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Access<wbr>Control<wbr>Allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputipaccesscontrolallow">Live<wbr>Event<wbr>Input<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#liveeventinputipaccesscontrolallow">Live<wbr>Event<wbr>Input<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_access_control_allow` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2137,7 +2137,7 @@ The following state arguments are supported:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputendpoint">Sequence[Live<wbr>Event<wbr>Input<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventinputendpoint">Sequence[Live<wbr>Event<wbr>Input<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2145,7 +2145,7 @@ The following state arguments are supported:
 <a href="#ip_access_control_allows_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>access_<wbr>control_<wbr>allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputipaccesscontrolallow">Sequence[Live<wbr>Event<wbr>Input<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventinputipaccesscontrolallow">Sequence[Live<wbr>Event<wbr>Input<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_access_control_allow` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2395,7 +2395,7 @@ The following state arguments are supported:
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewendpoint">List&lt;Live<wbr>Event<wbr>Preview<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventpreviewendpoint">List&lt;Live<wbr>Event<wbr>Preview<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2403,7 +2403,7 @@ The following state arguments are supported:
 <a href="#ipaccesscontrolallows_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Access<wbr>Control<wbr>Allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewipaccesscontrolallow">List&lt;Live<wbr>Event<wbr>Preview<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#liveeventpreviewipaccesscontrolallow">List&lt;Live<wbr>Event<wbr>Preview<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_access_control_allow` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2491,7 +2491,7 @@ The following state arguments are supported:
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewendpoint">Live<wbr>Event<wbr>Preview<wbr>Endpoint<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#liveeventpreviewendpoint">Live<wbr>Event<wbr>Preview<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2499,7 +2499,7 @@ The following state arguments are supported:
 <a href="#ipaccesscontrolallows_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Access<wbr>Control<wbr>Allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewipaccesscontrolallow">Live<wbr>Event<wbr>Preview<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#liveeventpreviewipaccesscontrolallow">Live<wbr>Event<wbr>Preview<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_access_control_allow` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2539,7 +2539,7 @@ The following state arguments are supported:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewendpoint">Sequence[Live<wbr>Event<wbr>Preview<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventpreviewendpoint">Sequence[Live<wbr>Event<wbr>Preview<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2547,7 +2547,7 @@ The following state arguments are supported:
 <a href="#ip_access_control_allows_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>access_<wbr>control_<wbr>allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewipaccesscontrolallow">Sequence[Live<wbr>Event<wbr>Preview<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventpreviewipaccesscontrolallow">Sequence[Live<wbr>Event<wbr>Preview<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_access_control_allow` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"

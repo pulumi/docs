@@ -434,7 +434,7 @@ public.
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeatures">Provider<wbr>Features</a></span>
+        <span class="property-type"><a href="#providerfeatures">Provider<wbr>Features<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -957,11 +957,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="cognitiveaccount_csharp">
+<a href="#cognitiveaccount_csharp" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturescognitiveaccount">Provider<wbr>Features<wbr>Cognitive<wbr>Account</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvault_csharp">
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -969,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsworkspace_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -977,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -985,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templatedeployment_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachine_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1001,13 +1009,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachinescaleset_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Scale<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cognitiveaccount_go">
+<a href="#cognitiveaccount_go" style="color: inherit; text-decoration: inherit;">Cognitive<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturescognitiveaccount">Provider<wbr>Features<wbr>Cognitive<wbr>Account</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvault_go">
 <a href="#keyvault_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
@@ -1061,11 +1077,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="cognitiveaccount_nodejs">
+<a href="#cognitiveaccount_nodejs" style="color: inherit; text-decoration: inherit;">cognitive<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturescognitiveaccount">Provider<wbr>Features<wbr>Cognitive<wbr>Account</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyvault_nodejs">
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loganalyticsworkspace_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1089,7 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#templatedeployment_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachine_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1105,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachinescaleset_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Scale<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1113,11 +1137,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="cognitive_account_python">
+<a href="#cognitive_account_python" style="color: inherit; text-decoration: inherit;">cognitive_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturescognitiveaccount">Provider<wbr>Features<wbr>Cognitive<wbr>Account</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="key_vault_python">
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_analytics_workspace_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#template_deployment_python" style="color: inherit; text-decoration: inherit;">template_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1157,7 +1189,57 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_scale_set_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>scale_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="providerfeaturescognitiveaccount">Provider<wbr>Features<wbr>Cognitive<wbr>Account</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="purgesoftdeleteondestroy_csharp">
+<a href="#purgesoftdeleteondestroy_csharp" style="color: inherit; text-decoration: inherit;">Purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="purgesoftdeleteondestroy_go">
+<a href="#purgesoftdeleteondestroy_go" style="color: inherit; text-decoration: inherit;">Purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="purgesoftdeleteondestroy_nodejs">
+<a href="#purgesoftdeleteondestroy_nodejs" style="color: inherit; text-decoration: inherit;">purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="purge_soft_delete_on_destroy_python">
+<a href="#purge_soft_delete_on_destroy_python" style="color: inherit; text-decoration: inherit;">purge_<wbr>soft_<wbr>delete_<wbr>on_<wbr>destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

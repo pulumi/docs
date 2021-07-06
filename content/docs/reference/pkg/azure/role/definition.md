@@ -404,7 +404,7 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#definitionpermission">[]Definition<wbr>Permission</a></span>
+        <span class="property-type"><a href="#definitionpermission">[]Definition<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `permissions` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -859,7 +859,7 @@ The following state arguments are supported:
 <a href="#state_permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#definitionpermission">[]Definition<wbr>Permission</a></span>
+        <span class="property-type"><a href="#definitionpermission">[]Definition<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `permissions` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

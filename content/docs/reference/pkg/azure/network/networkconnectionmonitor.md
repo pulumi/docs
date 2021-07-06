@@ -444,7 +444,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpoint">[]Network<wbr>Connection<wbr>Monitor<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpoint">[]Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -462,7 +462,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#testconfigurations_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">[]Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">[]Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -471,7 +471,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#testgroups_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestgroup">[]Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestgroup">[]Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -488,7 +488,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -540,7 +540,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1113,7 +1113,7 @@ The following state arguments are supported:
 <a href="#state_destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1121,7 @@ The following state arguments are supported:
 <a href="#state_endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpoint">[]Network<wbr>Connection<wbr>Monitor<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpoint">[]Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1183,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1200,7 +1200,7 @@ The following state arguments are supported:
 <a href="#state_testconfigurations_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">[]Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">[]Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1209,7 +1209,7 @@ The following state arguments are supported:
 <a href="#state_testgroups_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestgroup">[]Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestgroup">[]Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1629,7 +1629,7 @@ The following state arguments are supported:
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1799,7 +1799,7 @@ The following state arguments are supported:
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1884,7 +1884,7 @@ The following state arguments are supported:
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1935,7 +1935,7 @@ The following state arguments are supported:
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">List&lt;Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">List&lt;Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `item` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1979,7 +1979,7 @@ The following state arguments are supported:
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}A `item` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2001,7 +2001,7 @@ The following state arguments are supported:
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item]</a></span>
     </dt>
     <dd>{{% md %}}A `item` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2223,7 +2223,7 @@ The following state arguments are supported:
 <a href="#httpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `http_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2232,7 +2232,7 @@ The following state arguments are supported:
 <a href="#icmpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `icmp_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2250,7 +2250,7 @@ The following state arguments are supported:
 <a href="#successthreshold_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}A `success_threshold` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2259,7 +2259,7 @@ The following state arguments are supported:
 <a href="#tcpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `tcp_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2375,7 +2375,7 @@ The following state arguments are supported:
 <a href="#httpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `http_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2384,7 +2384,7 @@ The following state arguments are supported:
 <a href="#icmpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `icmp_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2402,7 +2402,7 @@ The following state arguments are supported:
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}A `success_threshold` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2411,7 +2411,7 @@ The following state arguments are supported:
 <a href="#tcpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `tcp_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2451,7 +2451,7 @@ The following state arguments are supported:
 <a href="#http_configuration_python" style="color: inherit; text-decoration: inherit;">http_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `http_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2460,7 +2460,7 @@ The following state arguments are supported:
 <a href="#icmp_configuration_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `icmp_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2478,7 +2478,7 @@ The following state arguments are supported:
 <a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}A `success_threshold` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2487,7 +2487,7 @@ The following state arguments are supported:
 <a href="#tcp_configuration_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `tcp_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2547,7 +2547,7 @@ The following state arguments are supported:
 <a href="#requestheaders_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">List&lt;Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">List&lt;Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `request_header` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2663,7 +2663,7 @@ The following state arguments are supported:
 <a href="#requestheaders_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2721,7 +2721,7 @@ The following state arguments are supported:
 <a href="#request_headers_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

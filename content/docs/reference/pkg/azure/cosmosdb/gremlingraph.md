@@ -560,7 +560,7 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#autoscalesettings_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphautoscalesettings">Gremlin<wbr>Graph<wbr>Autoscale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#gremlingraphautoscalesettings">Gremlin<wbr>Graph<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -568,7 +568,7 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#conflictresolutionpolicies_go" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">[]Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy</a></span>
+        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">[]Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -586,7 +586,7 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#indexpolicies_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphindexpolicy">[]Gremlin<wbr>Graph<wbr>Index<wbr>Policy</a></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicy">[]Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -622,7 +622,7 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#uniquekeys_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphuniquekey">[]Gremlin<wbr>Graph<wbr>Unique<wbr>Key</a></span>
+        <span class="property-type"><a href="#gremlingraphuniquekey">[]Gremlin<wbr>Graph<wbr>Unique<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1169,7 +1169,7 @@ The following state arguments are supported:
 <a href="#state_autoscalesettings_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphautoscalesettings">Gremlin<wbr>Graph<wbr>Autoscale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#gremlingraphautoscalesettings">Gremlin<wbr>Graph<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1177,7 @@ The following state arguments are supported:
 <a href="#state_conflictresolutionpolicies_go" style="color: inherit; text-decoration: inherit;">Conflict<wbr>Resolution<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">[]Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy</a></span>
+        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">[]Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `conflict_resolution_policy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1204,7 +1204,7 @@ The following state arguments are supported:
 <a href="#state_indexpolicies_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphindexpolicy">[]Gremlin<wbr>Graph<wbr>Index<wbr>Policy</a></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicy">[]Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1258,7 +1258,7 @@ The following state arguments are supported:
 <a href="#state_uniquekeys_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphuniquekey">[]Gremlin<wbr>Graph<wbr>Unique<wbr>Key</a></span>
+        <span class="property-type"><a href="#gremlingraphuniquekey">[]Gremlin<wbr>Graph<wbr>Unique<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1702,7 +1702,7 @@ The following state arguments are supported:
 <a href="#compositeindices_csharp" style="color: inherit; text-decoration: inherit;">Composite<wbr>Indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindex">List&lt;Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindex">List&lt;Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `composite_index` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1723,6 +1723,15 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing. Required if `indexing_mode` is `Consistent` or `Lazy`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spatialindices_csharp">
+<a href="#spatialindices_csharp" style="color: inherit; text-decoration: inherit;">Spatial<wbr>Indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicyspatialindex">List&lt;Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Spatial<wbr>Index&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `spatial_index` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1772,6 +1781,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing. Required if `indexing_mode` is `Consistent` or `Lazy`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spatialindices_go">
+<a href="#spatialindices_go" style="color: inherit; text-decoration: inherit;">Spatial<wbr>Indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicyspatialindex">[]Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Spatial<wbr>Index</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `spatial_index` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1800,7 +1818,7 @@ The following state arguments are supported:
 <a href="#compositeindices_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindex">Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindex">Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `composite_index` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1821,6 +1839,15 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing. Required if `indexing_mode` is `Consistent` or `Lazy`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spatialindices_nodejs">
+<a href="#spatialindices_nodejs" style="color: inherit; text-decoration: inherit;">spatial<wbr>Indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicyspatialindex">Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Spatial<wbr>Index[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `spatial_index` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1849,7 +1876,7 @@ The following state arguments are supported:
 <a href="#composite_indices_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindex">Sequence[Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindex">Sequence[Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index]</a></span>
     </dt>
     <dd>{{% md %}}One or more `composite_index` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1870,6 +1897,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing. Required if `indexing_mode` is `Consistent` or `Lazy`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spatial_indices_python">
+<a href="#spatial_indices_python" style="color: inherit; text-decoration: inherit;">spatial_<wbr>indices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicyspatialindex">Sequence[Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Spatial<wbr>Index]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `spatial_index` blocks as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1882,7 +1918,7 @@ The following state arguments are supported:
 <a href="#indices_csharp" style="color: inherit; text-decoration: inherit;">Indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindexindex">List&lt;Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindexindex">List&lt;Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `index` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1908,7 +1944,7 @@ The following state arguments are supported:
 <a href="#indices_nodejs" style="color: inherit; text-decoration: inherit;">indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindexindex">Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindexindex">Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `index` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1921,7 +1957,7 @@ The following state arguments are supported:
 <a href="#indices_python" style="color: inherit; text-decoration: inherit;">indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindexindex">Sequence[Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicycompositeindexindex">Sequence[Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index]</a></span>
     </dt>
     <dd>{{% md %}}One or more `index` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2015,6 +2051,92 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Path for which the indexing behaviour applies to.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="gremlingraphindexpolicyspatialindex">Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Spatial<wbr>Index</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behaviour applies to. According to the service design, all spatial types including `LineString`, `MultiPolygon`, `Point`, and `Polygon` will be applied to the path.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="types_csharp">
+<a href="#types_csharp" style="color: inherit; text-decoration: inherit;">Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behaviour applies to. According to the service design, all spatial types including `LineString`, `MultiPolygon`, `Point`, and `Polygon` will be applied to the path.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="types_go">
+<a href="#types_go" style="color: inherit; text-decoration: inherit;">Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behaviour applies to. According to the service design, all spatial types including `LineString`, `MultiPolygon`, `Point`, and `Polygon` will be applied to the path.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="types_nodejs">
+<a href="#types_nodejs" style="color: inherit; text-decoration: inherit;">types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Path for which the indexing behaviour applies to. According to the service design, all spatial types including `LineString`, `MultiPolygon`, `Point`, and `Polygon` will be applied to the path.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="types_python">
+<a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gremlingraphuniquekey">Gremlin<wbr>Graph<wbr>Unique<wbr>Key</h4>

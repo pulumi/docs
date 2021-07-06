@@ -397,7 +397,7 @@ The SubnetServiceEndpointStoragePolicy resource accepts the following [input]({{
 <a href="#definition_go" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetserviceendpointstoragepolicydefinition">Subnet<wbr>Service<wbr>Endpoint<wbr>Storage<wbr>Policy<wbr>Definition</a></span>
+        <span class="property-type"><a href="#subnetserviceendpointstoragepolicydefinition">Subnet<wbr>Service<wbr>Endpoint<wbr>Storage<wbr>Policy<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `definition` block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -769,7 +769,7 @@ The following state arguments are supported:
 <a href="#state_definition_go" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetserviceendpointstoragepolicydefinition">Subnet<wbr>Service<wbr>Endpoint<wbr>Storage<wbr>Policy<wbr>Definition</a></span>
+        <span class="property-type"><a href="#subnetserviceendpointstoragepolicydefinition">Subnet<wbr>Service<wbr>Endpoint<wbr>Storage<wbr>Policy<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `definition` block as defined below
 {{% /md %}}</dd><dt class="property-optional"

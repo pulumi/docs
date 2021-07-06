@@ -566,7 +566,7 @@ The FirewallApplicationRuleCollection resource accepts the following [input]({{<
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallapplicationrulecollectionrule">[]Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule</a></span>
+        <span class="property-type"><a href="#firewallapplicationrulecollectionrule">[]Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -993,7 +993,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallapplicationrulecollectionrule">[]Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule</a></span>
+        <span class="property-type"><a href="#firewallapplicationrulecollectionrule">[]Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1160,7 +1160,7 @@ The following state arguments are supported:
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallapplicationrulecollectionruleprotocol">List&lt;Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallapplicationrulecollectionruleprotocol">List&lt;Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `protocol` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1294,7 +1294,7 @@ The following state arguments are supported:
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallapplicationrulecollectionruleprotocol">Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallapplicationrulecollectionruleprotocol">Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `protocol` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1361,7 +1361,7 @@ The following state arguments are supported:
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallapplicationrulecollectionruleprotocol">Sequence[Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallapplicationrulecollectionruleprotocol">Sequence[Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol]</a></span>
     </dt>
     <dd>{{% md %}}One or more `protocol` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -848,7 +848,7 @@ The LinkedServiceAzureDatabricks resource accepts the following [input]({{< relr
 <a href="#instancepool_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedserviceazuredatabricksinstancepool">Linked<wbr>Service<wbr>Azure<wbr>Databricks<wbr>Instance<wbr>Pool</a></span>
+        <span class="property-type"><a href="#linkedserviceazuredatabricksinstancepool">Linked<wbr>Service<wbr>Azure<wbr>Databricks<wbr>Instance<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Leverages an instance pool within the linked ADB instance as defined by  `instance_pool` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -866,7 +866,7 @@ The LinkedServiceAzureDatabricks resource accepts the following [input]({{< relr
 <a href="#keyvaultpassword_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedserviceazuredatabrickskeyvaultpassword">Linked<wbr>Service<wbr>Azure<wbr>Databricks<wbr>Key<wbr>Vault<wbr>Password</a></span>
+        <span class="property-type"><a href="#linkedserviceazuredatabrickskeyvaultpassword">Linked<wbr>Service<wbr>Azure<wbr>Databricks<wbr>Key<wbr>Vault<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authenticate to ADB via Azure Key Vault Linked Service as defined in the `key_vault_password` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -893,7 +893,7 @@ The LinkedServiceAzureDatabricks resource accepts the following [input]({{< relr
 <a href="#newclusterconfig_go" style="color: inherit; text-decoration: inherit;">New<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedserviceazuredatabricksnewclusterconfig">Linked<wbr>Service<wbr>Azure<wbr>Databricks<wbr>New<wbr>Cluster<wbr>Config</a></span>
+        <span class="property-type"><a href="#linkedserviceazuredatabricksnewclusterconfig">Linked<wbr>Service<wbr>Azure<wbr>Databricks<wbr>New<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Creates new clusters within the linked ADB instance as defined in the  `new_cluster_config` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1590,7 @@ The following state arguments are supported:
 <a href="#state_instancepool_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedserviceazuredatabricksinstancepool">Linked<wbr>Service<wbr>Azure<wbr>Databricks<wbr>Instance<wbr>Pool</a></span>
+        <span class="property-type"><a href="#linkedserviceazuredatabricksinstancepool">Linked<wbr>Service<wbr>Azure<wbr>Databricks<wbr>Instance<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Leverages an instance pool within the linked ADB instance as defined by  `instance_pool` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1608,7 +1608,7 @@ The following state arguments are supported:
 <a href="#state_keyvaultpassword_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedserviceazuredatabrickskeyvaultpassword">Linked<wbr>Service<wbr>Azure<wbr>Databricks<wbr>Key<wbr>Vault<wbr>Password</a></span>
+        <span class="property-type"><a href="#linkedserviceazuredatabrickskeyvaultpassword">Linked<wbr>Service<wbr>Azure<wbr>Databricks<wbr>Key<wbr>Vault<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authenticate to ADB via Azure Key Vault Linked Service as defined in the `key_vault_password` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1635,7 +1635,7 @@ The following state arguments are supported:
 <a href="#state_newclusterconfig_go" style="color: inherit; text-decoration: inherit;">New<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedserviceazuredatabricksnewclusterconfig">Linked<wbr>Service<wbr>Azure<wbr>Databricks<wbr>New<wbr>Cluster<wbr>Config</a></span>
+        <span class="property-type"><a href="#linkedserviceazuredatabricksnewclusterconfig">Linked<wbr>Service<wbr>Azure<wbr>Databricks<wbr>New<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Creates new clusters within the linked ADB instance as defined in the  `new_cluster_config` block below.
 {{% /md %}}</dd><dt class="property-optional"

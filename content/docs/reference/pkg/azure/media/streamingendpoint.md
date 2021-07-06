@@ -812,7 +812,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#accesscontrol_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `access_control` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -857,7 +857,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#crosssiteaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Site<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy</a></span>
+        <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1582,7 +1582,7 @@ The following state arguments are supported:
 <a href="#state_accesscontrol_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `access_control` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1627,7 +1627,7 @@ The following state arguments are supported:
 <a href="#state_crosssiteaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Site<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy</a></span>
+        <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2037,7 +2037,7 @@ The following state arguments are supported:
 <a href="#akamaisignatureheaderauthenticationkeys_csharp" style="color: inherit; text-decoration: inherit;">Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">List&lt;Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">List&lt;Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `akamai_signature_header_authentication_key` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2046,7 +2046,7 @@ The following state arguments are supported:
 <a href="#ipallows_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrolipallow">List&lt;Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrolipallow">List&lt;Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `ip` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2081,7 +2081,7 @@ The following state arguments are supported:
 <a href="#akamaisignatureheaderauthenticationkeys_nodejs" style="color: inherit; text-decoration: inherit;">akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `akamai_signature_header_authentication_key` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2090,7 +2090,7 @@ The following state arguments are supported:
 <a href="#ipallows_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrolipallow">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrolipallow">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow[]</a></span>
     </dt>
     <dd>{{% md %}}A `ip` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2103,7 +2103,7 @@ The following state arguments are supported:
 <a href="#akamai_signature_header_authentication_keys_python" style="color: inherit; text-decoration: inherit;">akamai_<wbr>signature_<wbr>header_<wbr>authentication_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">Sequence[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">Sequence[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}One or more `akamai_signature_header_authentication_key` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2112,7 +2112,7 @@ The following state arguments are supported:
 <a href="#ip_allows_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrolipallow">Sequence[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow<wbr>Args]</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrolipallow">Sequence[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow]</a></span>
     </dt>
     <dd>{{% md %}}A `ip` block as defined below.
 {{% /md %}}</dd></dl>

@@ -507,7 +507,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#networkrules_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">[]Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule</a></span>
+        <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">[]Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_rules` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -879,7 +879,7 @@ The following state arguments are supported:
 <a href="#state_networkrules_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">[]Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule</a></span>
+        <span class="property-type"><a href="#namespacenetworkrulesetnetworkrule">[]Namespace<wbr>Network<wbr>Rule<wbr>Set<wbr>Network<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"

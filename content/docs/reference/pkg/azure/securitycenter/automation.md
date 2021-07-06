@@ -562,7 +562,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationaction">[]Automation<wbr>Action</a></span>
+        <span class="property-type"><a href="#automationaction">[]Automation<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `action` blocks as defined below. An `action` tells this automation where the data is to be sent to upon being evaluated by the rules in the `source`.
 {{% /md %}}</dd><dt class="property-required"
@@ -589,7 +589,7 @@ The Automation resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationsource">[]Automation<wbr>Source</a></span>
+        <span class="property-type"><a href="#automationsource">[]Automation<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `source` blocks as defined below. A `source` defines what data types will be processed and a set of rules to filter that data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1091,7 +1091,7 @@ The following state arguments are supported:
 <a href="#state_actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationaction">[]Automation<wbr>Action</a></span>
+        <span class="property-type"><a href="#automationaction">[]Automation<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `action` blocks as defined below. An `action` tells this automation where the data is to be sent to upon being evaluated by the rules in the `source`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1154,7 +1154,7 @@ The following state arguments are supported:
 <a href="#state_sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationsource">[]Automation<wbr>Source</a></span>
+        <span class="property-type"><a href="#automationsource">[]Automation<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `source` blocks as defined below. A `source` defines what data types will be processed and a set of rules to filter that data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1528,7 +1528,7 @@ The following state arguments are supported:
 <a href="#rulesets_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationsourceruleset">List&lt;Automation<wbr>Source<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationsourceruleset">List&lt;Automation<wbr>Source<wbr>Rule<wbr>Set&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event and data interception. This is defined in one or more `rule_set` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1572,7 +1572,7 @@ The following state arguments are supported:
 <a href="#rulesets_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationsourceruleset">Automation<wbr>Source<wbr>Rule<wbr>Set<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#automationsourceruleset">Automation<wbr>Source<wbr>Rule<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event and data interception. This is defined in one or more `rule_set` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1594,7 +1594,7 @@ The following state arguments are supported:
 <a href="#rule_sets_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationsourceruleset">Sequence[Automation<wbr>Source<wbr>Rule<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationsourceruleset">Sequence[Automation<wbr>Source<wbr>Rule<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules which evaluate upon event and data interception. This is defined in one or more `rule_set` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1609,7 +1609,7 @@ The following state arguments are supported:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationsourcerulesetrule">List&lt;Automation<wbr>Source<wbr>Rule<wbr>Set<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#automationsourcerulesetrule">List&lt;Automation<wbr>Source<wbr>Rule<wbr>Set<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1635,7 +1635,7 @@ The following state arguments are supported:
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationsourcerulesetrule">Automation<wbr>Source<wbr>Rule<wbr>Set<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#automationsourcerulesetrule">Automation<wbr>Source<wbr>Rule<wbr>Set<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1648,7 +1648,7 @@ The following state arguments are supported:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationsourcerulesetrule">Sequence[Automation<wbr>Source<wbr>Rule<wbr>Set<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationsourcerulesetrule">Sequence[Automation<wbr>Source<wbr>Rule<wbr>Set<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd></dl>

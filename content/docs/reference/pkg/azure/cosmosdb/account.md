@@ -673,7 +673,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#consistencypolicy_go" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy</a></span>
+        <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd><dt class="property-required"
@@ -682,7 +682,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#geolocations_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountgeolocation">[]Account<wbr>Geo<wbr>Location</a></span>
+        <span class="property-type"><a href="#accountgeolocation">[]Account<wbr>Geo<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -727,7 +727,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountbackup">Account<wbr>Backup</a></span>
+        <span class="property-type"><a href="#accountbackup">Account<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backup` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -736,7 +736,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcapability">[]Account<wbr>Capability</a></span>
+        <span class="property-type"><a href="#accountcapability">[]Account<wbr>Capability<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -745,7 +745,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#corsrule_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcorsrule">Account<wbr>Cors<wbr>Rule</a></span>
+        <span class="property-type"><a href="#accountcorsrule">Account<wbr>Cors<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -781,7 +781,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -889,7 +889,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountvirtualnetworkrule">[]Account<wbr>Virtual<wbr>Network<wbr>Rule</a></span>
+        <span class="property-type"><a href="#accountvirtualnetworkrule">[]Account<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd></dl>
@@ -2344,7 +2344,7 @@ The following state arguments are supported:
 <a href="#state_backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountbackup">Account<wbr>Backup</a></span>
+        <span class="property-type"><a href="#accountbackup">Account<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backup` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2353,7 +2353,7 @@ The following state arguments are supported:
 <a href="#state_capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcapability">[]Account<wbr>Capability</a></span>
+        <span class="property-type"><a href="#accountcapability">[]Account<wbr>Capability<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2371,7 +2371,7 @@ The following state arguments are supported:
 <a href="#state_consistencypolicy_go" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy</a></span>
+        <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2380,7 +2380,7 @@ The following state arguments are supported:
 <a href="#state_corsrule_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcorsrule">Account<wbr>Cors<wbr>Rule</a></span>
+        <span class="property-type"><a href="#accountcorsrule">Account<wbr>Cors<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2425,7 +2425,7 @@ The following state arguments are supported:
 <a href="#state_geolocations_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountgeolocation">[]Account<wbr>Geo<wbr>Location</a></span>
+        <span class="property-type"><a href="#accountgeolocation">[]Account<wbr>Geo<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2434,7 +2434,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2637,7 +2637,7 @@ The following state arguments are supported:
 <a href="#state_virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountvirtualnetworkrule">[]Account<wbr>Virtual<wbr>Network<wbr>Rule</a></span>
+        <span class="property-type"><a href="#accountvirtualnetworkrule">[]Account<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"

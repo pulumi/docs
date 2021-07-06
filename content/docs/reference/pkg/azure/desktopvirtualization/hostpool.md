@@ -577,7 +577,7 @@ Valid options are `None`, `Desktop` or `RailApplications`. Default is `None`.
 <a href="#registrationinfo_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostpoolregistrationinfo">Host<wbr>Pool<wbr>Registration<wbr>Info</a></span>
+        <span class="property-type"><a href="#hostpoolregistrationinfo">Host<wbr>Pool<wbr>Registration<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `registration_info` block which is documented below. Specifies configuration on the registration information of the Virtual Desktop Host Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1347,7 @@ Valid options are `None`, `Desktop` or `RailApplications`. Default is `None`.
 <a href="#state_registrationinfo_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostpoolregistrationinfo">Host<wbr>Pool<wbr>Registration<wbr>Info</a></span>
+        <span class="property-type"><a href="#hostpoolregistrationinfo">Host<wbr>Pool<wbr>Registration<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `registration_info` block which is documented below. Specifies configuration on the registration information of the Virtual Desktop Host Pool.
 {{% /md %}}</dd><dt class="property-optional"

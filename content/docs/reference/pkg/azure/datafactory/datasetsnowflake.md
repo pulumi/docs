@@ -531,7 +531,7 @@ The DatasetSnowflake resource accepts the following [input]({{< relref "/docs/in
 <a href="#schemacolumns_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetsnowflakeschemacolumn">[]Dataset<wbr>Snowflake<wbr>Schema<wbr>Column</a></span>
+        <span class="property-type"><a href="#datasetsnowflakeschemacolumn">[]Dataset<wbr>Snowflake<wbr>Schema<wbr>Column<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schema_column` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1171,7 +1171,7 @@ The following state arguments are supported:
 <a href="#state_schemacolumns_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetsnowflakeschemacolumn">[]Dataset<wbr>Snowflake<wbr>Schema<wbr>Column</a></span>
+        <span class="property-type"><a href="#datasetsnowflakeschemacolumn">[]Dataset<wbr>Snowflake<wbr>Schema<wbr>Column<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schema_column` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

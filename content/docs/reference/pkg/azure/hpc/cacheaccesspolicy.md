@@ -412,7 +412,7 @@ The CacheAccessPolicy resource accepts the following [input]({{< relref "/docs/i
 <a href="#accessrules_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheaccesspolicyaccessrule">[]Cache<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule</a></span>
+        <span class="property-type"><a href="#cacheaccesspolicyaccessrule">[]Cache<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Up to three `access_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -719,7 +719,7 @@ The following state arguments are supported:
 <a href="#state_accessrules_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheaccesspolicyaccessrule">[]Cache<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule</a></span>
+        <span class="property-type"><a href="#cacheaccesspolicyaccessrule">[]Cache<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Up to three `access_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"

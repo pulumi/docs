@@ -501,7 +501,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationplan">Application<wbr>Plan</a></span>
+        <span class="property-type"><a href="#applicationplan">Application<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One `plan` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1113,7 +1113,7 @@ The following state arguments are supported:
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationplan">Application<wbr>Plan</a></span>
+        <span class="property-type"><a href="#applicationplan">Application<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One `plan` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -535,7 +535,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#defaultaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy</a></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -544,7 +544,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#directoryactivedirectory_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectoryactivedirectory">Cache<wbr>Directory<wbr>Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#cachedirectoryactivedirectory">Cache<wbr>Directory<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `directory_active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -553,7 +553,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#directoryflatfile_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Flat<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectoryflatfile">Cache<wbr>Directory<wbr>Flat<wbr>File</a></span>
+        <span class="property-type"><a href="#cachedirectoryflatfile">Cache<wbr>Directory<wbr>Flat<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `directory_flat_file` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -562,7 +562,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#directoryldap_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Ldap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectoryldap">Cache<wbr>Directory<wbr>Ldap</a></span>
+        <span class="property-type"><a href="#cachedirectoryldap">Cache<wbr>Directory<wbr>Ldap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `directory_ldap` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -571,7 +571,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedns">Cache<wbr>Dns</a></span>
+        <span class="property-type"><a href="#cachedns">Cache<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dns` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1305,7 +1305,7 @@ The following state arguments are supported:
 <a href="#state_defaultaccesspolicy_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy</a></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicy">Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1314,7 +1314,7 @@ The following state arguments are supported:
 <a href="#state_directoryactivedirectory_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectoryactivedirectory">Cache<wbr>Directory<wbr>Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#cachedirectoryactivedirectory">Cache<wbr>Directory<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `directory_active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1323,7 +1323,7 @@ The following state arguments are supported:
 <a href="#state_directoryflatfile_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Flat<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectoryflatfile">Cache<wbr>Directory<wbr>Flat<wbr>File</a></span>
+        <span class="property-type"><a href="#cachedirectoryflatfile">Cache<wbr>Directory<wbr>Flat<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `directory_flat_file` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1332,7 +1332,7 @@ The following state arguments are supported:
 <a href="#state_directoryldap_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Ldap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectoryldap">Cache<wbr>Directory<wbr>Ldap</a></span>
+        <span class="property-type"><a href="#cachedirectoryldap">Cache<wbr>Directory<wbr>Ldap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `directory_ldap` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1341,7 +1341,7 @@ The following state arguments are supported:
 <a href="#state_dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedns">Cache<wbr>Dns</a></span>
+        <span class="property-type"><a href="#cachedns">Cache<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dns` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1751,7 +1751,7 @@ The following state arguments are supported:
 <a href="#accessrules_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedefaultaccesspolicyaccessrule">List&lt;Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicyaccessrule">List&lt;Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}One to three `access_rule` blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -1777,7 +1777,7 @@ The following state arguments are supported:
 <a href="#accessrules_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedefaultaccesspolicyaccessrule">Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicyaccessrule">Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One to three `access_rule` blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -1790,7 +1790,7 @@ The following state arguments are supported:
 <a href="#access_rules_python" style="color: inherit; text-decoration: inherit;">access_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedefaultaccesspolicyaccessrule">Sequence[Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachedefaultaccesspolicyaccessrule">Sequence[Cache<wbr>Default<wbr>Access<wbr>Policy<wbr>Access<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}One to three `access_rule` blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -2489,7 +2489,7 @@ The following state arguments are supported:
 <a href="#bind_csharp" style="color: inherit; text-decoration: inherit;">Bind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectoryldapbind">Cache<wbr>Directory<wbr>Ldap<wbr>Bind<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachedirectoryldapbind">Cache<wbr>Directory<wbr>Ldap<wbr>Bind</a></span>
     </dt>
     <dd>{{% md %}}A `bind` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2605,7 +2605,7 @@ The following state arguments are supported:
 <a href="#bind_nodejs" style="color: inherit; text-decoration: inherit;">bind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectoryldapbind">Cache<wbr>Directory<wbr>Ldap<wbr>Bind<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachedirectoryldapbind">Cache<wbr>Directory<wbr>Ldap<wbr>Bind</a></span>
     </dt>
     <dd>{{% md %}}A `bind` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2663,7 +2663,7 @@ The following state arguments are supported:
 <a href="#bind_python" style="color: inherit; text-decoration: inherit;">bind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectoryldapbind">Cache<wbr>Directory<wbr>Ldap<wbr>Bind<wbr>Args</a></span>
+        <span class="property-type"><a href="#cachedirectoryldapbind">Cache<wbr>Directory<wbr>Ldap<wbr>Bind</a></span>
     </dt>
     <dd>{{% md %}}A `bind` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"

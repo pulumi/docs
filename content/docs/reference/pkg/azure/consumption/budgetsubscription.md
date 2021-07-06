@@ -487,7 +487,7 @@ The BudgetSubscription resource accepts the following [input]({{< relref "/docs/
 <a href="#notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionnotification">[]Budget<wbr>Subscription<wbr>Notification</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionnotification">[]Budget<wbr>Subscription<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `notification` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -505,7 +505,7 @@ The BudgetSubscription resource accepts the following [input]({{< relref "/docs/
 <a href="#timeperiod_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptiontimeperiod">Budget<wbr>Subscription<wbr>Time<wbr>Period</a></span>
+        <span class="property-type"><a href="#budgetsubscriptiontimeperiod">Budget<wbr>Subscription<wbr>Time<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `time_period` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -514,7 +514,7 @@ The BudgetSubscription resource accepts the following [input]({{< relref "/docs/
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfilter">Budget<wbr>Subscription<wbr>Filter</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfilter">Budget<wbr>Subscription<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -942,7 +942,7 @@ The following state arguments are supported:
 <a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfilter">Budget<wbr>Subscription<wbr>Filter</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfilter">Budget<wbr>Subscription<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -960,7 +960,7 @@ The following state arguments are supported:
 <a href="#state_notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionnotification">[]Budget<wbr>Subscription<wbr>Notification</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionnotification">[]Budget<wbr>Subscription<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `notification` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -987,7 +987,7 @@ The following state arguments are supported:
 <a href="#state_timeperiod_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptiontimeperiod">Budget<wbr>Subscription<wbr>Time<wbr>Period</a></span>
+        <span class="property-type"><a href="#budgetsubscriptiontimeperiod">Budget<wbr>Subscription<wbr>Time<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `time_period` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1145,7 +1145,7 @@ The following state arguments are supported:
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfilterdimension">List&lt;Budget<wbr>Subscription<wbr>Filter<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfilterdimension">List&lt;Budget<wbr>Subscription<wbr>Filter<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below to filter the budget on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1154,7 +1154,7 @@ The following state arguments are supported:
 <a href="#not_csharp" style="color: inherit; text-decoration: inherit;">Not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfilternot">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfilternot">Budget<wbr>Subscription<wbr>Filter<wbr>Not</a></span>
     </dt>
     <dd>{{% md %}}A `not` block as defined below to filter the budget on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1163,7 +1163,7 @@ The following state arguments are supported:
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfiltertag">List&lt;Budget<wbr>Subscription<wbr>Filter<wbr>Tag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfiltertag">List&lt;Budget<wbr>Subscription<wbr>Filter<wbr>Tag&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `tag` blocks as defined below to filter the budget on.
 {{% /md %}}</dd></dl>
@@ -1207,7 +1207,7 @@ The following state arguments are supported:
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfilterdimension">Budget<wbr>Subscription<wbr>Filter<wbr>Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfilterdimension">Budget<wbr>Subscription<wbr>Filter<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below to filter the budget on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1216,7 +1216,7 @@ The following state arguments are supported:
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfilternot">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfilternot">Budget<wbr>Subscription<wbr>Filter<wbr>Not</a></span>
     </dt>
     <dd>{{% md %}}A `not` block as defined below to filter the budget on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1225,7 +1225,7 @@ The following state arguments are supported:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfiltertag">Budget<wbr>Subscription<wbr>Filter<wbr>Tag<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfiltertag">Budget<wbr>Subscription<wbr>Filter<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `tag` blocks as defined below to filter the budget on.
 {{% /md %}}</dd></dl>
@@ -1238,7 +1238,7 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfilterdimension">Sequence[Budget<wbr>Subscription<wbr>Filter<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfilterdimension">Sequence[Budget<wbr>Subscription<wbr>Filter<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below to filter the budget on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1247,7 +1247,7 @@ The following state arguments are supported:
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfilternot">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfilternot">Budget<wbr>Subscription<wbr>Filter<wbr>Not</a></span>
     </dt>
     <dd>{{% md %}}A `not` block as defined below to filter the budget on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1256,7 +1256,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfiltertag">Sequence[Budget<wbr>Subscription<wbr>Filter<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfiltertag">Sequence[Budget<wbr>Subscription<wbr>Filter<wbr>Tag]</a></span>
     </dt>
     <dd>{{% md %}}One or more `tag` blocks as defined below to filter the budget on.
 {{% /md %}}</dd></dl>
@@ -1397,7 +1397,7 @@ The following state arguments are supported:
 <a href="#dimension_csharp" style="color: inherit; text-decoration: inherit;">Dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfilternotdimension">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Dimension<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfilternotdimension">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Dimension</a></span>
     </dt>
     <dd>{{% md %}}One `dimension` block as defined below to filter the budget on. Conflicts with `tag`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1406,7 +1406,7 @@ The following state arguments are supported:
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfilternottag">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Tag<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfilternottag">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}One `tag` block as defined below to filter the budget on. Conflicts with `dimension`.
 {{% /md %}}</dd></dl>
@@ -1441,7 +1441,7 @@ The following state arguments are supported:
 <a href="#dimension_nodejs" style="color: inherit; text-decoration: inherit;">dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfilternotdimension">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Dimension<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfilternotdimension">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Dimension</a></span>
     </dt>
     <dd>{{% md %}}One `dimension` block as defined below to filter the budget on. Conflicts with `tag`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1450,7 +1450,7 @@ The following state arguments are supported:
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfilternottag">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Tag<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfilternottag">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}One `tag` block as defined below to filter the budget on. Conflicts with `dimension`.
 {{% /md %}}</dd></dl>
@@ -1463,7 +1463,7 @@ The following state arguments are supported:
 <a href="#dimension_python" style="color: inherit; text-decoration: inherit;">dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfilternotdimension">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Dimension<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfilternotdimension">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Dimension</a></span>
     </dt>
     <dd>{{% md %}}One `dimension` block as defined below to filter the budget on. Conflicts with `tag`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1472,7 @@ The following state arguments are supported:
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetsubscriptionfilternottag">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Tag<wbr>Args</a></span>
+        <span class="property-type"><a href="#budgetsubscriptionfilternottag">Budget<wbr>Subscription<wbr>Filter<wbr>Not<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}One `tag` block as defined below to filter the budget on. Conflicts with `dimension`.
 {{% /md %}}</dd></dl>

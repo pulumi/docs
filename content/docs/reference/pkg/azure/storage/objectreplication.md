@@ -475,7 +475,7 @@ The ObjectReplication resource accepts the following [input]({{< relref "/docs/i
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationrule">[]Object<wbr>Replication<wbr>Rule</a></span>
+        <span class="property-type"><a href="#objectreplicationrule">[]Object<wbr>Replication<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -883,7 +883,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationrule">[]Object<wbr>Replication<wbr>Rule</a></span>
+        <span class="property-type"><a href="#objectreplicationrule">[]Object<wbr>Replication<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -501,7 +501,7 @@ The SqlServer resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#extendedauditingpolicy_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlserverextendedauditingpolicy">Sql<wbr>Server<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#sqlserverextendedauditingpolicy">Sql<wbr>Server<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -510,7 +510,7 @@ The SqlServer resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlserveridentity">Sql<wbr>Server<wbr>Identity</a></span>
+        <span class="property-type"><a href="#sqlserveridentity">Sql<wbr>Server<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1095,7 +1095,7 @@ The following state arguments are supported:
 <a href="#state_extendedauditingpolicy_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlserverextendedauditingpolicy">Sql<wbr>Server<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#sqlserverextendedauditingpolicy">Sql<wbr>Server<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1113,7 +1113,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlserveridentity">Sql<wbr>Server<wbr>Identity</a></span>
+        <span class="property-type"><a href="#sqlserveridentity">Sql<wbr>Server<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

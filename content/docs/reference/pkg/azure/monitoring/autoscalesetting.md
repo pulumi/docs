@@ -1422,7 +1422,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#profiles_go" style="color: inherit; text-decoration: inherit;">Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofile">[]Autoscale<wbr>Setting<wbr>Profile</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofile">[]Autoscale<wbr>Setting<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies one or more (up to 20) `profile` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1476,7 +1476,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#notification_go" style="color: inherit; text-decoration: inherit;">Notification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `notification` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1941,7 +1941,7 @@ The following state arguments are supported:
 <a href="#state_notification_go" style="color: inherit; text-decoration: inherit;">Notification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `notification` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1950,7 +1950,7 @@ The following state arguments are supported:
 <a href="#state_profiles_go" style="color: inherit; text-decoration: inherit;">Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofile">[]Autoscale<wbr>Setting<wbr>Profile</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofile">[]Autoscale<wbr>Setting<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies one or more (up to 20) `profile` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2153,7 +2153,7 @@ The following state arguments are supported:
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email</a></span>
     </dt>
     <dd>{{% md %}}A `email` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2162,7 +2162,7 @@ The following state arguments are supported:
 <a href="#webhooks_csharp" style="color: inherit; text-decoration: inherit;">Webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotificationwebhook">List&lt;Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotificationwebhook">List&lt;Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2197,7 +2197,7 @@ The following state arguments are supported:
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email</a></span>
     </dt>
     <dd>{{% md %}}A `email` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2206,7 +2206,7 @@ The following state arguments are supported:
 <a href="#webhooks_nodejs" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotificationwebhook">Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotificationwebhook">Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2219,7 +2219,7 @@ The following state arguments are supported:
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email</a></span>
     </dt>
     <dd>{{% md %}}A `email` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2228,7 +2228,7 @@ The following state arguments are supported:
 <a href="#webhooks_python" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotificationwebhook">Sequence[Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotificationwebhook">Sequence[Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2459,7 +2459,7 @@ The following state arguments are supported:
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilecapacity">Autoscale<wbr>Setting<wbr>Profile<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilecapacity">Autoscale<wbr>Setting<wbr>Profile<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}A `capacity` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2477,7 +2477,7 @@ The following state arguments are supported:
 <a href="#fixeddate_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_date` block as defined below. This cannot be specified if a `recurrence` block is specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2486,7 +2486,7 @@ The following state arguments are supported:
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}A `recurrence` block as defined below. This cannot be specified if a `fixed_date` block is specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2495,7 +2495,7 @@ The following state arguments are supported:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerule">List&lt;Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerule">List&lt;Autoscale<wbr>Setting<wbr>Profile<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `rule` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2557,7 +2557,7 @@ The following state arguments are supported:
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilecapacity">Autoscale<wbr>Setting<wbr>Profile<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilecapacity">Autoscale<wbr>Setting<wbr>Profile<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}A `capacity` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2575,7 +2575,7 @@ The following state arguments are supported:
 <a href="#fixeddate_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_date` block as defined below. This cannot be specified if a `recurrence` block is specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2584,7 +2584,7 @@ The following state arguments are supported:
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}A `recurrence` block as defined below. This cannot be specified if a `fixed_date` block is specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2593,7 +2593,7 @@ The following state arguments are supported:
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerule">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerule">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `rule` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2606,7 +2606,7 @@ The following state arguments are supported:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilecapacity">Autoscale<wbr>Setting<wbr>Profile<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilecapacity">Autoscale<wbr>Setting<wbr>Profile<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}A `capacity` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2624,7 +2624,7 @@ The following state arguments are supported:
 <a href="#fixed_date_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_date` block as defined below. This cannot be specified if a `recurrence` block is specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2633,7 +2633,7 @@ The following state arguments are supported:
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}A `recurrence` block as defined below. This cannot be specified if a `fixed_date` block is specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2642,7 +2642,7 @@ The following state arguments are supported:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerule">Sequence[Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerule">Sequence[Autoscale<wbr>Setting<wbr>Profile<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `rule` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -3071,7 +3071,7 @@ The following state arguments are supported:
 <a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictrigger">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictrigger">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A `metric_trigger` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3080,7 +3080,7 @@ The following state arguments are supported:
 <a href="#scaleaction_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerulescaleaction">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Scale<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulescaleaction">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Scale<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `scale_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3115,7 +3115,7 @@ The following state arguments are supported:
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictrigger">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictrigger">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A `metric_trigger` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3124,7 +3124,7 @@ The following state arguments are supported:
 <a href="#scaleaction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerulescaleaction">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Scale<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulescaleaction">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Scale<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `scale_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3137,7 +3137,7 @@ The following state arguments are supported:
 <a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictrigger">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictrigger">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A `metric_trigger` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3146,7 +3146,7 @@ The following state arguments are supported:
 <a href="#scale_action_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerulescaleaction">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Scale<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulescaleaction">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Scale<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `scale_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3233,7 +3233,7 @@ The following state arguments are supported:
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictriggerdimension">List&lt;Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictriggerdimension">List&lt;Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimensions` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3421,7 +3421,7 @@ The following state arguments are supported:
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictriggerdimension">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictriggerdimension">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimensions` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3515,7 +3515,7 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictriggerdimension">Sequence[Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictriggerdimension">Sequence[Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimensions` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

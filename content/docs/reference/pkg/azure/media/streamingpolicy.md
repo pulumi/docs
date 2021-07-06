@@ -539,7 +539,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#commonencryptioncbcs_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cbcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcs">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcs">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cbcs` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -548,7 +548,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#commonencryptioncenc_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cenc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncenc">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncenc">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cenc` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -575,7 +575,7 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#noencryptionenabledprotocols_go" style="color: inherit; text-decoration: inherit;">No<wbr>Encryption<wbr>Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicynoencryptionenabledprotocols">Streaming<wbr>Policy<wbr>No<wbr>Encryption<wbr>Enabled<wbr>Protocols</a></span>
+        <span class="property-type"><a href="#streamingpolicynoencryptionenabledprotocols">Streaming<wbr>Policy<wbr>No<wbr>Encryption<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `no_encryption_enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd></dl>
@@ -976,7 +976,7 @@ The following state arguments are supported:
 <a href="#state_commonencryptioncbcs_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cbcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcs">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcs">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cbcs` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -985,7 +985,7 @@ The following state arguments are supported:
 <a href="#state_commonencryptioncenc_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cenc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncenc">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncenc">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `common_encryption_cenc` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1021,7 +1021,7 @@ The following state arguments are supported:
 <a href="#state_noencryptionenabledprotocols_go" style="color: inherit; text-decoration: inherit;">No<wbr>Encryption<wbr>Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicynoencryptionenabledprotocols">Streaming<wbr>Policy<wbr>No<wbr>Encryption<wbr>Enabled<wbr>Protocols</a></span>
+        <span class="property-type"><a href="#streamingpolicynoencryptionenabledprotocols">Streaming<wbr>Policy<wbr>No<wbr>Encryption<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `no_encryption_enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1188,7 +1188,7 @@ The following state arguments are supported:
 <a href="#defaultcontentkey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Default<wbr>Content<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Default<wbr>Content<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A `default_content_key` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1197,7 +1197,7 @@ The following state arguments are supported:
 <a href="#drmfairplay_csharp" style="color: inherit; text-decoration: inherit;">Drm<wbr>Fairplay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdrmfairplay">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Drm<wbr>Fairplay<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdrmfairplay">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Drm<wbr>Fairplay</a></span>
     </dt>
     <dd>{{% md %}}A `drm_fairplay` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1206,7 +1206,7 @@ The following state arguments are supported:
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd></dl>
@@ -1250,7 +1250,7 @@ The following state arguments are supported:
 <a href="#defaultcontentkey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Content<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Default<wbr>Content<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Default<wbr>Content<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A `default_content_key` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1259,7 @@ The following state arguments are supported:
 <a href="#drmfairplay_nodejs" style="color: inherit; text-decoration: inherit;">drm<wbr>Fairplay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdrmfairplay">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Drm<wbr>Fairplay<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdrmfairplay">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Drm<wbr>Fairplay</a></span>
     </dt>
     <dd>{{% md %}}A `drm_fairplay` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1268,7 @@ The following state arguments are supported:
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd></dl>
@@ -1281,7 +1281,7 @@ The following state arguments are supported:
 <a href="#default_content_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>content_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Default<wbr>Content<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Default<wbr>Content<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A `default_content_key` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1290,7 +1290,7 @@ The following state arguments are supported:
 <a href="#drm_fairplay_python" style="color: inherit; text-decoration: inherit;">drm_<wbr>fairplay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdrmfairplay">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Drm<wbr>Fairplay<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsdrmfairplay">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Drm<wbr>Fairplay</a></span>
     </dt>
     <dd>{{% md %}}A `drm_fairplay` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1299,7 +1299,7 @@ The following state arguments are supported:
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncbcsenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd></dl>
@@ -1656,7 +1656,7 @@ The following state arguments are supported:
 <a href="#defaultcontentkey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncencdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Default<wbr>Content<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncencdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Default<wbr>Content<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A `default_content_key` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1665,7 +1665,7 @@ The following state arguments are supported:
 <a href="#drmplayready_csharp" style="color: inherit; text-decoration: inherit;">Drm<wbr>Playready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncencdrmplayready">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Drm<wbr>Playready<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncencdrmplayready">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Drm<wbr>Playready</a></span>
     </dt>
     <dd>{{% md %}}A `drm_playready` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1683,7 +1683,7 @@ The following state arguments are supported:
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncencenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncencenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd></dl>
@@ -1736,7 +1736,7 @@ The following state arguments are supported:
 <a href="#defaultcontentkey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Content<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncencdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Default<wbr>Content<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncencdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Default<wbr>Content<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A `default_content_key` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1745,7 +1745,7 @@ The following state arguments are supported:
 <a href="#drmplayready_nodejs" style="color: inherit; text-decoration: inherit;">drm<wbr>Playready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncencdrmplayready">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Drm<wbr>Playready<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncencdrmplayready">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Drm<wbr>Playready</a></span>
     </dt>
     <dd>{{% md %}}A `drm_playready` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1763,7 +1763,7 @@ The following state arguments are supported:
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncencenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncencenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd></dl>
@@ -1776,7 +1776,7 @@ The following state arguments are supported:
 <a href="#default_content_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>content_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncencdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Default<wbr>Content<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncencdefaultcontentkey">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Default<wbr>Content<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A `default_content_key` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1785,7 +1785,7 @@ The following state arguments are supported:
 <a href="#drm_playready_python" style="color: inherit; text-decoration: inherit;">drm_<wbr>playready</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncencdrmplayready">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Drm<wbr>Playready<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncencdrmplayready">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Drm<wbr>Playready</a></span>
     </dt>
     <dd>{{% md %}}A `drm_playready` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1803,7 +1803,7 @@ The following state arguments are supported:
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingpolicycommonencryptioncencenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
+        <span class="property-type"><a href="#streamingpolicycommonencryptioncencenabledprotocols">Streaming<wbr>Policy<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `enabled_protocols` block as defined below. Changing this forces a new Streaming Policy to be created.
 {{% /md %}}</dd></dl>

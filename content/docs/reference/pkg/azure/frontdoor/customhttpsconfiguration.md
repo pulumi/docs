@@ -218,7 +218,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
 <a href="#customhttpsconfiguration_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
 {{% /md %}}</dd></dl>
@@ -507,7 +507,7 @@ The following state arguments are supported:
 <a href="#state_customhttpsconfiguration_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Https<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

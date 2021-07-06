@@ -333,7 +333,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#activedirectory_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountactivedirectory">Account<wbr>Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#accountactivedirectory">Account<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -705,7 +705,7 @@ The following state arguments are supported:
 <a href="#state_activedirectory_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountactivedirectory">Account<wbr>Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#accountactivedirectory">Account<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

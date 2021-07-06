@@ -415,7 +415,7 @@ The SpringCloudApp resource accepts the following [input]({{< relref "/docs/intr
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudappidentity">Spring<wbr>Cloud<wbr>App<wbr>Identity</a></span>
+        <span class="property-type"><a href="#springcloudappidentity">Spring<wbr>Cloud<wbr>App<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -442,7 +442,7 @@ The SpringCloudApp resource accepts the following [input]({{< relref "/docs/intr
 <a href="#persistentdisk_go" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudapppersistentdisk">Spring<wbr>Cloud<wbr>App<wbr>Persistent<wbr>Disk</a></span>
+        <span class="property-type"><a href="#springcloudapppersistentdisk">Spring<wbr>Cloud<wbr>App<wbr>Persistent<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `persistent_disk` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -990,7 +990,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudappidentity">Spring<wbr>Cloud<wbr>App<wbr>Identity</a></span>
+        <span class="property-type"><a href="#springcloudappidentity">Spring<wbr>Cloud<wbr>App<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1017,7 +1017,7 @@ The following state arguments are supported:
 <a href="#state_persistentdisk_go" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudapppersistentdisk">Spring<wbr>Cloud<wbr>App<wbr>Persistent<wbr>Disk</a></span>
+        <span class="property-type"><a href="#springcloudapppersistentdisk">Spring<wbr>Cloud<wbr>App<wbr>Persistent<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `persistent_disk` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

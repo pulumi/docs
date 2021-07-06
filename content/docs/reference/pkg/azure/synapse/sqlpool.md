@@ -508,7 +508,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#restore_go" style="color: inherit; text-decoration: inherit;">Restore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpoolrestore">Sql<wbr>Pool<wbr>Restore</a></span>
+        <span class="property-type"><a href="#sqlpoolrestore">Sql<wbr>Pool<wbr>Restore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `restore` block as defined below. only applicable when `create_mode` is set to `PointInTimeRestore`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1019,7 +1019,7 @@ The following state arguments are supported:
 <a href="#state_restore_go" style="color: inherit; text-decoration: inherit;">Restore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpoolrestore">Sql<wbr>Pool<wbr>Restore</a></span>
+        <span class="property-type"><a href="#sqlpoolrestore">Sql<wbr>Pool<wbr>Restore<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `restore` block as defined below. only applicable when `create_mode` is set to `PointInTimeRestore`.
 {{% /md %}}</dd><dt class="property-optional"

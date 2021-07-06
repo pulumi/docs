@@ -421,7 +421,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworksubnet">Virtual<wbr>Network<wbr>Subnet</a></span>
+        <span class="property-type"><a href="#virtualnetworksubnet">Virtual<wbr>Network<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subnet` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -885,7 +885,7 @@ The following state arguments are supported:
 <a href="#state_subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworksubnet">Virtual<wbr>Network<wbr>Subnet</a></span>
+        <span class="property-type"><a href="#virtualnetworksubnet">Virtual<wbr>Network<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subnet` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

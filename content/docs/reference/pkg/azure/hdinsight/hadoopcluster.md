@@ -625,7 +625,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#componentversion_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustercomponentversion">Hadoop<wbr>Cluster<wbr>Component<wbr>Version</a></span>
+        <span class="property-type"><a href="#hadoopclustercomponentversion">Hadoop<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -634,7 +634,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustergateway">Hadoop<wbr>Cluster<wbr>Gateway</a></span>
+        <span class="property-type"><a href="#hadoopclustergateway">Hadoop<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -652,7 +652,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterroles">Hadoop<wbr>Cluster<wbr>Roles</a></span>
+        <span class="property-type"><a href="#hadoopclusterroles">Hadoop<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -679,7 +679,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#metastores_go" style="color: inherit; text-decoration: inherit;">Metastores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastores">Hadoop<wbr>Cluster<wbr>Metastores</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastores">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -688,7 +688,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#monitor_go" style="color: inherit; text-decoration: inherit;">Monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermonitor">Hadoop<wbr>Cluster<wbr>Monitor</a></span>
+        <span class="property-type"><a href="#hadoopclustermonitor">Hadoop<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -706,7 +706,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network</a></span>
+        <span class="property-type"><a href="#hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -715,7 +715,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#storageaccountgen2_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Gen2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterstorageaccountgen2">Hadoop<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</a></span>
+        <span class="property-type"><a href="#hadoopclusterstorageaccountgen2">Hadoop<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -724,7 +724,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterstorageaccount">[]Hadoop<wbr>Cluster<wbr>Storage<wbr>Account</a></span>
+        <span class="property-type"><a href="#hadoopclusterstorageaccount">[]Hadoop<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1464,7 +1464,7 @@ The following state arguments are supported:
 <a href="#state_componentversion_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustercomponentversion">Hadoop<wbr>Cluster<wbr>Component<wbr>Version</a></span>
+        <span class="property-type"><a href="#hadoopclustercomponentversion">Hadoop<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1473,7 +1473,7 @@ The following state arguments are supported:
 <a href="#state_gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustergateway">Hadoop<wbr>Cluster<wbr>Gateway</a></span>
+        <span class="property-type"><a href="#hadoopclustergateway">Hadoop<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1500,7 +1500,7 @@ The following state arguments are supported:
 <a href="#state_metastores_go" style="color: inherit; text-decoration: inherit;">Metastores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastores">Hadoop<wbr>Cluster<wbr>Metastores</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastores">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1509,7 +1509,7 @@ The following state arguments are supported:
 <a href="#state_monitor_go" style="color: inherit; text-decoration: inherit;">Monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermonitor">Hadoop<wbr>Cluster<wbr>Monitor</a></span>
+        <span class="property-type"><a href="#hadoopclustermonitor">Hadoop<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1527,7 +1527,7 @@ The following state arguments are supported:
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network</a></span>
+        <span class="property-type"><a href="#hadoopclusternetwork">Hadoop<wbr>Cluster<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1545,7 +1545,7 @@ The following state arguments are supported:
 <a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterroles">Hadoop<wbr>Cluster<wbr>Roles</a></span>
+        <span class="property-type"><a href="#hadoopclusterroles">Hadoop<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1563,7 +1563,7 @@ The following state arguments are supported:
 <a href="#state_storageaccountgen2_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Gen2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterstorageaccountgen2">Hadoop<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</a></span>
+        <span class="property-type"><a href="#hadoopclusterstorageaccountgen2">Hadoop<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,7 +1572,7 @@ The following state arguments are supported:
 <a href="#state_storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterstorageaccount">[]Hadoop<wbr>Cluster<wbr>Storage<wbr>Account</a></span>
+        <span class="property-type"><a href="#hadoopclusterstorageaccount">[]Hadoop<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2114,7 +2114,7 @@ The following state arguments are supported:
 <a href="#ambari_csharp" style="color: inherit; text-decoration: inherit;">Ambari</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastoresambari">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastoresambari">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Ambari</a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2123,7 +2123,7 @@ The following state arguments are supported:
 <a href="#hive_csharp" style="color: inherit; text-decoration: inherit;">Hive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastoreshive">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastoreshive">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Hive</a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2132,7 +2132,7 @@ The following state arguments are supported:
 <a href="#oozie_csharp" style="color: inherit; text-decoration: inherit;">Oozie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastoresoozie">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastoresoozie">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Oozie</a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2176,7 +2176,7 @@ The following state arguments are supported:
 <a href="#ambari_nodejs" style="color: inherit; text-decoration: inherit;">ambari</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastoresambari">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastoresambari">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Ambari</a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2185,7 +2185,7 @@ The following state arguments are supported:
 <a href="#hive_nodejs" style="color: inherit; text-decoration: inherit;">hive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastoreshive">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastoreshive">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Hive</a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2194,7 +2194,7 @@ The following state arguments are supported:
 <a href="#oozie_nodejs" style="color: inherit; text-decoration: inherit;">oozie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastoresoozie">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastoresoozie">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Oozie</a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2207,7 +2207,7 @@ The following state arguments are supported:
 <a href="#ambari_python" style="color: inherit; text-decoration: inherit;">ambari</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastoresambari">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastoresambari">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Ambari</a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2216,7 +2216,7 @@ The following state arguments are supported:
 <a href="#hive_python" style="color: inherit; text-decoration: inherit;">hive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastoreshive">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastoreshive">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Hive</a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2225,7 +2225,7 @@ The following state arguments are supported:
 <a href="#oozie_python" style="color: inherit; text-decoration: inherit;">oozie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastoresoozie">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastoresoozie">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Oozie</a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2906,7 +2906,7 @@ The following state arguments are supported:
 <a href="#headnode_csharp" style="color: inherit; text-decoration: inherit;">Head<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesheadnode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesheadnode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -2915,7 +2915,7 @@ The following state arguments are supported:
 <a href="#workernode_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2924,7 +2924,7 @@ The following state arguments are supported:
 <a href="#zookeepernode_csharp" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterroleszookeepernode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterroleszookeepernode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2933,7 +2933,7 @@ The following state arguments are supported:
 <a href="#edgenode_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesedgenode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesedgenode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `edge_node` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2986,7 +2986,7 @@ The following state arguments are supported:
 <a href="#headnode_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesheadnode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesheadnode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -2995,7 +2995,7 @@ The following state arguments are supported:
 <a href="#workernode_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3004,7 +3004,7 @@ The following state arguments are supported:
 <a href="#zookeepernode_nodejs" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterroleszookeepernode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterroleszookeepernode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3013,7 +3013,7 @@ The following state arguments are supported:
 <a href="#edgenode_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesedgenode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesedgenode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `edge_node` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3026,7 +3026,7 @@ The following state arguments are supported:
 <a href="#head_node_python" style="color: inherit; text-decoration: inherit;">head_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesheadnode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesheadnode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -3035,7 +3035,7 @@ The following state arguments are supported:
 <a href="#worker_node_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3044,7 +3044,7 @@ The following state arguments are supported:
 <a href="#zookeeper_node_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterroleszookeepernode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterroleszookeepernode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3053,7 +3053,7 @@ The following state arguments are supported:
 <a href="#edge_node_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesedgenode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesedgenode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `edge_node` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3068,7 +3068,7 @@ The following state arguments are supported:
 <a href="#installscriptactions_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Script<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesedgenodeinstallscriptaction">List&lt;Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Install<wbr>Script<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesedgenodeinstallscriptaction">List&lt;Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Install<wbr>Script<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `install_script_action` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3130,7 +3130,7 @@ The following state arguments are supported:
 <a href="#installscriptactions_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Script<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesedgenodeinstallscriptaction">Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Install<wbr>Script<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesedgenodeinstallscriptaction">Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Install<wbr>Script<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A `install_script_action` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3161,7 +3161,7 @@ The following state arguments are supported:
 <a href="#install_script_actions_python" style="color: inherit; text-decoration: inherit;">install_<wbr>script_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesedgenodeinstallscriptaction">Sequence[Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Install<wbr>Script<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesedgenodeinstallscriptaction">Sequence[Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Install<wbr>Script<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}A `install_script_action` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3545,7 +3545,7 @@ The following state arguments are supported:
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Autoscale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscale">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscale">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale</a></span>
     </dt>
     <dd>{{% md %}}A `autoscale` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -3715,7 +3715,7 @@ The following state arguments are supported:
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">autoscale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscale">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscale">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale</a></span>
     </dt>
     <dd>{{% md %}}A `autoscale` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -3800,7 +3800,7 @@ The following state arguments are supported:
 <a href="#autoscale_python" style="color: inherit; text-decoration: inherit;">autoscale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscale">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscale">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale</a></span>
     </dt>
     <dd>{{% md %}}A `autoscale` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -3860,7 +3860,7 @@ The following state arguments are supported:
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalecapacity">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalecapacity">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}A `capacity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3869,7 +3869,7 @@ The following state arguments are supported:
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalerecurrence">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalerecurrence">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}A `recurrence` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3904,7 +3904,7 @@ The following state arguments are supported:
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalecapacity">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalecapacity">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}A `capacity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3913,7 +3913,7 @@ The following state arguments are supported:
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalerecurrence">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalerecurrence">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}A `recurrence` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3926,7 +3926,7 @@ The following state arguments are supported:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalecapacity">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalecapacity">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Capacity</a></span>
     </dt>
     <dd>{{% md %}}A `capacity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3935,7 +3935,7 @@ The following state arguments are supported:
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalerecurrence">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalerecurrence">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}A `recurrence` block as defined below.
 {{% /md %}}</dd></dl>
@@ -4040,7 +4040,7 @@ The following state arguments are supported:
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalerecurrenceschedule">List&lt;Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Schedule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalerecurrenceschedule">List&lt;Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Schedule&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of `schedule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4084,7 +4084,7 @@ The following state arguments are supported:
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalerecurrenceschedule">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Schedule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalerecurrenceschedule">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Schedule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of `schedule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4106,7 +4106,7 @@ The following state arguments are supported:
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalerecurrenceschedule">Sequence[Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernodeautoscalerecurrenceschedule">Sequence[Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Autoscale<wbr>Recurrence<wbr>Schedule]</a></span>
     </dt>
     <dd>{{% md %}}A list of `schedule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"

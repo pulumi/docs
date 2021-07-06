@@ -277,7 +277,7 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#modulelink_go" style="color: inherit; text-decoration: inherit;">Module<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modulemodulelink">Module<wbr>Module<wbr>Link</a></span>
+        <span class="property-type"><a href="#modulemodulelink">Module<wbr>Module<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The published Module link.
 {{% /md %}}</dd><dt class="property-required"
@@ -621,7 +621,7 @@ The following state arguments are supported:
 <a href="#state_modulelink_go" style="color: inherit; text-decoration: inherit;">Module<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modulemodulelink">Module<wbr>Module<wbr>Link</a></span>
+        <span class="property-type"><a href="#modulemodulelink">Module<wbr>Module<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The published Module link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -752,7 +752,7 @@ The following state arguments are supported:
 <a href="#hash_csharp" style="color: inherit; text-decoration: inherit;">Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modulemodulelinkhash">Module<wbr>Module<wbr>Link<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#modulemodulelinkhash">Module<wbr>Module<wbr>Link<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -794,7 +794,7 @@ The following state arguments are supported:
 <a href="#hash_nodejs" style="color: inherit; text-decoration: inherit;">hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modulemodulelinkhash">Module<wbr>Module<wbr>Link<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#modulemodulelinkhash">Module<wbr>Module<wbr>Link<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -815,7 +815,7 @@ The following state arguments are supported:
 <a href="#hash_python" style="color: inherit; text-decoration: inherit;">hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modulemodulelinkhash">Module<wbr>Module<wbr>Link<wbr>Hash<wbr>Args</a></span>
+        <span class="property-type"><a href="#modulemodulelinkhash">Module<wbr>Module<wbr>Link<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

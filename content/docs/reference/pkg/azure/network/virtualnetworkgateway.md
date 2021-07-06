@@ -714,7 +714,7 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
 <a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">[]Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">[]Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
 An active-standby gateway requires exactly one `ip_configuration` block whereas
@@ -773,7 +773,7 @@ Defaults to `false`.
 <a href="#bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block of `bgp_settings`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +782,7 @@ Defaults to `false`.
 <a href="#customroute_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaycustomroute">Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaycustomroute">Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -860,7 +860,7 @@ located. Changing the location/region forces a new resource to be created.
 <a href="#vpnclientconfiguration_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_configuration` block which
 is documented below. In this block the Virtual Network Gateway can be configured
@@ -1606,7 +1606,7 @@ Defaults to `false`.
 <a href="#state_bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block of `bgp_settings`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1615,7 +1615,7 @@ Defaults to `false`.
 <a href="#state_customroute_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaycustomroute">Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaycustomroute">Virtual<wbr>Network<wbr>Gateway<wbr>Custom<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1655,7 +1655,7 @@ for this Virtual Network Gateway. Defaults to `false`.
 <a href="#state_ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">[]Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">[]Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
 An active-standby gateway requires exactly one `ip_configuration` block whereas
@@ -1740,7 +1740,7 @@ sku is only supported by an `ExpressRoute` gateway.
 <a href="#state_vpnclientconfiguration_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_configuration` block which
 is documented below. In this block the Virtual Network Gateway can be configured
@@ -2145,7 +2145,7 @@ through BGP peering. Valid values can be between `0` and `100`.
 <a href="#peeringaddresses_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettingspeeringaddress">List&lt;Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Peering<wbr>Address<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettingspeeringaddress">List&lt;Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Peering<wbr>Address&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of `peering_addresses` as defined below. Only one `peering_addresses` block can be specified except when `active_active` of this Virtual Network Gateway is `true`.
 {{% /md %}}</dd></dl>
@@ -2225,7 +2225,7 @@ through BGP peering. Valid values can be between `0` and `100`.
 <a href="#peeringaddresses_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettingspeeringaddress">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Peering<wbr>Address<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettingspeeringaddress">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Peering<wbr>Address[]</a></span>
     </dt>
     <dd>{{% md %}}A list of `peering_addresses` as defined below. Only one `peering_addresses` block can be specified except when `active_active` of this Virtual Network Gateway is `true`.
 {{% /md %}}</dd></dl>
@@ -2265,7 +2265,7 @@ through BGP peering. Valid values can be between `0` and `100`.
 <a href="#peering_addresses_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettingspeeringaddress">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Peering<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettingspeeringaddress">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Peering<wbr>Address]</a></span>
     </dt>
     <dd>{{% md %}}A list of `peering_addresses` as defined below. Only one `peering_addresses` block can be specified except when `active_active` of this Virtual Network Gateway is `true`.
 {{% /md %}}</dd></dl>
@@ -2753,7 +2753,7 @@ This setting is incompatible with the use of
 <a href="#revokedcertificates_csharp" style="color: inherit; text-decoration: inherit;">Revoked<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrevokedcertificate">List&lt;Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrevokedcertificate">List&lt;Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
@@ -2765,7 +2765,7 @@ This setting is incompatible with the use of
 <a href="#rootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrootcertificate">List&lt;Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrootcertificate">List&lt;Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
@@ -2969,7 +2969,7 @@ This setting is incompatible with the use of
 <a href="#revokedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">revoked<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrevokedcertificate">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrevokedcertificate">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
@@ -2981,7 +2981,7 @@ This setting is incompatible with the use of
 <a href="#rootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrootcertificate">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrootcertificate">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
@@ -3077,7 +3077,7 @@ This setting is incompatible with the use of
 <a href="#revoked_certificates_python" style="color: inherit; text-decoration: inherit;">revoked_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrevokedcertificate">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrevokedcertificate">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
@@ -3089,7 +3089,7 @@ This setting is incompatible with the use of
 <a href="#root_certificates_python" style="color: inherit; text-decoration: inherit;">root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrootcertificate">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrootcertificate">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate

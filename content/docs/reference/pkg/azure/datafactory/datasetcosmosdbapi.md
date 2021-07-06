@@ -363,7 +363,7 @@ The DatasetCosmosDBApi resource accepts the following [input]({{< relref "/docs/
 <a href="#schemacolumns_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcosmosdbapischemacolumn">[]Dataset<wbr>Cosmos<wbr>DBApi<wbr>Schema<wbr>Column</a></span>
+        <span class="property-type"><a href="#datasetcosmosdbapischemacolumn">[]Dataset<wbr>Cosmos<wbr>DBApi<wbr>Schema<wbr>Column<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schema_column` block as defined below.
 {{% /md %}}</dd></dl>
@@ -966,7 +966,7 @@ The following state arguments are supported:
 <a href="#state_schemacolumns_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetcosmosdbapischemacolumn">[]Dataset<wbr>Cosmos<wbr>DBApi<wbr>Schema<wbr>Column</a></span>
+        <span class="property-type"><a href="#datasetcosmosdbapischemacolumn">[]Dataset<wbr>Cosmos<wbr>DBApi<wbr>Schema<wbr>Column<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schema_column` block as defined below.
 {{% /md %}}</dd></dl>

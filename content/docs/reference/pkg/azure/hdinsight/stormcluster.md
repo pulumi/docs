@@ -607,7 +607,7 @@ The StormCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#componentversion_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustercomponentversion">Storm<wbr>Cluster<wbr>Component<wbr>Version</a></span>
+        <span class="property-type"><a href="#stormclustercomponentversion">Storm<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -616,7 +616,7 @@ The StormCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustergateway">Storm<wbr>Cluster<wbr>Gateway</a></span>
+        <span class="property-type"><a href="#stormclustergateway">Storm<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -634,7 +634,7 @@ The StormCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterroles">Storm<wbr>Cluster<wbr>Roles</a></span>
+        <span class="property-type"><a href="#stormclusterroles">Storm<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -661,7 +661,7 @@ The StormCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#metastores_go" style="color: inherit; text-decoration: inherit;">Metastores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustermetastores">Storm<wbr>Cluster<wbr>Metastores</a></span>
+        <span class="property-type"><a href="#stormclustermetastores">Storm<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -670,7 +670,7 @@ The StormCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#monitor_go" style="color: inherit; text-decoration: inherit;">Monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustermonitor">Storm<wbr>Cluster<wbr>Monitor</a></span>
+        <span class="property-type"><a href="#stormclustermonitor">Storm<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -688,7 +688,7 @@ The StormCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterstorageaccount">[]Storm<wbr>Cluster<wbr>Storage<wbr>Account</a></span>
+        <span class="property-type"><a href="#stormclusterstorageaccount">[]Storm<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1372,7 +1372,7 @@ The following state arguments are supported:
 <a href="#state_componentversion_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustercomponentversion">Storm<wbr>Cluster<wbr>Component<wbr>Version</a></span>
+        <span class="property-type"><a href="#stormclustercomponentversion">Storm<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1381,7 +1381,7 @@ The following state arguments are supported:
 <a href="#state_gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustergateway">Storm<wbr>Cluster<wbr>Gateway</a></span>
+        <span class="property-type"><a href="#stormclustergateway">Storm<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1408,7 +1408,7 @@ The following state arguments are supported:
 <a href="#state_metastores_go" style="color: inherit; text-decoration: inherit;">Metastores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustermetastores">Storm<wbr>Cluster<wbr>Metastores</a></span>
+        <span class="property-type"><a href="#stormclustermetastores">Storm<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1417,7 @@ The following state arguments are supported:
 <a href="#state_monitor_go" style="color: inherit; text-decoration: inherit;">Monitor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustermonitor">Storm<wbr>Cluster<wbr>Monitor</a></span>
+        <span class="property-type"><a href="#stormclustermonitor">Storm<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1444,7 +1444,7 @@ The following state arguments are supported:
 <a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterroles">Storm<wbr>Cluster<wbr>Roles</a></span>
+        <span class="property-type"><a href="#stormclusterroles">Storm<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1462,7 +1462,7 @@ The following state arguments are supported:
 <a href="#state_storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterstorageaccount">[]Storm<wbr>Cluster<wbr>Storage<wbr>Account</a></span>
+        <span class="property-type"><a href="#stormclusterstorageaccount">[]Storm<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1968,7 +1968,7 @@ The following state arguments are supported:
 <a href="#ambari_csharp" style="color: inherit; text-decoration: inherit;">Ambari</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustermetastoresambari">Storm<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclustermetastoresambari">Storm<wbr>Cluster<wbr>Metastores<wbr>Ambari</a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1977,7 +1977,7 @@ The following state arguments are supported:
 <a href="#hive_csharp" style="color: inherit; text-decoration: inherit;">Hive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustermetastoreshive">Storm<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclustermetastoreshive">Storm<wbr>Cluster<wbr>Metastores<wbr>Hive</a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1986,7 +1986,7 @@ The following state arguments are supported:
 <a href="#oozie_csharp" style="color: inherit; text-decoration: inherit;">Oozie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustermetastoresoozie">Storm<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclustermetastoresoozie">Storm<wbr>Cluster<wbr>Metastores<wbr>Oozie</a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2030,7 +2030,7 @@ The following state arguments are supported:
 <a href="#ambari_nodejs" style="color: inherit; text-decoration: inherit;">ambari</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustermetastoresambari">Storm<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclustermetastoresambari">Storm<wbr>Cluster<wbr>Metastores<wbr>Ambari</a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2039,7 +2039,7 @@ The following state arguments are supported:
 <a href="#hive_nodejs" style="color: inherit; text-decoration: inherit;">hive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustermetastoreshive">Storm<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclustermetastoreshive">Storm<wbr>Cluster<wbr>Metastores<wbr>Hive</a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2048,7 +2048,7 @@ The following state arguments are supported:
 <a href="#oozie_nodejs" style="color: inherit; text-decoration: inherit;">oozie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustermetastoresoozie">Storm<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclustermetastoresoozie">Storm<wbr>Cluster<wbr>Metastores<wbr>Oozie</a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2061,7 +2061,7 @@ The following state arguments are supported:
 <a href="#ambari_python" style="color: inherit; text-decoration: inherit;">ambari</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustermetastoresambari">Storm<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclustermetastoresambari">Storm<wbr>Cluster<wbr>Metastores<wbr>Ambari</a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2070,7 +2070,7 @@ The following state arguments are supported:
 <a href="#hive_python" style="color: inherit; text-decoration: inherit;">hive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustermetastoreshive">Storm<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclustermetastoreshive">Storm<wbr>Cluster<wbr>Metastores<wbr>Hive</a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2079,7 +2079,7 @@ The following state arguments are supported:
 <a href="#oozie_python" style="color: inherit; text-decoration: inherit;">oozie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclustermetastoresoozie">Storm<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclustermetastoresoozie">Storm<wbr>Cluster<wbr>Metastores<wbr>Oozie</a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2670,7 +2670,7 @@ The following state arguments are supported:
 <a href="#headnode_csharp" style="color: inherit; text-decoration: inherit;">Head<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterrolesheadnode">Storm<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclusterrolesheadnode">Storm<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -2679,7 +2679,7 @@ The following state arguments are supported:
 <a href="#workernode_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterrolesworkernode">Storm<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclusterrolesworkernode">Storm<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2688,7 +2688,7 @@ The following state arguments are supported:
 <a href="#zookeepernode_csharp" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterroleszookeepernode">Storm<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclusterroleszookeepernode">Storm<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2732,7 +2732,7 @@ The following state arguments are supported:
 <a href="#headnode_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterrolesheadnode">Storm<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclusterrolesheadnode">Storm<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -2741,7 +2741,7 @@ The following state arguments are supported:
 <a href="#workernode_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterrolesworkernode">Storm<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclusterrolesworkernode">Storm<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2750,7 +2750,7 @@ The following state arguments are supported:
 <a href="#zookeepernode_nodejs" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterroleszookeepernode">Storm<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclusterroleszookeepernode">Storm<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2763,7 +2763,7 @@ The following state arguments are supported:
 <a href="#head_node_python" style="color: inherit; text-decoration: inherit;">head_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterrolesheadnode">Storm<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclusterrolesheadnode">Storm<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -2772,7 +2772,7 @@ The following state arguments are supported:
 <a href="#worker_node_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterrolesworkernode">Storm<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclusterrolesworkernode">Storm<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2781,7 +2781,7 @@ The following state arguments are supported:
 <a href="#zookeeper_node_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stormclusterroleszookeepernode">Storm<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#stormclusterroleszookeepernode">Storm<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd></dl>

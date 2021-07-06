@@ -572,7 +572,7 @@ The AadDiagnosticSetting resource accepts the following [input]({{< relref "/doc
 <a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aaddiagnosticsettinglog">[]Aad<wbr>Diagnostic<wbr>Setting<wbr>Log</a></span>
+        <span class="property-type"><a href="#aaddiagnosticsettinglog">[]Aad<wbr>Diagnostic<wbr>Setting<wbr>Log<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `log` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1017,7 +1017,7 @@ The following state arguments are supported:
 <a href="#state_logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aaddiagnosticsettinglog">[]Aad<wbr>Diagnostic<wbr>Setting<wbr>Log</a></span>
+        <span class="property-type"><a href="#aaddiagnosticsettinglog">[]Aad<wbr>Diagnostic<wbr>Setting<wbr>Log<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `log` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1184,7 +1184,7 @@ The following state arguments are supported:
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aaddiagnosticsettinglogretentionpolicy">Aad<wbr>Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#aaddiagnosticsettinglogretentionpolicy">Aad<wbr>Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1246,7 +1246,7 @@ The following state arguments are supported:
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aaddiagnosticsettinglogretentionpolicy">Aad<wbr>Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#aaddiagnosticsettinglogretentionpolicy">Aad<wbr>Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1277,7 @@ The following state arguments are supported:
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aaddiagnosticsettinglogretentionpolicy">Aad<wbr>Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#aaddiagnosticsettinglogretentionpolicy">Aad<wbr>Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

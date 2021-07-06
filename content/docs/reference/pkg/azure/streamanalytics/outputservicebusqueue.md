@@ -470,7 +470,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
 <a href="#serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputservicebusqueueserialization">Output<wbr>Service<wbr>Bus<wbr>Queue<wbr>Serialization</a></span>
+        <span class="property-type"><a href="#outputservicebusqueueserialization">Output<wbr>Service<wbr>Bus<wbr>Queue<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -971,7 +971,7 @@ The following state arguments are supported:
 <a href="#state_serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputservicebusqueueserialization">Output<wbr>Service<wbr>Bus<wbr>Queue<wbr>Serialization</a></span>
+        <span class="property-type"><a href="#outputservicebusqueueserialization">Output<wbr>Service<wbr>Bus<wbr>Queue<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -420,7 +420,7 @@ The NetworkSecurityGroup resource accepts the following [input]({{< relref "/doc
 <a href="#securityrules_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupsecurityrule">[]Network<wbr>Security<wbr>Group<wbr>Security<wbr>Rule</a></span>
+        <span class="property-type"><a href="#networksecuritygroupsecurityrule">[]Network<wbr>Security<wbr>Group<wbr>Security<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing security rules, as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -801,7 +801,7 @@ The following state arguments are supported:
 <a href="#state_securityrules_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networksecuritygroupsecurityrule">[]Network<wbr>Security<wbr>Group<wbr>Security<wbr>Rule</a></span>
+        <span class="property-type"><a href="#networksecuritygroupsecurityrule">[]Network<wbr>Security<wbr>Group<wbr>Security<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing security rules, as defined below.
 {{% /md %}}</dd><dt class="property-optional"

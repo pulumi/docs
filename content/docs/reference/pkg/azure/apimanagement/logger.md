@@ -446,7 +446,7 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#applicationinsights_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggerapplicationinsights">Logger<wbr>Application<wbr>Insights</a></span>
+        <span class="property-type"><a href="#loggerapplicationinsights">Logger<wbr>Application<wbr>Insights<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `application_insights` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -473,7 +473,7 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#eventhub_go" style="color: inherit; text-decoration: inherit;">Eventhub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggereventhub">Logger<wbr>Eventhub</a></span>
+        <span class="property-type"><a href="#loggereventhub">Logger<wbr>Eventhub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `eventhub` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -929,7 +929,7 @@ The following state arguments are supported:
 <a href="#state_applicationinsights_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggerapplicationinsights">Logger<wbr>Application<wbr>Insights</a></span>
+        <span class="property-type"><a href="#loggerapplicationinsights">Logger<wbr>Application<wbr>Insights<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `application_insights` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -956,7 +956,7 @@ The following state arguments are supported:
 <a href="#state_eventhub_go" style="color: inherit; text-decoration: inherit;">Eventhub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggereventhub">Logger<wbr>Eventhub</a></span>
+        <span class="property-type"><a href="#loggereventhub">Logger<wbr>Eventhub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `eventhub` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"

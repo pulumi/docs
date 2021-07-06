@@ -241,7 +241,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 <a href="#vpnlinks_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionvpnlink">[]Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link</a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionvpnlink">[]Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `vpn_link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -268,7 +268,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 <a href="#routings_go" style="color: inherit; text-decoration: inherit;">Routings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionrouting">[]Vpn<wbr>Gateway<wbr>Connection<wbr>Routing</a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionrouting">[]Vpn<wbr>Gateway<wbr>Connection<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below. If this is not specified, there will be a default route table created implicitly.
 {{% /md %}}</dd></dl>
@@ -668,7 +668,7 @@ The following state arguments are supported:
 <a href="#state_routings_go" style="color: inherit; text-decoration: inherit;">Routings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionrouting">[]Vpn<wbr>Gateway<wbr>Connection<wbr>Routing</a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionrouting">[]Vpn<wbr>Gateway<wbr>Connection<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below. If this is not specified, there will be a default route table created implicitly.
 {{% /md %}}</dd><dt class="property-optional"
@@ -686,7 +686,7 @@ The following state arguments are supported:
 <a href="#state_vpnlinks_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionvpnlink">[]Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link</a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionvpnlink">[]Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `vpn_link` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -952,7 +952,7 @@ The following state arguments are supported:
 <a href="#ipsecpolicies_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionvpnlinkipsecpolicy">List&lt;Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionvpnlinkipsecpolicy">List&lt;Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `ipsec_policy` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1158,7 +1158,7 @@ The following state arguments are supported:
 <a href="#ipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionvpnlinkipsecpolicy">Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionvpnlinkipsecpolicy">Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ipsec_policy` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1261,7 +1261,7 @@ The following state arguments are supported:
 <a href="#ipsec_policies_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionvpnlinkipsecpolicy">Sequence[Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionvpnlinkipsecpolicy">Sequence[Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ipsec_policy` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"

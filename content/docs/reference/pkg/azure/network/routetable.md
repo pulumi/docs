@@ -418,7 +418,7 @@ The RouteTable resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routetableroute">[]Route<wbr>Table<wbr>Route</a></span>
+        <span class="property-type"><a href="#routetableroute">[]Route<wbr>Table<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing routes. Each object accepts the arguments documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -882,7 +882,7 @@ The following state arguments are supported:
 <a href="#state_routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routetableroute">[]Route<wbr>Table<wbr>Route</a></span>
+        <span class="property-type"><a href="#routetableroute">[]Route<wbr>Table<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing routes. Each object accepts the arguments documented below.
 {{% /md %}}</dd><dt class="property-optional"

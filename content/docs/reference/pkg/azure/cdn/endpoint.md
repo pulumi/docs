@@ -350,7 +350,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointorigin">[]Endpoint<wbr>Origin</a></span>
+        <span class="property-type"><a href="#endpointorigin">[]Endpoint<wbr>Origin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -386,7 +386,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#deliveryrules_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrule">[]Endpoint<wbr>Delivery<wbr>Rule</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrule">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -395,7 +395,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#geofilters_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgeofilter">[]Endpoint<wbr>Geo<wbr>Filter</a></span>
+        <span class="property-type"><a href="#endpointgeofilter">[]Endpoint<wbr>Geo<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -404,7 +404,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#globaldeliveryrule_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Delivery<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1267,7 +1267,7 @@ The following state arguments are supported:
 <a href="#state_deliveryrules_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrule">[]Endpoint<wbr>Delivery<wbr>Rule</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrule">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1276,7 +1276,7 @@ The following state arguments are supported:
 <a href="#state_geofilters_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgeofilter">[]Endpoint<wbr>Geo<wbr>Filter</a></span>
+        <span class="property-type"><a href="#endpointgeofilter">[]Endpoint<wbr>Geo<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1285,7 +1285,7 @@ The following state arguments are supported:
 <a href="#state_globaldeliveryrule_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Delivery<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1375,7 +1375,7 @@ The following state arguments are supported:
 <a href="#state_origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointorigin">[]Endpoint<wbr>Origin</a></span>
+        <span class="property-type"><a href="#endpointorigin">[]Endpoint<wbr>Origin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1812,7 +1812,7 @@ The following state arguments are supported:
 <a href="#cacheexpirationaction_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Expiration<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1821,7 +1821,7 @@ The following state arguments are supported:
 <a href="#cachekeyquerystringaction_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1830,7 +1830,7 @@ The following state arguments are supported:
 <a href="#cookiesconditions_csharp" style="color: inherit; text-decoration: inherit;">Cookies<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `cookies_condition` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1839,7 +1839,7 @@ The following state arguments are supported:
 <a href="#devicecondition_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `device_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1848,7 +1848,7 @@ The following state arguments are supported:
 <a href="#httpversionconditions_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Version<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `http_version_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1857,7 +1857,7 @@ The following state arguments are supported:
 <a href="#modifyrequestheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Modify<wbr>Request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1866,7 +1866,7 @@ The following state arguments are supported:
 <a href="#modifyresponseheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Modify<wbr>Response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1875,7 +1875,7 @@ The following state arguments are supported:
 <a href="#postargconditions_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Arg<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `post_arg_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1884,7 +1884,7 @@ The following state arguments are supported:
 <a href="#querystringconditions_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `query_string_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1893,7 +1893,7 @@ The following state arguments are supported:
 <a href="#remoteaddressconditions_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `remote_address_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1902,7 +1902,7 @@ The following state arguments are supported:
 <a href="#requestbodyconditions_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `request_body_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1911,7 +1911,7 @@ The following state arguments are supported:
 <a href="#requestheaderconditions_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `request_header_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1920,7 +1920,7 @@ The following state arguments are supported:
 <a href="#requestmethodcondition_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Method<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `request_method_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1929,7 +1929,7 @@ The following state arguments are supported:
 <a href="#requestschemecondition_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Scheme<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `request_scheme_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1938,7 +1938,7 @@ The following state arguments are supported:
 <a href="#requesturiconditions_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Uri<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `request_uri_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1947,7 +1947,7 @@ The following state arguments are supported:
 <a href="#urlfileextensionconditions_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>File<wbr>Extension<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_extension_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1956,7 +1956,7 @@ The following state arguments are supported:
 <a href="#urlfilenameconditions_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>File<wbr>Name<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_name_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1965,7 +1965,7 @@ The following state arguments are supported:
 <a href="#urlpathconditions_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Path<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `url_path_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1974,7 +1974,7 @@ The following state arguments are supported:
 <a href="#urlredirectaction_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Redirect<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1983,7 +1983,7 @@ The following state arguments are supported:
 <a href="#urlrewriteaction_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2216,7 +2216,7 @@ The following state arguments are supported:
 <a href="#cacheexpirationaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Expiration<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2225,7 +2225,7 @@ The following state arguments are supported:
 <a href="#cachekeyquerystringaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2234,7 +2234,7 @@ The following state arguments are supported:
 <a href="#cookiesconditions_nodejs" style="color: inherit; text-decoration: inherit;">cookies<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `cookies_condition` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2243,7 +2243,7 @@ The following state arguments are supported:
 <a href="#devicecondition_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `device_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2252,7 +2252,7 @@ The following state arguments are supported:
 <a href="#httpversionconditions_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `http_version_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2261,7 +2261,7 @@ The following state arguments are supported:
 <a href="#modifyrequestheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2270,7 +2270,7 @@ The following state arguments are supported:
 <a href="#modifyresponseheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2279,7 +2279,7 @@ The following state arguments are supported:
 <a href="#postargconditions_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Arg<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `post_arg_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2288,7 +2288,7 @@ The following state arguments are supported:
 <a href="#querystringconditions_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `query_string_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2297,7 +2297,7 @@ The following state arguments are supported:
 <a href="#remoteaddressconditions_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `remote_address_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2306,7 +2306,7 @@ The following state arguments are supported:
 <a href="#requestbodyconditions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `request_body_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2315,7 +2315,7 @@ The following state arguments are supported:
 <a href="#requestheaderconditions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2324,7 @@ The following state arguments are supported:
 <a href="#requestmethodcondition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Method<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `request_method_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2333,7 +2333,7 @@ The following state arguments are supported:
 <a href="#requestschemecondition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Scheme<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `request_scheme_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2342,7 +2342,7 @@ The following state arguments are supported:
 <a href="#requesturiconditions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Uri<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `request_uri_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2351,7 +2351,7 @@ The following state arguments are supported:
 <a href="#urlfileextensionconditions_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>File<wbr>Extension<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_extension_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2360,7 +2360,7 @@ The following state arguments are supported:
 <a href="#urlfilenameconditions_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>File<wbr>Name<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_name_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2369,7 +2369,7 @@ The following state arguments are supported:
 <a href="#urlpathconditions_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Path<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `url_path_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2378,7 +2378,7 @@ The following state arguments are supported:
 <a href="#urlredirectaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2387,7 +2387,7 @@ The following state arguments are supported:
 <a href="#urlrewriteaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2418,7 +2418,7 @@ The following state arguments are supported:
 <a href="#cache_expiration_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>expiration_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2427,7 +2427,7 @@ The following state arguments are supported:
 <a href="#cache_key_query_string_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>query_<wbr>string_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2436,7 +2436,7 @@ The following state arguments are supported:
 <a href="#cookies_conditions_python" style="color: inherit; text-decoration: inherit;">cookies_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}A `cookies_condition` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2445,7 +2445,7 @@ The following state arguments are supported:
 <a href="#device_condition_python" style="color: inherit; text-decoration: inherit;">device_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `device_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2454,7 +2454,7 @@ The following state arguments are supported:
 <a href="#http_version_conditions_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}A `http_version_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2463,7 +2463,7 @@ The following state arguments are supported:
 <a href="#modify_request_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>request_<wbr>header_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2472,7 +2472,7 @@ The following state arguments are supported:
 <a href="#modify_response_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>response_<wbr>header_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2481,7 +2481,7 @@ The following state arguments are supported:
 <a href="#post_arg_conditions_python" style="color: inherit; text-decoration: inherit;">post_<wbr>arg_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}A `post_arg_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2490,7 +2490,7 @@ The following state arguments are supported:
 <a href="#query_string_conditions_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}A `query_string_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2499,7 +2499,7 @@ The following state arguments are supported:
 <a href="#remote_address_conditions_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}A `remote_address_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2508,7 +2508,7 @@ The following state arguments are supported:
 <a href="#request_body_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}A `request_body_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2517,7 +2517,7 @@ The following state arguments are supported:
 <a href="#request_header_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2526,7 +2526,7 @@ The following state arguments are supported:
 <a href="#request_method_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>method_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `request_method_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2535,7 +2535,7 @@ The following state arguments are supported:
 <a href="#request_scheme_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>scheme_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `request_scheme_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2544,7 +2544,7 @@ The following state arguments are supported:
 <a href="#request_uri_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>uri_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}A `request_uri_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2553,7 +2553,7 @@ The following state arguments are supported:
 <a href="#url_file_extension_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>file_<wbr>extension_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_extension_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2562,7 +2562,7 @@ The following state arguments are supported:
 <a href="#url_file_name_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>file_<wbr>name_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_name_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2571,7 +2571,7 @@ The following state arguments are supported:
 <a href="#url_path_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}A `url_path_condition` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2580,7 +2580,7 @@ The following state arguments are supported:
 <a href="#url_redirect_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2589,7 +2589,7 @@ The following state arguments are supported:
 <a href="#url_rewrite_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -5718,7 +5718,7 @@ The following state arguments are supported:
 <a href="#cacheexpirationaction_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Expiration<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5727,7 +5727,7 @@ The following state arguments are supported:
 <a href="#cachekeyquerystringaction_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5736,7 +5736,7 @@ The following state arguments are supported:
 <a href="#modifyrequestheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Modify<wbr>Request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">List&lt;Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">List&lt;Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5745,7 +5745,7 @@ The following state arguments are supported:
 <a href="#modifyresponseheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Modify<wbr>Response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">List&lt;Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">List&lt;Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5754,7 +5754,7 @@ The following state arguments are supported:
 <a href="#urlredirectaction_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Redirect<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5763,7 +5763,7 @@ The following state arguments are supported:
 <a href="#urlrewriteaction_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -5834,7 +5834,7 @@ The following state arguments are supported:
 <a href="#cacheexpirationaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Expiration<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5843,7 +5843,7 @@ The following state arguments are supported:
 <a href="#cachekeyquerystringaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5852,7 +5852,7 @@ The following state arguments are supported:
 <a href="#modifyrequestheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Request<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5861,7 +5861,7 @@ The following state arguments are supported:
 <a href="#modifyresponseheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Response<wbr>Header<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5870,7 +5870,7 @@ The following state arguments are supported:
 <a href="#urlredirectaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5879,7 +5879,7 @@ The following state arguments are supported:
 <a href="#urlrewriteaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
 {{% /md %}}</dd></dl>
@@ -5892,7 +5892,7 @@ The following state arguments are supported:
 <a href="#cache_expiration_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>expiration_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5901,7 +5901,7 @@ The following state arguments are supported:
 <a href="#cache_key_query_string_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>query_<wbr>string_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5910,7 +5910,7 @@ The following state arguments are supported:
 <a href="#modify_request_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>request_<wbr>header_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">Sequence[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">Sequence[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5919,7 +5919,7 @@ The following state arguments are supported:
 <a href="#modify_response_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>response_<wbr>header_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">Sequence[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">Sequence[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5928,7 +5928,7 @@ The following state arguments are supported:
 <a href="#url_redirect_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5937,7 +5937,7 @@ The following state arguments are supported:
 <a href="#url_rewrite_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
 {{% /md %}}</dd></dl>

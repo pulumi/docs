@@ -628,7 +628,7 @@ The AssetFilter resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#presentationtimerange_go" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Time<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetfilterpresentationtimerange">Asset<wbr>Filter<wbr>Presentation<wbr>Time<wbr>Range</a></span>
+        <span class="property-type"><a href="#assetfilterpresentationtimerange">Asset<wbr>Filter<wbr>Presentation<wbr>Time<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `presentation_time_range` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -637,7 +637,7 @@ The AssetFilter resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#trackselections_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetfiltertrackselection">[]Asset<wbr>Filter<wbr>Track<wbr>Selection</a></span>
+        <span class="property-type"><a href="#assetfiltertrackselection">[]Asset<wbr>Filter<wbr>Track<wbr>Selection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `track_selection` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1009,7 +1009,7 @@ The following state arguments are supported:
 <a href="#state_presentationtimerange_go" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Time<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetfilterpresentationtimerange">Asset<wbr>Filter<wbr>Presentation<wbr>Time<wbr>Range</a></span>
+        <span class="property-type"><a href="#assetfilterpresentationtimerange">Asset<wbr>Filter<wbr>Presentation<wbr>Time<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `presentation_time_range` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1018,7 +1018,7 @@ The following state arguments are supported:
 <a href="#state_trackselections_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetfiltertrackselection">[]Asset<wbr>Filter<wbr>Track<wbr>Selection</a></span>
+        <span class="property-type"><a href="#assetfiltertrackselection">[]Asset<wbr>Filter<wbr>Track<wbr>Selection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `track_selection` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1382,7 +1382,7 @@ This value defines the latest live position that a client can seek to. Using thi
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetfiltertrackselectioncondition">List&lt;Asset<wbr>Filter<wbr>Track<wbr>Selection<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#assetfiltertrackselectioncondition">List&lt;Asset<wbr>Filter<wbr>Track<wbr>Selection<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `condition` blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -1408,7 +1408,7 @@ This value defines the latest live position that a client can seek to. Using thi
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetfiltertrackselectioncondition">Asset<wbr>Filter<wbr>Track<wbr>Selection<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#assetfiltertrackselectioncondition">Asset<wbr>Filter<wbr>Track<wbr>Selection<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `condition` blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -1421,7 +1421,7 @@ This value defines the latest live position that a client can seek to. Using thi
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assetfiltertrackselectioncondition">Sequence[Asset<wbr>Filter<wbr>Track<wbr>Selection<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#assetfiltertrackselectioncondition">Sequence[Asset<wbr>Filter<wbr>Track<wbr>Selection<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}One or more `condition` blocks as defined above.
 {{% /md %}}</dd></dl>

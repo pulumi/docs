@@ -462,7 +462,7 @@ The VirtualHubConnection resource accepts the following [input]({{< relref "/doc
 <a href="#routing_go" style="color: inherit; text-decoration: inherit;">Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -900,7 +900,7 @@ The following state arguments are supported:
 <a href="#state_routing_go" style="color: inherit; text-decoration: inherit;">Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionrouting">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1080,7 +1080,7 @@ The following state arguments are supported:
 <a href="#propagatedroutetable_csharp" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A `propagated_route_table` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1089,7 +1089,7 @@ The following state arguments are supported:
 <a href="#staticvnetroutes_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">List&lt;Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">List&lt;Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `static_vnet_route` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1142,7 +1142,7 @@ The following state arguments are supported:
 <a href="#propagatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A `propagated_route_table` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1151,7 +1151,7 @@ The following state arguments are supported:
 <a href="#staticvnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}A `static_vnet_route` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1173,7 +1173,7 @@ The following state arguments are supported:
 <a href="#propagated_route_table_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingpropagatedroutetable">Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Propagated<wbr>Route<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A `propagated_route_table` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1182,7 +1182,7 @@ The following state arguments are supported:
 <a href="#static_vnet_routes_python" style="color: inherit; text-decoration: inherit;">static_<wbr>vnet_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">Sequence[Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualhubconnectionroutingstaticvnetroute">Sequence[Virtual<wbr>Hub<wbr>Connection<wbr>Routing<wbr>Static<wbr>Vnet<wbr>Route]</a></span>
     </dt>
     <dd>{{% md %}}A `static_vnet_route` block as defined below.
 {{% /md %}}</dd></dl>

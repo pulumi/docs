@@ -31,6 +31,7 @@ Explore the resources and functions of the azure.keyvault module.
     <li><a href="getkeyvault" title="GetKeyVault"><span class="symbol function"></span>GetKeyVault</a></li>
     <li><a href="getmanagedhardwaresecuritymodule" title="GetManagedHardwareSecurityModule"><span class="symbol function"></span>GetManagedHardwareSecurityModule</a></li>
     <li><a href="getsecret" title="GetSecret"><span class="symbol function"></span>GetSecret</a></li>
+    <li><a href="getsecrets" title="GetSecrets"><span class="symbol function"></span>GetSecrets</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -42,6 +43,6 @@ Explore the resources and functions of the azure.keyvault module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.7.0</dd>
+	<dd>4.9.0</dd>
 </dl>
 

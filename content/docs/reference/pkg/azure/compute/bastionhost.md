@@ -440,7 +440,7 @@ The BastionHost resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ipconfiguration_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bastionhostipconfiguration">Bastion<wbr>Host<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#bastionhostipconfiguration">Bastion<wbr>Host<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ip_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -867,7 +867,7 @@ The following state arguments are supported:
 <a href="#state_ipconfiguration_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bastionhostipconfiguration">Bastion<wbr>Host<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#bastionhostipconfiguration">Bastion<wbr>Host<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ip_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

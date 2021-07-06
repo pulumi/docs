@@ -555,7 +555,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
 <a href="#eventgrouping_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertrulescheduledeventgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Event<wbr>Grouping</a></span>
+        <span class="property-type"><a href="#alertrulescheduledeventgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Event<wbr>Grouping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `event_grouping` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -564,7 +564,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
 <a href="#incidentconfiguration_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `incident_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1353,7 @@ The following state arguments are supported:
 <a href="#state_eventgrouping_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertrulescheduledeventgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Event<wbr>Grouping</a></span>
+        <span class="property-type"><a href="#alertrulescheduledeventgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Event<wbr>Grouping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `event_grouping` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1362,7 +1362,7 @@ The following state arguments are supported:
 <a href="#state_incidentconfiguration_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `incident_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1862,7 +1862,7 @@ The following state arguments are supported:
 <a href="#grouping_csharp" style="color: inherit; text-decoration: inherit;">Grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping</a></span>
     </dt>
     <dd>{{% md %}}A `grouping` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1906,7 +1906,7 @@ The following state arguments are supported:
 <a href="#grouping_nodejs" style="color: inherit; text-decoration: inherit;">grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping</a></span>
     </dt>
     <dd>{{% md %}}A `grouping` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1928,7 +1928,7 @@ The following state arguments are supported:
 <a href="#grouping_python" style="color: inherit; text-decoration: inherit;">grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping<wbr>Args</a></span>
+        <span class="property-type"><a href="#alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping</a></span>
     </dt>
     <dd>{{% md %}}A `grouping` block as defined below.
 {{% /md %}}</dd></dl>

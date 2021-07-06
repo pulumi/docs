@@ -371,7 +371,7 @@ The DataLakeGen2Filesystem resource accepts the following [input]({{< relref "/d
 <a href="#aces_go" style="color: inherit; text-decoration: inherit;">Aces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakegen2filesystemace">[]Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Ace</a></span>
+        <span class="property-type"><a href="#datalakegen2filesystemace">[]Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Ace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `ace` blocks as defined below to specify the entries for the ACL for the path.
 {{% /md %}}</dd><dt class="property-optional"
@@ -706,7 +706,7 @@ The following state arguments are supported:
 <a href="#state_aces_go" style="color: inherit; text-decoration: inherit;">Aces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakegen2filesystemace">[]Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Ace</a></span>
+        <span class="property-type"><a href="#datalakegen2filesystemace">[]Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Ace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `ace` blocks as defined below to specify the entries for the ACL for the path.
 {{% /md %}}</dd><dt class="property-optional"

@@ -460,7 +460,7 @@ The AccountNetworkRules resource accepts the following [input]({{< relref "/docs
 <a href="#privatelinkaccessrules_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccessrule">[]Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Rule</a></span>
+        <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccessrule">[]Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or More `private_link_access` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -897,7 +897,7 @@ The following state arguments are supported:
 <a href="#state_privatelinkaccessrules_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccessrule">[]Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Rule</a></span>
+        <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccessrule">[]Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or More `private_link_access` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

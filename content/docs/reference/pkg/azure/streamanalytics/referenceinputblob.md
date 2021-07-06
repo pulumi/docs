@@ -511,7 +511,7 @@ The ReferenceInputBlob resource accepts the following [input]({{< relref "/docs/
 <a href="#serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputblobserialization">Reference<wbr>Input<wbr>Blob<wbr>Serialization</a></span>
+        <span class="property-type"><a href="#referenceinputblobserialization">Reference<wbr>Input<wbr>Blob<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1086,7 +1086,7 @@ The following state arguments are supported:
 <a href="#state_serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputblobserialization">Reference<wbr>Input<wbr>Blob<wbr>Serialization</a></span>
+        <span class="property-type"><a href="#referenceinputblobserialization">Reference<wbr>Input<wbr>Blob<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

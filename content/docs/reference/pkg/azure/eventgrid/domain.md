@@ -388,7 +388,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#inboundiprules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininboundiprule">[]Domain<wbr>Inbound<wbr>Ip<wbr>Rule</a></span>
+        <span class="property-type"><a href="#domaininboundiprule">[]Domain<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `inbound_ip_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -397,7 +397,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#inputmappingdefaultvalues_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Mapping<wbr>Default<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingdefaultvalues">Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values</a></span>
+        <span class="property-type"><a href="#domaininputmappingdefaultvalues">Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -406,7 +406,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#inputmappingfields_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Mapping<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingfields">Domain<wbr>Input<wbr>Mapping<wbr>Fields</a></span>
+        <span class="property-type"><a href="#domaininputmappingfields">Domain<wbr>Input<wbr>Mapping<wbr>Fields<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_fields` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1055,7 +1055,7 @@ The following state arguments are supported:
 <a href="#state_inboundiprules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininboundiprule">[]Domain<wbr>Inbound<wbr>Ip<wbr>Rule</a></span>
+        <span class="property-type"><a href="#domaininboundiprule">[]Domain<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `inbound_ip_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1064,7 +1064,7 @@ The following state arguments are supported:
 <a href="#state_inputmappingdefaultvalues_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Mapping<wbr>Default<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingdefaultvalues">Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values</a></span>
+        <span class="property-type"><a href="#domaininputmappingdefaultvalues">Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1073,7 +1073,7 @@ The following state arguments are supported:
 <a href="#state_inputmappingfields_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Mapping<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingfields">Domain<wbr>Input<wbr>Mapping<wbr>Fields</a></span>
+        <span class="property-type"><a href="#domaininputmappingfields">Domain<wbr>Input<wbr>Mapping<wbr>Fields<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_fields` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

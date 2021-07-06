@@ -615,7 +615,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertaction">[]Metric<wbr>Alert<wbr>Action</a></span>
+        <span class="property-type"><a href="#metricalertaction">[]Metric<wbr>Alert<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `action` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -624,7 +624,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#applicationinsightswebtestlocationavailabilitycriteria_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -642,7 +642,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#criterias_go" style="color: inherit; text-decoration: inherit;">Criterias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteria">[]Metric<wbr>Alert<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#metricalertcriteria">[]Metric<wbr>Alert<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -660,7 +660,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dynamiccriteria_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1385,7 +1385,7 @@ The following state arguments are supported:
 <a href="#state_actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertaction">[]Metric<wbr>Alert<wbr>Action</a></span>
+        <span class="property-type"><a href="#metricalertaction">[]Metric<wbr>Alert<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `action` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1394,7 +1394,7 @@ The following state arguments are supported:
 <a href="#state_applicationinsightswebtestlocationavailabilitycriteria_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1412,7 +1412,7 @@ The following state arguments are supported:
 <a href="#state_criterias_go" style="color: inherit; text-decoration: inherit;">Criterias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteria">[]Metric<wbr>Alert<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#metricalertcriteria">[]Metric<wbr>Alert<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1430,7 +1430,7 @@ The following state arguments are supported:
 <a href="#state_dynamiccriteria_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2101,7 +2101,7 @@ The following state arguments are supported:
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteriadimension">List&lt;Metric<wbr>Alert<wbr>Criteria<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricalertcriteriadimension">List&lt;Metric<wbr>Alert<wbr>Criteria<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2235,7 +2235,7 @@ The following state arguments are supported:
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteriadimension">Metric<wbr>Alert<wbr>Criteria<wbr>Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricalertcriteriadimension">Metric<wbr>Alert<wbr>Criteria<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2302,7 +2302,7 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteriadimension">Sequence[Metric<wbr>Alert<wbr>Criteria<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricalertcriteriadimension">Sequence[Metric<wbr>Alert<wbr>Criteria<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2337,7 +2337,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
+    <dd>{{% md %}}The dimension operator. Possible values are `Include`, `Exclude` and `StartsWith`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
@@ -2368,7 +2368,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
+    <dd>{{% md %}}The dimension operator. Possible values are `Include`, `Exclude` and `StartsWith`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
@@ -2399,7 +2399,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
+    <dd>{{% md %}}The dimension operator. Possible values are `Include`, `Exclude` and `StartsWith`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
@@ -2430,7 +2430,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
+    <dd>{{% md %}}The dimension operator. Possible values are `Include`, `Exclude` and `StartsWith`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
@@ -2497,7 +2497,7 @@ The following state arguments are supported:
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">List&lt;Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">List&lt;Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2685,7 +2685,7 @@ The following state arguments are supported:
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2779,7 +2779,7 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">Sequence[Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">Sequence[Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2841,7 +2841,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
+    <dd>{{% md %}}The dimension operator. Possible values are `Include`, `Exclude` and `StartsWith`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
@@ -2872,7 +2872,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
+    <dd>{{% md %}}The dimension operator. Possible values are `Include`, `Exclude` and `StartsWith`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
@@ -2903,7 +2903,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
+    <dd>{{% md %}}The dimension operator. Possible values are `Include`, `Exclude` and `StartsWith`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
@@ -2934,7 +2934,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
+    <dd>{{% md %}}The dimension operator. Possible values are `Include`, `Exclude` and `StartsWith`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">

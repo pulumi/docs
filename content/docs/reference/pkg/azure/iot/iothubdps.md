@@ -362,7 +362,7 @@ The IotHubDps resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpssku">Iot<wbr>Hub<wbr>Dps<wbr>Sku</a></span>
+        <span class="property-type"><a href="#iothubdpssku">Iot<wbr>Hub<wbr>Dps<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -371,7 +371,7 @@ The IotHubDps resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#linkedhubs_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpslinkedhub">[]Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub</a></span>
+        <span class="property-type"><a href="#iothubdpslinkedhub">[]Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `linked_hub` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -982,7 +982,7 @@ The following state arguments are supported:
 <a href="#state_linkedhubs_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Hubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpslinkedhub">[]Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub</a></span>
+        <span class="property-type"><a href="#iothubdpslinkedhub">[]Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `linked_hub` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1027,7 +1027,7 @@ The following state arguments are supported:
 <a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpssku">Iot<wbr>Hub<wbr>Dps<wbr>Sku</a></span>
+        <span class="property-type"><a href="#iothubdpssku">Iot<wbr>Hub<wbr>Dps<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

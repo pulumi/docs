@@ -376,7 +376,7 @@ The CustomProvider resource accepts the following [input]({{< relref "/docs/intr
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprovideraction">[]Custom<wbr>Provider<wbr>Action</a></span>
+        <span class="property-type"><a href="#customprovideraction">[]Custom<wbr>Provider<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Any number of `action` block as defined below. One of `resource_type` or `action` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -403,7 +403,7 @@ The CustomProvider resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcetypes_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customproviderresourcetype">[]Custom<wbr>Provider<wbr>Resource<wbr>Type</a></span>
+        <span class="property-type"><a href="#customproviderresourcetype">[]Custom<wbr>Provider<wbr>Resource<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Any number of `resource_type` block as defined below. One of `resource_type` or `action` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -421,7 +421,7 @@ The CustomProvider resource accepts the following [input]({{< relref "/docs/intr
 <a href="#validations_go" style="color: inherit; text-decoration: inherit;">Validations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprovidervalidation">[]Custom<wbr>Provider<wbr>Validation</a></span>
+        <span class="property-type"><a href="#customprovidervalidation">[]Custom<wbr>Provider<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Any number of `validation` block as defined below.
 {{% /md %}}</dd></dl>
@@ -822,7 +822,7 @@ The following state arguments are supported:
 <a href="#state_actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprovideraction">[]Custom<wbr>Provider<wbr>Action</a></span>
+        <span class="property-type"><a href="#customprovideraction">[]Custom<wbr>Provider<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Any number of `action` block as defined below. One of `resource_type` or `action` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -858,7 +858,7 @@ The following state arguments are supported:
 <a href="#state_resourcetypes_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customproviderresourcetype">[]Custom<wbr>Provider<wbr>Resource<wbr>Type</a></span>
+        <span class="property-type"><a href="#customproviderresourcetype">[]Custom<wbr>Provider<wbr>Resource<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Any number of `resource_type` block as defined below. One of `resource_type` or `action` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -876,7 +876,7 @@ The following state arguments are supported:
 <a href="#state_validations_go" style="color: inherit; text-decoration: inherit;">Validations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprovidervalidation">[]Custom<wbr>Provider<wbr>Validation</a></span>
+        <span class="property-type"><a href="#customprovidervalidation">[]Custom<wbr>Provider<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Any number of `validation` block as defined below.
 {{% /md %}}</dd></dl>

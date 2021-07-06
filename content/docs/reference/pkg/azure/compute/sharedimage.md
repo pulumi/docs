@@ -494,7 +494,7 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedimageidentifier">Shared<wbr>Image<wbr>Identifier</a></span>
+        <span class="property-type"><a href="#sharedimageidentifier">Shared<wbr>Image<wbr>Identifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identifier` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -575,7 +575,7 @@ The SharedImage resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#purchaseplan_go" style="color: inherit; text-decoration: inherit;">Purchase<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedimagepurchaseplan">Shared<wbr>Image<wbr>Purchase<wbr>Plan</a></span>
+        <span class="property-type"><a href="#sharedimagepurchaseplan">Shared<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `purchase_plan` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1235,7 +1235,7 @@ The following state arguments are supported:
 <a href="#state_identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedimageidentifier">Shared<wbr>Image<wbr>Identifier</a></span>
+        <span class="property-type"><a href="#sharedimageidentifier">Shared<wbr>Image<wbr>Identifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identifier` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1280,7 @@ The following state arguments are supported:
 <a href="#state_purchaseplan_go" style="color: inherit; text-decoration: inherit;">Purchase<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedimagepurchaseplan">Shared<wbr>Image<wbr>Purchase<wbr>Plan</a></span>
+        <span class="property-type"><a href="#sharedimagepurchaseplan">Shared<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `purchase_plan` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

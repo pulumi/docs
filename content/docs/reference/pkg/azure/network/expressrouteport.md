@@ -424,7 +424,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportidentity">Express<wbr>Route<wbr>Port<wbr>Identity</a></span>
+        <span class="property-type"><a href="#expressrouteportidentity">Express<wbr>Route<wbr>Port<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -433,7 +433,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#link1_go" style="color: inherit; text-decoration: inherit;">Link1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportlink1">Express<wbr>Route<wbr>Port<wbr>Link1</a></span>
+        <span class="property-type"><a href="#expressrouteportlink1">Express<wbr>Route<wbr>Port<wbr>Link1Args</a></span>
     </dt>
     <dd>{{% md %}}A list of `link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -442,7 +442,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#link2_go" style="color: inherit; text-decoration: inherit;">Link2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportlink2">Express<wbr>Route<wbr>Port<wbr>Link2</a></span>
+        <span class="property-type"><a href="#expressrouteportlink2">Express<wbr>Route<wbr>Port<wbr>Link2Args</a></span>
     </dt>
     <dd>{{% md %}}A list of `link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1128,7 +1128,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportidentity">Express<wbr>Route<wbr>Port<wbr>Identity</a></span>
+        <span class="property-type"><a href="#expressrouteportidentity">Express<wbr>Route<wbr>Port<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1137,7 +1137,7 @@ The following state arguments are supported:
 <a href="#state_link1_go" style="color: inherit; text-decoration: inherit;">Link1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportlink1">Express<wbr>Route<wbr>Port<wbr>Link1</a></span>
+        <span class="property-type"><a href="#expressrouteportlink1">Express<wbr>Route<wbr>Port<wbr>Link1Args</a></span>
     </dt>
     <dd>{{% md %}}A list of `link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1146,7 +1146,7 @@ The following state arguments are supported:
 <a href="#state_link2_go" style="color: inherit; text-decoration: inherit;">Link2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportlink2">Express<wbr>Route<wbr>Port<wbr>Link2</a></span>
+        <span class="property-type"><a href="#expressrouteportlink2">Express<wbr>Route<wbr>Port<wbr>Link2Args</a></span>
     </dt>
     <dd>{{% md %}}A list of `link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"

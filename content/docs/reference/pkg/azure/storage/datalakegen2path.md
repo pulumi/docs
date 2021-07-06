@@ -439,7 +439,7 @@ The DataLakeGen2Path resource accepts the following [input]({{< relref "/docs/in
 <a href="#aces_go" style="color: inherit; text-decoration: inherit;">Aces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakegen2pathace">[]Data<wbr>Lake<wbr>Gen2Path<wbr>Ace</a></span>
+        <span class="property-type"><a href="#datalakegen2pathace">[]Data<wbr>Lake<wbr>Gen2Path<wbr>Ace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `ace` blocks as defined below to specify the entries for the ACL for the path.
 {{% /md %}}</dd><dt class="property-optional"
@@ -858,7 +858,7 @@ The following state arguments are supported:
 <a href="#state_aces_go" style="color: inherit; text-decoration: inherit;">Aces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakegen2pathace">[]Data<wbr>Lake<wbr>Gen2Path<wbr>Ace</a></span>
+        <span class="property-type"><a href="#datalakegen2pathace">[]Data<wbr>Lake<wbr>Gen2Path<wbr>Ace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `ace` blocks as defined below to specify the entries for the ACL for the path.
 {{% /md %}}</dd><dt class="property-optional"

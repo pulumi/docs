@@ -46,7 +46,7 @@ class MyStack : Stack
             ResourceGroupName = exampleResourceGroup.Name,
             Location = exampleResourceGroup.Location,
             VirtualWanId = exampleVirtualWan.Id,
-            AddressPrefix = "10.0.1.0/24",
+            AddressPrefix = "10.0.0.0/23",
         });
     }
 
@@ -87,7 +87,7 @@ func main() {
 			ResourceGroupName: exampleResourceGroup.Name,
 			Location:          exampleResourceGroup.Location,
 			VirtualWanId:      exampleVirtualWan.ID(),
-			AddressPrefix:     pulumi.String("10.0.1.0/24"),
+			AddressPrefix:     pulumi.String("10.0.0.0/23"),
 		})
 		if err != nil {
 			return err
@@ -115,7 +115,7 @@ example_virtual_hub = azure.network.VirtualHub("exampleVirtualHub",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
     virtual_wan_id=example_virtual_wan.id,
-    address_prefix="10.0.1.0/24")
+    address_prefix="10.0.0.0/23")
 ```
 
 
@@ -138,7 +138,7 @@ const exampleVirtualHub = new azure.network.VirtualHub("exampleVirtualHub", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,
     virtualWanId: exampleVirtualWan.id,
-    addressPrefix: "10.0.1.0/24",
+    addressPrefix: "10.0.0.0/23",
 });
 ```
 
@@ -318,7 +318,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created. [The address prefix subnet cannot be smaller than a `/24`. Azure recommends using a `/23`](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-the-recommended-hub-address-space-during-hub-creation).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -394,7 +394,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created. [The address prefix subnet cannot be smaller than a `/24`. Azure recommends using a `/23`](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-the-recommended-hub-address-space-during-hub-creation).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -419,7 +419,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroute">[]Virtual<wbr>Hub<wbr>Route</a></span>
+        <span class="property-type"><a href="#virtualhubroute">[]Virtual<wbr>Hub<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `route` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -470,7 +470,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created. [The address prefix subnet cannot be smaller than a `/24`. Azure recommends using a `/23`](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-the-recommended-hub-address-space-during-hub-creation).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -546,7 +546,7 @@ The VirtualHub resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created. [The address prefix subnet cannot be smaller than a `/24`. Azure recommends using a `/23`](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-the-recommended-hub-address-space-during-hub-creation).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -801,7 +801,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created. [The address prefix subnet cannot be smaller than a `/24`. Azure recommends using a `/23`](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-the-recommended-hub-address-space-during-hub-creation).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
@@ -877,7 +877,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created. [The address prefix subnet cannot be smaller than a `/24`. Azure recommends using a `/23`](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-the-recommended-hub-address-space-during-hub-creation).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -911,7 +911,7 @@ The following state arguments are supported:
 <a href="#state_routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroute">[]Virtual<wbr>Hub<wbr>Route</a></span>
+        <span class="property-type"><a href="#virtualhubroute">[]Virtual<wbr>Hub<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `route` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -953,7 +953,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created. [The address prefix subnet cannot be smaller than a `/24`. Azure recommends using a `/23`](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-the-recommended-hub-address-space-during-hub-creation).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -1029,7 +1029,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The Address Prefix which should be used for this Virtual Hub. Changing this forces a new resource to be created. [The address prefix subnet cannot be smaller than a `/24`. Azure recommends using a `/23`](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-the-recommended-hub-address-space-during-hub-creation).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">

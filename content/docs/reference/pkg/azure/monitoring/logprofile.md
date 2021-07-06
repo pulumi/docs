@@ -472,7 +472,7 @@ new resource to be created.
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logprofileretentionpolicy">Log<wbr>Profile<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#logprofileretentionpolicy">Log<wbr>Profile<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below. A retention policy for how long Activity Logs are retained in the storage account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -904,7 +904,7 @@ new resource to be created.
 <a href="#state_retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logprofileretentionpolicy">Log<wbr>Profile<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#logprofileretentionpolicy">Log<wbr>Profile<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below. A retention policy for how long Activity Logs are retained in the storage account.
 {{% /md %}}</dd><dt class="property-optional"

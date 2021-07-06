@@ -274,6 +274,15 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the App Service Environment exists.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -281,6 +290,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cluster Setting.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pricingtier_csharp">
+<a href="#pricingtier_csharp" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Pricing tier for the front end instances.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_csharp">
@@ -331,6 +349,15 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the App Service Environment exists.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -338,6 +365,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cluster Setting.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pricingtier_go">
+<a href="#pricingtier_go" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Pricing tier for the front end instances.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
@@ -388,6 +424,15 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the App Service Environment exists.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -395,6 +440,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cluster Setting.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pricingtier_nodejs">
+<a href="#pricingtier_nodejs" style="color: inherit; text-decoration: inherit;">pricing<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Pricing tier for the front end instances.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_nodejs">
@@ -445,6 +499,15 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location where the App Service Environment exists.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -452,6 +515,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cluster Setting.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="pricing_tier_python">
+<a href="#pricing_tier_python" style="color: inherit; text-decoration: inherit;">pricing_<wbr>tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Pricing tier for the front end instances.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">

@@ -472,7 +472,7 @@ The ElasticPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#perdatabasesettings_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Database<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticpoolperdatabasesettings">Elastic<wbr>Pool<wbr>Per<wbr>Database<wbr>Settings</a></span>
+        <span class="property-type"><a href="#elasticpoolperdatabasesettings">Elastic<wbr>Pool<wbr>Per<wbr>Database<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `per_database_settings` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -499,7 +499,7 @@ The ElasticPool resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticpoolsku">Elastic<wbr>Pool<wbr>Sku</a></span>
+        <span class="property-type"><a href="#elasticpoolsku">Elastic<wbr>Pool<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1120,7 +1120,7 @@ The following state arguments are supported:
 <a href="#state_perdatabasesettings_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Database<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticpoolperdatabasesettings">Elastic<wbr>Pool<wbr>Per<wbr>Database<wbr>Settings</a></span>
+        <span class="property-type"><a href="#elasticpoolperdatabasesettings">Elastic<wbr>Pool<wbr>Per<wbr>Database<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `per_database_settings` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1147,7 @@ The following state arguments are supported:
 <a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elasticpoolsku">Elastic<wbr>Pool<wbr>Sku</a></span>
+        <span class="property-type"><a href="#elasticpoolsku">Elastic<wbr>Pool<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -578,7 +578,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipv6` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -587,7 +587,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#microsoftpeeringconfig_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering_config` block as defined below. Required when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1283,7 +1283,7 @@ The following state arguments are supported:
 <a href="#state_ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipv6` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1292,7 +1292,7 @@ The following state arguments are supported:
 <a href="#state_microsoftpeeringconfig_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering_config` block as defined below. Required when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1666,7 +1666,7 @@ The following state arguments are supported:
 <a href="#microsoftpeering_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1746,7 +1746,7 @@ The following state arguments are supported:
 <a href="#microsoftpeering_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1786,7 +1786,7 @@ The following state arguments are supported:
 <a href="#microsoft_peering_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering` block as defined below.
 {{% /md %}}</dd><dt class="property-required"

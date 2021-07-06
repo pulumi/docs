@@ -382,7 +382,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#manageddisks_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">[]Replicated<wbr>VMManaged<wbr>Disk</a></span>
+        <span class="property-type"><a href="#replicatedvmmanageddisk">[]Replicated<wbr>VMManaged<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -400,7 +400,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmnetworkinterface">[]Replicated<wbr>VMNetwork<wbr>Interface</a></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">[]Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1012,7 +1012,7 @@ The following state arguments are supported:
 <a href="#state_manageddisks_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">[]Replicated<wbr>VMManaged<wbr>Disk</a></span>
+        <span class="property-type"><a href="#replicatedvmmanageddisk">[]Replicated<wbr>VMManaged<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1030,7 +1030,7 @@ The following state arguments are supported:
 <a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmnetworkinterface">[]Replicated<wbr>VMNetwork<wbr>Interface</a></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">[]Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1449,6 +1449,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetdiskencryptionsetid_csharp">
+<a href="#targetdiskencryptionsetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Disk Encryption Set that the Managed Disk will be associated with.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1498,6 +1507,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetdiskencryptionsetid_go">
+<a href="#targetdiskencryptionsetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Disk Encryption Set that the Managed Disk will be associated with.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1547,6 +1565,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetdiskencryptionsetid_nodejs">
+<a href="#targetdiskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Disk Encryption Set that the Managed Disk will be associated with.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1596,6 +1623,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_disk_encryption_set_id_python">
+<a href="#target_disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>disk_<wbr>encryption_<wbr>set_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Disk Encryption Set that the Managed Disk will be associated with.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

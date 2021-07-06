@@ -548,7 +548,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#nodetypes_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetype">[]Cluster<wbr>Node<wbr>Type</a></span>
+        <span class="property-type"><a href="#clusternodetype">[]Cluster<wbr>Node<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `node_type` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -602,7 +602,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#azureactivedirectory_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterazureactivedirectory">Cluster<wbr>Azure<wbr>Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#clusterazureactivedirectory">Cluster<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -611,7 +611,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificate">Cluster<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#clustercertificate">Cluster<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below. Conflicts with `certificate_common_names`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -620,7 +620,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificatecommonnames_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnames">Cluster<wbr>Certificate<wbr>Common<wbr>Names</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnames">Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_common_names` block as defined below. Conflicts with `certificate`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -629,7 +629,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clientcertificatecommonnames_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatecommonname">[]Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatecommonname">[]Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -638,7 +638,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clientcertificatethumbprints_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatethumbprint">[]Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatethumbprint">[]Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -656,7 +656,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#diagnosticsconfig_go" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdiagnosticsconfig">Cluster<wbr>Diagnostics<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterdiagnosticsconfig">Cluster<wbr>Diagnostics<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics_config` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -665,7 +665,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#fabricsettings_go" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterfabricsetting">[]Cluster<wbr>Fabric<wbr>Setting</a></span>
+        <span class="property-type"><a href="#clusterfabricsetting">[]Cluster<wbr>Fabric<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `fabric_settings` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -692,7 +692,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverseproxycertificate_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Proxy<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below. Conflicts with `reverse_proxy_certificate_common_names`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -701,7 +701,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverseproxycertificatecommonnames_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -719,7 +719,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#upgradepolicy_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1563,7 +1563,7 @@ The following state arguments are supported:
 <a href="#state_azureactivedirectory_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterazureactivedirectory">Cluster<wbr>Azure<wbr>Active<wbr>Directory</a></span>
+        <span class="property-type"><a href="#clusterazureactivedirectory">Cluster<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,7 +1572,7 @@ The following state arguments are supported:
 <a href="#state_certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificate">Cluster<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#clustercertificate">Cluster<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below. Conflicts with `certificate_common_names`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1581,7 +1581,7 @@ The following state arguments are supported:
 <a href="#state_certificatecommonnames_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnames">Cluster<wbr>Certificate<wbr>Common<wbr>Names</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnames">Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_common_names` block as defined below. Conflicts with `certificate`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1590,7 @@ The following state arguments are supported:
 <a href="#state_clientcertificatecommonnames_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatecommonname">[]Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatecommonname">[]Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1599,7 +1599,7 @@ The following state arguments are supported:
 <a href="#state_clientcertificatethumbprints_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatethumbprint">[]Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatethumbprint">[]Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1626,7 +1626,7 @@ The following state arguments are supported:
 <a href="#state_diagnosticsconfig_go" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdiagnosticsconfig">Cluster<wbr>Diagnostics<wbr>Config</a></span>
+        <span class="property-type"><a href="#clusterdiagnosticsconfig">Cluster<wbr>Diagnostics<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics_config` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1635,7 +1635,7 @@ The following state arguments are supported:
 <a href="#state_fabricsettings_go" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterfabricsetting">[]Cluster<wbr>Fabric<wbr>Setting</a></span>
+        <span class="property-type"><a href="#clusterfabricsetting">[]Cluster<wbr>Fabric<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `fabric_settings` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1671,7 +1671,7 @@ The following state arguments are supported:
 <a href="#state_nodetypes_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetype">[]Cluster<wbr>Node<wbr>Type</a></span>
+        <span class="property-type"><a href="#clusternodetype">[]Cluster<wbr>Node<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `node_type` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1698,7 +1698,7 @@ The following state arguments are supported:
 <a href="#state_reverseproxycertificate_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Proxy<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below. Conflicts with `reverse_proxy_certificate_common_names`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1707,7 +1707,7 @@ The following state arguments are supported:
 <a href="#state_reverseproxycertificatecommonnames_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnames">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate_common_names` block as defined below. Conflicts with `reverse_proxy_certificate`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1734,7 +1734,7 @@ The following state arguments are supported:
 <a href="#state_upgradepolicy_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2420,7 +2420,7 @@ The following state arguments are supported:
 <a href="#commonnames_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnamescommonname">List&lt;Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnamescommonname">List&lt;Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `common_names` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2464,7 +2464,7 @@ The following state arguments are supported:
 <a href="#commonnames_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnamescommonname">Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnamescommonname">Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name[]</a></span>
     </dt>
     <dd>{{% md %}}A `common_names` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2486,7 +2486,7 @@ The following state arguments are supported:
 <a href="#common_names_python" style="color: inherit; text-decoration: inherit;">common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnamescommonname">Sequence[Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnamescommonname">Sequence[Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name]</a></span>
     </dt>
     <dd>{{% md %}}A `common_names` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3145,7 +3145,7 @@ The following state arguments are supported:
 <a href="#applicationports_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetypeapplicationports">Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodetypeapplicationports">Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports</a></span>
     </dt>
     <dd>{{% md %}}A `application_ports` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3172,7 +3172,7 @@ The following state arguments are supported:
 <a href="#ephemeralports_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetypeephemeralports">Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodetypeephemeralports">Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports</a></span>
     </dt>
     <dd>{{% md %}}A `ephemeral_ports` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3351,7 +3351,7 @@ The following state arguments are supported:
 <a href="#applicationports_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetypeapplicationports">Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodetypeapplicationports">Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports</a></span>
     </dt>
     <dd>{{% md %}}A `application_ports` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3378,7 +3378,7 @@ The following state arguments are supported:
 <a href="#ephemeralports_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetypeephemeralports">Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodetypeephemeralports">Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports</a></span>
     </dt>
     <dd>{{% md %}}A `ephemeral_ports` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3454,7 +3454,7 @@ The following state arguments are supported:
 <a href="#application_ports_python" style="color: inherit; text-decoration: inherit;">application_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetypeapplicationports">Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodetypeapplicationports">Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports</a></span>
     </dt>
     <dd>{{% md %}}A `application_ports` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3481,7 +3481,7 @@ The following state arguments are supported:
 <a href="#ephemeral_ports_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetypeephemeralports">Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusternodetypeephemeralports">Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports</a></span>
     </dt>
     <dd>{{% md %}}A `ephemeral_ports` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3820,7 +3820,7 @@ The following state arguments are supported:
 <a href="#commonnames_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnamescommonname">List&lt;Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnamescommonname">List&lt;Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `common_names` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3864,7 +3864,7 @@ The following state arguments are supported:
 <a href="#commonnames_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnamescommonname">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnamescommonname">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name[]</a></span>
     </dt>
     <dd>{{% md %}}A `common_names` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3886,7 +3886,7 @@ The following state arguments are supported:
 <a href="#common_names_python" style="color: inherit; text-decoration: inherit;">common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnamescommonname">Sequence[Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificatecommonnamescommonname">Sequence[Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name]</a></span>
     </dt>
     <dd>{{% md %}}A `common_names` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4000,7 +4000,7 @@ The following state arguments are supported:
 <a href="#deltahealthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicydeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicydeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Delta<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `delta_health_policy` block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4044,7 +4044,7 @@ The following state arguments are supported:
 <a href="#healthpolicy_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicyhealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicyhealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `health_policy` block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4168,7 +4168,7 @@ The following state arguments are supported:
 <a href="#deltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicydeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicydeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Delta<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `delta_health_policy` block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4212,7 +4212,7 @@ The following state arguments are supported:
 <a href="#healthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicyhealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicyhealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `health_policy` block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4252,7 +4252,7 @@ The following state arguments are supported:
 <a href="#delta_health_policy_python" style="color: inherit; text-decoration: inherit;">delta_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicydeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicydeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Delta<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `delta_health_policy` block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -4296,7 +4296,7 @@ The following state arguments are supported:
 <a href="#health_policy_python" style="color: inherit; text-decoration: inherit;">health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicyhealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Health<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicyhealthpolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `health_policy` block as defined below
 {{% /md %}}</dd><dt class="property-optional"

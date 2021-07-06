@@ -612,7 +612,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#developerportals_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomaindeveloperportal">[]Custom<wbr>Domain<wbr>Developer<wbr>Portal</a></span>
+        <span class="property-type"><a href="#customdomaindeveloperportal">[]Custom<wbr>Domain<wbr>Developer<wbr>Portal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -621,7 +621,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#managements_go" style="color: inherit; text-decoration: inherit;">Managements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomainmanagement">[]Custom<wbr>Domain<wbr>Management</a></span>
+        <span class="property-type"><a href="#customdomainmanagement">[]Custom<wbr>Domain<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -630,7 +630,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#portals_go" style="color: inherit; text-decoration: inherit;">Portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomainportal">[]Custom<wbr>Domain<wbr>Portal</a></span>
+        <span class="property-type"><a href="#customdomainportal">[]Custom<wbr>Domain<wbr>Portal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +639,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#proxies_go" style="color: inherit; text-decoration: inherit;">Proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomainproxy">[]Custom<wbr>Domain<wbr>Proxy</a></span>
+        <span class="property-type"><a href="#customdomainproxy">[]Custom<wbr>Domain<wbr>Proxy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -648,7 +648,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#scms_go" style="color: inherit; text-decoration: inherit;">Scms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomainscm">[]Custom<wbr>Domain<wbr>Scm</a></span>
+        <span class="property-type"><a href="#customdomainscm">[]Custom<wbr>Domain<wbr>Scm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1030,7 +1030,7 @@ The following state arguments are supported:
 <a href="#state_developerportals_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomaindeveloperportal">[]Custom<wbr>Domain<wbr>Developer<wbr>Portal</a></span>
+        <span class="property-type"><a href="#customdomaindeveloperportal">[]Custom<wbr>Domain<wbr>Developer<wbr>Portal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1039,7 +1039,7 @@ The following state arguments are supported:
 <a href="#state_managements_go" style="color: inherit; text-decoration: inherit;">Managements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomainmanagement">[]Custom<wbr>Domain<wbr>Management</a></span>
+        <span class="property-type"><a href="#customdomainmanagement">[]Custom<wbr>Domain<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1048,7 +1048,7 @@ The following state arguments are supported:
 <a href="#state_portals_go" style="color: inherit; text-decoration: inherit;">Portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomainportal">[]Custom<wbr>Domain<wbr>Portal</a></span>
+        <span class="property-type"><a href="#customdomainportal">[]Custom<wbr>Domain<wbr>Portal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1057,7 +1057,7 @@ The following state arguments are supported:
 <a href="#state_proxies_go" style="color: inherit; text-decoration: inherit;">Proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomainproxy">[]Custom<wbr>Domain<wbr>Proxy</a></span>
+        <span class="property-type"><a href="#customdomainproxy">[]Custom<wbr>Domain<wbr>Proxy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1066,7 +1066,7 @@ The following state arguments are supported:
 <a href="#state_scms_go" style="color: inherit; text-decoration: inherit;">Scms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customdomainscm">[]Custom<wbr>Domain<wbr>Scm</a></span>
+        <span class="property-type"><a href="#customdomainscm">[]Custom<wbr>Domain<wbr>Scm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as defined below.
 {{% /md %}}</dd></dl>

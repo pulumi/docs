@@ -430,7 +430,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#capturedescription_go" style="color: inherit; text-decoration: inherit;">Capture<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubcapturedescription">Event<wbr>Hub<wbr>Capture<wbr>Description</a></span>
+        <span class="property-type"><a href="#eventhubcapturedescription">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `capture_description` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -895,7 +895,7 @@ The following state arguments are supported:
 <a href="#state_capturedescription_go" style="color: inherit; text-decoration: inherit;">Capture<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubcapturedescription">Event<wbr>Hub<wbr>Capture<wbr>Description</a></span>
+        <span class="property-type"><a href="#eventhubcapturedescription">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `capture_description` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1134,7 +1134,7 @@ The following state arguments are supported:
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubcapturedescriptiondestination">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventhubcapturedescriptiondestination">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}A `destination` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1250,7 +1250,7 @@ The following state arguments are supported:
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubcapturedescriptiondestination">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventhubcapturedescriptiondestination">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}A `destination` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1308,7 +1308,7 @@ The following state arguments are supported:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubcapturedescriptiondestination">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventhubcapturedescriptiondestination">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}A `destination` block as defined below.
 {{% /md %}}</dd><dt class="property-required"

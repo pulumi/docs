@@ -456,7 +456,7 @@ The VpnSite resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#links_go" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnsitelink">[]Vpn<wbr>Site<wbr>Link</a></span>
+        <span class="property-type"><a href="#vpnsitelink">[]Vpn<wbr>Site<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -967,7 +967,7 @@ The following state arguments are supported:
 <a href="#state_links_go" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnsitelink">[]Vpn<wbr>Site<wbr>Link</a></span>
+        <span class="property-type"><a href="#vpnsitelink">[]Vpn<wbr>Site<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1215,7 +1215,7 @@ The following state arguments are supported:
 <a href="#bgp_csharp" style="color: inherit; text-decoration: inherit;">Bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnsitelinkbgp">Vpn<wbr>Site<wbr>Link<wbr>Bgp<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnsitelinkbgp">Vpn<wbr>Site<wbr>Link<wbr>Bgp</a></span>
     </dt>
     <dd>{{% md %}}A `bgp` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1349,7 +1349,7 @@ The following state arguments are supported:
 <a href="#bgp_nodejs" style="color: inherit; text-decoration: inherit;">bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnsitelinkbgp">Vpn<wbr>Site<wbr>Link<wbr>Bgp<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnsitelinkbgp">Vpn<wbr>Site<wbr>Link<wbr>Bgp</a></span>
     </dt>
     <dd>{{% md %}}A `bgp` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1416,7 +1416,7 @@ The following state arguments are supported:
 <a href="#bgp_python" style="color: inherit; text-decoration: inherit;">bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnsitelinkbgp">Vpn<wbr>Site<wbr>Link<wbr>Bgp<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpnsitelinkbgp">Vpn<wbr>Site<wbr>Link<wbr>Bgp</a></span>
     </dt>
     <dd>{{% md %}}A `bgp` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"

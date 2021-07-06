@@ -752,7 +752,7 @@ The SubscriptionRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#correlationfilter_go" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionrulecorrelationfilter">Subscription<wbr>Rule<wbr>Correlation<wbr>Filter</a></span>
+        <span class="property-type"><a href="#subscriptionrulecorrelationfilter">Subscription<wbr>Rule<wbr>Correlation<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `correlation_filter` block as documented below to be evaluated against a BrokeredMessage. Required when `filter_type` is set to `CorrelationFilter`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1236,7 +1236,7 @@ The following state arguments are supported:
 <a href="#state_correlationfilter_go" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionrulecorrelationfilter">Subscription<wbr>Rule<wbr>Correlation<wbr>Filter</a></span>
+        <span class="property-type"><a href="#subscriptionrulecorrelationfilter">Subscription<wbr>Rule<wbr>Correlation<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `correlation_filter` block as documented below to be evaluated against a BrokeredMessage. Required when `filter_type` is set to `CorrelationFilter`.
 {{% /md %}}</dd><dt class="property-optional"

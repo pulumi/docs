@@ -327,7 +327,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#soarecord_go" style="color: inherit; text-decoration: inherit;">Soa<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesoarecord">Zone<wbr>Soa<wbr>Record</a></span>
+        <span class="property-type"><a href="#zonesoarecord">Zone<wbr>Soa<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `soa_record` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -891,7 +891,7 @@ The following state arguments are supported:
 <a href="#state_soarecord_go" style="color: inherit; text-decoration: inherit;">Soa<wbr>Record</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonesoarecord">Zone<wbr>Soa<wbr>Record</a></span>
+        <span class="property-type"><a href="#zonesoarecord">Zone<wbr>Soa<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `soa_record` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"

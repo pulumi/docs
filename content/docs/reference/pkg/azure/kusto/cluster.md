@@ -475,7 +475,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersku">Cluster<wbr>Sku</a></span>
+        <span class="property-type"><a href="#clustersku">Cluster<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -529,7 +529,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity</a></span>
+        <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An identity block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -565,7 +565,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#optimizedautoscale_go" style="color: inherit; text-decoration: inherit;">Optimized<wbr>Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale</a></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -592,7 +592,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualnetworkconfiguration_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1400,7 +1400,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity</a></span>
+        <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An identity block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1436,7 +1436,7 @@ The following state arguments are supported:
 <a href="#state_optimizedautoscale_go" style="color: inherit; text-decoration: inherit;">Optimized<wbr>Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale</a></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1454,7 +1454,7 @@ The following state arguments are supported:
 <a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersku">Cluster<wbr>Sku</a></span>
+        <span class="property-type"><a href="#clustersku">Cluster<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1490,7 +1490,7 @@ The following state arguments are supported:
 <a href="#state_virtualnetworkconfiguration_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"

@@ -575,7 +575,7 @@ new resource to be created.
 <a href="#patchschedules_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepatchschedule">[]Cache<wbr>Patch<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#cachepatchschedule">[]Cache<wbr>Patch<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -602,7 +602,7 @@ new resource to be created.
 <a href="#redisconfiguration_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1720,7 +1720,7 @@ new resource to be created.
 <a href="#state_patchschedules_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachepatchschedule">[]Cache<wbr>Patch<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#cachepatchschedule">[]Cache<wbr>Patch<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1774,7 +1774,7 @@ new resource to be created.
 <a href="#state_redisconfiguration_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#cacheredisconfiguration">Cache<wbr>Redis<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
