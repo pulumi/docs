@@ -169,7 +169,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Account ID number of the account that owns or contains the calling entity.
+    <dd>{{% md %}}AWS Account ID number of the account that owns or contains the calling entity.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_csharp">
@@ -178,7 +178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS ARN associated with the calling entity.
+    <dd>{{% md %}}ARN associated with the calling entity.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -196,7 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the calling entity.
+    <dd>{{% md %}}Unique identifier of the calling entity.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -209,7 +209,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Account ID number of the account that owns or contains the calling entity.
+    <dd>{{% md %}}AWS Account ID number of the account that owns or contains the calling entity.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_go">
@@ -218,7 +218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS ARN associated with the calling entity.
+    <dd>{{% md %}}ARN associated with the calling entity.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -236,7 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the calling entity.
+    <dd>{{% md %}}Unique identifier of the calling entity.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -249,7 +249,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Account ID number of the account that owns or contains the calling entity.
+    <dd>{{% md %}}AWS Account ID number of the account that owns or contains the calling entity.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_nodejs">
@@ -258,7 +258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS ARN associated with the calling entity.
+    <dd>{{% md %}}ARN associated with the calling entity.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -276,7 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the calling entity.
+    <dd>{{% md %}}Unique identifier of the calling entity.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -289,7 +289,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AWS Account ID number of the account that owns or contains the calling entity.
+    <dd>{{% md %}}AWS Account ID number of the account that owns or contains the calling entity.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_python">
@@ -298,7 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AWS ARN associated with the calling entity.
+    <dd>{{% md %}}ARN associated with the calling entity.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -316,7 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the calling entity.
+    <dd>{{% md %}}Unique identifier of the calling entity.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
